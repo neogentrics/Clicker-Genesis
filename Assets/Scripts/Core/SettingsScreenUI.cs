@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -111,6 +112,8 @@ namespace ClickerGenesis.Core
             RefreshFullscreen();
         }
 
+        private Coroutine pendingResolutionApply;
+
         private void CycleResolution()
         {
             var resolutions = Screen.resolutions;
@@ -119,13 +122,29 @@ namespace ClickerGenesis.Core
             int next = GameSettings.ResolutionIndex + 1;
             if (next >= resolutions.Length) next = -1; // -1 = back to native/current
             GameSettings.ResolutionIndex = next;
+            RefreshResolution();
 
-            if (next >= 0)
+            // Debounced: Screen.SetResolution triggers a real, non-instant OS-level window/mode
+            // switch (bug #32 - "needs ~3 clicks before a visible change"). Firing it on every
+            // click re-issues a brand new resize before the previous one has settled, so rapid
+            // clicking looked broken even though each click's setting was correctly recorded.
+            // Only the resolution still selected after the clicking stops actually gets applied.
+            if (pendingResolutionApply != null) StopCoroutine(pendingResolutionApply);
+            pendingResolutionApply = StartCoroutine(ApplyResolutionAfterDelay(next));
+        }
+
+        private IEnumerator ApplyResolutionAfterDelay(int index)
+        {
+            yield return new WaitForSecondsRealtime(0.35f);
+            pendingResolutionApply = null;
+
+            if (index >= 0)
             {
-                var r = resolutions[next];
+                var resolutions = Screen.resolutions;
+                if (index >= resolutions.Length) yield break;
+                var r = resolutions[index];
                 Screen.SetResolution(r.width, r.height, GameSettings.Fullscreen);
             }
-            RefreshResolution();
         }
 
         private void CycleQuality()
