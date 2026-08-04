@@ -62,7 +62,6 @@ namespace ClickerGenesis.Core
 
         [Header("Bulk buy")]
         private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20 };
-        private static readonly int[] ClickPowerMultiplierTiers = { 1, 5, 10, 20, 100 };
         private static readonly int[] ScribeMultiplierTiers = { 1, 5, 10, 20, 100 };
 
         /// <summary>How many scribes of a tier "Buy" purchases per click. Cycles 1/5/10/20/100,
@@ -81,21 +80,16 @@ namespace ClickerGenesis.Core
         /// the max, per explicit request ("I'm not going higher than that").</summary>
         public int VerseBuyMultiplier { get; private set; } = 1;
 
-        /// <summary>How many Click Power upgrades "Upgrade Tap" buys per click. Cycles
-        /// 1/5/10/20/100 - the button to change this only appears once ClickPowerLevel >= 5.</summary>
-        public int ClickPowerBuyMultiplier { get; private set; } = 1;
+        /// <summary>How many Click Power upgrades "Upgrade Tap" buys per click. Unified
+        /// (2026-08-04) with ScribeBuyMultiplier per explicit request - one multiplier control
+        /// (the Scribes tab's "Multiplier" button) now drives both scribe and Click Power bulk-buy,
+        /// instead of two separate cycle buttons doing the same conceptual thing.</summary>
+        public int ClickPowerBuyMultiplier => ScribeBuyMultiplier;
 
         public void CycleVerseBuyMultiplier()
         {
             int idx = (System.Array.IndexOf(VerseMultiplierTiers, VerseBuyMultiplier) + 1) % VerseMultiplierTiers.Length;
             VerseBuyMultiplier = VerseMultiplierTiers[idx];
-            OnStateChanged?.Invoke();
-        }
-
-        public void CycleClickPowerBuyMultiplier()
-        {
-            int idx = (System.Array.IndexOf(ClickPowerMultiplierTiers, ClickPowerBuyMultiplier) + 1) % ClickPowerMultiplierTiers.Length;
-            ClickPowerBuyMultiplier = ClickPowerMultiplierTiers[idx];
             OnStateChanged?.Invoke();
         }
 

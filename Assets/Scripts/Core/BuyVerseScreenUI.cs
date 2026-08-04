@@ -111,9 +111,16 @@ namespace ClickerGenesis.Core
             var levels = Controller.Levels;
             if (XpBarText != null) XpBarText.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
             if (XpBarFill != null)
-                XpBarFill.fillAmount = levels.XpRequiredForNextLevel > 0
+            {
+                float fraction = levels.XpRequiredForNextLevel > 0
                     ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
                     : 0f;
+                // Sliced (not Filled) so the rounded-pill sprite's corners match the Background
+                // exactly at any width - see ClickerScreenUI.Refresh for the same fix + rationale.
+                var fillRt = XpBarFill.rectTransform;
+                fillRt.anchorMin = new Vector2(0f, 0f);
+                fillRt.anchorMax = new Vector2(fraction, 1f);
+            }
 
             // Default to the most recently unlocked verse until the player picks something else
             // from the list - clamp in case a previously-selected index is somehow out of range.

@@ -23,12 +23,10 @@ namespace ClickerGenesis.Core
         public Transform FloatingTextParent;
         public GameObject FloatingTextTemplate;
 
-        [Header("Click Power upgrade (bulk buy: 1x/2x/3x/4x/5x = 1/5/10/20/100)")]
+        [Header("Click Power upgrade (bulk-buy quantity shares the Scribes tab's Multiplier control)")]
         public Button ClickPowerButton;
         public TMP_Text ClickPowerButtonLabel;
         public TMP_Text TapValueLabel;
-        public Button ClickPowerMultiplierButton;
-        public TMP_Text ClickPowerMultiplierButtonLabel;
 
         [Header("Prestige (locked until eligible)")]
         public Button PrestigeButton;
@@ -66,7 +64,6 @@ namespace ClickerGenesis.Core
             // is guaranteed either way, so this is strictly more robust, not just a workaround.
             TapButton.onClick.AddListener(HandleTap);
             if (ClickPowerButton != null) ClickPowerButton.onClick.AddListener(HandleBuyClickPower);
-            if (ClickPowerMultiplierButton != null) ClickPowerMultiplierButton.onClick.AddListener(() => Controller?.CycleClickPowerBuyMultiplier());
             if (PrestigeButton != null) PrestigeButton.onClick.AddListener(HandlePrestigeClick);
             if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(false));
             if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(true));
@@ -127,18 +124,6 @@ namespace ClickerGenesis.Core
 
         private void HandleBuyClickPower() => Controller?.BuyClickPowerBulk();
 
-        /// <summary>See BuyVerseScreenUI.MultiplierTierLabel - same 1/5/10/20/... quantity -> "Nx"
-        /// tier label mapping, extended with a 5x tier since Click Power's cap is 100 not 20.</summary>
-        private static string MultiplierTierLabel(int quantity) => quantity switch
-        {
-            1 => "1x",
-            5 => "2x",
-            10 => "3x",
-            20 => "4x",
-            100 => "5x",
-            _ => $"{quantity}x"
-        };
-
         private void SpawnFloatingText()
         {
             var go = Instantiate(FloatingTextTemplate, FloatingTextParent);
@@ -186,18 +171,26 @@ namespace ClickerGenesis.Core
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
             if (XpBarFill != null)
-                XpBarFill.fillAmount = levels.XpRequiredForNextLevel > 0
+            {
+                float fraction = levels.XpRequiredForNextLevel > 0
                     ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
                     : 0f;
+                // Sliced (not Filled) so the rounded-pill sprite's corners render correctly at any
+                // width - Filled crops the raw sprite rect and can't preserve a 9-slice border,
+                // which made the fill's rounded shape mismatch the Background's actual bounds.
+                var fillRt = XpBarFill.rectTransform;
+                fillRt.anchorMin = new Vector2(0f, 0f);
+                fillRt.anchorMax = new Vector2(fraction, 1f);
+            }
 
             if (TapValueLabel != null)
                 TapValueLabel.text = $"Each tap: {NumberFormatter.Format(Controller.EffectiveTapAmount)} Ink";
 
-            // The tap-value preview lives on the Tap circle itself; the Upgrade button shows only
-            // the cost, per explicit request (was previously reversed / both crammed together).
+            // Just the current tap power - no "-> preview" arrow. Updates automatically whenever
+            // EffectiveTapAmount changes (i.e. the player buys a Click Power upgrade), since this
+            // whole method re-runs on every OnStateChanged tick.
             if (TapButtonLabel != null)
-                TapButtonLabel.text =
-                    $"Tap: {NumberFormatter.Format(Controller.EffectiveTapAmount)} -> {NumberFormatter.Format(Controller.ClickPowerBulkPreviewTapAmount)}";
+                TapButtonLabel.text = $"Tap: {NumberFormatter.Format(Controller.EffectiveTapAmount)}";
 
             if (ClickPowerButton != null)
             {
@@ -205,16 +198,6 @@ namespace ClickerGenesis.Core
                 ClickPowerButton.interactable = Controller.Wallet.Balance >= bulkCost;
                 if (ClickPowerButtonLabel != null)
                     ClickPowerButtonLabel.text = $"{NumberFormatter.Format(bulkCost)} Ink";
-            }
-
-            if (ClickPowerMultiplierButton != null)
-            {
-                // Only appears once the player has bought at least 5 upgrades - before that, a
-                // 5/10/20/100 batch option is more clutter than choice.
-                bool showMultiplier = Controller.ClickPowerLevel >= 5;
-                ClickPowerMultiplierButton.gameObject.SetActive(showMultiplier);
-                if (showMultiplier && ClickPowerMultiplierButtonLabel != null)
-                    ClickPowerMultiplierButtonLabel.text = MultiplierTierLabel(Controller.ClickPowerBuyMultiplier);
             }
 
             if (PrestigeButton != null)
