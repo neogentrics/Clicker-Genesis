@@ -24,6 +24,11 @@ namespace ClickerGenesis.Core
         public GameObject RowTemplate;
         public BuyVerseScreenUI ScreenUi;
 
+        /// <summary>-1 = show the live current in-progress chapter (default). Set by
+        /// BuyVerseScreenUI.ReviewChapter() when the player clicks a chapter row on the Chapters
+        /// tab to review a specific (usually already-completed) chapter's verses instead.</summary>
+        public int ReviewChapterNumber = -1;
+
         private readonly List<Row> rows = new List<Row>();
         private int builtChapter = int.MinValue;
         private GameLoopController Controller => GameLoopController.Instance;
@@ -42,6 +47,12 @@ namespace ClickerGenesis.Core
         {
             if (Controller != null) Controller.OnStateChanged -= Refresh;
         }
+
+        /// <summary>Called by BuyVerseScreenUI.ReviewChapter() right after changing
+        /// ReviewChapterNumber - setting that field alone doesn't repaint anything, since Refresh()
+        /// otherwise only runs on GameLoopController.OnStateChanged (which a chapter-review click
+        /// doesn't fire, since no wallet/verse state actually changed).</summary>
+        public void ForceRefresh() => Refresh();
 
         /// <summary>
         /// See ScribeListUI.ForceLayoutRebuild for the two issues this works around: runtime-
@@ -73,16 +84,17 @@ namespace ClickerGenesis.Core
             UiRefreshUtil.ForceFullRefresh(contentRt);
         }
 
-        private void RebuildRowsForCurrentChapter()
+        private void RebuildRowsForCurrentChapter(int chapter)
         {
             foreach (var row in rows)
                 if (row.SelectButton != null) Destroy(row.SelectButton.gameObject);
             rows.Clear();
 
-            if (Controller.BookComplete) return;
+            if (chapter < 0) return;
 
-            int start = Controller.CurrentChapterStartIndex;
-            int end = Controller.CurrentChapterEndIndexExclusive;
+            int start = Controller.GetChapterStartIndex(chapter);
+            if (start < 0) return;
+            int end = start + Controller.GetChapterVerseCount(chapter);
             for (int i = start; i < end; i++)
             {
                 int index = i;
@@ -106,15 +118,17 @@ namespace ClickerGenesis.Core
         {
             if (Controller == null || Controller.Verses == null) return;
 
-            int chapter = Controller.BookComplete ? -1 : Controller.CurrentChapterNumber;
+            int chapter = ReviewChapterNumber >= 0
+                ? ReviewChapterNumber
+                : (Controller.BookComplete ? -1 : Controller.CurrentChapterNumber);
             if (chapter != builtChapter)
             {
-                RebuildRowsForCurrentChapter();
+                RebuildRowsForCurrentChapter(chapter);
                 builtChapter = chapter;
                 ForceLayoutRebuild();
             }
 
-            int start = Controller.BookComplete ? 0 : Controller.CurrentChapterStartIndex;
+            int start = chapter < 0 ? 0 : Controller.GetChapterStartIndex(chapter);
             for (int r = 0; r < rows.Count; r++)
             {
                 int i = start + r;

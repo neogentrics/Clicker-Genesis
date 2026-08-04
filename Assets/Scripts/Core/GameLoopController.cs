@@ -378,6 +378,28 @@ namespace ClickerGenesis.Core
         /// upcoming locked verses' costs ahead of time, not just the very next one.</summary>
         public double VerseCostAt(int index) => pricingConfig != null ? PricingCurve.VerseCost(pricingConfig, index) : 0;
 
+        /// <summary>First verse index belonging to the given (arbitrary, not necessarily current)
+        /// chapter number - lets the Chapters tab jump the Verses tab to review a PAST completed
+        /// chapter's verses, not just the live current chapter (2026-08-04, real gap: chapter rows
+        /// were entirely unclickable before this).</summary>
+        public int GetChapterStartIndex(int chapterNumber)
+        {
+            if (Verses == null) return -1;
+            for (int i = 0; i < Verses.VerseCount; i++)
+                if (Verses.GetVerse(i).ChapterNumber == chapterNumber) return i;
+            return -1;
+        }
+
+        /// <summary>How many verses the given chapter number has, total (not "remaining").</summary>
+        public int GetChapterVerseCount(int chapterNumber)
+        {
+            if (Verses == null) return 0;
+            int count = 0;
+            for (int i = 0; i < Verses.VerseCount; i++)
+                if (Verses.GetVerse(i).ChapterNumber == chapterNumber) count++;
+            return count;
+        }
+
         public void TapForInk()
         {
             Wallet.Add(EffectiveTapAmount);

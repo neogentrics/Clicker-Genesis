@@ -21,10 +21,12 @@ namespace ClickerGenesis.Core
             public int VerseCount;
             public TMP_Text ReferenceText;
             public TMP_Text CostText;
+            public Button Button;
         }
 
         public Transform Content;
         public GameObject RowTemplate;
+        public BuyVerseScreenUI ScreenUi;
 
         private readonly List<Row> rows = new List<Row>();
         private GameLoopController Controller => GameLoopController.Instance;
@@ -86,11 +88,12 @@ namespace ClickerGenesis.Core
                         StartIndex = i,
                         VerseCount = 0,
                         ReferenceText = rowGo.transform.Find("Reference").GetComponent<TMP_Text>(),
-                        CostText = rowGo.transform.Find("Cost").GetComponent<TMP_Text>()
+                        CostText = rowGo.transform.Find("Cost").GetComponent<TMP_Text>(),
+                        Button = rowGo.GetComponent<Button>()
                     };
 
-                    var button = rowGo.GetComponent<Button>();
-                    if (button != null) button.interactable = false; // informational only, not clickable
+                    int chapterNumber = current.ChapterNumber;
+                    if (current.Button != null) current.Button.onClick.AddListener(() => ScreenUi?.ReviewChapter(chapterNumber));
 
                     rows.Add(current);
                 }
@@ -111,12 +114,17 @@ namespace ClickerGenesis.Core
                 {
                     row.ReferenceText.text = $"{bookName} Chapter {row.ChapterNumber}";
                     row.CostText.text = "Complete";
+                    if (row.Button != null) row.Button.interactable = true; // reviewable via ReviewChapter
                 }
-                else if (row.ChapterNumber == currentChapter)
+                else if (row.ChapterNumber == currentChapter && !Controller.RequiresChapterUnlock)
                 {
+                    // Only reachable for the book's very first chapter - every later chapter is
+                    // entered atomically via BuyNextChapter, so "in progress" (partially bought)
+                    // never applies to them. See RequiresChapterUnlock.
                     int remaining = Controller.RemainingVersesInCurrentChapter;
                     row.ReferenceText.text = $"{bookName} Chapter {row.ChapterNumber} [In Progress]";
                     row.CostText.text = $"{NumberFormatter.Format(Controller.ChapterBulkCost)} Ink ({remaining} left)";
+                    if (row.Button != null) row.Button.interactable = true; // has bought verses to review
                 }
                 else
                 {
@@ -127,6 +135,7 @@ namespace ClickerGenesis.Core
 
                     row.ReferenceText.text = $"{bookName} Chapter {row.ChapterNumber} [Locked]";
                     row.CostText.text = $"{NumberFormatter.Format(cost)} Ink";
+                    if (row.Button != null) row.Button.interactable = false; // nothing bought yet to review
                 }
             }
 

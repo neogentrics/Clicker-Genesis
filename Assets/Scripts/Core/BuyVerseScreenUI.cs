@@ -33,6 +33,7 @@ namespace ClickerGenesis.Core
         public GameObject ChapterListRoot;
         public Image VersesTabBackground;
         public Image ChaptersTabBackground;
+        public VerseListUI VerseList;
 
         /// <summary>-1 = nothing selected yet (defaults to the most recently unlocked verse).</summary>
         private int selectedVerseIndex = -1;
@@ -69,6 +70,34 @@ namespace ClickerGenesis.Core
             if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(!chapters);
             if (VersesTabBackground != null) VersesTabBackground.color = chapters ? InactiveTabColor : ActiveTabColor;
             if (ChaptersTabBackground != null) ChaptersTabBackground.color = chapters ? ActiveTabColor : InactiveTabColor;
+            // Clicking the Verses tab directly always goes back to the live in-progress chapter -
+            // only ReviewChapter() (from clicking a Chapters-tab row) leaves a specific chapter
+            // pinned for review.
+            if (!chapters && VerseList != null)
+            {
+                VerseList.ReviewChapterNumber = -1;
+                VerseList.ForceRefresh();
+            }
+            Refresh();
+        }
+
+        /// <summary>Called by ChapterListUI when the player clicks a chapter row - switches to the
+        /// Verses tab showing that chapter's verses specifically, instead of always the live
+        /// current chapter (2026-08-04, real gap: chapter rows were entirely unclickable before
+        /// this, so there was no way to go back and re-read an earlier chapter's verses).</summary>
+        public void ReviewChapter(int chapterNumber)
+        {
+            showingChapters = false;
+            if (VerseListRoot != null) VerseListRoot.SetActive(true);
+            if (ChapterListRoot != null) ChapterListRoot.SetActive(false);
+            if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(true);
+            if (VersesTabBackground != null) VersesTabBackground.color = ActiveTabColor;
+            if (ChaptersTabBackground != null) ChaptersTabBackground.color = InactiveTabColor;
+            if (VerseList != null)
+            {
+                VerseList.ReviewChapterNumber = chapterNumber;
+                VerseList.ForceRefresh();
+            }
             Refresh();
         }
 
