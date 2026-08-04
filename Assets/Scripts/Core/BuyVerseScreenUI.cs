@@ -91,6 +91,7 @@ namespace ClickerGenesis.Core
             5 => "2x",
             10 => "3x",
             20 => "4x",
+            GameLoopController.MaxBuyMultiplier => "Max",
             _ => $"{quantity}x"
         };
 
@@ -177,6 +178,15 @@ namespace ClickerGenesis.Core
                 if (BuyButtonLabel != null)
                     BuyButtonLabel.text = $"Buy Next Chapter ({NumberFormatter.Format(chapterCost)} Ink)";
             }
+            else if (Controller.RequiresChapterUnlock)
+            {
+                // 2026-08-04, explicit user design: verse purchases (single or bulk) never cross
+                // into a fresh chapter on their own - only the Chapters tab's bulk-buy can do that.
+                // Redirect instead of silently letting the player buy into the new chapter here.
+                StatusLabel.text = $"Chapter {Controller.CurrentChapterNumber} is locked - buy it on the Chapters tab first.";
+                BuyButton.interactable = false;
+                if (BuyButtonLabel != null) BuyButtonLabel.text = "Buy Next Chapter to Unlock";
+            }
             else
             {
                 double bulkCost = Controller.VerseBulkCost;
@@ -184,7 +194,9 @@ namespace ClickerGenesis.Core
                 BuyButton.interactable = Controller.Wallet.Balance >= bulkCost;
                 if (BuyButtonLabel != null)
                 {
-                    string quantityLabel = Controller.VerseBuyMultiplier == 1 ? "Next Verse" : $"{Controller.VerseBuyMultiplier} Verses";
+                    string quantityLabel = Controller.VerseBuyMultiplier == GameLoopController.MaxBuyMultiplier
+                        ? "Max Verses"
+                        : Controller.VerseBuyMultiplier == 1 ? "Next Verse" : $"{Controller.VerseBuyMultiplier} Verses";
                     BuyButtonLabel.text = $"Buy {quantityLabel} ({NumberFormatter.Format(bulkCost)} Ink)";
                 }
             }

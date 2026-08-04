@@ -61,7 +61,7 @@ namespace ClickerGenesis.Core
         public int NextVerseIndex { get; private set; }
 
         [Header("Bulk buy")]
-        private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20 };
+        private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20, MaxBuyMultiplier };
 
         /// <summary>-1 is the "Max" sentinel (2026-08-04, explicit user request alongside the
         /// auto-buy toggle) - buys as many as the wallet can afford in one click instead of a
@@ -119,14 +119,40 @@ namespace ClickerGenesis.Core
             OnStateChanged?.Invoke();
         }
 
+        /// <summary>How many verses the current wallet balance can afford in a row, capped at the
+        /// current chapter's boundary - Verse counterpart to MaxAffordableScribeCount/
+        /// MaxAffordableClickPowerCount.</summary>
+        private int MaxAffordableVerseCount()
+        {
+            if (RequiresChapterUnlock) return 0;
+            double remaining = Wallet.Balance;
+            int cap = RemainingVersesInCurrentChapter;
+            int count = 0;
+            for (int i = 0; i < cap; i++)
+            {
+                double cost = VerseCostAt(NextVerseIndex + i);
+                if (cost > remaining) break;
+                remaining -= cost;
+                count++;
+            }
+            return count;
+        }
+
         /// <summary>Total cost to buy VerseBuyMultiplier verses starting from NextVerseIndex,
-        /// capped at however many verses remain in the book.</summary>
+        /// capped at the current chapter's boundary (2026-08-04 - verse purchases, single or bulk,
+        /// never cross into a fresh chapter; only BuyNextChapter can do that). Zero while
+        /// RequiresChapterUnlock is true. MaxBuyMultiplier resolves to however many the wallet can
+        /// afford within the current chapter.</summary>
         public double VerseBulkCost
         {
             get
             {
+                if (RequiresChapterUnlock) return 0;
+                int count = VerseBuyMultiplier == MaxBuyMultiplier
+                    ? MaxAffordableVerseCount()
+                    : Math.Min(VerseBuyMultiplier, RemainingVersesInCurrentChapter);
                 double total = 0;
-                for (int i = 0; i < VerseBuyMultiplier && Verses != null && Verses.HasVerse(NextVerseIndex + i); i++)
+                for (int i = 0; i < count; i++)
                     total += VerseCostAt(NextVerseIndex + i);
                 return total;
             }
@@ -426,11 +452,22 @@ namespace ClickerGenesis.Core
         private bool TryBuyOneVerseNoNotify()
         {
             if (BookComplete || pricingConfig == null) return false;
+            if (RequiresChapterUnlock) return false; // must use BuyNextChapter first - see RequiresChapterUnlock
+
             if (!Wallet.TrySpend(NextVerseCost)) return false;
 
             ApplyVersePurchaseNoCharge();
             return true;
         }
+
+        /// <summary>True when NextVerseIndex sits at the very first verse of a chapter beyond the
+        /// book's first one, and nothing has been bought in it yet - meaning the player must use
+        /// "Buy Next Chapter" (on the Chapters tab) before any further verse purchase (single or
+        /// bulk) can resume. 2026-08-04, explicit user design: verse purchases were silently
+        /// crossing chapter boundaries mid-bulk-buy, which was never intended - only the chapter
+        /// bulk-buy action itself is allowed to cross into a fresh chapter.</summary>
+        public bool RequiresChapterUnlock =>
+            !BookComplete && NextVerseIndex > 0 && NextVerseIndex == CurrentChapterStartIndex;
 
         /// <summary>Chapter number the player is currently working through (containing
         /// NextVerseIndex) - every earlier chapter is fully bought, every later one untouched,
@@ -517,8 +554,9 @@ namespace ClickerGenesis.Core
         /// actually bought.</summary>
         public int BuyVersesBulk()
         {
+            int target = VerseBuyMultiplier == MaxBuyMultiplier ? MaxAffordableVerseCount() : VerseBuyMultiplier;
             int bought = 0;
-            for (int i = 0; i < VerseBuyMultiplier; i++)
+            for (int i = 0; i < target; i++)
             {
                 if (!TryBuyOneVerseNoNotify()) break;
                 bought++;
