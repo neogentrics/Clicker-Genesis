@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: GenesisScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Genesis
+  tiers:
+  - id: reed_pen
+    displayName: Reed Pen
+    flavorText: "A simple reed pen \u2014 humble, but it's how every scribe starts."
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Adam
+    managerFlavorText: "First to name the animals \u2014 a natural at putting things
+      in order."
+    managerUnlockLevel: 2
+    managerBonusMultiplier: 0.25
+  - id: papyrus_scroll
+    displayName: Papyrus Scroll
+    flavorText: Rolls of papyrus, ready for careful copying.
+    baseCost: 50
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2
+    unlockAtVerseIndex: 1
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerBonusMultiplier: 0.25
+  - id: stone_tablet
+    displayName: Stone Tablet
+    flavorText: Slower to inscribe, but built to last.
+    baseCost: 250
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8
+    unlockAtVerseIndex: 2
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerBonusMultiplier: 0.25
+  - id: oil_lamp
+    displayName: Oil Lamp
+    flavorText: Lets the work continue after sundown.
+    baseCost: 1000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25
+    unlockAtVerseIndex: 3
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerBonusMultiplier: 0.25
+  - id: arks_manifest
+    displayName: Ark's Manifest
+    flavorText: Noah's own record of everything that boarded the ark.
+    baseCost: 5000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 80
+    unlockAtVerseIndex: 4
+    managerName: Noah
+    managerFlavorText: "Kept the most detailed manifest in scripture \u2014 nothing
+      got past him."
+    managerUnlockLevel: 4
+    managerBonusMultiplier: 0.25
+  - id: covenant_seal
+    displayName: Covenant Seal
+    flavorText: Marks a promise meant to last generations.
+    baseCost: 20000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 250
+    unlockAtVerseIndex: 5
+    managerName: Abraham
+    managerFlavorText: "The covenant is his defining moment \u2014 trusted to keep
+      his word."
+    managerUnlockLevel: 6
+    managerBonusMultiplier: 0.25
+  - id: jacobs_ladder
+    displayName: Jacob's Ladder
+    flavorText: A stairway glimpsed in a dream at Bethel.
+    baseCost: 100000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 800
+    unlockAtVerseIndex: 6
+    managerName: Jacob
+    managerFlavorText: "Dreamed it himself \u2014 he knows exactly where it leads."
+    managerUnlockLevel: 8
+    managerBonusMultiplier: 0.25
+  - id: josephs_storehouse
+    displayName: Joseph's Storehouse
+    flavorText: Egypt's entire grain economy, organized under one roof.
+    baseCost: 500000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2500
+    unlockAtVerseIndex: 7
+    managerName: Joseph
+    managerFlavorText: "Administered Egypt's whole grain economy during the famine
+      \u2014 nobody manages at this scale like he does."
+    managerUnlockLevel: 10
+    managerBonusMultiplier: 0.25
