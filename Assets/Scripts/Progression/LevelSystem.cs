@@ -24,12 +24,13 @@ namespace ClickerGenesis.Progression
         public bool IsPrestigeEligible => CurrentLevel >= config.PrestigeLevelThreshold;
 
         /// <summary>
-        /// True once the player is close enough that showing the (still locked) Prestige button
-        /// is a meaningful goal rather than clutter — one level below the threshold. Progressive
-        /// disclosure: far-off features stay hidden entirely rather than visible-but-locked from
-        /// the very start.
+        /// True once the player has reached XpConfig.PrestigeButtonVisibleLevel (2026-08-04:
+        /// user's explicit call — level 2, well before the level-5 unlock threshold) — the
+        /// (still locked) Prestige button shows up as a goal to work toward, rather than only
+        /// appearing right at (or one level before) the threshold itself. Progressive disclosure:
+        /// far-off features stay hidden entirely rather than visible-but-locked from level 1.
         /// </summary>
-        public bool IsPrestigeNear => CurrentLevel >= config.PrestigeLevelThreshold - 1;
+        public bool IsPrestigeNear => CurrentLevel >= config.PrestigeButtonVisibleLevel;
 
         public int XpAtLevelStart(int level) => config.LevelXpBase * (level - 1) * level / 2;
 

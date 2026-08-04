@@ -185,11 +185,33 @@ namespace ClickerGenesis.Core
         {
             if (Scribes == null) return;
 
-            double inkPerSecond = Scribes.TotalInkPerSecond(Levels.CurrentLevel);
-            if (inkPerSecond <= 0) return;
+            bool changed = false;
 
-            Wallet.Add(inkPerSecond * Time.deltaTime);
-            OnStateChanged?.Invoke();
+            double inkPerSecond = Scribes.TotalInkPerSecond(Levels.CurrentLevel);
+            if (inkPerSecond > 0)
+            {
+                Wallet.Add(inkPerSecond * Time.deltaTime);
+                changed = true;
+            }
+
+            // Manager auto-buy (2026-08-04): a manager doesn't just boost its tier's output — once
+            // bought, it also auto-purchases that tier itself whenever affordable, same as
+            // AdVenture Capitalist-style managers. Plain arithmetic per tier per frame (no
+            // allocations, no UI work) — this is not the kind of per-frame cost that caused the
+            // forced-UI-rebuild lag in bug #22.
+            for (int i = 0; i < Scribes.TierCount; i++)
+            {
+                if (!Scribes.IsManagerUnlocked(i)) continue;
+                if (!Scribes.IsUnlocked(i, NextVerseIndex)) continue;
+
+                double cost = Scribes.GetNextCost(i);
+                if (!Wallet.TrySpend(cost)) continue;
+
+                Scribes.Buy(i);
+                changed = true;
+            }
+
+            if (changed) OnStateChanged?.Invoke();
         }
 
         /// <summary>Attempts to buy one more of a scribe tier. Returns false if unaffordable, locked, or config missing.</summary>

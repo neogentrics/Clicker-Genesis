@@ -23,6 +23,9 @@ namespace ClickerGenesis.Progression
         [Tooltip("Player level at which prestige becomes available.")]
         [SerializeField] private int prestigeLevelThreshold = 5;
 
+        [Tooltip("Player level at which the (still locked) Prestige button first appears on ClickerScreen - a goal to work toward, shown well before it unlocks rather than only right at the threshold.")]
+        [SerializeField] private int prestigeButtonVisibleLevel = 2;
+
         public int XpPerVerse => xpPerVerse;
         public int XpPerChapterBonus => xpPerChapterBonus;
         public int XpPerBookBonus => xpPerBookBonus;
@@ -30,5 +33,6 @@ namespace ClickerGenesis.Progression
         public int XpBulkBuyBonus => xpBulkBuyBonus;
         public int LevelXpBase => levelXpBase;
         public int PrestigeLevelThreshold => prestigeLevelThreshold;
+        public int PrestigeButtonVisibleLevel => prestigeButtonVisibleLevel;
     }
 }

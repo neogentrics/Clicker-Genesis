@@ -43,6 +43,10 @@ namespace ClickerGenesis.Core
         public Image ScribesTabBackground;
         public Image ManagersTabBackground;
 
+        [Header("Scribes header (2026-08-04) - 'Multiplier' caption + bulk-buy cycle button, Scribes tab only")]
+        public TMP_Text ScribesHeaderLabel;
+        public GameObject ScribeMultiplierButtonRoot;
+
         private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
         private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
 
@@ -78,6 +82,12 @@ namespace ClickerGenesis.Core
             if (ManagerListRoot != null) ManagerListRoot.SetActive(managers);
             if (ScribesTabBackground != null) ScribesTabBackground.color = managers ? InactiveTabColor : ActiveTabColor;
             if (ManagersTabBackground != null) ManagersTabBackground.color = managers ? ActiveTabColor : InactiveTabColor;
+
+            // The "Multiplier" caption + bulk-buy cycle button only make sense for Scribes (Managers
+            // has no bulk-buy of its own) - previously this was a fixed "Scribes" title that never
+            // updated and a corner button that stayed visible on both tabs regardless of context.
+            if (ScribesHeaderLabel != null) ScribesHeaderLabel.text = managers ? "" : "Multiplier";
+            if (ScribeMultiplierButtonRoot != null) ScribeMultiplierButtonRoot.SetActive(!managers);
         }
 
         private void OnDestroy()
@@ -171,7 +181,7 @@ namespace ClickerGenesis.Core
 
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
             if (ClickingPowerLabel != null && Controller.Scribes != null)
-                ClickingPowerLabel.text = $"Clicking Power: {NumberFormatter.Format(Controller.Scribes.TotalInkPerSecond(Controller.Levels.CurrentLevel))} Ink/s";
+                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.Scribes.TotalInkPerSecond(Controller.Levels.CurrentLevel))} Ink/s";
 
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";

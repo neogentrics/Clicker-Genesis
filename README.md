@@ -11,7 +11,7 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 
 ## Status
 
-**Version 0.2.4** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
+**Version 0.2.6** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -34,6 +34,9 @@ This is an active work-in-progress being built in public as part of a developmen
 - Multi-scene navigation (Main Menu → Clicker Screen ↔ Buy Verse Screen, Settings) with persistent cross-scene game state
 - Working sound toggle (PlayerPrefs-persisted)
 - Parchment/ink/gold "warm, legible, mobile-fast" base art direction, with a reserved stained-glass accent style for reward moments (not yet built)
+- Every screen (Main Menu, Clicker, Buy Verse, Settings) re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
+- Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus
+- Run-in-background toggle (Settings) so idle Ink income keeps ticking while the window is unfocused
 
 ## Tech stack
 

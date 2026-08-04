@@ -17,6 +17,7 @@ namespace ClickerGenesis.Core
         private const string ResolutionIndexKey = "ClickerGenesis.ResolutionIndex";
         private const string BatterySaverKey = "ClickerGenesis.BatterySaver";
         private const string QualityLevelKey = "ClickerGenesis.QualityLevel";
+        private const string RunInBackgroundKey = "ClickerGenesis.RunInBackground";
 
         public static event System.Action OnChanged;
 
@@ -94,6 +95,23 @@ namespace ClickerGenesis.Core
             set { PlayerPrefs.SetInt(BatterySaverKey, value ? 1 : 0); PlayerPrefs.Save(); }
         }
 
+        /// <summary>Whether passive Ink/scribe simulation keeps running while the window is
+        /// unfocused (2026-08-04, real bug fix + user's explicit request for it to be an opt-in
+        /// toggle, not forced on). Default true - an idle game where progress stops the moment you
+        /// alt-tab defeats the point of "idle." PlayerSettings.runInBackground (build-time) must
+        /// also be true for this to have any effect at all; this is the runtime opt-out on top of
+        /// that build-time capability.</summary>
+        public static bool RunInBackground
+        {
+            get => PlayerPrefs.GetInt(RunInBackgroundKey, 1) == 1;
+            set
+            {
+                PlayerPrefs.SetInt(RunInBackgroundKey, value ? 1 : 0);
+                PlayerPrefs.Save();
+                Application.runInBackground = value;
+            }
+        }
+
         /// <summary>Pushes all persisted display settings to the actual engine/OS state. Call once
         /// at bootstrap (GameLoopController.Awake) so they take effect even if the player never
         /// opens the Settings screen this session.</summary>
@@ -117,6 +135,7 @@ namespace ClickerGenesis.Core
                 QualitySettings.SetQualityLevel(qualityIndex, true);
 
             ApplyBatterySaver(BatterySaver);
+            Application.runInBackground = RunInBackground;
         }
 
         public static void ApplyBatterySaver(bool enabled)

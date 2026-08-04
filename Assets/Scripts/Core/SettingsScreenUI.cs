@@ -42,6 +42,10 @@ namespace ClickerGenesis.Core
         public Button BatterySaverToggleButton;
         public TMP_Text BatterySaverLabel;
 
+        [Header("Run in background (2026-08-04) - opt-in, off by default is a real bug: idle progress stopped entirely when unfocused")]
+        public Button RunInBackgroundToggleButton;
+        public TMP_Text RunInBackgroundLabel;
+
         [Header("Back to Game (2026-08-04) - only shown when reached from actual gameplay, not from MainMenu")]
         public GameObject BackToGameButton;
 
@@ -64,6 +68,7 @@ namespace ClickerGenesis.Core
             if (NotationCycleButton != null) NotationCycleButton.onClick.AddListener(CycleNotation);
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
+            if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
 
             // Same button/label slot does double duty: exact resolution picking only makes sense
             // on desktop (windowed mode, arbitrary monitor sizes) - mobile has no windowing to
@@ -143,6 +148,12 @@ namespace ClickerGenesis.Core
             RefreshBatterySaver();
         }
 
+        private void ToggleRunInBackground()
+        {
+            GameSettings.RunInBackground = !GameSettings.RunInBackground; // setter also applies Application.runInBackground
+            RefreshRunInBackground();
+        }
+
         private void RefreshAll()
         {
             RefreshSound();
@@ -151,6 +162,7 @@ namespace ClickerGenesis.Core
             RefreshFullscreen();
             RefreshResolution();
             RefreshBatterySaver();
+            RefreshRunInBackground();
         }
 
         private void RefreshSound()
@@ -202,6 +214,12 @@ namespace ClickerGenesis.Core
         {
             if (BatterySaverLabel != null)
                 BatterySaverLabel.text = GameSettings.BatterySaver ? "Battery Saver: On (30fps)" : "Battery Saver: Off";
+        }
+
+        private void RefreshRunInBackground()
+        {
+            if (RunInBackgroundLabel != null)
+                RunInBackgroundLabel.text = GameSettings.RunInBackground ? "Run in Background: On" : "Run in Background: Off";
         }
     }
 }
