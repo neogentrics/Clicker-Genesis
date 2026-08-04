@@ -11,7 +11,7 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 
 ## Status
 
-**Version 0.2.6** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
+**Version 0.2.7** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -35,8 +35,11 @@ This is an active work-in-progress being built in public as part of a developmen
 - Working sound toggle (PlayerPrefs-persisted)
 - Parchment/ink/gold "warm, legible, mobile-fast" base art direction, with a reserved stained-glass accent style for reward moments (not yet built)
 - Every screen (Main Menu, Clicker, Buy Verse, Settings) re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
-- Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus
+- Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus — now with a player-facing on/off toggle and a spendable-Ink reserve floor, plus a "Max" bulk-buy tier alongside the existing 1x/5x/10x/20x/100x multipliers
 - Run-in-background toggle (Settings) so idle Ink income keeps ticking while the window is unfocused
+- Shared passive "progress multiplier": every 5 verses bought adds +0.1 to a multiplier applied across all scribe output, and it doubles outright on every chapter completed
+- Real hover/press visual feedback on every button in the game (not just a cosmetic tweak — previously the default Unity tint was too subtle to register as feedback at all)
+- Managers are now correctly locked until their own scribe tier is unlocked by verse progress, not just by player level
 
 ## Tech stack
 
