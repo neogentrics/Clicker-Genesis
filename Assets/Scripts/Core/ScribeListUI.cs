@@ -135,7 +135,10 @@ namespace ClickerGenesis.Core
             var scribes = Controller.Scribes;
             int level = Controller.Levels.CurrentLevel;
 
-            if (MultiplierButtonLabel != null) MultiplierButtonLabel.text = $"x{Controller.ScribeBuyMultiplier}";
+            if (MultiplierButtonLabel != null)
+                MultiplierButtonLabel.text = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
+                    ? "Max"
+                    : $"x{Controller.ScribeBuyMultiplier}";
 
             for (int i = 0; i < rows.Count; i++)
             {
@@ -165,25 +168,19 @@ namespace ClickerGenesis.Core
 
                 string desc = def.flavorText;
                 if (milestoneMultiplier > 1f)
-                    // <size=125%> was tried first but made the line wrap and overlap the Owned
-                    // text below it in the row's fixed height - bold + bright color still makes
-                    // this stand out without growing the text enough to overflow.
-                    desc += $"\n<b><color=#D4372A>×{milestoneMultiplier:F1} milestone bonus ({owned} owned)!</color></b>";
-                if (def.HasManager)
-                {
-                    // Not-yet-active line intentionally has no color override - inherits DescText's
-                    // own base color (dark, high-contrast against the light board), same as the
-                    // flavor text above it. Only the milestone bonus and active-manager lines get a
-                    // distinct highlight color, so those genuinely stand out instead of everything
-                    // being colored and nothing standing out.
-                    desc += managerActive
-                        ? $"\n<color=#2E7D46>{def.managerName} is managing this (+{def.managerBonusMultiplier * 100:F0}% output).</color>"
-                        : $"\n{def.managerName} takes over at level {def.managerUnlockLevel}.";
-                }
+                    // No "(N owned)" - the milestone tier itself is the meaningful information;
+                    // the raw owned count is already shown separately on the Owned line below.
+                    desc += $"\n<b><color=#D4372A>×{milestoneMultiplier:F1} milestone bonus!</color></b>";
+                // Manager line only appears once actually active - no "takes over at level N"
+                // spoiler beforehand, and simplified wording (no % breakdown) once it is active.
+                if (managerActive)
+                    desc += $"\n<color=#2E7D46>{def.managerName} is managing this scribe.</color>";
                 row.DescText.text = desc;
 
-                row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level))} Ink/s";
-                string quantityPrefix = Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
+                row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier))} Ink/s";
+                string quantityPrefix = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
+                    ? "Max  "
+                    : Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
                 row.CostText.text = $"{quantityPrefix}{NumberFormatter.Format(cost)} Ink";
                 row.BuyButton.interactable = Controller.Wallet.Balance >= cost;
             }

@@ -18,6 +18,8 @@ namespace ClickerGenesis.Core
         private const string BatterySaverKey = "ClickerGenesis.BatterySaver";
         private const string QualityLevelKey = "ClickerGenesis.QualityLevel";
         private const string RunInBackgroundKey = "ClickerGenesis.RunInBackground";
+        private const string ManagerAutoBuyEnabledKey = "ClickerGenesis.ManagerAutoBuyEnabled";
+        private const string ManagerAutoBuyReserveIndexKey = "ClickerGenesis.ManagerAutoBuyReserveIndex";
 
         public static event System.Action OnChanged;
 
@@ -143,5 +145,29 @@ namespace ClickerGenesis.Core
             Application.targetFrameRate = enabled ? 30 : -1;
             QualitySettings.SetQualityLevel(enabled ? 0 : QualitySettings.names.Length - 1, true);
         }
+
+        /// <summary>Whether managers auto-purchase their own scribe tier every frame once
+        /// affordable (2026-08-04). Default true - matches the existing always-on behavior; this
+        /// is the opt-out the user asked for after that feature shipped, same pattern as
+        /// RunInBackground.</summary>
+        public static bool ManagerAutoBuyEnabled
+        {
+            get => PlayerPrefs.GetInt(ManagerAutoBuyEnabledKey, 1) == 1;
+            set { PlayerPrefs.SetInt(ManagerAutoBuyEnabledKey, value ? 1 : 0); PlayerPrefs.Save(); }
+        }
+
+        /// <summary>Ink reserve tiers auto-buy will never spend below, so managers don't drain the
+        /// wallet to zero when the player is trying to save up for something else. Index-based
+        /// (not a raw float) since Ink balances run into the hundreds of millions and PlayerPrefs
+        /// floats lose precision there - same reasoning as the multiplier-tier arrays elsewhere.</summary>
+        public static readonly double[] ManagerAutoBuyReserveTiers = { 0, 1_000, 10_000, 100_000, 1_000_000 };
+
+        public static int ManagerAutoBuyReserveIndex
+        {
+            get => Mathf.Clamp(PlayerPrefs.GetInt(ManagerAutoBuyReserveIndexKey, 0), 0, ManagerAutoBuyReserveTiers.Length - 1);
+            set { PlayerPrefs.SetInt(ManagerAutoBuyReserveIndexKey, value); PlayerPrefs.Save(); }
+        }
+
+        public static double ManagerAutoBuyReserve => ManagerAutoBuyReserveTiers[ManagerAutoBuyReserveIndex];
     }
 }

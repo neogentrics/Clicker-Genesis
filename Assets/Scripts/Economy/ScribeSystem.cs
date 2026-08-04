@@ -65,8 +65,12 @@ namespace ClickerGenesis.Economy
             return def.HasManager && playerLevel >= def.managerUnlockLevel;
         }
 
-        public bool CanUnlockManager(int tierIndex, int playerLevel) =>
-            IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex];
+        /// <summary>A manager can only be bought once its OWN scribe tier is unlocked (verse
+        /// progress), not just the level threshold - fixes a real bug where a manager (e.g. Noah)
+        /// could be bought and would immediately show as "takes over at level N" on a scribe tier
+        /// (e.g. Ark's Manifest) the player hadn't unlocked yet.</summary>
+        public bool CanUnlockManager(int tierIndex, int playerLevel, int currentVerseIndex) =>
+            IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex] && IsUnlocked(tierIndex, currentVerseIndex);
 
         /// <summary>Marks a manager as unlocked. Caller is responsible for spending Ink first
         /// (same pattern as Buy for scribe tiers).</summary>
@@ -81,20 +85,23 @@ namespace ClickerGenesis.Economy
             owned[tierIndex]++;
         }
 
-        public double GetTierInkPerSecond(int tierIndex, int playerLevel)
+        /// <summary>progressMultiplier is GameLoopController.ProgressMultiplier - a shared passive
+        /// bonus from verse/chapter progress that applies on top of this tier's own owned-count
+        /// milestone curve and manager bonus (2026-08-04, explicit user design).</summary>
+        public double GetTierInkPerSecond(int tierIndex, int playerLevel, float progressMultiplier = 1f)
         {
             var def = config.tiers[tierIndex];
-            double output = def.baseInkPerSecond * owned[tierIndex] * GetOwnedMilestoneMultiplier(tierIndex);
+            double output = def.baseInkPerSecond * owned[tierIndex] * GetOwnedMilestoneMultiplier(tierIndex) * progressMultiplier;
             if (IsManagerActive(tierIndex, playerLevel))
                 output *= 1.0 + def.managerBonusMultiplier;
             return output;
         }
 
-        public double TotalInkPerSecond(int playerLevel)
+        public double TotalInkPerSecond(int playerLevel, float progressMultiplier = 1f)
         {
             double total = 0;
             for (int i = 0; i < TierCount; i++)
-                total += GetTierInkPerSecond(i, playerLevel);
+                total += GetTierInkPerSecond(i, playerLevel, progressMultiplier);
             return total;
         }
     }

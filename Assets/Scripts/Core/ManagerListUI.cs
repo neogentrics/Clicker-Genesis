@@ -108,6 +108,10 @@ namespace ClickerGenesis.Core
                 bool active = scribes.IsManagerActive(row.TierIndex, level);
                 bool unlocked = scribes.IsManagerUnlocked(row.TierIndex);
                 bool levelEligible = scribes.IsManagerLevelEligible(row.TierIndex, level);
+                // A manager tied to a scribe tier the player hasn't unlocked yet (verse progress)
+                // must stay locked even if the level threshold is already met - fixes a real bug
+                // where Noah could be bought before Ark's Manifest itself was unlocked.
+                bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
 
                 string desc = string.IsNullOrEmpty(def.managerFlavorText)
                     ? $"Manages {def.displayName}."
@@ -121,6 +125,11 @@ namespace ClickerGenesis.Core
                 if (unlocked)
                 {
                     row.CostText.text = "Owned";
+                    row.BuyButton.interactable = false;
+                }
+                else if (!scribeTierUnlocked)
+                {
+                    row.CostText.text = $"Unlocks {def.displayName} first";
                     row.BuyButton.interactable = false;
                 }
                 else if (!levelEligible)

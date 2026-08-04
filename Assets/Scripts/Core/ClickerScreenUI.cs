@@ -45,6 +45,12 @@ namespace ClickerGenesis.Core
         public TMP_Text ScribesHeaderLabel;
         public GameObject ScribeMultiplierButtonRoot;
 
+        [Header("Manager auto-buy controls (2026-08-04) - visible on both Scribes/Managers tabs, next to Multiplier")]
+        public Button AutoBuyToggleButton;
+        public TMP_Text AutoBuyToggleButtonLabel;
+        public Button AutoBuyReserveButton;
+        public TMP_Text AutoBuyReserveButtonLabel;
+
         private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
         private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
 
@@ -67,6 +73,8 @@ namespace ClickerGenesis.Core
             if (PrestigeButton != null) PrestigeButton.onClick.AddListener(HandlePrestigeClick);
             if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(false));
             if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(true));
+            if (AutoBuyToggleButton != null) AutoBuyToggleButton.onClick.AddListener(() => Controller?.ToggleManagerAutoBuy());
+            if (AutoBuyReserveButton != null) AutoBuyReserveButton.onClick.AddListener(() => Controller?.CycleManagerAutoBuyReserve());
             if (Controller != null) Controller.OnStateChanged += Refresh;
             SetTab(false);
             Refresh();
@@ -80,10 +88,11 @@ namespace ClickerGenesis.Core
             if (ScribesTabBackground != null) ScribesTabBackground.color = managers ? InactiveTabColor : ActiveTabColor;
             if (ManagersTabBackground != null) ManagersTabBackground.color = managers ? ActiveTabColor : InactiveTabColor;
 
-            // The "Multiplier" caption + bulk-buy cycle button only make sense for Scribes (Managers
-            // has no bulk-buy of its own) - previously this was a fixed "Scribes" title that never
-            // updated and a corner button that stayed visible on both tabs regardless of context.
-            if (ScribesHeaderLabel != null) ScribesHeaderLabel.text = managers ? "" : "Multiplier";
+            // The bulk-buy cycle button only makes sense for Scribes (Managers has no bulk-buy of
+            // its own), but the header caption itself stays populated on both tabs ("Managers"
+            // instead of a blank string) so the header area doesn't read as a big empty gap -
+            // previously this was a fixed "Scribes" title that never updated at all.
+            if (ScribesHeaderLabel != null) ScribesHeaderLabel.text = managers ? "Managers" : "Multiplier";
             if (ScribeMultiplierButtonRoot != null) ScribeMultiplierButtonRoot.SetActive(!managers);
         }
 
@@ -166,7 +175,7 @@ namespace ClickerGenesis.Core
 
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
             if (ClickingPowerLabel != null && Controller.Scribes != null)
-                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.Scribes.TotalInkPerSecond(Controller.Levels.CurrentLevel))} Ink/s";
+                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.Scribes.TotalInkPerSecond(Controller.Levels.CurrentLevel, Controller.ProgressMultiplier))} Ink/s";
 
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
@@ -199,6 +208,13 @@ namespace ClickerGenesis.Core
                 if (ClickPowerButtonLabel != null)
                     ClickPowerButtonLabel.text = $"{NumberFormatter.Format(bulkCost)} Ink";
             }
+
+            if (AutoBuyToggleButtonLabel != null)
+                AutoBuyToggleButtonLabel.text = Controller.ManagerAutoBuyEnabled ? "Auto-Buy: On" : "Auto-Buy: Off";
+            if (AutoBuyReserveButtonLabel != null)
+                AutoBuyReserveButtonLabel.text = Controller.ManagerAutoBuyReserve <= 0
+                    ? "Reserve: None"
+                    : $"Reserve: {NumberFormatter.Format(Controller.ManagerAutoBuyReserve)}";
 
             if (PrestigeButton != null)
             {

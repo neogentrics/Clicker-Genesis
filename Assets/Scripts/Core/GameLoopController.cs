@@ -62,9 +62,16 @@ namespace ClickerGenesis.Core
 
         [Header("Bulk buy")]
         private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20 };
-        private static readonly int[] ScribeMultiplierTiers = { 1, 5, 10, 20, 100 };
 
-        /// <summary>How many scribes of a tier "Buy" purchases per click. Cycles 1/5/10/20/100,
+        /// <summary>-1 is the "Max" sentinel (2026-08-04, explicit user request alongside the
+        /// auto-buy toggle) - buys as many as the wallet can afford in one click instead of a
+        /// fixed count. Kept in the same tier-cycling array/int field as the fixed multipliers so
+        /// every call site (ScribeBulkCost, BuyScribeBulk, Click Power) only needed a Max-aware
+        /// branch, not a parallel code path.</summary>
+        public const int MaxBuyMultiplier = -1;
+        private static readonly int[] ScribeMultiplierTiers = { 1, 5, 10, 20, 100, MaxBuyMultiplier };
+
+        /// <summary>How many scribes of a tier "Buy" purchases per click. Cycles 1/5/10/20/100/Max,
         /// same tiers as Click Power - bug #26, scribes never got a bulk-buy option like Verses
         /// and Click Power did.</summary>
         public int ScribeBuyMultiplier { get; private set; } = 1;
@@ -73,6 +80,25 @@ namespace ClickerGenesis.Core
         {
             int idx = (System.Array.IndexOf(ScribeMultiplierTiers, ScribeBuyMultiplier) + 1) % ScribeMultiplierTiers.Length;
             ScribeBuyMultiplier = ScribeMultiplierTiers[idx];
+            OnStateChanged?.Invoke();
+        }
+
+        /// <summary>Whether managers auto-purchase their tier once affordable (mirrors
+        /// GameSettings.ManagerAutoBuyEnabled so UI can read/toggle it without a static reference).</summary>
+        public bool ManagerAutoBuyEnabled => GameSettings.ManagerAutoBuyEnabled;
+
+        public void ToggleManagerAutoBuy()
+        {
+            GameSettings.ManagerAutoBuyEnabled = !GameSettings.ManagerAutoBuyEnabled;
+            OnStateChanged?.Invoke();
+        }
+
+        public double ManagerAutoBuyReserve => GameSettings.ManagerAutoBuyReserve;
+
+        public void CycleManagerAutoBuyReserve()
+        {
+            int next = (GameSettings.ManagerAutoBuyReserveIndex + 1) % GameSettings.ManagerAutoBuyReserveTiers.Length;
+            GameSettings.ManagerAutoBuyReserveIndex = next;
             OnStateChanged?.Invoke();
         }
 
@@ -106,13 +132,31 @@ namespace ClickerGenesis.Core
             }
         }
 
-        /// <summary>Total cost to buy ClickPowerBuyMultiplier Click Power upgrades in a row.</summary>
+        /// <summary>How many Click Power upgrades the current wallet balance can afford in a row -
+        /// Click Power counterpart to MaxAffordableScribeCount, same Max-multiplier reasoning.</summary>
+        private int MaxAffordableClickPowerCount()
+        {
+            double remaining = Wallet.Balance;
+            int count = 0;
+            while (true)
+            {
+                double cost = clickPowerBaseCost * Math.Pow(clickPowerCostGrowthRate, ClickPowerLevel + count);
+                if (cost > remaining) break;
+                remaining -= cost;
+                count++;
+            }
+            return count;
+        }
+
+        /// <summary>Total cost to buy ClickPowerBuyMultiplier Click Power upgrades in a row.
+        /// MaxBuyMultiplier resolves to however many the current wallet balance can afford.</summary>
         public double ClickPowerBulkCost
         {
             get
             {
+                int count = ClickPowerBuyMultiplier == MaxBuyMultiplier ? MaxAffordableClickPowerCount() : ClickPowerBuyMultiplier;
                 double total = 0;
-                for (int i = 0; i < ClickPowerBuyMultiplier; i++)
+                for (int i = 0; i < count; i++)
                     total += clickPowerBaseCost * Math.Pow(clickPowerCostGrowthRate, ClickPowerLevel + i);
                 return total;
             }
@@ -181,7 +225,7 @@ namespace ClickerGenesis.Core
 
             bool changed = false;
 
-            double inkPerSecond = Scribes.TotalInkPerSecond(Levels.CurrentLevel);
+            double inkPerSecond = Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier);
             if (inkPerSecond > 0)
             {
                 Wallet.Add(inkPerSecond * Time.deltaTime);
@@ -192,17 +236,23 @@ namespace ClickerGenesis.Core
             // bought, it also auto-purchases that tier itself whenever affordable, same as
             // AdVenture Capitalist-style managers. Plain arithmetic per tier per frame (no
             // allocations, no UI work) — this is not the kind of per-frame cost that caused the
-            // forced-UI-rebuild lag in bug #22.
-            for (int i = 0; i < Scribes.TierCount; i++)
+            // forced-UI-rebuild lag in bug #22. Opt-out toggle + a spendable-reserve floor added
+            // per the user's follow-up request once they'd seen it always-on for a while.
+            if (GameSettings.ManagerAutoBuyEnabled)
             {
-                if (!Scribes.IsManagerUnlocked(i)) continue;
-                if (!Scribes.IsUnlocked(i, NextVerseIndex)) continue;
+                double reserve = GameSettings.ManagerAutoBuyReserve;
+                for (int i = 0; i < Scribes.TierCount; i++)
+                {
+                    if (!Scribes.IsManagerUnlocked(i)) continue;
+                    if (!Scribes.IsUnlocked(i, NextVerseIndex)) continue;
 
-                double cost = Scribes.GetNextCost(i);
-                if (!Wallet.TrySpend(cost)) continue;
+                    double cost = Scribes.GetNextCost(i);
+                    if (Wallet.Balance - cost < reserve) continue;
+                    if (!Wallet.TrySpend(cost)) continue;
 
-                Scribes.Buy(i);
-                changed = true;
+                    Scribes.Buy(i);
+                    changed = true;
+                }
             }
 
             if (changed) OnStateChanged?.Invoke();
@@ -222,12 +272,13 @@ namespace ClickerGenesis.Core
             return true;
         }
 
-        /// <summary>Attempts to unlock a tier's manager - requires the level threshold (see
-        /// ScribeSystem.CanUnlockManager) AND spending its Ink cost (0 for Adam, the free first
-        /// manager). Returns false if not level-eligible, already unlocked, or unaffordable.</summary>
+        /// <summary>Attempts to unlock a tier's manager - requires the level threshold, the
+        /// manager's own scribe tier being verse-unlocked (see ScribeSystem.CanUnlockManager), AND
+        /// spending its Ink cost (0 for Adam, the free first manager). Returns false if not
+        /// eligible, already unlocked, or unaffordable.</summary>
         public bool BuyManager(int tierIndex)
         {
-            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, Levels.CurrentLevel)) return false;
+            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, Levels.CurrentLevel, NextVerseIndex)) return false;
 
             double cost = Scribes.GetDefinition(tierIndex).managerUnlockCost;
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
@@ -237,27 +288,50 @@ namespace ClickerGenesis.Core
             return true;
         }
 
+        /// <summary>How many of a tier the current wallet balance can afford in a row, walking the
+        /// cost curve from the tier's current owned count. Shared by ScribeBulkCost/BuyScribeBulk's
+        /// Max-multiplier branch so the displayed cost and the actual purchase agree.</summary>
+        private int MaxAffordableScribeCount(int tierIndex)
+        {
+            var def = Scribes.GetDefinition(tierIndex);
+            int owned = Scribes.GetOwned(tierIndex);
+            double remaining = Wallet.Balance;
+            int count = 0;
+            while (true)
+            {
+                double cost = def.baseCost * Math.Pow(def.costGrowthRate, owned + count);
+                if (cost > remaining) break;
+                remaining -= cost;
+                count++;
+            }
+            return count;
+        }
+
         /// <summary>Total cost to buy ScribeBuyMultiplier more of a tier, accounting for the cost
-        /// curve rising with each one bought (mirrors VerseBulkCost's shape).</summary>
+        /// curve rising with each one bought (mirrors VerseBulkCost's shape). MaxBuyMultiplier
+        /// resolves to however many the current wallet balance can actually afford.</summary>
         public double ScribeBulkCost(int tierIndex)
         {
             if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
-            double total = 0;
             var def = Scribes.GetDefinition(tierIndex);
             int owned = Scribes.GetOwned(tierIndex);
-            for (int i = 0; i < ScribeBuyMultiplier; i++)
+            int count = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
+            double total = 0;
+            for (int i = 0; i < count; i++)
                 total += def.baseCost * Math.Pow(def.costGrowthRate, owned + i);
             return total;
         }
 
-        /// <summary>Buys up to ScribeBuyMultiplier of a tier in one action, stopping early if
-        /// unaffordable. Returns how many were actually bought.</summary>
+        /// <summary>Buys up to ScribeBuyMultiplier of a tier in one action (or as many as
+        /// affordable, for the Max multiplier), stopping early if unaffordable. Returns how many
+        /// were actually bought.</summary>
         public int BuyScribeBulk(int tierIndex)
         {
             if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
 
+            int target = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
             int bought = 0;
-            for (int i = 0; i < ScribeBuyMultiplier; i++)
+            for (int i = 0; i < target; i++)
             {
                 double cost = Scribes.GetNextCost(tierIndex);
                 if (!Wallet.TrySpend(cost)) break;
@@ -304,8 +378,9 @@ namespace ClickerGenesis.Core
         /// early if unaffordable. Returns how many were actually bought.</summary>
         public int BuyClickPowerBulk()
         {
+            int target = ClickPowerBuyMultiplier == MaxBuyMultiplier ? MaxAffordableClickPowerCount() : ClickPowerBuyMultiplier;
             int bought = 0;
-            for (int i = 0; i < ClickPowerBuyMultiplier; i++)
+            for (int i = 0; i < target; i++)
             {
                 if (!TryBuyOneClickPowerNoNotify()) break;
                 bought++;
@@ -313,6 +388,14 @@ namespace ClickerGenesis.Core
             if (bought > 0) OnStateChanged?.Invoke();
             return bought;
         }
+
+        /// <summary>Shared passive multiplier applied to every owned scribe's output (2026-08-04,
+        /// explicit user design) - grows with book progress independent of the per-tier owned-count
+        /// milestone curve, so content progress itself keeps feeding the passive economy. +0.1 for
+        /// every 5 verses purchased; doubles outright on every chapter completed. Stacks
+        /// multiplicatively with the milestone curve and manager bonus in
+        /// ScribeSystem.GetTierInkPerSecond.</summary>
+        public float ProgressMultiplier { get; private set; } = 1f;
 
         /// <summary>Advances NextVerseIndex and awards XP for the verse at the current
         /// NextVerseIndex, WITHOUT charging Ink - the caller is responsible for having already
@@ -322,13 +405,19 @@ namespace ClickerGenesis.Core
             var purchasedVerse = Verses.GetVerse(NextVerseIndex);
             NextVerseIndex++;
 
+            if (NextVerseIndex % 5 == 0) ProgressMultiplier += 0.1f;
+
             if (xpConfig != null)
             {
                 Levels.AddXp(xpConfig.XpPerVerse);
 
                 bool chapterComplete = !Verses.HasVerse(NextVerseIndex) ||
                     Verses.GetVerse(NextVerseIndex).ChapterNumber != purchasedVerse.ChapterNumber;
-                if (chapterComplete) Levels.AddXp(xpConfig.XpPerChapterBonus);
+                if (chapterComplete)
+                {
+                    Levels.AddXp(xpConfig.XpPerChapterBonus);
+                    ProgressMultiplier *= 2f;
+                }
 
                 if (BookComplete) Levels.AddXp(xpConfig.XpPerBookBonus);
             }
