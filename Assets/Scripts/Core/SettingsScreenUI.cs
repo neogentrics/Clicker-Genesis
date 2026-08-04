@@ -34,7 +34,7 @@ namespace ClickerGenesis.Core
         public Button FullscreenToggleButton;
         public TMP_Text FullscreenLabel;
 
-        [Header("Resolution")]
+        [Header("Resolution (desktop) / Quality (mobile) - same button slot, see Awake")]
         public Button ResolutionCycleButton;
         public TMP_Text ResolutionLabel;
 
@@ -42,17 +42,35 @@ namespace ClickerGenesis.Core
         public Button BatterySaverToggleButton;
         public TMP_Text BatterySaverLabel;
 
+        [Header("Back to Game (2026-08-04) - only shown when reached from actual gameplay, not from MainMenu")]
+        public GameObject BackToGameButton;
+
         private void Awake()
         {
             if (!GameLoopController.EnsureBootstrapped()) return;
+
+            // "Back to Game" only makes sense if the player actually came from a gameplay screen -
+            // reaching Settings directly from MainMenu means there's no in-progress game to return
+            // to, so only the (separate, always-present) Menu button is meaningful there.
+            if (BackToGameButton != null)
+            {
+                bool cameFromGameplay = SceneTransitioner.Instance != null && SceneTransitioner.Instance.LastSettingsReturnScene != "MainMenu";
+                BackToGameButton.SetActive(cameFromGameplay);
+            }
 
             if (SoundToggleButton != null) SoundToggleButton.onClick.AddListener(ToggleSound);
             if (FontSizeDownButton != null) FontSizeDownButton.onClick.AddListener(() => AdjustFontScale(-0.1f));
             if (FontSizeUpButton != null) FontSizeUpButton.onClick.AddListener(() => AdjustFontScale(0.1f));
             if (NotationCycleButton != null) NotationCycleButton.onClick.AddListener(CycleNotation);
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
-            if (ResolutionCycleButton != null) ResolutionCycleButton.onClick.AddListener(CycleResolution);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
+
+            // Same button/label slot does double duty: exact resolution picking only makes sense
+            // on desktop (windowed mode, arbitrary monitor sizes) - mobile has no windowing to
+            // resize, so it gets a Quality tier cycle instead. See GameSettings.
+            if (ResolutionCycleButton != null)
+                ResolutionCycleButton.onClick.AddListener(GameSettings.IsResolutionSelectionSupported ? CycleResolution : CycleQuality);
+            if (!GameSettings.IsResolutionSelectionSupported) FullscreenToggleButton?.gameObject.SetActive(false);
 
             RefreshAll();
         }
@@ -105,6 +123,18 @@ namespace ClickerGenesis.Core
             RefreshResolution();
         }
 
+        private void CycleQuality()
+        {
+            var names = QualitySettings.names;
+            if (names.Length == 0) return;
+
+            int next = GameSettings.QualityLevel + 1;
+            if (next >= names.Length) next = 0; // wrap, unlike resolution's "back to native" -1
+            GameSettings.QualityLevel = next;
+            QualitySettings.SetQualityLevel(next, true);
+            RefreshResolution();
+        }
+
         private void ToggleBatterySaver()
         {
             bool newState = !GameSettings.BatterySaver;
@@ -150,6 +180,16 @@ namespace ClickerGenesis.Core
         private void RefreshResolution()
         {
             if (ResolutionLabel == null) return;
+
+            if (!GameSettings.IsResolutionSelectionSupported)
+            {
+                var names = QualitySettings.names;
+                int qIndex = GameSettings.QualityLevel;
+                string qName = (qIndex >= 0 && qIndex < names.Length) ? names[qIndex] : QualitySettings.names[QualitySettings.GetQualityLevel()];
+                ResolutionLabel.text = $"Quality: {qName}";
+                return;
+            }
+
             int index = GameSettings.ResolutionIndex;
             var resolutions = Screen.resolutions;
             if (index < 0 || index >= resolutions.Length)

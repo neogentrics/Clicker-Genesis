@@ -18,11 +18,13 @@ namespace ClickerGenesis.Economy
     {
         private readonly ScribeSetConfig config;
         private readonly int[] owned;
+        private readonly bool[] managerUnlocked;
 
         public ScribeSystem(ScribeSetConfig config)
         {
             this.config = config;
             owned = new int[config.tiers.Count];
+            managerUnlocked = new bool[config.tiers.Count];
         }
 
         public int TierCount => config.tiers.Count;
@@ -43,10 +45,34 @@ namespace ClickerGenesis.Economy
             return def.baseCost * Math.Pow(def.costGrowthRate, owned[tierIndex]);
         }
 
+        /// <summary>Whether this tier's manager is bought AND actively boosting output (also
+        /// needs at least one scribe of the tier owned - a manager with nothing to manage
+        /// contributes nothing).</summary>
         public bool IsManagerActive(int tierIndex, int playerLevel)
         {
             var def = config.tiers[tierIndex];
-            return def.HasManager && owned[tierIndex] > 0 && playerLevel >= def.managerUnlockLevel;
+            return def.HasManager && managerUnlocked[tierIndex] && owned[tierIndex] > 0;
+        }
+
+        public bool IsManagerUnlocked(int tierIndex) => managerUnlocked[tierIndex];
+
+        /// <summary>Whether the level threshold has been reached, independent of whether the
+        /// manager has actually been bought yet - REVISED 2026-08-04, managers require both the
+        /// level AND an Ink purchase, not level alone.</summary>
+        public bool IsManagerLevelEligible(int tierIndex, int playerLevel)
+        {
+            var def = config.tiers[tierIndex];
+            return def.HasManager && playerLevel >= def.managerUnlockLevel;
+        }
+
+        public bool CanUnlockManager(int tierIndex, int playerLevel) =>
+            IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex];
+
+        /// <summary>Marks a manager as unlocked. Caller is responsible for spending Ink first
+        /// (same pattern as Buy for scribe tiers).</summary>
+        public void UnlockManager(int tierIndex)
+        {
+            managerUnlocked[tierIndex] = true;
         }
 
         /// <summary>Increments the owned count for a tier. Caller is responsible for spending Ink first.</summary>

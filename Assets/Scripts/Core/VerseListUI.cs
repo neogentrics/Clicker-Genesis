@@ -6,10 +6,10 @@ using UnityEngine.UI;
 namespace ClickerGenesis.Core
 {
     /// <summary>
-    /// Builds one row per verse in the current book (all of them, not just unlocked ones) so the
-    /// player can review any previously unlocked verse and see upcoming locked verses' unlock
-    /// costs ahead of time. Rows are built once in Awake; Refresh() only updates text/interactable
-    /// state, it doesn't rebuild the hierarchy - same shape as ScribeListUI.
+    /// Builds one row per verse in the CURRENT chapter only (both already-bought and the
+    /// not-yet-bought remainder of that chapter) - verses from earlier or later chapters are not
+    /// listed at all until they become the current chapter. Rows are rebuilt whenever the current
+    /// chapter changes, not just once in Awake, since the row count/content differs per chapter.
     /// </summary>
     public class VerseListUI : MonoBehaviour
     {
@@ -25,12 +25,12 @@ namespace ClickerGenesis.Core
         public BuyVerseScreenUI ScreenUi;
 
         private readonly List<Row> rows = new List<Row>();
+        private int builtChapter = int.MinValue;
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            BuildRows();
             Refresh();
             ForceLayoutRebuild();
             // See ScribeListUI.Awake for why this coroutine follow-up is needed in addition to the
@@ -73,11 +73,17 @@ namespace ClickerGenesis.Core
             UiRefreshUtil.ForceFullRefresh(contentRt);
         }
 
-        private void BuildRows()
+        private void RebuildRowsForCurrentChapter()
         {
-            if (Controller == null || Controller.Verses == null) return;
+            foreach (var row in rows)
+                if (row.SelectButton != null) Destroy(row.SelectButton.gameObject);
+            rows.Clear();
 
-            for (int i = 0; i < Controller.Verses.VerseCount; i++)
+            if (Controller.BookComplete) return;
+
+            int start = Controller.CurrentChapterStartIndex;
+            int end = Controller.CurrentChapterEndIndexExclusive;
+            for (int i = start; i < end; i++)
             {
                 int index = i;
                 var rowGo = Instantiate(RowTemplate, Content);
@@ -100,9 +106,19 @@ namespace ClickerGenesis.Core
         {
             if (Controller == null || Controller.Verses == null) return;
 
-            for (int i = 0; i < rows.Count; i++)
+            int chapter = Controller.BookComplete ? -1 : Controller.CurrentChapterNumber;
+            if (chapter != builtChapter)
             {
-                var row = rows[i];
+                RebuildRowsForCurrentChapter();
+                builtChapter = chapter;
+                ForceLayoutRebuild();
+            }
+
+            int start = Controller.BookComplete ? 0 : Controller.CurrentChapterStartIndex;
+            for (int r = 0; r < rows.Count; r++)
+            {
+                int i = start + r;
+                var row = rows[r];
                 var verse = Controller.Verses.GetVerse(i);
                 bool unlocked = i < Controller.NextVerseIndex;
 
@@ -124,7 +140,11 @@ namespace ClickerGenesis.Core
                 }
             }
 
-            UiRefreshUtil.ForceFullRefresh(Content);
+            // See ScribeListUI.Refresh for why ForceFullRefresh is NOT called here on every
+            // Refresh() - this runs every frame (passive Ink ticking) and the forced full
+            // rebuild was the real cause of bug #22's lag. It's still called via
+            // ForceLayoutRebuild() above, but only on the (rare) frame the row set actually
+            // changes.
         }
     }
 }

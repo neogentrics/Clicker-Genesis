@@ -38,6 +38,11 @@ namespace ClickerGenesis.Core
         private int selectedVerseIndex = -1;
         private bool showingChapters;
 
+        /// <summary>Tracks the verse actually displayed in the reading box, distinct from
+        /// selectedVerseIndex - lets Refresh() (called every frame by passive Ink ticking) skip
+        /// the expensive text-rebuild/force-refresh work except on the frame it truly changes.</summary>
+        private int lastDisplayedIndex = int.MinValue;
+
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
@@ -116,27 +121,36 @@ namespace ClickerGenesis.Core
             if (displayIndex < 0 || displayIndex >= Controller.NextVerseIndex)
                 displayIndex = Controller.NextVerseIndex - 1;
 
-            if (displayIndex >= 0 && Controller.Verses.HasVerse(displayIndex))
+            // Refresh() runs every frame (passive Ink ticking fires OnStateChanged continuously),
+            // but the displayed verse only actually changes on a discrete action (buy/select) -
+            // gate the text rebuild + force-refresh on that, not every frame. Running
+            // ForceFullRefresh/DeferredFullRefresh unconditionally here was a real contributor to
+            // bug #22's lag (a new coroutine started every single frame).
+            if (displayIndex != lastDisplayedIndex)
             {
-                var verse = Controller.Verses.GetVerse(displayIndex);
-                ReferenceLabel.text = $"{Controller.Verses.BookName} {verse.Reference}";
-                VerseText.text = verse.Text;
-            }
-            else
-            {
-                ReferenceLabel.text = "No verse unlocked yet";
-                VerseText.text = "Buy the first verse to reveal it here.";
-            }
+                lastDisplayedIndex = displayIndex;
 
-            // TMP's own dirty-flagging doesn't reliably trigger a repaint for text objects built
-            // via editor script (same underlying issue seen on the scribe/verse list rows) -
-            // force mesh/layout explicitly every time the displayed verse changes, and reset
-            // scroll to the top so a shorter verse doesn't stay scrolled past its own end. The
-            // immediate call is verified-correct in scripted testing only; the deferred coroutine
-            // is what actually fixes it in real continuous Play (see UiRefreshUtil).
-            UiRefreshUtil.ForceFullRefresh(VerseText.rectTransform);
-            StartCoroutine(UiRefreshUtil.DeferredFullRefresh(VerseText.rectTransform));
-            if (VerseScrollRect != null) VerseScrollRect.verticalNormalizedPosition = 1f;
+                if (displayIndex >= 0 && Controller.Verses.HasVerse(displayIndex))
+                {
+                    var verse = Controller.Verses.GetVerse(displayIndex);
+                    ReferenceLabel.text = $"{Controller.Verses.BookName} {verse.Reference}";
+                    VerseText.text = verse.Text;
+                }
+                else
+                {
+                    ReferenceLabel.text = "No verse unlocked yet";
+                    VerseText.text = "Buy the first verse to reveal it here.";
+                }
+
+                // TMP's own dirty-flagging doesn't reliably trigger a repaint for text objects
+                // built via editor script (same underlying issue seen on the scribe/verse list
+                // rows) - force mesh/layout explicitly on the frame the displayed verse changes,
+                // and reset scroll to the top so a shorter verse doesn't stay scrolled past its
+                // own end.
+                UiRefreshUtil.ForceFullRefresh(VerseText.rectTransform);
+                StartCoroutine(UiRefreshUtil.DeferredFullRefresh(VerseText.rectTransform));
+                if (VerseScrollRect != null) VerseScrollRect.verticalNormalizedPosition = 1f;
+            }
 
             if (MultiplierButtonLabel != null)
                 MultiplierButtonLabel.text = MultiplierTierLabel(Controller.VerseBuyMultiplier);

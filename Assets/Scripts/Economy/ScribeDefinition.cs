@@ -30,6 +30,9 @@ namespace ClickerGenesis.Economy
         [Tooltip("Output multiplier bonus while the manager is active, e.g. 0.25 = +25%.")]
         public float managerBonusMultiplier = 0.25f;
 
+        [Tooltip("Ink cost to unlock this manager once the level threshold is reached (REVISED 2026-08-04 - managers no longer auto-unlock by level alone). 0 = free (Adam, the first manager, per the personalization-hook pattern used for the free starting book).")]
+        public double managerUnlockCost;
+
         public bool HasManager => managerUnlockLevel > 0 && !string.IsNullOrEmpty(managerName);
     }
 }

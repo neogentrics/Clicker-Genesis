@@ -16,6 +16,7 @@ namespace ClickerGenesis.Core
         private const string FullscreenKey = "ClickerGenesis.Fullscreen";
         private const string ResolutionIndexKey = "ClickerGenesis.ResolutionIndex";
         private const string BatterySaverKey = "ClickerGenesis.BatterySaver";
+        private const string QualityLevelKey = "ClickerGenesis.QualityLevel";
 
         public static event System.Action OnChanged;
 
@@ -49,11 +50,40 @@ namespace ClickerGenesis.Core
             set { PlayerPrefs.SetInt(FullscreenKey, value ? 1 : 0); PlayerPrefs.Save(); }
         }
 
-        /// <summary>Index into Screen.resolutions. -1 = use whatever the OS/device already has.</summary>
+        /// <summary>Index into Screen.resolutions. -1 = use whatever the OS/device already has.
+        /// Desktop-only lever - see IsResolutionSelectionSupported.</summary>
         public static int ResolutionIndex
         {
             get => PlayerPrefs.GetInt(ResolutionIndexKey, -1);
             set { PlayerPrefs.SetInt(ResolutionIndexKey, value); PlayerPrefs.Save(); }
+        }
+
+        /// <summary>Picking an exact pixel resolution isn't a meaningful lever on mobile (the OS
+        /// owns the screen size; there's no windowed mode to resize) - desktop gets the resolution
+        /// cycle button, mobile gets the QualityLevel cycle button instead. See
+        /// SettingsScreenUI.RefreshAll for where this switches the UI.</summary>
+        public static bool IsResolutionSelectionSupported =>
+            Application.platform == RuntimePlatform.WindowsPlayer ||
+            Application.platform == RuntimePlatform.OSXPlayer ||
+            Application.platform == RuntimePlatform.LinuxPlayer ||
+            Application.platform == RuntimePlatform.WindowsEditor ||
+            Application.platform == RuntimePlatform.OSXEditor ||
+            Application.platform == RuntimePlatform.LinuxEditor;
+
+        /// <summary>Index into QualitySettings.names (the project's own quality tiers - currently
+        /// "Mobile"/"PC" from the URP template's per-platform defaults, extendable to real
+        /// Low/Medium/High tiers later without any code change here). -1 = use whatever Unity
+        /// picked as the platform default (see ProjectSettings QualitySettings
+        /// m_PerPlatformDefaultQuality) and never overridden by the player.
+        ///
+        /// This is Unity's own GPU-abstraction layer, not a per-vendor (Nvidia/AMD/mobile GPU)
+        /// system - URP already runs generically across GPU vendors via the graphics driver, so
+        /// there's nothing vendor-specific to add here. What varies by device is *how much* the
+        /// GPU can handle, which is exactly what quality tiers control.</summary>
+        public static int QualityLevel
+        {
+            get => PlayerPrefs.GetInt(QualityLevelKey, -1);
+            set { PlayerPrefs.SetInt(QualityLevelKey, value); PlayerPrefs.Save(); }
         }
 
         /// <summary>Caps frame rate and drops the quality tier - a real, immediately meaningful
@@ -71,13 +101,20 @@ namespace ClickerGenesis.Core
         {
             Screen.fullScreen = Fullscreen;
 
-            var resolutions = Screen.resolutions;
-            int index = ResolutionIndex;
-            if (index >= 0 && index < resolutions.Length)
+            if (IsResolutionSelectionSupported)
             {
-                var r = resolutions[index];
-                Screen.SetResolution(r.width, r.height, Fullscreen);
+                var resolutions = Screen.resolutions;
+                int index = ResolutionIndex;
+                if (index >= 0 && index < resolutions.Length)
+                {
+                    var r = resolutions[index];
+                    Screen.SetResolution(r.width, r.height, Fullscreen);
+                }
             }
+
+            int qualityIndex = QualityLevel;
+            if (qualityIndex >= 0 && qualityIndex < QualitySettings.names.Length)
+                QualitySettings.SetQualityLevel(qualityIndex, true);
 
             ApplyBatterySaver(BatterySaver);
         }

@@ -27,12 +27,17 @@ namespace ClickerGenesis.Core
         public Sprite ScrollIcon;
         public Sprite JournalIcon;
 
+        [Header("Bulk buy (bug #26 - Scribes never had one like Verses/Click Power did)")]
+        public Button MultiplierButton;
+        public TMP_Text MultiplierButtonLabel;
+
         private readonly List<Row> rows = new List<Row>();
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
+            if (MultiplierButton != null) MultiplierButton.onClick.AddListener(() => Controller?.CycleScribeBuyMultiplier());
             BuildRows();
             Refresh();
             ForceLayoutRebuild();
@@ -117,7 +122,7 @@ namespace ClickerGenesis.Core
                     ? Color.white
                     : Color.Lerp(Hex("#7A5C2E"), Hex("#D4AF37"), tierIndex / (float)(scribes.TierCount - 1));
 
-                row.BuyButton.onClick.AddListener(() => Controller.BuyScribe(tierIndex));
+                row.BuyButton.onClick.AddListener(() => Controller.BuyScribeBulk(tierIndex));
 
                 rows.Add(row);
             }
@@ -129,6 +134,8 @@ namespace ClickerGenesis.Core
 
             var scribes = Controller.Scribes;
             int level = Controller.Levels.CurrentLevel;
+
+            if (MultiplierButtonLabel != null) MultiplierButtonLabel.text = $"x{Controller.ScribeBuyMultiplier}";
 
             for (int i = 0; i < rows.Count; i++)
             {
@@ -150,7 +157,7 @@ namespace ClickerGenesis.Core
                 }
 
                 int owned = scribes.GetOwned(i);
-                double cost = scribes.GetNextCost(i);
+                double cost = Controller.ScribeBulkCost(i);
                 bool managerActive = scribes.IsManagerActive(i, level);
                 float milestoneMultiplier = scribes.GetOwnedMilestoneMultiplier(i);
 
@@ -176,11 +183,19 @@ namespace ClickerGenesis.Core
                 row.DescText.text = desc;
 
                 row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level))} Ink/s";
-                row.CostText.text = $"{NumberFormatter.Format(cost)} Ink";
+                string quantityPrefix = Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
+                row.CostText.text = $"{quantityPrefix}{NumberFormatter.Format(cost)} Ink";
                 row.BuyButton.interactable = Controller.Wallet.Balance >= cost;
             }
 
-            UiRefreshUtil.ForceFullRefresh(Content);
+            // NOT calling UiRefreshUtil.ForceFullRefresh here on purpose - Refresh() runs every
+            // single frame (GameLoopController.Update ticks passive Ink and fires OnStateChanged
+            // continuously), and ForceFullRefresh's GetComponentsInChildren + SetAllDirty +
+            // ForceMeshUpdate + LayoutRebuilder.ForceRebuildLayoutImmediate over every row is
+            // expensive - doing that 60x/second was the real cause of the game feeling laggy
+            // (bug #22), not scene-load time itself. Plain TMP_Text.text assignment above already
+            // dirties and repaints correctly in real Play; ForceFullRefresh is still used once in
+            // Awake/ForceLayoutRebuild for the one-time post-Instantiate staleness issue.
         }
 
         private static Color Hex(string hex)

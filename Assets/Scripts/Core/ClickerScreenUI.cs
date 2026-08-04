@@ -35,6 +35,17 @@ namespace ClickerGenesis.Core
         public TMP_Text PrestigeButtonLabel;
         public TMP_Text StatusLabel;
 
+        [Header("Scribes/Managers tabs (2026-08-04)")]
+        public Button ScribesTabButton;
+        public Button ManagersTabButton;
+        public GameObject ScribeListRoot;
+        public GameObject ManagerListRoot;
+        public Image ScribesTabBackground;
+        public Image ManagersTabBackground;
+
+        private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
+        private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
+
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
@@ -53,8 +64,20 @@ namespace ClickerGenesis.Core
             if (ClickPowerButton != null) ClickPowerButton.onClick.AddListener(HandleBuyClickPower);
             if (ClickPowerMultiplierButton != null) ClickPowerMultiplierButton.onClick.AddListener(() => Controller?.CycleClickPowerBuyMultiplier());
             if (PrestigeButton != null) PrestigeButton.onClick.AddListener(HandlePrestigeClick);
+            if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(false));
+            if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(true));
             if (Controller != null) Controller.OnStateChanged += Refresh;
+            SetTab(false);
             Refresh();
+        }
+
+        /// <summary>Same pattern as BuyVerseScreenUI.SetTab for Verses/Chapters.</summary>
+        private void SetTab(bool managers)
+        {
+            if (ScribeListRoot != null) ScribeListRoot.SetActive(!managers);
+            if (ManagerListRoot != null) ManagerListRoot.SetActive(managers);
+            if (ScribesTabBackground != null) ScribesTabBackground.color = managers ? InactiveTabColor : ActiveTabColor;
+            if (ManagersTabBackground != null) ManagersTabBackground.color = managers ? ActiveTabColor : InactiveTabColor;
         }
 
         private void OnDestroy()

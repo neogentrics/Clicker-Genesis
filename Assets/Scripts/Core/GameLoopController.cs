@@ -63,6 +63,19 @@ namespace ClickerGenesis.Core
         [Header("Bulk buy")]
         private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20 };
         private static readonly int[] ClickPowerMultiplierTiers = { 1, 5, 10, 20, 100 };
+        private static readonly int[] ScribeMultiplierTiers = { 1, 5, 10, 20, 100 };
+
+        /// <summary>How many scribes of a tier "Buy" purchases per click. Cycles 1/5/10/20/100,
+        /// same tiers as Click Power - bug #26, scribes never got a bulk-buy option like Verses
+        /// and Click Power did.</summary>
+        public int ScribeBuyMultiplier { get; private set; } = 1;
+
+        public void CycleScribeBuyMultiplier()
+        {
+            int idx = (System.Array.IndexOf(ScribeMultiplierTiers, ScribeBuyMultiplier) + 1) % ScribeMultiplierTiers.Length;
+            ScribeBuyMultiplier = ScribeMultiplierTiers[idx];
+            OnStateChanged?.Invoke();
+        }
 
         /// <summary>How many verses "Buy Next Verse" purchases per click. Cycles 1/5/10/20 - 20 is
         /// the max, per explicit request ("I'm not going higher than that").</summary>
@@ -193,6 +206,52 @@ namespace ClickerGenesis.Core
             return true;
         }
 
+        /// <summary>Attempts to unlock a tier's manager - requires the level threshold (see
+        /// ScribeSystem.CanUnlockManager) AND spending its Ink cost (0 for Adam, the free first
+        /// manager). Returns false if not level-eligible, already unlocked, or unaffordable.</summary>
+        public bool BuyManager(int tierIndex)
+        {
+            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, Levels.CurrentLevel)) return false;
+
+            double cost = Scribes.GetDefinition(tierIndex).managerUnlockCost;
+            if (cost > 0 && !Wallet.TrySpend(cost)) return false;
+
+            Scribes.UnlockManager(tierIndex);
+            OnStateChanged?.Invoke();
+            return true;
+        }
+
+        /// <summary>Total cost to buy ScribeBuyMultiplier more of a tier, accounting for the cost
+        /// curve rising with each one bought (mirrors VerseBulkCost's shape).</summary>
+        public double ScribeBulkCost(int tierIndex)
+        {
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
+            double total = 0;
+            var def = Scribes.GetDefinition(tierIndex);
+            int owned = Scribes.GetOwned(tierIndex);
+            for (int i = 0; i < ScribeBuyMultiplier; i++)
+                total += def.baseCost * Math.Pow(def.costGrowthRate, owned + i);
+            return total;
+        }
+
+        /// <summary>Buys up to ScribeBuyMultiplier of a tier in one action, stopping early if
+        /// unaffordable. Returns how many were actually bought.</summary>
+        public int BuyScribeBulk(int tierIndex)
+        {
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
+
+            int bought = 0;
+            for (int i = 0; i < ScribeBuyMultiplier; i++)
+            {
+                double cost = Scribes.GetNextCost(tierIndex);
+                if (!Wallet.TrySpend(cost)) break;
+                Scribes.Buy(tierIndex);
+                bought++;
+            }
+            if (bought > 0) OnStateChanged?.Invoke();
+            return bought;
+        }
+
         public bool BookComplete => Verses == null || !Verses.HasVerse(NextVerseIndex);
 
         public double NextVerseCost => pricingConfig != null
@@ -286,6 +345,23 @@ namespace ClickerGenesis.Core
                 return count;
             }
         }
+
+        /// <summary>First verse index belonging to the current chapter (scans backward from
+        /// NextVerseIndex, bounded by the chapter itself, not the whole book).</summary>
+        public int CurrentChapterStartIndex
+        {
+            get
+            {
+                if (BookComplete) return -1;
+                int chapter = CurrentChapterNumber;
+                int i = NextVerseIndex;
+                while (i > 0 && Verses.GetVerse(i - 1).ChapterNumber == chapter) i--;
+                return i;
+            }
+        }
+
+        /// <summary>One past the last verse index belonging to the current chapter.</summary>
+        public int CurrentChapterEndIndexExclusive => BookComplete ? -1 : NextVerseIndex + RemainingVersesInCurrentChapter;
 
         /// <summary>Cost to buy every remaining verse in the current chapter at once, per the
         /// documented chapter bulk-buy discount: sum of individual verse costs x 0.75.</summary>
