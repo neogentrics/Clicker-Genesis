@@ -42,6 +42,36 @@ namespace ClickerGenesis.Core
             public TMP_Text RankLabel;
         }
 
+        /// <summary>One icon per branch (drawn white on top of the branch-colored circle) so nodes
+        /// read at a glance instead of being bare colored dots. Pulled from the Homeless/Item_Icons
+        /// pack, previously unused - fine to be "bright and colorful" and not match the parchment
+        /// theme here, per the user's explicit call that this screen doesn't need to (2026-08-05).
+        /// Assigned via BranchIcons (serialized, set once by the scene-build script) rather than
+        /// AssetDatabase - AssetDatabase only exists in the Editor and would silently show no icons
+        /// at all in an actual build.</summary>
+        [System.Serializable]
+        public struct BranchIconEntry
+        {
+            public string Branch;
+            public Sprite Icon;
+        }
+
+        [Header("Node icons (one per branch)")]
+        public List<BranchIconEntry> BranchIcons = new List<BranchIconEntry>();
+
+        private Dictionary<string, Sprite> branchIconLookup;
+
+        private Sprite LookupIcon(string branch)
+        {
+            if (branchIconLookup == null)
+            {
+                branchIconLookup = new Dictionary<string, Sprite>();
+                foreach (var entry in BranchIcons)
+                    if (!string.IsNullOrEmpty(entry.Branch)) branchIconLookup[entry.Branch] = entry.Icon;
+            }
+            return branchIconLookup.TryGetValue(branch, out var sprite) ? sprite : null;
+        }
+
         private readonly List<NodeVisual> nodeVisuals = new List<NodeVisual>();
 
         // Distinct bright colors per branch, matching the user's explicit "bright and colorful,
@@ -152,6 +182,26 @@ namespace ClickerGenesis.Core
 
             var circle = go.GetComponent<Image>();
             circle.color = color;
+
+            var icon = LookupIcon(node.branch);
+            if (icon != null)
+            {
+                var iconGo = new GameObject("Icon", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+                iconGo.transform.SetParent(go.transform, false);
+                var iconRt = iconGo.GetComponent<RectTransform>();
+                iconRt.anchorMin = new Vector2(0.5f, 0.5f);
+                iconRt.anchorMax = new Vector2(0.5f, 0.5f);
+                iconRt.sizeDelta = new Vector2(size * 0.55f, size * 0.55f);
+                iconRt.anchoredPosition = new Vector2(0f, size * 0.08f); // nudged up to leave room for RankLabel below
+                var iconImg = iconGo.GetComponent<Image>();
+                iconImg.sprite = icon;
+                // White icon reads fine on the darker/saturated branch colors, but Book
+                // Progression's near-white circle would wash a white icon out entirely - fall
+                // back to a dark tint on light circles based on luminance.
+                float luminance = 0.299f * color.r + 0.587f * color.g + 0.114f * color.b;
+                iconImg.color = luminance > 0.6f ? new Color(0.15f, 0.1f, 0.05f, 1f) : Color.white;
+                iconGo.transform.SetAsFirstSibling(); // behind NameLabel/RankLabel, in front of Circle
+            }
 
             var nameLabel = go.transform.Find("NameLabel")?.GetComponent<TMP_Text>();
             if (nameLabel != null) nameLabel.text = node.displayName;
