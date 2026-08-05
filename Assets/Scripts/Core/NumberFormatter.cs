@@ -35,16 +35,52 @@ namespace ClickerGenesis.Core
             }
         }
 
-        /// <summary>Same tiering/notation as Format(), but no decimal places under 1000 - for
-        /// currencies that are always whole numbers by design (e.g. Grace), where "0.0"/"42.0"
-        /// reads as a fractional value that doesn't exist.</summary>
+        /// <summary>Same tiering/notation as Format(), but with NO decimal places at any tier -
+        /// for values that should always read as round numbers (Grace, the auto-buy Reserve
+        /// threshold), where "1.00M" reads as a fractional value that doesn't exist and can
+        /// overflow its label box.</summary>
         public static string FormatWhole(double value) => FormatWhole(value, GameSettings.Notation);
 
         public static string FormatWhole(double value, NumberNotation notation)
         {
             if (double.IsNaN(value) || double.IsInfinity(value)) return value.ToString();
-            if (Math.Abs(value) < 1000) return Math.Round(value).ToString("F0");
-            return Format(value, notation);
+
+            switch (notation)
+            {
+                case NumberNotation.Scientific:
+                case NumberNotation.Engineering:
+                    // Scientific/engineering mantissas are rarely paired with "whole number"
+                    // currencies in practice - fall back to the normal (2-decimal) formatting
+                    // rather than inventing a whole-number scientific notation.
+                    return Format(value, notation);
+                default:
+                    return FormatStandardWhole(value);
+            }
+        }
+
+        private static string FormatStandardWhole(double value)
+        {
+            double abs = Math.Abs(value);
+            if (abs < 1000) return Math.Round(value).ToString("F0");
+
+            int tier = 0;
+            double scaled = value;
+            while (Math.Abs(scaled) >= 1000 && tier < Suffixes.Length - 1)
+            {
+                scaled /= 1000;
+                tier++;
+            }
+
+            if (Math.Round(scaled) >= 1000 && tier < Suffixes.Length - 1)
+            {
+                scaled /= 1000;
+                tier++;
+            }
+
+            if (Math.Abs(scaled) >= 1000)
+                return FormatScientific(value);
+
+            return Math.Round(scaled).ToString("F0") + Suffixes[tier];
         }
 
         private static string FormatStandard(double value)

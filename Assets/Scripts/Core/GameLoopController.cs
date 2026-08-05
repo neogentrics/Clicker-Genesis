@@ -578,14 +578,38 @@ namespace ClickerGenesis.Core
             return true;
         }
 
+        /// <summary>Which chapter number has been explicitly unlocked for individual verse
+        /// purchases via UnlockCurrentChapter() - -1 matches no real chapter, so the very first
+        /// gated boundary always requires an explicit unlock. Never reset elsewhere: once a
+        /// chapter's gate is cleared it stays cleared even if the player later leaves and returns
+        /// to it (they can only be "in" one chapter's gate at a time anyway, per canonical order).</summary>
+        private int unlockedChapterNumber = -1;
+
         /// <summary>True when NextVerseIndex sits at the very first verse of a chapter beyond the
-        /// book's first one, and nothing has been bought in it yet - meaning the player must use
-        /// "Buy Next Chapter" (on the Chapters tab) before any further verse purchase (single or
-        /// bulk) can resume. 2026-08-04, explicit user design: verse purchases were silently
-        /// crossing chapter boundaries mid-bulk-buy, which was never intended - only the chapter
-        /// bulk-buy action itself is allowed to cross into a fresh chapter.</summary>
+        /// book's first one, nothing has been bought in it yet, AND the player hasn't explicitly
+        /// unlocked it via UnlockCurrentChapter() - meaning individual verse purchases (single or
+        /// bulk) are blocked until either UnlockCurrentChapter() (free - just opens the gate) or
+        /// BuyNextChapter() (paid - opens the gate AND buys every verse in it at once) is used.
+        /// 2026-08-04, explicit user design: verse purchases were silently crossing chapter
+        /// boundaries mid-bulk-buy, which was never intended. 2026-08-05, real bug fix: the ONLY
+        /// unlock mechanism was BuyNextChapter, which bought every verse in the chapter at once -
+        /// defeating the entire point of a per-verse Verses tab. UnlockCurrentChapter() is the
+        /// missing "just let me pick verses individually" action.</summary>
         public bool RequiresChapterUnlock =>
-            !BookComplete && NextVerseIndex > 0 && NextVerseIndex == CurrentChapterStartIndex;
+            !BookComplete && NextVerseIndex > 0 && NextVerseIndex == CurrentChapterStartIndex
+            && unlockedChapterNumber != CurrentChapterNumber;
+
+        /// <summary>Opens the current chapter's gate for free, WITHOUT buying any verse - lets the
+        /// player then buy verses one at a time (or in a VerseBuyMultiplier bulk, still capped at
+        /// this chapter's boundary) from the Verses tab. Returns false if the gate isn't currently
+        /// blocking anything.</summary>
+        public bool UnlockCurrentChapter()
+        {
+            if (!RequiresChapterUnlock) return false;
+            unlockedChapterNumber = CurrentChapterNumber;
+            OnStateChanged?.Invoke();
+            return true;
+        }
 
         /// <summary>Chapter number the player is currently working through (containing
         /// NextVerseIndex) - every earlier chapter is fully bought, every later one untouched,

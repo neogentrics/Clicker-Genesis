@@ -52,7 +52,7 @@ namespace ClickerGenesis.Core
 
             // See ClickerScreenUI.Awake() for why this wiring lives here, not in Start().
             BuyButton.onClick.AddListener(HandleBuy);
-            if (MultiplierButton != null) MultiplierButton.onClick.AddListener(() => Controller?.CycleVerseBuyMultiplier());
+            if (MultiplierButton != null) MultiplierButton.onClick.AddListener(HandleMultiplierOrUnlockClick);
             if (VersesTabButton != null) VersesTabButton.onClick.AddListener(() => SetTab(false));
             if (ChaptersTabButton != null) ChaptersTabButton.onClick.AddListener(() => SetTab(true));
             if (Controller != null) Controller.OnStateChanged += Refresh;
@@ -67,7 +67,9 @@ namespace ClickerGenesis.Core
             showingChapters = chapters;
             if (VerseListRoot != null) VerseListRoot.SetActive(!chapters);
             if (ChapterListRoot != null) ChapterListRoot.SetActive(chapters);
-            if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(!chapters);
+            // MultiplierButton's active state is fully managed in Refresh() now (it's dual-purpose:
+            // bulk-buy cycle on Verses, free Unlock Chapter on Chapters-while-gated) - no static
+            // per-tab default to set here anymore.
             if (VersesTabBackground != null) VersesTabBackground.color = chapters ? InactiveTabColor : ActiveTabColor;
             if (ChaptersTabBackground != null) ChaptersTabBackground.color = chapters ? ActiveTabColor : InactiveTabColor;
             // Clicking the Verses tab directly always goes back to the live in-progress chapter -
@@ -109,7 +111,22 @@ namespace ClickerGenesis.Core
         private void HandleBuy()
         {
             if (showingChapters) Controller?.BuyNextChapter();
+            // 2026-08-05, real bug fix: this used to just show a disabled "go unlock it on the
+            // Chapters tab" message - the player had no way to actually open the gate from here.
+            // Now it performs the free unlock directly, right where the player already is.
+            else if (Controller != null && Controller.RequiresChapterUnlock) Controller.UnlockCurrentChapter();
             else Controller?.BuyVersesBulk();
+        }
+
+        /// <summary>MultiplierButton is dual-purpose: on the Verses tab it cycles the bulk-buy
+        /// quantity (1x/2x/3x/4x/Max); on the Chapters tab, while the current chapter's gate is
+        /// still closed, it becomes a free "Unlock Chapter" action instead - so the Complete
+        /// Chapter bulk-buy-everything button isn't the ONLY way to get into a fresh chapter. Only
+        /// shown then (see Refresh's MultiplierButton.gameObject.SetActive logic).</summary>
+        private void HandleMultiplierOrUnlockClick()
+        {
+            if (showingChapters) Controller?.UnlockCurrentChapter();
+            else Controller?.CycleVerseBuyMultiplier();
         }
 
         /// <summary>Maps the actual bulk quantity (1/5/10/20) to the "1x/2x/3x/4x" tier label the
@@ -189,32 +206,52 @@ namespace ClickerGenesis.Core
                 if (VerseScrollRect != null) VerseScrollRect.verticalNormalizedPosition = 1f;
             }
 
-            if (MultiplierButtonLabel != null)
-                MultiplierButtonLabel.text = MultiplierTierLabel(Controller.VerseBuyMultiplier);
+            if (showingChapters)
+            {
+                // Dual-purpose slot: while this chapter's gate is still closed, it's a free
+                // "Unlock Chapter" action (see HandleMultiplierOrUnlockClick) - once the gate is
+                // open (either via this button or via Complete Chapter), it has nothing left to do
+                // and hides, same as it would on the Verses tab once you're mid-chapter.
+                bool showUnlock = Controller.RequiresChapterUnlock;
+                if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(showUnlock);
+                if (MultiplierButtonLabel != null && showUnlock) MultiplierButtonLabel.text = "Unlock Chapter";
+            }
+            else
+            {
+                if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(true);
+                if (MultiplierButtonLabel != null)
+                    MultiplierButtonLabel.text = MultiplierTierLabel(Controller.VerseBuyMultiplier);
+            }
 
             if (Controller.BookComplete)
             {
                 StatusLabel.text = "Book complete!";
                 BuyButton.interactable = false;
-                if (BuyButtonLabel != null) BuyButtonLabel.text = showingChapters ? "Buy Next Chapter" : "Buy Next Verse";
+                if (BuyButtonLabel != null) BuyButtonLabel.text = showingChapters ? "Complete Chapter" : "Buy Next Verse";
             }
             else if (showingChapters)
             {
+                // "Complete Chapter" is the paid, all-at-once shortcut (buys every remaining verse
+                // in the chapter at the bulk discount) - distinct from the free "Unlock Chapter"
+                // button above, which only opens the gate so verses can be bought individually on
+                // the Verses tab instead. 2026-08-05: previously this was the ONLY way to enter a
+                // fresh chapter, and it silently bought every verse at once - defeating the point
+                // of having a per-verse Verses tab at all.
                 double chapterCost = Controller.ChapterBulkCost;
                 int remaining = Controller.RemainingVersesInCurrentChapter;
                 StatusLabel.text = $"Chapter {Controller.CurrentChapterNumber}: {remaining} verse(s) left to unlock";
                 BuyButton.interactable = Controller.Wallet.Balance >= chapterCost;
                 if (BuyButtonLabel != null)
-                    BuyButtonLabel.text = $"Buy Next Chapter ({NumberFormatter.Format(chapterCost)} Ink)";
+                    BuyButtonLabel.text = $"Complete Chapter ({NumberFormatter.Format(chapterCost)} Ink)";
             }
             else if (Controller.RequiresChapterUnlock)
             {
-                // 2026-08-04, explicit user design: verse purchases (single or bulk) never cross
-                // into a fresh chapter on their own - only the Chapters tab's bulk-buy can do that.
-                // Redirect instead of silently letting the player buy into the new chapter here.
-                StatusLabel.text = $"Chapter {Controller.CurrentChapterNumber} is locked - buy it on the Chapters tab first.";
-                BuyButton.interactable = false;
-                if (BuyButtonLabel != null) BuyButtonLabel.text = "Buy Next Chapter to Unlock";
+                // 2026-08-05, real bug fix: this button now performs the free unlock directly
+                // (see HandleBuy) instead of just displaying a disabled redirect message - no trip
+                // to the Chapters tab required to start buying this chapter's verses individually.
+                StatusLabel.text = $"Chapter {Controller.CurrentChapterNumber} is locked.";
+                BuyButton.interactable = true;
+                if (BuyButtonLabel != null) BuyButtonLabel.text = $"Unlock Chapter {Controller.CurrentChapterNumber}";
             }
             else
             {

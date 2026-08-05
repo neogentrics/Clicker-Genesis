@@ -226,16 +226,20 @@ namespace ClickerGenesis.Core
             if (AutoBuyReserveButtonLabel != null)
                 AutoBuyReserveButtonLabel.text = Controller.ManagerAutoBuyReserve <= 0
                     ? "Reserve: None"
-                    : $"Reserve: {NumberFormatter.Format(Controller.ManagerAutoBuyReserve)}";
+                    : $"Reserve: {NumberFormatter.FormatWhole(Controller.ManagerAutoBuyReserve)}";
 
             if (GraceLabel != null && Controller.Prestige != null)
                 GraceLabel.text = $"Grace: {NumberFormatter.FormatWhole(Controller.Prestige.Grace)}";
 
             if (PrestigeButton != null)
             {
-                // Progressive disclosure: hidden entirely until near-eligible, not shown-but-
-                // locked from the very start — a far-off feature is clutter, a near one is a goal.
-                bool near = levels.IsPrestigeNear;
+                // Progressive disclosure for a first-time player (hidden entirely until near-
+                // eligible - a far-off feature is clutter, a near one is a goal), but once the
+                // player has EVER prestiged, this button is their only way back to the Grace skill
+                // tree screen to keep spending Grace - it must never disappear again just because
+                // a free prestige reset their level back to 1 (2026-08-05, real bug: player had
+                // Grace but the button vanished and they couldn't reach the tree at all).
+                bool near = levels.IsPrestigeNear || Controller.Prestige.PrestigeCount > 0;
                 PrestigeButton.gameObject.SetActive(near);
                 if (near)
                 {
