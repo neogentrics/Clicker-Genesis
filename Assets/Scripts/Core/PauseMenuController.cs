@@ -26,6 +26,10 @@ namespace ClickerGenesis.Core
         public Button MainMenuButton;
         public Button StoreButton;
         public TMP_Text StoreButtonLabel;
+        public Button StatsButton;
+        public TMP_Text StatsButtonLabel;
+        public Button AchievementsButton;
+        public TMP_Text AchievementsButtonLabel;
 
         private void Awake()
         {
@@ -46,6 +50,19 @@ namespace ClickerGenesis.Core
             {
                 StoreButton.interactable = false;
                 if (StoreButtonLabel != null) StoreButtonLabel.text = "Store (Coming Soon)";
+            }
+            // Stats/Achievements - explicitly deferred systems (see CLAUDE.md "later development"
+            // note), but the user wants the buttons present now as a placeholder for where they'll
+            // live once built, same "Coming Soon" pattern as Store.
+            if (StatsButton != null)
+            {
+                StatsButton.interactable = false;
+                if (StatsButtonLabel != null) StatsButtonLabel.text = "Stats (Coming Soon)";
+            }
+            if (AchievementsButton != null)
+            {
+                AchievementsButton.interactable = false;
+                if (AchievementsButtonLabel != null) AchievementsButtonLabel.text = "Achievements (Coming Soon)";
             }
 
             if (OverlayRoot != null) OverlayRoot.SetActive(false);
