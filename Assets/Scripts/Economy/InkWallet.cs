@@ -14,6 +14,12 @@ namespace ClickerGenesis.Economy
 
         public double Balance => balance;
 
+        /// <summary>Total Ink ever earned this run (tap + passive), distinct from the spendable
+        /// Balance above - never decreases on spend, and isn't reset by ResetBalance(). Needed for
+        /// the Prestige Grace formula (floor(sqrt(TotalInkEarnedThisRun)/50) + ...), per the full
+        /// spec on the Notion Progression subpage.</summary>
+        public double LifetimeEarned { get; private set; }
+
         public event Action<double> OnBalanceChanged;
 
         public InkWallet(double startingBalance = 0)
@@ -25,6 +31,7 @@ namespace ClickerGenesis.Economy
         {
             if (amount <= 0) return;
             balance += amount;
+            LifetimeEarned += amount;
             OnBalanceChanged?.Invoke(balance);
         }
 

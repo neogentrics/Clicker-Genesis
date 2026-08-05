@@ -25,10 +25,26 @@ namespace ClickerGenesis.Core
         [SerializeField] private double clickPowerBaseCost = 25;
         [SerializeField] private double clickPowerCostGrowthRate = 1.15;
 
+        [Header("Grace skill tree")]
+        [SerializeField] private PrestigeSkillTreeConfig prestigeSkillTreeConfig;
+
         public InkWallet Wallet { get; private set; }
         public VerseDatabase Verses { get; private set; }
         public LevelSystem Levels { get; private set; }
         public ScribeSystem Scribes { get; private set; }
+        public PrestigeSystem Prestige { get; private set; }
+        public PrestigeSkillSystem Skills { get; private set; }
+        public PrestigeSkillTreeConfig SkillTreeConfig => prestigeSkillTreeConfig;
+
+        /// <summary>How many chapters have been completed this run - one of the Grace reward
+        /// formula's terms. Incremented in ApplyVersePurchaseNoCharge alongside the existing
+        /// chapter-complete XP bonus.</summary>
+        public int ChaptersCompletedCount { get; private set; }
+
+        /// <summary>How many books have been completed this run - the last Grace reward term.
+        /// Only ever 0 or 1 right now (Genesis is the only wired-in book), but tracked properly so
+        /// it's correct once more books are wired in.</summary>
+        public int BooksCompletedCount { get; private set; }
 
         /// <summary>
         /// How many times the player has bought a Click Power upgrade. Tap value scales via the
@@ -50,12 +66,14 @@ namespace ClickerGenesis.Core
         private const double ClickPowerPerLevelGrowth = 0.1;
 
         public double EffectiveTapAmount =>
-            tapAmount * (1.0 + ClickPowerPerLevelGrowth * ClickPowerLevel) * MilestoneCurve.GetMultiplier(ClickPowerLevel);
+            tapAmount * (1.0 + ClickPowerPerLevelGrowth * ClickPowerLevel) * MilestoneCurve.GetMultiplier(ClickPowerLevel)
+            * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
 
         /// <summary>What EffectiveTapAmount becomes after the next Click Power purchase — used to
         /// preview the upgrade's payoff on its button label instead of showing only its cost.</summary>
         public double NextEffectiveTapAmount =>
-            tapAmount * (1.0 + ClickPowerPerLevelGrowth * (ClickPowerLevel + 1)) * MilestoneCurve.GetMultiplier(ClickPowerLevel + 1);
+            tapAmount * (1.0 + ClickPowerPerLevelGrowth * (ClickPowerLevel + 1)) * MilestoneCurve.GetMultiplier(ClickPowerLevel + 1)
+            * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
 
         /// <summary>Index (within the book) of the next verse that has not yet been purchased.</summary>
         public int NextVerseIndex { get; private set; }
@@ -195,7 +213,8 @@ namespace ClickerGenesis.Core
             get
             {
                 int afterLevel = ClickPowerLevel + ClickPowerBuyMultiplier;
-                return tapAmount * (1.0 + ClickPowerPerLevelGrowth * afterLevel) * MilestoneCurve.GetMultiplier(afterLevel);
+                return tapAmount * (1.0 + ClickPowerPerLevelGrowth * afterLevel) * MilestoneCurve.GetMultiplier(afterLevel)
+                    * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
             }
         }
 
@@ -240,6 +259,8 @@ namespace ClickerGenesis.Core
             Verses = VerseDatabase.LoadFromResources(verseResourcePath);
             Levels = new LevelSystem(xpConfig);
             if (scribeConfig != null) Scribes = new ScribeSystem(scribeConfig);
+            Prestige = new PrestigeSystem();
+            Skills = new PrestigeSkillSystem(prestigeSkillTreeConfig);
             NextVerseIndex = 0;
 
             if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
@@ -251,7 +272,7 @@ namespace ClickerGenesis.Core
 
             bool changed = false;
 
-            double inkPerSecond = Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier);
+            double inkPerSecond = EffectiveInkPerSecond;
             if (inkPerSecond > 0)
             {
                 Wallet.Add(inkPerSecond * Time.deltaTime);
@@ -302,9 +323,15 @@ namespace ClickerGenesis.Core
         /// manager's own scribe tier being verse-unlocked (see ScribeSystem.CanUnlockManager), AND
         /// spending its Ink cost (0 for Adam, the free first manager). Returns false if not
         /// eligible, already unlocked, or unaffordable.</summary>
+        /// <summary>Player level as seen by manager unlock checks - the Grace skill tree's
+        /// "Manager's Calling" branch lowers the effective requirement (never below 1), rather than
+        /// raising the player's real level.</summary>
+        public int EffectiveManagerLevel =>
+            Math.Max(1, Levels.CurrentLevel + (int)Skills.GetTotalEffect(SkillEffectType.ManagerUnlockLevelDiscount));
+
         public bool BuyManager(int tierIndex)
         {
-            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, Levels.CurrentLevel, NextVerseIndex)) return false;
+            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, EffectiveManagerLevel, NextVerseIndex)) return false;
 
             double cost = Scribes.GetDefinition(tierIndex).managerUnlockCost;
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
@@ -370,13 +397,20 @@ namespace ClickerGenesis.Core
 
         public bool BookComplete => Verses == null || !Verses.HasVerse(NextVerseIndex);
 
+        /// <summary>Grace skill tree "Swift Unlock" branch discount, clamped so verse/chapter cost
+        /// can never drop below 20% of its base value - keeps the core loop meaningful even at
+        /// max investment in this branch.</summary>
+        private double VersePricingMultiplier => 1.0 - Math.Min(0.8, Skills.GetTotalEffect(SkillEffectType.PricingDiscount));
+
         public double NextVerseCost => pricingConfig != null
-            ? PricingCurve.VerseCost(pricingConfig, NextVerseIndex)
+            ? PricingCurve.VerseCost(pricingConfig, NextVerseIndex) * VersePricingMultiplier
             : 0;
 
         /// <summary>Cost to unlock the verse at an arbitrary index - used by the verse list to show
         /// upcoming locked verses' costs ahead of time, not just the very next one.</summary>
-        public double VerseCostAt(int index) => pricingConfig != null ? PricingCurve.VerseCost(pricingConfig, index) : 0;
+        public double VerseCostAt(int index) => pricingConfig != null
+            ? PricingCurve.VerseCost(pricingConfig, index) * VersePricingMultiplier
+            : 0;
 
         /// <summary>First verse index belonging to the given (arbitrary, not necessarily current)
         /// chapter number - lets the Chapters tab jump the Verses tab to review a PAST completed
@@ -445,6 +479,28 @@ namespace ClickerGenesis.Core
         /// ScribeSystem.GetTierInkPerSecond.</summary>
         public float ProgressMultiplier { get; private set; } = 1f;
 
+        /// <summary>Actual total Ink/sec, including every Grace skill tree bonus - the single
+        /// source of truth both Update()'s real income tick and the UI's displayed rate read from,
+        /// so the number shown always matches what's actually being earned. Skill bonuses (Ink
+        /// Flow / Illuminated Pages / Scribe's Diligence branches) stack additively with each
+        /// other, then apply multiplicatively on top of the milestone/manager/progress multipliers
+        /// already baked into TotalInkPerSecond. This supersedes the old lean-v1 "+1% Ink per Grace
+        /// ever spent" auto-bonus (PrestigeSystem.IncomeMultiplier), an explicit placeholder "until
+        /// a real Grace Shop is proven out" - this tree is that shop now.</summary>
+        public double EffectiveInkPerSecond
+        {
+            get
+            {
+                if (Scribes == null) return 0;
+                double skillIncomeBoost = 1.0
+                    + Skills.GetTotalEffect(SkillEffectType.IncomeMultiplier)
+                    + Skills.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost)
+                    + Skills.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost);
+                double managerBonusBoost = Skills.GetTotalEffect(SkillEffectType.ManagerBonusBoost);
+                return Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier, managerBonusBoost) * skillIncomeBoost;
+            }
+        }
+
         /// <summary>Advances NextVerseIndex and awards XP for the verse at the current
         /// NextVerseIndex, WITHOUT charging Ink - the caller is responsible for having already
         /// paid (either the per-verse cost, or a discounted lump sum for a chapter bulk-buy).</summary>
@@ -455,18 +511,19 @@ namespace ClickerGenesis.Core
 
             if (NextVerseIndex % 5 == 0) ProgressMultiplier += 0.1f;
 
+            bool chapterComplete = !Verses.HasVerse(NextVerseIndex) ||
+                Verses.GetVerse(NextVerseIndex).ChapterNumber != purchasedVerse.ChapterNumber;
+            if (chapterComplete)
+            {
+                ChaptersCompletedCount++;
+                ProgressMultiplier *= 2f;
+            }
+            if (BookComplete) BooksCompletedCount++;
+
             if (xpConfig != null)
             {
                 Levels.AddXp(xpConfig.XpPerVerse);
-
-                bool chapterComplete = !Verses.HasVerse(NextVerseIndex) ||
-                    Verses.GetVerse(NextVerseIndex).ChapterNumber != purchasedVerse.ChapterNumber;
-                if (chapterComplete)
-                {
-                    Levels.AddXp(xpConfig.XpPerChapterBonus);
-                    ProgressMultiplier *= 2f;
-                }
-
+                if (chapterComplete) Levels.AddXp(xpConfig.XpPerChapterBonus);
                 if (BookComplete) Levels.AddXp(xpConfig.XpPerBookBonus);
             }
         }
@@ -479,6 +536,45 @@ namespace ClickerGenesis.Core
             if (!Wallet.TrySpend(NextVerseCost)) return false;
 
             ApplyVersePurchaseNoCharge();
+            return true;
+        }
+
+        /// <summary>Grace reward for prestiging right now, before the opt-in reset's 2.5x
+        /// multiplier. Uses Wallet.LifetimeEarned (never decreases on spend), not the current
+        /// spendable Balance - per the confirmed Grace formula.</summary>
+        public double PrestigeGracePreview =>
+            PrestigeSystem.CalculateGraceReward(Wallet.LifetimeEarned, NextVerseIndex, ChaptersCompletedCount, BooksCompletedCount)
+            * (1.0 + Skills.GetTotalEffect(SkillEffectType.GraceGainBonus));
+
+        /// <summary>Grace reward including the opt-in reset path's 2.5x multiplier - shown as the
+        /// "with reset" preview alongside the plain PrestigeGracePreview.</summary>
+        public double PrestigeGracePreviewWithReset => PrestigeGracePreview * 2.5;
+
+        /// <summary>
+        /// Performs a prestige cycle. Both paths always reset Level/XP back to 1/0 (that's what
+        /// makes "no cooldown - every cycle requires re-reaching the threshold" actually true) and
+        /// always award Grace - the ONLY difference withReset makes is also wiping Ink balance,
+        /// Click Power level, and every scribe tier's owned count for 2.5x the Grace. Verses,
+        /// chapters, and books already unlocked are NEVER reset on either path - the one hard rule
+        /// that doesn't bend, since it's what protects the memorization mission. Returns false if
+        /// not yet eligible.
+        /// </summary>
+        public bool PerformPrestige(bool withReset)
+        {
+            if (!Levels.IsPrestigeEligible) return false;
+
+            double grace = withReset ? PrestigeGracePreviewWithReset : PrestigeGracePreview;
+            Prestige.AwardGrace(grace);
+            Levels.ResetForPrestige();
+
+            if (withReset)
+            {
+                Wallet.ResetBalance();
+                ClickPowerLevel = 0;
+                Scribes.ResetOwned();
+            }
+
+            OnStateChanged?.Invoke();
             return true;
         }
 
@@ -586,6 +682,19 @@ namespace ClickerGenesis.Core
             if (bought >= 5 && xpConfig != null) Levels.AddXp(xpConfig.XpBulkBuyBonus);
             if (bought > 0) OnStateChanged?.Invoke();
             return bought;
+        }
+
+        /// <summary>Attempts to buy the next rank of a Grace skill tree node. Returns false if the
+        /// node is unknown, maxed, locked by its prerequisite, or unaffordable.</summary>
+        public bool BuySkill(string nodeId)
+        {
+            var node = prestigeSkillTreeConfig?.FindNode(nodeId);
+            if (node == null || !Skills.CanBuy(node, Prestige.Grace)) return false;
+
+            double cost = Skills.Buy(node);
+            Prestige.TrySpendGrace(cost);
+            OnStateChanged?.Invoke();
+            return true;
         }
 
         public bool HasUnlockedVerse => NextVerseIndex > 0;

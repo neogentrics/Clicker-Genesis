@@ -98,7 +98,7 @@ namespace ClickerGenesis.Core
         {
             if (Controller == null || Controller.Scribes == null) return;
             var scribes = Controller.Scribes;
-            int level = Controller.Levels.CurrentLevel;
+            int level = Controller.EffectiveManagerLevel;
 
             foreach (var row in rows)
             {

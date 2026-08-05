@@ -35,6 +35,18 @@ namespace ClickerGenesis.Core
             }
         }
 
+        /// <summary>Same tiering/notation as Format(), but no decimal places under 1000 - for
+        /// currencies that are always whole numbers by design (e.g. Grace), where "0.0"/"42.0"
+        /// reads as a fractional value that doesn't exist.</summary>
+        public static string FormatWhole(double value) => FormatWhole(value, GameSettings.Notation);
+
+        public static string FormatWhole(double value, NumberNotation notation)
+        {
+            if (double.IsNaN(value) || double.IsInfinity(value)) return value.ToString();
+            if (Math.Abs(value) < 1000) return Math.Round(value).ToString("F0");
+            return Format(value, notation);
+        }
+
         private static string FormatStandard(double value)
         {
             double abs = Math.Abs(value);

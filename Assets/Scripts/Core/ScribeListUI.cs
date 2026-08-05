@@ -177,7 +177,8 @@ namespace ClickerGenesis.Core
                     desc += $"\n<color=#2E7D46>{def.managerName} is managing this scribe.</color>";
                 row.DescText.text = desc;
 
-                row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier))} Ink/s";
+                double managerBonusBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerBonusBoost);
+                row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier, managerBonusBoost))} Ink/s";
                 string quantityPrefix = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
                     ? "Max  "
                     : Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";

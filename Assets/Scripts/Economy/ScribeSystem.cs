@@ -85,23 +85,35 @@ namespace ClickerGenesis.Economy
             owned[tierIndex]++;
         }
 
+        /// <summary>Wipes every tier's owned count back to zero - the opt-in prestige reset path's
+        /// "upgrade levels" reset. Managers stay unlocked (not reset) - re-buying every manager
+        /// after every reset was never specified and would feel punishing; treat manager unlocks
+        /// as permanent, same as unlocked verses/chapters/books.</summary>
+        public void ResetOwned()
+        {
+            for (int i = 0; i < owned.Length; i++) owned[i] = 0;
+        }
+
         /// <summary>progressMultiplier is GameLoopController.ProgressMultiplier - a shared passive
         /// bonus from verse/chapter progress that applies on top of this tier's own owned-count
         /// milestone curve and manager bonus (2026-08-04, explicit user design).</summary>
-        public double GetTierInkPerSecond(int tierIndex, int playerLevel, float progressMultiplier = 1f)
+        /// <summary>managerBonusBoost is an additive percentage from the Grace skill tree's
+        /// "Overseer's Wisdom" branch (GameLoopController.EffectiveInkPerSecond) - stacks on top of
+        /// this tier's own fixed manager bonus rather than replacing it.</summary>
+        public double GetTierInkPerSecond(int tierIndex, int playerLevel, float progressMultiplier = 1f, double managerBonusBoost = 0)
         {
             var def = config.tiers[tierIndex];
             double output = def.baseInkPerSecond * owned[tierIndex] * GetOwnedMilestoneMultiplier(tierIndex) * progressMultiplier;
             if (IsManagerActive(tierIndex, playerLevel))
-                output *= 1.0 + def.managerBonusMultiplier;
+                output *= 1.0 + def.managerBonusMultiplier + managerBonusBoost;
             return output;
         }
 
-        public double TotalInkPerSecond(int playerLevel, float progressMultiplier = 1f)
+        public double TotalInkPerSecond(int playerLevel, float progressMultiplier = 1f, double managerBonusBoost = 0)
         {
             double total = 0;
             for (int i = 0; i < TierCount; i++)
-                total += GetTierInkPerSecond(i, playerLevel, progressMultiplier);
+                total += GetTierInkPerSecond(i, playerLevel, progressMultiplier, managerBonusBoost);
             return total;
         }
     }

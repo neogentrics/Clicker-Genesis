@@ -23,6 +23,8 @@ namespace ClickerGenesis.Progression
 
         public bool IsPrestigeEligible => CurrentLevel >= config.PrestigeLevelThreshold;
 
+        public int PrestigeLevelThreshold => config.PrestigeLevelThreshold;
+
         /// <summary>
         /// True once the player has reached XpConfig.PrestigeButtonVisibleLevel (2026-08-04:
         /// user's explicit call — level 2, well before the level-5 unlock threshold) — the
@@ -48,6 +50,16 @@ namespace ClickerGenesis.Progression
                 CurrentLevel++;
                 OnLevelUp?.Invoke(CurrentLevel);
             }
+        }
+
+        /// <summary>Resets level/XP back to the start - happens on EVERY prestige (free or the
+        /// opt-in reset path), since "no cooldown - every cycle requires re-reaching the threshold
+        /// in the new run" only makes sense if level actually drops back down. This is distinct
+        /// from the opt-in path's Ink/upgrade reset, which is optional and Grace-multiplied.</summary>
+        public void ResetForPrestige()
+        {
+            TotalXp = 0;
+            CurrentLevel = 1;
         }
     }
 }

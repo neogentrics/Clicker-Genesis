@@ -28,9 +28,12 @@ namespace ClickerGenesis.Core
         public TMP_Text ClickPowerButtonLabel;
         public TMP_Text TapValueLabel;
 
-        [Header("Prestige (locked until eligible)")]
+        [Header("Prestige (locked until eligible; the reset-for-bonus-Grace flow lives on the future Prestige screen, not here)")]
         public Button PrestigeButton;
         public TMP_Text PrestigeButtonLabel;
+        public TMP_Text PrestigeTooltipLabel;
+        public TMP_Text GraceLabel;
+        public GameObject StatusBanner;
         public TMP_Text StatusLabel;
 
         [Header("Scribes/Managers tabs (2026-08-04)")]
@@ -163,10 +166,19 @@ namespace ClickerGenesis.Core
             Destroy(rt.gameObject);
         }
 
-        private void HandlePrestigeClick()
+        // Opens the Grace skill tree / Prestige screen instead of instantly prestiging - the
+        // actual prestige action (free or reset) now lives there, per the user's explicit pivot:
+        // "there is supposed to pull up a secondary screen so that they can spend their grace on
+        // something" (2026-08-04).
+        private void HandlePrestigeClick() => UnityEngine.SceneManagement.SceneManager.LoadScene("PrestigeScreen");
+
+        // The status message needs its own backing banner (StatusBanner) to read as a message
+        // rather than bare text floating on the stone backdrop - this keeps banner visibility in
+        // sync with the text instead of just setting StatusLabel.text directly everywhere.
+        private void SetStatus(string message)
         {
-            if (StatusLabel != null)
-                StatusLabel.text = "Prestige is coming in a future update.";
+            if (StatusLabel != null) StatusLabel.text = message;
+            if (StatusBanner != null) StatusBanner.SetActive(!string.IsNullOrEmpty(message));
         }
 
         private void Refresh()
@@ -175,7 +187,7 @@ namespace ClickerGenesis.Core
 
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
             if (ClickingPowerLabel != null && Controller.Scribes != null)
-                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.Scribes.TotalInkPerSecond(Controller.Levels.CurrentLevel, Controller.ProgressMultiplier))} Ink/s";
+                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.EffectiveInkPerSecond)} Ink/s";
 
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
@@ -216,6 +228,9 @@ namespace ClickerGenesis.Core
                     ? "Reserve: None"
                     : $"Reserve: {NumberFormatter.Format(Controller.ManagerAutoBuyReserve)}";
 
+            if (GraceLabel != null && Controller.Prestige != null)
+                GraceLabel.text = $"Grace: {NumberFormatter.FormatWhole(Controller.Prestige.Grace)}";
+
             if (PrestigeButton != null)
             {
                 // Progressive disclosure: hidden entirely until near-eligible, not shown-but-
@@ -224,10 +239,17 @@ namespace ClickerGenesis.Core
                 PrestigeButton.gameObject.SetActive(near);
                 if (near)
                 {
+                    // Always clickable once visible - it just opens the Grace skill tree screen
+                    // now (not an instant action), where nodes already bought with past Grace stay
+                    // spendable/viewable even before the next prestige is ready. Eligibility for the
+                    // actual prestige action is judged on that screen, not gated here.
                     bool eligible = levels.IsPrestigeEligible;
-                    PrestigeButton.interactable = eligible;
-                    if (PrestigeButtonLabel != null)
-                        PrestigeButtonLabel.text = eligible ? "Prestige" : "Prestige (Locked)";
+                    PrestigeButton.interactable = true;
+                    if (PrestigeButtonLabel != null) PrestigeButtonLabel.text = "Prestige";
+                    if (PrestigeTooltipLabel != null)
+                        PrestigeTooltipLabel.text = eligible
+                            ? $"Ready! +{NumberFormatter.FormatWhole(Controller.PrestigeGracePreview)} Grace"
+                            : $"View skill tree — prestige unlocks at Level {levels.PrestigeLevelThreshold}";
                 }
             }
         }
