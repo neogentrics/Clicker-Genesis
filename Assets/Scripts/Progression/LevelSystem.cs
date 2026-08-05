@@ -52,10 +52,10 @@ namespace ClickerGenesis.Progression
             }
         }
 
-        /// <summary>Resets level/XP back to the start - happens on EVERY prestige (free or the
-        /// opt-in reset path), since "no cooldown - every cycle requires re-reaching the threshold
-        /// in the new run" only makes sense if level actually drops back down. This is distinct
-        /// from the opt-in path's Ink/upgrade reset, which is optional and Grace-multiplied.</summary>
+        /// <summary>Resets level/XP back to the start - only called on the opt-in RESET prestige
+        /// path (2026-08-05, explicit user correction: the free path must never touch the XP bar,
+        /// reversing the original "resets on every cycle" design). Bundled with the reset path's
+        /// Ink/scribe-owned-count wipe as one "start over for bonus Grace" action.</summary>
         public void ResetForPrestige()
         {
             TotalXp = 0;

@@ -551,13 +551,13 @@ namespace ClickerGenesis.Core
         public double PrestigeGracePreviewWithReset => PrestigeGracePreview * 2.5;
 
         /// <summary>
-        /// Performs a prestige cycle. Both paths always reset Level/XP back to 1/0 (that's what
-        /// makes "no cooldown - every cycle requires re-reaching the threshold" actually true) and
-        /// always award Grace - the ONLY difference withReset makes is also wiping Ink balance,
-        /// Click Power level, and every scribe tier's owned count for 2.5x the Grace. Verses,
-        /// chapters, and books already unlocked are NEVER reset on either path - the one hard rule
-        /// that doesn't bend, since it's what protects the memorization mission. Returns false if
-        /// not yet eligible.
+        /// Performs a prestige cycle. The free path only awards Grace - Level/XP, Ink, Click
+        /// Power, and scribe owned counts are all left untouched (2026-08-05, explicit user
+        /// correction: the free path must never reset the XP bar). The opt-in reset path also
+        /// resets Level/XP back to 1/0, wipes Ink balance, Click Power level, and every scribe
+        /// tier's owned count, for 2.5x the Grace. Verses, chapters, and books already unlocked are
+        /// NEVER reset on either path - the one hard rule that doesn't bend, since it's what
+        /// protects the memorization mission. Returns false if not yet eligible.
         /// </summary>
         public bool PerformPrestige(bool withReset)
         {
@@ -565,10 +565,10 @@ namespace ClickerGenesis.Core
 
             double grace = withReset ? PrestigeGracePreviewWithReset : PrestigeGracePreview;
             Prestige.AwardGrace(grace);
-            Levels.ResetForPrestige();
 
             if (withReset)
             {
+                Levels.ResetForPrestige();
                 Wallet.ResetBalance();
                 ClickPowerLevel = 0;
                 Scribes.ResetOwned();

@@ -174,38 +174,14 @@ namespace ClickerGenesis.Core
             });
         }
 
-        /// <summary>Same dark-panel-plus-centered-text look as the existing PauseButton/Prestige
-        /// tooltips (HoverTooltip.cs), built per node here rather than requiring the template to
-        /// carry one - the description text is static per node so it only needs setting once.</summary>
+        /// <summary>Uses the scene's shared TooltipOverlay (see TooltipOverlay.cs) instead of a
+        /// per-node child GameObject - a per-node tooltip would render behind whatever node/line
+        /// happens to be drawn after it in Content's sibling order, same bug the shared overlay
+        /// fixes everywhere else.</summary>
         private void BuildTooltip(GameObject nodeGo, PrestigeSkillNode node)
         {
-            var tooltipGo = new GameObject("Tooltip", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
-            tooltipGo.transform.SetParent(nodeGo.transform, false);
-            var ttRt = tooltipGo.GetComponent<RectTransform>();
-            ttRt.anchorMin = new Vector2(0.5f, 1f);
-            ttRt.anchorMax = new Vector2(0.5f, 1f);
-            ttRt.pivot = new Vector2(0.5f, 0f);
-            ttRt.anchoredPosition = new Vector2(0f, 10f);
-            ttRt.sizeDelta = new Vector2(320f, 60f);
-            tooltipGo.GetComponent<Image>().color = new Color(0.1f, 0.08f, 0.05f, 0.92f);
-            tooltipGo.SetActive(false);
-
-            var textGo = new GameObject("Text", typeof(RectTransform), typeof(TextMeshProUGUI));
-            textGo.transform.SetParent(tooltipGo.transform, false);
-            var textRt = textGo.GetComponent<RectTransform>();
-            textRt.anchorMin = Vector2.zero;
-            textRt.anchorMax = Vector2.one;
-            textRt.offsetMin = new Vector2(10, 4);
-            textRt.offsetMax = new Vector2(-10, -4);
-            var tmp = textGo.GetComponent<TextMeshProUGUI>();
-            tmp.text = node.description;
-            tmp.fontSize = 20;
-            tmp.color = new Color(0.957f, 0.925f, 0.847f, 1f);
-            tmp.alignment = TextAlignmentOptions.Center;
-            tmp.textWrappingMode = TextWrappingModes.Normal;
-
             var hover = nodeGo.AddComponent<HoverTooltip>();
-            hover.TooltipObject = tooltipGo;
+            hover.Text = node.description;
         }
 
         private void CreateLine(Vector2 from, Vector2 to)

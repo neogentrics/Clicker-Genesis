@@ -244,12 +244,15 @@ namespace ClickerGenesis.Core
                 if (near)
                 {
                     // Always clickable once visible - it just opens the Grace skill tree screen
-                    // now (not an instant action), where nodes already bought with past Grace stay
-                    // spendable/viewable even before the next prestige is ready. Eligibility for the
-                    // actual prestige action is judged on that screen, not gated here.
+                    // (not an instant prestige action), where nodes already bought with past Grace
+                    // stay spendable/viewable even before the next prestige is ready, and the
+                    // actual Prestige (free) / Reset (bonus Grace) choice lives on that screen.
+                    // Labeled "Skill Tree", not "Prestige" (2026-08-05, explicit user correction:
+                    // calling this button "Prestige" was misleading since it doesn't itself
+                    // prestige anything - it just opens the screen where that choice is made).
                     bool eligible = levels.IsPrestigeEligible;
                     PrestigeButton.interactable = true;
-                    if (PrestigeButtonLabel != null) PrestigeButtonLabel.text = "Prestige";
+                    if (PrestigeButtonLabel != null) PrestigeButtonLabel.text = "Skill Tree";
                     if (PrestigeTooltipLabel != null)
                         PrestigeTooltipLabel.text = eligible
                             ? $"Ready! +{NumberFormatter.FormatWhole(Controller.PrestigeGracePreview)} Grace"
