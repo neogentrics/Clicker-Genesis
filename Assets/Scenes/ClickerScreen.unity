@@ -6096,8 +6096,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.XpBarShine
   Fill: {fileID: 1474066871}
   Shine: {fileID: 2133826180}
-  Speed: 220
-  StripWidth: 50
+  ScrollSpeed: 0.6
+  BaseColor: {r: 0, g: 0.75, b: 0.3, a: 1}
+  HighlightColor: {r: 0.85, g: 1, b: 0.9, a: 1}
+  TextureSize: 32
+  StripeWidth: 5
+  TilesAcrossFill: 14
 --- !u!114 &1474066875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6107,11 +6111,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1474066870}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
-  m_Padding: {x: 0, y: 0, z: 0, w: 0}
-  m_Softness: {x: 0, y: 0}
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Mask
+  m_ShowMaskGraphic: 1
 --- !u!1 &1480098183
 GameObject:
   m_ObjectHideFlags: 0
@@ -8227,8 +8230,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 329.60004, y: -11.365}
-  m_SizeDelta: {x: 659.2001, y: 0}
+  m_AnchoredPosition: {x: 144, y: -11.365}
+  m_SizeDelta: {x: 288, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2133826179
 GameObject:
