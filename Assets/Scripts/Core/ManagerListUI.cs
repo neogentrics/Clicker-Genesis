@@ -11,6 +11,11 @@ namespace ClickerGenesis.Core
     /// level threshold AND an Ink cost (Adam, the first manager, is free once level-eligible) -
     /// this supersedes the earlier "auto-unlocks by level alone" design. Rows are built once in
     /// Awake (manager roster is static per book), same shape as ScribeListUI.
+    /// Row body simplified 2026-08-06 (user's explicit correction, relayed from a parallel
+    /// session): no flavor text - just the manager's actual active bonus/perk, as a list of lines
+    /// so a future perk source (a Grace Skill Tree node beyond the global manager-bonus boost
+    /// already handled here, or the not-yet-built submanager system) can append its own line
+    /// without restructuring Refresh().
     /// </summary>
     public class ManagerListUI : MonoBehaviour
     {
@@ -99,6 +104,10 @@ namespace ClickerGenesis.Core
             if (Controller == null || Controller.Scribes == null) return;
             var scribes = Controller.Scribes;
             int level = Controller.EffectiveManagerLevel;
+            // Overseer's Wisdom (Grace Skill Tree) boosts every manager's output bonus - the row
+            // must show the real effective total, not just the manager's own base percentage, or
+            // the number here silently drifts from what GetTierInkPerSecond actually pays out.
+            double skillBonusBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerBonusBoost);
 
             foreach (var row in rows)
             {
@@ -110,17 +119,28 @@ namespace ClickerGenesis.Core
                 bool levelEligible = scribes.IsManagerLevelEligible(row.TierIndex, level);
                 // A manager tied to a scribe tier the player hasn't unlocked yet (verse progress)
                 // must stay locked even if the level threshold is already met - fixes a real bug
-                // where Noah could be bought before Ark's Manifest itself was unlocked.
-                bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
+                // where Noah could be bought before Ark's Manifest itself was unlocked. Genesis-
+                // specific gating (not the active book's cursor) - see
+                // GameLoopController.GenesisNextVerseIndex for why (Phase F book-switching, 2026-08-06).
+                bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.GenesisNextVerseIndex);
 
-                string desc = string.IsNullOrEmpty(def.managerFlavorText)
-                    ? $"Manages {def.displayName}."
-                    : def.managerFlavorText;
+                // Row body is JUST the active bonus/perk now - no flavor text (2026-08-06, user's
+                // explicit correction). Built as separate lines so a future perk source (a
+                // per-manager skill node, or the not-yet-built submanager system) can append its
+                // own line here without restructuring this method. Nothing shown at all until the
+                // manager is actually active (bought AND has a scribe of its tier to manage) -
+                // CostText below already explains why it isn't yet.
                 if (active)
-                    desc += $"\n<b><color=#2E7D46>Active - +{def.managerBonusMultiplier * 100:F0}% {def.displayName} output.</color></b>";
-                else if (unlocked)
-                    desc += $"\n<color=#2E7D46>Unlocked - owns no {def.displayName} yet to manage.</color>";
-                row.DescText.text = desc;
+                {
+                    string desc = $"+{def.managerBonusMultiplier * 100:F0}% {def.displayName} output";
+                    if (skillBonusBoost > 0)
+                        desc += $"\n<color=#2E7D46>+{skillBonusBoost * 100:F0}% from Overseer's Wisdom</color>";
+                    row.DescText.text = desc;
+                }
+                else
+                {
+                    row.DescText.text = "";
+                }
 
                 if (unlocked)
                 {

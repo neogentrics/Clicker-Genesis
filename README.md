@@ -11,7 +11,7 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 
 ## Status
 
-**Version 0.2.7** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
+**Version 0.2.15** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -21,25 +21,29 @@ This is an active work-in-progress being built in public as part of a developmen
 2. **Buy scribes** — passive Ink/sec generators, themed per book (Genesis: Reed Pen → Papyrus Scroll → Stone Tablet → Oil Lamp → Ark's Manifest → Covenant Seal → Jacob's Ladder → Joseph's Storehouse), each unlocking further as you progress through the book's verses.
 3. **Switch to the Buy Verse screen** and spend Ink to unlock the *next* verse in canonical order — reading it reveals the verse text and reference. Verses can also be bought in bulk per chapter at a 25% discount.
 4. **Level up** from XP earned on verse/chapter/book completion. Crossing a level threshold makes prestige available.
-5. **Prestige** (in progress) grants a permanent-upgrade currency and unlocks the next book, without ever re-locking scripture you've already unlocked.
+5. **Prestige** via the Grace Skill Tree — a free path (keeps everything, grants Grace only) or an opt-in reset (wipes Ink/Click Power/scribes/level for 2.5x the Grace, plus permanent post-reset bonuses). Grace buys permanent upgrades across 8 economy branches and a Book Progression branch that unlocks the next book — nothing already-unlocked (verses, ranks) is ever re-locked by either path.
+6. **Switch books** once unlocked (Books tab, appears after your first prestige) — each book keeps its own independent progress, so switching to a newly-unlocked book never touches what you've already read in an earlier one.
 
 ## Features implemented so far
 
 - Tap-to-earn Ink with a purchasable Click Power upgrade (smooth per-purchase growth + milestone multiplier breakpoints at 10/25/50/100 owned, shared with scribe scaling)
-- 8-tier Genesis scribe roster with named managers (Adam, Noah, Abraham, Jacob, Joseph) that grant passive output bonuses once a player-level threshold is reached
-- Full Genesis KJV text (50 chapters, 1,533 verses), sequential verse unlocking with a scrollable, referenced ("Genesis 1:1") verse list
-- Chapter bulk-buy ("Buy Next Chapter") with a documented 25% discount vs. buying verses individually
+- 8-tier Genesis scribe roster with named managers (Adam, Noah, Abraham, Jacob, Joseph) that grant passive output bonuses once a player-level threshold is reached, plus an auto-buy toggle with a spendable-Ink reserve floor
+- Full Genesis KJV text (50 chapters, 1,533 verses) plus all 38 remaining Old Testament books staged and switchable, sequential verse unlocking with a scrollable, referenced ("Genesis 1:1") verse list
+- Chapter bulk-buy ("Buy Next Chapter") with a documented 25% discount vs. buying verses individually, split into a free "Unlock Chapter" gate + a paid "Complete Chapter" bulk-buy
 - Bulk-buy multipliers (1x/5x/10x/20x, and up to 100x for Click Power) on both verse and click-power purchases
 - XP/leveling system driven entirely by content-completion (verse/chapter/book), not combat — feeding prestige eligibility
-- Multi-scene navigation (Main Menu → Clicker Screen ↔ Buy Verse Screen, Settings) with persistent cross-scene game state
+- **Prestige system**: a 105-node Grace Skill Tree (radial layout, 8 economy branches + a Book Progression outer ring) reached via a dedicated Skill Tree screen, gated behind a central "Core" hub node. Free prestige (Grace only, nothing lost) vs. opt-in Reset-Prestige (2.5x Grace, wipes numeric progress only, never unlocked verses/skill ranks) — resetting grants permanent stacking Ink/sec and book-completion-multiplier bonuses, plus raised post-reset XP rates
+- **Books tab**: switch your active book once unlocked via the Grace tree, enforcing "finish book N before starting book N+1" — each book tracks its own independent verse/chapter progress
+- **Stats screen** (Pause Menu): lifetime Ink earned/spent, Grace earned/spent, prestige counts, skills/managers bought, verses/chapters/books completed
+- Multi-scene navigation (Main Menu → Clicker Screen ↔ Buy Verse Screen ↔ Skill Tree, Settings) with persistent cross-scene game state
 - Working sound toggle (PlayerPrefs-persisted)
 - Parchment/ink/gold "warm, legible, mobile-fast" base art direction, with a reserved stained-glass accent style for reward moments (not yet built)
-- Every screen (Main Menu, Clicker, Buy Verse, Settings) re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
-- Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus — now with a player-facing on/off toggle and a spendable-Ink reserve floor, plus a "Max" bulk-buy tier alongside the existing 1x/5x/10x/20x/100x multipliers
+- Every screen re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
+- Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus, and their tab row now shows only their name and actual active bonus (no flavor text)
 - Run-in-background toggle (Settings) so idle Ink income keeps ticking while the window is unfocused
 - Shared passive "progress multiplier": every 5 verses bought adds +0.1 to a multiplier applied across all scribe output, and it doubles outright on every chapter completed
-- Real hover/press visual feedback on every button in the game (not just a cosmetic tweak — previously the default Unity tint was too subtle to register as feedback at all)
-- Managers are now correctly locked until their own scribe tier is unlocked by verse progress, not just by player level
+- Real hover/press visual feedback on every button in the game, plus tooltips throughout
+- Managers are correctly locked until their own scribe tier is unlocked by verse progress, not just by player level — and that gating stays keyed to Genesis' progress specifically, so switching to a different active book never re-locks already-unlocked scribes/managers
 
 ## Tech stack
 
@@ -56,13 +60,13 @@ Assets/
   Scripts/
     Core/          GameLoopController (persistent singleton), screen UI controllers, scene nav
     Economy/        Ink wallet, scribe system, milestone curve
-    Progression/     XP/leveling
-    Data/           Verse database, pricing config
-  Config/           ScriptableObject assets (XpConfig, GenesisScribes, pricing curves)
+    Progression/     XP/leveling, Prestige/Grace Skill Tree system
+    Data/           Verse database, pricing config, per-book progress, canonical book order
+  Config/           ScriptableObject assets (XpConfig, GenesisScribes, pricing curves, Grace Skill Tree)
   Resources/
     Bible/           Canonical KJV outline (all 66 books, chapter/verse counts)
-    Verses/          Loaded verse text by book (Genesis KJV currently)
-  Scenes/           MainMenu, ClickerScreen, BuyVerseScreen, SettingsScreen, CoreLoopTest (dev/smoke-test)
+    Verses/          Loaded verse text by book (all 39 Old Testament books staged)
+  Scenes/           MainMenu, ClickerScreen, BuyVerseScreen, PrestigeScreen, SettingsScreen, CoreLoopTest (dev/smoke-test)
 ```
 
 ## Getting started
@@ -91,7 +95,8 @@ Full tracker (kept in sync, includes fix descriptions and root causes): see the 
 - Real narrative-accurate scribe/manager unlock thresholds beyond the current placeholder mechanism-testing values
 - A properly licensed serif font before any commercial release (Georgia is Windows-system-licensed, fine for prototyping only)
 - NIV/Amplified translations (on hold pending licensing review)
-- Prestige flow itself (currently a locked/stub button, gating logic works, the actual reward flow doesn't exist yet)
+- Real audio (volume slider, SFX/BGM, verse narration) — not started
+- Save/load, Psalms placement, and font licensing are the main blockers before any release build
 
 ## Guiding principle
 

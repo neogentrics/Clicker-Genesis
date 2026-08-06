@@ -144,7 +144,9 @@ namespace ClickerGenesis.Core
             {
                 var def = scribes.GetDefinition(i);
                 var row = rows[i];
-                bool unlocked = scribes.IsUnlocked(i, Controller.NextVerseIndex);
+                // Genesis-specific gating (not the active book's cursor) - see
+                // GameLoopController.GenesisNextVerseIndex for why (Phase F book-switching, 2026-08-06).
+                bool unlocked = scribes.IsUnlocked(i, Controller.GenesisNextVerseIndex);
 
                 if (!unlocked)
                 {

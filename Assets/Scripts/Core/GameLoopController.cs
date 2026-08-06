@@ -56,8 +56,12 @@ namespace ClickerGenesis.Core
         /// whichever book is currently active (2026-08-06 design decision) - the scribe roster
         /// (Reed Pen -> Joseph's Storehouse) is Genesis-only content per its theming; if this read
         /// the active book's cursor instead, switching to a fresh book would make already-unlocked
-        /// scribes look locked again the instant that book's own cursor starts at 0.</summary>
-        private int GenesisNextVerseIndex =>
+        /// scribes look locked again the instant that book's own cursor starts at 0. Public so
+        /// ScribeListUI/ManagerListUI can gate their own display the same way instead of reading
+        /// the (now book-relative, post-Phase-F) NextVerseIndex directly - fixes a real latent bug
+        /// where switching away from Genesis would make the Scribes/Managers tabs read the new
+        /// active book's fresh cursor and show already-unlocked scribes as locked again.</summary>
+        public int GenesisNextVerseIndex =>
             bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.NextVerseIndex : 0;
 
         public VerseDatabase Verses => ActiveBook?.Database;
