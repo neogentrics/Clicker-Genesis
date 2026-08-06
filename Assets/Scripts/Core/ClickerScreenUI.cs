@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,6 +56,16 @@ namespace ClickerGenesis.Core
         public Button AutoBuyReserveButton;
         public TMP_Text AutoBuyReserveButtonLabel;
 
+        [Header("Permanent upgrades panel (2026-08-06) - right of the Tap bottle, lists every owned skill-tree node")]
+        public TMP_Text PermanentUpgradesLabel;
+
+        // Live click-rate window (2026-08-06, user's ask: "measure it by the speed of the click...
+        // let it go back down to whatever the passive is should they stop clicking"). Cosmetic
+        // display only - actual Ink awarded per tap is still exactly EffectiveTapAmount via
+        // TapForInk(), this queue never touches the economy.
+        private readonly Queue<float> recentTapTimes = new Queue<float>();
+        private const float TapWindowSeconds = 2f;
+
         private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
         private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
 
@@ -107,8 +119,30 @@ namespace ClickerGenesis.Core
         private void HandleTap()
         {
             Controller?.TapForInk();
+            recentTapTimes.Enqueue(Time.unscaledTime);
             if (TapButtonRect != null) StartCoroutine(PulseTapButton());
             if (FloatingTextTemplate != null) SpawnFloatingText();
+        }
+
+        /// <summary>Recomputes and redraws the live Clicking Power figure every frame - trimming
+        /// the tap window here (not just in Refresh(), which only runs on OnStateChanged) is what
+        /// makes it decay smoothly back to the passive rate a couple seconds after the player stops
+        /// tapping, rather than getting stuck at whatever it last showed.</summary>
+        private void Update()
+        {
+            if (Controller == null || ClickingPowerLabel == null) return;
+
+            while (recentTapTimes.Count > 0 && Time.unscaledTime - recentTapTimes.Peek() > TapWindowSeconds)
+                recentTapTimes.Dequeue();
+
+            double passiveRate = Controller.EffectiveInkPerSecond;
+            double displayRate = passiveRate;
+            if (recentTapTimes.Count > 0)
+            {
+                float clicksPerSecond = recentTapTimes.Count / TapWindowSeconds;
+                displayRate = passiveRate + clicksPerSecond * Controller.EffectiveTapAmount;
+            }
+            ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(displayRate)} Ink/s";
         }
 
         private IEnumerator PulseTapButton()
@@ -186,8 +220,24 @@ namespace ClickerGenesis.Core
             if (Controller == null || Controller.Wallet == null || Controller.Levels == null) return;
 
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
-            if (ClickingPowerLabel != null && Controller.Scribes != null)
-                ClickingPowerLabel.text = $"Clicking Power\n{NumberFormatter.Format(Controller.EffectiveInkPerSecond)} Ink/s";
+            // ClickingPowerLabel is now driven every frame by Update() (live tap-rate meter,
+            // 2026-08-06) instead of here - writing it in both places would race/flicker.
+
+            if (PermanentUpgradesLabel != null && Controller.Skills != null)
+            {
+                var purchased = Controller.Skills.GetAllPurchased();
+                if (purchased.Count == 0)
+                {
+                    PermanentUpgradesLabel.text = "No permanent upgrades yet — spend Grace on the Skill Tree.";
+                }
+                else
+                {
+                    var sb = new StringBuilder();
+                    foreach (var (node, rank) in purchased)
+                        sb.Append(node.displayName).Append(" (").Append(rank).Append('/').Append(node.maxRank).Append(")\n");
+                    PermanentUpgradesLabel.text = sb.ToString();
+                }
+            }
 
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";

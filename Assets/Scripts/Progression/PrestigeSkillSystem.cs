@@ -94,5 +94,32 @@ namespace ClickerGenesis.Progression
                     total += GetRank(node.id) * node.effectPerRank;
             return total;
         }
+
+        /// <summary>How many distinct nodes have at least one rank bought - the Stats screen's
+        /// "skills bought" figure (2026-08-06). Counts nodes, not total ranks, so a 5-rank node
+        /// bought to rank 3 still counts once, not three times.</summary>
+        public int PurchasedNodeCount()
+        {
+            if (config == null) return 0;
+            int count = 0;
+            foreach (var node in config.nodes)
+                if (GetRank(node.id) > 0) count++;
+            return count;
+        }
+
+        /// <summary>Every node with at least one rank bought, in config order - feeds the
+        /// permanent-upgrades panel on ClickerScreen (2026-08-06), which lists what a player has
+        /// actually unlocked instead of cramming that text into the Scribes/Managers rows.</summary>
+        public List<(PrestigeSkillNode node, int rank)> GetAllPurchased()
+        {
+            var result = new List<(PrestigeSkillNode, int)>();
+            if (config == null) return result;
+            foreach (var node in config.nodes)
+            {
+                int rank = GetRank(node.id);
+                if (rank > 0) result.Add((node, rank));
+            }
+            return result;
+        }
     }
 }

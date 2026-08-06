@@ -20,6 +20,12 @@ namespace ClickerGenesis.Economy
         /// spec on the Notion Progression subpage.</summary>
         public double LifetimeEarned { get; private set; }
 
+        /// <summary>Total Ink ever spent this run (verses, chapters, scribes, Click Power) -
+        /// tracked for the Stats screen (2026-08-06). Never decreases, and isn't reset by
+        /// ResetBalance() - a Reset-Prestige wipes the spendable balance but the lifetime spend
+        /// figure is a historical record, same reasoning as LifetimeEarned above.</summary>
+        public double TotalSpent { get; private set; }
+
         public event Action<double> OnBalanceChanged;
 
         public InkWallet(double startingBalance = 0)
@@ -45,6 +51,7 @@ namespace ClickerGenesis.Economy
         {
             if (cost < 0 || !CanAfford(cost)) return false;
             balance -= cost;
+            TotalSpent += cost;
             OnBalanceChanged?.Invoke(balance);
             return true;
         }

@@ -56,6 +56,16 @@ namespace ClickerGenesis.Economy
 
         public bool IsManagerUnlocked(int tierIndex) => managerUnlocked[tierIndex];
 
+        /// <summary>How many managers have been bought across every tier - for the Stats screen
+        /// (2026-08-06).</summary>
+        public int UnlockedManagerCount()
+        {
+            int count = 0;
+            for (int i = 0; i < managerUnlocked.Length; i++)
+                if (managerUnlocked[i]) count++;
+            return count;
+        }
+
         /// <summary>Whether the level threshold has been reached, independent of whether the
         /// manager has actually been bought yet - REVISED 2026-08-04, managers require both the
         /// level AND an Ink purchase, not level alone.</summary>
