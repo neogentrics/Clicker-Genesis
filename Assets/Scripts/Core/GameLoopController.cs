@@ -64,6 +64,13 @@ namespace ClickerGenesis.Core
         public int GenesisNextVerseIndex =>
             bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.NextVerseIndex : 0;
 
+        /// <summary>Genesis' own VerseDatabase specifically, independent of whichever book is
+        /// currently active - lets UI convert a Genesis-relative unlockAtVerseIndex (scribes,
+        /// managers, submanagers) into a real "Genesis X:Y" reference for locked-state text
+        /// (2026-08-06, submanager system).</summary>
+        public VerseDatabase GenesisVerseDatabase =>
+            bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.Database : null;
+
         public VerseDatabase Verses => ActiveBook?.Database;
 
         /// <summary>Index (within the ACTIVE book) of the next verse that has not yet been
@@ -426,6 +433,21 @@ namespace ClickerGenesis.Core
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
 
             Scribes.UnlockManager(tierIndex);
+            OnStateChanged?.Invoke();
+            return true;
+        }
+
+        /// <summary>Hires a submanager (2026-08-06) - gated on the character's own real
+        /// first-mention verse (GenesisNextVerseIndex, same Genesis-specific reasoning as every
+        /// other scribe/manager gate) rather than the active book's cursor.</summary>
+        public bool BuySubmanager(int tierIndex, int subIndex)
+        {
+            if (Scribes == null || !Scribes.CanBuySubmanager(tierIndex, subIndex, GenesisNextVerseIndex, EffectiveManagerLevel)) return false;
+
+            double cost = Scribes.GetSubmanagerDefinition(tierIndex, subIndex).unlockCost;
+            if (cost > 0 && !Wallet.TrySpend(cost)) return false;
+
+            Scribes.BuySubmanager(tierIndex, subIndex);
             OnStateChanged?.Invoke();
             return true;
         }

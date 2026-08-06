@@ -164,16 +164,17 @@ namespace ClickerGenesis.Core
             if (Controller != null) Controller.OnStateChanged -= Refresh;
         }
 
+        /// <summary>No longer writes a transient "Prestiged! +37 Grace..." message here
+        /// (2026-08-06, user's explicit correction: it crammed awkwardly into the same area as the
+        /// idle "Hover a skill..." prompt and never went away since nothing ever cleared it).
+        /// StatusLabel is now entirely owned by Refresh() below, which drives a persistent
+        /// "already prestiged" badge instead - the player doesn't need a one-time toast telling
+        /// them what just happened when the Grace counter and the tree unlocking around them
+        /// already show it. The button is disabled while ineligible, so PerformPrestige returning
+        /// false here isn't reachable through normal play.</summary>
         private void HandlePrestige(bool withReset)
         {
-            double grace = withReset ? Controller.PrestigeGracePreviewWithReset : Controller.PrestigeGracePreview;
-            bool ok = Controller.PerformPrestige(withReset);
-            if (StatusLabel != null)
-                StatusLabel.text = ok
-                    ? (withReset
-                        ? $"Prestiged with reset! +{NumberFormatter.FormatWhole(grace)} Grace. Ink and upgrade levels reset - every unlocked verse still stays."
-                        : $"Prestiged! +{NumberFormatter.FormatWhole(grace)} Grace. Ink, upgrades, and every unlocked verse stay.")
-                    : "Not eligible to prestige yet.";
+            Controller.PerformPrestige(withReset);
         }
 
         private void BuildTree()
@@ -252,10 +253,18 @@ namespace ClickerGenesis.Core
                 float bookRingRadius = economyMaxRadius + 120f;
                 Color bookColor = BranchColors[BranchColors.Length - 1];
 
+                // Half-spoke phase offset (2026-08-06 fix) - without this, the ring's first node
+                // (Exodus) landed at angle 0, exactly along the Ink Flow spoke's own radial line,
+                // so the Core->Exodus connector visually overlapped Ink Flow's entire spoke and
+                // read as "Ink Flow unlocks Exodus" (real user report). Offsetting by half the
+                // spoke spacing (22.5 degrees for 8 economy branches) keeps every book node's
+                // radial line clear of every economy spoke's line.
+                float phaseOffset = economyBranches.Count > 0 ? (360f / economyBranches.Count) / 2f : 0f;
+
                 for (int i = 0; i < bookNodes.Count; i++)
                 {
                     var node = bookNodes[i];
-                    float angle = (360f / bookNodes.Count) * i;
+                    float angle = (360f / bookNodes.Count) * i + phaseOffset;
                     Vector2 pos = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * bookRingRadius;
                     positions[node.id] = pos;
                     CreateNodeVisual(node, pos, bookColor);
@@ -443,6 +452,18 @@ namespace ClickerGenesis.Core
 
             if (GraceLabel != null)
                 GraceLabel.text = $"Grace: {NumberFormatter.FormatWhole(Controller.Prestige.Grace)}";
+
+            // Persistent "already prestiged" badge (2026-08-06 restyle) - purple, bold, always
+            // current rather than a one-shot toast set only right after a click. Distinct color
+            // from every other text on this screen so it reads as its own status indicator, not
+            // another description line.
+            if (StatusLabel != null)
+            {
+                int totalPrestiges = Controller.Prestige.FreePrestigeCount + Controller.Prestige.ResetPrestigeCount;
+                StatusLabel.text = totalPrestiges > 0
+                    ? $"<b><color=#9B59B6>✦ You have prestiged before ({totalPrestiges}x)</color></b>"
+                    : "";
+            }
 
             var levels = Controller.Levels;
             if (PrestigeButton != null)

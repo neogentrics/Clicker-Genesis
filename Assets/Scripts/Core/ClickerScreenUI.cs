@@ -102,12 +102,19 @@ namespace ClickerGenesis.Core
             if (ScribesTabBackground != null) ScribesTabBackground.color = managers ? InactiveTabColor : ActiveTabColor;
             if (ManagersTabBackground != null) ManagersTabBackground.color = managers ? ActiveTabColor : InactiveTabColor;
 
-            // The bulk-buy cycle button only makes sense for Scribes (Managers has no bulk-buy of
-            // its own), but the header caption itself stays populated on both tabs ("Managers"
-            // instead of a blank string) so the header area doesn't read as a big empty gap -
-            // previously this was a fixed "Scribes" title that never updated at all.
-            if (ScribesHeaderLabel != null) ScribesHeaderLabel.text = managers ? "Managers" : "Multiplier";
+            // 2026-08-06 user correction: the "Managers" title, Auto-Buy toggle, and Reserve button
+            // don't apply to the Managers tab at all (auto-buy/reserve are a Scribes-only bulk-buy
+            // concept) and were previously left visible there for no reason, eating space that
+            // could hold future Managers-tab-specific controls. Grace stays visible on both tabs -
+            // it's the one thing relevant regardless of which tab is open.
+            if (ScribesHeaderLabel != null)
+            {
+                ScribesHeaderLabel.gameObject.SetActive(!managers);
+                ScribesHeaderLabel.text = "Multiplier";
+            }
             if (ScribeMultiplierButtonRoot != null) ScribeMultiplierButtonRoot.SetActive(!managers);
+            if (AutoBuyToggleButton != null) AutoBuyToggleButton.gameObject.SetActive(!managers);
+            if (AutoBuyReserveButton != null) AutoBuyReserveButton.gameObject.SetActive(!managers);
         }
 
         private void OnDestroy()

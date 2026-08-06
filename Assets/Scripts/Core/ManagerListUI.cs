@@ -28,10 +28,23 @@ namespace ClickerGenesis.Core
             public Button BuyButton;
         }
 
+        /// <summary>Submanager sub-row (2026-08-06) - reuses the same RowTemplate as manager rows,
+        /// indented under its parent manager, showing the character's own bonus/perk.</summary>
+        private class SubRow
+        {
+            public int TierIndex;
+            public int SubIndex;
+            public TMP_Text NameText;
+            public TMP_Text DescText;
+            public TMP_Text CostText;
+            public Button BuyButton;
+        }
+
         public Transform Content;
         public GameObject RowTemplate;
 
         private readonly List<Row> rows = new List<Row>();
+        private readonly List<SubRow> subRows = new List<SubRow>();
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
@@ -94,9 +107,57 @@ namespace ClickerGenesis.Core
                     CostText = rowGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
                     BuyButton = rowGo.transform.Find("BuyButton").GetComponent<Button>()
                 };
+                // "Unlock X first" is longer than a plain cost like "500 Ink" - auto-size so long
+                // locked-state text shrinks to fit instead of overflowing the button (2026-08-06,
+                // same TMP auto-size fix used for the Skill Tree's "Unlock Chapter" button, bug #48).
+                EnableCostTextAutoSize(row.CostText);
                 row.BuyButton.onClick.AddListener(() => Controller.BuyManager(tierIndex));
                 rows.Add(row);
+
+                for (int s = 0; s < scribes.SubmanagerCount(i); s++)
+                {
+                    int subIndex = s;
+                    var subDef = scribes.GetSubmanagerDefinition(tierIndex, subIndex);
+
+                    var subGo = Instantiate(RowTemplate, Content);
+                    subGo.SetActive(true);
+                    subGo.name = $"SubmanagerRow_{subDef.id}";
+
+                    var subRow = new SubRow
+                    {
+                        TierIndex = tierIndex,
+                        SubIndex = subIndex,
+                        NameText = subGo.transform.Find("Name").GetComponent<TMP_Text>(),
+                        DescText = subGo.transform.Find("Desc").GetComponent<TMP_Text>(),
+                        CostText = subGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
+                        BuyButton = subGo.transform.Find("BuyButton").GetComponent<Button>()
+                    };
+                    // Smaller/indented so it visually reads as belonging to the manager row above it.
+                    subRow.NameText.fontSize *= 0.85f;
+                    EnableCostTextAutoSize(subRow.CostText);
+                    subRow.BuyButton.onClick.AddListener(() => Controller.BuySubmanager(tierIndex, subIndex));
+                    subRows.Add(subRow);
+                }
             }
+        }
+
+        private static void EnableCostTextAutoSize(TMP_Text text)
+        {
+            if (text == null) return;
+            text.enableAutoSizing = true;
+            text.fontSizeMin = Mathf.Min(12f, text.fontSize * 0.4f);
+            text.fontSizeMax = text.fontSize;
+        }
+
+        /// <summary>Converts a Genesis-relative verse index into a human "Genesis X:Y" reference
+        /// for locked-submanager text (2026-08-06) - falls back to a plain index if Genesis' own
+        /// VerseDatabase isn't loaded yet for any reason.</summary>
+        private string DescribeGenesisVerse(int verseIndex)
+        {
+            var db = Controller.GenesisVerseDatabase;
+            if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
+            var v = db.GetVerse(verseIndex);
+            return $"Genesis {v.Reference}";
         }
 
         private void Refresh()
@@ -149,7 +210,9 @@ namespace ClickerGenesis.Core
                 }
                 else if (!scribeTierUnlocked)
                 {
-                    row.CostText.text = $"Unlocks {def.displayName} first";
+                    // "Unlock" not "Unlocks" (2026-08-06, user correction) - reads as an instruction
+                    // to the player, not a description of the button's own action.
+                    row.CostText.text = $"Unlock {def.displayName} first";
                     row.BuyButton.interactable = false;
                 }
                 else if (!levelEligible)
@@ -163,6 +226,45 @@ namespace ClickerGenesis.Core
                         ? "Free"
                         : $"{NumberFormatter.Format(def.managerUnlockCost)} Ink";
                     row.BuyButton.interactable = def.managerUnlockCost <= 0 || Controller.Wallet.Balance >= def.managerUnlockCost;
+                }
+            }
+
+            foreach (var sub in subRows)
+            {
+                var subDef = scribes.GetSubmanagerDefinition(sub.TierIndex, sub.SubIndex);
+                var parentDef = scribes.GetDefinition(sub.TierIndex);
+                bool owned = scribes.IsSubmanagerOwned(sub.TierIndex, sub.SubIndex);
+                bool managerActive = scribes.IsManagerActive(sub.TierIndex, level);
+                bool verseReached = Controller.GenesisNextVerseIndex >= subDef.unlockAtVerseIndex;
+
+                // Plain ASCII prefix, not "↳" - the project's Georgia TMP font asset doesn't
+                // include that glyph and rendered it as a tofu box (2026-08-06, caught live).
+                sub.NameText.text = $"- {subDef.displayName}";
+
+                string perkLabel = subDef.perkFlavor == "cost-cutter"
+                    ? $"-{subDef.perkAmount * 100:F0}% {parentDef.displayName} cost"
+                    : $"+{subDef.perkAmount * 100:F0}% {parentDef.managerName}'s bonus";
+                sub.DescText.text = owned ? perkLabel : "";
+
+                if (owned)
+                {
+                    sub.CostText.text = "Hired";
+                    sub.BuyButton.interactable = false;
+                }
+                else if (!scribes.IsManagerUnlocked(sub.TierIndex))
+                {
+                    sub.CostText.text = $"Requires {parentDef.managerName}";
+                    sub.BuyButton.interactable = false;
+                }
+                else if (!verseReached)
+                {
+                    sub.CostText.text = $"Unlocks at {DescribeGenesisVerse(subDef.unlockAtVerseIndex)}";
+                    sub.BuyButton.interactable = false;
+                }
+                else
+                {
+                    sub.CostText.text = subDef.unlockCost <= 0 ? "Free" : $"{NumberFormatter.Format(subDef.unlockCost)} Ink";
+                    sub.BuyButton.interactable = subDef.unlockCost <= 0 || Controller.Wallet.Balance >= subDef.unlockCost;
                 }
             }
         }

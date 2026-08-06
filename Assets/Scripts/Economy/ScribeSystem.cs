@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ClickerGenesis.Economy
 {
@@ -19,12 +20,18 @@ namespace ClickerGenesis.Economy
         private readonly ScribeSetConfig config;
         private readonly int[] owned;
         private readonly bool[] managerUnlocked;
+        /// <summary>Owned submanagers per tier, indexed [tierIndex][submanagerIndex] - most tiers
+        /// have zero submanagers so this stays a small sparse array of bool arrays (2026-08-06).</summary>
+        private readonly bool[][] submanagerOwned;
 
         public ScribeSystem(ScribeSetConfig config)
         {
             this.config = config;
             owned = new int[config.tiers.Count];
             managerUnlocked = new bool[config.tiers.Count];
+            submanagerOwned = new bool[config.tiers.Count][];
+            for (int i = 0; i < config.tiers.Count; i++)
+                submanagerOwned[i] = new bool[config.tiers[i].submanagers?.Count ?? 0];
         }
 
         public int TierCount => config.tiers.Count;
@@ -42,7 +49,59 @@ namespace ClickerGenesis.Economy
         public double GetNextCost(int tierIndex)
         {
             var def = config.tiers[tierIndex];
-            return def.baseCost * Math.Pow(def.costGrowthRate, owned[tierIndex]);
+            double raw = def.baseCost * Math.Pow(def.costGrowthRate, owned[tierIndex]);
+            return raw * (1.0 - GetCostCutterDiscount(tierIndex));
+        }
+
+        /// <summary>Sum of every owned "cost-cutter" submanager's perkAmount on this tier, clamped
+        /// so stacking several can never make a purchase free or negative (2026-08-06).</summary>
+        private double GetCostCutterDiscount(int tierIndex)
+        {
+            var def = config.tiers[tierIndex];
+            if (def.submanagers == null) return 0;
+            double discount = 0;
+            for (int i = 0; i < def.submanagers.Count; i++)
+                if (submanagerOwned[tierIndex][i] && def.submanagers[i].perkFlavor == "cost-cutter")
+                    discount += def.submanagers[i].perkAmount;
+            return Math.Min(discount, 0.75);
+        }
+
+        /// <summary>Sum of every owned "loyalty-boost" submanager's perkAmount on this tier - added
+        /// on top of the tier's own managerBonusMultiplier in GetTierInkPerSecond (2026-08-06).</summary>
+        private double GetLoyaltyBoost(int tierIndex)
+        {
+            var def = config.tiers[tierIndex];
+            if (def.submanagers == null) return 0;
+            double boost = 0;
+            for (int i = 0; i < def.submanagers.Count; i++)
+                if (submanagerOwned[tierIndex][i] && def.submanagers[i].perkFlavor == "loyalty-boost")
+                    boost += def.submanagers[i].perkAmount;
+            return boost;
+        }
+
+        public int SubmanagerCount(int tierIndex) => config.tiers[tierIndex].submanagers?.Count ?? 0;
+
+        public SubmanagerDefinition GetSubmanagerDefinition(int tierIndex, int subIndex) =>
+            config.tiers[tierIndex].submanagers[subIndex];
+
+        public bool IsSubmanagerOwned(int tierIndex, int subIndex) => submanagerOwned[tierIndex][subIndex];
+
+        /// <summary>A submanager can only be hired once their own character's verse is reached AND
+        /// this tier's own manager is already active - a submanager assisting a manager who isn't
+        /// there yet doesn't make sense (2026-08-06).</summary>
+        public bool CanBuySubmanager(int tierIndex, int subIndex, int currentVerseIndex, int playerLevel)
+        {
+            if (submanagerOwned[tierIndex][subIndex]) return false;
+            if (!managerUnlocked[tierIndex]) return false;
+            var sub = config.tiers[tierIndex].submanagers[subIndex];
+            return currentVerseIndex >= sub.unlockAtVerseIndex;
+        }
+
+        /// <summary>Marks a submanager as hired. Caller is responsible for spending Ink first (same
+        /// pattern as Buy/UnlockManager).</summary>
+        public void BuySubmanager(int tierIndex, int subIndex)
+        {
+            submanagerOwned[tierIndex][subIndex] = true;
         }
 
         /// <summary>Whether this tier's manager is bought AND actively boosting output (also
@@ -115,7 +174,7 @@ namespace ClickerGenesis.Economy
             var def = config.tiers[tierIndex];
             double output = def.baseInkPerSecond * owned[tierIndex] * GetOwnedMilestoneMultiplier(tierIndex) * progressMultiplier;
             if (IsManagerActive(tierIndex, playerLevel))
-                output *= 1.0 + def.managerBonusMultiplier + managerBonusBoost;
+                output *= 1.0 + def.managerBonusMultiplier + managerBonusBoost + GetLoyaltyBoost(tierIndex);
             return output;
         }
 

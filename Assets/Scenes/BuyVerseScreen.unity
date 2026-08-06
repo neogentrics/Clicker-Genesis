@@ -1120,8 +1120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0.16862746, g: 0.1254902, b: 0.07450981, a: 1}
-  m_EffectDistance: {x: 1, y: -1}
+  m_EffectColor: {r: 0.08, g: 0.05, b: 0.03, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!222 &442785484
 CanvasRenderer:
@@ -1237,6 +1237,7 @@ GameObject:
   - component: {fileID: 450274332}
   - component: {fileID: 450274331}
   - component: {fileID: 450274335}
+  - component: {fileID: 450274336}
   m_Layer: 0
   m_Name: GoToClickerButton
   m_TagString: Untagged
@@ -1373,6 +1374,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: Back to the Tap screen
   PreferredDirection: 0
+--- !u!114 &450274336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450274329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &466245826
 GameObject:
   m_ObjectHideFlags: 0
@@ -2217,6 +2231,7 @@ GameObject:
   - component: {fileID: 775433037}
   - component: {fileID: 775433036}
   - component: {fileID: 775433035}
+  - component: {fileID: 775433039}
   m_Layer: 0
   m_Name: VerseRowTemplate
   m_TagString: Untagged
@@ -2347,6 +2362,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &775433039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775433033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &802863330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2855,6 +2883,7 @@ GameObject:
   - component: {fileID: 1192142309}
   - component: {fileID: 1192142311}
   - component: {fileID: 1192142312}
+  - component: {fileID: 1192142313}
   m_Layer: 0
   m_Name: BuyButton
   m_TagString: Untagged
@@ -2978,6 +3007,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: Buy the shown verse/chapter, or unlock a locked chapter
   PreferredDirection: 0
+--- !u!114 &1192142313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192142307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1229248647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4198,6 +4240,7 @@ GameObject:
   - component: {fileID: 1666760420}
   - component: {fileID: 1666760422}
   - component: {fileID: 1666760423}
+  - component: {fileID: 1666760424}
   m_Layer: 0
   m_Name: MultiplierButton
   m_TagString: Untagged
@@ -4321,6 +4364,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: Cycle bulk-buy quantity (Verses tab) or unlock the chapter (Chapters tab)
   PreferredDirection: 0
+--- !u!114 &1666760424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666760418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1680362665
 GameObject:
   m_ObjectHideFlags: 0
@@ -4484,6 +4540,7 @@ GameObject:
   - component: {fileID: 1695787938}
   - component: {fileID: 1695787939}
   - component: {fileID: 1695787940}
+  - component: {fileID: 1695787941}
   m_Layer: 0
   m_Name: VersesTabButton
   m_TagString: Untagged
@@ -4607,6 +4664,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: Browse and buy individual verses
   PreferredDirection: 0
+--- !u!114 &1695787941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695787935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1707304647
 GameObject:
   m_ObjectHideFlags: 0
@@ -4620,6 +4690,7 @@ GameObject:
   - component: {fileID: 1707304651}
   - component: {fileID: 1707304652}
   - component: {fileID: 1707304649}
+  - component: {fileID: 1707304653}
   m_Layer: 0
   m_Name: BooksTabButton
   m_TagString: Untagged
@@ -4743,6 +4814,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1707304653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707304647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1721908298
 GameObject:
   m_ObjectHideFlags: 0
@@ -5416,6 +5500,7 @@ GameObject:
   - component: {fileID: 1860464146}
   - component: {fileID: 1860464145}
   - component: {fileID: 1860464144}
+  - component: {fileID: 1860464148}
   m_Layer: 0
   m_Name: VerseRowTemplate
   m_TagString: Untagged
@@ -5546,6 +5631,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1860464148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860464142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1864715875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5559,6 +5657,7 @@ GameObject:
   - component: {fileID: 1864715879}
   - component: {fileID: 1864715878}
   - component: {fileID: 1864715877}
+  - component: {fileID: 1864715881}
   m_Layer: 0
   m_Name: VerseRowTemplate
   m_TagString: Untagged
@@ -5689,6 +5788,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1864715881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864715875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &1896250732
 GameObject:
   m_ObjectHideFlags: 0
@@ -6355,6 +6467,7 @@ GameObject:
   - component: {fileID: 2057982061}
   - component: {fileID: 2057982059}
   - component: {fileID: 2057982064}
+  - component: {fileID: 2057982065}
   m_Layer: 0
   m_Name: PauseButton
   m_TagString: Untagged
@@ -6491,6 +6604,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0227dccbd174742a1b7c5d91817fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.PauseButtonTrigger
+--- !u!114 &2057982065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057982057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1 &2103976191
 GameObject:
   m_ObjectHideFlags: 0
@@ -7046,6 +7172,7 @@ GameObject:
   - component: {fileID: 2139831159}
   - component: {fileID: 2139831162}
   - component: {fileID: 2139831163}
+  - component: {fileID: 2139831164}
   m_Layer: 0
   m_Name: ChaptersTabButton
   m_TagString: Untagged
@@ -7169,6 +7296,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: Browse chapters - unlock or complete them here
   PreferredDirection: 0
+--- !u!114 &2139831164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139831158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edad15980f819c444a805a60c1c8fff2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
+  HoverScale: 1.06
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -117,7 +117,11 @@ namespace ClickerGenesis.Core
                 };
 
                 row.NameText.text = def.displayName;
-                row.Icon.sprite = tierIndex == 1 ? ScrollIcon : (tierIndex == 4 ? JournalIcon : null);
+                // Ark's Manifest moved from tier index 4 to 5 in the 19-tier roster (2026-08-06,
+                // CharacterIndex sync) - "Papyrus Scroll" (the old ScrollIcon's tier) no longer
+                // exists at all, so that icon has no home in the new roster and is left unused
+                // rather than misassigned to an unrelated tier.
+                row.Icon.sprite = def.id == "arks_manifest" ? JournalIcon : null;
                 row.Icon.color = row.Icon.sprite != null
                     ? Color.white
                     : Color.Lerp(Hex("#7A5C2E"), Hex("#D4AF37"), tierIndex / (float)(scribes.TierCount - 1));

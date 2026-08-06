@@ -16,101 +16,362 @@ MonoBehaviour:
   tiers:
   - id: reed_pen
     displayName: Reed Pen
-    flavorText: "A simple reed pen \u2014 humble, but it's how every scribe starts."
+    flavorText: 
     baseCost: 10
     costGrowthRate: 1.15
     baseInkPerSecond: 0.5
-    unlockAtVerseIndex: 0
+    unlockAtVerseIndex: 25
     managerName: Adam
-    managerFlavorText: "First to name the animals \u2014 a natural at putting things
-      in order."
-    managerUnlockLevel: 2
-    managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
-  - id: papyrus_scroll
-    displayName: Papyrus Scroll
-    flavorText: Rolls of papyrus, ready for careful copying.
-    baseCost: 50
-    costGrowthRate: 1.15
-    baseInkPerSecond: 2
-    unlockAtVerseIndex: 1
-    managerName: 
     managerFlavorText: 
-    managerUnlockLevel: 0
+    managerUnlockLevel: 1
     managerBonusMultiplier: 0.25
     managerUnlockCost: 0
-  - id: stone_tablet
-    displayName: Stone Tablet
-    flavorText: Slower to inscribe, but built to last.
-    baseCost: 250
+    submanagers: []
+  - id: forbidden_fruit
+    displayName: Forbidden Fruit
+    flavorText: 
+    baseCost: 19
     costGrowthRate: 1.15
-    baseInkPerSecond: 8
-    unlockAtVerseIndex: 2
-    managerName: 
+    baseInkPerSecond: 0.8
+    unlockAtVerseIndex: 51
+    managerName: Eve
     managerFlavorText: 
-    managerUnlockLevel: 0
+    managerUnlockLevel: 3
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
-  - id: oil_lamp
-    displayName: Oil Lamp
-    flavorText: Lets the work continue after sundown.
-    baseCost: 1000
+    managerUnlockCost: 95
+    submanagers: []
+  - id: cains_city_wall
+    displayName: Cain's City Wall
+    flavorText: 
+    baseCost: 34
     costGrowthRate: 1.15
-    baseInkPerSecond: 25
-    unlockAtVerseIndex: 3
-    managerName: 
+    baseInkPerSecond: 1.28
+    unlockAtVerseIndex: 80
+    managerName: Cain
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
-  - id: arks_manifest
-    displayName: Ark's Manifest
-    flavorText: Noah's own record of everything that boarded the ark.
-    baseCost: 5000
-    costGrowthRate: 1.15
-    baseInkPerSecond: 80
-    unlockAtVerseIndex: 4
-    managerName: Noah
-    managerFlavorText: "Kept the most detailed manifest in scripture \u2014 nothing
-      got past him."
     managerUnlockLevel: 4
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 2500
-  - id: covenant_seal
-    displayName: Covenant Seal
-    flavorText: Marks a promise meant to last generations.
-    baseCost: 20000
+    managerUnlockCost: 170
+    submanagers: []
+  - id: shepherds_crook
+    displayName: Shepherd's Crook
+    flavorText: 
+    baseCost: 63
     costGrowthRate: 1.15
-    baseInkPerSecond: 250
-    unlockAtVerseIndex: 5
-    managerName: Abraham
-    managerFlavorText: "The covenant is his defining moment \u2014 trusted to keep
-      his word."
+    baseInkPerSecond: 2.05
+    unlockAtVerseIndex: 81
+    managerName: Abel
+    managerFlavorText: 
     managerUnlockLevel: 6
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 10000
+    managerUnlockCost: 315
+    submanagers:
+    - id: seth
+      displayName: Seth
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 104
+      unlockCost: 47
+  - id: enochs_walking_staff
+    displayName: Enoch's Walking Staff
+    flavorText: 
+    baseCost: 117
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.28
+    unlockAtVerseIndex: 126
+    managerName: Enoch
+    managerFlavorText: 
+    managerUnlockLevel: 7
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 585
+    submanagers:
+    - id: methuselah
+      displayName: Methuselah
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 130
+      unlockCost: 88
+  - id: arks_manifest
+    displayName: Ark's Manifest
+    flavorText: 
+    baseCost: 217
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5.24
+    unlockAtVerseIndex: 133
+    managerName: Noah
+    managerFlavorText: 
+    managerUnlockLevel: 9
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1085
+    submanagers:
+    - id: lamech_noahfather
+      displayName: Lamech
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 133
+      unlockCost: 163
+    - id: ham
+      displayName: Ham
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 227
+      unlockCost: 163
+    - id: japheth
+      displayName: Japheth
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 228
+      unlockCost: 163
+  - id: shems_tent
+    displayName: Shem's Tent
+    flavorText: 
+    baseCost: 401
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.39
+    unlockAtVerseIndex: 228
+    managerName: Shem
+    managerFlavorText: 
+    managerUnlockLevel: 11
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2005
+    submanagers: []
+  - id: mighty_hunters_bow
+    displayName: Mighty Hunter's Bow
+    flavorText: 
+    baseCost: 743
+    costGrowthRate: 1.15
+    baseInkPerSecond: 13.42
+    unlockAtVerseIndex: 242
+    managerName: Nimrod
+    managerFlavorText: 
+    managerUnlockLevel: 12
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3710
+    submanagers:
+    - id: peleg
+      displayName: Peleg
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 259
+      unlockCost: 557
+  - id: covenant_seal
+    displayName: Covenant Seal
+    flavorText: 
+    baseCost: 1374
+    costGrowthRate: 1.15
+    baseInkPerSecond: 21.47
+    unlockAtVerseIndex: 299
+    managerName: Abraham
+    managerFlavorText: 
+    managerUnlockLevel: 14
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 6860
+    submanagers:
+    - id: hagar
+      displayName: Hagar
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 382
+      unlockCost: 1029
+    - id: ishmael
+      displayName: Ishmael
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 396
+      unlockCost: 1029
+    - id: melchizedek
+      displayName: Melchizedek
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 354
+      unlockCost: 1029
+    - id: eliezer
+      displayName: Eliezer
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 362
+      unlockCost: 1029
+  - id: sarahs_kneading_bowl
+    displayName: Sarah's Kneading Bowl
+    flavorText: 
+    baseCost: 2542
+    costGrowthRate: 1.15
+    baseInkPerSecond: 34.36
+    unlockAtVerseIndex: 412
+    managerName: Sarah
+    managerFlavorText: 
+    managerUnlockLevel: 16
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12690
+    submanagers: []
+  - id: pillar_of_salt
+    displayName: Pillar of Salt
+    flavorText: 
+    baseCost: 4702
+    costGrowthRate: 1.15
+    baseInkPerSecond: 54.98
+    unlockAtVerseIndex: 323
+    managerName: Lot
+    managerFlavorText: 
+    managerUnlockLevel: 17
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 23480
+    submanagers: []
+  - id: isaacs_well
+    displayName: Isaac's Well
+    flavorText: 
+    baseCost: 8699
+    costGrowthRate: 1.15
+    baseInkPerSecond: 87.96
+    unlockAtVerseIndex: 514
+    managerName: Isaac
+    managerFlavorText: 
+    managerUnlockLevel: 19
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 43435
+    submanagers:
+    - id: rebekah
+      displayName: Rebekah
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 592
+      unlockCost: 6515
   - id: jacobs_ladder
     displayName: Jacob's Ladder
-    flavorText: A stairway glimpsed in a dream at Bethel.
-    baseCost: 100000
+    flavorText: 
+    baseCost: 16093
     costGrowthRate: 1.15
-    baseInkPerSecond: 800
-    unlockAtVerseIndex: 6
+    baseInkPerSecond: 140.74
+    unlockAtVerseIndex: 684
     managerName: Jacob
-    managerFlavorText: "Dreamed it himself \u2014 he knows exactly where it leads."
-    managerUnlockLevel: 8
+    managerFlavorText: 
+    managerUnlockLevel: 20
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 50000
+    managerUnlockCost: 80360
+    submanagers:
+    - id: laban
+      displayName: Laban
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 796
+      unlockCost: 12054
+  - id: esaus_red_pottage
+    displayName: Esau's Red Pottage
+    flavorText: 
+    baseCost: 29773
+    costGrowthRate: 1.15
+    baseInkPerSecond: 225.18
+    unlockAtVerseIndex: 683
+    managerName: Esau
+    managerFlavorText: 
+    managerUnlockLevel: 22
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 148665
+    submanagers: []
+  - id: rachels_well
+    displayName: Rachel's Well
+    flavorText: 
+    baseCost: 55079
+    costGrowthRate: 1.15
+    baseInkPerSecond: 360.29
+    unlockAtVerseIndex: 804
+    managerName: Rachel
+    managerFlavorText: 
+    managerUnlockLevel: 24
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 275030
+    submanagers:
+    - id: bilhah
+      displayName: Bilhah
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 833
+      unlockCost: 41255
+  - id: leahs_mandrakes
+    displayName: Leah's Mandrakes
+    flavorText: 
+    baseCost: 101897
+    costGrowthRate: 1.15
+    baseInkPerSecond: 576.46
+    unlockAtVerseIndex: 812
+    managerName: Leah
+    managerFlavorText: 
+    managerUnlockLevel: 25
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 508800
+    submanagers:
+    - id: zilpah
+      displayName: Zilpah
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 839
+      unlockCost: 76320
+    - id: dinah
+      displayName: Dinah
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 981
+      unlockCost: 76320
   - id: josephs_storehouse
     displayName: Joseph's Storehouse
-    flavorText: Egypt's entire grain economy, organized under one roof.
-    baseCost: 500000
+    flavorText: 
+    baseCost: 188509
     costGrowthRate: 1.15
-    baseInkPerSecond: 2500
-    unlockAtVerseIndex: 7
+    baseInkPerSecond: 922.34
+    unlockAtVerseIndex: 1086
     managerName: Joseph
-    managerFlavorText: "Administered Egypt's whole grain economy during the famine
-      \u2014 nobody manages at this scale like he does."
-    managerUnlockLevel: 10
+    managerFlavorText: 
+    managerUnlockLevel: 27
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 250000
+    managerUnlockCost: 941280
+    submanagers:
+    - id: reuben
+      displayName: Reuben
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1104
+      unlockCost: 141192
+    - id: potiphar
+      displayName: Potiphar
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1150
+      unlockCost: 141192
+    - id: pharaoh_joseph
+      displayName: Pharaoh
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1196
+      unlockCost: 141192
+  - id: judahs_signet
+    displayName: Judah's Signet
+    flavorText: 
+    baseCost: 348742
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1475.77
+    unlockAtVerseIndex: 1109
+    managerName: Judah
+    managerFlavorText: 
+    managerUnlockLevel: 28
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1741370
+    submanagers:
+    - id: tamar
+      displayName: Tamar
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1120
+      unlockCost: 261206
+  - id: silver_cup
+    displayName: Silver Cup
+    flavorText: 
+    baseCost: 645172
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2361.19
+    unlockAtVerseIndex: 1027
+    managerName: Benjamin
+    managerFlavorText: 
+    managerUnlockLevel: 30
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3221535
+    submanagers: []
