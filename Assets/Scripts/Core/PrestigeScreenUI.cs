@@ -60,6 +60,7 @@ namespace ClickerGenesis.Core
             public Image Icon;
             public TMP_Text NameLabel;
             public TMP_Text RankLabel;
+            public DescriptionBoxHover Hover;
         }
 
         /// <summary>One icon per branch (drawn white on top of the branch-colored circle) so nodes
@@ -135,6 +136,14 @@ namespace ClickerGenesis.Core
             if (Content == null) return;
             float newScale = Mathf.Clamp(Content.localScale.x + delta, MinZoom, MaxZoom);
             Content.localScale = new Vector3(newScale, newScale, 1f);
+        }
+
+        /// <summary>Mouse scroll-wheel zoom (2026-08-05, user's explicit ask) - same clamp/step as
+        /// the +/- buttons, just a faster path for a mouse-equipped desktop player.</summary>
+        private void Update()
+        {
+            float scroll = Input.mouseScrollDelta.y;
+            if (scroll != 0f) Zoom(scroll * ZoomStep);
         }
 
         private void OnDestroy()
@@ -274,7 +283,7 @@ namespace ClickerGenesis.Core
             var button = go.GetComponent<Button>();
             button.onClick.AddListener(() => ShowConfirmPurchase(node));
 
-            BuildTooltip(go, node);
+            var hover = BuildTooltip(go, node);
 
             nodeVisuals.Add(new NodeVisual
             {
@@ -284,18 +293,33 @@ namespace ClickerGenesis.Core
                 Icon = iconImgRef,
                 NameLabel = nameLabel,
                 RankLabel = rankLabel,
+                Hover = hover,
             });
         }
 
         /// <summary>Nodes use the fixed DescriptionBox instead of the floating TooltipOverlay used
         /// everywhere else (2026-08-05, user's idea) - with 105 small nodes packed into the tree,
         /// aiming a hover precisely enough for a floating tooltip was fiddly; a box that's always
-        /// in the same place reads the same regardless of node size or hover precision.</summary>
-        private void BuildTooltip(GameObject nodeGo, PrestigeSkillNode node)
+        /// in the same place reads the same regardless of node size or hover precision. Text is
+        /// set here at creation and then kept current every Refresh() via DescribeNode(node) below,
+        /// since the Grace cost changes as ranks are bought.</summary>
+        private DescriptionBoxHover BuildTooltip(GameObject nodeGo, PrestigeSkillNode node)
         {
             var hover = nodeGo.AddComponent<DescriptionBoxHover>();
             hover.Target = DescriptionLabel;
-            hover.Text = node.description;
+            hover.Text = DescribeNode(node);
+            return hover;
+        }
+
+        /// <summary>Description text PLUS its live Grace cost (2026-08-05, real bug fix - hovering
+        /// a node used to only say what it does, never what it costs). Shows "MAXED" once every
+        /// rank is bought instead of a cost that can never be paid again.</summary>
+        private string DescribeNode(PrestigeSkillNode node)
+        {
+            if (Controller?.Skills == null) return node.description;
+            if (Controller.Skills.IsMaxed(node)) return $"{node.description}\nMAXED";
+            double cost = Controller.Skills.GetNextCost(node);
+            return $"{node.description}\nCost: {NumberFormatter.FormatWhole(cost)} Grace";
         }
 
         /// <summary>Buying is no longer instant-on-click (2026-08-05, user's explicit ask) - shows
@@ -406,6 +430,8 @@ namespace ClickerGenesis.Core
                     string suffix = maxed ? " (Max)" : !unlocked ? " (Locked)" : "";
                     v.NameLabel.text = node.displayName + suffix;
                 }
+
+                if (v.Hover != null) v.Hover.Text = DescribeNode(node);
             }
         }
     }

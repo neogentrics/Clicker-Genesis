@@ -244,7 +244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -110}
+  m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 7000, y: 7000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &45776232
@@ -259,6 +259,7 @@ GameObject:
   - component: {fileID: 45776235}
   - component: {fileID: 45776234}
   - component: {fileID: 45776236}
+  - component: {fileID: 45776237}
   m_Layer: 0
   m_Name: PrestigeButton
   m_TagString: Untagged
@@ -368,6 +369,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &45776237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45776232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e94827fd23d3243a4e2860dd1e5f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
+  Text: 'Free Prestige: grants Grace based on lifetime progress. Ink, Level/XP, upgrades,
+    and scribes all stay exactly as they are - no permanent bonuses beyond skills
+    you choose to buy.'
+  PreferredDirection: 0
 --- !u!1 &69658744
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,8 +463,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -140}
-  m_SizeDelta: {x: -40, y: -320}
+  m_AnchoredPosition: {x: 0, y: -150}
+  m_SizeDelta: {x: -40, y: -340}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &140145857
 MonoBehaviour:
@@ -529,6 +546,7 @@ GameObject:
   - component: {fileID: 172237460}
   - component: {fileID: 172237459}
   - component: {fileID: 172237461}
+  - component: {fileID: 172237462}
   m_Layer: 0
   m_Name: PrestigeResetButton
   m_TagString: Untagged
@@ -638,6 +656,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &172237462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172237457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1e94827fd23d3243a4e2860dd1e5f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
+  Text: 'Reset Prestige: grants 2.5x the Grace of a free Prestige, but wipes Ink,
+    Click Power, Level/XP, and scribe owned counts back to the start. Unlocked verses,
+    chapters, and books are NEVER lost either way.'
+  PreferredDirection: 0
 --- !u!1 &182004218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,7 +1959,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -165}
-  m_SizeDelta: {x: 900, y: 130}
+  m_SizeDelta: {x: 900, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1017482807
 MonoBehaviour:
