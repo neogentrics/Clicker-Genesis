@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
+using ClickerGenesis.Data;
 using ClickerGenesis.Progression;
 
 namespace ClickerGenesis.EditorTools
@@ -178,24 +180,12 @@ namespace ClickerGenesis.EditorTools
             }
         }
 
-        // Canonical KJV Old Testament order, excluding Genesis (the always-free starting book) -
-        // resource ids match the files already sitting in Assets/Resources/Verses/.
+        // Canonical KJV Old Testament order, excluding Genesis (the always-free starting book).
+        // Single source of truth is ClickerGenesis.Data.CanonicalBookOrder (shared with runtime
+        // book-switching logic in GameLoopController, Phase F2 2026-08-06) - Genesis (index 0) is
+        // skipped here since it has no Grace tree node.
         private static readonly (string id, string name)[] RemainingOldTestament =
-        {
-            ("exodus_2", "Exodus"), ("leviticus_3", "Leviticus"), ("numbers_4", "Numbers"),
-            ("deuteronomy_5", "Deuteronomy"), ("joshua_6", "Joshua"), ("judges_7", "Judges"),
-            ("ruth_8", "Ruth"), ("1samuel_9", "1 Samuel"), ("2samuel_10", "2 Samuel"),
-            ("1kings_11", "1 Kings"), ("2kings_12", "2 Kings"), ("1chronicles_13", "1 Chronicles"),
-            ("2chronicles_14", "2 Chronicles"), ("ezra_15", "Ezra"), ("nehemiah_16", "Nehemiah"),
-            ("esther_17", "Esther"), ("job_18", "Job"), ("psalms_19", "Psalms"),
-            ("proverbs_20", "Proverbs"), ("ecclesiastes_21", "Ecclesiastes"), ("songofsolomon_22", "Song of Solomon"),
-            ("isaiah_23", "Isaiah"), ("jeremiah_24", "Jeremiah"), ("lamentations_25", "Lamentations"),
-            ("ezekiel_26", "Ezekiel"), ("daniel_27", "Daniel"), ("hosea_28", "Hosea"),
-            ("joel_29", "Joel"), ("amos_30", "Amos"), ("obadiah_31", "Obadiah"),
-            ("jonah_32", "Jonah"), ("micah_33", "Micah"), ("nahum_34", "Nahum"),
-            ("habakkuk_35", "Habakkuk"), ("zephaniah_36", "Zephaniah"), ("haggai_37", "Haggai"),
-            ("zechariah_38", "Zechariah"), ("malachi_39", "Malachi"),
-        };
+            CanonicalBookOrder.Books.Skip(1).Select(b => (b.resourceId, b.displayName)).ToArray();
 
         private static void BuildBookBranch(PrestigeSkillTreeConfig config)
         {

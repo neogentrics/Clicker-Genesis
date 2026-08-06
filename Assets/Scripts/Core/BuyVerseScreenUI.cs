@@ -26,18 +26,24 @@ namespace ClickerGenesis.Core
         public TMP_Text XpBarText;
         public Image XpBarFill;
 
-        [Header("Verses/Chapters tabs")]
+        [Header("Verses/Chapters/Books tabs")]
         public Button VersesTabButton;
         public Button ChaptersTabButton;
+        public Button BooksTabButton;
         public GameObject VerseListRoot;
         public GameObject ChapterListRoot;
+        public GameObject BookListRoot;
         public Image VersesTabBackground;
         public Image ChaptersTabBackground;
+        public Image BooksTabBackground;
         public VerseListUI VerseList;
+
+        private enum ScreenTab { Verses, Chapters, Books }
 
         /// <summary>-1 = nothing selected yet (defaults to the most recently unlocked verse).</summary>
         private int selectedVerseIndex = -1;
-        private bool showingChapters;
+        private ScreenTab currentTab = ScreenTab.Verses;
+        private bool showingChapters => currentTab == ScreenTab.Chapters;
 
         /// <summary>Tracks the verse actually displayed in the reading box, distinct from
         /// selectedVerseIndex - lets Refresh() (called every frame by passive Ink ticking) skip
@@ -53,29 +59,32 @@ namespace ClickerGenesis.Core
             // See ClickerScreenUI.Awake() for why this wiring lives here, not in Start().
             BuyButton.onClick.AddListener(HandleBuy);
             if (MultiplierButton != null) MultiplierButton.onClick.AddListener(HandleMultiplierOrUnlockClick);
-            if (VersesTabButton != null) VersesTabButton.onClick.AddListener(() => SetTab(false));
-            if (ChaptersTabButton != null) ChaptersTabButton.onClick.AddListener(() => SetTab(true));
+            if (VersesTabButton != null) VersesTabButton.onClick.AddListener(() => SetTab(ScreenTab.Verses));
+            if (ChaptersTabButton != null) ChaptersTabButton.onClick.AddListener(() => SetTab(ScreenTab.Chapters));
+            if (BooksTabButton != null) BooksTabButton.onClick.AddListener(() => SetTab(ScreenTab.Books));
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            SetTab(false);
+            SetTab(ScreenTab.Verses);
         }
 
         private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
         private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
 
-        private void SetTab(bool chapters)
+        private void SetTab(ScreenTab tab)
         {
-            showingChapters = chapters;
-            if (VerseListRoot != null) VerseListRoot.SetActive(!chapters);
-            if (ChapterListRoot != null) ChapterListRoot.SetActive(chapters);
+            currentTab = tab;
+            if (VerseListRoot != null) VerseListRoot.SetActive(tab == ScreenTab.Verses);
+            if (ChapterListRoot != null) ChapterListRoot.SetActive(tab == ScreenTab.Chapters);
+            if (BookListRoot != null) BookListRoot.SetActive(tab == ScreenTab.Books);
             // MultiplierButton's active state is fully managed in Refresh() now (it's dual-purpose:
             // bulk-buy cycle on Verses, free Unlock Chapter on Chapters-while-gated) - no static
             // per-tab default to set here anymore.
-            if (VersesTabBackground != null) VersesTabBackground.color = chapters ? InactiveTabColor : ActiveTabColor;
-            if (ChaptersTabBackground != null) ChaptersTabBackground.color = chapters ? ActiveTabColor : InactiveTabColor;
+            if (VersesTabBackground != null) VersesTabBackground.color = tab == ScreenTab.Verses ? ActiveTabColor : InactiveTabColor;
+            if (ChaptersTabBackground != null) ChaptersTabBackground.color = tab == ScreenTab.Chapters ? ActiveTabColor : InactiveTabColor;
+            if (BooksTabBackground != null) BooksTabBackground.color = tab == ScreenTab.Books ? ActiveTabColor : InactiveTabColor;
             // Clicking the Verses tab directly always goes back to the live in-progress chapter -
             // only ReviewChapter() (from clicking a Chapters-tab row) leaves a specific chapter
             // pinned for review.
-            if (!chapters && VerseList != null)
+            if (tab == ScreenTab.Verses && VerseList != null)
             {
                 VerseList.ReviewChapterNumber = -1;
                 VerseList.ForceRefresh();
@@ -89,12 +98,14 @@ namespace ClickerGenesis.Core
         /// this, so there was no way to go back and re-read an earlier chapter's verses).</summary>
         public void ReviewChapter(int chapterNumber)
         {
-            showingChapters = false;
+            currentTab = ScreenTab.Verses;
             if (VerseListRoot != null) VerseListRoot.SetActive(true);
             if (ChapterListRoot != null) ChapterListRoot.SetActive(false);
+            if (BookListRoot != null) BookListRoot.SetActive(false);
             if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(true);
             if (VersesTabBackground != null) VersesTabBackground.color = ActiveTabColor;
             if (ChaptersTabBackground != null) ChaptersTabBackground.color = InactiveTabColor;
+            if (BooksTabBackground != null) BooksTabBackground.color = InactiveTabColor;
             if (VerseList != null)
             {
                 VerseList.ReviewChapterNumber = chapterNumber;
@@ -153,6 +164,13 @@ namespace ClickerGenesis.Core
         {
             if (Controller == null || Controller.Wallet == null) return;
 
+            // Books tab (Phase F3, 2026-08-06) stays fully hidden - not just grayed out - until the
+            // player has prestiged at least once, same progressive-disclosure pattern already used
+            // for the ClickerScreen Skill Tree button (see ClickerScreenUI.Refresh).
+            bool booksUnlocked = Controller.Prestige.PrestigeCount > 0;
+            if (BooksTabButton != null) BooksTabButton.gameObject.SetActive(booksUnlocked);
+            if (!booksUnlocked && currentTab == ScreenTab.Books) SetTab(ScreenTab.Verses);
+
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
 
             var levels = Controller.Levels;
@@ -205,6 +223,18 @@ namespace ClickerGenesis.Core
                 StartCoroutine(UiRefreshUtil.DeferredFullRefresh(VerseText.rectTransform));
                 if (VerseScrollRect != null) VerseScrollRect.verticalNormalizedPosition = 1f;
             }
+
+            // Books tab has nothing to buy - switching happens per-row via BookListUI's own Switch
+            // buttons - so the shared Buy/Multiplier controls just hide entirely there instead of
+            // showing a stale Verses/Chapters action that doesn't apply.
+            if (currentTab == ScreenTab.Books)
+            {
+                if (MultiplierButton != null) MultiplierButton.gameObject.SetActive(false);
+                BuyButton.gameObject.SetActive(false);
+                StatusLabel.text = "Choose a book below to switch your active reading progress.";
+                return;
+            }
+            BuyButton.gameObject.SetActive(true);
 
             if (showingChapters)
             {

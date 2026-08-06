@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using ClickerGenesis.Data;
 using ClickerGenesis.Economy;
 using ClickerGenesis.Progression;
@@ -29,22 +31,99 @@ namespace ClickerGenesis.Core
         [SerializeField] private PrestigeSkillTreeConfig prestigeSkillTreeConfig;
 
         public InkWallet Wallet { get; private set; }
-        public VerseDatabase Verses { get; private set; }
         public LevelSystem Levels { get; private set; }
         public ScribeSystem Scribes { get; private set; }
         public PrestigeSystem Prestige { get; private set; }
         public PrestigeSkillSystem Skills { get; private set; }
         public PrestigeSkillTreeConfig SkillTreeConfig => prestigeSkillTreeConfig;
 
-        /// <summary>How many chapters have been completed this run - one of the Grace reward
-        /// formula's terms. Incremented in ApplyVersePurchaseNoCharge alongside the existing
-        /// chapter-complete XP bonus.</summary>
-        public int ChaptersCompletedCount { get; private set; }
+        // ---------- Per-book progress (2026-08-06, Phase F) ----------
+        // Every unlocked/touched book gets its own BookProgress record (verse cursor, chapter
+        // gate, per-book chapter count) instead of the old single global fields - see
+        // BookProgress.cs. Genesis' resource id is derived from the existing verseResourcePath
+        // field so nothing about the inspector-configured starting book changes.
+        private readonly Dictionary<string, BookProgress> bookProgress = new Dictionary<string, BookProgress>();
+        private string activeBookResourceId;
+        private string GenesisResourceId => StripVersesPrefix(verseResourcePath);
 
-        /// <summary>How many books have been completed this run - the last Grace reward term.
-        /// Only ever 0 or 1 right now (Genesis is the only wired-in book), but tracked properly so
-        /// it's correct once more books are wired in.</summary>
-        public int BooksCompletedCount { get; private set; }
+        private static string StripVersesPrefix(string resourcePath) =>
+            resourcePath.StartsWith("Verses/") ? resourcePath.Substring("Verses/".Length) : resourcePath;
+
+        private BookProgress ActiveBook =>
+            bookProgress.TryGetValue(activeBookResourceId, out var bp) ? bp : null;
+
+        /// <summary>Scribe/manager unlock gating always reads Genesis' progress specifically, not
+        /// whichever book is currently active (2026-08-06 design decision) - the scribe roster
+        /// (Reed Pen -> Joseph's Storehouse) is Genesis-only content per its theming; if this read
+        /// the active book's cursor instead, switching to a fresh book would make already-unlocked
+        /// scribes look locked again the instant that book's own cursor starts at 0.</summary>
+        private int GenesisNextVerseIndex =>
+            bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.NextVerseIndex : 0;
+
+        public VerseDatabase Verses => ActiveBook?.Database;
+
+        /// <summary>Index (within the ACTIVE book) of the next verse that has not yet been
+        /// purchased - proxies to the active book's BookProgress record (2026-08-06).</summary>
+        public int NextVerseIndex => ActiveBook?.NextVerseIndex ?? 0;
+
+        /// <summary>Sum of chapters completed across every book ever touched (2026-08-06) - one of
+        /// the Grace reward formula's terms. Computed, not a separately-incremented field, so it
+        /// can never drift out of sync with the per-book records it's derived from.</summary>
+        public int ChaptersCompletedCount => bookProgress.Values.Sum(b => b.ChaptersCompletedInBook);
+
+        /// <summary>Sum of books fully completed across every book ever touched (2026-08-06) - the
+        /// last Grace reward term. Computed from each BookProgress.IsComplete, same
+        /// never-drifts-out-of-sync reasoning as ChaptersCompletedCount above.</summary>
+        public int BooksCompletedCount => bookProgress.Values.Count(b => b.IsComplete);
+
+        /// <summary>Every OT book in canonical order (Genesis first) - for the Books tab (Phase F3).</summary>
+        public IReadOnlyList<(string resourceId, string displayName)> AllBooksInOrder => CanonicalBookOrder.Books;
+
+        public string ActiveBookResourceId => activeBookResourceId;
+
+        public bool IsBookActive(string resourceId) => resourceId == activeBookResourceId;
+
+        public bool IsBookComplete(string resourceId) =>
+            bookProgress.TryGetValue(resourceId, out var b) && b.IsComplete;
+
+        /// <summary>True if resourceId can become the active book right now: unlocked via the
+        /// Grace tree (or it's Genesis, always free) AND the immediately-preceding canonical book
+        /// is fully complete (2026-08-06, Phase F2 - "can't start the next book until the first
+        /// book is finished"). A book with no BookProgress record yet (never touched) fails the
+        /// previous-book check rather than throwing - not started means not complete.</summary>
+        public bool CanSwitchToBook(string resourceId)
+        {
+            if (string.IsNullOrEmpty(resourceId)) return false;
+
+            bool isUnlocked = resourceId == GenesisResourceId || (Skills != null && Skills.IsBookUnlocked(resourceId));
+            if (!isUnlocked) return false;
+
+            string previousId = CanonicalBookOrder.PreviousResourceId(resourceId);
+            if (previousId == null) return true; // Genesis - no previous book required
+
+            return bookProgress.TryGetValue(previousId, out var previous) && previous.IsComplete;
+        }
+
+        /// <summary>Switches the active book to resourceId, lazy-loading its VerseDatabase on
+        /// first activation and creating its BookProgress record if this is the first time it's
+        /// ever been switched to. Returns false (no state change) if CanSwitchToBook says no.</summary>
+        public bool SwitchActiveBook(string resourceId)
+        {
+            if (!CanSwitchToBook(resourceId)) return false;
+            if (resourceId == activeBookResourceId) return true; // already active, no-op success
+
+            if (!bookProgress.TryGetValue(resourceId, out var progress))
+            {
+                progress = new BookProgress(resourceId, CanonicalBookOrder.DisplayNameOf(resourceId));
+                bookProgress[resourceId] = progress;
+            }
+            if (progress.Database == null)
+                progress.Database = VerseDatabase.LoadFromResources($"Verses/{resourceId}");
+
+            activeBookResourceId = resourceId;
+            OnStateChanged?.Invoke();
+            return true;
+        }
 
         /// <summary>
         /// How many times the player has bought a Click Power upgrade. Tap value scales via the
@@ -74,9 +153,6 @@ namespace ClickerGenesis.Core
         public double NextEffectiveTapAmount =>
             tapAmount * (1.0 + ClickPowerPerLevelGrowth * (ClickPowerLevel + 1)) * MilestoneCurve.GetMultiplier(ClickPowerLevel + 1)
             * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
-
-        /// <summary>Index (within the book) of the next verse that has not yet been purchased.</summary>
-        public int NextVerseIndex { get; private set; }
 
         [Header("Bulk buy")]
         private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20, MaxBuyMultiplier };
@@ -256,12 +332,17 @@ namespace ClickerGenesis.Core
             if (Application.isPlaying) DontDestroyOnLoad(gameObject);
 
             Wallet = new InkWallet(startingInk);
-            Verses = VerseDatabase.LoadFromResources(verseResourcePath);
             Levels = new LevelSystem(xpConfig);
             if (scribeConfig != null) Scribes = new ScribeSystem(scribeConfig);
             Prestige = new PrestigeSystem();
             Skills = new PrestigeSkillSystem(prestigeSkillTreeConfig);
-            NextVerseIndex = 0;
+
+            // Genesis is always the hardcoded starting book (2026-08-06) - seeded into
+            // bookProgress exactly like the old single-book init, just wrapped in a BookProgress
+            // record now so other books can get their own records alongside it.
+            activeBookResourceId = GenesisResourceId;
+            var genesisDb = VerseDatabase.LoadFromResources(verseResourcePath);
+            bookProgress[activeBookResourceId] = new BookProgress(activeBookResourceId, "Genesis", genesisDb);
 
             if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
         }
@@ -291,7 +372,7 @@ namespace ClickerGenesis.Core
                 for (int i = 0; i < Scribes.TierCount; i++)
                 {
                     if (!Scribes.IsManagerUnlocked(i)) continue;
-                    if (!Scribes.IsUnlocked(i, NextVerseIndex)) continue;
+                    if (!Scribes.IsUnlocked(i, GenesisNextVerseIndex)) continue;
 
                     double cost = Scribes.GetNextCost(i);
                     if (Wallet.Balance - cost < reserve) continue;
@@ -309,7 +390,7 @@ namespace ClickerGenesis.Core
         public bool BuyScribe(int tierIndex)
         {
             if (Scribes == null) return false;
-            if (!Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return false;
+            if (!Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return false;
 
             double cost = Scribes.GetNextCost(tierIndex);
             if (!Wallet.TrySpend(cost)) return false;
@@ -335,7 +416,7 @@ namespace ClickerGenesis.Core
 
         public bool BuyManager(int tierIndex)
         {
-            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, EffectiveManagerLevel, NextVerseIndex)) return false;
+            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, EffectiveManagerLevel, GenesisNextVerseIndex)) return false;
 
             double cost = Scribes.GetDefinition(tierIndex).managerUnlockCost;
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
@@ -369,7 +450,7 @@ namespace ClickerGenesis.Core
         /// resolves to however many the current wallet balance can actually afford.</summary>
         public double ScribeBulkCost(int tierIndex)
         {
-            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return 0;
             var def = Scribes.GetDefinition(tierIndex);
             int owned = Scribes.GetOwned(tierIndex);
             int count = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
@@ -384,7 +465,7 @@ namespace ClickerGenesis.Core
         /// were actually bought.</summary>
         public int BuyScribeBulk(int tierIndex)
         {
-            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return 0;
 
             int target = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
             int bought = 0;
@@ -535,8 +616,9 @@ namespace ClickerGenesis.Core
         /// paid (either the per-verse cost, or a discounted lump sum for a chapter bulk-buy).</summary>
         private void ApplyVersePurchaseNoCharge()
         {
+            var activeBook = ActiveBook;
             var purchasedVerse = Verses.GetVerse(NextVerseIndex);
-            NextVerseIndex++;
+            activeBook.NextVerseIndex++;
 
             if (NextVerseIndex % 5 == 0) ProgressMultiplier += 0.1f;
 
@@ -544,10 +626,11 @@ namespace ClickerGenesis.Core
                 Verses.GetVerse(NextVerseIndex).ChapterNumber != purchasedVerse.ChapterNumber;
             if (chapterComplete)
             {
-                ChaptersCompletedCount++;
+                activeBook.ChaptersCompletedInBook++;
                 ProgressMultiplier *= 2f;
             }
-            if (BookComplete) BooksCompletedCount++;
+            // BooksCompletedCount is now computed from BookProgress.IsComplete - no increment
+            // needed here, it just becomes true once NextVerseIndex runs past the book's last verse.
 
             if (xpConfig != null)
             {
@@ -611,13 +694,6 @@ namespace ClickerGenesis.Core
             return true;
         }
 
-        /// <summary>Which chapter number has been explicitly unlocked for individual verse
-        /// purchases via UnlockCurrentChapter() - -1 matches no real chapter, so the very first
-        /// gated boundary always requires an explicit unlock. Never reset elsewhere: once a
-        /// chapter's gate is cleared it stays cleared even if the player later leaves and returns
-        /// to it (they can only be "in" one chapter's gate at a time anyway, per canonical order).</summary>
-        private int unlockedChapterNumber = -1;
-
         /// <summary>True when NextVerseIndex sits at the very first verse of a chapter beyond the
         /// book's first one, nothing has been bought in it yet, AND the player hasn't explicitly
         /// unlocked it via UnlockCurrentChapter() - meaning individual verse purchases (single or
@@ -627,10 +703,13 @@ namespace ClickerGenesis.Core
         /// boundaries mid-bulk-buy, which was never intended. 2026-08-05, real bug fix: the ONLY
         /// unlock mechanism was BuyNextChapter, which bought every verse in the chapter at once -
         /// defeating the entire point of a per-verse Verses tab. UnlockCurrentChapter() is the
-        /// missing "just let me pick verses individually" action.</summary>
+        /// missing "just let me pick verses individually" action. The gate itself lives on the
+        /// active book's own BookProgress record (2026-08-06) - -1 matches no real chapter, so the
+        /// very first gated boundary always requires an explicit unlock, and each book tracks its
+        /// own gate independently once book-switching exists.</summary>
         public bool RequiresChapterUnlock =>
             !BookComplete && NextVerseIndex > 0 && NextVerseIndex == CurrentChapterStartIndex
-            && unlockedChapterNumber != CurrentChapterNumber;
+            && ActiveBook?.UnlockedChapterNumber != CurrentChapterNumber;
 
         /// <summary>Opens the current chapter's gate for free, WITHOUT buying any verse - lets the
         /// player then buy verses one at a time (or in a VerseBuyMultiplier bulk, still capped at
@@ -639,7 +718,7 @@ namespace ClickerGenesis.Core
         public bool UnlockCurrentChapter()
         {
             if (!RequiresChapterUnlock) return false;
-            unlockedChapterNumber = CurrentChapterNumber;
+            ActiveBook.UnlockedChapterNumber = CurrentChapterNumber;
             OnStateChanged?.Invoke();
             return true;
         }
