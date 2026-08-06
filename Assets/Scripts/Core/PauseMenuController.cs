@@ -142,8 +142,50 @@ namespace ClickerGenesis.Core
                 $"Verses unlocked: {c.NextVerseIndex}\n" +
                 $"Chapters completed: {c.ChaptersCompletedCount}\n" +
                 $"Books completed: {c.BooksCompletedCount}\n" +
+                BuildBonusBreakdown(c) +
                 $"\n<b>Store</b>\n" +
                 $"Boosts used: N/A (Store not built yet)";
+        }
+
+        /// <summary>Real current-output breakdown (2026-08-06, user's explicit ask - "shows what
+        /// the current clicking power is plus all the bonuses that are being applied"). Every
+        /// bonus line only appears when it's actually non-zero, matching the "don't show inert
+        /// stats" pattern already used on the Managers/Scribes rows.</summary>
+        private static string BuildBonusBreakdown(GameLoopController c)
+        {
+            double clickPowerBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ClickPowerMultiplier);
+            double incomeBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.IncomeMultiplier);
+            double managerBonusBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerBonusBoost);
+            double progressBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ProgressMultiplierBoost);
+            double milestoneBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ScribeMilestoneBoost);
+            double graceGainBonus = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.GraceGainBonus);
+            double pricingDiscount = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.PricingDiscount);
+            double managerLevelDiscount = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerUnlockLevelDiscount);
+            int resetCount = c.Prestige.ResetPrestigeCount;
+            double resetBaseBonus = resetCount * 0.5; // mirrors GameLoopController.ResetBaseInkPerSecondPerReset
+            double bookCompletionMultiplier = (c.BooksCompletedCount > 0 && resetCount > 0) ? 1 + resetCount : 1.0;
+
+            var sb = new System.Text.StringBuilder();
+            sb.Append("\n<b>Current Output</b>\n");
+            sb.Append($"Clicking Power: {NumberFormatter.Format(c.EffectiveTapAmount)} Ink/tap\n");
+            sb.Append($"Passive Income: {NumberFormatter.Format(c.EffectiveInkPerSecond)} Ink/sec\n");
+
+            sb.Append("\n<b>Active Bonuses</b>\n");
+            bool any = false;
+            if (clickPowerBoost > 0) { sb.Append($"Click Power (skills): +{clickPowerBoost * 100:F0}%\n"); any = true; }
+            if (incomeBoost > 0) { sb.Append($"Ink Income (skills): +{incomeBoost * 100:F0}%\n"); any = true; }
+            if (managerBonusBoost > 0) { sb.Append($"Manager Bonus (Overseer's Wisdom): +{managerBonusBoost * 100:F0}%\n"); any = true; }
+            if (progressBoost > 0) { sb.Append($"Progress Multiplier boost (skills): +{progressBoost * 100:F0}%\n"); any = true; }
+            if (milestoneBoost > 0) { sb.Append($"Milestone Bonus (Scribe's Diligence): +{milestoneBoost * 100:F0}%\n"); any = true; }
+            if (graceGainBonus > 0) { sb.Append($"Grace Gain (skills): +{graceGainBonus * 100:F0}%\n"); any = true; }
+            if (pricingDiscount > 0) { sb.Append($"Verse/Chapter Pricing (Swift Unlock): -{pricingDiscount * 100:F1}%\n"); any = true; }
+            if (managerLevelDiscount > 0) { sb.Append($"Manager Unlock Level (skills): -{managerLevelDiscount:F0} levels\n"); any = true; }
+            sb.Append($"Progress Multiplier (verse/chapter buys): ×{c.ProgressMultiplier:F2}\n"); any = true;
+            if (resetBaseBonus > 0) { sb.Append($"Base Ink/sec from Resets: +{resetBaseBonus:F1}/sec ({resetCount} reset{(resetCount == 1 ? "" : "s")})\n"); any = true; }
+            if (bookCompletionMultiplier > 1.0) { sb.Append($"Book Completion Multiplier: ×{bookCompletionMultiplier:F0}\n"); any = true; }
+            if (!any) sb.Append("None yet.\n");
+
+            return sb.ToString();
         }
 
         private void OpenSettings()
