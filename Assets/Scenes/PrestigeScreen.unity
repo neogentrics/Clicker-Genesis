@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: 'Free Prestige: grants Grace based on lifetime progress. Ink, Level/XP, upgrades,
-    and scribes all stay exactly as they are - no permanent bonuses beyond skills
+    and scribes all stay exactly as they are - no permanent bonuses beyond the skills
     you choose to buy.'
   PreferredDirection: 0
 --- !u!1 &69658744
@@ -669,8 +669,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.HoverTooltip
   Text: 'Reset Prestige: grants 2.5x the Grace of a free Prestige, but wipes Ink,
-    Click Power, Level/XP, and scribe owned counts back to the start. Unlocked verses,
-    chapters, and books are NEVER lost either way.'
+    Click Power, Level/XP, and scribe owned counts back to the start. Permanently
+    raises verse/chapter/book XP, makes tapping and buying scribes grant XP for the
+    first time, adds +0.5 Ink/sec base income, and (once you''ve completed a book)
+    a growing Ink multiplier - all stack with every reset you do. Unlocks the tree''s
+    biggest capstone skills too. Unlocked verses/chapters/books are NEVER lost either
+    way.'
   PreferredDirection: 0
 --- !u!1 &182004218
 GameObject:

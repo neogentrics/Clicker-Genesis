@@ -166,6 +166,11 @@ namespace ClickerGenesis.EditorTools
                     unlockBookResourceId = "",
                     unlockBookDisplayName = "",
                     isCapstone = isCapstone,
+                    // Every branch's capstone requires having done at least one Reset-Prestige
+                    // (2026-08-06, user's explicit ask) - the biggest single-node payoffs are
+                    // reserved for players who've actually reset, not just accumulated Grace via
+                    // Free prestiges.
+                    requiresResetPrestige = isCapstone,
                 });
 
                 prevId = id;
@@ -256,6 +261,9 @@ namespace ClickerGenesis.EditorTools
                 unlockBookResourceId = bookIds,
                 unlockBookDisplayName = displayName,
                 isCapstone = displayName == "Revelation's Veil",
+                // The whole New Testament gate cluster requires a Reset-Prestige (2026-08-06) -
+                // same "biggest payoffs behind an actual reset" rule as the economy capstones.
+                requiresResetPrestige = true,
             });
         }
 

@@ -315,6 +315,10 @@ namespace ClickerGenesis.Core
             if (!Wallet.TrySpend(cost)) return false;
 
             Scribes.Buy(tierIndex);
+            // Buying a scribe grants 0 XP normally - only starts granting XP once the player has
+            // performed at least one Reset-Prestige (2026-08-06, user's explicit ask).
+            if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
+                Levels.AddXp(xpConfig.XpPerScribePurchaseAfterReset);
             OnStateChanged?.Invoke();
             return true;
         }
@@ -391,7 +395,12 @@ namespace ClickerGenesis.Core
                 Scribes.Buy(tierIndex);
                 bought++;
             }
-            if (bought > 0) OnStateChanged?.Invoke();
+            if (bought > 0)
+            {
+                if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
+                    Levels.AddXp(xpConfig.XpPerScribePurchaseAfterReset * bought);
+                OnStateChanged?.Invoke();
+            }
             return bought;
         }
 
@@ -437,6 +446,10 @@ namespace ClickerGenesis.Core
         public void TapForInk()
         {
             Wallet.Add(EffectiveTapAmount);
+            // Tapping grants 0 XP normally - only starts granting XP once the player has
+            // performed at least one Reset-Prestige (2026-08-06, user's explicit ask).
+            if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
+                Levels.AddXp(xpConfig.XpPerTapAfterReset);
             OnStateChanged?.Invoke();
         }
 
@@ -479,6 +492,11 @@ namespace ClickerGenesis.Core
         /// ScribeSystem.GetTierInkPerSecond.</summary>
         public float ProgressMultiplier { get; private set; } = 1f;
 
+        /// <summary>Flat Ink/sec granted per Reset-Prestige performed, permanently - "so they're
+        /// not starting with nothing and having to go click for no reason" (2026-08-06, user's
+        /// explicit ask). Never resets, including on a later reset.</summary>
+        private const double ResetBaseInkPerSecondPerReset = 0.5;
+
         /// <summary>Actual total Ink/sec, including every Grace skill tree bonus - the single
         /// source of truth both Update()'s real income tick and the UI's displayed rate read from,
         /// so the number shown always matches what's actually being earned. Skill bonuses (Ink
@@ -486,7 +504,11 @@ namespace ClickerGenesis.Core
         /// other, then apply multiplicatively on top of the milestone/manager/progress multipliers
         /// already baked into TotalInkPerSecond. This supersedes the old lean-v1 "+1% Ink per Grace
         /// ever spent" auto-bonus (PrestigeSystem.IncomeMultiplier), an explicit placeholder "until
-        /// a real Grace Shop is proven out" - this tree is that shop now.</summary>
+        /// a real Grace Shop is proven out" - this tree is that shop now. Also folds in two
+        /// permanent Reset-Prestige bonuses (2026-08-06): a flat base Ink/sec that stacks with
+        /// every reset performed, and a book-completion multiplier unlocked once at least one book
+        /// has been finished AND at least one reset has been performed, growing +1x per additional
+        /// reset - "a permanent two x multiplier on however much ink they're earning."</summary>
         public double EffectiveInkPerSecond
         {
             get
@@ -497,7 +519,14 @@ namespace ClickerGenesis.Core
                     + Skills.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost)
                     + Skills.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost);
                 double managerBonusBoost = Skills.GetTotalEffect(SkillEffectType.ManagerBonusBoost);
-                return Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier, managerBonusBoost) * skillIncomeBoost;
+                double scribeIncome = Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier, managerBonusBoost) * skillIncomeBoost;
+
+                double resetBaseBonus = Prestige.ResetPrestigeCount * ResetBaseInkPerSecondPerReset;
+                double bookCompletionMultiplier = (BooksCompletedCount > 0 && Prestige.ResetPrestigeCount > 0)
+                    ? 1 + Prestige.ResetPrestigeCount
+                    : 1.0;
+
+                return (scribeIncome + resetBaseBonus) * bookCompletionMultiplier;
             }
         }
 
@@ -522,9 +551,13 @@ namespace ClickerGenesis.Core
 
             if (xpConfig != null)
             {
-                Levels.AddXp(xpConfig.XpPerVerse);
-                if (chapterComplete) Levels.AddXp(xpConfig.XpPerChapterBonus);
-                if (BookComplete) Levels.AddXp(xpConfig.XpPerBookBonus);
+                // Reset-Prestige permanently raises verse/chapter/book XP (2026-08-06) - once the
+                // player has ever performed an opt-in reset, every subsequent verse purchase uses
+                // the bigger values, regardless of how many more resets happen after.
+                bool afterReset = Prestige.ResetPrestigeCount > 0;
+                Levels.AddXp(afterReset ? xpConfig.XpPerVerseAfterReset : xpConfig.XpPerVerse);
+                if (chapterComplete) Levels.AddXp(afterReset ? xpConfig.XpPerChapterBonusAfterReset : xpConfig.XpPerChapterBonus);
+                if (BookComplete) Levels.AddXp(afterReset ? xpConfig.XpPerBookBonusAfterReset : xpConfig.XpPerBookBonus);
             }
         }
 
@@ -564,7 +597,7 @@ namespace ClickerGenesis.Core
             if (!Levels.IsPrestigeEligible) return false;
 
             double grace = withReset ? PrestigeGracePreviewWithReset : PrestigeGracePreview;
-            Prestige.AwardGrace(grace);
+            Prestige.AwardGrace(grace, withReset);
 
             if (withReset)
             {
@@ -713,7 +746,7 @@ namespace ClickerGenesis.Core
         public bool BuySkill(string nodeId)
         {
             var node = prestigeSkillTreeConfig?.FindNode(nodeId);
-            if (node == null || !Skills.CanBuy(node, Prestige.Grace)) return false;
+            if (node == null || !Skills.CanBuy(node, Prestige.Grace, Prestige.ResetPrestigeCount > 0)) return false;
 
             double cost = Skills.Buy(node);
             Prestige.TrySpendGrace(cost);

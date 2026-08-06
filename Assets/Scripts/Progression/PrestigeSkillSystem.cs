@@ -31,9 +31,12 @@ namespace ClickerGenesis.Progression
         public bool IsMaxed(PrestigeSkillNode node) => GetRank(node.id) >= node.maxRank;
 
         /// <summary>A node is reachable once its prerequisite (if any) has enough ranks - the
-        /// "requires 3-4 upgrades on the previous skill before the next one unlocks" behavior.</summary>
-        public bool IsUnlocked(PrestigeSkillNode node)
+        /// "requires 3-4 upgrades on the previous skill before the next one unlocks" behavior -
+        /// AND, for reset-gated nodes, only once the player has performed at least one opt-in
+        /// Reset-Prestige (2026-08-06), regardless of prerequisite state.</summary>
+        public bool IsUnlocked(PrestigeSkillNode node, bool hasResetPrestiged)
         {
+            if (node.requiresResetPrestige && !hasResetPrestiged) return false;
             if (string.IsNullOrEmpty(node.prerequisiteId)) return true;
             return GetRank(node.prerequisiteId) >= node.prerequisiteRankRequired;
         }
@@ -44,9 +47,9 @@ namespace ClickerGenesis.Progression
             return node.baseCost * Math.Pow(node.costGrowthPerRank, rank);
         }
 
-        public bool CanBuy(PrestigeSkillNode node, double graceAvailable)
+        public bool CanBuy(PrestigeSkillNode node, double graceAvailable, bool hasResetPrestiged)
         {
-            if (IsMaxed(node) || !IsUnlocked(node)) return false;
+            if (IsMaxed(node) || !IsUnlocked(node, hasResetPrestiged)) return false;
             return graceAvailable >= GetNextCost(node);
         }
 

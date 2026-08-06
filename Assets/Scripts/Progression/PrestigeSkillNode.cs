@@ -65,5 +65,13 @@ namespace ClickerGenesis.Progression
         /// last rank-chain node, maxed) and grant a single larger rank-1 bonus rather than a long
         /// incremental chain.</summary>
         public bool isCapstone;
+
+        /// <summary>When true, this node can never be bought until the player has performed at
+        /// least one opt-in Reset-Prestige (PrestigeSystem.ResetPrestigeCount &gt; 0) - even once
+        /// its normal prerequisite chain is otherwise satisfied. Reserved for the biggest payoffs
+        /// (2026-08-06, user's explicit ask: "some skills could be locked behind doing a complete
+        /// reset instead of a free reset"), so the deepest tree investment requires having reset
+        /// at least once, not just accumulated enough Grace from Free prestiges.</summary>
+        public bool requiresResetPrestige;
     }
 }

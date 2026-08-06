@@ -417,9 +417,10 @@ namespace ClickerGenesis.Core
             {
                 var node = v.Node;
                 int rank = Controller.Skills.GetRank(node.id);
-                bool unlocked = Controller.Skills.IsUnlocked(node);
+                bool hasReset = Controller.Prestige.ResetPrestigeCount > 0;
+                bool unlocked = Controller.Skills.IsUnlocked(node, hasReset);
                 bool maxed = Controller.Skills.IsMaxed(node);
-                bool canBuy = Controller.Skills.CanBuy(node, grace);
+                bool canBuy = Controller.Skills.CanBuy(node, grace, hasReset);
 
                 v.Button.interactable = canBuy;
 
@@ -445,7 +446,12 @@ namespace ClickerGenesis.Core
 
                 if (v.NameLabel != null)
                 {
-                    string suffix = maxed ? " (Max)" : !unlocked ? " (Locked)" : "";
+                    // Reset-gated nodes get their own label (2026-08-06) instead of a generic
+                    // "(Locked)" - a player who's already maxed the prerequisite chain needs to
+                    // know THIS is why they still can't buy it, not just that something's missing.
+                    string suffix = maxed ? " (Max)"
+                        : (node.requiresResetPrestige && !hasReset) ? " (Requires Reset)"
+                        : !unlocked ? " (Locked)" : "";
                     v.NameLabel.text = node.displayName + suffix;
                 }
 

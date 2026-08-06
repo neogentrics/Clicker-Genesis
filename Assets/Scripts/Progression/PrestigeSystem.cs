@@ -22,7 +22,18 @@ namespace ClickerGenesis.Progression
         /// auto-bonus, which the real Grace skill tree (PrestigeSkillSystem) has now replaced.</summary>
         public double GraceEverSpent { get; private set; }
 
-        public int PrestigeCount { get; private set; }
+        /// <summary>How many times the player has prestiged via the free (no-reset) path.</summary>
+        public int FreePrestigeCount { get; private set; }
+
+        /// <summary>How many times the player has prestiged via the opt-in reset path - drives
+        /// the permanent post-reset XP/income bonuses in GameLoopController and reset-gated skill
+        /// tree nodes (2026-08-06). Never decreases, including on a later reset.</summary>
+        public int ResetPrestigeCount { get; private set; }
+
+        /// <summary>Combined total across both paths - kept for the one existing call site
+        /// (ClickerScreenUI's "keep the Skill Tree button visible after any prestige" check) that
+        /// only cares whether the player has EVER prestiged, not which kind.</summary>
+        public int PrestigeCount => FreePrestigeCount + ResetPrestigeCount;
 
         /// <summary>floor(sqrt(TotalInkEarnedThisRun)/50) + 10 + floor(versesUnlocked/5) +
         /// chaptersCompleted*2 + booksCompleted*10 - blends genre-standard sqrt-dampened
@@ -35,11 +46,12 @@ namespace ClickerGenesis.Progression
             return sqrtTerm + 10 + verseTerm + chaptersCompleted * 2 + booksCompleted * 10;
         }
 
-        public void AwardGrace(double amount)
+        public void AwardGrace(double amount, bool withReset)
         {
             if (amount <= 0) return;
             Grace += amount;
-            PrestigeCount++;
+            if (withReset) ResetPrestigeCount++;
+            else FreePrestigeCount++;
         }
 
         public bool TrySpendGrace(double cost)
