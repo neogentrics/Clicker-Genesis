@@ -110,6 +110,10 @@ namespace ClickerGenesis.Core
             new Color(0.85f, 0.85f, 0.85f), // Book Progression - white/silver
         };
 
+        // Core hub node - bright warm gold, distinct from every branch color so it reads as "the
+        // one thing everything else grows out of" rather than just another branch (2026-08-06).
+        private static readonly Color CoreColor = new Color(0.97f, 0.85f, 0.35f);
+
         private void Awake()
         {
             if (!GameLoopController.EnsureBootstrapped()) return;
@@ -177,6 +181,20 @@ namespace ClickerGenesis.Core
             }
 
             var positions = new Dictionary<string, Vector2>();
+
+            // Central Core node, dead center (2026-08-06 hub redesign) - every branch root now
+            // requires this at rank 1, replacing the old static "Grace" text box that used to just
+            // sit there doing nothing. Sized up a bit past a normal node so it reads as the true
+            // hub, not just another skill.
+            var coreNode = config.nodes.Find(n => n.id == "Core");
+            if (coreNode != null)
+            {
+                positions["Core"] = Vector2.zero;
+                CreateNodeVisual(coreNode, Vector2.zero, CoreColor);
+                var coreGo = Content.Find("Node_Core");
+                if (coreGo != null) coreGo.GetComponent<RectTransform>().sizeDelta = new Vector2(150f, 150f);
+            }
+            if (HubIcon != null) HubIcon.gameObject.SetActive(false);
 
             // Economy branches: 8 straight spokes from the hub, evenly spaced. Radius widened
             // (2026-08-05, user's explicit "spread this out, can't read the labels" correction)

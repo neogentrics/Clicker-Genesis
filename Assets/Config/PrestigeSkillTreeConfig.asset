@@ -23,15 +23,30 @@ MonoBehaviour:
   - Manager's Calling
   - Book Progression
   nodes:
+  - id: Core
+    displayName: Grace Awakened
+    description: Awakens your capacity to draw on Grace. Every skill on this tree
+      - every branch, and Book Progression - requires this first.
+    branch: Core
+    prerequisiteId: 
+    prerequisiteRankRequired: 0
+    maxRank: 1
+    baseCost: 8
+    costGrowthPerRank: 1
+    effectType: 0
+    effectPerRank: 0
+    unlockBookResourceId: 
+    unlockBookDisplayName: 
+    isCapstone: 0
   - id: Ink_0
     displayName: Ink Flow I
     description: +2% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 5
-    costGrowthPerRank: 1.6
+    baseCost: 8
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -44,8 +59,8 @@ MonoBehaviour:
     prerequisiteId: Ink_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 8
-    costGrowthPerRank: 1.6
+    baseCost: 12
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -58,8 +73,8 @@ MonoBehaviour:
     prerequisiteId: Ink_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 12
-    costGrowthPerRank: 1.6
+    baseCost: 18
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -72,8 +87,8 @@ MonoBehaviour:
     prerequisiteId: Ink_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -86,8 +101,8 @@ MonoBehaviour:
     prerequisiteId: Ink_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 25
-    costGrowthPerRank: 1.6
+    baseCost: 38
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -100,8 +115,8 @@ MonoBehaviour:
     prerequisiteId: Ink_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 40
-    costGrowthPerRank: 1.6
+    baseCost: 60
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -114,8 +129,8 @@ MonoBehaviour:
     prerequisiteId: Ink_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 70
-    costGrowthPerRank: 1.6
+    baseCost: 105
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -128,8 +143,8 @@ MonoBehaviour:
     prerequisiteId: Ink_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 250
-    costGrowthPerRank: 1.6
+    baseCost: 375
+    costGrowthPerRank: 2
     effectType: 0
     effectPerRank: 0.15
     unlockBookResourceId: 
@@ -139,11 +154,11 @@ MonoBehaviour:
     displayName: Steady Hand I
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 5
-    costGrowthPerRank: 1.6
+    baseCost: 8
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -156,8 +171,8 @@ MonoBehaviour:
     prerequisiteId: Tap_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 8
-    costGrowthPerRank: 1.6
+    baseCost: 12
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -170,8 +185,8 @@ MonoBehaviour:
     prerequisiteId: Tap_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 12
-    costGrowthPerRank: 1.6
+    baseCost: 18
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -184,8 +199,8 @@ MonoBehaviour:
     prerequisiteId: Tap_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -198,8 +213,8 @@ MonoBehaviour:
     prerequisiteId: Tap_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 25
-    costGrowthPerRank: 1.6
+    baseCost: 38
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -212,8 +227,8 @@ MonoBehaviour:
     prerequisiteId: Tap_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 40
-    costGrowthPerRank: 1.6
+    baseCost: 60
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -226,8 +241,8 @@ MonoBehaviour:
     prerequisiteId: Tap_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 70
-    costGrowthPerRank: 1.6
+    baseCost: 105
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -240,8 +255,8 @@ MonoBehaviour:
     prerequisiteId: Tap_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 250
-    costGrowthPerRank: 1.6
+    baseCost: 375
+    costGrowthPerRank: 2
     effectType: 1
     effectPerRank: 0.15
     unlockBookResourceId: 
@@ -251,11 +266,11 @@ MonoBehaviour:
     displayName: Overseer's Wisdom I
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 10
-    costGrowthPerRank: 1.6
+    baseCost: 15
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -268,8 +283,8 @@ MonoBehaviour:
     prerequisiteId: Manager_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -282,8 +297,8 @@ MonoBehaviour:
     prerequisiteId: Manager_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 22
-    costGrowthPerRank: 1.6
+    baseCost: 33
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -296,8 +311,8 @@ MonoBehaviour:
     prerequisiteId: Manager_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 30
-    costGrowthPerRank: 1.6
+    baseCost: 45
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -310,8 +325,8 @@ MonoBehaviour:
     prerequisiteId: Manager_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 45
-    costGrowthPerRank: 1.6
+    baseCost: 68
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -324,8 +339,8 @@ MonoBehaviour:
     prerequisiteId: Manager_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 65
-    costGrowthPerRank: 1.6
+    baseCost: 98
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -338,8 +353,8 @@ MonoBehaviour:
     prerequisiteId: Manager_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 90
-    costGrowthPerRank: 1.6
+    baseCost: 135
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -352,8 +367,8 @@ MonoBehaviour:
     prerequisiteId: Manager_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 300
-    costGrowthPerRank: 1.6
+    baseCost: 450
+    costGrowthPerRank: 2
     effectType: 2
     effectPerRank: 0.1
     unlockBookResourceId: 
@@ -363,11 +378,11 @@ MonoBehaviour:
     displayName: Illuminated Pages I
     description: +2% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 6
-    costGrowthPerRank: 1.6
+    baseCost: 9
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -380,8 +395,8 @@ MonoBehaviour:
     prerequisiteId: Progress_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 10
-    costGrowthPerRank: 1.6
+    baseCost: 15
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -394,8 +409,8 @@ MonoBehaviour:
     prerequisiteId: Progress_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -408,8 +423,8 @@ MonoBehaviour:
     prerequisiteId: Progress_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 20
-    costGrowthPerRank: 1.6
+    baseCost: 30
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -422,8 +437,8 @@ MonoBehaviour:
     prerequisiteId: Progress_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 30
-    costGrowthPerRank: 1.6
+    baseCost: 45
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -436,8 +451,8 @@ MonoBehaviour:
     prerequisiteId: Progress_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 45
-    costGrowthPerRank: 1.6
+    baseCost: 68
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -450,8 +465,8 @@ MonoBehaviour:
     prerequisiteId: Progress_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 65
-    costGrowthPerRank: 1.6
+    baseCost: 98
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -464,8 +479,8 @@ MonoBehaviour:
     prerequisiteId: Progress_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 220
-    costGrowthPerRank: 1.6
+    baseCost: 330
+    costGrowthPerRank: 2
     effectType: 3
     effectPerRank: 0.15
     unlockBookResourceId: 
@@ -475,11 +490,11 @@ MonoBehaviour:
     displayName: Scribe's Diligence I
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 6
-    costGrowthPerRank: 1.6
+    baseCost: 9
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -492,8 +507,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 10
-    costGrowthPerRank: 1.6
+    baseCost: 15
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -506,8 +521,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -520,8 +535,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 20
-    costGrowthPerRank: 1.6
+    baseCost: 30
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -534,8 +549,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 30
-    costGrowthPerRank: 1.6
+    baseCost: 45
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -548,8 +563,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 45
-    costGrowthPerRank: 1.6
+    baseCost: 68
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -562,8 +577,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 65
-    costGrowthPerRank: 1.6
+    baseCost: 98
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -576,8 +591,8 @@ MonoBehaviour:
     prerequisiteId: Milestone_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 220
-    costGrowthPerRank: 1.6
+    baseCost: 330
+    costGrowthPerRank: 2
     effectType: 4
     effectPerRank: 0.1
     unlockBookResourceId: 
@@ -587,11 +602,11 @@ MonoBehaviour:
     displayName: Grace of Memorization I
     description: +2% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 8
-    costGrowthPerRank: 1.6
+    baseCost: 12
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -604,8 +619,8 @@ MonoBehaviour:
     prerequisiteId: Grace_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 12
-    costGrowthPerRank: 1.6
+    baseCost: 18
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -618,8 +633,8 @@ MonoBehaviour:
     prerequisiteId: Grace_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 18
-    costGrowthPerRank: 1.6
+    baseCost: 27
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -632,8 +647,8 @@ MonoBehaviour:
     prerequisiteId: Grace_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 25
-    costGrowthPerRank: 1.6
+    baseCost: 38
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -646,8 +661,8 @@ MonoBehaviour:
     prerequisiteId: Grace_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 35
-    costGrowthPerRank: 1.6
+    baseCost: 53
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.03
     unlockBookResourceId: 
@@ -660,8 +675,8 @@ MonoBehaviour:
     prerequisiteId: Grace_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 55
-    costGrowthPerRank: 1.6
+    baseCost: 83
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -674,8 +689,8 @@ MonoBehaviour:
     prerequisiteId: Grace_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 85
-    costGrowthPerRank: 1.6
+    baseCost: 128
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.025
     unlockBookResourceId: 
@@ -688,8 +703,8 @@ MonoBehaviour:
     prerequisiteId: Grace_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 300
-    costGrowthPerRank: 1.6
+    baseCost: 450
+    costGrowthPerRank: 2
     effectType: 5
     effectPerRank: 0.15
     unlockBookResourceId: 
@@ -699,11 +714,11 @@ MonoBehaviour:
     displayName: Swift Unlock I
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 6
-    costGrowthPerRank: 1.6
+    baseCost: 9
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.015
     unlockBookResourceId: 
@@ -716,8 +731,8 @@ MonoBehaviour:
     prerequisiteId: Discount_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 10
-    costGrowthPerRank: 1.6
+    baseCost: 15
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.015
     unlockBookResourceId: 
@@ -730,8 +745,8 @@ MonoBehaviour:
     prerequisiteId: Discount_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.015
     unlockBookResourceId: 
@@ -744,8 +759,8 @@ MonoBehaviour:
     prerequisiteId: Discount_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 20
-    costGrowthPerRank: 1.6
+    baseCost: 30
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -758,8 +773,8 @@ MonoBehaviour:
     prerequisiteId: Discount_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 30
-    costGrowthPerRank: 1.6
+    baseCost: 45
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.02
     unlockBookResourceId: 
@@ -772,8 +787,8 @@ MonoBehaviour:
     prerequisiteId: Discount_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 45
-    costGrowthPerRank: 1.6
+    baseCost: 68
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.015
     unlockBookResourceId: 
@@ -786,8 +801,8 @@ MonoBehaviour:
     prerequisiteId: Discount_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 65
-    costGrowthPerRank: 1.6
+    baseCost: 98
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.015
     unlockBookResourceId: 
@@ -800,8 +815,8 @@ MonoBehaviour:
     prerequisiteId: Discount_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 220
-    costGrowthPerRank: 1.6
+    baseCost: 330
+    costGrowthPerRank: 2
     effectType: 6
     effectPerRank: 0.08
     unlockBookResourceId: 
@@ -811,11 +826,11 @@ MonoBehaviour:
     displayName: Manager's Calling I
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 10
-    costGrowthPerRank: 1.6
+    baseCost: 15
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -828,8 +843,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_0
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 15
-    costGrowthPerRank: 1.6
+    baseCost: 23
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -842,8 +857,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_1
     prerequisiteRankRequired: 1
     maxRank: 1
-    baseCost: 20
-    costGrowthPerRank: 1.6
+    baseCost: 30
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -856,8 +871,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_2
     prerequisiteRankRequired: 1
     maxRank: 3
-    baseCost: 30
-    costGrowthPerRank: 1.6
+    baseCost: 45
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -870,8 +885,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_3
     prerequisiteRankRequired: 3
     maxRank: 3
-    baseCost: 45
-    costGrowthPerRank: 1.6
+    baseCost: 68
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -884,8 +899,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_4
     prerequisiteRankRequired: 3
     maxRank: 5
-    baseCost: 70
-    costGrowthPerRank: 1.6
+    baseCost: 105
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -898,8 +913,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_5
     prerequisiteRankRequired: 5
     maxRank: 5
-    baseCost: 100
-    costGrowthPerRank: 1.6
+    baseCost: 150
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 1
     unlockBookResourceId: 
@@ -912,8 +927,8 @@ MonoBehaviour:
     prerequisiteId: Unlock_6
     prerequisiteRankRequired: 5
     maxRank: 1
-    baseCost: 350
-    costGrowthPerRank: 1.6
+    baseCost: 525
+    costGrowthPerRank: 2
     effectType: 7
     effectPerRank: 3
     unlockBookResourceId: 
@@ -923,8 +938,8 @@ MonoBehaviour:
     displayName: Exodus
     description: Unlocks Exodus for purchase on the Books tab.
     branch: Book Progression
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisiteId: Core
+    prerequisiteRankRequired: 1
     maxRank: 1
     baseCost: 30
     costGrowthPerRank: 1

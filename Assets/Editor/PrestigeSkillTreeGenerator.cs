@@ -38,48 +38,79 @@ namespace ClickerGenesis.EditorTools
             // next one unlocks" behavior from the design brief.
             int[] shape = { 1, 1, 1, 3, 3, 5, 5, 1 };
 
+            // Cost curve retuned 2026-08-06 (user's explicit ask: "the amount of grace they're
+            // able to spend per item also goes up by a significant amount between each skill they
+            // unlock... so that they're required to reset"). Base costs bumped ~1.5x and the
+            // per-rank growth rate (see BuildBranch's costGrowthPerRank) raised from 1.6 to 2.0 -
+            // together these compound hard on the 5-rank nodes (roughly 3x the old total cost by
+            // the time a branch reaches its capstone), pushing toward needing a Reset's bigger
+            // Grace payout instead of casual Free-prestige grinding. Same "placeholder pending
+            // playtesting" rule as every other numeric constant in this project.
             var branches = new BranchSpec[]
             {
                 new BranchSpec { name = "Ink Flow", flavor = "Ink", capstoneName = "River of Living Ink",
                     effectType = SkillEffectType.IncomeMultiplier, ranks = shape,
                     perRankEffect = new double[] { 0.02, 0.02, 0.02, 0.03, 0.03, 0.025, 0.025, 0.15 },
-                    baseCost = new double[] { 5, 8, 12, 15, 25, 40, 70, 250 } },
+                    baseCost = new double[] { 8, 12, 18, 23, 38, 60, 105, 375 } },
 
                 new BranchSpec { name = "Steady Hand", flavor = "Tap", capstoneName = "Scribe's Unshaking Hand",
                     effectType = SkillEffectType.ClickPowerMultiplier, ranks = shape,
                     perRankEffect = new double[] { 0.025, 0.025, 0.025, 0.03, 0.03, 0.025, 0.025, 0.15 },
-                    baseCost = new double[] { 5, 8, 12, 15, 25, 40, 70, 250 } },
+                    baseCost = new double[] { 8, 12, 18, 23, 38, 60, 105, 375 } },
 
                 new BranchSpec { name = "Overseer's Wisdom", flavor = "Manager", capstoneName = "Joseph's Full Storehouse",
                     effectType = SkillEffectType.ManagerBonusBoost, ranks = shape,
                     perRankEffect = new double[] { 0.02, 0.02, 0.02, 0.025, 0.025, 0.02, 0.02, 0.10 },
-                    baseCost = new double[] { 10, 15, 22, 30, 45, 65, 90, 300 } },
+                    baseCost = new double[] { 15, 23, 33, 45, 68, 98, 135, 450 } },
 
                 new BranchSpec { name = "Illuminated Pages", flavor = "Progress", capstoneName = "Marginalia of the Faithful",
                     effectType = SkillEffectType.ProgressMultiplierBoost, ranks = shape,
                     perRankEffect = new double[] { 0.02, 0.02, 0.02, 0.03, 0.03, 0.025, 0.025, 0.15 },
-                    baseCost = new double[] { 6, 10, 15, 20, 30, 45, 65, 220 } },
+                    baseCost = new double[] { 9, 15, 23, 30, 45, 68, 98, 330 } },
 
                 new BranchSpec { name = "Scribe's Diligence", flavor = "Milestone", capstoneName = "Tireless Copyist",
                     effectType = SkillEffectType.ScribeMilestoneBoost, ranks = shape,
                     perRankEffect = new double[] { 0.02, 0.02, 0.02, 0.025, 0.025, 0.02, 0.02, 0.10 },
-                    baseCost = new double[] { 6, 10, 15, 20, 30, 45, 65, 220 } },
+                    baseCost = new double[] { 9, 15, 23, 30, 45, 68, 98, 330 } },
 
                 new BranchSpec { name = "Grace of Memorization", flavor = "Grace", capstoneName = "Perfect Recall",
                     effectType = SkillEffectType.GraceGainBonus, ranks = shape,
                     perRankEffect = new double[] { 0.02, 0.02, 0.02, 0.03, 0.03, 0.025, 0.025, 0.15 },
-                    baseCost = new double[] { 8, 12, 18, 25, 35, 55, 85, 300 } },
+                    baseCost = new double[] { 12, 18, 27, 38, 53, 83, 128, 450 } },
 
                 new BranchSpec { name = "Swift Unlock", flavor = "Discount", capstoneName = "Open Door",
                     effectType = SkillEffectType.PricingDiscount, ranks = shape,
                     perRankEffect = new double[] { 0.015, 0.015, 0.015, 0.02, 0.02, 0.015, 0.015, 0.08 },
-                    baseCost = new double[] { 6, 10, 15, 20, 30, 45, 65, 220 } },
+                    baseCost = new double[] { 9, 15, 23, 30, 45, 68, 98, 330 } },
 
                 new BranchSpec { name = "Manager's Calling", flavor = "Unlock", capstoneName = "Called Before Their Time",
                     effectType = SkillEffectType.ManagerUnlockLevelDiscount, ranks = shape,
                     perRankEffect = new double[] { 1, 1, 1, 1, 1, 1, 1, 3 },
-                    baseCost = new double[] { 10, 15, 20, 30, 45, 70, 100, 350 } },
+                    baseCost = new double[] { 15, 23, 30, 45, 68, 105, 150, 525 } },
             };
+
+            // Central hub node (2026-08-06, user's explicit correction: "you have to buy the core
+            // in the middle first, which means you need to make all of these skill trees connect
+            // to the one in the middle" - not merely "any Grace unlocks any branch root"). Every
+            // branch root below - all 8 economy branches AND Book Progression's first node - now
+            // requires Core at rank 1, replacing the old bare `prerequisiteId = null` roots.
+            config.nodes.Add(new PrestigeSkillNode
+            {
+                id = "Core",
+                displayName = "Grace Awakened",
+                description = "Awakens your capacity to draw on Grace. Every skill on this tree - every branch, and Book Progression - requires this first.",
+                branch = "Core",
+                prerequisiteId = null,
+                prerequisiteRankRequired = 0,
+                maxRank = 1,
+                baseCost = 8,
+                costGrowthPerRank = 1.0,
+                effectType = SkillEffectType.IncomeMultiplier,
+                effectPerRank = 0,
+                unlockBookResourceId = "",
+                unlockBookDisplayName = "",
+                isCapstone = false,
+            });
 
             foreach (var b in branches)
             {
@@ -108,8 +139,11 @@ namespace ClickerGenesis.EditorTools
 
         private static void BuildBranch(PrestigeSkillTreeConfig config, BranchSpec b)
         {
-            string prevId = null;
-            int prevMaxRank = 0;
+            // Every branch's first node now requires Core at rank 1 instead of being a bare,
+            // no-prerequisite root (2026-08-06 hub redesign) - prevId/prevMaxRank start seeded
+            // with Core's own id/maxRank rather than null/0.
+            string prevId = "Core";
+            int prevMaxRank = 1;
             for (int i = 0; i < b.ranks.Length; i++)
             {
                 bool isCapstone = i == b.ranks.Length - 1;
@@ -123,10 +157,10 @@ namespace ClickerGenesis.EditorTools
                     description = DescribeEffect(b.effectType, b.perRankEffect[i]),
                     branch = b.name,
                     prerequisiteId = prevId,
-                    prerequisiteRankRequired = prevId == null ? 0 : prevMaxRank,
+                    prerequisiteRankRequired = prevMaxRank,
                     maxRank = b.ranks[i],
                     baseCost = b.baseCost[i],
-                    costGrowthPerRank = 1.6,
+                    costGrowthPerRank = 2.0,
                     effectType = b.effectType,
                     effectPerRank = b.perRankEffect[i],
                     unlockBookResourceId = "",
@@ -160,7 +194,11 @@ namespace ClickerGenesis.EditorTools
 
         private static void BuildBookBranch(PrestigeSkillTreeConfig config)
         {
-            string prevId = null;
+            // First book node also requires Core at rank 1 (2026-08-06 hub redesign, user
+            // confirmed Book Progression is gated same as the economy branches) - prevId seeded
+            // with "Core" instead of null makes prerequisiteRankRequired below resolve to 1
+            // automatically for Exodus, same mechanism BuildBranch uses.
+            string prevId = "Core";
             double cost = 30;
             foreach (var (id, name) in RemainingOldTestament)
             {
