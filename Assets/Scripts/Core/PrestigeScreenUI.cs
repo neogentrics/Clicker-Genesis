@@ -31,6 +31,25 @@ namespace ClickerGenesis.Core
         public TMP_Text PrestigeResetButtonLabel;
         public TMP_Text StatusLabel;
 
+        [Header("Zoom (105 nodes need more room to navigate than pan alone gives)")]
+        public Button ZoomInButton;
+        public Button ZoomOutButton;
+        private const float MinZoom = 0.35f;
+        private const float MaxZoom = 1.2f;
+        private const float ZoomStep = 0.15f;
+
+        [Header("Description box (2026-08-05 - fixed box instead of a floating tooltip, so a\n" +
+            "hovered node's description is readable even when it's too small/locked to click)")]
+        public TMP_Text DescriptionLabel;
+        private const string DescriptionIdleText = "Hover a skill to see what it does.";
+
+        [Header("Purchase confirmation popup (2026-08-05 - buying is no longer instant-on-click)")]
+        public GameObject ConfirmPanel;
+        public TMP_Text ConfirmMessageLabel;
+        public Button ConfirmYesButton;
+        public Button ConfirmNoButton;
+        private PrestigeSkillNode pendingPurchaseNode;
+
         private GameLoopController Controller => GameLoopController.Instance;
 
         private class NodeVisual
@@ -38,6 +57,7 @@ namespace ClickerGenesis.Core
             public PrestigeSkillNode Node;
             public Button Button;
             public Image Circle;
+            public Image Icon;
             public TMP_Text NameLabel;
             public TMP_Text RankLabel;
         }
@@ -95,10 +115,26 @@ namespace ClickerGenesis.Core
 
             if (PrestigeButton != null) PrestigeButton.onClick.AddListener(() => HandlePrestige(false));
             if (PrestigeResetButton != null) PrestigeResetButton.onClick.AddListener(() => HandlePrestige(true));
+            if (ZoomInButton != null) ZoomInButton.onClick.AddListener(() => Zoom(ZoomStep));
+            if (ZoomOutButton != null) ZoomOutButton.onClick.AddListener(() => Zoom(-ZoomStep));
+            if (ConfirmYesButton != null) ConfirmYesButton.onClick.AddListener(HandleConfirmYes);
+            if (ConfirmNoButton != null) ConfirmNoButton.onClick.AddListener(HandleConfirmNo);
+            if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
+            DescriptionBoxHover.IdleText = DescriptionIdleText;
+            if (DescriptionLabel != null) DescriptionLabel.text = DescriptionIdleText;
             if (Controller != null) Controller.OnStateChanged += Refresh;
 
             BuildTree();
             Refresh();
+        }
+
+        /// <summary>105 nodes spread across a large radial layout need more room to navigate than
+        /// panning alone gives - scales Content uniformly, clamped, around its own center.</summary>
+        private void Zoom(float delta)
+        {
+            if (Content == null) return;
+            float newScale = Mathf.Clamp(Content.localScale.x + delta, MinZoom, MaxZoom);
+            Content.localScale = new Vector3(newScale, newScale, 1f);
         }
 
         private void OnDestroy()
@@ -123,7 +159,6 @@ namespace ClickerGenesis.Core
             var config = Controller.SkillTreeConfig;
             if (config == null || Content == null || NodeButtonTemplate == null) return;
 
-            var branches = config.branchOrder;
             var byBranch = new Dictionary<string, List<PrestigeSkillNode>>();
             foreach (var node in config.nodes)
             {
@@ -134,27 +169,52 @@ namespace ClickerGenesis.Core
 
             var positions = new Dictionary<string, Vector2>();
 
-            for (int b = 0; b < branches.Count; b++)
+            // Economy branches: 8 straight spokes from the hub, evenly spaced. Radius widened
+            // (2026-08-05, user's explicit "spread this out, can't read the labels" correction)
+            // so the arc length between neighboring spokes clears the ~220-wide name label at
+            // every ring, not just the outer ones.
+            var economyBranches = config.branchOrder.FindAll(b => b != "Book Progression");
+            const float economyBaseRadius = 320f;
+            const float economyRadiusStep = 210f;
+            float economyMaxRadius = economyBaseRadius + 7 * economyRadiusStep;
+
+            for (int b = 0; b < economyBranches.Count; b++)
             {
-                string branchName = branches[b];
+                string branchName = economyBranches[b];
                 if (!byBranch.TryGetValue(branchName, out var nodes)) continue;
 
-                float branchAngle = (360f / branches.Count) * b;
-                bool isBookBranch = branchName == "Book Progression";
-                float radiusStep = isBookBranch ? 70f : 150f;
+                float branchAngle = (360f / economyBranches.Count) * b;
                 Color color = BranchColors[b % BranchColors.Length];
 
                 for (int i = 0; i < nodes.Count; i++)
                 {
                     var node = nodes[i];
-                    // Book Progression drifts its angle slightly per node so its long chain reads
-                    // as a spiral arm instead of one straight overlapping line of 41 circles.
-                    float angle = branchAngle + (isBookBranch ? i * 3f : 0f);
-                    float radius = 220f + i * radiusStep;
-                    Vector2 pos = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius;
+                    float radius = economyBaseRadius + i * economyRadiusStep;
+                    Vector2 pos = new Vector2(Mathf.Cos(branchAngle * Mathf.Deg2Rad), Mathf.Sin(branchAngle * Mathf.Deg2Rad)) * radius;
                     positions[node.id] = pos;
-
                     CreateNodeVisual(node, pos, color);
+                }
+            }
+
+            // Book Progression: a full outer ring encircling the whole economy wheel instead of
+            // the old "angle += i*3f" spiral-drift hack, which read as an ugly curving branch and
+            // crammed 41 nodes' labels into overlapping space. One node per remaining OT book +
+            // 3 NT gate nodes, spread evenly across the full 360 degrees in canonical order and
+            // connected node-to-node (existing prerequisite-line code below draws the chain
+            // automatically) - the ring sits entirely outside the economy spokes' reach, framing
+            // them the way a wheel's rim frames its spokes.
+            if (byBranch.TryGetValue("Book Progression", out var bookNodes))
+            {
+                float bookRingRadius = economyMaxRadius + 380f;
+                Color bookColor = BranchColors[BranchColors.Length - 1];
+
+                for (int i = 0; i < bookNodes.Count; i++)
+                {
+                    var node = bookNodes[i];
+                    float angle = (360f / bookNodes.Count) * i;
+                    Vector2 pos = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * bookRingRadius;
+                    positions[node.id] = pos;
+                    CreateNodeVisual(node, pos, bookColor);
                 }
             }
 
@@ -183,6 +243,7 @@ namespace ClickerGenesis.Core
             var circle = go.GetComponent<Image>();
             circle.color = color;
 
+            Image iconImgRef = null;
             var icon = LookupIcon(node.branch);
             if (icon != null)
             {
@@ -201,6 +262,7 @@ namespace ClickerGenesis.Core
                 float luminance = 0.299f * color.r + 0.587f * color.g + 0.114f * color.b;
                 iconImg.color = luminance > 0.6f ? new Color(0.15f, 0.1f, 0.05f, 1f) : Color.white;
                 iconGo.transform.SetAsFirstSibling(); // behind NameLabel/RankLabel, in front of Circle
+                iconImgRef = iconImg;
             }
 
             var nameLabel = go.transform.Find("NameLabel")?.GetComponent<TMP_Text>();
@@ -210,7 +272,7 @@ namespace ClickerGenesis.Core
             if (rankLabel != null) rankLabel.gameObject.SetActive(node.maxRank > 1);
 
             var button = go.GetComponent<Button>();
-            button.onClick.AddListener(() => Controller.BuySkill(node.id));
+            button.onClick.AddListener(() => ShowConfirmPurchase(node));
 
             BuildTooltip(go, node);
 
@@ -219,19 +281,48 @@ namespace ClickerGenesis.Core
                 Node = node,
                 Button = button,
                 Circle = circle,
+                Icon = iconImgRef,
                 NameLabel = nameLabel,
                 RankLabel = rankLabel,
             });
         }
 
-        /// <summary>Uses the scene's shared TooltipOverlay (see TooltipOverlay.cs) instead of a
-        /// per-node child GameObject - a per-node tooltip would render behind whatever node/line
-        /// happens to be drawn after it in Content's sibling order, same bug the shared overlay
-        /// fixes everywhere else.</summary>
+        /// <summary>Nodes use the fixed DescriptionBox instead of the floating TooltipOverlay used
+        /// everywhere else (2026-08-05, user's idea) - with 105 small nodes packed into the tree,
+        /// aiming a hover precisely enough for a floating tooltip was fiddly; a box that's always
+        /// in the same place reads the same regardless of node size or hover precision.</summary>
         private void BuildTooltip(GameObject nodeGo, PrestigeSkillNode node)
         {
-            var hover = nodeGo.AddComponent<HoverTooltip>();
+            var hover = nodeGo.AddComponent<DescriptionBoxHover>();
+            hover.Target = DescriptionLabel;
             hover.Text = node.description;
+        }
+
+        /// <summary>Buying is no longer instant-on-click (2026-08-05, user's explicit ask) - shows
+        /// the cost and waits for Yes/No instead of spending Grace the moment a node is tapped.</summary>
+        private void ShowConfirmPurchase(PrestigeSkillNode node)
+        {
+            if (ConfirmPanel == null) { Controller.BuySkill(node.id); return; }
+
+            pendingPurchaseNode = node;
+            double cost = Controller.Skills.GetNextCost(node);
+            int rank = Controller.Skills.GetRank(node.id);
+            if (ConfirmMessageLabel != null)
+                ConfirmMessageLabel.text = $"Buy {node.displayName} (rank {rank + 1}/{node.maxRank}) for {NumberFormatter.FormatWhole(cost)} Grace?";
+            ConfirmPanel.SetActive(true);
+        }
+
+        private void HandleConfirmYes()
+        {
+            if (pendingPurchaseNode != null) Controller.BuySkill(pendingPurchaseNode.id);
+            pendingPurchaseNode = null;
+            if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
+        }
+
+        private void HandleConfirmNo()
+        {
+            pendingPurchaseNode = null;
+            if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
         }
 
         private void CreateLine(Vector2 from, Vector2 to)
@@ -290,9 +381,22 @@ namespace ClickerGenesis.Core
 
                 v.Button.interactable = canBuy;
 
+                // Brightness tracks OWNERSHIP (rank > 0), not just "unlocked" - 2026-08-05, real
+                // user correction: branch-root nodes (no prerequisite) were rendering at near-full
+                // brightness before a single rank had been bought, reading as "already claimed"
+                // when nothing had. A node the player hasn't spent Grace on yet should look dark
+                // regardless of whether its prerequisite is satisfied; only owning at least one
+                // rank lights it up. Locked (prerequisite not met, can never be bought yet) is the
+                // dimmest; unlocked-but-not-yet-bought is a little brighter so it still reads as
+                // reachable; owning any rank (partial or maxed) is fully lit.
                 Color c = v.Circle.color;
-                float targetAlpha = unlocked ? 1f : 0.35f;
+                float targetAlpha = rank > 0 ? 1f : (unlocked ? 0.5f : 0.3f);
                 v.Circle.color = new Color(c.r, c.g, c.b, targetAlpha);
+                if (v.Icon != null)
+                {
+                    Color ic = v.Icon.color;
+                    v.Icon.color = new Color(ic.r, ic.g, ic.b, targetAlpha);
+                }
 
                 if (v.RankLabel != null && node.maxRank > 1)
                     v.RankLabel.text = $"{rank}/{node.maxRank}";
