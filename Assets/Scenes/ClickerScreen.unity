@@ -1391,7 +1391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -16}
+  m_AnchoredPosition: {x: 0, y: -32}
   m_SizeDelta: {x: -20, y: 44}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &199447170
@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Permanent Upgrades
+  m_text: Active Upgrades
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a1f415683958064d98af2214b96e01a, type: 2}
   m_sharedMaterial: {fileID: 1627842778777903627, guid: 2a1f415683958064d98af2214b96e01a, type: 2}
@@ -3673,8 +3673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1580, y: 210}
-  m_SizeDelta: {x: 320, y: 590}
+  m_AnchoredPosition: {x: 1510, y: 210}
+  m_SizeDelta: {x: 390, y: 590}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1097973679
 MonoBehaviour:
@@ -4639,6 +4639,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1304192714}
   - component: {fileID: 1304192715}
+  - component: {fileID: 1304192716}
   m_Layer: 0
   m_Name: UpgradesScrollView
   m_TagString: Untagged
@@ -4696,6 +4697,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1304192716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304192713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 516710c8af2f65540819bb5d1edd5b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.PermanentUpgradesListUI
+  Content: {fileID: 1262565284}
+  RowTemplate: {fileID: 2082300449}
 --- !u!1 &1350498747
 GameObject:
   m_ObjectHideFlags: 0
@@ -7822,7 +7837,6 @@ MonoBehaviour:
   AutoBuyToggleButtonLabel: {fileID: 499154197}
   AutoBuyReserveButton: {fileID: 667506476}
   AutoBuyReserveButtonLabel: {fileID: 115093810}
-  PermanentUpgradesLabel: {fileID: 2082300450}
 --- !u!114 &2069326211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8074,12 +8088,12 @@ GameObject:
   - component: {fileID: 2082300452}
   - component: {fileID: 2082300451}
   m_Layer: 0
-  m_Name: PermanentUpgradesLabel
+  m_Name: RowTemplate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2082300450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8231,7 +8245,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 144, y: -25}
-  m_SizeDelta: {x: 288, y: 0}
+  m_SizeDelta: {x: 288, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2133826179
 GameObject:

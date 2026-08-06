@@ -61,6 +61,15 @@ namespace ClickerGenesis.Core
             public TMP_Text NameLabel;
             public TMP_Text RankLabel;
             public DescriptionBoxHover Hover;
+            /// <summary>The connecting line drawn from this node's prerequisite to this node (null
+            /// for nodes with no prerequisite, i.e. Core) - hidden/shown together with the node
+            /// itself for progressive visibility (2026-08-06).</summary>
+            public GameObject IncomingLine;
+            /// <summary>Persistent glow ring shown once the node is owned (rank &gt; 0), distinct
+            /// from the "affordable to buy" brightness step that already exists for unowned nodes
+            /// (2026-08-06, user's explicit ask: owned nodes need their own visual state, not just
+            /// "brighter than locked").</summary>
+            public Outline OwnedGlow;
         }
 
         /// <summary>One icon per branch (drawn white on top of the branch-colored circle) so nodes
@@ -229,10 +238,18 @@ namespace ClickerGenesis.Core
             // 3 NT gate nodes, spread evenly across the full 360 degrees in canonical order and
             // connected node-to-node (existing prerequisite-line code below draws the chain
             // automatically) - the ring sits entirely outside the economy spokes' reach, framing
-            // them the way a wheel's rim frames its spokes.
+            // them the way a wheel's rim frames its spokes. Gap tightened 380->120 (2026-08-06,
+            // real user report: "no one's gonna scroll around looking for those books" - the ring
+            // sat too far from everything else at the wide gap. Deliberately kept the ring shape
+            // rather than reverting to a literal spiral - that's the exact layout bug #47 replaced
+            // this with in the first place ("curves up to the right and then to the left... can't
+            // even read the descriptions"), and a spiral tight enough to sit close to center would
+            // reproduce that same overlap problem. A tighter ring solves the same "too far away"
+            // complaint without bringing back the one it fixed - flagged for the user to weigh in
+            // on if they specifically want the interleaved-spiral behavior instead.
             if (byBranch.TryGetValue("Book Progression", out var bookNodes))
             {
-                float bookRingRadius = economyMaxRadius + 380f;
+                float bookRingRadius = economyMaxRadius + 120f;
                 Color bookColor = BranchColors[BranchColors.Length - 1];
 
                 for (int i = 0; i < bookNodes.Count; i++)
@@ -252,7 +269,31 @@ namespace ClickerGenesis.Core
                 if (string.IsNullOrEmpty(node.prerequisiteId)) continue;
                 if (!positions.TryGetValue(node.id, out var to)) continue;
                 if (!positions.TryGetValue(node.prerequisiteId, out var from)) continue;
-                CreateLine(from, to);
+                var line = CreateLine(from, to);
+                var nv = nodeVisuals.Find(x => x.Node.id == node.id);
+                if (nv != null) nv.IncomingLine = line;
+            }
+
+            // Progressive visibility (2026-08-06, user's explicit design ask): hide every node
+            // whose prerequisite chain isn't satisfied yet, applied once right after the whole
+            // tree is built (Refresh() keeps it current afterward as ranks are bought). Nodes
+            // aren't destroyed/recreated on reveal - they're built once here and just toggled -
+            // simpler and avoids re-running the whole positions/lines pass mid-game.
+            ApplyNodeVisibility();
+        }
+
+        /// <summary>Hides every node (and its incoming line) whose prerequisite rank isn't met yet
+        /// - see PrestigeSkillSystem.PrerequisiteSatisfied for why this deliberately ignores the
+        /// separate reset gate. Called once after BuildTree and again every Refresh() so newly
+        /// revealed nodes appear the instant their prerequisite is bought.</summary>
+        private void ApplyNodeVisibility()
+        {
+            if (Controller?.Skills == null) return;
+            foreach (var v in nodeVisuals)
+            {
+                bool revealed = Controller.Skills.PrerequisiteSatisfied(v.Node);
+                if (v.Button.gameObject.activeSelf != revealed) v.Button.gameObject.SetActive(revealed);
+                if (v.IncomingLine != null && v.IncomingLine.activeSelf != revealed) v.IncomingLine.SetActive(revealed);
             }
         }
 
@@ -269,6 +310,15 @@ namespace ClickerGenesis.Core
 
             var circle = go.GetComponent<Image>();
             circle.color = color;
+
+            // Owned-glow ring (2026-08-06) - a real Outline component instead of a new sprite
+            // asset, so "this is active" is visible at a glance regardless of how the background
+            // renders. Starts disabled; Refresh() turns it on once rank > 0.
+            var glow = go.AddComponent<Outline>();
+            glow.effectColor = new Color(1f, 0.95f, 0.55f, 0.95f);
+            glow.effectDistance = new Vector2(5f, 5f);
+            glow.useGraphicAlpha = false;
+            glow.enabled = false;
 
             Image iconImgRef = null;
             var icon = LookupIcon(node.branch);
@@ -312,6 +362,7 @@ namespace ClickerGenesis.Core
                 NameLabel = nameLabel,
                 RankLabel = rankLabel,
                 Hover = hover,
+                OwnedGlow = glow,
             });
         }
 
@@ -367,9 +418,9 @@ namespace ClickerGenesis.Core
             if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
         }
 
-        private void CreateLine(Vector2 from, Vector2 to)
+        private GameObject CreateLine(Vector2 from, Vector2 to)
         {
-            if (LineTemplate == null) return;
+            if (LineTemplate == null) return null;
             var go = Instantiate(LineTemplate, Content);
             go.name = "Line";
             go.SetActive(true);
@@ -383,6 +434,7 @@ namespace ClickerGenesis.Core
             rt.anchoredPosition = mid;
             rt.sizeDelta = new Vector2(length, 6f);
             rt.localRotation = Quaternion.Euler(0, 0, angle);
+            return go;
         }
 
         private void Refresh()
@@ -412,9 +464,13 @@ namespace ClickerGenesis.Core
                         : "Reset (Locked)";
             }
 
+            ApplyNodeVisibility();
+
             double grace = Controller.Prestige.Grace;
             foreach (var v in nodeVisuals)
             {
+                if (!v.Button.gameObject.activeSelf) continue; // not revealed yet - nothing to update
+
                 var node = v.Node;
                 int rank = Controller.Skills.GetRank(node.id);
                 bool hasReset = Controller.Prestige.ResetPrestigeCount > 0;
@@ -440,6 +496,10 @@ namespace ClickerGenesis.Core
                     Color ic = v.Icon.color;
                     v.Icon.color = new Color(ic.r, ic.g, ic.b, targetAlpha);
                 }
+                // Owned glow is its own distinct signal from the brightness step above - "lit up"
+                // alone already meant "affordable or owned" before this, which didn't distinguish
+                // "you could buy this" from "you already did" (2026-08-06 user ask).
+                if (v.OwnedGlow != null) v.OwnedGlow.enabled = rank > 0;
 
                 if (v.RankLabel != null && node.maxRank > 1)
                     v.RankLabel.text = $"{rank}/{node.maxRank}";

@@ -168,23 +168,29 @@ namespace ClickerGenesis.Core
 
                 row.NameText.text = def.displayName;
 
-                string desc = def.flavorText;
+                // No flavor text on the row anymore (2026-08-06, user's explicit correction, same
+                // treatment already applied to ManagerListUI) - stats only, built as a list of
+                // lines (not string concatenation with an assumed-first entry) so any subset can
+                // be present without a stray leading blank line. The flavor/origin text moves to a
+                // hover/click-through on the row's icon once the Library/genealogy screens exist
+                // (backlog, not built yet) - def.flavorText is intentionally unused here now.
+                var descLines = new System.Collections.Generic.List<string>();
                 if (milestoneMultiplier > 1f)
                     // No "(N owned)" - the milestone tier itself is the meaningful information;
                     // the raw owned count is already shown separately on the Owned line below.
-                    desc += $"\n<b><color=#D4372A>×{milestoneMultiplier:F1} milestone bonus!</color></b>";
+                    descLines.Add($"<b><color=#D4372A>×{milestoneMultiplier:F1} milestone bonus!</color></b>");
                 // Grace Skill Tree's Scribe's Diligence branch boosts milestone bonuses globally
                 // (folded into EffectiveInkPerSecond's skillIncomeBoost, not this tier's own curve
                 // value) - surfaced here too so the row doesn't read as if the skill does nothing
                 // (2026-08-06, real user report: "that should show here on this screen also").
                 double scribeMilestoneBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ScribeMilestoneBoost);
                 if (scribeMilestoneBoost > 0)
-                    desc += $"\n<color=#2E7D46>+{scribeMilestoneBoost * 100:F0}% from Scribe's Diligence</color>";
+                    descLines.Add($"<color=#2E7D46>+{scribeMilestoneBoost * 100:F0}% from Scribe's Diligence</color>");
                 // Manager line only appears once actually active - no "takes over at level N"
                 // spoiler beforehand, and simplified wording (no % breakdown) once it is active.
                 if (managerActive)
-                    desc += $"\n<color=#2E7D46>{def.managerName} is managing this scribe.</color>";
-                row.DescText.text = desc;
+                    descLines.Add($"<color=#2E7D46>{def.managerName} is managing this scribe.</color>");
+                row.DescText.text = string.Join("\n", descLines);
 
                 double managerBonusBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerBonusBoost);
                 row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier, managerBonusBoost))} Ink/s";

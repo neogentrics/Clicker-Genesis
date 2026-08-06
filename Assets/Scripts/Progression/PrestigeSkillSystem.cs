@@ -37,6 +37,18 @@ namespace ClickerGenesis.Progression
         public bool IsUnlocked(PrestigeSkillNode node, bool hasResetPrestiged)
         {
             if (node.requiresResetPrestige && !hasResetPrestiged) return false;
+            return PrerequisiteSatisfied(node);
+        }
+
+        /// <summary>Just the prerequisite-rank check, deliberately ignoring the reset gate (2026-08-06,
+        /// for the Skill Tree's progressive node VISIBILITY - a reset-gated capstone should still
+        /// become visible, showing "(Requires Reset)", once its prerequisite chain is maxed, rather
+        /// than staying invisible until a reset happens - that would hide the very information that
+        /// tells the player a reset unlocks it). IsUnlocked above is the "can this be bought right
+        /// now" check (includes the reset gate); this is the separate "has the player earned the
+        /// right to even SEE this node" check.</summary>
+        public bool PrerequisiteSatisfied(PrestigeSkillNode node)
+        {
             if (string.IsNullOrEmpty(node.prerequisiteId)) return true;
             return GetRank(node.prerequisiteId) >= node.prerequisiteRankRequired;
         }

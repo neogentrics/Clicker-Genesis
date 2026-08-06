@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,8 +55,8 @@ namespace ClickerGenesis.Core
         public Button AutoBuyReserveButton;
         public TMP_Text AutoBuyReserveButtonLabel;
 
-        [Header("Permanent upgrades panel (2026-08-06) - right of the Tap bottle, lists every owned skill-tree node")]
-        public TMP_Text PermanentUpgradesLabel;
+        // Active Upgrades panel is now its own component (PermanentUpgradesListUI, 2026-08-06
+        // rework) wired directly in the scene - ClickerScreenUI no longer holds a reference to it.
 
         // Live click-rate window (2026-08-06, user's ask: "measure it by the speed of the click...
         // let it go back down to whatever the passive is should they stop clicking"). Cosmetic
@@ -223,21 +222,9 @@ namespace ClickerGenesis.Core
             // ClickingPowerLabel is now driven every frame by Update() (live tap-rate meter,
             // 2026-08-06) instead of here - writing it in both places would race/flicker.
 
-            if (PermanentUpgradesLabel != null && Controller.Skills != null)
-            {
-                var purchased = Controller.Skills.GetAllPurchased();
-                if (purchased.Count == 0)
-                {
-                    PermanentUpgradesLabel.text = "No permanent upgrades yet — spend Grace on the Skill Tree.";
-                }
-                else
-                {
-                    var sb = new StringBuilder();
-                    foreach (var (node, rank) in purchased)
-                        sb.Append(node.displayName).Append(" (").Append(rank).Append('/').Append(node.maxRank).Append(")\n");
-                    PermanentUpgradesLabel.text = sb.ToString();
-                }
-            }
+            // Permanent Upgrades list is now its own component (PermanentUpgradesListUI, 2026-08-06
+            // rework) - one row per owned skill with its own hover tooltip, instead of a single
+            // text blob built here.
 
             var levels = Controller.Levels;
             LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
