@@ -184,6 +184,10 @@ namespace ClickerGenesis.Core
                 // specific gating (not the active book's cursor) - see
                 // GameLoopController.GenesisNextVerseIndex for why (Phase F book-switching, 2026-08-06).
                 bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.GenesisNextVerseIndex);
+                // The manager's own character verse (real CharacterIndex data, 2026-08-06) -
+                // deliberately separate from scribeTierUnlocked above, see ScribeSystem's doc
+                // comment on IsManagerVerseReached for why they can't share a field.
+                bool managerVerseReached = scribes.IsManagerVerseReached(row.TierIndex, Controller.GenesisNextVerseIndex);
 
                 // Row body is JUST the active bonus/perk now - no flavor text (2026-08-06, user's
                 // explicit correction). Built as separate lines so a future perk source (a
@@ -213,6 +217,14 @@ namespace ClickerGenesis.Core
                     // "Unlock" not "Unlocks" (2026-08-06, user correction) - reads as an instruction
                     // to the player, not a description of the button's own action.
                     row.CostText.text = $"Unlock {def.displayName} first";
+                    row.BuyButton.interactable = false;
+                }
+                else if (!managerVerseReached)
+                {
+                    // The character's own real verse hasn't been reached yet, even though the
+                    // scribe tier itself is already buyable (2026-08-06) - shows the actual
+                    // reference, same "don't just give a raw number" fix as the scribe rows.
+                    row.CostText.text = $"Unlocks at {DescribeGenesisVerse(def.managerUnlockAtVerseIndex)}";
                     row.BuyButton.interactable = false;
                 }
                 else if (!levelEligible)

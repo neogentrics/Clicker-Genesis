@@ -44,7 +44,7 @@ namespace ClickerGenesis.Economy
         public double costGrowthRate;
         public double baseInkPerSecond;
 
-        [Tooltip("Verse index (within the book) the player must have reached to unlock this tier. 0 = unlocked from the start.")]
+        [Tooltip("Verse index (within the book) the player must have reached to unlock this tier for purchase. Smooth early-game pacing value, NOT the manager character's real verse - see managerUnlockAtVerseIndex for that. 0 = unlocked from the start.")]
         public int unlockAtVerseIndex;
 
         [Header("Manager (optional — leave managerName empty for tiers with no manager)")]
@@ -53,6 +53,9 @@ namespace ClickerGenesis.Economy
 
         [Tooltip("Player level required for this tier's manager to activate. 0 = no manager on this tier.")]
         public int managerUnlockLevel;
+
+        [Tooltip("Verse index (within the book) at which this manager's character is actually first mentioned in scripture (2026-08-06, real CharacterIndex data) - gates the MANAGER specifically, deliberately separate from unlockAtVerseIndex above so the scribe tier itself stays buyable early while the named manager still waits for their real narrative moment.")]
+        public int managerUnlockAtVerseIndex;
 
         [Tooltip("Output multiplier bonus while the manager is active, e.g. 0.25 = +25%.")]
         public float managerBonusMultiplier = 0.25f;

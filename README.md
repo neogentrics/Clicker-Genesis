@@ -11,7 +11,7 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 
 ## Status
 
-**Version 0.3.0** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
+**Version 0.3.2** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -27,7 +27,7 @@ This is an active work-in-progress being built in public as part of a developmen
 ## Features implemented so far
 
 - Tap-to-earn Ink with a purchasable Click Power upgrade (smooth per-purchase growth + milestone multiplier breakpoints at 10/25/50/100 owned, shared with scribe scaling)
-- 8-tier Genesis scribe roster with named managers (Adam, Noah, Abraham, Jacob, Joseph) that grant passive output bonuses once a player-level threshold is reached, plus an auto-buy toggle with a spendable-Ink reserve floor
+- **19-tier Genesis scribe roster** (Reed Pen through Silver Cup) with named managers (Adam through Benjamin) gated on their real first-mention verse in scripture, plus a working **submanager system** — minor characters (Seth, Methuselah, Hagar, Melchizedek, and 15 others) hireable under a manager for a scribe-cost discount or an output-bonus boost, each with their own real verse gate. An auto-buy toggle with a spendable-Ink reserve floor covers the whole scribe list.
 - Full Genesis KJV text (50 chapters, 1,533 verses) plus all 38 remaining Old Testament books staged and switchable, sequential verse unlocking with a scrollable, referenced ("Genesis 1:1") verse list
 - Chapter bulk-buy ("Buy Next Chapter") with a documented 25% discount vs. buying verses individually, split into a free "Unlock Chapter" gate + a paid "Complete Chapter" bulk-buy
 - Bulk-buy multipliers (1x/5x/10x/20x, and up to 100x for Click Power) on both verse and click-power purchases

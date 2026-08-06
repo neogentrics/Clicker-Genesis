@@ -26,6 +26,10 @@ namespace ClickerGenesis.Core
         public GameObject RowTemplate;
         public Sprite ScrollIcon;
         public Sprite JournalIcon;
+        [Tooltip("Forbidden Fruit tier (2026-08-06) - a real thematic fit from the already-imported Homeless icon pack.")]
+        public Sprite AppleIcon;
+        [Tooltip("Joseph's Storehouse tier (2026-08-06) - grain/famine storehouse fits a bread icon.")]
+        public Sprite BreadIcon;
 
         [Header("Bulk buy (bug #26 - Scribes never had one like Verses/Click Power did)")]
         public Button MultiplierButton;
@@ -117,11 +121,17 @@ namespace ClickerGenesis.Core
                 };
 
                 row.NameText.text = def.displayName;
-                // Ark's Manifest moved from tier index 4 to 5 in the 19-tier roster (2026-08-06,
-                // CharacterIndex sync) - "Papyrus Scroll" (the old ScrollIcon's tier) no longer
-                // exists at all, so that icon has no home in the new roster and is left unused
-                // rather than misassigned to an unrelated tier.
-                row.Icon.sprite = def.id == "arks_manifest" ? JournalIcon : null;
+                // Icons only where a genuine thematic fit exists in the already-imported asset
+                // packs (2026-08-06, user's "add icons if you can" ask, best-effort) - forcing a
+                // mismatched icon (e.g. a coin on "Cain's City Wall") would read worse than the
+                // existing color-gradient fallback, so most tiers deliberately stay ungraded.
+                row.Icon.sprite = def.id switch
+                {
+                    "arks_manifest" => JournalIcon,
+                    "forbidden_fruit" => AppleIcon,
+                    "josephs_storehouse" => BreadIcon,
+                    _ => null,
+                };
                 row.Icon.color = row.Icon.sprite != null
                     ? Color.white
                     : Color.Lerp(Hex("#7A5C2E"), Hex("#D4AF37"), tierIndex / (float)(scribes.TierCount - 1));
@@ -158,7 +168,11 @@ namespace ClickerGenesis.Core
                     // repeating it on the name too is redundant (unlike verse/chapter rows, whose
                     // buttons show an actual price, not the literal word "Locked").
                     row.NameText.text = def.displayName;
-                    row.DescText.text = $"Unlocks after buying verse {def.unlockAtVerseIndex + 1}.";
+                    // Real "Genesis X:Y" reference, not a raw verse count (2026-08-06, real user
+                    // report: "they say that they unlock at, like, a verse, but then don't give the
+                    // verse reference... needs better instructions"). A player has no way to know
+                    // what a bare number like "verse 52" means relative to their current chapter.
+                    row.DescText.text = $"Unlocks at {DescribeGenesisVerse(def.unlockAtVerseIndex)}.";
                     row.OwnedText.text = "";
                     row.CostText.text = "Locked";
                     row.BuyButton.interactable = false;
@@ -219,6 +233,16 @@ namespace ClickerGenesis.Core
         {
             ColorUtility.TryParseHtmlString(hex, out var c);
             return c;
+        }
+
+        /// <summary>Same helper as ManagerListUI's - converts a Genesis-relative verse index into
+        /// a human "Genesis X:Y" reference (2026-08-06).</summary>
+        private string DescribeGenesisVerse(int verseIndex)
+        {
+            var db = Controller.GenesisVerseDatabase;
+            if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
+            var v = db.GetVerse(verseIndex);
+            return $"Genesis {v.Reference}";
         }
     }
 }

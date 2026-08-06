@@ -137,9 +137,19 @@ namespace ClickerGenesis.Economy
         /// <summary>A manager can only be bought once its OWN scribe tier is unlocked (verse
         /// progress), not just the level threshold - fixes a real bug where a manager (e.g. Noah)
         /// could be bought and would immediately show as "takes over at level N" on a scribe tier
-        /// (e.g. Ark's Manifest) the player hadn't unlocked yet.</summary>
+        /// (e.g. Ark's Manifest) the player hadn't unlocked yet. ALSO requires the manager's own
+        /// character has actually been reached in scripture (managerUnlockAtVerseIndex, real
+        /// CharacterIndex data, 2026-08-06) - deliberately separate from the scribe tier's own
+        /// unlockAtVerseIndex, which stays a much lower smooth-pacing value so the scribe tier
+        /// itself is still buyable long before its manager's real narrative moment arrives (a real
+        /// bug: using the same field for both meant Reed Pen, the starter scribe, couldn't be
+        /// bought until verse 26, since that's Adam's own first mention).</summary>
+        public bool IsManagerVerseReached(int tierIndex, int currentVerseIndex) =>
+            currentVerseIndex >= config.tiers[tierIndex].managerUnlockAtVerseIndex;
+
         public bool CanUnlockManager(int tierIndex, int playerLevel, int currentVerseIndex) =>
-            IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex] && IsUnlocked(tierIndex, currentVerseIndex);
+            IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex]
+            && IsUnlocked(tierIndex, currentVerseIndex) && IsManagerVerseReached(tierIndex, currentVerseIndex);
 
         /// <summary>Marks a manager as unlocked. Caller is responsible for spending Ink first
         /// (same pattern as Buy for scribe tiers).</summary>
