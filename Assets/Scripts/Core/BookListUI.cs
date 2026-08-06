@@ -22,6 +22,7 @@ namespace ClickerGenesis.Core
             public TMP_Text ReferenceText;
             public TMP_Text CostText;
             public Button Button;
+            public HoverTooltip Tooltip;
         }
 
         public Transform Content;
@@ -83,7 +84,12 @@ namespace ClickerGenesis.Core
                     ResourceId = id,
                     ReferenceText = rowGo.transform.Find("Reference").GetComponent<TMP_Text>(),
                     CostText = rowGo.transform.Find("Cost").GetComponent<TMP_Text>(),
-                    Button = rowGo.GetComponent<Button>()
+                    Button = rowGo.GetComponent<Button>(),
+                    // Tooltip explains HOW to unlock a locked book - added to every row (2026-08-06,
+                    // real user report while testing) but only given text/enabled for the rows that
+                    // actually need it (see Refresh) - "Switch"/"Reading now"/"Finish X first" rows
+                    // are already self-explanatory without one.
+                    Tooltip = rowGo.gameObject.AddComponent<HoverTooltip>()
                 };
                 if (row.Button != null) row.Button.onClick.AddListener(() => Controller.SwitchActiveBook(id));
                 rows.Add(row);
@@ -108,16 +114,20 @@ namespace ClickerGenesis.Core
                 {
                     row.CostText.text = "Reading now";
                     row.Button.interactable = false;
+                    row.Tooltip.enabled = false;
                 }
                 else if (canSwitch)
                 {
                     row.CostText.text = "Switch";
                     row.Button.interactable = true;
+                    row.Tooltip.enabled = false;
                 }
                 else if (row.ResourceId != "genesis_1" && !Controller.Skills.IsBookUnlocked(row.ResourceId))
                 {
                     row.CostText.text = "Locked";
                     row.Button.interactable = false;
+                    row.Tooltip.enabled = true;
+                    row.Tooltip.Text = "Can be unlocked in the Skill Tree after a prestige is done.";
                 }
                 else
                 {
@@ -125,6 +135,7 @@ namespace ClickerGenesis.Core
                     string previousName = previousId != null ? CanonicalBookOrder.DisplayNameOf(previousId) : null;
                     row.CostText.text = previousName != null ? $"Finish {previousName} first" : "Locked";
                     row.Button.interactable = false;
+                    row.Tooltip.enabled = false;
                 }
             }
 

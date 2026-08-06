@@ -24,13 +24,15 @@ namespace ClickerGenesis.Core
         public RectTransform Shine;
 
         [Tooltip("How fast the stripes scroll sideways (UV units/sec).")]
-        public float ScrollSpeed = 0.6f;
+        public float ScrollSpeed = 1.0f;
 
         [Tooltip("Base tone - matches the bar's own fill color.")]
         public Color BaseColor = new Color(0f, 0.75f, 0.30f);
 
-        [Tooltip("Highlight tone - the lighter stripe sweeping across.")]
-        public Color HighlightColor = new Color(0.85f, 1f, 0.9f);
+        [Tooltip("Highlight tone - the lighter stripe sweeping across. Warm gold, not near-white -\n" +
+            "2026-08-06 user correction, the original (0.85,1,0.9) read as plain white against the\n" +
+            "green fill instead of a real contrasting second tone.")]
+        public Color HighlightColor = new Color(1f, 0.84f, 0.35f);
 
         [Tooltip("Texture size in pixels (also the diagonal repeat period). Smaller = more, thinner stripes.")]
         public int TextureSize = 32;
@@ -101,7 +103,10 @@ namespace ClickerGenesis.Core
 
             Shine.sizeDelta = new Vector2(width, 0f);
 
-            uOffset += ScrollSpeed * Time.deltaTime;
+            // Subtracting (not adding) the offset - increasing uvRect.x samples texture content
+            // further right, which makes the visible pattern appear to scroll LEFT (2026-08-06
+            // user correction: shine should sweep right, matching the bar's own fill direction).
+            uOffset -= ScrollSpeed * Time.deltaTime;
             shineImage.uvRect = new Rect(uOffset, 0f, TilesAcrossFill, 1f);
         }
     }

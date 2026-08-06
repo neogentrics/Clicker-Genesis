@@ -173,6 +173,13 @@ namespace ClickerGenesis.Core
                     // No "(N owned)" - the milestone tier itself is the meaningful information;
                     // the raw owned count is already shown separately on the Owned line below.
                     desc += $"\n<b><color=#D4372A>×{milestoneMultiplier:F1} milestone bonus!</color></b>";
+                // Grace Skill Tree's Scribe's Diligence branch boosts milestone bonuses globally
+                // (folded into EffectiveInkPerSecond's skillIncomeBoost, not this tier's own curve
+                // value) - surfaced here too so the row doesn't read as if the skill does nothing
+                // (2026-08-06, real user report: "that should show here on this screen also").
+                double scribeMilestoneBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ScribeMilestoneBoost);
+                if (scribeMilestoneBoost > 0)
+                    desc += $"\n<color=#2E7D46>+{scribeMilestoneBoost * 100:F0}% from Scribe's Diligence</color>";
                 // Manager line only appears once actually active - no "takes over at level N"
                 // spoiler beforehand, and simplified wording (no % breakdown) once it is active.
                 if (managerActive)

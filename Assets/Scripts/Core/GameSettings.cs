@@ -159,8 +159,17 @@ namespace ClickerGenesis.Core
         /// <summary>Ink reserve tiers auto-buy will never spend below, so managers don't drain the
         /// wallet to zero when the player is trying to save up for something else. Index-based
         /// (not a raw float) since Ink balances run into the hundreds of millions and PlayerPrefs
-        /// floats lose precision there - same reasoning as the multiplier-tier arrays elsewhere.</summary>
-        public static readonly double[] ManagerAutoBuyReserveTiers = { 0, 1_000, 10_000, 100_000, 1_000_000 };
+        /// floats lose precision there - same reasoning as the multiplier-tier arrays elsewhere.
+        /// Extended past 1M (2026-08-06, real user report - the old 5-tier list capped out and
+        /// wrapped back to 0 the moment a real playthrough's Ink balance grew past it). Still a
+        /// fixed preset list, not the "scale relative to lifetime-max Ink held" version noted in
+        /// the Roadmap as a future Statistics-screen-driven feature - this just gives it real
+        /// headroom in the meantime.</summary>
+        public static readonly double[] ManagerAutoBuyReserveTiers =
+        {
+            0, 1_000, 10_000, 100_000, 1_000_000, 10_000_000, 100_000_000,
+            1_000_000_000, 10_000_000_000, 100_000_000_000, 1_000_000_000_000
+        };
 
         public static int ManagerAutoBuyReserveIndex
         {
