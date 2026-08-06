@@ -11,7 +11,7 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 
 ## Status
 
-**Version 0.2.15** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means and why it hasn't moved to 0.3 yet.
+**Version 0.3.0** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -79,7 +79,7 @@ Assets/
 
 Every reported bug is tracked with an increasing number across two columns — **Open** (not yet confirmed fixed) and **Fixed** (explicitly confirmed by real playtesting, not just by the code changing). Bugs only move to Fixed once they've been verified in an actual Play session — not from a screenshot or a script check alone.
 
-Full tracker (kept in sync, includes fix descriptions and root causes): see the project's Notion Bug Tracker page (private) or open a [GitHub Issue](../../issues) for anything new you find.
+Full tracker (kept in sync, includes fix descriptions and root causes): see the project's Notion Bug Tracker page (private), or the live [GitHub Issues](../../issues) list — every bug here has a matching Issue, closed once confirmed fixed. Open a new Issue for anything new you find.
 
 ## Versioning
 
