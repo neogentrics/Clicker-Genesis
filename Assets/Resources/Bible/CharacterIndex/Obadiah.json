@@ -1,0 +1,284 @@
+{
+  "book": "Obadiah",
+  "canonicalOrder": 31,
+  "notes": "Obadiah is the shortest OT book (1 chapter, 21 verses), so scribe tiers are built around the book's four natural movements rather than a large named cast: the prophet himself (person tier), then three law/theme tiers covering (1) Edom's pride and predicted doom (vv.1-9), (2) Edom's specific violence against brother Jacob during Jerusalem's calamity (vv.10-14), and (3) the Day of the LORD / restoration of Jacob's kingdom (vv.15-21). Jacob and Esau appear only as personifications of Israel and Edom respectively (never as individually-acting characters within this book), so they are included as \"named\" cross-reference entries rather than managers, flagging their identity as the same patriarchs fully treated in Genesis. This redraft corrects two genealogical misattributions found in the prior draft's genealogyLists (both concerning other, unrelated \"Obadiah\" figures in 1 Chronicles who are name-collisions with this book's prophet, not narrative participants in Obadiah itself): (1) the Obadiah of 1 Chronicles 8:38/9:44 is a son of Azel, a Saulide/Benjamite descendant via Jonathan and Meribbaal several generations down — NOT \"a son of Elpaal\" (Elpaal heads a separate, earlier Benjamite line at 1 Chronicles 8:12); (2) the Obadiah of 1 Chronicles 9:16 sits in the general Levite list via Jeduthun's musical lineage and \"dwelt in the villages of the Netophathites\" — he is NOT described as a \"gatekeeper's son\" or as having \"resettled Jerusalem,\" and the porters/gatekeepers list is a textually separate unit beginning at verse 17. A comprehensive, corrected genealogyLists of all other biblical \"Obadiah\" figures (a very common name — \"servant of the LORD\") is included to make every naming collision explicit, per methodology rule 7; none of them is identified by the KJV text as this book's prophet.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Scroll",
+      "managerId": "obadiah",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Cleft of the Rock",
+      "managerId": "edom_pride_and_doom",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Brother's Betrayal",
+      "managerId": "violence_against_jacob",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Zion's Flame",
+      "managerId": "day_of_the_lord",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "obadiah",
+      "name": "Obadiah",
+      "role": "manager",
+      "scribeTier": "Tier 1 — Watchman's Scroll",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogical, patronymic, hometown, or regnal-era information is given anywhere in the text — unlike most other prophetic books (e.g., Hosea 1:1, Joel 1:1, Micah 1:1), Obadiah 1:1 opens simply 'The vision of Obadiah,' naming nothing else about him. 'Obadiah' ('servant/worshipper of the LORD') is one of the most common personal names in the Old Testament — at least twelve other distinct individuals bear it (see genealogyLists). The KJV text does not identify or link this prophet with any of them; any such identification is extra-biblical speculation, not something scripture itself states, and is not asserted here."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:1",
+          "note": "'The vision of Obadiah. Thus saith the Lord GOD concerning Edom' — the prophet's sole self-introduction; the entire 21-verse book is presented as this one received vision concerning Edom."
+        }
+      ],
+      "funFacts": [
+        "Obadiah is the shortest book in the Old Testament — a single chapter of 21 verses.",
+        "The name Obadiah is shared by at least twelve other distinct Old Testament figures, none of whom scripture links to this prophet."
+      ],
+      "perkFlavor": "vision_clarity",
+      "perkNote": "A flavor bonus tied to Obadiah being the sole named voice of this vision — sharpens the reliability of foretold outcomes."
+    },
+    {
+      "id": "edom_pride_and_doom",
+      "name": "Edom's Pride and Doom",
+      "role": "law",
+      "scribeTier": "Tier 2 — Cleft of the Rock",
+      "deliveredBy": "obadiah",
+      "purpose": "Warns that Edom's pride — trusting its secure, high rock-dwellings, its renowned wisdom, its allied confederates, and its mighty men of Teman — will not spare it from total destruction; teaches that self-exalting pride ('though thou set thy nest among the stars') precedes a fall the LORD himself brings about, and that even a thief or grape-gatherer leaves something behind while Edom will be stripped utterly bare.",
+      "verses": [
+        {
+          "ref": "Obadiah 1:3",
+          "note": "Edom's pride is rooted in dwelling 'in the clefts of the rock,' feeling untouchable ('Who shall bring me down to the ground?')."
+        },
+        {
+          "ref": "Obadiah 1:4",
+          "note": "Even nesting 'among the stars' like an eagle will not stop the LORD from bringing Edom down."
+        },
+        {
+          "ref": "Obadiah 1:5-6",
+          "note": "Thieves and grape-gatherers leave something behind; Edom will be searched out and plundered completely — 'how are his hidden things sought up!'"
+        },
+        {
+          "ref": "Obadiah 1:7",
+          "note": "Edom's own confederates and allies at peace with it will deceive and overpower it."
+        },
+        {
+          "ref": "Obadiah 1:8-9",
+          "note": "The LORD will destroy the wise men out of Edom and dismay the mighty men of Teman, so that everyone on the mount of Esau is cut off by slaughter."
+        }
+      ],
+      "funFacts": [
+        "Verses 1-9 closely parallel Jeremiah 49:7-22's oracle against Edom, sharing several near-identical phrases — scholars debate the direction of borrowing or a shared earlier common source.",
+        "Teman (v.9) was an Edomite clan/region named for a grandson of Esau (Genesis 36:11, 15), proverbially famous in the ancient Near East for wisdom (compare Jeremiah 49:7)."
+      ],
+      "perkFlavor": "doom_foretelling",
+      "perkNote": "Boosts prediction-accuracy flavor for downstream judgment events, echoing Edom's certain, prophesied fall."
+    },
+    {
+      "id": "violence_against_jacob",
+      "name": "Violence Against Jacob",
+      "role": "law",
+      "scribeTier": "Tier 3 — Brother's Betrayal",
+      "deliveredBy": "obadiah",
+      "purpose": "Catalogs Edom's specific sins against its brother nation during Jerusalem's calamity: standing aloof while foreigners cast lots on Jerusalem, gloating over Judah's ruin, looting its substance, blocking the crossways to cut off refugees, and delivering survivors up to the enemy — teaching that violence against covenant kinship, especially exploiting a brother's disaster, brings certain and lasting judgment ('shame shall cover thee, and thou shalt be cut off for ever').",
+      "verses": [
+        {
+          "ref": "Obadiah 1:10",
+          "note": "'For thy violence against thy brother Jacob shame shall cover thee, and thou shalt be cut off for ever.'"
+        },
+        {
+          "ref": "Obadiah 1:11",
+          "note": "Edom stood aloof while strangers carried away Jerusalem's forces and cast lots on the city — 'thou wast as one of them.'"
+        },
+        {
+          "ref": "Obadiah 1:12-14",
+          "note": "An eight-fold chain of 'shouldest not have' rebukes: looking on the day of Judah's ruin, rejoicing over it, speaking proudly in distress, entering the gate of God's people, looking on their affliction, laying hands on their substance, standing in the crossway to cut off escapees, and delivering up survivors."
+        }
+      ],
+      "funFacts": [
+        "Verses 12-14 form an eight-fold chain of 'shouldest not have' warnings — the most concentrated single list of specific wartime sins named against any one nation in the Minor Prophets.",
+        "The text does not name the specific historical sack of Jerusalem in view; scholars variously connect 'the day of their calamity' to the Babylonian conquest (586 BC) or an earlier raid such as the Philistine/Arabian sack under Jehoram (2 Chronicles 21:16-17)."
+      ],
+      "perkFlavor": "kinship_reckoning",
+      "perkNote": "A flavor bonus around exposing hidden betrayals — mirrors Edom's exposed treachery against a brother nation."
+    },
+    {
+      "id": "day_of_the_lord",
+      "name": "The Day of the LORD",
+      "role": "law",
+      "scribeTier": "Tier 4 — Zion's Flame",
+      "deliveredBy": "obadiah",
+      "purpose": "Promises that 'the day of the LORD is near upon all the heathen' (v.15) and that Edom's own treatment of Judah will be repaid on its own head, while deliverance and holiness rest on Mount Zion; the house of Jacob and house of Joseph become a consuming fire against the house of Esau, Israel's scattered territory and exiles are restored, and the book closes on the declaration that 'the kingdom shall be the LORD's' (v.21).",
+      "verses": [
+        {
+          "ref": "Obadiah 1:15-16",
+          "note": "The day of the LORD is near upon all nations; as Edom has done, it shall be done to Edom — its reward returns on its own head."
+        },
+        {
+          "ref": "Obadiah 1:17-18",
+          "note": "Deliverance and holiness on Mount Zion; the house of Jacob and house of Joseph become fire and flame, the house of Esau stubble, until none of the house of Esau remains."
+        },
+        {
+          "ref": "Obadiah 1:19-20",
+          "note": "Restored possession of territory — the mount of Esau, the Philistine plain, the fields of Ephraim and Samaria, Gilead for Benjamin, and exiles possessing land as far as Zarephath and Sepharad."
+        },
+        {
+          "ref": "Obadiah 1:21",
+          "note": "'And saviours shall come up on mount Zion to judge the mount of Esau; and the kingdom shall be the LORD's.'"
+        }
+      ],
+      "funFacts": [
+        "Verse 20's 'Sepharad' appears nowhere else in the Old Testament; its location is debated, though later Jewish tradition (postbiblical, not stated by the text itself) identified it with Spain, giving rise to the term 'Sephardic Jews.'",
+        "Verse 21's closing line, 'the kingdom shall be the LORD's,' is the book's only explicit statement of ultimate divine kingship and is widely read as Obadiah's theological climax."
+      ],
+      "perkFlavor": "restoration_surge",
+      "perkNote": "A closing-chapter flavor bonus tied to territorial/kingdom restoration themes."
+    },
+    {
+      "id": "jacob",
+      "name": "Jacob",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Isaac",
+        "mother": "Rebekah",
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogical detail belongs to the Genesis index (Genesis 25-35); Obadiah never narrates Jacob acting as an individual. Every occurrence here is a personification of the nation descended from him — 'thy brother Jacob' (v.10) and 'the house of Jacob' (vv.17-18) — representing Israel/Judah collectively, not a distinct narrative appearance."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:10",
+          "note": "'For thy violence against thy brother Jacob shame shall cover thee' — Edom's guilt is grounded in the Esau/Jacob kinship established in Genesis."
+        },
+        {
+          "ref": "Obadiah 1:17-18",
+          "note": "The house of Jacob, paired with the house of Joseph, is promised deliverance on Mount Zion and becomes a consuming fire against the house of Esau."
+        }
+      ],
+      "funFacts": [
+        "Used interchangeably with 'Israel'/the covenant people throughout the book, never appearing as an individually-acting character within Obadiah itself.",
+        "Paired with 'house of Joseph' in verse 18 — the book's only mention of Joseph, by title only, as a co-agent of judgment against Esau."
+      ]
+    },
+    {
+      "id": "esau",
+      "name": "Esau",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Isaac",
+        "mother": "Rebekah",
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogical detail belongs to the Genesis index (Genesis 25-36, especially the Edomite genealogy of Genesis 36). Obadiah never narrates Esau acting as an individual; every occurrence ('house of Esau,' 'mount of Esau/mount Esau') personifies the nation of Edom descended from him. Flagged here as a naming collision with the fully-detailed Genesis patriarch, not a separate figure."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:6",
+          "note": "'How are the things of Esau searched out! how are his hidden things sought up!' — Edom's plundering, addressed via its ancestor's name."
+        },
+        {
+          "ref": "Obadiah 1:8-9",
+          "note": "Wise men 'out of Edom' and 'understanding out of the mount of Esau' will be destroyed; mighty men of Teman dismayed, all on 'the mount of Esau' cut off."
+        },
+        {
+          "ref": "Obadiah 1:18",
+          "note": "'The house of Esau for stubble' — consumed entirely by the fire and flame of Jacob and Joseph, 'and there shall not be any remaining of the house of Esau.'"
+        },
+        {
+          "ref": "Obadiah 1:19-21",
+          "note": "'The mount of Esau' is repeatedly named as the territory/people to be possessed and judged by Israel's restored remnant and 'saviours.'"
+        }
+      ],
+      "funFacts": [
+        "Edom's territory was traditionally centered on Mount Seir, south/southeast of the Dead Sea, matching Obadiah's repeated 'mount Esau' language (vv.8, 9, 19, 21).",
+        "Every reference to Esau in Obadiah names either the nation ('Edom') or its territory/people via his name — the book contains no individual action by Esau himself, distinguishing this from his full personal narrative in Genesis 25-33."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "otherObadiahsInScripture": {
+      "description": "Naming-collision reference list: every other individual named 'Obadiah' in the Old Testament, none of whom the KJV text identifies with the prophet who authored this book. Entries with genuine narrative action are noted as such but are not built out as full characters here since their stories belong to their own books' indexes.",
+      "entries": [
+        {
+          "name": "Obadiah, governor of Ahab's house",
+          "ref": "1 Kings 18:3-16",
+          "note": "A devout servant of the LORD who hid 100 prophets by fifties in caves during Jezebel's purge and fed them bread and water; sent by King Ahab to search for water and pasture during the famine, he met Elijah and arranged Elijah's meeting with Ahab. Has real individual narrative action, but belongs to the 1 Kings index, not this book — no genealogical link to the prophet Obadiah is given."
+        },
+        {
+          "name": "Obadiah, descendant of David through Zerubbabel",
+          "ref": "1 Chronicles 3:21",
+          "note": "Listed in the postexilic Davidic genealogy among 'the sons of Rephaiah, the sons of Arnan, the sons of Obadiah, the sons of Shechaniah.' Zero individual narrative action — bulk genealogical listing only."
+        },
+        {
+          "name": "Obadiah of Issachar",
+          "ref": "1 Chronicles 7:3",
+          "note": "Son of Izrahiah, listed among five 'chief men' of the tribe of Issachar. Zero individual narrative action."
+        },
+        {
+          "name": "Obadiah, son of Azel (Benjamite/Saulide line)",
+          "ref": "1 Chronicles 8:38 / 1 Chronicles 9:44",
+          "note": "CORRECTED: one of six sons of Azel — Azrikam, Bocheru, Ishmael, Sheariah, Obadiah, and Hanan. Azel descends from King Saul through Jonathan and Meribbaal (Mephibosheth): Merib-baal > Micah > Ahaz > Jehoadah > (Alemeth/Azmaveth/) Zimri > Moza > Binea > Rapha > Eleasah > Azel. He is a Benjamite by descent from Saul's own house — NOT a son of Elpaal, who heads a separate, earlier Benjamite genealogical line listed at 1 Chronicles 8:12."
+        },
+        {
+          "name": "Obadiah, Levite of Jeduthun's line",
+          "ref": "1 Chronicles 9:16",
+          "note": "CORRECTED: appears in the general Levite list of Jerusalem's resettled residents (1 Chronicles 9:14-16) — son of Shemaiah, son of Galal, son of Jeduthun (the chief musician's lineage). The text states he 'dwelt in the villages of the Netophathites.' This is textually distinct from the list of temple porters/gatekeepers, which begins afterward at verse 17 — he is not described as a gatekeeper's son, and the text does not say he resettled Jerusalem."
+        },
+        {
+          "name": "Obadiah the Gadite",
+          "ref": "1 Chronicles 12:9",
+          "note": "One of the mighty Gadite warriors (listed second among eleven captains) who defected to David's stronghold while David was still fleeing Saul. Named individual action, but a distinct figure and book context from the prophet."
+        },
+        {
+          "name": "Obadiah, son of Jerimoth, ruler of Zebulun",
+          "ref": "1 Chronicles 27:19",
+          "note": "Appointed by David as the officer over the tribe of Zebulun in the royal administrative register. Zero individual narrative action beyond the appointment listing."
+        },
+        {
+          "name": "Obadiah the prince, teacher of the Law",
+          "ref": "2 Chronicles 17:7",
+          "note": "One of five princes King Jehoshaphat sent throughout the cities of Judah to teach from the book of the law. Minimal individual narrative action beyond this mission."
+        },
+        {
+          "name": "Obadiah the Merarite Levite, temple overseer",
+          "ref": "2 Chronicles 34:12",
+          "note": "One of the Levite overseers (of the sons of Merari) set over the workmen repairing the temple during Josiah's reforms. Minimal individual narrative action."
+        },
+        {
+          "name": "Obadiah, son of Jehiel, returned exile",
+          "ref": "Ezra 8:9",
+          "note": "Head of a family of 218 men who returned from Babylon with Ezra. Zero individual narrative action beyond the census listing."
+        },
+        {
+          "name": "Obadiah, covenant-sealer under Nehemiah",
+          "ref": "Nehemiah 10:5",
+          "note": "One of the priests/leaders who set his seal to the renewed covenant document under Nehemiah. Zero individual narrative action beyond the sealing list."
+        },
+        {
+          "name": "Obadiah the gatekeeper",
+          "ref": "Nehemiah 12:25",
+          "note": "A Levite porter keeping watch at the storehouses of the gates in the days of Joiakim/Nehemiah. Zero individual narrative action beyond the duty listing."
+        }
+      ]
+    }
+  },
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

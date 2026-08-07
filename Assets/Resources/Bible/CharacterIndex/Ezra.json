@@ -1,0 +1,773 @@
+{
+  "book": "Ezra",
+  "canonicalOrder": 15,
+  "notes": "SECOND, corrected pass. All four flagged first-draft issues fixed: (1) Zechariah the prophet's genealogy.father is set to iddo, cited to Ezra 5:1 and 6:14, both within Ezra's own text (no cross-book import). (2) genealogyLists.return_leaders now lists exactly the eleven names Ezra 2:2 itself gives, with an explicit note not to import Nehemiah 7:7's twelfth name. (3) genealogyLists.casiphia_messengers now shows Meshullam named once (chief-men clause only) and the second clause containing only Joiarib and Elnathan, labeled \"men of understanding\" (KJV's own wording), not \"teachers.\" (4) The Iddo naming collision (ancestor of Zechariah the prophet, 5:1/6:14, vs. \"Iddo the chief at the place Casiphia,\" 8:17) is flagged on both the `iddo` and `iddo_of_casiphia` character entries.\n\nAdditional collisions caught in this pass and flagged in-place: three occurrences of \"Elnathan\" within Ezra 8:16 alone (not resolved as one person or three); two different men named \"Mithredath\" (1:8 the treasurer vs. 4:7 a letter-sender); \"Jehiel\" naming at least three different individuals within Ezra (8:9, 10:2 as Shechaniah's father, 10:21, 10:26); \"Zechariah\" naming at least three different individuals within Ezra alone (the prophet son of Iddo at 5:1/6:14; son of Parosh at 8:3; son of Bebai at 8:11) plus the sub-manager-list \"Zechariah\" at 8:16 — none identified with each other; a second \"Shechaniah\" (son of Jahaziel, family head at 8:5) distinct from the Shechaniah son of Jehiel who proposes the covenant at 10:2; the \"Nehemiah\" named as a return leader at 2:2 flagged as almost certainly not the same person as the Nehemiah of the book of Nehemiah (different generation/king). Genealogical cruxes are hedged rather than resolved: Sheshbazzar's identity relative to Zerubbabel is presented as disputed, not asserted; Zerubbabel's \"son of Shealtiel\" (Ezra's own consistent wording, 3:2/3:8/5:2) is flagged against the 1 Chronicles 3:19 \"sons of Pedaiah\" variant without attempting resolution; Ezra's own genealogy (7:1-5) is flagged as a likely telescoped ancestral chain rather than sixteen literal consecutive father-son links. For the three law-role tier entries (opposition_letter, prophetic_exhortation, darius_decree), the genealogy object is present but empty/null-filled since \"genealogy\" does not meaningfully apply to a law/theme entry — deliveredBy and purpose carry the real attribution for those three. Schema self-check performed: every managerId in scribeTiers and every parentManagerId in characters resolves to a real characters[] entry; no character holds both a scribeTier (as manager) and a parentManagerId.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The King's Proclamation",
+      "managerId": "cyrus",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Temple Vessels",
+      "managerId": "sheshbazzar",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Governor's Foundation",
+      "managerId": "zerubbabel",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Altar Restored",
+      "managerId": "jeshua",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Adversaries' Letter",
+      "managerId": "opposition_letter",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Prophets' Word",
+      "managerId": "prophetic_exhortation",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The King's Confirmation",
+      "managerId": "darius_decree",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Scribe's Return",
+      "managerId": "ezra",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "cyrus",
+      "name": "Cyrus",
+      "role": "manager",
+      "scribeTier": "The King's Proclamation",
+      "purpose": "",
+      "deliveredBy": "",
+      "perkNote": "The decree that launches the entire book — the return itself. Flavor basis for an opening 'unlock' bonus.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Gentile king of Persia; Ezra gives no Israelite genealogy for him, none invented here."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:1-4",
+          "note": "In his first year, the LORD stirs up Cyrus's spirit to proclaim that any of the LORD's people may go up to Jerusalem to build the house of God, with local support funded by those who stay."
+        },
+        {
+          "ref": "Ezra 1:7-8",
+          "note": "Brings forth the temple vessels Nebuchadnezzar had taken, delivering them by the hand of Mithredath the treasurer, numbered out to Sheshbazzar the prince of Judah."
+        },
+        {
+          "ref": "Ezra 6:3-5",
+          "note": "Darius later finds Cyrus's original decree on record at Achmetha, confirming its terms."
+        }
+      ],
+      "funFacts": [
+        "Ezra frames his decree as the direct fulfillment of the LORD stirring his spirit (1:1), echoing the return being 'according to the commandment of Cyrus' alongside Darius and Artaxerxes (6:14).",
+        "A Gentile king is presented in Ezra as an instrument of the LORD's purpose for Israel."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sheshbazzar",
+      "name": "Sheshbazzar",
+      "role": "manager",
+      "scribeTier": "The Temple Vessels",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the prince of Judah' (1:8) and made governor by Cyrus (5:14) — no father or fuller lineage is given in Ezra. Some identify him with Zerubbabel, or with Shenazzar son of Jeconiah (1 Chronicles 3:18); Ezra's own text never equates him with either, so his identity is left hedged, not asserted, here."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:8",
+          "note": "Cyrus has the temple vessels numbered out to him by the hand of Mithredath the treasurer."
+        },
+        {
+          "ref": "Ezra 1:11",
+          "note": "Brings all 5,400 gold and silver vessels up with the returning captives from Babylon to Jerusalem."
+        },
+        {
+          "ref": "Ezra 5:14-16",
+          "note": "Identified as the one Cyrus made governor and delivered the vessels to; 'the same Sheshbazzar' is credited with laying the temple's foundation."
+        }
+      ],
+      "funFacts": [
+        "Ezra 5:16 explicitly credits Sheshbazzar with laying the foundation, while Ezra 3:8-10 credits Zerubbabel and Jeshua with that same act — a real tension in the book's own text that this index does not resolve by assuming identity between the two men.",
+        "Disappears from the narrative after chapter 5; Zerubbabel is the one leading the building work by chapters 3-6."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zerubbabel",
+      "name": "Zerubbabel",
+      "role": "manager",
+      "scribeTier": "The Governor's Foundation",
+      "genealogy": {
+        "father": "shealtiel",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Ezra consistently calls him 'the son of Shealtiel' (3:2, 3:8, 5:2). 1 Chronicles 3:19 instead lists Zerubbabel among the sons of Pedaiah, Shealtiel's brother — a known genealogical crux across books that this index does not attempt to resolve; 'shealtiel' here reflects Ezra's own repeated wording only."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:2",
+          "note": "Named first among the leaders of the initial return from Babylon."
+        },
+        {
+          "ref": "Ezra 3:2, 3:8",
+          "note": "With Jeshua, builds the altar and lays the temple's foundation."
+        },
+        {
+          "ref": "Ezra 4:2-3",
+          "note": "With Jeshua and the chief fathers, refuses the adversaries' offer to help build, insisting they will build alone as Cyrus commanded."
+        },
+        {
+          "ref": "Ezra 5:2",
+          "note": "Rises up with Jeshua to resume the building after the prophets' exhortation."
+        }
+      ],
+      "funFacts": [
+        "Leads the returning community through the entire building narrative of chapters 2-6, alongside Jeshua the high priest."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jeshua",
+      "name": "Jeshua",
+      "role": "manager",
+      "scribeTier": "The Altar Restored",
+      "genealogy": {
+        "father": "jozadak",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Jeshua the son of Jozadak' (3:2, 3:8). No further lineage given in Ezra."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:2",
+          "note": "Named second among the leaders of the initial return."
+        },
+        {
+          "ref": "Ezra 3:2",
+          "note": "With Zerubbabel, builds the altar of the God of Israel."
+        },
+        {
+          "ref": "Ezra 3:8-9",
+          "note": "With Zerubbabel, begins the temple work; stands with his sons, his brethren, and Kadmiel to set forward the workmen."
+        },
+        {
+          "ref": "Ezra 5:2",
+          "note": "Rises up with Zerubbabel to resume the building."
+        }
+      ],
+      "funFacts": [
+        "Consistently paired with Zerubbabel as co-leader — priestly authority alongside civil/governing authority."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "opposition_letter",
+      "name": "The Adversaries' Letter",
+      "role": "law",
+      "scribeTier": "The Adversaries' Letter",
+      "deliveredBy": "Rehum the chancellor and Shimshai the scribe write the main accusatory letter (Ezra 4:8-9); an earlier, separate letter is sent by Bishlam, Mithredath, and Tabeel (4:7) — this Mithredath is a different person from Mithredath the treasurer of 1:8.",
+      "purpose": "To falsely accuse Jerusalem of a history of rebellion and persuade Artaxerxes to halt the rebuilding of the city and (by extension) the temple work already resumed — an act of political opposition to the restoration, not law or ritual instruction for Israel itself.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry; see deliveredBy and purpose."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 4:1-5",
+          "note": "The adversaries of Judah and Benjamin, rebuffed in chapter 4:2-3, hire counsellors against the people to frustrate their purpose 'all the days of Cyrus... even until the reign of Darius.'"
+        },
+        {
+          "ref": "Ezra 4:7-16",
+          "note": "Letters sent to Artaxerxes; the main letter (v8-16) from Rehum and Shimshai accuses Jerusalem of being a rebellious city."
+        },
+        {
+          "ref": "Ezra 4:17-23",
+          "note": "Artaxerxes replies ordering the work stopped; the officials 'made them to cease by force and power.'"
+        }
+      ],
+      "funFacts": [
+        "This letter's success in halting the work (4:24) is what necessitates the prophets' exhortation in chapter 5.",
+        "The list of resettled peoples who join the letter (4:9-10 — Dinaites, Apharsathchites, Tarpelites, Apharsites, Archevites, Babylonians, Susanchites, Dehavites, Elamites, 'and the rest of the nations') are bulk political groups, not individually named persons."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "prophetic_exhortation",
+      "name": "The Prophets' Word",
+      "role": "law",
+      "scribeTier": "The Prophets' Word",
+      "deliveredBy": "Haggai the prophet, and Zechariah the son of Iddo, prophets (Ezra 5:1; 6:14).",
+      "purpose": "To stir up and encourage the returned exiles, and their leaders Zerubbabel and Jeshua, to resume the temple work after it had been forcibly halted by opposition — prophetic exhortation rather than a personally-embodied narrative arc within Ezra's own text.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry; see deliveredBy and purpose."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:1-2",
+          "note": "Haggai and Zechariah son of Iddo prophesy to the Jews in Judah and Jerusalem; Zerubbabel and Jeshua rise up and begin building again, the prophets helping them."
+        },
+        {
+          "ref": "Ezra 6:14",
+          "note": "The elders build and prosper 'through the prophesying of Haggai the prophet and Zechariah the son of Iddo' — building finished 'according to the commandment of the God of Israel, and according to the commandment of Cyrus, and Darius, and Artaxerxes.'"
+        }
+      ],
+      "funFacts": [
+        "Ezra 5:1 and 6:14 are the two places within Ezra's own text that give Zechariah's genealogy directly — 'the son of Iddo' — no cross-book inference was needed or used."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "darius_decree",
+      "name": "The King's Confirmation",
+      "role": "law",
+      "scribeTier": "The King's Confirmation",
+      "deliveredBy": "Darius the king issues the decree (Ezra 6:1-12) after Tatnai, governor beyond the river, and Shetharboznai, with their companions, question the elders and write to him (Ezra 5:3-6:12); Tatnai and Shetharboznai then carry it out (6:13).",
+      "purpose": "To legally confirm Cyrus's original decree found in the royal archives at Achmetha, fund the temple's completion from royal resources, restore the vessels' use, and protect the ongoing work with a pronounced judgment against anyone who alters the decree — culminating in the temple's completion, dedication, and the keeping of the Passover.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry; see deliveredBy and purpose."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:3-6",
+          "note": "Tatnai and Shetharboznai question by what authority the Jews build, and write to Darius."
+        },
+        {
+          "ref": "Ezra 6:1-12",
+          "note": "Darius searches the house of the rolls, finds Cyrus's decree, and issues his own decree confirming it, funding expenses from the king's goods, and pronouncing a curse on any who alter it."
+        },
+        {
+          "ref": "Ezra 6:13-15",
+          "note": "Tatnai and companions do accordingly with speed; the temple is finished in the sixth year of Darius's reign, the third day of the month Adar."
+        },
+        {
+          "ref": "Ezra 6:16-18",
+          "note": "Dedication of the house of God with sacrifices."
+        },
+        {
+          "ref": "Ezra 6:19-22",
+          "note": "The children of the captivity keep the Passover, having purified themselves; the LORD makes them joyful and turns the heart of the king of Assyria toward them to strengthen their hands."
+        }
+      ],
+      "funFacts": [
+        "Tatnai's inquiry, though it could have gone the way of chapter 4's opposition, instead leads to official confirmation and funding — the opposite outcome of the earlier letter."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ezra",
+      "name": "Ezra",
+      "role": "manager",
+      "scribeTier": "The Scribe's Return",
+      "genealogy": {
+        "father": "seraiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Ezra 7:1-5 gives an unbroken 'son of' chain from Ezra back to Aaron via Seraiah. Given the centuries this spans, it is almost certainly a telescoped ancestral lineage rather than sixteen literal consecutive father-son links (a well-documented feature of biblical genealogies) — 'seraiah' is used here as the immediate named ancestor per the text's own wording, not as a claim of literal immediate paternity. Full chain preserved in genealogyLists.ezra_priestly_lineage. No wife or children are named for Ezra anywhere in this book."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 7:1-6",
+          "note": "Genealogy given back to Aaron the chief priest; described as 'a ready scribe in the law of Moses' whose hand the LORD his God was upon."
+        },
+        {
+          "ref": "Ezra 7:11-26",
+          "note": "Artaxerxes commissions him with a letter, authority, funding, and freedom to appoint magistrates and judges."
+        },
+        {
+          "ref": "Ezra 8:15-30",
+          "note": "Gathers the people at the river Ahava, finds no Levites, sends to Casiphia, and entrusts the temple treasure to twelve chief priests including Sherebiah and Hashabiah."
+        },
+        {
+          "ref": "Ezra 8:31-36",
+          "note": "Journeys to Jerusalem, delivers the treasure, and offers burnt offerings."
+        },
+        {
+          "ref": "Ezra 9:1-15",
+          "note": "Learns of the mixed-marriage crisis; tears his garment, plucks his hair, and prays a great prayer of corporate confession."
+        },
+        {
+          "ref": "Ezra 10:1-17",
+          "note": "Leads the assembly to a covenant to put away foreign wives, following Shechaniah's proposal; oversees the investigation."
+        }
+      ],
+      "funFacts": [
+        "Described as 'a ready scribe in the law of Moses' (7:6) — the origin point of his role as the book's central named scribe/priest figure.",
+        "His prayer in chapter 9 is one of the Old Testament's major set-piece prayers of corporate confession."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mithredath_treasurer",
+      "name": "Mithredath the Treasurer",
+      "role": "submanager",
+      "parentManagerId": "cyrus",
+      "scribeTier": "The King's Proclamation",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Incidental administrative figure who executes Cyrus's decree rather than personally embodying it.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy given; identified only by title, 'the treasurer.'"
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:8",
+          "note": "Cyrus brings forth the temple vessels 'by the hand of Mithredath the treasurer,' who numbers them out to Sheshbazzar."
+        }
+      ],
+      "funFacts": [
+        "A different person named Mithredath appears at 4:7 among the senders of an early opposition letter — the two are not the same individual; flagged as a naming collision within Ezra itself."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "kadmiel",
+      "name": "Kadmiel",
+      "role": "submanager",
+      "parentManagerId": "jeshua",
+      "scribeTier": "The Altar Restored",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Stands with Jeshua to set forward the workmen on the temple.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No individual genealogy given; associated with a Levitical family/clan bearing his name."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:40",
+          "note": "Named among the Levites of the initial return, heading a family group with Jeshua."
+        },
+        {
+          "ref": "Ezra 3:9",
+          "note": "Stands with Jeshua, his sons and brethren, and the sons of Henadad to set forward the workmen in the house of God."
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "shechaniah",
+      "name": "Shechaniah",
+      "role": "submanager",
+      "parentManagerId": "ezra",
+      "scribeTier": "The Scribe's Return",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Steps forward to propose the covenant that supports Ezra's reform.",
+      "genealogy": {
+        "father": "jehiel",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'Shechaniah the son of Jehiel, one of the sons of Elam' (10:2). 'Jehiel' names at least two other individuals within Ezra alone (8:9, and among those with foreign wives at 10:21, 10:26) — not identified with this Jehiel here."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 10:2-4",
+          "note": "Answers Ezra, confessing the trespass and proposing a covenant to put away the foreign wives, urging Ezra to arise and act, pledging support."
+        }
+      ],
+      "funFacts": [
+        "'Shechaniah' is a common name reused elsewhere in scripture (e.g., a royal descendant in 1 Chronicles 3:21-22, and distinct Levitical/priestly Shechaniahs in Nehemiah); this figure is not identified with any of them here.",
+        "A different family head also named Shechaniah (son of Jahaziel) is listed among the returnees at Ezra 8:5 — a second, distinct naming collision within Ezra itself."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iddo_of_casiphia",
+      "name": "Iddo the Chief at Casiphia",
+      "role": "submanager",
+      "parentManagerId": "ezra",
+      "scribeTier": "The Scribe's Return",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Facilitates the supply of Levites and Nethinims for Ezra's expedition.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified only as 'the chief at the place Casiphia' (8:17); no further lineage given."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:17",
+          "note": "Ezra sends messengers to Iddo and his brethren the Nethinims at Casiphia asking them to bring ministers for the house of God."
+        }
+      ],
+      "funFacts": [
+        "Naming collision, flagged explicitly per the book-specific correction: a different Iddo is named as the ancestor of Zechariah the prophet at Ezra 5:1 and 6:14 — the two are not the same person; Ezra's text never identifies them."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sherebiah",
+      "name": "Sherebiah",
+      "role": "submanager",
+      "parentManagerId": "ezra",
+      "scribeTier": "The Scribe's Return",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "One of the Levites brought via Casiphia, entrusted with the temple treasure for the journey.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Introduced as a Levite of the sons of Mahli (8:18); no individual father named."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:18-19",
+          "note": "Brought as 'a man of understanding,' with his sons and brethren, eighteen men."
+        },
+        {
+          "ref": "Ezra 8:24",
+          "note": "Separated by Ezra as one of twelve entrusted with the silver, gold, and vessels for the journey — the text's own wording calls this group 'chief of the priests,' though Sherebiah was introduced among the Levites in 8:18-19; this index does not attempt to resolve that tension."
+        }
+      ],
+      "funFacts": [
+        "A person named Sherebiah reappears later in the book of Nehemiah among the Levites; not asserted here as certainly the same individual, since that identification depends on a different book."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hashabiah",
+      "name": "Hashabiah",
+      "role": "submanager",
+      "parentManagerId": "ezra",
+      "scribeTier": "The Scribe's Return",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Paired with Sherebiah, entrusted with the temple treasure for the journey.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Introduced alongside Jeshaiah of the sons of Merari (8:19); no individual father named for Hashabiah himself."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:19",
+          "note": "Brought with Jeshaiah of the sons of Merari, their brethren and sons, twenty men."
+        },
+        {
+          "ref": "Ezra 8:24",
+          "note": "Separated by Ezra as one of twelve entrusted with the temple treasure."
+        }
+      ],
+      "funFacts": [
+        "'Hashabiah' is a common Levitical name reused elsewhere in Chronicles and Nehemiah; not identified with any of those occurrences here."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "rehum",
+      "name": "Rehum the Chancellor",
+      "role": "named",
+      "scribeTier": "The Adversaries' Letter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified only by title, 'the chancellor'; no genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 4:8-9",
+          "note": "Writes the accusatory letter against Jerusalem to Artaxerxes together with Shimshai the scribe."
+        },
+        {
+          "ref": "Ezra 4:17, 23",
+          "note": "Receives Artaxerxes' reply and, with Shimshai, goes up to Jerusalem and makes the Jews cease work by force."
+        }
+      ],
+      "funFacts": [
+        "A different man named Rehum is listed among the leaders of the first return at Ezra 2:2 — not identified as the same person here; the two occurrences are generations apart in the book's own timeline."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shimshai",
+      "name": "Shimshai the Scribe",
+      "role": "named",
+      "scribeTier": "The Adversaries' Letter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified only by title, 'the scribe'; no genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 4:8-9",
+          "note": "Co-writes the accusatory letter with Rehum the chancellor."
+        },
+        {
+          "ref": "Ezra 4:17, 23",
+          "note": "Receives Artaxerxes' reply and helps enforce the work stoppage."
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "tatnai",
+      "name": "Tatnai",
+      "role": "named",
+      "scribeTier": "The King's Confirmation",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Persian governor 'on this side the river' (i.e. the province beyond the Euphrates from the Persian perspective); no Israelite genealogy applies or is given."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:3-6",
+          "note": "Questions the elders' authority to build and to whom they answer; writes to Darius."
+        },
+        {
+          "ref": "Ezra 6:6, 13",
+          "note": "Ordered by Darius to keep away and let the work proceed; carries out the decree speedily."
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "shethar_boznai",
+      "name": "Shetharboznai",
+      "role": "named",
+      "scribeTier": "The King's Confirmation",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Companion official to Tatnai; no genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:3, 6",
+          "note": "Joins Tatnai in questioning the elders and writing to Darius."
+        },
+        {
+          "ref": "Ezra 6:6, 13",
+          "note": "Named in Darius's decree and in its speedy execution."
+        }
+      ],
+      "funFacts": [
+        "KJV renders the name as one word, 'Shetharboznai.'"
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "haggai",
+      "name": "Haggai",
+      "role": "named",
+      "scribeTier": "The Prophets' Word",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy is given for Haggai in Ezra (nor in the book of Haggai itself)."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:1",
+          "note": "Prophesies to the Jews in Judah and Jerusalem, prompting the resumption of building."
+        },
+        {
+          "ref": "Ezra 6:14",
+          "note": "Named again as one through whose prophesying the elders build and prosper."
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "zechariah_prophet",
+      "name": "Zechariah the Prophet",
+      "role": "named",
+      "scribeTier": "The Prophets' Word",
+      "genealogy": {
+        "father": "iddo",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Zechariah the son of Iddo' in both Ezra 5:1 and Ezra 6:14 — stated directly within Ezra's own text, not inferred from another book."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:1",
+          "note": "Prophesies alongside Haggai to the returned exiles."
+        },
+        {
+          "ref": "Ezra 6:14",
+          "note": "Named again as 'Zechariah the son of Iddo,' through whose prophesying the elders build and prosper."
+        }
+      ],
+      "funFacts": [
+        "'Zechariah' is one of the most frequently reused names in the Old Testament — Ezra itself names at least two other, different men called Zechariah (a family head 'of the sons of Parosh' at 8:3, and 'of the sons of Bebai' at 8:11), plus a 'Zechariah' among the chief men sent to Casiphia at 8:16 — none of these are the same person as this prophet."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iddo",
+      "name": "Iddo",
+      "role": "named",
+      "scribeTier": "The Prophets' Word",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "zechariah_prophet"
+        ],
+        "note": "Known only as the father of Zechariah the prophet, per Ezra 5:1 and 6:14; no further lineage given in Ezra."
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:1",
+          "note": "Named as the father of Zechariah the prophet."
+        },
+        {
+          "ref": "Ezra 6:14",
+          "note": "Named again as the father of Zechariah the prophet."
+        }
+      ],
+      "funFacts": [
+        "Naming collision flagged per the book-specific correction: a different man named Iddo — 'the chief at the place Casiphia' — appears at Ezra 8:17; the two are not identified with each other anywhere in Ezra's text."
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "return_leaders": {
+      "ref": "Ezra 2:2",
+      "count": 11,
+      "names": [
+        "Zerubbabel",
+        "Jeshua",
+        "Nehemiah",
+        "Seraiah",
+        "Reelaiah",
+        "Mordecai",
+        "Bilshan",
+        "Mizpar",
+        "Bigvai",
+        "Rehum",
+        "Baanah"
+      ],
+      "note": "Ezra 2:2 names exactly eleven leaders (corrected from a first-draft error that imported a twelfth name from the parallel list at Nehemiah 7:7, which is not present in Ezra's own text — do not add it back). The 'Nehemiah' named here is almost certainly not the same person as the Nehemiah of the book of Nehemiah, who serves under Artaxerxes a later generation. This 'Rehum' may or may not be the same person as Rehum the chancellor of Ezra 4:8 (an unresolved possible collision, not asserted either way)."
+    },
+    "casiphia_messengers": {
+      "ref": "Ezra 8:16-17",
+      "chief_men": [
+        "Eliezer",
+        "Ariel",
+        "Shemaiah",
+        "Elnathan",
+        "Jarib",
+        "Elnathan",
+        "Nathan",
+        "Zechariah",
+        "Meshullam"
+      ],
+      "men_of_understanding": [
+        "Joiarib",
+        "Elnathan"
+      ],
+      "note": "Corrected from a first-draft error. KJV's own text names 'Elnathan' three times across these two verses (twice within the 'chief men' clause, once within the 'men of understanding' clause) — flagged as a peculiarity in the underlying text, not resolved here as either three individuals or a scribal duplication. Meshullam is named exactly once, within the chief-men clause only — no second Meshullam belongs in the men-of-understanding group. The KJV's own label for that second group is 'men of understanding,' not 'teachers.' This Zechariah is a different person from Zechariah the son of Iddo the prophet (5:1, 6:14)."
+    },
+    "ezra_priestly_lineage": {
+      "ref": "Ezra 7:1-5",
+      "chain": [
+        "Ezra",
+        "Seraiah",
+        "Azariah",
+        "Hilkiah",
+        "Shallum",
+        "Zadok",
+        "Ahitub",
+        "Amariah",
+        "Azariah",
+        "Meraioth",
+        "Zerahiah",
+        "Uzzi",
+        "Bukki",
+        "Abishua",
+        "Phinehas",
+        "Eleazar",
+        "Aaron"
+      ],
+      "note": "Given in Ezra's own text as an unbroken 'son of' chain from Ezra to Aaron the chief priest. Almost certainly a telescoped ancestral lineage rather than sixteen literal consecutive father-son links, given the centuries spanned — a well-documented feature of biblical genealogies, not resolved further here. Note two separate men named 'Azariah' appear within this single chain (both ancestors of Ezra, not the same person as each other) — an internal naming collision within the list itself."
+    },
+    "opposition_letter_senders": {
+      "ref": "Ezra 4:7-10",
+      "note": "Ezra 4:7 names an earlier, separate letter from Bishlam, Mithredath, and Tabeel and their companions — this Mithredath is a different person from Mithredath the treasurer of 1:8. The main accusatory letter (4:8-16) is from Rehum the chancellor and Shimshai the scribe, joined by a list of resettled peoples (Dinaites, Apharsathchites, Tarpelites, Apharsites, Archevites, Babylonians, Susanchites, Dehavites, Elamites, and 'the rest of the nations,' v9-10) — bulk political/ethnic group names, not individually named persons, so not given separate character entries."
+    },
+    "returnee_family_heads_ch8": {
+      "ref": "Ezra 8:1-14",
+      "note": "Lists the family heads (with counts of males) who returned with Ezra: including Gershom (sons of Phinehas), Daniel (sons of Ithamar), Hattush (sons of David), Zechariah of the sons of Parosh, Elihoenai the son of Zerahiah (sons of Pahathmoab), Shechaniah the son of Jahaziel (sons of Zattu), Ebed the son of Jonathan (sons of Adin), Jeshaiah the son of Athaliah (sons of Elam), Zebadiah the son of Michael (sons of Shephatiah), Obadiah the son of Jehiel (sons of Joab), Shelomith the son of Josiphiah (sons of Bani), Zechariah the son of Bebai with 28 men, Johanan the son of Hakkatan (sons of Azgad), and Eliphelet, Jeuel, and Shemaiah (last sons of Adonikam), with Uthai and Zabbud of the sons of Bigvai. Treated as a bulk administrative list, not individual character entries, since none of these have differentiated narrative action beyond heading a counted family group. Flagged: at least three different men named Zechariah appear across Ezra (this list's two, plus the prophet of 5:1/6:14), a second Shechaniah distinct from the one at 10:2, and another Jehiel distinct from Shechaniah's father at 10:2 — none identified with each other."
+    },
+    "men_with_foreign_wives": {
+      "ref": "Ezra 10:18-44",
+      "note": "Lists priests (18-22), Levites (23-24), singers, porters, and Israelites by family (25-43) who had taken foreign wives; verse 44 notes some had children by these wives. Bulk family-list names with no individually differentiated action beyond membership in the list and the shared act of putting away their wives (v19) — not broken into individual character entries per the no-invented-differentiation rule. Includes another 'Elam' family group among the Israelites (v26), distinct from the earlier 'sons of Elam' returnee families at 2:7 and 8:7."
+    },
+    "foreign_wives_investigation": {
+      "ref": "Ezra 10:15-17",
+      "note": "'Jonathan the son of Asahel and Jahaziah the son of Tikvah were employed about this matter: and Meshullam and Shabbethai the Levite helped them.' The KJV's exact sense here (supporting vs. opposing the investigation) is a point of some translational ambiguity; not resolved into a firm role or promoted to individual character entries given that ambiguity. This Meshullam is a different mention from the one sent to Casiphia at 8:16 and from a Meshullam listed among those with foreign wives at 10:29 — at least three different bearers of the name within Ezra."
+    }
+  },
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

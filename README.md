@@ -5,13 +5,20 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 > Micro-transactions exist in the eventual design but are never required for progress or content. Scripture text is never altered, paraphrased, or reinterpreted — only unedited, recognized translations are used (KJV in v1). This constraint overrides convenience in every implementation decision.
 
 <p align="center">
-  <img src="docs/screenshots/clicker-screen.png" width="45%" alt="Clicker screen — tap for Ink, passive scribe income, milestone bonuses" />
-  <img src="docs/screenshots/buy-verse-screen.png" width="45%" alt="Buy Verse screen — spend Ink on the next verse or bulk-buy a chapter" />
+  <img src="docs/screenshots/clicker-scribes.png" width="45%" alt="Clicker screen, Scribes tab — tap for Ink, passive scribe income, milestone bonuses" />
+  <img src="docs/screenshots/clicker-managers.png" width="45%" alt="Clicker screen, Managers tab — color-coded unlock requirements, real bonus display" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/clicker-support.png" width="45%" alt="Clicker screen, Support tab — hire submanagers for cost discounts or output boosts" />
+  <img src="docs/screenshots/buy-verse-screen.png" width="45%" alt="Buy Verse screen — spend Ink on the next verse, real KJV text reveal" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/skill-tree.png" width="70%" alt="Grace Skill Tree — radial node layout against a nebula backdrop" />
 </p>
 
 ## Status
 
-**Version 0.3.2** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
+**Version 0.3.3** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -40,6 +47,7 @@ This is an active work-in-progress being built in public as part of a developmen
 - Parchment/ink/gold "warm, legible, mobile-fast" base art direction, with a reserved stained-glass accent style for reward moments (not yet built)
 - Every screen re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
 - Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus, and their tab row now shows only their name and actual active bonus (no flavor text)
+- **Scribes / Managers / Support** three-tab layout: Managers show every unmet unlock requirement (scribe tier, character's own verse, level) as its own color-coded line — green when satisfied, red when not — with the buy button showing only the real cost, never lock-reason text. Submanagers moved into their own dedicated Support tab, same requirement-line pattern, decluttering the Managers list
 - Run-in-background toggle (Settings) so idle Ink income keeps ticking while the window is unfocused
 - Shared passive "progress multiplier": every 5 verses bought adds +0.1 to a multiplier applied across all scribe output, and it doubles outright on every chapter completed
 - Real hover/press visual feedback on every button in the game, plus tooltips throughout

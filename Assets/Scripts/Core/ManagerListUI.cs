@@ -14,8 +14,9 @@ namespace ClickerGenesis.Core
     /// Row body simplified 2026-08-06 (user's explicit correction, relayed from a parallel
     /// session): no flavor text - just the manager's actual active bonus/perk, as a list of lines
     /// so a future perk source (a Grace Skill Tree node beyond the global manager-bonus boost
-    /// already handled here, or the not-yet-built submanager system) can append its own line
-    /// without restructuring Refresh().
+    /// already handled here) can append its own line without restructuring Refresh().
+    /// Submanagers moved out to their own Support tab (2026-08-06, task #161, SupportListUI) -
+    /// this component no longer builds or renders submanager sub-rows.
     /// </summary>
     public class ManagerListUI : MonoBehaviour
     {
@@ -28,23 +29,10 @@ namespace ClickerGenesis.Core
             public Button BuyButton;
         }
 
-        /// <summary>Submanager sub-row (2026-08-06) - reuses the same RowTemplate as manager rows,
-        /// indented under its parent manager, showing the character's own bonus/perk.</summary>
-        private class SubRow
-        {
-            public int TierIndex;
-            public int SubIndex;
-            public TMP_Text NameText;
-            public TMP_Text DescText;
-            public TMP_Text CostText;
-            public Button BuyButton;
-        }
-
         public Transform Content;
         public GameObject RowTemplate;
 
         private readonly List<Row> rows = new List<Row>();
-        private readonly List<SubRow> subRows = new List<SubRow>();
         private GameLoopController Controller => GameLoopController.Instance;
 
         private void Awake()
@@ -107,37 +95,9 @@ namespace ClickerGenesis.Core
                     CostText = rowGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
                     BuyButton = rowGo.transform.Find("BuyButton").GetComponent<Button>()
                 };
-                // "Unlock X first" is longer than a plain cost like "500 Ink" - auto-size so long
-                // locked-state text shrinks to fit instead of overflowing the button (2026-08-06,
-                // same TMP auto-size fix used for the Skill Tree's "Unlock Chapter" button, bug #48).
                 EnableCostTextAutoSize(row.CostText);
                 row.BuyButton.onClick.AddListener(() => Controller.BuyManager(tierIndex));
                 rows.Add(row);
-
-                for (int s = 0; s < scribes.SubmanagerCount(i); s++)
-                {
-                    int subIndex = s;
-                    var subDef = scribes.GetSubmanagerDefinition(tierIndex, subIndex);
-
-                    var subGo = Instantiate(RowTemplate, Content);
-                    subGo.SetActive(true);
-                    subGo.name = $"SubmanagerRow_{subDef.id}";
-
-                    var subRow = new SubRow
-                    {
-                        TierIndex = tierIndex,
-                        SubIndex = subIndex,
-                        NameText = subGo.transform.Find("Name").GetComponent<TMP_Text>(),
-                        DescText = subGo.transform.Find("Desc").GetComponent<TMP_Text>(),
-                        CostText = subGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
-                        BuyButton = subGo.transform.Find("BuyButton").GetComponent<Button>()
-                    };
-                    // Smaller/indented so it visually reads as belonging to the manager row above it.
-                    subRow.NameText.fontSize *= 0.85f;
-                    EnableCostTextAutoSize(subRow.CostText);
-                    subRow.BuyButton.onClick.AddListener(() => Controller.BuySubmanager(tierIndex, subIndex));
-                    subRows.Add(subRow);
-                }
             }
         }
 
@@ -150,14 +110,23 @@ namespace ClickerGenesis.Core
         }
 
         /// <summary>Converts a Genesis-relative verse index into a human "Genesis X:Y" reference
-        /// for locked-submanager text (2026-08-06) - falls back to a plain index if Genesis' own
-        /// VerseDatabase isn't loaded yet for any reason.</summary>
+        /// (2026-08-06) - falls back to a plain index if Genesis' own VerseDatabase isn't loaded
+        /// yet for any reason.</summary>
         private string DescribeGenesisVerse(int verseIndex)
         {
             var db = Controller.GenesisVerseDatabase;
             if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
             var v = db.GetVerse(verseIndex);
             return $"Genesis {v.Reference}";
+        }
+
+        /// <summary>Color-codes one requirement line green (satisfied) or red (unsatisfied)
+        /// (2026-08-06, task #160) - plain color only, no glyph prefix, since the project's Georgia
+        /// TMP font asset is missing several Unicode symbols and silently renders them as tofu boxes
+        /// (hit once already with "↳" on submanager rows).</summary>
+        private static string ReqLine(bool satisfied, string metText, string unmetText)
+        {
+            return satisfied ? $"<color=#2E7D46>{metText}</color>" : $"<color=#D4372A>{unmetText}</color>";
         }
 
         private void Refresh()
@@ -188,19 +157,36 @@ namespace ClickerGenesis.Core
                 // deliberately separate from scribeTierUnlocked above, see ScribeSystem's doc
                 // comment on IsManagerVerseReached for why they can't share a field.
                 bool managerVerseReached = scribes.IsManagerVerseReached(row.TierIndex, Controller.GenesisNextVerseIndex);
+                bool allRequirementsMet = scribeTierUnlocked && managerVerseReached && levelEligible;
 
-                // Row body is JUST the active bonus/perk now - no flavor text (2026-08-06, user's
-                // explicit correction). Built as separate lines so a future perk source (a
-                // per-manager skill node, or the not-yet-built submanager system) can append its
-                // own line here without restructuring this method. Nothing shown at all until the
-                // manager is actually active (bought AND has a scribe of its tier to manage) -
-                // CostText below already explains why it isn't yet.
+                // Redesigned 2026-08-06 (task #160, real user correction - the first pass only ever
+                // showed ONE blocking reason since it was a sequential if/else chain, so every
+                // manager past Adam displayed the wrong/incomplete reason). Now: while not yet
+                // owned, show EVERY requirement as its own color-coded line (green=met, red=not) so
+                // simultaneous requirements (scribe tier + manager verse + level) are all visible at
+                // once. Once every requirement is met, the reason lines disappear entirely (nothing
+                // to show yet - not bought, so no bonus either). Once owned/active, switch to the
+                // real bonus lines. The button (CostText below) NEVER shows any of this reason text -
+                // it only ever shows Owned / Free / a cost, per the user's explicit "the only thing
+                // supposed to be here is cost" instruction (fixes bug #54's overflow as a byproduct).
                 if (active)
                 {
                     string desc = $"+{def.managerBonusMultiplier * 100:F0}% {def.displayName} output";
                     if (skillBonusBoost > 0)
                         desc += $"\n<color=#2E7D46>+{skillBonusBoost * 100:F0}% from Overseer's Wisdom</color>";
                     row.DescText.text = desc;
+                }
+                else if (!unlocked && !allRequirementsMet)
+                {
+                    var lines = new List<string>
+                    {
+                        ReqLine(scribeTierUnlocked, $"{def.displayName} unlocked", $"Unlock {def.displayName} first"),
+                        ReqLine(managerVerseReached,
+                            $"{DescribeGenesisVerse(def.managerUnlockAtVerseIndex)} reached",
+                            $"Reach {DescribeGenesisVerse(def.managerUnlockAtVerseIndex)}"),
+                        ReqLine(levelEligible, $"Level {def.managerUnlockLevel} reached", $"Reach level {def.managerUnlockLevel}")
+                    };
+                    row.DescText.text = string.Join("\n", lines);
                 }
                 else
                 {
@@ -212,71 +198,13 @@ namespace ClickerGenesis.Core
                     row.CostText.text = "Owned";
                     row.BuyButton.interactable = false;
                 }
-                else if (!scribeTierUnlocked)
-                {
-                    // "Unlock" not "Unlocks" (2026-08-06, user correction) - reads as an instruction
-                    // to the player, not a description of the button's own action.
-                    row.CostText.text = $"Unlock {def.displayName} first";
-                    row.BuyButton.interactable = false;
-                }
-                else if (!managerVerseReached)
-                {
-                    // The character's own real verse hasn't been reached yet, even though the
-                    // scribe tier itself is already buyable (2026-08-06) - shows the actual
-                    // reference, same "don't just give a raw number" fix as the scribe rows.
-                    row.CostText.text = $"Unlocks at {DescribeGenesisVerse(def.managerUnlockAtVerseIndex)}";
-                    row.BuyButton.interactable = false;
-                }
-                else if (!levelEligible)
-                {
-                    row.CostText.text = $"Reach level {def.managerUnlockLevel}";
-                    row.BuyButton.interactable = false;
-                }
                 else
                 {
                     row.CostText.text = def.managerUnlockCost <= 0
                         ? "Free"
                         : $"{NumberFormatter.Format(def.managerUnlockCost)} Ink";
-                    row.BuyButton.interactable = def.managerUnlockCost <= 0 || Controller.Wallet.Balance >= def.managerUnlockCost;
-                }
-            }
-
-            foreach (var sub in subRows)
-            {
-                var subDef = scribes.GetSubmanagerDefinition(sub.TierIndex, sub.SubIndex);
-                var parentDef = scribes.GetDefinition(sub.TierIndex);
-                bool owned = scribes.IsSubmanagerOwned(sub.TierIndex, sub.SubIndex);
-                bool managerActive = scribes.IsManagerActive(sub.TierIndex, level);
-                bool verseReached = Controller.GenesisNextVerseIndex >= subDef.unlockAtVerseIndex;
-
-                // Plain ASCII prefix, not "↳" - the project's Georgia TMP font asset doesn't
-                // include that glyph and rendered it as a tofu box (2026-08-06, caught live).
-                sub.NameText.text = $"- {subDef.displayName}";
-
-                string perkLabel = subDef.perkFlavor == "cost-cutter"
-                    ? $"-{subDef.perkAmount * 100:F0}% {parentDef.displayName} cost"
-                    : $"+{subDef.perkAmount * 100:F0}% {parentDef.managerName}'s bonus";
-                sub.DescText.text = owned ? perkLabel : "";
-
-                if (owned)
-                {
-                    sub.CostText.text = "Hired";
-                    sub.BuyButton.interactable = false;
-                }
-                else if (!scribes.IsManagerUnlocked(sub.TierIndex))
-                {
-                    sub.CostText.text = $"Requires {parentDef.managerName}";
-                    sub.BuyButton.interactable = false;
-                }
-                else if (!verseReached)
-                {
-                    sub.CostText.text = $"Unlocks at {DescribeGenesisVerse(subDef.unlockAtVerseIndex)}";
-                    sub.BuyButton.interactable = false;
-                }
-                else
-                {
-                    sub.CostText.text = subDef.unlockCost <= 0 ? "Free" : $"{NumberFormatter.Format(subDef.unlockCost)} Ink";
-                    sub.BuyButton.interactable = subDef.unlockCost <= 0 || Controller.Wallet.Balance >= subDef.unlockCost;
+                    row.BuyButton.interactable = allRequirementsMet
+                        && (def.managerUnlockCost <= 0 || Controller.Wallet.Balance >= def.managerUnlockCost);
                 }
             }
         }

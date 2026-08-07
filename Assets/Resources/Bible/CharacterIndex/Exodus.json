@@ -1,0 +1,239 @@
+{
+  "book": "Exodus",
+  "canonicalOrder": 2,
+  "translation": "KJV",
+  "status": "draft — first indexing pass 2026-08-06, roster confirmed with user before full build (learned from the Genesis round-trip)",
+  "notes": "Same schema and rules as Genesis.json. Submanagers attach to whichever major figure they actually relate to in the text, not defaulted to Moses just because he's central — corrected by the user 2026-08-06. 'role: named' entries are genealogy/context only, no gameplay perk. A person named only in a LATER book of the Bible is still given their later name here when scripture ITSELF explicitly links the two mentions (e.g. Jannes/Jambres in 2 Timothy 3:8, which explicitly says they withstood Moses) — but NOT when a name is merely traditionally associated without the text explicitly making the connection (e.g. Pharaoh's daughter is NOT set to 'Bithiah' here — see her entry for why).",
+  "scribeTiers": [
+    { "tier": 1, "scribeName": "Burning Bush", "managerId": "moses" },
+    { "tier": 2, "scribeName": "Aaron's Rod", "managerId": "aaron" },
+    { "tier": 3, "scribeName": "Sharp Stone", "managerId": "zipporah" },
+    { "tier": 4, "scribeName": "Chariot Wheel", "managerId": "pharaoh_exodus" },
+    { "tier": 5, "scribeName": "Miriam's Timbrel", "managerId": "miriam" },
+    { "tier": 6, "scribeName": "Amalek Banner", "managerId": "joshua" },
+    { "tier": 7, "scribeName": "Steadied Stone", "managerId": "hur" },
+    { "tier": 8, "scribeName": "Midian Well", "managerId": "jethro" },
+    { "tier": 9, "scribeName": "Craftsman's Chisel", "managerId": "bezaleel" },
+    { "tier": 10, "scribeName": "Embroiderer's Needle", "managerId": "aholiab" }
+  ],
+  "characters": [
+    {
+      "id": "moses", "name": "Moses", "role": "manager", "scribeTier": "Burning Bush", "parentManagerId": null,
+      "genealogy": { "father": "amram", "mother": "jochebed", "spouses": ["zipporah"], "children": ["gershom", "eliezer_moses"] },
+      "verses": [
+        { "ref": "Exodus 2:1-10", "note": "Birth; hidden three months, then set adrift and drawn from the water" },
+        { "ref": "Exodus 3:1-4", "note": "The burning bush" },
+        { "ref": "Exodus 7:14-12:32", "note": "Confronts Pharaoh through the ten plagues" },
+        { "ref": "Exodus 14:21-22", "note": "Parts the Red Sea" },
+        { "ref": "Exodus 20", "note": "Receives the Ten Commandments" },
+        { "ref": "Exodus 34:29-30", "note": "His face shines after speaking with God" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Raised in Pharaoh's household but nursed as an infant by his own mother, who was hired as his nurse without Pharaoh's household knowing the relation (Exodus 2:7-9)."]
+    },
+    {
+      "id": "aaron", "name": "Aaron", "role": "manager", "scribeTier": "Aaron's Rod", "parentManagerId": null,
+      "genealogy": { "father": "amram", "mother": "jochebed", "spouses": ["elisheba"], "children": ["nadab", "abihu", "eleazar", "ithamar"] },
+      "verses": [
+        { "ref": "Exodus 4:14-16", "note": "Appointed as Moses' spokesman" },
+        { "ref": "Exodus 7:9-12", "note": "His rod becomes a serpent before Pharaoh" },
+        { "ref": "Exodus 17:12", "note": "Helps Hur hold up Moses' hands at the battle with Amalek" },
+        { "ref": "Exodus 28-29", "note": "Consecrated as the first high priest" },
+        { "ref": "Exodus 32:1-6", "note": "Builds the golden calf under pressure from the people" }
+      ],
+      "ageEvents": [{ "event": "Spoke to Pharaoh alongside Moses", "age": 83, "ref": "Exodus 7:7" }],
+      "funFacts": ["Three years older than Moses (Exodus 7:7), and the one who does the actual speaking to Pharaoh in the early chapters, per Exodus 4:16."]
+    },
+    {
+      "id": "zipporah", "name": "Zipporah", "role": "manager", "scribeTier": "Sharp Stone", "parentManagerId": null,
+      "genealogy": { "father": "jethro", "mother": null, "spouses": ["moses"], "children": ["gershom", "eliezer_moses"] },
+      "verses": [
+        { "ref": "Exodus 2:15-21", "note": "Moses meets her and her sisters at a well in Midian" },
+        { "ref": "Exodus 4:24-26", "note": "Circumcises her son with 'a sharp stone' to turn away the LORD's anger from Moses — one of the strangest passages in the book" },
+        { "ref": "Exodus 18:2-6", "note": "Jethro brings her and her sons to Moses in the wilderness" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Not to be confused with Asenath, Joseph's Egyptian wife back in Genesis (41:45) — two different women married to two different major figures, a full book apart."]
+    },
+    {
+      "id": "pharaoh_exodus", "name": "Pharaoh (of the Exodus)", "role": "manager", "scribeTier": "Chariot Wheel", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": ["unnamed daughter — Exodus 2:5"] },
+      "verses": [
+        { "ref": "Exodus 1:8-14", "note": "'A new king over Egypt, which knew not Joseph' — begins the oppression" },
+        { "ref": "Exodus 5:1-2", "note": "Refuses Moses and Aaron's first request" },
+        { "ref": "Exodus 7-11", "note": "Repeatedly hardens his heart through the plagues" },
+        { "ref": "Exodus 14:5-28", "note": "Pursues Israel to the Red Sea; his army destroyed" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Never given a personal name anywhere in scripture — unlike later Pharaohs such as Pharaoh Necho or Pharaoh Shishak in Kings/Chronicles, who are named. A different, also-unnamed man from Joseph's Pharaoh in Genesis 41."]
+    },
+    {
+      "id": "miriam", "name": "Miriam", "role": "manager", "scribeTier": "Miriam's Timbrel", "parentManagerId": null,
+      "genealogy": { "father": "amram", "mother": "jochebed", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 2:4-8", "note": "Watches the basket in the reeds and arranges for Jochebed to nurse Moses (unnamed in this scene, but understood to be her)" },
+        { "ref": "Exodus 15:20-21", "note": "Called 'the prophetess' — leads the women in song and dance after the Red Sea" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["First person in the Bible explicitly called a prophetess (Exodus 15:20)."]
+    },
+    {
+      "id": "joshua", "name": "Joshua", "role": "manager", "scribeTier": "Amalek Banner", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 17:9-13", "note": "First appearance in scripture — leads Israel's fighting men against Amalek while Moses' raised hands (held up by Aaron and Hur) hold the battle" },
+        { "ref": "Exodus 24:13", "note": "Attends Moses partway up Mount Sinai" },
+        { "ref": "Exodus 33:11", "note": "Moses' minister; does not leave the tabernacle" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Called 'Oshea the son of Nun' when first commanding this battle — his father Nun and the fuller family background come later (Numbers 13:8, 13:16)."]
+    },
+    {
+      "id": "hur", "name": "Hur", "role": "manager", "scribeTier": "Steadied Stone", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 17:10-12", "note": "With Aaron, physically holds up Moses' hands on a stone seat through the entire battle with Amalek — when the hands dropped, Israel began losing" },
+        { "ref": "Exodus 24:14", "note": "Left in charge of the people with Aaron while Moses is on Sinai" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Promoted to a full manager rather than a submanager specifically because the text makes his physical support the deciding factor in the battle's outcome (Exodus 17:11-12) — without him and Aaron, Moses could not sustain the position alone."]
+    },
+    {
+      "id": "jethro", "name": "Jethro", "role": "manager", "scribeTier": "Midian Well", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": ["zipporah", "six unnamed daughters — Exodus 2:16"] },
+      "verses": [
+        { "ref": "Exodus 2:16-21", "note": "Priest of Midian, gives Zipporah to Moses in marriage" },
+        { "ref": "Exodus 18:1-12", "note": "Brings Moses' wife and sons to him and offers sacrifice" },
+        { "ref": "Exodus 18:13-27", "note": "Advises Moses to delegate judgment to appointed leaders — the origin of Israel's tiered judicial structure" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Also called Reuel earlier in the same book (Exodus 2:18) — most likely one man known by two names/titles, not two different people; flagged here rather than silently picking one."]
+    },
+    {
+      "id": "bezaleel", "name": "Bezaleel", "role": "manager", "scribeTier": "Craftsman's Chisel", "parentManagerId": null,
+      "genealogy": { "father": "uri — Exodus 31:2, not individually indexed", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 31:2-5", "note": "'Filled... with the spirit of God, in wisdom, in understanding, and in knowledge, and in all manner of workmanship' — chief craftsman of the tabernacle" },
+        { "ref": "Exodus 35:30-35", "note": "Named again as construction begins, paired with Aholiab" },
+        { "ref": "Exodus 37-38", "note": "Builds the ark, the altar, and the tabernacle's furnishings" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Of the tribe of Judah — the first person in the Bible explicitly said to be filled with the Spirit of God for a specific task, and that task is skilled craftsmanship, not prophecy or leadership."]
+    },
+    {
+      "id": "aholiab", "name": "Aholiab", "role": "manager", "scribeTier": "Embroiderer's Needle", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 31:6", "note": "Given by name alongside Bezaleel to help build the tabernacle" },
+        { "ref": "Exodus 35:34-35", "note": "Specifically skilled as 'an engraver, and a cunning workman, and an embroiderer'" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Of the tribe of Dan — paired with Bezaleel (tribe of Judah) as co-lead craftsmen, spanning two different tribes for the one shared project."]
+    },
+    {
+      "id": "amram", "name": "Amram", "role": "submanager", "scribeTier": "Burning Bush", "parentManagerId": "moses",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": ["jochebed"], "children": ["miriam", "aaron", "moses"] },
+      "verses": [{ "ref": "Exodus 6:20", "note": "Named as Moses and Aaron's father, of the tribe of Levi" }],
+      "ageEvents": []
+    },
+    {
+      "id": "jochebed", "name": "Jochebed", "role": "submanager", "scribeTier": "Burning Bush", "parentManagerId": "moses",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": ["amram"], "children": ["miriam", "aaron", "moses"] },
+      "verses": [
+        { "ref": "Exodus 2:2-9", "note": "Hides Moses three months, then nurses him for Pharaoh's own daughter, unnamed in this scene but understood to be her" },
+        { "ref": "Exodus 6:20", "note": "Named" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "gershom", "name": "Gershom", "role": "submanager", "scribeTier": "Burning Bush", "parentManagerId": "moses",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "moses", "mother": "zipporah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 2:22", "note": "Named — 'I have been a stranger in a strange land'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "eliezer_moses", "name": "Eliezer (Moses' son)", "role": "submanager", "scribeTier": "Burning Bush", "parentManagerId": "moses",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Accuracy flag: a DIFFERENT man from Eliezer of Damascus, Abraham's steward in Genesis 15:2 — same KJV spelling, unrelated, a full book apart.",
+      "genealogy": { "father": "moses", "mother": "zipporah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 18:4", "note": "Named — 'the God of my father... delivered me from the sword of Pharaoh'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "nadab", "name": "Nadab", "role": "submanager", "scribeTier": "Aaron's Rod", "parentManagerId": "aaron",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 24:1, 9", "note": "Goes up part of Mount Sinai with Moses, Aaron, Abihu, and seventy elders" },
+        { "ref": "Exodus 28:1", "note": "Named among those consecrated as priests with Aaron" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abihu", "name": "Abihu", "role": "submanager", "scribeTier": "Aaron's Rod", "parentManagerId": "aaron",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 24:1, 9", "note": "Goes up part of Mount Sinai with Moses, Aaron, Nadab, and seventy elders" },
+        { "ref": "Exodus 28:1", "note": "Named among those consecrated as priests with Aaron" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shiphrah", "name": "Shiphrah", "role": "submanager", "scribeTier": "Chariot Wheel", "parentManagerId": "pharaoh_exodus",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "She defies Pharaoh rather than serving him — attached to his tier as the one who directly opposed him, not as a loyal supporter.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 1:15-21", "note": "One of two named Hebrew midwives who defy Pharaoh's order to kill Hebrew baby boys; God deals well with her for it" }],
+      "ageEvents": []
+    },
+    {
+      "id": "puah", "name": "Puah", "role": "submanager", "scribeTier": "Chariot Wheel", "parentManagerId": "pharaoh_exodus",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Same note as Shiphrah — defies Pharaoh rather than serving him.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 1:15-21", "note": "The second of the two named Hebrew midwives who defy Pharaoh" }],
+      "ageEvents": []
+    },
+    {
+      "id": "jannes", "name": "Jannes", "role": "submanager", "scribeTier": "Chariot Wheel", "parentManagerId": "pharaoh_exodus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Never named in Exodus itself — only 'the magicians of Egypt' (Exodus 7:11, 7:22, 8:7, 8:18-19, 9:11). Named here because 2 Timothy 3:8 explicitly identifies Jannes and Jambres as the ones who 'withstood Moses,' making the cross-reference textually explicit rather than merely traditional.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 7:11, 7:22, 8:7, 8:18-19, 9:11", "note": "Unnamed as 'the magicians' — replicate some of Moses' signs, then fail" },
+        { "ref": "2 Timothy 3:8", "note": "New Testament — names Jannes and Jambres directly as the ones who withstood Moses" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jambres", "name": "Jambres", "role": "submanager", "scribeTier": "Chariot Wheel", "parentManagerId": "pharaoh_exodus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Same note as Jannes — unnamed in Exodus, named via the explicit 2 Timothy 3:8 cross-reference.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Exodus 7:11, 7:22, 8:7, 8:18-19, 9:11", "note": "Unnamed as 'the magicians'" },
+        { "ref": "2 Timothy 3:8", "note": "New Testament — names Jannes and Jambres directly" }
+      ],
+      "ageEvents": []
+    },
+    { "id": "elisheba", "name": "Elisheba", "role": "named",
+      "genealogy": { "father": "amminadab — Exodus 6:23, not individually indexed", "mother": null, "spouses": ["aaron"], "children": ["nadab", "abihu", "eleazar", "ithamar"] },
+      "verses": [{ "ref": "Exodus 6:23", "note": "Named as Aaron's wife, sister of Naashon" }], "ageEvents": [] },
+    { "id": "eleazar", "name": "Eleazar", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 6:23", "note": "Named among Aaron's four sons" }], "ageEvents": [],
+      "funFacts": ["Not yet prominent in Exodus itself — becomes far more significant in Numbers and Joshua, after Nadab and Abihu die (Leviticus 10)."] },
+    { "id": "ithamar", "name": "Ithamar", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Exodus 6:23", "note": "Named among Aaron's four sons" }], "ageEvents": [] }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "jethroOtherDaughters": { "ref": "Exodus 2:16", "note": "'The priest of Midian had seven daughters' — only Zipporah is named; the other six are not." },
+    "pharaohsDaughter": { "ref": "Exodus 2:5-10", "note": "Never named in Exodus. NOT set to 'Bithiah' here — 1 Chronicles 4:18 names a 'Bithiah the daughter of Pharaoh' in an unrelated genealogical fragment, with no explicit textual link to the woman who drew Moses from the water. That identification is a later Jewish tradition, not something the Bible itself states — kept unnamed here rather than asserting an inference as fact." }
+  }
+}

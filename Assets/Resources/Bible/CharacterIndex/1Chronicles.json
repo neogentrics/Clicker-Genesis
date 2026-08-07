@@ -1,0 +1,906 @@
+{
+  "book": "1 Chronicles",
+  "canonicalOrder": 13,
+  "notes": "SECOND-PASS CORRECTED REDRAFT. Explicit fixes applied vs. the first draft's flagged issues: (1) Asaph's four sons (Zaccur, Joseph, Nethaniah, Asarelah/Jesharelah per 25:2) are now correctly shown holding courses 1, 3, 5, and 7 of the 24 priestly-musical courses (25:9-17), interleaved with Jeduthun's and Heman's sons — NOT a consecutive first-four block. (2) The Levitical service-age law (23:24-27) no longer quotes \"because their work was ended\" as KJV text (that phrase is not there); it now paraphrases the reasoning and, where a direct quote is used, quotes the actual clause \"they shall no more carry the tabernacle\" (23:26). (3) Nathan/Nathan collision flagged explicitly in both entries: David's son Nathan (3:5, genealogyLists only, no independent action) vs. Nathan the prophet (manager entry, ch17 and 29:29). (4) Maachah collision flagged everywhere the name recurs in this book: Caleb's concubine (2:48), David's wife/Absalom's mother, daughter of Talmai king of Geshur (3:2), a matriarch in Manasseh's genealogy/wife of Machir (7:15-16), and the wife of Jehiel father of Gibeon (8:29/9:35) — all noted as distinct people sharing one name, collected under genealogyLists. (5) Uzza's death (13:7-11) now has its own named character entry as the load-bearing cause of the Ark's Obed-edom detour and David's fear. (6) The three mighty men who broke through the Philistine garrison at Bethlehem to draw water for David, which he then poured out to the LORD (11:15-19), now has its own named character entry. Additional cruxes/collisions caught in this pass and flagged rather than silently resolved: the Ahimelech/Abiathar father-son reversal (18:16, 24:6 vs. 1 Sam 22:20); the Elhanan/Goliath's-brother discrepancy and father-name variant (20:5 vs. 2 Sam 21:19); a third-order Jonathan collision (Saul's son 10:2/8:33/9:39; David's nephew, giant-slayer, 20:7; David's uncle/counsellor/scribe, 27:32); a second-order Abinadab collision (Saul's son 10:2/8:33; David's brother 2:13; the man in whose house the Ark rested, 13:7); the Eshbaal/Ishbosheth and Meribbaal/Mephibosheth name-form variants (8:33-34, 9:39-40); a possible two-Obededom ambiguity (13:13's Gittite ark-keeper vs. 16:38's \"Obededom the son of Jeduthun\"); the unconfirmed traditional identification of the singer Heman with \"Heman the Ezrahite\" (1 Kings 4:31/Ps. 88 title) and of Jeduthun with \"Ethan the son of Kushaiah\" (6:44) — neither equation is made explicitly within 1 Chronicles itself, so both are marked unconfirmed, not asserted. David's \"seventh son\" position (2:15) is flagged against the looser eight-son impression given in 1 Samuel 16. Chapters 1-9 are treated overwhelmingly as genealogyLists per the book-specific guidance; the handful of self-contained narrative vignettes embedded in those chapters (Jabez's prayer, Ephraim's mourning for his slain sons, the Reubenite/Gadite/Manasseh war against the Hagarites, the Simeonite conquest of Gedor, Sheshan giving his daughter to his Egyptian servant) are preserved either as a named character entry (Jabez) or as a flagged genealogyLists note, never silently dropped. Schema cross-check performed: every managerId (13 scribeTiers) and every parentManagerId (7 submanagers) resolves to an exact matching id in characters[], and no character holds both a scribeTier and a parentManagerId. Law-role characters carry an empty/null-filled genealogy object (schema requires the object be present) since genealogy is not applicable to them — deliveredBy/purpose carry their actual content instead.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Fallen Crown",
+      "managerId": "saul",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Shepherd-King's Throne",
+      "managerId": "david",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Captain's Standard",
+      "managerId": "joab",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Ark-Bearers' Charge",
+      "managerId": "levites_ark_bearers_law",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Priestly Line",
+      "managerId": "zadok",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Asaph's Psaltery",
+      "managerId": "asaph",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Prophet's Oracle",
+      "managerId": "nathan_prophet",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Ornan's Threshingfloor",
+      "managerId": "ornan",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Temple-Builder's Charge",
+      "managerId": "solomon",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Twenty-Year Reckoning",
+      "managerId": "levitical_organization_law",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Heman's Horn",
+      "managerId": "heman",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Jeduthun's Harp",
+      "managerId": "jeduthun",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Monthly Courses of the Realm",
+      "managerId": "royal_administration_law",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "saul",
+      "name": "Saul",
+      "role": "manager",
+      "genealogy": {
+        "father": "Kish, a Benjamite (per the genealogy at 8:33 and 9:39)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Jonathan",
+          "Abinadab",
+          "Malchishua",
+          "Eshbaal"
+        ],
+        "note": "COLLISION FLAGS: (1) 'Jonathan' here is one of at least three distinct Jonathans in this book — see the entries/notes for Jonathan the nephew of David (20:7) and Jonathan David's uncle/counsellor (27:32); this Saul's-son Jonathan has no independent character entry of his own since 1 Chronicles narrates no differentiated action for him beyond dying alongside his father (10:2). (2) 'Abinadab' here is one of at least three distinct Abinadabs in this book — David's brother (2:13) and the man in whose house the Ark rested before Uzza's death (13:7) are different people; none of the three get separate entries here since none has independent action beyond being named. (3) The son named 'Eshbaal' (8:33, 9:39) is the same figure called Ishbosheth in 2 Samuel — a recognized scribal name-form variant, not two different sons."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 10:1-6",
+          "note": "Saul and three of his sons (Jonathan, Abinadab, Malchishua) die together fighting the Philistines on Mount Gilboa; Saul falls on his own sword after his armourbearer refuses to kill him."
+        },
+        {
+          "ref": "1 Chronicles 10:13-14",
+          "note": "The Chronicler's own verdict on why Saul died: 'for his transgression which he committed against the LORD, even against the word of the LORD, which he kept not, and also for asking counsel of a familiar spirit, to enquire of it; And enquired not of the LORD: therefore he slew him, and turned the kingdom unto David the son of Jesse.'"
+        },
+        {
+          "ref": "1 Chronicles 8:33; 9:39",
+          "note": "Genealogical restatement of Saul's line in the Benjamite lists, naming his son Eshbaal."
+        }
+      ],
+      "funFacts": [
+        "1 Chronicles skips almost the entirety of Saul's actual reign — it opens its narrative portion directly at his death, using him purely as the negative contrast that sets up David's kingship.",
+        "After his death, Saul's armor was placed in the house of his gods and his head fastened in the temple of Dagon (10:10) — a Philistine desecration of the body the Chronicler retains from the parallel account."
+      ]
+    },
+    {
+      "id": "david",
+      "name": "David",
+      "role": "manager",
+      "genealogy": {
+        "father": "Jesse of Bethlehem (2:13-15)",
+        "mother": null,
+        "spouses": [
+          "Michal (daughter of Saul, per 15:29's narrative, not listed among the ch.3 wife-list)",
+          "Ahinoam",
+          "Abigail",
+          "Maachah (daughter of Talmai king of Geshur — see Maachah collision flag in genealogyLists)",
+          "Haggith",
+          "Abital",
+          "Eglah",
+          "Bathshua (3:5 — the KJV's spelling here, elsewhere Bathsheba)"
+        ],
+        "children": [
+          "Amnon",
+          "Daniel",
+          "Absalom",
+          "Adonijah",
+          "Shephatiah",
+          "Ithream",
+          "Shimea",
+          "Shobab",
+          "Nathan",
+          "Solomon"
+        ],
+        "note": "1 Chronicles 2:15 numbers David as Jesse's SEVENTH son ('Ozem the sixth, David the seventh') — flagged as a genealogical count that sits in tension with 1 Samuel 16-17's looser impression of David as an eighth, uncounted youngest son; not silently resolved here. COLLISION FLAG: the son 'Nathan' (3:5) is a completely different person from Nathan the prophet (see that character's own entry) — both appear in or near David's own record and must not be conflated. Full sons-by-wife breakdown (including several apparent Jerusalem-born sons whose names recur, e.g. Elishama and Eliphelet each listed twice in 3:6-8) is deferred to genealogyLists rather than asserted here as fully resolved."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:1-3",
+          "note": "All Israel gathers to David at Hebron and anoints him king, 'according to the word of the LORD by Samuel.'"
+        },
+        {
+          "ref": "1 Chronicles 11:4-9",
+          "note": "David and his men take the stronghold of Zion/Jerusalem from the Jebusites; David dwells in the castle, 'and David waxed greater and greater: for the LORD of hosts was with him.'"
+        },
+        {
+          "ref": "1 Chronicles 15:25-29",
+          "note": "David, with the elders and captains, brings the Ark up to the City of David with gladness, sacrifice, and music, 'clothed with a robe of fine linen'; Michal watches from a window and despises him in her heart for dancing (1 Chronicles does not repeat the parallel account's added note in 2 Samuel 6:23 that she remained childless — that detail belongs to the other book, not this one)."
+        },
+        {
+          "ref": "1 Chronicles 21:1-17",
+          "note": "David is incited to number Israel and Judah, sins in doing so, and chooses three days of pestilence over the other two options Gad presents; 70,000 die before the LORD relents at the threshingfloor of Ornan."
+        },
+        {
+          "ref": "1 Chronicles 22:6-10",
+          "note": "David charges Solomon to build the temple, explaining he himself was barred from building it: 'thou hast shed blood abundantly, and hast made great wars: thou shalt not build an house unto my name.'"
+        },
+        {
+          "ref": "1 Chronicles 28:2-10",
+          "note": "David assembles Israel's leaders, publicly commits the temple plan to Solomon, and charges him to 'know thou the God of thy father, and serve him with a perfect heart.'"
+        },
+        {
+          "ref": "1 Chronicles 29:10-19",
+          "note": "David's public prayer of praise and dedication over the freewill offerings for the temple: 'Thine, O LORD, is the greatness, and the power, and the glory, and the victory, and the majesty...'"
+        },
+        {
+          "ref": "1 Chronicles 29:26-28",
+          "note": "David reigned forty years over Israel — seven in Hebron, thirty-three in Jerusalem — and 'died in a good old age, full of days, riches, and honour.'"
+        }
+      ],
+      "funFacts": [
+        "1 Chronicles 29:29 names three separate written sources the Chronicler drew on for David's reign: 'the book of Samuel the seer,' 'the book of Nathan the prophet,' and 'the book of Gad the seer' — none of which survive independently today.",
+        "The Chronicler omits nearly all of David's moral failures found in Samuel/Kings (Bathsheba, Absalom's revolt, the family collapse) — the only sin narrated at length here is the census of chapter 21."
+      ]
+    },
+    {
+      "id": "joab",
+      "name": "Joab",
+      "role": "manager",
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah, David's sister (2:16) — Joab is consistently identified by his mother's name rather than a named father, whom scripture never records.",
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Abishai and Asahel (2:16), both fellow warriors under David; Asahel is listed among the mighty men (11:26) but has no independently narrated action within 1 Chronicles itself, so he is not given his own entry here (his death at Abner's hand is recorded only in 2 Samuel 2, outside this book)."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:6",
+          "note": "David declares whoever strikes the Jebusites first will be chief and captain; 'Joab the son of Zeruiah went first up, and was chief.'"
+        },
+        {
+          "ref": "1 Chronicles 18:15; 19:8-15",
+          "note": "Joab is named commander over the host and leads Israel's forces in the war against the Ammonites and their hired Syrian allies."
+        },
+        {
+          "ref": "1 Chronicles 21:2-6",
+          "note": "Joab objects to David's census order and, though he carries it out under command, deliberately does not count Levi and Benjamin — 'for the king's word was abominable to Joab.'"
+        },
+        {
+          "ref": "1 Chronicles 27:34",
+          "note": "Closing administrative note: 'the general of the king's army was Joab.'"
+        }
+      ],
+      "funFacts": [
+        "Joab is the only figure besides David and the priestly/prophetic line to command real narrative space across nearly the entire span of David's reign in this book."
+      ]
+    },
+    {
+      "id": "abishai",
+      "name": "Abishai",
+      "role": "submanager",
+      "parentManagerId": "joab",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Joab's brother and second-in-command; fights alongside him in every major campaign this book records.",
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah, David's sister (2:16)",
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Joab and Asahel."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:20-21",
+          "note": "Abishai lifts his spear against three hundred and slays them, and 'had a name among the three... howbeit he attained not to the first three' — a distinct, honored-but-secondary rank among David's elite warriors."
+        },
+        {
+          "ref": "1 Chronicles 18:12",
+          "note": "Abishai personally strikes down 18,000 Edomites in the Valley of Salt."
+        },
+        {
+          "ref": "1 Chronicles 19:11-15",
+          "note": "In the combined war against Ammon and Syria, Joab and Abishai split command of the army between them, each supporting the other."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jashobeam",
+      "name": "Jashobeam",
+      "role": "submanager",
+      "parentManagerId": "david",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Chief of David's mighty captains, credited with an extraordinary single-handed feat of arms.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'an Hachmonite' (11:11); possibly the same Jashobeam named captain of the first monthly division in 27:2 ('the son of Zabdiel'), but 1 Chronicles does not explicitly equate the two references, so the identification is treated here as likely, not certain."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:11",
+          "note": "'Jashobeam, an Hachmonite, the chief of the captains: he lifted up his spear against three hundred slain by him at one time.' NOTE: 2 Samuel 23:8's parallel list gives a differently-named figure ('Josheb-basshebeth'/'Adino the Eznite') credited with eight hundred slain in the equivalent top-of-list position — a well-known discrepancy between the two parallel lists in both name and number, not resolved here."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "eleazar_son_of_dodo",
+      "name": "Eleazar the son of Dodo",
+      "role": "submanager",
+      "parentManagerId": "david",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "One of David's three chief mighty men; held his ground in a contested barley field.",
+      "genealogy": {
+        "father": "Dodo, an Ahohite",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "COLLISION NOTE: this Eleazar (a warrior) is not to be confused with Eleazar the son of Aaron, ancestor of the priestly line referenced elsewhere in this book's genealogies (6:3-4, 24:1-4) — same name, unrelated figures."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:12-14",
+          "note": "When the Philistines gathered for battle in a barley-full field and Israel's men fled, Eleazar stood his ground and defended it; 'and the LORD saved them by a great deliverance.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "benaiah_son_of_jehoiada",
+      "name": "Benaiah the son of Jehoiada",
+      "role": "submanager",
+      "parentManagerId": "david",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Commander of David's personal guard; three separate feats of arms recorded against long odds.",
+      "genealogy": {
+        "father": "Jehoiada",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'of Kabzeel' (11:22); the KJV's 27:5 additionally calls him 'a chief priest' in the office-list context of that chapter — an unusual phrase for a military commander that commentators read variously; noted here without asserting a resolved meaning."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:22-25",
+          "note": "Benaiah slew two lion-like men of Moab, went down into a pit and slew a lion 'in a snowy day,' and slew an Egyptian giant using the Egyptian's own spear after taking it from his hand; 'David set him over his guard.'"
+        },
+        {
+          "ref": "1 Chronicles 27:5-6",
+          "note": "Named captain of the third division for the third month, of the thirty, and over the thirty — though the text notes he did not attain to the first three."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "gad_the_seer",
+      "name": "Gad the seer",
+      "role": "submanager",
+      "parentManagerId": "david",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "David's court seer; personally delivers and mediates the choice of judgment after the census.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": ""
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 21:9-13",
+          "note": "The LORD sends Gad to David after the census, offering a choice among three years of famine, three months of defeat before enemies, or three days of the LORD's sword/pestilence; David chooses to fall into the hand of the LORD."
+        },
+        {
+          "ref": "1 Chronicles 21:18-19",
+          "note": "Gad instructs David, at the angel's command, to go up and set an altar to the LORD in the threshingfloor of Ornan the Jebusite."
+        },
+        {
+          "ref": "1 Chronicles 29:29",
+          "note": "Named as one of three written sources for David's reign: 'the book of Gad the seer.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "amasai",
+      "name": "Amasai",
+      "role": "submanager",
+      "parentManagerId": "david",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A Spirit-moved captain who publicly pledges the mighty men's allegiance to David before he is king.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'Chief of the captains' among the warriors who joined David at Ziklag/before his kingship (12:18); possibly the same Amasai listed among priestly trumpeters in 15:24, but 1 Chronicles does not state this explicitly, so it is not asserted as certain here."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 12:16-18",
+          "note": "'Then the spirit came upon Amasai, who was chief of the captains, and he said, Thine are we, David, and on thy side, thou son of Jesse: peace, peace be unto thee, and peace be to thine helpers; for thy God helpeth thee. Then David received them, and made them captains of the band.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "levites_ark_bearers_law",
+      "name": "The Law of the Ark-Bearing Levites",
+      "role": "law",
+      "deliveredBy": "David, explicitly grounding the ruling in the LORD's own prior choice of the Levites (15:2)",
+      "purpose": "Corrects the fatal error of chapter 13 — moving the Ark by ox-cart, which led directly to Uzza's death (13:7-11) — by re-establishing, per the Law of Moses, that only Levites may carry the Ark, on their own shoulders by its staves, never by cart. The Chronicler has David name the earlier failure as the direct cause of 'the breach' God made on Israel, making this an explicit corrective, not a fresh innovation.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry, not a person; see deliveredBy/purpose."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 15:2",
+          "note": "'Then David said, None ought to carry the ark of God but the Levites: for them hath the LORD chosen to carry the ark of God, and to minister unto him for ever.'"
+        },
+        {
+          "ref": "1 Chronicles 15:13",
+          "note": "'For because ye did it not at the first, the LORD our God made a breach upon us, for that we sought him not after the due order.'"
+        },
+        {
+          "ref": "1 Chronicles 15:14-15",
+          "note": "The priests and Levites sanctify themselves and carry the Ark on their shoulders with the staves, as Moses had commanded — the corrected procedure put into practice."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "uzza",
+      "name": "Uzza",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Drives the ark-cart out of 'the house of Abinadab' together with Ahio (13:7). 1 Chronicles does not itself state Uzza and Ahio were sons of that Abinadab — the parallel account in 2 Samuel 6:3 adds that detail; not imported here as this book's own claim. This Abinadab is a third figure of that name in this book, distinct from David's brother (2:13) and from Saul's son (8:33/10:2) — see the Abinadab collision flag under Saul's entry."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 13:7-10",
+          "note": "When the oxen stumbled at the threshingfloor of Chidon, Uzza put forth his hand to steady the Ark; 'the anger of the LORD was kindled against Uzza, and he smote him, because he put his hand to the ark: and there he died before God.'"
+        },
+        {
+          "ref": "1 Chronicles 13:11-14",
+          "note": "David, angry and afraid, calls the place Perezuzza ('the breach of Uzza'); the Ark is diverted for three months to the house of Obed-edom instead of continuing to Jerusalem, and this scare directly sets up chapter 15's corrected Levitical procedure."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "obededom",
+      "name": "Obed-edom",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Obededom the Gittite' at 13:13, but a 'Obededom the son of Jeduthun' also appears among the ark-gate porters at 16:38 — 1 Chronicles does not clarify whether this is the same individual described two ways or two separate Levites of the same name; flagged as an open ambiguity rather than resolved. Sons/descendants listed as a large gatekeeping family (26:4-8) are deferred to genealogyLists."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 13:13-14",
+          "note": "The Ark is diverted to Obed-edom's house for three months after Uzza's death; 'the LORD blessed the house of Obededom, and all that he had.'"
+        },
+        {
+          "ref": "1 Chronicles 15:18, 21, 24-25",
+          "note": "Obed-edom serves among the Levites appointed as doorkeepers for the Ark and among those playing harps on the eighth/'Sheminith' during its procession to Jerusalem."
+        },
+        {
+          "ref": "1 Chronicles 16:5, 38",
+          "note": "Appointed to minister regularly before the Ark, including as a gatekeeper."
+        }
+      ],
+      "funFacts": [
+        "His household's blessing after sheltering the Ark for three months becomes proverbial within the book's own narrative logic — a direct, positive counterpoint to Uzza's death only a few verses earlier."
+      ]
+    },
+    {
+      "id": "zadok",
+      "name": "Zadok",
+      "role": "manager",
+      "genealogy": {
+        "father": "Ahitub (6:8, 18:16), of the line of Eleazar the son of Aaron via Phinehas (6:4-8)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": ""
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 15:11",
+          "note": "David calls for Zadok and Abiathar the priests, along with the Levites, to help bring up the Ark properly."
+        },
+        {
+          "ref": "1 Chronicles 16:39",
+          "note": "Zadok and his brethren the priests are left before the tabernacle of the LORD at Gibeon to minister continually."
+        },
+        {
+          "ref": "1 Chronicles 24:1-6",
+          "note": "David divides the descendants of Aaron into 24 courses by lot, 16 from Eleazar's line and 8 from Ithamar's line, 'for the governors of the sanctuary, and governors of the house of God, were of the sons of Eleazar, and of the sons of Ithamar' — an explicitly impartial, lot-based division rather than favoritism. Zadok (Eleazar's line) and Ahimelech (Ithamar's line) jointly oversee the recording."
+        },
+        {
+          "ref": "1 Chronicles 29:22",
+          "note": "At Solomon's coronation, 'they made Solomon the son of David king the second time, and anointed him unto the LORD to be the chief governor, and Zadok to be priest' — Zadok is anointed priest in the same ceremony."
+        }
+      ],
+      "funFacts": [
+        "1 Chronicles 18:16 (and 24:6) calls a priest 'Abimelech/Ahimelech the son of Abiathar' — this reverses the father-son relationship known from 1 Samuel 22:20, where Abiathar is the SON of Ahimelech. This is a well-known textual crux; it is flagged here, not silently resolved in either direction."
+      ]
+    },
+    {
+      "id": "ahimelech_priest",
+      "name": "Ahimelech",
+      "role": "submanager",
+      "parentManagerId": "zadok",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Co-organizer, alongside Zadok, of the priestly line descended from Ithamar.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "COLLISION / CRUX FLAG: called 'the son of Abiathar' at 1 Chronicles 18:16 and 24:6 (KJV) — this reverses the parent-child relationship given in 1 Samuel 22:20, where Ahimelech (priest of Nob, killed by Saul/Doeg) is Abiathar's FATHER, not his son. Scripture does not resolve which direction is correct within 1 Chronicles' own text; treated here as an unresolved textual crux, not asserted as fact in either direction. Also distinct from the earlier Ahimelech the Hittite, a companion of David mentioned only in the parallel account (1 Samuel 26), who does not appear in 1 Chronicles."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 24:3, 6",
+          "note": "David, with Zadok of the sons of Eleazar and Ahimelech of the sons of Ithamar, divides the priests into their 24 courses; Ahimelech is named alongside Zadok as the ministering priests present when the divisions are recorded by the Levite scribe Shemaiah."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "asaph",
+      "name": "Asaph",
+      "role": "manager",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Zaccur",
+          "Joseph",
+          "Nethaniah",
+          "Asarelah (also spelled Jesharelah, 25:14)"
+        ],
+        "note": "A Levite of the Gershonite line (6:39-43). Sons' names appear slightly differently spelled between 25:2 and 25:14 (Asarelah/Jesharelah) — a minor internal spelling variant, not a different son."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 16:4-7, 37",
+          "note": "David appoints Asaph and his brethren to minister before the Ark continually with music and thanksgiving, and delivers into Asaph's hand the psalm of thanks beginning 'Give thanks unto the LORD, call upon his name...'"
+        },
+        {
+          "ref": "1 Chronicles 25:1-2",
+          "note": "Asaph, with Heman and Jeduthun, is set apart by David and the captains for the service of song; Asaph's own sons are named as Zaccur, Joseph, Nethaniah, and Asarelah, 'under the hands of Asaph, which prophesied according to the order of the king.'"
+        },
+        {
+          "ref": "1 Chronicles 25:9-17",
+          "note": "CORRECTED: cross-checking the 24 lots against the named sons in 25:2-4 shows Asaph's four sons head courses 1 (Joseph), 3 (Zaccur), 5 (Nethaniah), and 7 (Asarelah/Jesharelah) of the 24 priestly-musical courses — interleaved with Jeduthun's and Heman's sons throughout the list, not massed together as a consecutive first-four block."
+        }
+      ],
+      "funFacts": [
+        "Twelve of the biblical Psalms (50, 73-83) bear the superscription 'A Psalm of Asaph' — 1 Chronicles itself does not claim authorship of those texts for him, but it does show him established as David's chief minister of sacred song and even as one who 'prophesied' with music (25:2)."
+      ]
+    },
+    {
+      "id": "nathan_prophet",
+      "name": "Nathan the prophet",
+      "role": "manager",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "COLLISION FLAG: distinct from Nathan, David's own son by Bathshua (3:5) — see the collision note on David's entry. Nathan the prophet has no stated genealogy of his own in this book."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 17:1-2",
+          "note": "David tells Nathan he wishes to build a house for the Ark; Nathan initially answers, 'Do all that is in thine heart; for God is with thee.'"
+        },
+        {
+          "ref": "1 Chronicles 17:3-15",
+          "note": "That same night the word of God comes to Nathan, reversing his own advice: David will not build the LORD's house, but the LORD will build David a house — the dynastic covenant. Nathan relays 'all these words, and according to all this vision' to David."
+        },
+        {
+          "ref": "1 Chronicles 29:29",
+          "note": "Named as one of three written sources for David's reign: 'the book of Nathan the prophet.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "ornan",
+      "name": "Ornan the Jebusite",
+      "role": "manager",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "four sons, seen hiding when the angel appeared (21:20)"
+        ],
+        "note": "Called 'Araunah' in the parallel account (2 Samuel 24) — a name-form variant for the same figure across the two books, not a different person; 1 Chronicles consistently uses 'Ornan.'"
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 21:18-25",
+          "note": "At Gad's direction, David comes to Ornan's threshingfloor to buy it and build an altar; Ornan offers the site, oxen, and threshing instruments for wood freely, but David insists on paying full price — 600 shekels of gold by weight — 'neither will I offer burnt offerings without cost.'"
+        },
+        {
+          "ref": "1 Chronicles 21:26-27",
+          "note": "David builds the altar and offers burnt offerings and peace offerings; fire comes down from heaven upon the altar, and the LORD commands the angel to put up his sword."
+        },
+        {
+          "ref": "1 Chronicles 22:1",
+          "note": "David identifies the site itself: 'This is the house of the LORD God, and this is the altar of the burnt offering for Israel' — establishing Ornan's threshingfloor as the future temple site."
+        }
+      ],
+      "funFacts": [
+        "The site purchased from Ornan for a fair price, not taken as tribute or seized by conquest, becomes the ground on which Solomon's temple is later built (2 Chronicles 3:1)."
+      ]
+    },
+    {
+      "id": "solomon",
+      "name": "Solomon",
+      "role": "manager",
+      "genealogy": {
+        "father": "David",
+        "mother": "Bathshua/Bathsheba, daughter of Ammiel (3:5)",
+        "spouses": [],
+        "children": [],
+        "note": "1 Chronicles covers only his commissioning and coronation, not his reign proper (that begins in 2 Chronicles)."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 22:6-10",
+          "note": "David charges young Solomon directly to build the house of the LORD, explaining the name given him ties to peace: 'his name shall be Solomon, and I will give peace and quietness unto Israel in his days.'"
+        },
+        {
+          "ref": "1 Chronicles 28:9-10, 19",
+          "note": "David publicly charges Solomon before the assembly to serve God with a perfect heart, and hands him a written pattern for the temple 'all this... the LORD made me understand in writing by his hand upon me, even all the works of this pattern.'"
+        },
+        {
+          "ref": "1 Chronicles 29:1",
+          "note": "David notes Solomon is 'young and tender' for so great a work as he begins assembling temple materials and enlisting the people's freewill offerings."
+        },
+        {
+          "ref": "1 Chronicles 29:22-25",
+          "note": "Solomon is made king 'the second time' and anointed, Zadok anointed priest alongside him; 'the LORD magnified Solomon exceedingly in the sight of all Israel.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "levitical_organization_law",
+      "name": "The Levitical Duty Reassignment",
+      "role": "law",
+      "deliveredBy": "David ('by the last words of David,' 23:27)",
+      "purpose": "Redirects Levitical manpower now that Jerusalem is a permanent resting place for the Ark and the tabernacle no longer needs to be physically transported (23:25). Rather than asserting the KJV states their transport 'work was ended' — a phrase not actually in the text — the reasoning is that with Israel at rest and the Ark settled, portage duty is retired; the age of eligible service is lowered from thirty to twenty (23:24, 27) and Levites are reassigned to assist the priests, oversee courts and treasuries, keep the gates, and lead praise (23:28-32; ch.26).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry, not a person; see deliveredBy/purpose."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 23:24-25",
+          "note": "The chief fathers who did the service of the house of the LORD are counted from age twenty upward; David reasons, 'The LORD God of Israel hath given rest unto his people, that they may dwell in Jerusalem for ever.'"
+        },
+        {
+          "ref": "1 Chronicles 23:26",
+          "note": "Direct quote (correcting the earlier draft's misquotation): 'And also unto the Levites; they shall no more carry the tabernacle, nor any vessels of it for the service thereof.'"
+        },
+        {
+          "ref": "1 Chronicles 26:1-19",
+          "note": "Gatekeeping duties are assigned by family and by lot to descendants of Korah and Merari, including Obed-edom's large household."
+        },
+        {
+          "ref": "1 Chronicles 26:29-32",
+          "note": "Other Levites are appointed as officers and judges over Israel's outward business, both within Israel and across the Reubenite/Gadite/half-Manasseh territory."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "heman",
+      "name": "Heman",
+      "role": "manager",
+      "genealogy": {
+        "father": "Joel",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "fourteen sons and three daughters (25:5), individually named in 25:4"
+        ],
+        "note": "A Kohathite Levite, traced through Joel and back through Samuel the seer's line (6:33-38). UNCONFIRMED IDENTIFICATION: this Heman is sometimes traditionally identified with 'Heman the Ezrahite,' the wise man compared unfavorably to Solomon in 1 Kings 4:31, and/or with the 'Heman the Ezrahite' of Psalm 88's title — 1 Chronicles itself never makes this equation explicitly (it identifies its Heman as a Kohathite Levite, not an Ezrahite), so the link is noted as traditional/unconfirmed, not asserted as fact."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 6:33",
+          "note": "Heman the singer is named as a Kohathite Levite, descended through Joel, the son of Shemuel (Samuel)."
+        },
+        {
+          "ref": "1 Chronicles 15:19",
+          "note": "Heman, Asaph, and Ethan (Jeduthun) are appointed to sound cymbals of brass in the Ark's procession into Jerusalem."
+        },
+        {
+          "ref": "1 Chronicles 25:1, 4-6",
+          "note": "Heman is set apart with Asaph and Jeduthun for the service of song; his fourteen sons and three daughters are 'all these... under the hands of their father for song in the house of the LORD... according to the king's order to Asaph, Jeduthun, and Heman.' He is called 'the king's seer in the words of God, to lift up the horn' (25:5)."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jeduthun",
+      "name": "Jeduthun",
+      "role": "manager",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Gedaliah",
+          "Zeri",
+          "Jeshaiah",
+          "Shimei",
+          "Hashabiah",
+          "Mattithiah"
+        ],
+        "note": "UNCONFIRMED IDENTIFICATION: Jeduthun is widely thought by later readers to be an alternate name for 'Ethan the son of Kushaiah,' named among the Merarite Levites set 'on the left hand' in 6:44 and again alongside Heman and Asaph with cymbals in 15:17-19 — but 1 Chronicles does not explicitly state within one verse that Ethan and Jeduthun are the same person, so the equation is noted here as likely but not confirmed by the text itself."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 16:41-42",
+          "note": "Jeduthun and his sons are appointed with trumpets and cymbals and instruments of music to give thanks to the LORD 'because his mercy endureth for ever.'"
+        },
+        {
+          "ref": "1 Chronicles 25:1, 3",
+          "note": "Jeduthun is set apart with Asaph and Heman for the service of song; his sons — Gedaliah, Zeri, Jeshaiah, Hashabiah, Mattithiah, and Shimei — served 'under the hands of their father Jeduthun, who prophesied with a harp, to give thanks and to praise the LORD.'"
+        },
+        {
+          "ref": "1 Chronicles 25:9-17",
+          "note": "Jeduthun's sons hold courses 2, 4, 8, and 10 among others of the 24 lots (per 25:9-17 cross-checked against 25:3), interleaved with Asaph's and Heman's sons rather than grouped together."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "royal_administration_law",
+      "name": "The National Administration Roster",
+      "role": "law",
+      "deliveredBy": "David (organizational record compiled under his reign, ch.27)",
+      "purpose": "Institutionalizes a twelve-division rotating monthly militia of 24,000 men apiece so that no single standing army or general accumulates permanent personal power, alongside a clear roster of tribal princes and royal household stewards — administrative continuity planning ahead of the transition to Solomon.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not applicable — this is a law/theme entry, not a person; see deliveredBy/purpose."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 27:1-15",
+          "note": "Twelve military divisions of 24,000 men each are listed, one course serving per month of the year, each under a named captain (including Benaiah son of Jehoiada and, in the first position, Jashobeam)."
+        },
+        {
+          "ref": "1 Chronicles 27:16-24",
+          "note": "Princes/rulers are named over each of the twelve tribes; a closing note explains David did not finish counting those under twenty because 'the LORD had said he would increase Israel like to the stars of the heavens' — an explicit reason given for leaving the full census incomplete this time, distinct from the earlier sinful census of ch.21."
+        },
+        {
+          "ref": "1 Chronicles 27:32-34",
+          "note": "Royal counsellors and officers are named, including Jonathan, David's uncle, described as 'a wise man, and a scribe' — a THIRD distinct Jonathan in this book, separate from Saul's son (10:2) and from David's nephew who slew a giant of Gath (20:7). Ahithophel is named as the king's counsellor and Hushai the Archite as the king's companion; neither is given an independent action within 1 Chronicles' own narrative, so both remain administrative-list names here rather than full entries."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jabez",
+      "name": "Jabez",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Placed within Judah's genealogy (ch.4) but his father is not clearly identified in the surrounding verses — his position in the family tree is textually ambiguous, not asserted here."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 4:9-10",
+          "note": "'And Jabez was more honourable than his brethren: and his mother called his name Jabez, saying, Because I bare him with sorrow. And Jabez called on the God of Israel, saying, Oh that thou wouldest bless me indeed, and enlarge my coast, and that thine hand might be with me, and that thou wouldest keep me from evil, that it may not grieve me! And God granted him that which he requested.'"
+        }
+      ],
+      "funFacts": [
+        "A rare moment of individual, quoted personal prayer embedded in an otherwise unbroken run of bare genealogical names across chapter 4."
+      ]
+    },
+    {
+      "id": "hanun",
+      "name": "Hanun",
+      "role": "named",
+      "genealogy": {
+        "father": "Nahash, king of the children of Ammon",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "COLLISION FLAG: a different Hanun (son of Zalaph, and another Hanun of Zanoah) appears much later helping repair Jerusalem's wall in Nehemiah 3:13, 30 — an unrelated person centuries removed, sharing only the name."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 19:1-4",
+          "note": "When David sends comforters after King Nahash's death, Hanun's princes persuade him David's men are spies; Hanun shaves off half their beards and cuts their garments off at the buttocks, sending them away shamed."
+        },
+        {
+          "ref": "1 Chronicles 19:6-19",
+          "note": "Realizing he has made himself odious to David, Hanun hires Syrian chariots and horsemen as mercenaries; the combined Ammonite-Syrian force is defeated by Joab and Abishai, and Syria eventually makes peace with Israel."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "elhanan",
+      "name": "Elhanan the son of Jair",
+      "role": "named",
+      "genealogy": {
+        "father": "Jair (per 1 Chronicles 20:5)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": ""
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 20:5",
+          "note": "'And there was war again with the Philistines; and Elhanan the son of Jair slew Lahmi the brother of Goliath the Gittite, whose spear staff was like a weaver's beam.' CRUX FLAG: the parallel account, 2 Samuel 21:19, names this warrior's father differently ('Jaareoregim') and says he slew 'Goliath the Gittite' himself, without the qualifier 'the brother of' — a well-known discrepancy between the two texts in both the victim's identity and the father's name. Neither reading is silently preferred here."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jonathan_nephew_of_david",
+      "name": "Jonathan, son of Shimea (David's brother)",
+      "role": "named",
+      "genealogy": {
+        "father": "Shimea, David's brother",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "COLLISION FLAG: the third distinct Jonathan named in this book, alongside Saul's son Jonathan (10:2; 8:33; 9:39) and Jonathan David's uncle, 'a wise man, and a scribe' (27:32). All three are different people who happen to share the name."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 20:6-7",
+          "note": "At Gath, a man of great stature with six fingers on each hand and six toes on each foot defies Israel; 'Jonathan the son of Shimea David's brother slew him.'"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "sibbechai",
+      "name": "Sibbechai the Hushathite",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Almost certainly the same man referenced three times within this book — as one of David's mighty men (11:29, spelled 'Sibbecai'), as the giant-slayer of 20:4, and as captain of the eighth monthly division (27:11) — the spelling varies slightly (Sibbechai/Sibbecai) but the role and tribal designation ('the Hushathite') are consistent across all three."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 20:4",
+          "note": "At Gezer, in a war with the Philistines, 'Sibbechai the Hushathite slew Sippai, that was of the children of the giant: and they were subdued.'"
+        },
+        {
+          "ref": "1 Chronicles 11:29",
+          "note": "Listed among David's mighty men as 'Sibbecai the Hushathite.'"
+        },
+        {
+          "ref": "1 Chronicles 27:11",
+          "note": "Named captain of the eighth division for the eighth month."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "three_mighty_men_water_bethlehem",
+      "name": "The Three Who Broke Through to the Well of Bethlehem",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "The KJV text of 11:15 calls them 'three of the thirty captains,' not explicitly 'the three' named just before in 11:11-14 (Jashobeam and Eleazar the son of Dodo) — 1 Chronicles' own text leaves ambiguous whether this is the same trio referred to earlier by that title or a different group of three drawn from the broader Thirty; not resolved here, only flagged."
+      },
+      "verses": [
+        {
+          "ref": "1 Chronicles 11:15-19",
+          "note": "While David was in the stronghold near the cave of Adullam and the Philistine garrison held Bethlehem, David longed aloud for water from the well by Bethlehem's gate. Three of the mighty men broke through the Philistine camp, drew water from that well, and brought it back to David — who refused to drink it, pouring it out to the LORD instead: 'My God forbid it me, that I should do this thing: shall I drink the blood of these men that have put their lives in jeopardy? for with the jeopardy of their lives they brought it. Therefore he would not drink it.'"
+        }
+      ],
+      "funFacts": [
+        "A self-contained scene of loyalty and restraint that the Chronicler preserves essentially intact from the earlier account, even while trimming or omitting so much other material about David's inner circle."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "ch1_adam_to_israel": "Bare genealogical chain from Adam through Noah's sons, the table of nations, Abraham's line (including Ishmael's twelve sons and Keturah's sons), Esau's line and the kings/dukes of Edom, down to Israel's twelve sons (1:1-2:2). No individually narrated actions; names only.",
+    "ch2_judah_and_caleb_lines": "Judah's descendants through Perez, Hezron, Caleb/Chelubai, and Jerahmeel, including the deaths of Er and Onan ('slew him,' 2:3, echoing Genesis without adding detail) and Sheshan giving his daughter in marriage to his Egyptian servant Jarha because he had no sons (2:34-35) — a short real event, noted here rather than given a full character entry since it has no further consequence traced in this book. Caleb's concubine is named MAACHAH (2:48) — see the Maachah collision note below.",
+    "ch3_davids_wives_and_sons_flags": "Full David-family list (3:1-9): six sons born in Hebron to six named wives, including MAACHAH (3:2) 'daughter of Talmai king of Geshur' — another distinct MAACHAH from Caleb's concubine (2:48) and from the Manasseh-line MAACHAH (7:15-16) below; then sons born in Jerusalem including NATHAN (3:5) — flagged as a different person from Nathan the prophet (see his own character entry) — and Solomon, by Bathshua/Bathsheba. Note that Elishama and Eliphelet each appear to be listed twice within 3:6-8, a recognized textual peculiarity not resolved here. Absalom and Adonijah are both listed by name (3:2) but 1 Chronicles narrates no independent action for either of them (their famous rebellions belong to 2 Samuel/1 Kings) — genealogy only.",
+    "ch4_simeon_and_judah_notes": "Simeon's genealogy includes a real narrative note: certain named princes of Simeon (Josiah's line) attack and destroy a peaceable, defenseless Hamite settlement and dwell in their place, then a group of five hundred Simeonites under named captains (Pelatiah, Neariah, Rephaiah, Uzziel) strike the remnant of Amalek that escaped to Mount Seir 'in the days of Hezekiah king of Judah,' and dwell there 'unto this day' (4:38-43).",
+    "ch5_reubenites_gadites_manasseh": "Reuben's birthright transfer to Joseph's sons is explicitly explained: 'for he was the firstborn; but, forasmuch as he defiled his father's bed, his birthright was given unto the sons of Joseph' (5:1-2). The Reubenites, Gadites, and half-tribe of Manasseh wage war against the Hagarites and win because 'they cried to God in the battle, and he was intreated of them, because they put their trust in him' (5:18-22) — a real, theologically-pointed narrative kept only as a note here since no individual is named as its protagonist. The same tribes' later unfaithfulness and deportation by Pul/Tilgathpilneser of Assyria is recorded at 5:25-26.",
+    "ch6_levitical_line": "Full Aaronic high-priestly line and the Levitical city lists (6:1-81), including Zadok's ancestry back through Ahitub, Eleazar, and Phinehas (already captured in Zadok's own entry) and the Kohathite/Gershonite/Merarite genealogies underlying the musicians Heman, Asaph, and Jeduthun/Ethan (also captured in their own entries).",
+    "ch7_ephraim_and_others": "Ephraim's genealogy includes a real narrative vignette: sons Ezer and Elead are killed by native-born men of Gath while raiding cattle; 'Ephraim their father mourned many days,' and his brethren come to comfort him; he later fathers a son named Beriah, 'because it went evil with his house' (7:20-23) — an etymological, emotionally real scene kept here as a note. Manasseh's genealogy separately names a MAACHAH (7:15-16) as wife of Machir and mother/matriarch within that line — a third distinct MAACHAH in this book, unrelated to Caleb's concubine (2:48) or David's wife (3:2).",
+    "ch8_9_benjamin_and_saul_line": "Benjamin's genealogy and the resettled-Jerusalem population list (9:2-34, priests/Levites/gatekeepers returned after exile) are bulk names. Saul's genealogy is repeated near-identically at both 8:33-40 and 9:35-44, including his son Eshbaal (=Ishbosheth, name-variant flagged under Saul's own entry) and grandson Meribbaal (8:34) — the same figure called Mephibosheth in 2 Samuel, another name-form variant, not a different person. Another MAACHAH appears here too, as wife of Jehiel, 'father of Gibeon' (8:29; 9:35) — a fourth distinct MAACHAH in 1 Chronicles alone.",
+    "ch11_12_mighty_men_bulk": "The full roster of David's Thirty (11:26-47) and the tribe-by-tribe lists of warriors who joined David at Ziklag and at Hebron to make him king (ch.12) are bulk names with no individually differentiated action beyond the group-level statements already captured for Amasai (12:18); most other names here (including Asahel, Joab's brother, 11:26) have no independent action recorded within 1 Chronicles itself.",
+    "ch25_musicians_full_rosters": "The full 24-name-by-lot roster of the sons of Asaph, Heman, and Jeduthun (25:9-31) is captured at the tier level in each musician's own character entry (with the Asaph course-number correction specifically noted); individual sons beyond Asaph's four are bulk names without further narrated action.",
+    "ch26_gatekeepers_and_treasurers": "Full gatekeeper and treasury-official rosters (26:1-32), including Obed-edom's sixty-two-strong household of 'able men for strength for the service' (26:8) — captured at a summary level in Obed-edom's own entry; individual descendants are bulk names.",
+    "ch27_officers_bulk": "Tribal princes (27:16-24) and royal household stewards over vineyards, oliveyards, herds, camels, and flocks (27:25-31) are bulk administrative names, summarized at the tier level under the Royal Administration law entry; Ahithophel and Hushai the Archite are named as counsellors (27:32-34) but have no independently narrated action within 1 Chronicles itself."
+  },
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

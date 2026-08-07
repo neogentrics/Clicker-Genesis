@@ -1,0 +1,373 @@
+{
+  "book": "Proverbs",
+  "canonicalOrder": 20,
+  "notes": "Corrected redraft. Fix applied per adversarial review: the Fear of the LORD tier's deliveredBy previously claimed the theme was \"echoed in Agur's material\" (ch.30) with no supporting citation, and the literal phrase does not occur there (the nearest candidate, 30:3, says \"knowledge of the holy,\" not \"fear of the LORD\"). The Agur attribution has been removed entirely rather than propped up with a stretched citation; the tier is now attributed solely to Solomon's own repeated refrain (1:7; 9:10; 15:33; 31:30), which is where the phrase actually and repeatedly appears. Proverbs is non-narrative wisdom literature, so no character in this book has scripture-stated ages — ageEvents arrays are empty throughout by design, not omission. Two major personifications (Wisdom in chs.1/8/9:1-12, and the Strange Woman/Folly warnings across chs.2,5,6,7,9:13-18) and two authorial voices beyond Solomon (Agur, ch.30; Lemuel, 31:1-9) plus the closing acrostic poem (the virtuous woman, 31:10-31) make up the book's real content beyond Solomon's own core collections (1:1; 10:1; 25:1).",
+  "genealogyLists": {},
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Proverbs Scroll",
+      "managerId": "solomon",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wisdom's Pillars",
+      "managerId": "wisdom_personified",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Forbidden Door",
+      "managerId": "strange_woman_and_folly",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Fear of the LORD",
+      "managerId": "fear_of_the_lord",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Ant's Storehouse",
+      "managerId": "the_sluggard",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Agur's Oracle",
+      "managerId": "agur_son_of_jakeh",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Lemuel's Crown",
+      "managerId": "king_lemuel",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Virtuous Woman's Loom",
+      "managerId": "virtuous_woman",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "solomon",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "The Proverbs Scroll",
+      "perkFlavor": "output-boost",
+      "perkNote": "Grants a production bonus to his own Proverbs Scroll tier, reflecting his authorship of three separate collections within the book (1:1; 10:1; 25:1).",
+      "genealogy": {
+        "father": "David",
+        "mother": "Bathsheba",
+        "children": [],
+        "spouses": [],
+        "note": "Proverbs itself states only that Solomon is 'the son of David, king of Israel' (1:1) and names no mother, spouse, or child. Father/mother here are drawn from outside Proverbs (2 Samuel 12:24; 1 Chronicles 3:5) for reference only. KJV spelling collision: 1 Chronicles 3:5 spells his mother's name 'Bath-shua' rather than 'Bathsheba' (used in 2 Samuel/1 Kings) — and that same 'Bathshua' spelling belongs to an unrelated woman, Judah's Canaanite wife, in 1 Chronicles 2:3. Do not conflate the two."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Three separate sections of the book are individually headed as his: chs.1-9 and 10:1-22:16 open under his name (1:1; 10:1), and a further collection appears at 25:1.",
+        "Proverbs 25:1 credits 'the men of Hezekiah king of Judah' with copying out that second Solomonic collection generations after it was first composed — the book's only explicit mention of the kind of scribal transmission this game's whole 'Scribes' system is themed on."
+      ],
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "The proverbs of Solomon the son of David, king of Israel"
+        },
+        {
+          "ref": "10:1",
+          "note": "The proverbs of Solomon. A wise son maketh a glad father: but a foolish son is the heaviness of his mother"
+        },
+        {
+          "ref": "25:1",
+          "note": "These are also proverbs of Solomon, which the men of Hezekiah king of Judah copied out"
+        }
+      ]
+    },
+    {
+      "id": "wisdom_personified",
+      "name": "Wisdom",
+      "role": "law",
+      "scribeTier": "Wisdom's Pillars",
+      "deliveredBy": "Solomon — presented in the first-person discourses of chs.1, 8, and 9:1-12",
+      "purpose": "Depicts wisdom itself as a woman who publicly calls out to the simple, warns of the cost of refusing her, and describes her presence beside God at creation — establishing that wisdom is available, moral, and worth pursuing above wealth.",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts Wisdom's Pillars tier — Wisdom's own public call to the simple (1:20; 8:1-2) is themed as this tier calling players to invest in it.",
+      "ageEvents": [],
+      "funFacts": [
+        "Wisdom's self-description in 8:22 as present with God 'in the beginning of his way, before his works of old' is one of the most theologically debated single verses in the book.",
+        "Wisdom 'hath builded her house' and prepared her table (9:1-2), directly and deliberately mirrored a few verses later when Folly also 'sitteth at the door of her house' (9:14)."
+      ],
+      "verses": [
+        {
+          "ref": "1:20",
+          "note": "Wisdom crieth without; she uttereth her voice in the streets"
+        },
+        {
+          "ref": "8:1-2",
+          "note": "Doth not wisdom cry?...She standeth in the top of high places, by the way in the places of the paths"
+        },
+        {
+          "ref": "8:22",
+          "note": "The LORD possessed me in the beginning of his way, before his works of old"
+        },
+        {
+          "ref": "9:1",
+          "note": "Wisdom hath builded her house, she hath hewn out her seven pillars"
+        }
+      ]
+    },
+    {
+      "id": "strange_woman_and_folly",
+      "name": "The Strange Woman / Folly",
+      "role": "law",
+      "scribeTier": "The Forbidden Door",
+      "deliveredBy": "Solomon — recurring warning across chs.2, 5, 6:20-35, and 7, personified again as 'a foolish woman' in 9:13-18",
+      "purpose": "Warns repeatedly against adultery and moral folly, personifying the temptation as a woman whose house 'inclineth unto death' — the negative counterpart to Wisdom's call in chs.1, 8, and 9:1-12.",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts The Forbidden Door tier, themed as the cautionary counter-tier standing opposite Wisdom's Pillars.",
+      "ageEvents": [],
+      "funFacts": [
+        "Chapter 7 is the book's longest single narrative scene — a first-person eyewitness account of a young man being lured in, ending 'as an ox goeth to the slaughter' (7:22).",
+        "Folly's invitation in 9:17, 'Stolen waters are sweet,' is a deliberate ironic echo of Wisdom's own invitation two verses earlier (9:1-5)."
+      ],
+      "verses": [
+        {
+          "ref": "2:16-18",
+          "note": "To deliver thee from the strange woman...For her house inclineth unto death"
+        },
+        {
+          "ref": "5:3-4",
+          "note": "the lips of a strange woman drop as an honeycomb...but her end is bitter as wormwood"
+        },
+        {
+          "ref": "6:26",
+          "note": "by means of a whorish woman a man is brought to a piece of bread"
+        },
+        {
+          "ref": "7:6-27",
+          "note": "extended narrative scene of a young man enticed by 'a woman with the attire of an harlot'"
+        },
+        {
+          "ref": "9:13-18",
+          "note": "A foolish woman is clamorous...she sitteth at the door of her house...he knoweth not that the dead are there"
+        }
+      ]
+    },
+    {
+      "id": "fear_of_the_lord",
+      "name": "The Fear of the LORD",
+      "role": "law",
+      "scribeTier": "The Fear of the LORD",
+      "deliveredBy": "Solomon — the book's programmatic refrain, opening the main collection (1:7), repeated as its own summary (9:10; 15:33), and closing the whole book (31:30)",
+      "purpose": "States the book's foundational premise — that reverent submission to God, not raw intellect, is the necessary starting point for all true wisdom and knowledge.",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts The Fear of the LORD tier, themed as the book's foundational refrain running from its opening line to its closing line.",
+      "ageEvents": [],
+      "funFacts": [
+        "The phrase brackets the book almost exactly — it opens the main collection at 1:7 and is the very last quality praised in the closing poem at 31:30.",
+        "It recurs across multiple independent collections within the book (1:7; 9:10; 15:33; 31:30), making it Proverbs' single most repeated line of theology."
+      ],
+      "verses": [
+        {
+          "ref": "1:7",
+          "note": "The fear of the LORD is the beginning of knowledge: but fools despise wisdom and instruction"
+        },
+        {
+          "ref": "9:10",
+          "note": "The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding"
+        },
+        {
+          "ref": "15:33",
+          "note": "The fear of the LORD is the instruction of wisdom"
+        },
+        {
+          "ref": "31:30",
+          "note": "Favour is deceitful, and beauty is vain: but a woman that feareth the LORD, she shall be praised"
+        }
+      ]
+    },
+    {
+      "id": "the_sluggard",
+      "name": "The Sluggard",
+      "role": "law",
+      "scribeTier": "The Ant's Storehouse",
+      "deliveredBy": "Solomon — ch.6, ch.24, and numerous scattered 'slothful' sayings across chs.10-26",
+      "purpose": "Uses vivid, sometimes comic imagery — the diligent ant, an overgrown field, a door turning on its hinges — to warn against laziness and its consequences of poverty.",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts The Ant's Storehouse tier, themed on the ant's diligence set against the sluggard's idleness (6:6-11).",
+      "ageEvents": [],
+      "funFacts": [
+        "'Go to the ant, thou sluggard' (6:6) is one of the single most quoted lines in the entire book.",
+        "26:13-16 strings together four separate sluggard sayings back to back, the densest concentration of the theme anywhere in the book."
+      ],
+      "verses": [
+        {
+          "ref": "6:6-8",
+          "note": "Go to the ant, thou sluggard; consider her ways, and be wise...provideth her meat in the summer"
+        },
+        {
+          "ref": "6:9-11",
+          "note": "How long wilt thou sleep, O sluggard?...so shall thy poverty come as one that travelleth"
+        },
+        {
+          "ref": "24:30-31",
+          "note": "I went by the field of the slothful...it was all grown over with thorns"
+        },
+        {
+          "ref": "26:14-15",
+          "note": "As the door turneth upon his hinges, so doth the slothful upon his bed...it grieveth him to bring it again to his mouth"
+        }
+      ]
+    },
+    {
+      "id": "agur_son_of_jakeh",
+      "name": "Agur",
+      "role": "manager",
+      "scribeTier": "Agur's Oracle",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts Agur's Oracle tier, reflecting his distinct, self-contained authorial section (ch.30).",
+      "genealogy": {
+        "father": "Jakeh",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Known only from Proverbs 30:1; no other scripture names Jakeh or gives further family detail for Agur. He addresses his oracle to Ithiel and Ucal (30:1), two otherwise-unattested figures who take no action in the text and so are not given their own entries here. Naming collision: an unrelated 'Ithiel' also appears, generations later, in a Benjamite genealogy (Nehemiah 11:7) — the two are not the same person."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Agur opens with self-deprecating humility ('more brutish than any man,' 30:2), a distinct authorial voice from Solomon's confident royal instruction elsewhere in the book.",
+        "His numerical 'three things...yea, four' sayings (30:15-31) are a literary form found nowhere else in Proverbs."
+      ],
+      "verses": [
+        {
+          "ref": "30:1",
+          "note": "The words of Agur the son of Jakeh, even the prophecy: the man spake unto Ithiel, even unto Ithiel and Ucal"
+        },
+        {
+          "ref": "30:2-3",
+          "note": "Surely I am more brutish than any man...I neither learned wisdom, nor have the knowledge of the holy"
+        },
+        {
+          "ref": "30:18-19",
+          "note": "three things...yea, four which I know not: the way of an eagle in the air...the way of a man with a maid"
+        },
+        {
+          "ref": "30:24-28",
+          "note": "four things which are little upon the earth, but they are exceeding wise — the list that follows names the ants, the conies, the locusts, and the spider"
+        }
+      ]
+    },
+    {
+      "id": "king_lemuel",
+      "name": "King Lemuel",
+      "role": "manager",
+      "scribeTier": "Lemuel's Crown",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts Lemuel's Crown tier, reflecting his royal oracle (31:1-9).",
+      "genealogy": {
+        "father": null,
+        "mother": "Unnamed — Proverbs 31:1-9 records her teaching directly; see Lemuel's mother",
+        "children": [],
+        "spouses": [],
+        "note": "Identified only as 'king Lemuel' (31:1) — no other scripture names a king by this title, and no kingdom is specified. His entire section (31:1-9) explicitly records instruction 'his mother taught him.'"
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Lemuel is otherwise unidentified anywhere else in scripture — no genealogy, kingdom, or other appearance is given beyond these nine verses.",
+        "His section (31:1-9) transitions directly into the famous acrostic poem of the virtuous woman (31:10-31); the text itself does not explicitly say the poem is still his mother's words, only that his own oracle was."
+      ],
+      "verses": [
+        {
+          "ref": "31:1",
+          "note": "The words of king Lemuel, the prophecy that his mother taught him"
+        },
+        {
+          "ref": "31:4-5",
+          "note": "It is not for kings...to drink wine...lest they drink, and forget the law, and pervert the judgment of any of the afflicted"
+        },
+        {
+          "ref": "31:8-9",
+          "note": "Open thy mouth for the dumb in the cause of all such as are appointed to destruction...plead the cause of the poor and needy"
+        }
+      ]
+    },
+    {
+      "id": "lemuel_mother",
+      "name": "Lemuel's Mother",
+      "role": "submanager",
+      "parentManagerId": "king_lemuel",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Adds a bonus to Lemuel's Crown tier rather than owning a tier of her own — the entire oracle he records is explicitly presented as her teaching, not his own composition (31:1-2).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "King Lemuel"
+        ],
+        "spouses": [],
+        "note": "Unnamed throughout; referred to only as 'his mother' (31:1). Proverbs does not identify her with any other named biblical woman — any such identification is later tradition, not stated in the text itself."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "She is the only mother in the book explicitly credited as the direct source of an entire section of recorded instruction (31:1)."
+      ],
+      "verses": [
+        {
+          "ref": "31:2",
+          "note": "What, my son? and what, the son of my womb? and what, the son of my vows?"
+        },
+        {
+          "ref": "31:3",
+          "note": "Give not thy strength unto women, nor thy ways to that which destroyeth kings"
+        }
+      ]
+    },
+    {
+      "id": "virtuous_woman",
+      "name": "The Virtuous Woman",
+      "role": "law",
+      "scribeTier": "The Virtuous Woman's Loom",
+      "deliveredBy": "King Lemuel, recording the teaching of his mother (31:1) — the poem follows directly after her recorded words in 31:2-9",
+      "purpose": "An acrostic poem (each verse beginning with a successive Hebrew letter) praising an ideal capable wife — her diligence, trade, generosity, and reverence for God — closing the entire book on fear of the LORD (31:30) rather than beauty or status.",
+      "perkFlavor": "output-boost",
+      "perkNote": "Boosts The Virtuous Woman's Loom tier, themed on the poem's praise of diligent, generous industry (31:13-27).",
+      "ageEvents": [],
+      "funFacts": [
+        "The poem is a Hebrew acrostic — each of its 22 verses begins with a successive letter of the Hebrew alphabet, a structural feature invisible in the KJV's English translation.",
+        "It closes the entire book on the same theme that opened it: fear of the LORD (compare 1:7 and 31:30)."
+      ],
+      "verses": [
+        {
+          "ref": "31:10",
+          "note": "Who can find a virtuous woman? for her price is far above rubies"
+        },
+        {
+          "ref": "31:13",
+          "note": "She seeketh wool, and flax, and worketh willingly with her hands"
+        },
+        {
+          "ref": "31:16",
+          "note": "She considereth a field, and buyeth it: with the fruit of her hands she planteth a vineyard"
+        },
+        {
+          "ref": "31:20",
+          "note": "She stretcheth out her hand to the poor; yea, she reacheth forth her hands to the needy"
+        },
+        {
+          "ref": "31:25",
+          "note": "Strength and honour are her clothing; and she shall rejoice in time to come"
+        },
+        {
+          "ref": "31:30",
+          "note": "Favour is deceitful, and beauty is vain: but a woman that feareth the LORD, she shall be praised"
+        }
+      ]
+    }
+  ],
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

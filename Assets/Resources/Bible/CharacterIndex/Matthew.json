@@ -1,0 +1,343 @@
+{
+  "book": "Matthew",
+  "canonicalOrder": 40,
+  "translation": "KJV",
+  "status": "draft — first New Testament book, tier structure proposed and confirmed with the user 2026-08-07 before writing (Jesus gets a full independent manager tier per Gospel, matching the Aaron-in-Exodus-and-Leviticus precedent)",
+  "notes": "First NT book — extends the OT schema with one addition: role:\"law\" tiers (established for Leviticus/Deuteronomy) are reused here for Jesus's major discourses (Sermon on the Mount, Parables of the Kingdom, Olivet Discourse, Great Commission), with deliveredBy:\"jesus\" and 'purpose' explaining what each teaches. NAMING COLLISION FLAGGED: Matthew 2's Herod ('Herod the king') is Herod the Great; Matthew 14's Herod ('Herod the tetrarch') is his son Herod Antipas, who executes John the Baptist — two different men, kept as herod_the_great (own tier) and herod_antipas (submanager under John the Baptist's tier, since his role in the book is entirely about John's death). Genealogy note: Jesus's earthly genealogy (Matthew 1:1-17, Abraham through Jesus in three sets of fourteen generations) is almost entirely OT figures already indexed in Genesis/Ruth/Samuel/Kings/Chronicles — not re-indexed here as individual characters, logged as a bulk reference in genealogyLists instead, with the four named women (Tamar, Rahab, Ruth, Bathsheba — unusual for a genealogy of this era to name women at all) flagged as a real textual feature. Jesus's own genealogy.father is set to null per the text's own account (Matthew 1:18-20 — conceived of the Holy Spirit); Joseph is his legal/adoptive father, not biological, and is described that way rather than listed as genealogy.father.",
+  "scribeTiers": [
+    { "tier": 1, "scribeName": "Star of Bethlehem", "managerId": "jesus", "type": "person" },
+    { "tier": 2, "scribeName": "Locust & Wild Honey", "managerId": "john_the_baptist", "type": "person" },
+    { "tier": 3, "scribeName": "Frankincense Casket", "managerId": "the_magi", "type": "person" },
+    { "tier": 4, "scribeName": "Herod's Crown", "managerId": "herod_the_great", "type": "person" },
+    { "tier": 5, "scribeName": "Fisherman's Net", "managerId": "peter", "type": "person" },
+    { "tier": 6, "scribeName": "Tax Collector's Table", "managerId": "matthew_apostle", "type": "person" },
+    { "tier": 7, "scribeName": "Thirty Silver Pieces", "managerId": "judas_iscariot", "type": "person" },
+    { "tier": 8, "scribeName": "Torn Robe", "managerId": "caiaphas", "type": "person" },
+    { "tier": 9, "scribeName": "Basin of Water", "managerId": "pontius_pilate", "type": "person" },
+    { "tier": 10, "scribeName": "Salt & Light", "managerId": "sermon_on_the_mount", "type": "law" },
+    { "tier": 11, "scribeName": "Mustard Seed", "managerId": "parables_of_the_kingdom", "type": "law" },
+    { "tier": 12, "scribeName": "Fig Tree's Budding", "managerId": "olivet_discourse", "type": "law" },
+    { "tier": 13, "scribeName": "Commission Scroll", "managerId": "great_commission", "type": "law" }
+  ],
+  "characters": [
+    {
+      "id": "jesus", "name": "Jesus Christ", "role": "manager", "scribeTier": "Star of Bethlehem", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": "mary_mother_of_jesus", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 1:18-25", "note": "Conceived of the Holy Spirit; born to Mary, Joseph's betrothed wife" },
+        { "ref": "Matthew 3:13-17", "note": "Baptized by John in the Jordan; the Spirit descends as a dove, a voice from heaven declares Him God's Son" },
+        { "ref": "Matthew 4:1-11", "note": "Tempted by the devil forty days in the wilderness" },
+        { "ref": "Matthew 5-7", "note": "The Sermon on the Mount" },
+        { "ref": "Matthew 8-9", "note": "A sequence of healings and miracles — leper, centurion's servant, Peter's mother-in-law, the storm calmed, demoniacs, the paralytic, Matthew's own calling, the woman with the issue of blood, Jairus' daughter, two blind men" },
+        { "ref": "Matthew 13", "note": "Teaches the Parables of the Kingdom" },
+        { "ref": "Matthew 14:13-21", "note": "Feeds the five thousand" },
+        { "ref": "Matthew 14:25-33", "note": "Walks on the water" },
+        { "ref": "Matthew 16:13-20", "note": "Asks the disciples 'whom say ye that I am' — Peter's confession, 'Thou art the Christ'" },
+        { "ref": "Matthew 17:1-8", "note": "The Transfiguration on the mountain" },
+        { "ref": "Matthew 21:1-11", "note": "The triumphal entry into Jerusalem" },
+        { "ref": "Matthew 21:12-13", "note": "Cleanses the temple" },
+        { "ref": "Matthew 24-25", "note": "The Olivet Discourse" },
+        { "ref": "Matthew 26:26-29", "note": "Institutes the Lord's Supper at the Last Supper" },
+        { "ref": "Matthew 26:36-46", "note": "Agony in Gethsemane" },
+        { "ref": "Matthew 26:47-27:26", "note": "Betrayed, arrested, tried before Caiaphas and Pilate" },
+        { "ref": "Matthew 27:32-56", "note": "Crucified at Golgotha" },
+        { "ref": "Matthew 28:1-10", "note": "Rises from the dead" },
+        { "ref": "Matthew 28:16-20", "note": "Gives the Great Commission" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Matthew's Gospel is written with a strong pattern of Old Testament fulfillment — the phrase 'that it might be fulfilled which was spoken' recurs throughout, tying the birth narrative alone to at least five separate OT prophecies (Isaiah, Micah, Hosea, Jeremiah)."]
+    },
+    {
+      "id": "john_the_baptist", "name": "John the Baptist", "role": "manager", "scribeTier": "Locust & Wild Honey", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 3:1-6", "note": "Preaches repentance in the wilderness of Judaea, clothed in camel's hair, eating locusts and wild honey" },
+        { "ref": "Matthew 3:13-17", "note": "Baptizes Jesus, initially protesting that he needs to be baptized by Him instead" },
+        { "ref": "Matthew 11:2-6", "note": "From prison, sends disciples to ask Jesus 'Art thou he that should come?'" },
+        { "ref": "Matthew 14:1-12", "note": "Beheaded by Herod Antipas at the request of Herodias' daughter, after condemning Herod's unlawful marriage" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Matthew's Gospel does not include the birth narrative of John the Baptist (his parents Zacharias and Elisabeth, found in Luke 1) — he simply appears as an adult preacher in chapter 3, so no genealogy is recorded here for this book specifically."]
+    },
+    {
+      "id": "the_magi", "name": "The Magi (Wise Men)", "role": "manager", "scribeTier": "Frankincense Casket", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 2:1-2", "note": "Wise men from the east arrive in Jerusalem seeking 'he that is born King of the Jews,' having seen his star" },
+        { "ref": "Matthew 2:7-8", "note": "Herod secretly questions them and sends them to Bethlehem, asking them to report back" },
+        { "ref": "Matthew 2:9-11", "note": "The star leads them to the young child; they worship him and present gold, frankincense, and myrrh" },
+        { "ref": "Matthew 2:12", "note": "Warned in a dream not to return to Herod, they depart another way" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Never numbered or named in the text — the tradition of 'three' wise men comes only from the three gifts listed (Matthew 2:11), not from the text stating a headcount. Kept as a collective tier rather than named individuals for that reason."]
+    },
+    {
+      "id": "herod_the_great", "name": "Herod the Great", "role": "manager", "scribeTier": "Herod's Crown", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": ["herod_antipas — not individually indexed"] },
+      "verses": [
+        { "ref": "Matthew 2:3-8", "note": "Troubled by the Magi's news, secretly questions them and the chief priests/scribes about the Christ's birthplace" },
+        { "ref": "Matthew 2:16", "note": "Orders the slaughter of every male child in Bethlehem two years old and under, after the Magi don't return to him" },
+        { "ref": "Matthew 2:19-20", "note": "His death is reported to Joseph in Egypt, in a dream, clearing the way for the family's return" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["NAMING COLLISION, flagged rather than merged: this is Herod the Great, not the 'Herod the tetrarch' of Matthew 14 who executes John the Baptist — that is his son, Herod Antipas, kept as a separate submanager entry under John the Baptist's own tier rather than duplicated here."]
+    },
+    {
+      "id": "peter", "name": "Simon Peter", "role": "manager", "scribeTier": "Fisherman's Net", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 4:18-20", "note": "Called with his brother Andrew while casting a net into the sea of Galilee — 'Follow me, and I will make you fishers of men'" },
+        { "ref": "Matthew 14:28-31", "note": "Steps out of the boat to walk on water toward Jesus, then begins to sink" },
+        { "ref": "Matthew 16:16-19", "note": "Confesses 'Thou art the Christ, the Son of the living God' — Jesus responds 'upon this rock I will build my church'" },
+        { "ref": "Matthew 17:1-4", "note": "Present at the Transfiguration" },
+        { "ref": "Matthew 26:33-35", "note": "Declares he will never deny Jesus, even if all others do" },
+        { "ref": "Matthew 26:69-75", "note": "Denies Jesus three times before the cock crows, then weeps bitterly" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Promoted to his own full manager tier rather than staying grouped with the other apostles — same 'supporting ≠ minor' test used for Hur in Exodus: remove Peter from the confession, the water-walking, and the denial, and Matthew's whole portrait of faltering-but-real faith loses its central case study."]
+    },
+    {
+      "id": "matthew_apostle", "name": "Matthew (the Publican)", "role": "manager", "scribeTier": "Tax Collector's Table", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 9:9", "note": "Called by Jesus while 'sitting at the receipt of custom' as a tax collector" },
+        { "ref": "Matthew 9:10-13", "note": "Hosts Jesus for a meal with 'many publicans and sinners,' drawing criticism from the Pharisees" },
+        { "ref": "Matthew 10:1-4", "note": "Named among the twelve apostles, explicitly still called 'Matthew the publican' in his own list" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Traditionally credited as the author of this Gospel — chosen as the manager for this tier of remaining apostles both for his own real narrative beat (a tax collector, a genuinely disreputable profession to first-century Jewish readers, called and immediately celebrated) and as a fitting anchor for the book that bears his name."]
+    },
+    {
+      "id": "judas_iscariot", "name": "Judas Iscariot", "role": "manager", "scribeTier": "Thirty Silver Pieces", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 10:4", "note": "Named among the Twelve, already identified as 'who also betrayed him'" },
+        { "ref": "Matthew 26:14-16", "note": "Agrees with the chief priests to betray Jesus for thirty pieces of silver" },
+        { "ref": "Matthew 26:47-50", "note": "Identifies Jesus to the arresting crowd with a kiss" },
+        { "ref": "Matthew 27:3-5", "note": "Overcome with remorse, returns the silver, and hangs himself" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Matthew is the only Gospel that records both the exact price (thirty pieces of silver, echoing Zechariah 11:12) and Judas's own death by his own hand afterward."]
+    },
+    {
+      "id": "caiaphas", "name": "Caiaphas", "role": "manager", "scribeTier": "Torn Robe", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 26:3-4", "note": "The chief priests and elders gather 'unto the palace of the high priest, who was called Caiaphas' to plot against Jesus" },
+        { "ref": "Matthew 26:57-66", "note": "Presides over the night trial before the Sanhedrin; tears his clothes when Jesus affirms he is the Christ, the Son of God, declaring it blasphemy" },
+        { "ref": "Matthew 26:65-66", "note": "Formally puts the death sentence to the council — 'He is guilty of death'" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["The only formally named high priest given a real decision-making role in Matthew's trial narrative — the recurring 'Pharisees and Sadducees' as a bloc are attached to this same tier as submanagers, since they oppose Jesus throughout the book without ever being individually named."]
+    },
+    {
+      "id": "pontius_pilate", "name": "Pontius Pilate", "role": "manager", "scribeTier": "Basin of Water", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 27:11-14", "note": "Questions Jesus directly — 'Art thou the King of the Jews?' — marvels that Jesus answers nothing to the accusations" },
+        { "ref": "Matthew 27:15-23", "note": "Offers to release either Jesus or Barabbas per a Passover custom; the crowd chooses Barabbas" },
+        { "ref": "Matthew 27:24-26", "note": "Washes his hands before the crowd — 'I am innocent of the blood of this just person' — then delivers Jesus to be crucified" },
+        { "ref": "Matthew 27:65-66", "note": "Grants the chief priests a guard to seal Jesus's tomb" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Matthew is the only Gospel that records his wife's dream-warning and his own hand-washing — both unique details not found in Mark, Luke, or John's accounts of the same trial."]
+    },
+    {
+      "id": "mary_mother_of_jesus", "name": "Mary (mother of Jesus)", "role": "submanager", "scribeTier": "Star of Bethlehem", "parentManagerId": "jesus",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": ["joseph_husband_of_mary"], "children": ["jesus"] },
+      "verses": [
+        { "ref": "Matthew 1:18-25", "note": "Found with child of the Holy Ghost before she and Joseph came together; he takes her as his wife on the angel's word" },
+        { "ref": "Matthew 2:11", "note": "The Magi find 'the young child with Mary his mother' and worship him" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_husband_of_mary", "name": "Joseph (husband of Mary)", "role": "submanager", "scribeTier": "Star of Bethlehem", "parentManagerId": "jesus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Jesus's legal/adoptive father, not biological — the text is explicit that Mary was found with child of the Holy Ghost before he and Mary came together (Matthew 1:18-20). Kept off Jesus's genealogy.father field for that reason; the relationship is captured here instead.",
+      "genealogy": { "father": null, "mother": null, "spouses": ["mary_mother_of_jesus"], "children": ["jesus"] },
+      "verses": [
+        { "ref": "Matthew 1:19-24", "note": "Minded to put Mary away privily, then obeys an angel's instruction in a dream to take her as his wife" },
+        { "ref": "Matthew 2:13-15", "note": "Warned in a dream to flee to Egypt with Mary and Jesus to escape Herod" },
+        { "ref": "Matthew 2:19-23", "note": "Warned again to return, and again to settle in Nazareth instead of Judaea" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Never once recorded speaking a single word in any Gospel — every instruction he receives and acts on comes through a dream, and he simply obeys."]
+    },
+    {
+      "id": "herod_antipas", "name": "Herod Antipas (\"Herod the tetrarch\")", "role": "submanager", "scribeTier": "Locust & Wild Honey", "parentManagerId": "john_the_baptist",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "NAMING COLLISION: son of Herod the Great (his own separate tier, Matthew 2), not the same man. Attached here rather than given his own tier because his entire role in Matthew is about John the Baptist's death specifically.",
+      "genealogy": { "father": "herod_the_great", "mother": null, "spouses": ["herodias"], "children": [] },
+      "verses": [
+        { "ref": "Matthew 14:3-5", "note": "Had imprisoned John for condemning his marriage to Herodias, his brother Philip's wife; wanted to kill him but feared the multitude" },
+        { "ref": "Matthew 14:6-11", "note": "Grants Herodias' daughter's request for John's head on a charger, after a rash oath made at his own birthday feast" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "herodias", "name": "Herodias", "role": "submanager", "scribeTier": "Locust & Wild Honey", "parentManagerId": "john_the_baptist",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": ["herod_antipas"], "children": ["herodias_daughter — not individually indexed"] },
+      "verses": [{ "ref": "Matthew 14:3-8", "note": "Herod Antipas's unlawfully-married wife; instructs her daughter to ask for John's head" }],
+      "ageEvents": []
+    },
+    {
+      "id": "andrew", "name": "Andrew", "role": "submanager", "scribeTier": "Fisherman's Net", "parentManagerId": "peter",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 4:18-20", "note": "Peter's brother, called together with him while casting a net into the sea" },
+        { "ref": "Matthew 10:2", "note": "Named second among the twelve apostles, immediately after Peter" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "james_zebedee", "name": "James (son of Zebedee)", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "zebedee — Matthew 4:21, not individually indexed", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 4:21-22", "note": "Called with his brother John while mending nets in their father Zebedee's boat" },
+        { "ref": "Matthew 17:1", "note": "Present at the Transfiguration with Peter and John" },
+        { "ref": "Matthew 20:20-23", "note": "His mother asks Jesus that he and John sit at Jesus's right and left hand in his kingdom" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "john_apostle", "name": "John (son of Zebedee)", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "zebedee — Matthew 4:21, not individually indexed", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 4:21-22", "note": "Called with his brother James while mending nets" },
+        { "ref": "Matthew 17:1", "note": "Present at the Transfiguration" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Not to be confused with John the Baptist, his own major tier in this same book — two different men named John."]
+    },
+    {
+      "id": "philip_apostle", "name": "Philip", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:3", "note": "Named among the twelve apostles" }],
+      "ageEvents": []
+    },
+    {
+      "id": "bartholomew", "name": "Bartholomew", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:3", "note": "Named among the twelve apostles" }],
+      "ageEvents": []
+    },
+    {
+      "id": "thomas", "name": "Thomas", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:3", "note": "Named among the twelve apostles" }],
+      "ageEvents": [],
+      "funFacts": ["His famous doubt at the resurrection is a John's-Gospel scene, not Matthew's — kept to what this specific book actually records (his name in the apostle list only)."]
+    },
+    {
+      "id": "james_alphaeus", "name": "James (son of Alphaeus)", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "alphaeus — Matthew 10:3, not individually indexed", "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:3", "note": "Named among the twelve apostles" }],
+      "ageEvents": [],
+      "funFacts": ["A different man from Matthew himself, even though Mark 2:14 separately calls Matthew/Levi 'the son of Alphaeus' too — flagged as a possible identity question the text doesn't resolve, not silently merged."]
+    },
+    {
+      "id": "lebbaeus_thaddaeus", "name": "Lebbaeus, whose surname was Thaddaeus", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:3", "note": "Named among the twelve apostles under this double name" }],
+      "ageEvents": []
+    },
+    {
+      "id": "simon_the_canaanite", "name": "Simon the Canaanite", "role": "submanager", "scribeTier": "Tax Collector's Table", "parentManagerId": "matthew_apostle",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 10:4", "note": "Named among the twelve apostles" }],
+      "ageEvents": [],
+      "funFacts": ["Not to be confused with Simon Peter, Simon of Cyrene, or Simon the leper — several different Simons appear across this one Gospel, a very common first-century name."]
+    },
+    {
+      "id": "the_pharisees", "name": "The Pharisees", "role": "submanager", "scribeTier": "Torn Robe", "parentManagerId": "caiaphas",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Recurring opposition bloc, never individually named in Matthew — attached as a collective rather than inventing individual names the text doesn't give.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 12:14", "note": "Take counsel against Jesus to destroy him after a Sabbath healing" },
+        { "ref": "Matthew 23", "note": "Subject of Jesus's extended 'woe unto you, scribes and Pharisees, hypocrites' discourse" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_sadducees", "name": "The Sadducees", "role": "submanager", "scribeTier": "Torn Robe", "parentManagerId": "caiaphas",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Same treatment as the Pharisees — a recurring named class, never individuated in the text.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 22:23-33", "note": "Question Jesus about the resurrection, 'which say that there is no resurrection'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "barabbas", "name": "Barabbas", "role": "submanager", "scribeTier": "Basin of Water", "parentManagerId": "pontius_pilate",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 27:16-26", "note": "A 'notable prisoner' released instead of Jesus at the crowd's demand" }],
+      "ageEvents": []
+    },
+    {
+      "id": "pilates_wife", "name": "Pilate's Wife", "role": "submanager", "scribeTier": "Basin of Water", "parentManagerId": "pontius_pilate",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": ["pontius_pilate"], "children": [] },
+      "verses": [{ "ref": "Matthew 27:19", "note": "Sends word to Pilate during the trial: 'Have thou nothing to do with that just man: for I have suffered many things this day in a dream because of him'" }],
+      "ageEvents": [],
+      "funFacts": ["Never named in Matthew itself — later tradition calls her Claudia Procula, but that name isn't in this text, so she's kept here as 'Pilate's Wife.'"]
+    },
+    {
+      "id": "sermon_on_the_mount", "name": "The Sermon on the Mount", "role": "law", "scribeTier": "Salt & Light", "deliveredBy": "jesus",
+      "purpose": "Opens with the Beatitudes and moves through the Lord's Prayer, teaching on anger, adultery, oaths, retaliation, love of enemies, giving, prayer, fasting, treasure, worry, judging others, and the wise/foolish builders. The core statement of Kingdom ethics in Matthew — what it actually looks like to live under God's reign, not just believe in it.",
+      "verses": [{ "ref": "Matthew 5-7", "note": "The full sermon, delivered on a mountain to his disciples with the multitudes also hearing" }],
+      "ageEvents": []
+    },
+    {
+      "id": "parables_of_the_kingdom", "name": "The Parables of the Kingdom", "role": "law", "scribeTier": "Mustard Seed", "deliveredBy": "jesus",
+      "purpose": "A chapter of short earthly stories (the sower, the wheat and tares, the mustard seed, the leaven, the hidden treasure, the pearl of great price, the net) each illustrating some facet of what the Kingdom of Heaven is like — deliberately indirect teaching, explained privately to the disciples but left as riddles to the crowd.",
+      "verses": [{ "ref": "Matthew 13", "note": "Seven parables plus Jesus's own explanation of why he teaches in parables (13:10-17)" }],
+      "ageEvents": []
+    },
+    {
+      "id": "olivet_discourse", "name": "The Olivet Discourse", "role": "law", "scribeTier": "Fig Tree's Budding", "deliveredBy": "jesus",
+      "purpose": "Delivered privately on the Mount of Olives in response to the disciples asking when the temple's destruction and his coming would be — signs of the end, the parable of the fig tree, and the closing parables of readiness (the ten virgins, the talents, the sheep and the goats). Teaches watchfulness rather than date-setting.",
+      "verses": [{ "ref": "Matthew 24-25", "note": "The full discourse, given just before the Passion narrative begins" }],
+      "ageEvents": []
+    },
+    {
+      "id": "great_commission", "name": "The Great Commission", "role": "law", "scribeTier": "Commission Scroll", "deliveredBy": "jesus",
+      "purpose": "The risen Jesus's final recorded words in this Gospel, given to the eleven remaining disciples on a mountain in Galilee — a direct charge to make disciples of all nations, baptizing and teaching, closing with the promise 'lo, I am with you alway, even unto the end of the world.' The book's own closing thesis: what all of it was for.",
+      "verses": [{ "ref": "Matthew 28:16-20", "note": "The final verses of the book" }],
+      "ageEvents": []
+    },
+    { "id": "mary_magdalene", "name": "Mary Magdalene", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Matthew 27:56, 61", "note": "Present at the crucifixion and burial" },
+        { "ref": "Matthew 28:1-8", "note": "One of the two women who find the empty tomb and are first told Jesus is risen" }
+      ], "ageEvents": [] },
+    { "id": "the_other_mary", "name": "\"The Other Mary\"", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 27:56, 61; 28:1", "note": "Named alongside Mary Magdalene at the crucifixion, burial, and empty tomb — likely the mother of James and Joses per 27:56, not individually indexed further here" }], "ageEvents": [] },
+    { "id": "joseph_of_arimathaea", "name": "Joseph of Arimathaea", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 27:57-60", "note": "A rich man and Jesus's disciple who requests the body from Pilate and buries it in his own new tomb" }], "ageEvents": [] },
+    { "id": "simon_of_cyrene", "name": "Simon of Cyrene", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Matthew 27:32", "note": "Compelled to carry Jesus's cross" }], "ageEvents": [] }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "jesusGenealogy": { "ref": "Matthew 1:1-17", "note": "Abraham to Jesus in three sets of fourteen generations. Almost entirely OT figures already indexed in Genesis/Ruth/1&2 Samuel/1&2 Kings/1&2 Chronicles — not re-indexed here to avoid duplicating those books' own character entries. Notable feature: four women are named in a genealogy that otherwise lists only men — Tamar, Rahab, Ruth, and 'her that had been the wife of Urias' (Bathsheba, not named directly here) — each with an unconventional or Gentile background, worth flagging as deliberate rather than incidental." },
+    "chiefPriestsAndScribes": { "ref": "Matthew 2:4", "note": "Consulted by Herod the Great about where the Christ should be born — never individually named, kept as a bulk reference rather than invented individuals." },
+    "theCenturionAtTheCross": { "ref": "Matthew 27:54", "note": "Unnamed — 'Truly this was the Son of God' — along with those watching with him." }
+  }
+}

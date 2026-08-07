@@ -1,0 +1,102 @@
+{
+  "book": "Deuteronomy",
+  "canonicalOrder": 5,
+  "translation": "KJV",
+  "status": "draft — first indexing pass 2026-08-06, built around the book's actual purpose per the user's explicit direction, not a mechanical law/person template",
+  "notes": "Deuteronomy is Moses' farewell address to the generation that grew up in the wilderness — the generation that disbelieved at Kadesh-barnea has died off (see Numbers 14, 26), and this new generation needs the covenant restated as THEIR OWN covenant, not just their parents'. That context shapes every tier below: the historical recap teaches from the previous generation's failures, the law is restated adapted for settled land-life (not wilderness/nomadic life), and the closing chapters are a covenant-renewal ceremony aimed specifically at the crossing about to happen. Unlike Leviticus, this book IS framed as Moses' own personal address ('These be the words which Moses spake unto all Israel,' 1:1) rather than impersonal 'the LORD spake unto Moses' transmission — so most tiers are still law/theme-type with Moses noted as deliveredBy, but his death (ch. 34) is kept as its own PERSON tier, since that is the one truly singular, personally-embodied narrative beat in the book, distinct from content he's relaying. This is also where the Ten Commandments get a real home in this indexing project — Deuteronomy 5 re-gives them in full to the new generation, which is a more meaningful placement than a future minigame alone.",
+  "scribeTiers": [
+    { "tier": 1, "scribeName": "Unworn Sandal", "managerId": "wilderness_lessons", "type": "law" },
+    { "tier": 2, "scribeName": "Two Tablets", "managerId": "ten_commandments", "type": "law" },
+    { "tier": 3, "scribeName": "Doorpost Scroll", "managerId": "the_shema", "type": "law" },
+    { "tier": 4, "scribeName": "Boundary Stone", "managerId": "laws_for_the_land", "type": "law" },
+    { "tier": 5, "scribeName": "Twin Mountains", "managerId": "covenant_ceremony", "type": "law" },
+    { "tier": 6, "scribeName": "Witness Song", "managerId": "song_of_moses", "type": "law" },
+    { "tier": 7, "scribeName": "Tribal Blessing Scroll", "managerId": "blessing_of_tribes", "type": "law" },
+    { "tier": 8, "scribeName": "Mount Nebo", "managerId": "moses", "type": "person" }
+  ],
+  "characters": [
+    {
+      "id": "wilderness_lessons", "name": "Lessons from the Wilderness", "role": "law", "scribeTier": "Unworn Sandal", "deliveredBy": "moses",
+      "purpose": "A deliberate historical recap, not a repeat for its own sake — reminds the new generation of the spies' failure at Kadesh-barnea, the defeats of Sihon and Og, and the golden calf, specifically so they don't repeat their parents' unbelief now that they're the ones about to cross in.",
+      "verses": [
+        { "ref": "Deuteronomy 1:19-46", "note": "Retells the twelve spies and the refusal to enter the land" },
+        { "ref": "Deuteronomy 2-3", "note": "Retells the journey around Edom/Moab and the defeats of Sihon and Og" },
+        { "ref": "Deuteronomy 8:1-5", "note": "'Thy raiment waxed not old upon thee... these forty years'" },
+        { "ref": "Deuteronomy 9:7-21", "note": "Retells the golden calf — 'ye have been rebellious against the LORD from the day that I knew you'" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ten_commandments", "name": "The Ten Commandments Restated", "role": "law", "scribeTier": "Two Tablets", "deliveredBy": "moses",
+      "purpose": "Re-given word for word to the generation that was not at Sinai — explicitly framed as THEIR covenant now, not an inherited one: 'The LORD made not this covenant with our fathers, but with us, even us, who are all of us here alive this day' (5:3).",
+      "verses": [{ "ref": "Deuteronomy 5:6-21", "note": "The Ten Commandments, restated in full" }],
+      "ageEvents": [],
+      "funFacts": ["This restatement is the reason the Commandments get real weight in this indexing project, rather than being left out or deferred to a future feature — this is their most narratively purposeful appearance in the whole Torah, given directly to the generation who will actually live under them in the land."]
+    },
+    {
+      "id": "the_shema", "name": "The Shema", "role": "law", "scribeTier": "Doorpost Scroll", "deliveredBy": "moses",
+      "purpose": "'Hear, O Israel: The LORD our God is one LORD' — the foundational confession undergirding every other law in the book, meant to be taught constantly and bound into daily life (hands, forehead, doorposts) rather than encountered once and set aside.",
+      "verses": [{ "ref": "Deuteronomy 6:4-9", "note": "The Shema and the command to teach it diligently to children" }],
+      "ageEvents": []
+    },
+    {
+      "id": "laws_for_the_land", "name": "Laws for the Land", "role": "law", "scribeTier": "Boundary Stone", "deliveredBy": "moses",
+      "purpose": "The bulk of the book (chapters 12-26) — law adapted specifically for settled life in the land, not the wilderness camp: one central place of worship, kingship rules, courts and judges, warfare conduct, property and landmark law. Practical preparation for a completely different mode of national life than they've known.",
+      "verses": [
+        { "ref": "Deuteronomy 12:1-32", "note": "Centralized worship at 'the place which the LORD your God shall choose'" },
+        { "ref": "Deuteronomy 17:14-20", "note": "Laws anticipating a future king" },
+        { "ref": "Deuteronomy 19:14", "note": "'Thou shalt not remove thy neighbour's landmark'" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "covenant_ceremony", "name": "The Covenant Ceremony", "role": "law", "scribeTier": "Twin Mountains", "deliveredBy": "moses",
+      "purpose": "A physical ceremony planned for the moment they enter the land — half the tribes standing on Mount Gerizim for blessing, half on Mount Ebal for cursing — making the choice between obedience and disobedience a literal, staged, communal event rather than an abstract idea.",
+      "verses": [{ "ref": "Deuteronomy 27:1-28:68", "note": "Instructions for the Gerizim/Ebal ceremony, followed by extensive blessings and curses" }],
+      "ageEvents": []
+    },
+    {
+      "id": "song_of_moses", "name": "The Song of Moses", "role": "law", "scribeTier": "Witness Song", "deliveredBy": "moses",
+      "purpose": "Commanded by God to be written down and taught specifically because it will outlast Moses himself — 'this song shall testify against them as a witness' (31:21) after the people inevitably drift, when there's no living leader left to confront them directly.",
+      "verses": [
+        { "ref": "Deuteronomy 31:19-22", "note": "Commanded as a witness song, to be taught to the people" },
+        { "ref": "Deuteronomy 32:1-47", "note": "The song itself" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blessing_of_tribes", "name": "The Blessing of the Twelve Tribes", "role": "law", "scribeTier": "Tribal Blessing Scroll", "deliveredBy": "moses",
+      "purpose": "Moses' final act before going up the mountain to die — a personal blessing for each tribe, echoing Jacob's blessing of his twelve sons back in Genesis 49, closing the loop from the family that went down into Egypt to the nation about to enter the land.",
+      "verses": [{ "ref": "Deuteronomy 33:1-29", "note": "Blesses Reuben, Judah, Levi, Benjamin, Joseph (Ephraim and Manasseh), Zebulun, Issachar, Gad, Dan, Naphtali, and Asher" }],
+      "ageEvents": [],
+      "funFacts": ["Simeon is the one tribe left out of the blessing entirely — a real textual gap, not an oversight in this indexing. Likely connected to Jacob's own rebuke of Simeon (with Levi) for violence at Shechem back in Genesis 49:5-7, though the text here doesn't explain the omission directly."]
+    },
+    {
+      "id": "moses", "name": "Moses", "role": "manager", "scribeTier": "Mount Nebo", "parentManagerId": null,
+      "genealogy": { "father": "amram", "mother": "jochebed", "spouses": ["zipporah"], "children": ["gershom", "eliezer_moses"] },
+      "verses": [
+        { "ref": "Deuteronomy 31:1-8", "note": "Publicly commissions Joshua as his successor before all Israel" },
+        { "ref": "Deuteronomy 34:1-4", "note": "Views the whole land from Mount Nebo/Pisgah, but is told he will not cross over" },
+        { "ref": "Deuteronomy 34:5-8", "note": "Dies at 120; buried by the LORD himself in a valley 'no man knoweth of his sepulchre unto this day'" },
+        { "ref": "Deuteronomy 34:10-12", "note": "'There arose not a prophet since in Israel like unto Moses, whom the LORD knew face to face'" }
+      ],
+      "ageEvents": [
+        { "event": "Died", "age": 120, "ref": "Deuteronomy 34:7" }
+      ],
+      "funFacts": ["'His eye was not dim, nor his natural force abated' (34:7) — his death is explicitly not framed as decline; he simply isn't permitted to cross, the one real personal cost of striking the rock back in Numbers 20."]
+    },
+    {
+      "id": "joshua", "name": "Joshua", "role": "submanager", "scribeTier": "Mount Nebo", "parentManagerId": "moses",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "nun", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Deuteronomy 31:7-8, 23", "note": "Publicly and privately charged by Moses to lead the people in" },
+        { "ref": "Deuteronomy 34:9", "note": "'Full of the spirit of wisdom; for Moses had laid his hands upon him'" }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Nothing bulk to list this book."
+  }
+}

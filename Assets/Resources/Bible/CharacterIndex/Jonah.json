@@ -1,0 +1,251 @@
+{
+  "book": "Jonah",
+  "canonicalOrder": 32,
+  "notes": "Jonah is unusual among the Minor Prophets: rather than a collection of oracles, it is almost entirely narrative about the prophet himself, and its sole message to Nineveh is a single sentence (Jonah 3:4). Because the book has only one truly major human figure, the scribe roster is deliberately small: one person-tier (Jonah) plus three law/theme-tiers built around the book's three great non-human 'actors' — the great fish, Jonah's prayer, and the gourd/worm/wind sequence — each of which the KJV text itself marks as something the LORD 'prepared' (Jonah 1:17, 4:6, 4:7, 4:8), tying the whole book together. Two Gentile groups (the mariners of chapter 1 and Nineveh's king/people of chapters 3-4) respond to the LORD's word more readily than Jonah does, and are captured as submanagers/genealogyLists under Jonah rather than as their own tiers, since neither has an individually named member. Jonah's patronymic ('the son of Amittai,' 1:1) matches the historical prophet named in 2 Kings 14:25, of Gath-hepher — noted as a cross-book identification, not narrated within Jonah itself. No New Testament material (e.g. the 'sign of Jonas') is indexed here; it is referenced only in passing as a fun fact, since this index is Old Testament/book-scoped.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Jonah, the Reluctant Prophet",
+      "managerId": "jonah",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Great Fish",
+      "managerId": "great_fish",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Jonah's Prayer",
+      "managerId": "jonahs_prayer",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Gourd, the Worm, and the Wind",
+      "managerId": "gourd_worm_wind",
+      "type": "law"
+    }
+  ],
+  "genealogyLists": {
+    "people_and_cattle_of_nineveh": "The multitude of Nineveh's inhabitants, described in Jonah 4:11 as 'more than sixscore thousand persons that cannot discern between their right hand and their left hand,' together with 'also much cattle.' At the king's decree they fasted, put on sackcloth, and 'cried mightily unto God' (Jonah 3:5-8). No individual among them is named beyond the king; their corporate repentance and sparing form the book's closing question to Jonah."
+  },
+  "characters": [
+    {
+      "id": "jonah",
+      "name": "Jonah",
+      "role": "manager",
+      "scribeTier": "Tier 1 — Jonah, the Reluctant Prophet",
+      "genealogy": {
+        "father": "Amittai",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the son of Amittai' (Jonah 1:1). The same patronymic identifies the prophet Jonah 'of Gath-hepher' in 2 Kings 14:25, who foretold the restoration of Israel's border under Jeroboam II — traditionally understood as the same individual, though the book of Jonah itself never narrates that cross-reference."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:1-2",
+          "note": "The word of the LORD comes to Jonah, commanding him to cry against Nineveh for its wickedness."
+        },
+        {
+          "ref": "Jonah 1:3",
+          "note": "Jonah instead rises up to flee unto Tarshish from the presence of the LORD, boarding a ship at Joppa."
+        },
+        {
+          "ref": "Jonah 1:12",
+          "note": "Jonah tells the terrified mariners to take him up and cast him into the sea, admitting the tempest is for his sake."
+        },
+        {
+          "ref": "Jonah 1:17",
+          "note": "The LORD prepares a great fish to swallow up Jonah; he is in its belly three days and three nights."
+        },
+        {
+          "ref": "Jonah 3:3-4",
+          "note": "On a second commission, Jonah enters Nineveh and proclaims that in forty days the city shall be overthrown."
+        },
+        {
+          "ref": "Jonah 3:10",
+          "note": "God sees Nineveh's works, that they turn from their evil way, and repents of the evil he said he would do."
+        },
+        {
+          "ref": "Jonah 4:1",
+          "note": "Jonah is displeased exceedingly, and very angry, that Nineveh is spared."
+        },
+        {
+          "ref": "Jonah 4:9-11",
+          "note": "God rebukes Jonah's anger over the withered gourd, contrasting his pity for a plant with the LORD's compassion for Nineveh's many people and cattle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jonah is the only Minor Prophet whose book is almost entirely narrative about the prophet rather than a collection of his oracles.",
+        "Jonah is independently named as a historical prophet 'of Gath-hepher' in 2 Kings 14:25, during the reign of Jeroboam II of Israel.",
+        "The book ends on an unanswered question from God to Jonah (Jonah 4:11), rather than a resolved narrative."
+      ],
+      "perkFlavor": "reluctant-obedience",
+      "perkNote": "Represents Jonah's arc from flight to reluctant obedience. Grants this tier's standard manager bonus (+25% output to the Jonah scribe tier) once the player's level threshold is met, mechanically identical to other managers — narrative flavor only."
+    },
+    {
+      "id": "the_mariners",
+      "name": "The Mariners",
+      "role": "submanager",
+      "parentManagerId": "jonah",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An unnamed company of shipmen aboard the vessel bound for Tarshish out of Joppa (Jonah 1:3). Individuals are not named, only described corporately as 'the mariners' and, once distinctly, 'the shipmaster' (Jonah 1:6)."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:5",
+          "note": "The mariners are afraid, cry every man unto his god, and cast the wares that are in the ship into the sea to lighten it."
+        },
+        {
+          "ref": "Jonah 1:7",
+          "note": "They cast lots to learn for whose cause the evil is upon them, and the lot falls upon Jonah."
+        },
+        {
+          "ref": "Jonah 1:13",
+          "note": "The men row hard to bring the ship back to land rather than cast Jonah into the sea, but the sea grows more and more tempestuous."
+        },
+        {
+          "ref": "Jonah 1:15-16",
+          "note": "They take up Jonah and cast him into the sea, the sea ceases from her raging, and the men fear the LORD exceedingly, offering a sacrifice and making vows."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'shipmaster' who wakes Jonah in the ship's sides (Jonah 1:6) is mentioned distinctly from the general body of mariners, though also unnamed.",
+        "The mariners' fear of the LORD and vow-making (Jonah 1:16) make them, alongside Nineveh, one of two Gentile groups in the book who turn to God before Jonah himself fully does."
+      ],
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Their fear of the LORD and sacrifice at sea (Jonah 1:16) represents a loyalty-boost flavor layered onto Jonah's tier bonus once unlocked."
+    },
+    {
+      "id": "king_of_nineveh",
+      "name": "The King of Nineveh",
+      "role": "submanager",
+      "parentManagerId": "jonah",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed in the text; called simply 'the king of Nineveh' (Jonah 3:6). Not identified with any specific Assyrian monarch by name in this book."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 3:6",
+          "note": "On hearing Jonah's message, the king arises from his throne, lays his robe from him, covers himself with sackcloth, and sits in ashes."
+        },
+        {
+          "ref": "Jonah 3:7-8",
+          "note": "He issues a decree, by himself and his nobles, that neither man nor beast, herd nor flock, taste anything, and that all cry mightily unto God and turn from their evil way and violence."
+        },
+        {
+          "ref": "Jonah 3:9",
+          "note": "The king reasons, 'Who can tell if God will turn and repent, and turn away from his fierce anger, that we perish not?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The decree extends fasting and sackcloth even to the city's animals (Jonah 3:7-8), a detail unique to this account.",
+        "The proclamation is issued jointly, 'by the decree of the king and his nobles' (Jonah 3:7)."
+      ],
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The king's decree and Nineveh's citywide repentance (Jonah 3:5-10) represents a loyalty-boost flavor layered onto Jonah's tier bonus once unlocked."
+    },
+    {
+      "id": "great_fish",
+      "name": "The Great Fish",
+      "role": "law",
+      "scribeTier": "Tier 2 — The Great Fish",
+      "deliveredBy": "The LORD (who 'had prepared' the fish, Jonah 1:17)",
+      "purpose": "God's appointed instrument of both judgment and rescue: it swallows Jonah to save him from drowning after he is cast into the sea, then delivers him safely back to dry land, teaching that the LORD's sovereignty and mercy extend even over the sea and its creatures.",
+      "verses": [
+        {
+          "ref": "Jonah 1:17",
+          "note": "The LORD had prepared a great fish to swallow up Jonah; he is in the fish's belly three days and three nights."
+        },
+        {
+          "ref": "Jonah 2:1",
+          "note": "Jonah prays unto the LORD his God out of the fish's belly."
+        },
+        {
+          "ref": "Jonah 2:10",
+          "note": "The LORD speaks unto the fish, and it vomits out Jonah upon the dry land."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The KJV text calls it simply 'a great fish' (Jonah 1:17), not a whale — that word does not appear in this KJV wording.",
+        "The fish acts twice at God's direct command: first to swallow Jonah (1:17), then to release him (2:10)."
+      ],
+      "perkFlavor": "rescue-and-return",
+      "perkNote": "Represents deliverance through the deep — flavor for this tier's standard scribe-tier output within the shared Ink economy."
+    },
+    {
+      "id": "jonahs_prayer",
+      "name": "Jonah's Prayer",
+      "role": "law",
+      "scribeTier": "Tier 3 — Jonah's Prayer",
+      "deliveredBy": "Jonah (prayed from within the fish, Jonah 2:1-9)",
+      "purpose": "A psalm of thanksgiving offered in distress, recounting Jonah's descent into the deep and affirming that 'salvation is of the LORD' (Jonah 2:9) — modeling repentant prayer offered from the depths of consequence, rather than a petition to be spared them.",
+      "verses": [
+        {
+          "ref": "Jonah 2:2",
+          "note": "Jonah cries by reason of his affliction unto the LORD, and he hears him out of the belly of hell."
+        },
+        {
+          "ref": "Jonah 2:5-6",
+          "note": "Jonah describes the waters compassing him, the weeds wrapped about his head, and the earth's bars closing upon him forever."
+        },
+        {
+          "ref": "Jonah 2:9",
+          "note": "Jonah vows to sacrifice unto the LORD with the voice of thanksgiving and to pay that he has vowed, declaring 'Salvation is of the LORD.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The prayer is written in poetic form and draws heavily on the language and imagery of the Psalms (compare Jonah 2:2 with Psalm 18:6).",
+        "It is offered from inside the fish, before Jonah has yet gone to Nineveh — thanksgiving for rescue, not a petition to be spared the mission."
+      ],
+      "perkFlavor": "depths-thanksgiving",
+      "perkNote": "Represents prayer answered from the deep — flavor for this tier's standard scribe-tier output within the shared Ink economy."
+    },
+    {
+      "id": "gourd_worm_wind",
+      "name": "The Gourd, the Worm, and the Wind",
+      "role": "law",
+      "scribeTier": "Tier 4 — The Gourd, the Worm, and the Wind",
+      "deliveredBy": "The LORD God (prepared the gourd, the worm, and the vehement east wind, Jonah 4:6-8)",
+      "purpose": "Three things God 'prepares' in succession to teach Jonah about misplaced pity — a plant that shades and pleases him, a worm that destroys it, and a scorching wind that afflicts him — exposing Jonah's greater concern for his own comfort than for the many souls of Nineveh.",
+      "verses": [
+        {
+          "ref": "Jonah 4:6",
+          "note": "The LORD God prepares a gourd to come up over Jonah, to be a shadow over his head and deliver him from his grief; Jonah is exceeding glad of the gourd."
+        },
+        {
+          "ref": "Jonah 4:7",
+          "note": "God prepares a worm when the morning rises the next day, and it smites the gourd so that it withers."
+        },
+        {
+          "ref": "Jonah 4:8",
+          "note": "God prepares a vehement east wind, and the sun beats upon Jonah's head so that he faints and wishes in himself to die."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The gourd, the worm, and the wind all use the same Hebrew verb rendered 'prepared' that describes God 'preparing' the great fish in Jonah 1:17, tying chapters 1 and 4 together in the KJV's own wording.",
+        "The KJV renders the plant 'gourd' (Jonah 4:6-10); this index follows the KJV's own word rather than other translations' renderings."
+      ],
+      "perkFlavor": "shade-and-storm",
+      "perkNote": "Represents the LORD's object lesson in compassion — flavor for this tier's standard scribe-tier output within the shared Ink economy."
+    }
+  ],
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

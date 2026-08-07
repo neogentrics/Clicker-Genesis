@@ -1,0 +1,622 @@
+{
+  "book": "Zechariah",
+  "canonicalOrder": 38,
+  "notes": "Full redraft correcting the three adversarial-review findings: (1) added genealogyLists entry for Sherezer/Regemmelech (7:2), and — going further than the minimum \"at least a genealogyLists note\" ask — promoted Heldai/Helem, Tobijah, Jedaiah, and Josiah/Hen the son of Zephaniah (6:10, 6:14) to full submanager entries under joshua_high_priest, since they have real narrative action (funded his coronation crown, are individually memorialized) rather than being a zero-action bulk list; their KJV name-variants between v.10 and v.14 are flagged explicitly. (2) Corrected joshua_high_priest's genealogy note: Haggai 1:1 actually matches Zechariah's own spelling exactly (\"Joshua the son of Josedech\"), while Ezra/Nehemiah use the differing \"Jeshua the son of Jozadak\" (both the man's own name and his father's name differ there) — the original draft had this backwards. (3) Added an explicit naming-collision flag on iddo_priestly_returnee: Zechariah's grandfather \"Iddo the prophet\" (1:1, 1:7) is a different person from \"Iddo the seer\" / \"the prophet Iddo\" of 2 Chronicles 9:29, 12:15, 13:22, who served generations earlier under Solomon, Rehoboam, and Abijah — same name and even the same \"prophet\" title applied to both in KJV, but not the same man. A secondary collision (Josiah/Hen's father \"Zephaniah\" vs. the prophet Zephaniah, a different, earlier man) is also flagged on that submanager entry.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Zechariah",
+      "managerId": "zechariah_prophet",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Zerubbabel",
+      "managerId": "zerubbabel",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Joshua the High Priest",
+      "managerId": "joshua_high_priest",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Angel of the LORD",
+      "managerId": "angel_of_the_lord",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Man with the Measuring Line",
+      "managerId": "measuring_line_vision",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Flying Scroll and the Woman in the Ephah",
+      "managerId": "flying_scroll_and_ephah_visions",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Vision of the Four Chariots",
+      "managerId": "four_chariots_vision",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Two Shepherd's Staves and the Thirty Pieces of Silver",
+      "managerId": "shepherd_staves_and_thirty_pieces",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Day of the LORD",
+      "managerId": "day_of_the_lord_oracle",
+      "type": "law"
+    }
+  ],
+  "genealogyLists": {
+    "fasting_inquiry_delegation": {
+      "names": [
+        "Sherezer",
+        "Regemmelech"
+      ],
+      "refs": [
+        "Zechariah 7:2"
+      ],
+      "note": "Sent, with their men, to the house of God to pray before the LORD and ask the priests and prophets whether the mourning fast of the fifth month should continue — the question that opens the chapters 7-8 discourse on true fasting, justice, and mercy. No individual action beyond being named as the delegation; not otherwise connected to Zechariah, Zerubbabel, or Joshua's storylines, so neither warrants a full character entry."
+    }
+  },
+  "characters": [
+    {
+      "id": "zechariah_prophet",
+      "name": "Zechariah",
+      "role": "manager",
+      "parentManagerId": null,
+      "scribeTier": "Tier 1",
+      "perkFlavor": "Prophet's Insight",
+      "perkNote": "Manager bonus themed on his role as the one who receives, records, and himself enacts the visions and oracles of the book — boosts his own tier's output.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": "Berechiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the son of Berechiah, the son of Iddo the prophet' (1:1, 1:7) — grandson of Iddo, with 'son' used loosely for 'grandson' as is common in Hebrew genealogical formulas. Ezra 5:1 and 6:14 instead call him directly 'Zechariah the son of Iddo,' skipping Berechiah entirely — same person, standard grandson-as-son shorthand, not a contradiction."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "opening dating formula and genealogy: 2nd year of Darius, 8th month"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "second dating formula (2nd year of Darius, 11th month/Sebat), introducing the eight night visions"
+        },
+        {
+          "ref": "Zechariah 4:1-2",
+          "note": "woken by the angel that talked with him to see the golden lampstand vision"
+        },
+        {
+          "ref": "Zechariah 6:9-11",
+          "note": "commanded to take silver and gold from the returned exiles and make crowns for Joshua the high priest"
+        },
+        {
+          "ref": "Zechariah 11:4-14",
+          "note": "personally acts out the prophetic sign of the two shepherd's staves, Beauty and Bands, and is paid thirty pieces of silver he is told to cast to the potter"
+        }
+      ],
+      "funFacts": [
+        "Contemporary of Haggai — both prophesied to spur the rebuilding of the Second Temple under Darius I (cf. Ezra 5:1, 6:14).",
+        "Chapters 1-6 record eight night visions received in a single night; chapters 9-14 shift to two undated oracles ('burdens') largely concerned with the future 'Day of the LORD.'",
+        "Unlike most prophets who only speak or watch, Zechariah is personally directed to physically enact a sign — breaking two named staves and handling the thirty pieces of silver himself (11:4-14)."
+      ]
+    },
+    {
+      "id": "zerubbabel",
+      "name": "Zerubbabel",
+      "role": "manager",
+      "parentManagerId": null,
+      "scribeTier": "Tier 2",
+      "perkFlavor": "Foundation Layer",
+      "perkNote": "Manager bonus themed on 4:9's 'his hands have laid the foundation of this house; his hands shall also finish it' — boosts his own tier's output.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Zechariah itself never gives Zerubbabel's genealogy — he is introduced simply as the governor overseeing the temple's rebuilding (4:6-10). His patronymic 'son of Shealtiel' comes from Haggai 1:1 and Ezra 3:2, not from anything stated within Zechariah's own text; noted here for identification only, not asserted as this book's own claim."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 4:6-7",
+          "note": "'Not by might, nor by power, but by my spirit, saith the LORD of hosts' — the great mountain becomes a plain before him"
+        },
+        {
+          "ref": "Zechariah 4:9-10",
+          "note": "his hands laid the temple's foundation and his hands shall finish it; rebuke against despising 'the day of small things'"
+        },
+        {
+          "ref": "Zechariah 4:11-14",
+          "note": "the vision's two olive trees/two anointed ones beside the golden lampstand are widely read as representing him and Joshua together"
+        }
+      ],
+      "funFacts": [
+        "Governor of Judah under Persian King Darius I, paired throughout with Joshua the high priest as civil and religious co-leaders of the restored community.",
+        "4:6-10 supplies one of the book's most quoted lines: 'Not by might, nor by power, but by my spirit, saith the LORD of hosts.'",
+        "6:12's messianic title 'the BRANCH... he shall build the temple of the LORD' is spoken over Joshua at his coronation ceremony, but is widely read as typologically pointing through Zerubbabel — the one actually building the literal temple — toward a future figure."
+      ]
+    },
+    {
+      "id": "joshua_high_priest",
+      "name": "Joshua the High Priest",
+      "role": "manager",
+      "parentManagerId": null,
+      "scribeTier": "Tier 3",
+      "perkFlavor": "Clean Garments",
+      "perkNote": "Manager bonus themed on 3:4's exchange of his filthy garments for clean ones — boosts his own tier's output.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": "Josedech (Zechariah 3:1, 6:11) — this spelling matches Haggai's usage exactly ('Joshua the son of Josedech, the high priest,' Haggai 1:1). Ezra and Nehemiah instead call him 'Jeshua the son of Jozadak' (e.g. Ezra 3:2, 5:2; Nehemiah 12:26) — both his own name AND his father's name are spelled differently there. Same historical high priest; real KJV cross-book spelling variance, not normalized here.",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "See father field for the Haggai-vs-Ezra/Nehemiah spelling note."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 3:1-5",
+          "note": "stands in filthy garments before the angel of the LORD, with Satan resisting him at his right hand; garments removed and a clean mitre set on his head"
+        },
+        {
+          "ref": "Zechariah 3:8-9",
+          "note": "told he and his fellow priests are 'men wondered at,' a sign of the coming BRANCH; a stone with seven eyes set before him"
+        },
+        {
+          "ref": "Zechariah 6:9-11",
+          "note": "crowned with silver and gold crowns funded by Heldai, Tobijah, Jedaiah, and Josiah the son of Zephaniah"
+        },
+        {
+          "ref": "Zechariah 6:12-13",
+          "note": "named 'the BRANCH,' who shall build the temple and sit and rule upon his throne, with a priest beside the throne"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "the crowns memorialized in the temple to Helem, Tobijah, Jedaiah, and Hen the son of Zephaniah — same four men as v.10 under variant names"
+        }
+      ],
+      "funFacts": [
+        "Chapter 3 is the book's only full courtroom-style scene: Satan accuses, the LORD rebukes him, and Joshua's filthy garments (representing iniquity) are publicly exchanged for clean ones.",
+        "Actually crowned with a real silver-and-gold crown in a prophetic sign-act (6:11), funded by four named returned exiles.",
+        "The messianic title 'the BRANCH' is pronounced over him at his coronation (6:12) even though it is Zerubbabel, not Joshua, who is doing the literal temple-building at the time — a deliberately layered, typological sign."
+      ]
+    },
+    {
+      "id": "angel_of_the_lord",
+      "name": "The Angel of the LORD",
+      "role": "manager",
+      "parentManagerId": null,
+      "scribeTier": "Tier 4",
+      "perkFlavor": "Interpreter's Voice",
+      "perkNote": "Manager bonus themed on his role explaining every vision to Zechariah — boosts his own tier's output.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Angelic being; no human genealogy applies. KJV Zechariah uses two titles most readers take as the same interpreting figure across the night visions: 'the angel of the LORD' (1:11-12; 3:1-6) and 'the angel that talked with me' (1:9, 13-14; 2:3; 4:1, 4-5; 5:5, 10; 6:4-5) — the text itself never explicitly equates the two titles, so the identification, while standard, is an inference rather than something stated outright."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:11-13",
+          "note": "'the angel of the LORD' receives the horsemen's report and intercedes; 'the angel that talked with me' answers Zechariah's question"
+        },
+        {
+          "ref": "Zechariah 2:3-4",
+          "note": "instructs a young man about Jerusalem being inhabited as towns without walls"
+        },
+        {
+          "ref": "Zechariah 3:1-6",
+          "note": "'the angel of the LORD,' before whom Joshua stands, rebukes Satan and protests to Joshua"
+        },
+        {
+          "ref": "Zechariah 4:1-6",
+          "note": "wakes Zechariah 'as a man that is wakened out of his sleep' and interprets the golden lampstand and two olive trees"
+        }
+      ],
+      "funFacts": [
+        "Functions as the recurring guide who interprets all eight night visions of chapters 1-6, repeatedly answering Zechariah's 'What are these?'",
+        "In 3:2 speaks the words later echoed almost verbatim in Jude 1:9: 'The LORD rebuke thee, O Satan.'"
+      ]
+    },
+    {
+      "id": "measuring_line_vision",
+      "name": "The Man with the Measuring Line",
+      "role": "law",
+      "parentManagerId": null,
+      "scribeTier": "Tier 5",
+      "ageEvents": [],
+      "deliveredBy": "The angel that talked with Zechariah, in a vision of a man/young man carrying a measuring line (2:1-13)",
+      "purpose": "Promises Jerusalem will be repopulated so abundantly it must be 'inhabited as towns without walls' (2:4), with the LORD himself as 'a wall of fire round about' and 'the glory in the midst of her' (2:5) — reassurance offered during the modest, uncertain early rebuilding effort.",
+      "verses": [
+        {
+          "ref": "Zechariah 2:1-2",
+          "note": "a man with a measuring line in his hand goes to measure Jerusalem's width and length"
+        },
+        {
+          "ref": "Zechariah 2:4-5",
+          "note": "Jerusalem to be inhabited as towns without walls; the LORD a wall of fire round about and the glory in her midst"
+        },
+        {
+          "ref": "Zechariah 2:8",
+          "note": "'he that toucheth you toucheth the apple of his eye' — one of the book's most quoted phrases"
+        },
+        {
+          "ref": "Zechariah 2:10-11",
+          "note": "call to rejoice, 'for, lo, I come, and I will dwell in the midst of thee'"
+        }
+      ],
+      "funFacts": [
+        "Source of the widely-quoted phrase 'the apple of his eye' (2:8), describing how closely God identifies with his people.",
+        "Promises growth so great that walls become obsolete — a striking image for a city still being rebuilt with essentially no walls yet at all."
+      ]
+    },
+    {
+      "id": "flying_scroll_and_ephah_visions",
+      "name": "The Flying Scroll and the Woman in the Ephah",
+      "role": "law",
+      "parentManagerId": null,
+      "scribeTier": "Tier 6",
+      "ageEvents": [],
+      "deliveredBy": "Shown to Zechariah by the angel that talked with him (5:1-11)",
+      "purpose": "Two paired visions of purging: a giant flying scroll (5:1-4) pronounces a curse that enters the house of every thief and every false swearer and consumes it; a woman named 'Wickedness' is sealed inside a measuring-basket (ephah) and carried off by two winged women to a house built for her in the land of Shinar (5:5-11) — together picturing sin, and its personification, being physically removed from the restored land.",
+      "verses": [
+        {
+          "ref": "Zechariah 5:1-2",
+          "note": "the flying scroll, twenty cubits by ten cubits"
+        },
+        {
+          "ref": "Zechariah 5:3-4",
+          "note": "the curse against every thief and every false swearer, entering their houses and consuming them, timber and stones"
+        },
+        {
+          "ref": "Zechariah 5:6-8",
+          "note": "'This is their resemblance through all the earth... This is Wickedness,' thrust down into the ephah under a leaden weight-cover"
+        },
+        {
+          "ref": "Zechariah 5:9-11",
+          "note": "two women with wings like a stork's carry the ephah away to build Wickedness a house in Shinar"
+        }
+      ],
+      "funFacts": [
+        "One of the only visions in the book to personify an abstract concept ('Wickedness') as a character.",
+        "The flying scroll's dimensions (20 by 10 cubits) match the size of the porch of Solomon's temple in 1 Kings 6:3, a detail many readers take as deliberate."
+      ]
+    },
+    {
+      "id": "four_chariots_vision",
+      "name": "The Vision of the Four Chariots",
+      "role": "law",
+      "parentManagerId": null,
+      "scribeTier": "Tier 7",
+      "ageEvents": [],
+      "deliveredBy": "Shown to Zechariah by the angel that talked with him (6:1-8)",
+      "purpose": "Four chariots drawn by different-colored horses go out to the four winds of heaven as 'the four spirits of the heavens'; the ones going toward the north country are specifically said to have 'quieted my spirit in the north country' — closing the cycle of eight night visions with a picture of God's sovereignty over the nations that had scattered and afflicted Judah.",
+      "verses": [
+        {
+          "ref": "Zechariah 6:1-3",
+          "note": "four chariots with red, black, white, and grisled-and-bay horses come out from between two mountains of brass"
+        },
+        {
+          "ref": "Zechariah 6:5",
+          "note": "'These are the four spirits of the heavens, which go forth from standing before the Lord of all the earth'"
+        },
+        {
+          "ref": "Zechariah 6:6-8",
+          "note": "the black and white horses go toward the north country; the LORD's spirit is 'quieted' there"
+        }
+      ],
+      "funFacts": [
+        "Closes the sequence of eight night visions that opened with a similarly colored set of horses among the myrtle trees in 1:8.",
+        "'The north country' in this era's prophetic language regularly stands for Babylon, the direction from which Judah's exile and destruction had come."
+      ]
+    },
+    {
+      "id": "shepherd_staves_and_thirty_pieces",
+      "name": "The Two Shepherd's Staves and the Thirty Pieces of Silver",
+      "role": "law",
+      "parentManagerId": null,
+      "scribeTier": "Tier 8",
+      "ageEvents": [],
+      "deliveredBy": "A prophetic sign-act personally performed by Zechariah at the LORD's command (11:4-17)",
+      "purpose": "Zechariah plays the part of a shepherd over 'the flock of the slaughter,' cutting two staves named Beauty (the covenant made with all the peoples) and Bands (the brotherhood between Judah and Israel). He breaks Beauty to show the covenant broken, is paid a contemptuous thirty pieces of silver for his shepherding and told to cast it to the potter in the house of the LORD, then breaks Bands to show the brotherhood broken — followed by a denunciation of the worthless 'idol shepherd' who abandons the flock (11:15-17).",
+      "verses": [
+        {
+          "ref": "Zechariah 11:7",
+          "note": "takes two staves, calling one Beauty and the other Bands"
+        },
+        {
+          "ref": "Zechariah 11:10",
+          "note": "cuts asunder Beauty, breaking the covenant made with all the people"
+        },
+        {
+          "ref": "Zechariah 11:12-13",
+          "note": "paid thirty pieces of silver, 'a goodly price that I was prised at of them'; told to cast it to the potter in the house of the LORD"
+        },
+        {
+          "ref": "Zechariah 11:14",
+          "note": "cuts asunder Bands, breaking the brotherhood between Judah and Israel"
+        },
+        {
+          "ref": "Zechariah 11:15-17",
+          "note": "commanded next to take up the instruments of a foolish/idol shepherd who does not care for the flock"
+        }
+      ],
+      "funFacts": [
+        "The thirty-pieces-of-silver detail is quoted in Matthew 27:9-10 in connection with Judas's betrayal payment, though Matthew's quotation there is attributed to Jeremiah rather than Zechariah — a well-known textual puzzle across the two books that Zechariah itself does not comment on.",
+        "'Cast it unto the potter' (11:13) is the KJV's own reading; some later scholarship connects the underlying Hebrew to a word for 'treasury' instead, but that is not what the KJV text says."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_oracle",
+      "name": "The Day of the LORD (Jerusalem's Siege, the Pierced One, and the Final Kingship)",
+      "role": "law",
+      "parentManagerId": null,
+      "scribeTier": "Tier 9",
+      "ageEvents": [],
+      "deliveredBy": "The second 'burden'/oracle of the word of the LORD concerning Israel (12:1-14:21) — unlike chapters 1-6, not framed as a night vision or attributed to an interpreting angel",
+      "purpose": "A sweeping end-time oracle: the nations besiege Jerusalem and are destroyed (12:1-9); the house of David mourns 'him whom they have pierced' as for an only son (12:10-14); a fountain is opened for sin and uncleanness (13:1); a shepherd is struck and the flock scattered, with two parts cut off and the third refined 'as silver is refined' (13:7-9); the LORD himself finally stands on the Mount of Olives, which cleaves in two (14:4); living waters flow out from Jerusalem (14:8); and even the bells of the horses are inscribed 'HOLINESS UNTO THE LORD' (14:20-21) — the book's climactic vision of universal worship and holiness.",
+      "verses": [
+        {
+          "ref": "Zechariah 12:10",
+          "note": "'they shall look upon me whom they have pierced, and they shall mourn for him' — widely read messianically"
+        },
+        {
+          "ref": "Zechariah 13:1",
+          "note": "'a fountain opened... for sin and for uncleanness'"
+        },
+        {
+          "ref": "Zechariah 13:7",
+          "note": "'Awake, O sword, against my shepherd... smite the shepherd, and the sheep shall be scattered'"
+        },
+        {
+          "ref": "Zechariah 13:8-9",
+          "note": "two parts cut off and die, the third part refined as silver and tried as gold"
+        },
+        {
+          "ref": "Zechariah 14:4",
+          "note": "the LORD's feet stand on the Mount of Olives, which cleaves in two toward the east and toward the west"
+        },
+        {
+          "ref": "Zechariah 14:8",
+          "note": "living waters go out from Jerusalem, half toward the former sea and half toward the hinder sea"
+        },
+        {
+          "ref": "Zechariah 14:9",
+          "note": "'the LORD shall be king over all the earth: in that day shall there be one LORD, and his name one'"
+        },
+        {
+          "ref": "Zechariah 14:20-21",
+          "note": "'HOLINESS UNTO THE LORD' inscribed even on the bells of the horses"
+        }
+      ],
+      "funFacts": [
+        "13:7 ('smite the shepherd, and the sheep shall be scattered') is quoted by Jesus of himself and his disciples in Matthew 26:31 and Mark 14:27.",
+        "12:10 is quoted in John 19:37 and echoed in Revelation 1:7 in connection with the crucifixion.",
+        "Chapters 12-14 contain no dated formula and no interpreting angel — a distinct literary section from the night visions of chapters 1-6."
+      ]
+    },
+    {
+      "id": "satan_the_accuser",
+      "name": "Satan",
+      "role": "named",
+      "parentManagerId": "joshua_high_priest",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Spiritual adversary, not a human genealogical figure. Appears in Zechariah only within the single courtroom-vision scene of 3:1-2."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 3:1",
+          "note": "stands at Joshua's right hand 'to resist him'"
+        },
+        {
+          "ref": "Zechariah 3:2",
+          "note": "rebuked: 'The LORD rebuke thee, O Satan... is not this a brand plucked out of the fire?'"
+        }
+      ],
+      "funFacts": [
+        "Appears by name only twice in the entire book, both in the same verse-pair (3:1-2).",
+        "The rebuke 'The LORD rebuke thee, O Satan' is echoed almost verbatim in Jude 1:9."
+      ]
+    },
+    {
+      "id": "darius_king",
+      "name": "Darius",
+      "role": "named",
+      "parentManagerId": null,
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Persian king; genealogy not given in Zechariah. Used only in dating formulas — this is Darius I (Hystaspes), the same king under whom Haggai prophesied and the temple rebuilding is authorized in Ezra 4-6."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "2nd year of Darius, 8th month — first dating formula"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "2nd year of Darius, 11th month (Sebat) — second dating formula"
+        },
+        {
+          "ref": "Zechariah 7:1",
+          "note": "4th year of Darius, 4th day of the 9th month (Chisleu) — third dating formula, opens the fasting inquiry"
+        }
+      ],
+      "funFacts": [
+        "Never appears as an active character in the book — used purely to date each section to specific days in his reign."
+      ]
+    },
+    {
+      "id": "iddo_priestly_returnee",
+      "name": "Iddo (Zechariah's grandfather)",
+      "role": "named",
+      "parentManagerId": "zechariah_prophet",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Berechiah"
+        ],
+        "note": "Zechariah's grandfather, called 'Iddo the prophet' in Zechariah 1:1 and 1:7 — head of a priestly family who returned from Babylonian exile with Zerubbabel and Joshua (cf. Nehemiah 12:4, where 'Iddo' heads a priestly course, and 12:16, where 'Zechariah' heads that same house 'of Iddo' in the next generation — widely identified with this prophet, though Nehemiah does not use the word 'grandson' explicitly). NAMING COLLISION: this Iddo is a DIFFERENT person from 'Iddo the seer,' also called 'the prophet Iddo' in 2 Chronicles 13:22, who was active generations earlier under Solomon, Rehoboam, and Abijah (2 Chronicles 9:29; 12:15; 13:22) — same name, and both are even called 'prophet' in the KJV, but they are not the same individual. Do not conflate."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "Zechariah identified as 'the son of Berechiah, the son of Iddo the prophet'"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "same genealogical formula repeated"
+        }
+      ],
+      "funFacts": [
+        "Never appears as an active character in Zechariah — known only through the book's opening genealogical formula, repeated twice.",
+        "Distinct from the earlier 'Iddo the seer' of 2 Chronicles, who lived roughly two centuries earlier under Solomon, Rehoboam, and Abijah — a real KJV naming collision, not the same man."
+      ]
+    },
+    {
+      "id": "heldai_helem",
+      "name": "Heldai (also called Helem)",
+      "role": "submanager",
+      "parentManagerId": "joshua_high_priest",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Personally funded part of the silver and gold used for Joshua's coronation crown — themed as a scribe-cost discount on Joshua's tier.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Heldai' in 6:10 and 'Helem' in 6:14 for the same crown-funding event — a real KJV within-chapter name variant for one individual, not two different people."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the returned exiles from Babylon whose house Zechariah is sent to, bringing silver and gold"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named 'Helem' as one of those memorialized by the crowns in the temple"
+        }
+      ],
+      "funFacts": [
+        "Along with Tobijah, Jedaiah, and Josiah/Hen the son of Zephaniah, personally funded the silver and gold used to crown Joshua the high priest."
+      ]
+    },
+    {
+      "id": "tobijah",
+      "name": "Tobijah",
+      "role": "submanager",
+      "parentManagerId": "joshua_high_priest",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Personally funded part of the silver and gold used for Joshua's coronation crown — themed as a scribe-cost discount on Joshua's tier.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named identically as 'Tobijah' in both 6:10 and 6:14 — no spelling variance for this individual, unlike Heldai/Helem and Josiah/Hen."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the returned exiles from Babylon whose house Zechariah is sent to, bringing silver and gold"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named among those memorialized by the crowns in the temple"
+        }
+      ],
+      "funFacts": [
+        "Along with Heldai/Helem, Jedaiah, and Josiah/Hen the son of Zephaniah, personally funded the silver and gold used to crown Joshua the high priest."
+      ]
+    },
+    {
+      "id": "jedaiah",
+      "name": "Jedaiah",
+      "role": "submanager",
+      "parentManagerId": "joshua_high_priest",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Personally funded part of the silver and gold used for Joshua's coronation crown — themed as a scribe-cost discount on Joshua's tier.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named identically as 'Jedaiah' in both 6:10 and 6:14 — no spelling variance for this individual, unlike Heldai/Helem and Josiah/Hen. Not to be confused with any other Jedaiah named elsewhere in the Old Testament (a common priestly-family name); no such collision occurs within Zechariah itself since this is the only Jedaiah in the book."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the returned exiles from Babylon whose house Zechariah is sent to, bringing silver and gold"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named among those memorialized by the crowns in the temple"
+        }
+      ],
+      "funFacts": [
+        "Along with Heldai/Helem, Tobijah, and Josiah/Hen the son of Zephaniah, personally funded the silver and gold used to crown Joshua the high priest."
+      ]
+    },
+    {
+      "id": "josiah_hen_ben_zephaniah",
+      "name": "Josiah (also called Hen), son of Zephaniah",
+      "role": "submanager",
+      "parentManagerId": "joshua_high_priest",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "His house hosted the crown-making ceremony and he personally funded part of Joshua's coronation crown — themed as a scribe-cost discount on Joshua's tier.",
+      "ageEvents": [],
+      "genealogy": {
+        "father": "Zephaniah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Josiah the son of Zephaniah' in 6:10 (whose house in Jerusalem hosts the crown-making) and 'Hen the son of Zephaniah' in 6:14 (memorialized by the crown) — a real KJV within-chapter name variant for one individual, not two people. NAMING COLLISION: his father 'Zephaniah' is not the prophet Zephaniah, whose book dates itself to the reign of King Josiah generations earlier (Zephaniah 1:1) — same name, different, earlier man; do not conflate."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "his house in Jerusalem is where the crown-making ceremony takes place"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named 'Hen the son of Zephaniah' among those memorialized by the crowns"
+        }
+      ],
+      "funFacts": [
+        "Along with Heldai/Helem, Tobijah, and Jedaiah, personally funded the silver and gold used to crown Joshua the high priest.",
+        "'Hen' can mean 'gracious' or 'favor' in Hebrew, leading some readers to take it as a descriptive epithet for Josiah rather than a wholly separate name — the KJV simply prints both as proper names without comment."
+      ]
+    }
+  ],
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

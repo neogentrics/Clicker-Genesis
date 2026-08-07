@@ -1,0 +1,420 @@
+{
+  "book": "Ecclesiastes",
+  "canonicalOrder": 21,
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Preacher's Scroll",
+      "managerId": "the_preacher",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Vapor Under the Sun",
+      "managerId": "vanity_of_vanities",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Lamp of Wisdom",
+      "managerId": "wisdom_and_folly",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Season's Wheel",
+      "managerId": "time_for_every_purpose",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Tears of the Oppressed",
+      "managerId": "injustice_under_the_sun",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Bread and Wine",
+      "managerId": "eat_drink_and_enjoy_labour",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Threefold Cord",
+      "managerId": "two_are_better_than_one",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Silver Cord",
+      "managerId": "remember_thy_creator",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Whole Duty",
+      "managerId": "fear_god_keep_commandments",
+      "type": "law"
+    }
+  ],
+  "genealogyLists": {},
+  "notes": "Corrected redraft addressing the adversarial fact-check findings from the first draft: (1) injustice_under_the_sun previously stopped at 4:1 and omitted 3:16-22 (the \"place of judgment\" wickedness passage and the man-versus-beast mortality reflection) - both are now cited with their key quoted phrases. (2) The \"eat, drink, and enjoy thy labour\" refrain was previously captured only at 2:24 despite recurring five times across the book - eat_drink_and_enjoy_labour now cites all five occurrences (2:24; 3:12-13; 5:18-20; 8:15; 9:7-9) and its funFacts explicitly flag the repetition and how each restatement adds something new. Structural notes: Ecclesiastes' narrator (\"the Preacher\"/Hebrew Qoheleth) is never named \"Solomon\" anywhere in the book - he is identified only as \"the Preacher, the son of David, king in Jerusalem\" (1:1). The traditional Solomon identification is flagged as interpretive inference in the_preacher's genealogy.note, not asserted as textual fact. No submanagers appear in this file: Ecclesiastes names no minor supporting figures at all (its only secondary characters - the \"poor wise man\" of 9:13-16 and the \"poor and wise child\" of 4:13 - are left unnamed by the text itself, so per the naming rule they cannot anchor a submanager slot; the poor wise man is instead cited within wisdom_and_folly). All eight non-narrator tiers are role:\"law\" (recurring theme/refrain/poem tiers), each carrying purpose+deliveredBy in place of genealogy per methodology; the_preacher is the sole role:\"manager\" person tier. Famous passages not central to a tier's own theme (5:10's \"loveth silver,\" 9:11's \"race is not to the swift,\" 11:1's \"cast thy bread upon the waters\") are cited as supporting references within wisdom_and_folly / eat_drink_and_enjoy_labour so no heavily-recognized passage in the book goes completely uncited.",
+  "characters": [
+    {
+      "id": "the_preacher",
+      "name": "The Preacher (Qoheleth)",
+      "role": "manager",
+      "scribeTier": "The Preacher's Scroll",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "David",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Ecclesiastes never uses the name 'Solomon' - the speaker identifies himself only as 'the Preacher, the son of David, king in Jerusalem' (1:1) and 'I the Preacher was king over Israel in Jerusalem' (1:12). The traditional identification with Solomon is a longstanding interpretive inference (drawn from unmatched wisdom, wealth, and building projects described at 1:16 and 2:4-9) rather than a claim the book makes by name. No mother, spouse, or children are named anywhere in the book, despite Solomon's marriages being documented elsewhere in the Old Testament - Ecclesiastes simply does not mention them. 9:9's 'the wife whom thou lovest' is general counsel addressed to the reader ('thou'), not a statement about the Preacher's own marital status."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "'The words of the Preacher, the son of David, king in Jerusalem.' - the book's self-identification, the only genealogical claim it makes for its narrator."
+        },
+        {
+          "ref": "1:12",
+          "note": "'I the Preacher was king over Israel in Jerusalem.'"
+        },
+        {
+          "ref": "1:16",
+          "note": "'I am come to great estate, and have gotten more wisdom than all they that have been before me in Jerusalem.'"
+        },
+        {
+          "ref": "2:4-9",
+          "note": "catalogues his own building projects, vineyards, gardens, orchards, pools, servants, herds, silver, gold, and singers - a portrait of accumulated wealth and enterprise, given without ever using a personal name."
+        },
+        {
+          "ref": "12:9-10",
+          "note": "'the preacher was wise, he still taught the people knowledge; yea, he gave good heed, and sought out, and set in order many proverbs...sought to find out acceptable words.'"
+        }
+      ],
+      "funFacts": [
+        "Never explicitly named 'Solomon' anywhere in the book - only called 'the Preacher' (Hebrew Qoheleth, roughly 'one who assembles/addresses an assembly') and 'son of David, king in Jerusalem.'",
+        "Describes amassing building projects, vineyards, gardens, pools, servants, herds, and treasure (2:4-8) without ever attaching his own name to any of it.",
+        "Styles himself a collector and arranger of existing wisdom rather than its sole inventor: 'the preacher sought to find out acceptable words...which are given from one shepherd' (12:10-11)."
+      ],
+      "perkFlavor": "output-boost",
+      "perkNote": "+25% Ink output, themed as the Preacher's own diligence in 'seeking out and setting in order' proverbs (12:9-10)."
+    },
+    {
+      "id": "vanity_of_vanities",
+      "name": "Vanity of Vanities",
+      "role": "law",
+      "scribeTier": "Vapor Under the Sun",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "States the book's governing thesis - that every human pursuit, achievement, and possession 'under the sun' is hebel (vapor, breath, fleeting) when weighed against eternity - framing everything that follows as an inquiry into what, if anything, has lasting profit.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "1:2",
+          "note": "'Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity.' - the book's opening thesis statement."
+        },
+        {
+          "ref": "1:3",
+          "note": "'What profit hath a man of all his labour which he taketh under the sun?' - the question the whole book interrogates."
+        },
+        {
+          "ref": "1:4-7",
+          "note": "generations, the sun, the wind, and the rivers each cycle endlessly without lasting change - nature itself illustrates the vanity."
+        },
+        {
+          "ref": "1:9",
+          "note": "'The thing that hath been, it is that which shall be...there is no new thing under the sun.'"
+        },
+        {
+          "ref": "12:8",
+          "note": "'Vanity of vanities, saith the preacher; all is vanity.' - the closing bookend, repeating 1:2 almost verbatim to frame the entire book."
+        }
+      ],
+      "funFacts": [
+        "The Hebrew word rendered 'vanity,' hebel, literally means vapor or breath - something that appears and dissolves - and occurs roughly three dozen times across the book.",
+        "The phrase 'under the sun' (first at 1:3) recurs about 29 times through the book as Ecclesiastes' signature way of bounding its inquiry to purely earthly, mortal experience.",
+        "1:2 and 12:8 form a deliberate inclusio - opening and closing the book with nearly identical wording."
+      ],
+      "perkFlavor": "tier-unlock",
+      "perkNote": "+25% output; the book's opening/closing thesis tier (1:2; 12:8) frames every other bonus as itself 'under the sun.'"
+    },
+    {
+      "id": "wisdom_and_folly",
+      "name": "Wisdom and Folly",
+      "role": "law",
+      "scribeTier": "Lamp of Wisdom",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "Weighs the value of human wisdom against folly and finds wisdom genuinely superior - 'as far as light excelleth darkness' - yet ultimately unable to outrun death or guarantee remembrance, so that wisdom profits within life but cannot secure lasting advantage beyond it.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "1:16-18",
+          "note": "'I am come to great estate, and have gotten more wisdom than all they that have been before me in Jerusalem...he that increaseth knowledge increaseth sorrow.' (1:16, 18)"
+        },
+        {
+          "ref": "2:13-14",
+          "note": "'wisdom excelleth folly, as far as light excelleth darkness...I myself perceived also that one event happeneth to them all.'"
+        },
+        {
+          "ref": "7:1",
+          "note": "'A good name is better than precious ointment; and the day of death than the day of one's birth.'"
+        },
+        {
+          "ref": "7:19",
+          "note": "'Wisdom strengtheneth the wise more than ten mighty men which are in the city.'"
+        },
+        {
+          "ref": "9:11",
+          "note": "'the race is not to the swift, nor the battle to the strong...but time and chance happeneth to them all.'"
+        },
+        {
+          "ref": "9:13-16",
+          "note": "an unnamed 'poor wise man' delivers a besieged city by his wisdom, 'yet no man remembered that same poor man' - wisdom unrewarded."
+        },
+        {
+          "ref": "9:17-18",
+          "note": "'The words of wise men are heard in quiet more than the cry of him that ruleth among fools...one sinner destroyeth much good.'"
+        },
+        {
+          "ref": "10:1",
+          "note": "'Dead flies cause the ointment of the apothecary to send forth a stinking savour: so doth a little folly him that is in reputation for wisdom and honour.'"
+        },
+        {
+          "ref": "11:1-2",
+          "note": "'Cast thy bread upon the waters: for thou shalt find it after many days...for thou knowest not what evil shall be upon the earth.' - counsel to spread effort and generosity despite uncertainty."
+        }
+      ],
+      "funFacts": [
+        "The poor wise man of 9:13-16 is never named, illustrating the very point the passage makes about wisdom going unremembered.",
+        "10:1's 'dead flies' proverb claims a small amount of folly can outweigh a great reputation for wisdom.",
+        "'Cast thy bread upon the waters' (11:1) has become a widely used English idiom for undertaking generous or uncertain ventures without knowing the outcome."
+      ],
+      "perkFlavor": "output-boost",
+      "perkNote": "+25% output, themed to insight outweighing folly - 'wisdom strengtheneth the wise more than ten mighty men' (7:19)."
+    },
+    {
+      "id": "time_for_every_purpose",
+      "name": "A Time for Every Purpose",
+      "role": "law",
+      "scribeTier": "Season's Wheel",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "A poetic catalogue of paired opposites - birth and death, planting and uprooting, war and peace - asserting that God has appointed a fitting season for every human activity, and that discerning God's timing, not human control, governs a well-lived life.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "3:1",
+          "note": "'To every thing there is a season, and a time to every purpose under the heaven.'"
+        },
+        {
+          "ref": "3:2-8",
+          "note": "the full fourteen-couplet poem: a time to be born and to die, to plant and to pluck up, to kill and to heal, to break down and to build up, to weep and to laugh, to mourn and to dance, to cast away stones and gather stones, to embrace and refrain from embracing, to get and to lose, to keep and to cast away, to rend and to sew, to keep silence and to speak, to love and to hate, to war and peace."
+        },
+        {
+          "ref": "3:11",
+          "note": "'He hath made every thing beautiful in his time: also he hath set the world in their heart, so that no man can find out the work that God maketh from the beginning to the end.'"
+        }
+      ],
+      "funFacts": [
+        "The poem is built from fourteen pairs of opposites - 28 activities in all - a highly structured piece of Hebrew wisdom poetry.",
+        "It is one of the most widely quoted passages in the entire Bible, recognized even in largely secular contexts."
+      ],
+      "perkFlavor": "timing-bonus",
+      "perkNote": "Passive Ink/sec ticks in cadence with the poem's paired seasons - a small nod to 'a time for every purpose' (3:1)."
+    },
+    {
+      "id": "injustice_under_the_sun",
+      "name": "Injustice Under the Sun",
+      "role": "law",
+      "scribeTier": "Tears of the Oppressed",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "Surveys the corruption of human courts and social power - judgment seats that harbor wickedness, oppressors whose victims have no comforter, and the leveling truth that death erases any distinction wealth or power once bought - as evidence that ultimate justice cannot be found 'under the sun' and must belong to God alone.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "3:16",
+          "note": "'I saw under the sun the place of judgment, that wickedness was there; and the place of righteousness, that iniquity was there.' - injustice found in the very seat meant to dispense justice."
+        },
+        {
+          "ref": "3:17",
+          "note": "'God shall judge the righteous and the wicked: for there is a time there for every purpose and for every work.' - the injustice is answered only by deferring judgment to God."
+        },
+        {
+          "ref": "3:18-21",
+          "note": "the man-versus-beast mortality passage: 'that which befalleth the sons of men befalleth beasts...they have all one breath; so that a man hath no preeminence above a beast' (3:19); 'all are of the dust, and all turn to dust again' (3:20); 'who knoweth the spirit of man that goeth upward, and the spirit of the beast that goeth downward to the earth?' (3:21)."
+        },
+        {
+          "ref": "3:22",
+          "note": "concludes the passage by returning to the labour-and-portion refrain: 'there is nothing better, than that a man should rejoice in his own works; for that is his portion.'"
+        },
+        {
+          "ref": "4:1",
+          "note": "'behold the tears of such as were oppressed, and they had no comforter; and on the side of their oppressors there was power; but they had no comforter.'"
+        },
+        {
+          "ref": "5:8",
+          "note": "'If thou seest the oppression of the poor, and violent perverting of judgment and justice in a province, marvel not at the matter.'"
+        },
+        {
+          "ref": "8:14",
+          "note": "'there be just men, unto whom it happeneth according to the work of the wicked; again, there be wicked men, to whom it happeneth according to the work of the righteous.'"
+        }
+      ],
+      "funFacts": [
+        "3:19-20's claim that 'man hath no preeminence above a beast' in death is among the starkest statements of shared mortality anywhere in Old Testament wisdom literature.",
+        "3:21 is phrased as an open question - 'who knoweth the spirit of man that goeth upward' - not stated as settled doctrine.",
+        "4:1 repeats 'they had no comforter' twice within a single verse, emphasizing the oppressed's total isolation."
+      ],
+      "perkFlavor": "output-boost",
+      "perkNote": "+25% output, themed as recompense for the 'tears of such as were oppressed' (4:1) finally being answered."
+    },
+    {
+      "id": "eat_drink_and_enjoy_labour",
+      "name": "Eat, Drink, and Enjoy Thy Labour",
+      "role": "law",
+      "scribeTier": "Bread and Wine",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "The book's recurring positive counter-refrain to its vanity thesis: since ultimate gain cannot be secured or fully understood, God's gift to mortal life is the simple, immediate enjoyment of food, drink, and the fruit of one's own labour - restated at successive points across the book as the closest thing to an answer it offers.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "5:10",
+          "note": "'He that loveth silver shall not be satisfied with silver; nor he that loveth abundance with increase: this is also vanity.' - sets up the contrast that makes 5:18-20's simple enjoyment-of-portion counsel meaningful."
+        },
+        {
+          "ref": "2:24",
+          "note": "'There is nothing better for a man, than that he should eat and drink, and that he should make his soul enjoy good in his labour. This also I saw, that it was from the hand of God.' - the refrain's first statement."
+        },
+        {
+          "ref": "3:12-13",
+          "note": "'I know that there is no good in them, but for a man to rejoice, and to do good in his life. And also that every man should eat and drink, and enjoy the good of all his labour, it is the gift of God.' - second statement."
+        },
+        {
+          "ref": "5:18-20",
+          "note": "'it is good and comely for one to eat and to drink, and to enjoy the good of all his labour...this is the gift of God...God answereth him in the joy of his heart.' - third statement, expanded to include wealth given by God."
+        },
+        {
+          "ref": "8:15",
+          "note": "'I commended mirth, because a man hath no better thing under the sun, than to eat, and to drink, and to be merry: for that shall abide with him of his labour the days of his life.' - fourth statement."
+        },
+        {
+          "ref": "9:7-9",
+          "note": "'Go thy way, eat thy bread with joy, and drink thy wine with a merry heart...Live joyfully with the wife whom thou lovest all the days of the life of thy vanity...for that is thy portion in this life.' - fifth and fullest statement, widened to include marriage."
+        }
+      ],
+      "funFacts": [
+        "This refrain recurs five times across the book (2:24; 3:12-13; 5:18-20; 8:15; 9:7-9) - one of Ecclesiastes' most structurally important repeated motifs, functioning as its closest approach to a positive conclusion before the final call to fear God in 12:13-14.",
+        "Each repetition builds on the one before it: the first (2:24) is bare enjoyment, the third (5:18-20) adds that God himself grants the very power to enjoy wealth, and the fifth (9:7-9) widens the scope to include marriage."
+      ],
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "+25% output, themed to the recurring 'gift of God' refrain rewarding steady labour with steady enjoyment."
+    },
+    {
+      "id": "two_are_better_than_one",
+      "name": "Two Are Better Than One",
+      "role": "law",
+      "scribeTier": "The Threefold Cord",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "A short wisdom poem on companionship - two working together can help each other up, keep warm, and defend one another where a lone person cannot - arguing that mutual human relationship is a genuine, tangible good within an otherwise vanity-filled life.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "4:9",
+          "note": "'Two are better than one; because they have a good reward for their labour.'"
+        },
+        {
+          "ref": "4:10",
+          "note": "'if they fall, the one will lift up his fellow: but woe to him that is alone when he falleth; for he hath not another to help him up.'"
+        },
+        {
+          "ref": "4:11-12",
+          "note": "'if two lie together, then they have heat: but how can one be warm alone?...a threefold cord is not quickly broken.'"
+        }
+      ],
+      "funFacts": [
+        "The 'threefold cord' image (4:12) extends the two-are-better-than-one logic to three, implying the principle strengthens further rather than being limited to pairs.",
+        "This passage follows directly after 4:7-8's portrait of a solitary man laboring endlessly for no one, sharpening the contrast between isolation and companionship."
+      ],
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "+25% output, themed to 4:9's 'good reward for their labour' when working in tandem - a threefold-cord nod to teamwork."
+    },
+    {
+      "id": "remember_thy_creator",
+      "name": "Remember Thy Creator",
+      "role": "law",
+      "scribeTier": "The Silver Cord",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "An extended poem picturing the body's decline into old age and death - trembling limbs, failing sight, closing doors, a broken silver cord and golden bowl - urging the young to remember and honor their Creator before these losses arrive and the spirit returns to the God who gave it.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "12:1",
+          "note": "'Remember now thy Creator in the days of thy youth, while the evil days come not.'"
+        },
+        {
+          "ref": "12:2-5",
+          "note": "the aging body pictured through a failing sun, moon and stars; trembling 'keepers of the house'; bowed 'strong men'; ceasing 'grinders'; darkened watchers; shut doors; a fading voice; the flourishing almond tree; the burdensome grasshopper; failing desire - ending 'man goeth to his long home, and the mourners go about the streets.'"
+        },
+        {
+          "ref": "12:6",
+          "note": "'Or ever the silver cord be loosed, or the golden bowl be broken, or the pitcher be broken at the fountain, or the wheel broken at the cistern.'"
+        },
+        {
+          "ref": "12:7",
+          "note": "'Then shall the dust return to the earth as it was: and the spirit shall return unto God who gave it.'"
+        }
+      ],
+      "funFacts": [
+        "The poem is widely read as an extended allegory of the aging body - trembling hands, bowed legs, failing teeth ('the grinders'), dimming eyesight ('those that look out of the windows') - though the text itself states the images without explicitly labeling each one.",
+        "The 'silver cord,' 'golden bowl,' 'pitcher,' and 'wheel' of 12:6 are four separate broken-object images compressed into a single verse, each picturing the same moment of death from a different angle."
+      ],
+      "perkFlavor": "output-boost",
+      "perkNote": "+25% output, themed to remembering the Creator 'in the days of thy youth' (12:1), before strength fades."
+    },
+    {
+      "id": "fear_god_keep_commandments",
+      "name": "Fear God and Keep His Commandments",
+      "role": "law",
+      "scribeTier": "The Whole Duty",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher",
+      "purpose": "The book's closing summation - after every earthly pursuit has been tested and found to be vapor, the one enduring counsel offered is to fear God and keep his commandments, because God will ultimately judge every deed, seen or hidden.",
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "12:9-10",
+          "note": "'the preacher was wise, he still taught the people knowledge; yea, he gave good heed, and sought out, and set in order many proverbs...sought to find out acceptable words.'"
+        },
+        {
+          "ref": "12:11",
+          "note": "'The words of the wise are as goads, and as nails fastened by the masters of assemblies, which are given from one shepherd.'"
+        },
+        {
+          "ref": "12:13",
+          "note": "'Let us hear the conclusion of the whole matter: Fear God, and keep his commandments: for this is the whole duty of man.'"
+        },
+        {
+          "ref": "12:14",
+          "note": "'For God shall bring every work into judgment, with every secret thing, whether it be good or bad.'"
+        }
+      ],
+      "funFacts": [
+        "12:9-12 shifts from first-person ('I the Preacher') to third-person ('the preacher was wise'), which many readers take as a brief editorial framing voice bracketing the book's conclusion.",
+        "12:13's phrase 'the whole duty of man' is supplied in italics in the KJV to complete the sense of the underlying Hebrew - the KJV translators traditionally printed added words in italics to mark them as supplied rather than literally present."
+      ],
+      "perkFlavor": "capstone-bonus",
+      "perkNote": "+25% output; the book's capstone tier, themed to 12:13's 'conclusion of the whole matter.'"
+    }
+  ],
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

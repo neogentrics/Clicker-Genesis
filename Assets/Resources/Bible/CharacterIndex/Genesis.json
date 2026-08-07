@@ -1,0 +1,727 @@
+{
+  "book": "Genesis",
+  "canonicalOrder": 1,
+  "translation": "KJV",
+  "status": "draft — first indexing pass 2026-08-06, expect edits as later books are indexed and cross-references are found",
+  "notes": "Data layer for the future Scribes/Managers/Submanagers systems and the future Manager Genealogy screen. 'genealogy' fields are the TRUE scriptural family relationships (source of truth for the future genealogy tree). 'parentManagerId' is a separate GAMEPLAY link — which manager tier a submanager's bonus attaches to — and does not always match genealogy (e.g. Peleg attaches to Nimrod's tier for thematic/Babel reasons even though his true father is Eber). Numeric costs/outputs are intentionally absent — balancing happens after content is locked, per project convention.",
+  "scribeTiers": [
+    { "tier": 1, "scribeName": "Reed Pen", "status": "existing", "managerId": "adam" },
+    { "tier": 2, "scribeName": "Forbidden Fruit", "status": "new", "managerId": "eve" },
+    { "tier": 3, "scribeName": "Cain's City Wall", "status": "new", "managerId": "cain" },
+    { "tier": 4, "scribeName": "Shepherd's Crook", "status": "new", "managerId": "abel" },
+    { "tier": 5, "scribeName": "Enoch's Walking Staff", "status": "new", "managerId": "enoch" },
+    { "tier": 6, "scribeName": "Ark's Manifest", "status": "existing", "managerId": "noah" },
+    { "tier": 7, "scribeName": "Shem's Tent", "status": "new", "managerId": "shem" },
+    { "tier": 8, "scribeName": "Mighty Hunter's Bow", "status": "new", "managerId": "nimrod" },
+    { "tier": 9, "scribeName": "Covenant Seal", "status": "existing", "managerId": "abraham" },
+    { "tier": 10, "scribeName": "Sarah's Kneading Bowl", "status": "new", "managerId": "sarah" },
+    { "tier": 11, "scribeName": "Pillar of Salt", "status": "new", "managerId": "lot" },
+    { "tier": 12, "scribeName": "Isaac's Well", "status": "new", "managerId": "isaac" },
+    { "tier": 13, "scribeName": "Jacob's Ladder", "status": "existing", "managerId": "jacob" },
+    { "tier": 14, "scribeName": "Esau's Red Pottage", "status": "new", "managerId": "esau" },
+    { "tier": 15, "scribeName": "Rachel's Well", "status": "new", "managerId": "rachel" },
+    { "tier": 16, "scribeName": "Leah's Mandrakes", "status": "new", "managerId": "leah" },
+    { "tier": 17, "scribeName": "Joseph's Storehouse", "status": "existing", "managerId": "joseph" },
+    { "tier": 18, "scribeName": "Judah's Signet", "status": "new", "managerId": "judah" },
+    { "tier": 19, "scribeName": "Silver Cup", "status": "new", "managerId": "benjamin" }
+  ],
+  "characters": [
+    {
+      "id": "adam", "name": "Adam", "role": "manager", "scribeTier": "Reed Pen", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": ["eve"], "children": ["cain", "abel", "seth"], "note": "Genesis 5:4 — additional unnamed sons and daughters" },
+      "verses": [
+        { "ref": "Genesis 1:26-27", "note": "Made in God's image" },
+        { "ref": "Genesis 2:7", "note": "Formed from the dust of the ground" },
+        { "ref": "Genesis 2:19-20", "note": "Names every living creature" },
+        { "ref": "Genesis 2:21-23", "note": "Eve formed from his rib" },
+        { "ref": "Genesis 3:6-19", "note": "The Fall and its curse" },
+        { "ref": "Genesis 5:5", "note": "Death" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Seth", "age": 130, "ref": "Genesis 5:3" },
+        { "event": "Died", "age": 930, "ref": "Genesis 5:5" }
+      ],
+      "funFacts": [
+        "First man to name every living creature (Genesis 2:19-20).",
+        "The only human whose exact age at fatherhood and at death are both recorded before the long-lived antediluvian genealogy of Genesis 5 even gets going."
+      ]
+    },
+    {
+      "id": "eve", "name": "Eve", "role": "manager", "scribeTier": "Forbidden Fruit", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": ["adam"], "children": ["cain", "abel", "seth"] },
+      "verses": [
+        { "ref": "Genesis 2:21-23", "note": "Formed from Adam's rib" },
+        { "ref": "Genesis 3:1-6", "note": "Deceived by the serpent, eats the fruit" },
+        { "ref": "Genesis 3:20", "note": "Named 'Eve... the mother of all living'" },
+        { "ref": "Genesis 4:1-2", "note": "Bears Cain and Abel" },
+        { "ref": "Genesis 4:25", "note": "Bears Seth" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called simply 'the woman' until after the Fall — she isn't named 'Eve' until Genesis 3:20.",
+        "The first words spoken by a woman in scripture are hers, answering the serpent (Genesis 3:2-3)."
+      ]
+    },
+    {
+      "id": "cain", "name": "Cain", "role": "manager", "scribeTier": "Cain's City Wall", "parentManagerId": null,
+      "genealogy": { "father": "adam", "mother": "eve", "spouses": ["unnamed — 'Cain's wife', Genesis 4:17"], "children": ["enoch_cainite"] },
+      "verses": [
+        { "ref": "Genesis 4:1", "note": "Birth" },
+        { "ref": "Genesis 4:3-5", "note": "His offering is rejected" },
+        { "ref": "Genesis 4:8", "note": "Kills Abel" },
+        { "ref": "Genesis 4:9-15", "note": "Cursed and marked" },
+        { "ref": "Genesis 4:16-17", "note": "Dwells in Nod, builds a city" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Builder of the first city named in scripture — named after his own son Enoch (Genesis 4:17), a different Enoch from the one who 'walked with God' five generations later.",
+        "The mark God placed on Cain (Genesis 4:15) was protective, not punitive — meant to stop others from killing him."
+      ]
+    },
+    {
+      "id": "abel", "name": "Abel", "role": "manager", "scribeTier": "Shepherd's Crook", "parentManagerId": null,
+      "genealogy": { "father": "adam", "mother": "eve", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 4:2", "note": "Keeper of sheep" },
+        { "ref": "Genesis 4:4", "note": "His offering is accepted" },
+        { "ref": "Genesis 4:8", "note": "Killed by Cain" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "First shepherd named in scripture.",
+        "First death recorded in the Bible."
+      ]
+    },
+    {
+      "id": "seth", "name": "Seth", "role": "submanager", "scribeTier": "Shepherd's Crook", "parentManagerId": "abel",
+      "perkFlavor": "loyalty-boost", "perkNote": "Appointed as Abel's replacement — thematically boosts Abel's own manager bonus rather than cutting Shepherd's Crook's cost.",
+      "genealogy": { "father": "adam", "mother": "eve", "spouses": [], "children": ["enos"] },
+      "verses": [
+        { "ref": "Genesis 4:25", "note": "'God hath appointed me another seed instead of Abel'" },
+        { "ref": "Genesis 4:26", "note": "In his days 'began men to call upon the name of the LORD'" },
+        { "ref": "Genesis 5:3-8", "note": "Genealogy entry" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Enos", "age": 105, "ref": "Genesis 5:6" },
+        { "event": "Died", "age": 912, "ref": "Genesis 5:8" }
+      ],
+      "funFacts": [
+        "His name means 'appointed' or 'granted' — a direct callback to Genesis 4:25's wording."
+      ]
+    },
+    {
+      "id": "enoch", "name": "Enoch", "role": "manager", "scribeTier": "Enoch's Walking Staff", "parentManagerId": null,
+      "genealogy": { "father": "jared", "mother": null, "spouses": [], "children": ["methuselah"] },
+      "verses": [
+        { "ref": "Genesis 5:21-24", "note": "Walked with God 300 years after Methuselah's birth; 'was not; for God took him'" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Methuselah", "age": 65, "ref": "Genesis 5:21" },
+        { "event": "Taken by God", "age": 365, "ref": "Genesis 5:23" }
+      ],
+      "funFacts": [
+        "One of only two people in the whole Bible said to never die — the other is Elijah (2 Kings 2:11).",
+        "Has the shortest lifespan of any patriarch listed in Genesis 5, by design rather than tragedy."
+      ]
+    },
+    {
+      "id": "methuselah", "name": "Methuselah", "role": "submanager", "scribeTier": "Enoch's Walking Staff", "parentManagerId": "enoch",
+      "perkFlavor": "cost-cutter", "perkNote": "Longevity flavor — reduces Enoch's Walking Staff scribe cost.",
+      "genealogy": { "father": "enoch", "mother": null, "spouses": [], "children": ["lamech"] },
+      "verses": [
+        { "ref": "Genesis 5:25-27", "note": "Genealogy entry — dies at 969" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Lamech", "age": 187, "ref": "Genesis 5:25" },
+        { "event": "Died", "age": 969, "ref": "Genesis 5:27" }
+      ],
+      "funFacts": [
+        "Longest recorded human lifespan in the Bible: 969 years."
+      ]
+    },
+    {
+      "id": "noah", "name": "Noah", "role": "manager", "scribeTier": "Ark's Manifest", "parentManagerId": null,
+      "genealogy": { "father": "lamech", "mother": null, "spouses": ["unnamed — 'Noah's wife'"], "children": ["shem", "ham", "japheth"] },
+      "verses": [
+        { "ref": "Genesis 5:28-29", "note": "Birth and naming" },
+        { "ref": "Genesis 6:8-9", "note": "Found grace; 'a just man... walked with God'" },
+        { "ref": "Genesis 6:14-22", "note": "Ark instructions" },
+        { "ref": "Genesis 7:6", "note": "600 years old at the Flood" },
+        { "ref": "Genesis 9:1", "note": "Blessed after the Flood" },
+        { "ref": "Genesis 9:28-29", "note": "Lived 950 years total" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Shem, Ham, Japheth", "age": 500, "ref": "Genesis 5:32" },
+        { "event": "The Flood begins", "age": 600, "ref": "Genesis 7:6" },
+        { "event": "Died", "age": 950, "ref": "Genesis 9:29" }
+      ]
+    },
+    {
+      "id": "lamech", "name": "Lamech (father of Noah)", "role": "submanager", "scribeTier": "Ark's Manifest", "parentManagerId": "noah",
+      "perkFlavor": "loyalty-boost", "perkNote": "Named and prophesied over Noah directly — boosts Noah's manager bonus.",
+      "genealogy": { "father": "methuselah", "mother": null, "spouses": [], "children": ["noah"] },
+      "verses": [
+        { "ref": "Genesis 5:28-31", "note": "Names Noah, prophesies comfort from the ground's curse" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Noah", "age": 182, "ref": "Genesis 5:28" },
+        { "event": "Died", "age": 777, "ref": "Genesis 5:31" }
+      ],
+      "funFacts": [
+        "Accuracy flag: there are TWO Lamechs in Genesis with identical KJV spelling — this one (Noah's father, Genesis 5) and an earlier one in Cain's line (Genesis 4:18-24). Different men, five generations apart — do not merge."
+      ]
+    },
+    {
+      "id": "ham", "name": "Ham", "role": "submanager", "scribeTier": "Ark's Manifest", "parentManagerId": "noah",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "noah", "mother": null, "spouses": [], "children": ["cush, mizraim, phut, canaan — Genesis 10:6, not yet indexed"] },
+      "verses": [
+        { "ref": "Genesis 9:22-25", "note": "Sees Noah's nakedness; Noah's curse falls on his son Canaan" },
+        { "ref": "Genesis 10:6-20", "note": "Table of Nations — his line includes Cush, father of Nimrod" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "japheth", "name": "Japheth", "role": "submanager", "scribeTier": "Ark's Manifest", "parentManagerId": "noah",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "noah", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 9:23", "note": "Covers Noah's nakedness with Shem" },
+        { "ref": "Genesis 9:27", "note": "'God shall enlarge Japheth, and he shall dwell in the tents of Shem'" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shem", "name": "Shem", "role": "manager", "scribeTier": "Shem's Tent", "parentManagerId": null,
+      "genealogy": { "father": "noah", "mother": null, "spouses": [], "children": ["arphaxad — Genesis 11:10, not yet indexed"], "note": "Direct ancestral line to Abraham runs Shem to Arphaxad to Salah to Eber to Peleg to Reu to Serug to Nahor to Terah to Abram (Genesis 11:10-26)" },
+      "verses": [
+        { "ref": "Genesis 9:23", "note": "Covers Noah's nakedness with Japheth" },
+        { "ref": "Genesis 9:26-27", "note": "'Blessed be the LORD God of Shem'" },
+        { "ref": "Genesis 11:10-11", "note": "Genealogy toward Abraham begins" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered Arphaxad, 2 years after the Flood", "age": 100, "ref": "Genesis 11:10" }
+      ],
+      "funFacts": [
+        "Direct ancestor of Abraham — ten generations from Shem to Abram (Genesis 11:10-26), deliberately mirroring the ten generations from Adam to Noah in Genesis 5."
+      ]
+    },
+    {
+      "id": "peleg", "name": "Peleg", "role": "submanager", "scribeTier": "Mighty Hunter's Bow", "parentManagerId": "nimrod",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Gameplay-attached to Nimrod's tier for the Babel/dispersion theme even though his true genealogical line is through Shem, not Ham — flagged so the future genealogy tree draws the real line correctly.",
+      "genealogy": { "father": "eber", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 10:25", "note": "'In his days was the earth divided'" },
+        { "ref": "Genesis 11:16-19", "note": "Genealogy entry, Shem's line toward Abraham" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nimrod", "name": "Nimrod", "role": "manager", "scribeTier": "Mighty Hunter's Bow", "parentManagerId": null,
+      "genealogy": { "father": "cush — Genesis 10:8, son of Ham, not yet indexed as a full entry", "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 10:8-10", "note": "'Began to be a mighty one in the earth... a mighty hunter before the LORD... the beginning of his kingdom was Babel'" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'A mighty hunter before the LORD' (Genesis 10:9) became a proverbial phrase.",
+        "His kingdom's founding cities include Babel — the same city where languages are confused two chapters later (Genesis 11)."
+      ]
+    },
+    {
+      "id": "abraham", "name": "Abraham", "role": "manager", "scribeTier": "Covenant Seal", "parentManagerId": null,
+      "genealogy": { "father": "terah", "mother": null, "spouses": ["sarah", "hagar", "keturah — Genesis 25:1, not individually indexed"], "children": ["ishmael", "isaac"], "note": "Six more sons by Keturah after Sarah's death — see genealogyLists.keturahSons" },
+      "verses": [
+        { "ref": "Genesis 12:1-4", "note": "The call — 'Get thee out of thy country'" },
+        { "ref": "Genesis 15", "note": "The covenant — 'counted it to him for righteousness'" },
+        { "ref": "Genesis 17:5", "note": "Renamed from Abram" },
+        { "ref": "Genesis 22", "note": "The binding of Isaac" },
+        { "ref": "Genesis 25:7-8", "note": "Death" }
+      ],
+      "ageEvents": [
+        { "event": "Left Haran", "age": 75, "ref": "Genesis 12:4" },
+        { "event": "Fathered Ishmael", "age": 86, "ref": "Genesis 16:16" },
+        { "event": "Renamed and circumcised", "age": 99, "ref": "Genesis 17:1, 17:24" },
+        { "event": "Fathered Isaac", "age": 100, "ref": "Genesis 21:5" },
+        { "event": "Died", "age": 175, "ref": "Genesis 25:7" }
+      ]
+    },
+    {
+      "id": "sarah", "name": "Sarah", "role": "manager", "scribeTier": "Sarah's Kneading Bowl", "parentManagerId": null,
+      "genealogy": { "father": null, "mother": null, "spouses": ["abraham"], "children": ["isaac"], "note": "Genesis 20:12 — also Abraham's half-sister, same father, different mother" },
+      "verses": [
+        { "ref": "Genesis 17:15-16", "note": "Renamed from Sarai, promised a son" },
+        { "ref": "Genesis 18:9-15", "note": "Laughs at the promise" },
+        { "ref": "Genesis 21:1-7", "note": "Isaac's birth — 'God hath made me to laugh'" },
+        { "ref": "Genesis 23:1-2", "note": "Death" }
+      ],
+      "ageEvents": [
+        { "event": "Fathered — bore Isaac", "age": 90, "ref": "Genesis 17:17" },
+        { "event": "Died", "age": 127, "ref": "Genesis 23:1" }
+      ],
+      "funFacts": [
+        "The only woman in the Bible whose exact age at death is recorded (Genesis 23:1)."
+      ]
+    },
+    {
+      "id": "hagar", "name": "Hagar", "role": "submanager", "scribeTier": "Covenant Seal", "parentManagerId": "abraham",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": ["abraham"], "children": ["ishmael"], "note": "Egyptian handmaid to Sarah, Genesis 16:1" },
+      "verses": [
+        { "ref": "Genesis 16:1-4", "note": "Given to Abraham by Sarah" },
+        { "ref": "Genesis 16:7-13", "note": "Meets the angel of the LORD at a well; names God 'Thou God seest me'" },
+        { "ref": "Genesis 21:9-21", "note": "Cast out with Ishmael; provided for in the wilderness" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ishmael", "name": "Ishmael", "role": "submanager", "scribeTier": "Covenant Seal", "parentManagerId": "abraham",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "abraham", "mother": "hagar", "spouses": [], "children": ["twelve sons — Genesis 25:13-15, not yet indexed"] },
+      "verses": [
+        { "ref": "Genesis 16:15", "note": "Birth" },
+        { "ref": "Genesis 17:20", "note": "Blessed — 'twelve princes shall he beget'" },
+        { "ref": "Genesis 25:12-18", "note": "Genealogy and death at 137" }
+      ],
+      "ageEvents": [
+        { "event": "Died", "age": 137, "ref": "Genesis 25:17" }
+      ]
+    },
+    {
+      "id": "melchizedek", "name": "Melchizedek", "role": "submanager", "scribeTier": "Covenant Seal", "parentManagerId": "abraham",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "PRIORITY entry — user has a planned future custom-content expansion (a 'Book of Melchizedek') that will elevate him to a full major manager with his own tier and genealogy page. Keep this entry especially clean and easy to extend without restructuring.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [], "note": "No genealogy given in Genesis — 'without father, without mother, without descent' is a later New Testament description (Hebrews 7:3), not Genesis text itself; flagged here so it isn't accidentally sourced to the wrong book." },
+      "verses": [
+        { "ref": "Genesis 14:18-20", "note": "King of Salem, priest of the most high God — brings bread and wine, blesses Abram, receives a tithe from him" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Genesis gives him no genealogy at all — a real textual gap, not a design choice — which is exactly why he's a strong candidate for future expanded content."
+      ]
+    },
+    {
+      "id": "eliezer", "name": "Eliezer of Damascus", "role": "submanager", "scribeTier": "Covenant Seal", "parentManagerId": "abraham",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Accuracy flag: Genesis 15:2 names Abraham's steward 'Eliezer of Damascus.' The unnamed servant sent to find Rebekah in Genesis 24 is traditionally assumed to be the same man, but Genesis 24 itself never names him — treat that identification as likely, not textually certain.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 15:2", "note": "Named as Abraham's steward and, at the time, his heir" },
+        { "ref": "Genesis 24 (traditional identification only)", "note": "The unnamed servant sent to find a wife for Isaac" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lot", "name": "Lot", "role": "manager", "scribeTier": "Pillar of Salt", "parentManagerId": null,
+      "genealogy": { "father": "haran", "mother": null, "spouses": ["unnamed — 'Lot's wife'"], "children": ["two unnamed daughters"] },
+      "verses": [
+        { "ref": "Genesis 13:5-11", "note": "Separates from Abraham, chooses the plain of Jordan" },
+        { "ref": "Genesis 14:12", "note": "Captured; rescued by Abraham" },
+        { "ref": "Genesis 19:1-29", "note": "Sodom's destruction; his wife becomes a pillar of salt (v.26)" },
+        { "ref": "Genesis 19:30-38", "note": "His daughters become mothers of Moab and Ammon" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His wife's transformation into a pillar of salt (Genesis 19:26) happened because she looked back — the only detail scripture gives about her at all."
+      ]
+    },
+    {
+      "id": "isaac", "name": "Isaac", "role": "manager", "scribeTier": "Isaac's Well", "parentManagerId": null,
+      "genealogy": { "father": "abraham", "mother": "sarah", "spouses": ["rebekah"], "children": ["esau", "jacob"] },
+      "verses": [
+        { "ref": "Genesis 21:1-3", "note": "Birth" },
+        { "ref": "Genesis 22", "note": "Bound on the altar" },
+        { "ref": "Genesis 24:67", "note": "Marries Rebekah" },
+        { "ref": "Genesis 25:21-26", "note": "Esau and Jacob born" },
+        { "ref": "Genesis 26:18-22", "note": "Redigs his father's wells, names them Esek, Sitnah, and Rehoboth" },
+        { "ref": "Genesis 35:28-29", "note": "Death" }
+      ],
+      "ageEvents": [
+        { "event": "Married Rebekah", "age": 40, "ref": "Genesis 25:20" },
+        { "event": "Fathered Esau and Jacob", "age": 60, "ref": "Genesis 25:26" },
+        { "event": "Died", "age": 180, "ref": "Genesis 35:28" }
+      ],
+      "funFacts": [
+        "Longest-lived of the three patriarchs (Abraham, Isaac, Jacob) at 180 years."
+      ]
+    },
+    {
+      "id": "rebekah", "name": "Rebekah", "role": "submanager", "scribeTier": "Isaac's Well", "parentManagerId": "isaac",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "bethuel", "mother": null, "spouses": ["isaac"], "children": ["esau", "jacob"] },
+      "verses": [
+        { "ref": "Genesis 24", "note": "Whole chapter — meets Abraham's servant at a well, agrees to marry Isaac" },
+        { "ref": "Genesis 25:20-28", "note": "Mother of Esau and Jacob" },
+        { "ref": "Genesis 27", "note": "Helps Jacob deceive Isaac into giving him the blessing" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jacob", "name": "Jacob", "role": "manager", "scribeTier": "Jacob's Ladder", "parentManagerId": null,
+      "genealogy": { "father": "isaac", "mother": "rebekah", "spouses": ["leah", "rachel", "bilhah", "zilpah"], "children": ["reuben", "simeon", "levi", "judah", "dan", "naphtali", "gad", "asher", "issachar", "zebulun", "dinah", "joseph", "benjamin"] },
+      "verses": [
+        { "ref": "Genesis 25:26", "note": "Birth, grasping Esau's heel" },
+        { "ref": "Genesis 27", "note": "Receives the blessing by deception" },
+        { "ref": "Genesis 28:10-19", "note": "The ladder dream at Bethel" },
+        { "ref": "Genesis 32:24-30", "note": "Wrestles with God, renamed Israel" },
+        { "ref": "Genesis 47:9", "note": "'The days of the years of my pilgrimage are an hundred and thirty years'" },
+        { "ref": "Genesis 49", "note": "Blesses his twelve sons before death" }
+      ],
+      "ageEvents": [
+        { "event": "Stood before Pharaoh", "age": 130, "ref": "Genesis 47:9" },
+        { "event": "Died", "age": 147, "ref": "Genesis 47:28" }
+      ]
+    },
+    {
+      "id": "laban", "name": "Laban", "role": "submanager", "scribeTier": "Jacob's Ladder", "parentManagerId": "jacob",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "bethuel", "mother": null, "spouses": [], "children": ["leah", "rachel"] },
+      "verses": [
+        { "ref": "Genesis 29:1-30", "note": "Jacob serves 7 years for Rachel, is given Leah instead, serves 7 more" },
+        { "ref": "Genesis 31", "note": "Pursues Jacob after he flees with his family and flocks" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "esau", "name": "Esau", "role": "manager", "scribeTier": "Esau's Red Pottage", "parentManagerId": null,
+      "genealogy": { "father": "isaac", "mother": "rebekah", "spouses": ["Judith, Bashemath, Mahalath — named across Genesis 26:34, 28:9, 36:2-3, not fully reconciled/indexed"], "children": ["Edomite line — Genesis 36, not yet indexed"] },
+      "verses": [
+        { "ref": "Genesis 25:25", "note": "Birth — 'red, all over like an hairy garment'" },
+        { "ref": "Genesis 25:29-34", "note": "Sells his birthright for bread and pottage of lentiles" },
+        { "ref": "Genesis 27", "note": "Loses the blessing to Jacob" },
+        { "ref": "Genesis 33:4", "note": "Reconciles with Jacob, embraces him" },
+        { "ref": "Genesis 36", "note": "Genealogy of Edom" }
+      ],
+      "ageEvents": [
+        { "event": "Took his first wives", "age": 40, "ref": "Genesis 26:34" }
+      ],
+      "funFacts": [
+        "His other name, Edom ('red'), comes directly from the red stew he traded his birthright for (Genesis 25:30)."
+      ]
+    },
+    {
+      "id": "rachel", "name": "Rachel", "role": "manager", "scribeTier": "Rachel's Well", "parentManagerId": null,
+      "genealogy": { "father": "laban", "mother": null, "spouses": ["jacob"], "children": ["joseph", "benjamin"] },
+      "verses": [
+        { "ref": "Genesis 29:9-12", "note": "Meets Jacob at the well" },
+        { "ref": "Genesis 29:18", "note": "Jacob serves seven years for her" },
+        { "ref": "Genesis 30:1", "note": "Envies Leah's fertility" },
+        { "ref": "Genesis 30:22-24", "note": "Joseph's birth" },
+        { "ref": "Genesis 35:16-19", "note": "Dies giving birth to Benjamin" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Died in childbirth on the road to Ephrath/Bethlehem and was buried there, not in the family tomb at Machpelah (Genesis 35:19-20)."
+      ]
+    },
+    {
+      "id": "bilhah", "name": "Bilhah", "role": "submanager", "scribeTier": "Rachel's Well", "parentManagerId": "rachel",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": ["jacob"], "children": ["dan", "naphtali"], "note": "Rachel's maidservant, given to her by Laban (Genesis 29:29)" },
+      "verses": [
+        { "ref": "Genesis 30:3-8", "note": "Bears Dan and Naphtali on Rachel's behalf" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "leah", "name": "Leah", "role": "manager", "scribeTier": "Leah's Mandrakes", "parentManagerId": null,
+      "genealogy": { "father": "laban", "mother": null, "spouses": ["jacob"], "children": ["reuben", "simeon", "levi", "judah", "issachar", "zebulun", "dinah"] },
+      "verses": [
+        { "ref": "Genesis 29:17", "note": "Described as 'tender eyed'" },
+        { "ref": "Genesis 29:23-25", "note": "Substituted for Rachel on the wedding night" },
+        { "ref": "Genesis 29:31-35", "note": "Bears the first four sons" },
+        { "ref": "Genesis 30:14-16", "note": "Trades mandrakes with Rachel for a night with Jacob" },
+        { "ref": "Genesis 49:31", "note": "Buried at Machpelah alongside Abraham, Sarah, Isaac, and Rebekah" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mother of Judah, the ancestor of the tribe the Messianic line is traced through."
+      ]
+    },
+    {
+      "id": "zilpah", "name": "Zilpah", "role": "submanager", "scribeTier": "Leah's Mandrakes", "parentManagerId": "leah",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": ["jacob"], "children": ["gad", "asher"], "note": "Leah's maidservant, given to her by Laban (Genesis 29:24)" },
+      "verses": [
+        { "ref": "Genesis 30:9-13", "note": "Bears Gad and Asher on Leah's behalf" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dinah", "name": "Dinah", "role": "submanager", "scribeTier": "Leah's Mandrakes", "parentManagerId": "leah",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 34", "note": "Whole chapter — Shechem, the vengeance of Simeon and Levi" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph", "name": "Joseph", "role": "manager", "scribeTier": "Joseph's Storehouse", "parentManagerId": null,
+      "genealogy": { "father": "jacob", "mother": "rachel", "spouses": ["asenath — Genesis 41:45, not yet indexed"], "children": ["manasseh", "ephraim"] },
+      "verses": [
+        { "ref": "Genesis 37:3", "note": "Given the coat of many colours" },
+        { "ref": "Genesis 37:28", "note": "Sold into slavery" },
+        { "ref": "Genesis 39", "note": "Potiphar's house" },
+        { "ref": "Genesis 41:39-41", "note": "Made ruler over Egypt" },
+        { "ref": "Genesis 45:4-5", "note": "Reveals himself to his brothers" },
+        { "ref": "Genesis 50:26", "note": "Death" }
+      ],
+      "ageEvents": [
+        { "event": "Sold into slavery", "age": 17, "ref": "Genesis 37:2" },
+        { "event": "Stood before Pharaoh", "age": 30, "ref": "Genesis 41:46" },
+        { "event": "Died", "age": 110, "ref": "Genesis 50:26" }
+      ]
+    },
+    {
+      "id": "reuben", "name": "Reuben", "role": "submanager", "scribeTier": "Joseph's Storehouse", "parentManagerId": "joseph",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 37:21-22", "note": "Pleads to spare Joseph's life rather than kill him" },
+        { "ref": "Genesis 37:29-30", "note": "Tries to return Joseph and finds the pit empty" },
+        { "ref": "Genesis 42:37", "note": "Offers his own two sons' lives as a pledge to bring back Benjamin" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "potiphar", "name": "Potiphar", "role": "submanager", "scribeTier": "Joseph's Storehouse", "parentManagerId": "joseph",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": null, "mother": null, "spouses": ["unnamed — 'Potiphar's wife'"], "children": [] },
+      "verses": [
+        { "ref": "Genesis 39:1", "note": "Captain of Pharaoh's guard; buys Joseph" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pharaoh_joseph", "name": "Pharaoh (of Joseph's rise)", "role": "submanager", "scribeTier": "Joseph's Storehouse", "parentManagerId": "joseph",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Genesis never names this Pharaoh — a distinct figure from any other 'Pharaoh' that might appear when Exodus is indexed.",
+      "genealogy": { "father": null, "mother": null, "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 41", "note": "Elevates Joseph to rule over Egypt after his dreams are interpreted" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "judah", "name": "Judah", "role": "manager", "scribeTier": "Judah's Signet", "parentManagerId": null,
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": ["unnamed — daughter of Shuah, Genesis 38:2", "tamar"], "children": ["er", "onan", "shelah", "pharez", "zarah"] },
+      "verses": [
+        { "ref": "Genesis 37:26-27", "note": "Suggests selling Joseph rather than killing him" },
+        { "ref": "Genesis 38", "note": "Tamar, the pledge of his signet, bracelets, and staff" },
+        { "ref": "Genesis 43:8-9", "note": "Pledges himself surety for Benjamin" },
+        { "ref": "Genesis 44:18-34", "note": "Offers himself as a slave in Benjamin's place" },
+        { "ref": "Genesis 49:8-10", "note": "Jacob's blessing — 'the sceptre shall not depart from Judah'" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'sceptre shall not depart from Judah' blessing (Genesis 49:10) is the seed of the royal line traced through his tribe."
+      ]
+    },
+    {
+      "id": "tamar", "name": "Tamar", "role": "submanager", "scribeTier": "Judah's Signet", "parentManagerId": "judah",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": { "father": null, "mother": null, "spouses": ["er", "onan (by levirate custom)", "judah"], "children": ["pharez", "zarah"] },
+      "verses": [
+        { "ref": "Genesis 38", "note": "Whole chapter — denied Shelah in marriage, disguises herself, conceives twins by Judah" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "benjamin", "name": "Benjamin", "role": "manager", "scribeTier": "Silver Cup", "parentManagerId": null,
+      "genealogy": { "father": "jacob", "mother": "rachel", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Genesis 35:16-18", "note": "Born as Rachel dies; she names him Ben-oni ('son of my sorrow'), Jacob renames him Benjamin ('son of the right hand')" },
+        { "ref": "Genesis 42:4", "note": "Jacob refuses to send him to Egypt" },
+        { "ref": "Genesis 44:2", "note": "Joseph's silver cup planted in his sack" },
+        { "ref": "Genesis 45:14", "note": "Joseph weeps on his neck first, of all the brothers" }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only one of Jacob's twelve sons born in Canaan — all his brothers were born in Padan-aram.",
+        "The only son whose birth directly caused his mother's death."
+      ]
+    },
+    {
+      "id": "enoch_cainite", "name": "Enoch (Cain's son)", "role": "named",
+      "genealogy": { "father": "cain", "mother": null, "spouses": [], "children": ["irad"] },
+      "verses": [{ "ref": "Genesis 4:17", "note": "Cain builds a city and names it after him" }],
+      "ageEvents": [],
+      "funFacts": ["Not the same Enoch who 'walked with God' (Genesis 5) — different lineage, five generations apart."]
+    },
+    { "id": "irad", "name": "Irad", "role": "named",
+      "genealogy": { "father": "enoch_cainite", "mother": null, "spouses": [], "children": ["mehujael"] },
+      "verses": [{ "ref": "Genesis 4:18", "note": "Genealogy entry only" }], "ageEvents": [] },
+    { "id": "mehujael", "name": "Mehujael", "role": "named",
+      "genealogy": { "father": "irad", "mother": null, "spouses": [], "children": ["methusael"] },
+      "verses": [{ "ref": "Genesis 4:18", "note": "Genealogy entry only" }], "ageEvents": [] },
+    { "id": "methusael", "name": "Methusael", "role": "named",
+      "genealogy": { "father": "mehujael", "mother": null, "spouses": [], "children": ["lamech_cainite"] },
+      "verses": [{ "ref": "Genesis 4:18", "note": "Genealogy entry only" }], "ageEvents": [] },
+    {
+      "id": "lamech_cainite", "name": "Lamech (Cain's line)", "role": "named",
+      "genealogy": { "father": "methusael", "mother": null, "spouses": ["adah", "zillah"], "children": ["jabal", "jubal", "tubalcain", "naamah"] },
+      "verses": [{ "ref": "Genesis 4:19-24", "note": "First recorded polygamist; boasts of vengeance in the 'Song of Lamech'" }],
+      "ageEvents": [],
+      "funFacts": ["Accuracy flag: a DIFFERENT man from Lamech, Noah's father (Genesis 5:28-31) — same KJV spelling, unrelated lines, same trap as the two men named Nahor below."]
+    },
+    { "id": "adah", "name": "Adah", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": ["lamech_cainite"], "children": ["jabal", "jubal"] },
+      "verses": [{ "ref": "Genesis 4:19-20", "note": "One of Lamech's two wives" }], "ageEvents": [] },
+    { "id": "zillah", "name": "Zillah", "role": "named",
+      "genealogy": { "father": null, "mother": null, "spouses": ["lamech_cainite"], "children": ["tubalcain", "naamah"] },
+      "verses": [{ "ref": "Genesis 4:19, 22", "note": "One of Lamech's two wives" }], "ageEvents": [] },
+    {
+      "id": "jabal", "name": "Jabal", "role": "submanager", "scribeTier": "Cain's City Wall", "parentManagerId": "cain",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "lamech_cainite", "mother": "adah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 4:20", "note": "'Father of such as dwell in tents, and of such as have cattle'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "jubal", "name": "Jubal", "role": "submanager", "scribeTier": "Cain's City Wall", "parentManagerId": "cain",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "lamech_cainite", "mother": "adah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 4:21", "note": "'Father of all such as handle the harp and organ'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "tubalcain", "name": "Tubalcain", "role": "submanager", "scribeTier": "Cain's City Wall", "parentManagerId": "cain",
+      "perkFlavor": "cost-cutter",
+      "genealogy": { "father": "lamech_cainite", "mother": "zillah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 4:22", "note": "'An instructer of every artificer in brass and iron'" }],
+      "ageEvents": []
+    },
+    { "id": "naamah", "name": "Naamah", "role": "named",
+      "genealogy": { "father": "lamech_cainite", "mother": "zillah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 4:22", "note": "Named alongside her brothers; no further role described" }], "ageEvents": [] },
+    { "id": "enos", "name": "Enos", "role": "named",
+      "genealogy": { "father": "seth", "mother": null, "spouses": [], "children": ["cainan"] },
+      "verses": [{ "ref": "Genesis 4:26", "note": "In his days men 'began to call upon the name of the LORD'" }, { "ref": "Genesis 5:6-11", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Cainan", "age": 90, "ref": "Genesis 5:9" }, { "event": "Died", "age": 905, "ref": "Genesis 5:11" }] },
+    { "id": "cainan", "name": "Cainan", "role": "named",
+      "genealogy": { "father": "enos", "mother": null, "spouses": [], "children": ["mahalaleel"] },
+      "verses": [{ "ref": "Genesis 5:12-14", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Mahalaleel", "age": 70, "ref": "Genesis 5:12" }, { "event": "Died", "age": 910, "ref": "Genesis 5:14" }] },
+    { "id": "mahalaleel", "name": "Mahalaleel", "role": "named",
+      "genealogy": { "father": "cainan", "mother": null, "spouses": [], "children": ["jared"] },
+      "verses": [{ "ref": "Genesis 5:15-17", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Jared", "age": 65, "ref": "Genesis 5:15" }, { "event": "Died", "age": 895, "ref": "Genesis 5:17" }] },
+    { "id": "jared", "name": "Jared", "role": "named",
+      "genealogy": { "father": "mahalaleel", "mother": null, "spouses": [], "children": ["enoch"] },
+      "verses": [{ "ref": "Genesis 5:18-20", "note": "Genealogy entry — father of Enoch, who 'walked with God'" }],
+      "ageEvents": [{ "event": "Fathered Enoch", "age": 162, "ref": "Genesis 5:18" }, { "event": "Died", "age": 962, "ref": "Genesis 5:20" }] },
+    { "id": "arphaxad", "name": "Arphaxad", "role": "named",
+      "genealogy": { "father": "shem", "mother": null, "spouses": [], "children": ["salah"] },
+      "verses": [{ "ref": "Genesis 11:10-13", "note": "Genealogy entry, born 2 years after the Flood" }],
+      "ageEvents": [{ "event": "Fathered Salah", "age": 35, "ref": "Genesis 11:12" }, { "event": "Died", "age": 438, "ref": "Genesis 11:13" }] },
+    { "id": "salah", "name": "Salah", "role": "named",
+      "genealogy": { "father": "arphaxad", "mother": null, "spouses": [], "children": ["eber"] },
+      "verses": [{ "ref": "Genesis 11:14-15", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Eber", "age": 30, "ref": "Genesis 11:14" }, { "event": "Died", "age": 433, "ref": "Genesis 11:15" }] },
+    { "id": "eber", "name": "Eber", "role": "named",
+      "genealogy": { "father": "salah", "mother": null, "spouses": [], "children": ["peleg", "joktan — Genesis 10:25, not individually indexed"] },
+      "verses": [{ "ref": "Genesis 10:21", "note": "'Father of all the children of Eber' — the eponym behind the word 'Hebrew'" }, { "ref": "Genesis 11:16-17", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Peleg", "age": 34, "ref": "Genesis 11:16" }, { "event": "Died", "age": 464, "ref": "Genesis 11:17" }] },
+    { "id": "reu", "name": "Reu", "role": "named",
+      "genealogy": { "father": "peleg", "mother": null, "spouses": [], "children": ["serug"] },
+      "verses": [{ "ref": "Genesis 11:20-21", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Serug", "age": 30, "ref": "Genesis 11:20" }, { "event": "Died", "age": 239, "ref": "Genesis 11:21" }] },
+    { "id": "serug", "name": "Serug", "role": "named",
+      "genealogy": { "father": "reu", "mother": null, "spouses": [], "children": ["nahor_elder"] },
+      "verses": [{ "ref": "Genesis 11:22-23", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Nahor", "age": 30, "ref": "Genesis 11:22" }, { "event": "Died", "age": 230, "ref": "Genesis 11:23" }] },
+    {
+      "id": "nahor_elder", "name": "Nahor (Terah's father)", "role": "named",
+      "genealogy": { "father": "serug", "mother": null, "spouses": [], "children": ["terah"] },
+      "verses": [{ "ref": "Genesis 11:24-25", "note": "Genealogy entry" }],
+      "ageEvents": [{ "event": "Fathered Terah", "age": 29, "ref": "Genesis 11:24" }, { "event": "Died", "age": 148, "ref": "Genesis 11:25" }],
+      "funFacts": ["Accuracy flag: TWO men named Nahor in Genesis — this one (Terah's father, Abraham's grandfather) and his own grandson (Terah's son, Abraham's brother, see 'nahor_brother'). Same KJV spelling, two generations apart."]
+    },
+    {
+      "id": "terah", "name": "Terah", "role": "named",
+      "genealogy": { "father": "nahor_elder", "mother": null, "spouses": [], "children": ["abraham", "nahor_brother", "haran"] },
+      "verses": [{ "ref": "Genesis 11:26-32", "note": "Leaves Ur with his family, dies in Haran" }],
+      "ageEvents": [{ "event": "Died", "age": 205, "ref": "Genesis 11:32" }]
+    },
+    {
+      "id": "haran", "name": "Haran", "role": "named",
+      "genealogy": { "father": "terah", "mother": null, "spouses": [], "children": ["lot", "milcah", "iscah"] },
+      "verses": [{ "ref": "Genesis 11:27-28", "note": "Father of Lot, Milcah, and Iscah; dies before his father Terah, in Ur" }],
+      "ageEvents": []
+    },
+    {
+      "id": "nahor_brother", "name": "Nahor (Abraham's brother)", "role": "named",
+      "genealogy": { "father": "terah", "mother": null, "spouses": ["milcah"], "children": ["bethuel", "seven other sons — Genesis 22:20-24, not individually indexed"] },
+      "verses": [{ "ref": "Genesis 11:29", "note": "Marries Milcah, his niece (Haran's daughter)" }, { "ref": "Genesis 22:20-24", "note": "His descendants listed, including Bethuel" }],
+      "ageEvents": []
+    },
+    { "id": "milcah", "name": "Milcah", "role": "named",
+      "genealogy": { "father": "haran", "mother": null, "spouses": ["nahor_brother"], "children": ["bethuel"] },
+      "verses": [{ "ref": "Genesis 11:29", "note": "Marries her uncle Nahor" }], "ageEvents": [] },
+    { "id": "iscah", "name": "Iscah", "role": "named",
+      "genealogy": { "father": "haran", "mother": null, "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 11:29", "note": "Named only, no further narrative given" }], "ageEvents": [] },
+    {
+      "id": "bethuel", "name": "Bethuel", "role": "named",
+      "genealogy": { "father": "nahor_brother", "mother": "milcah", "spouses": [], "children": ["laban", "rebekah"] },
+      "verses": [{ "ref": "Genesis 22:23", "note": "Named as Milcah's youngest son" }, { "ref": "Genesis 24:50", "note": "Consents (with Laban) to Rebekah's betrothal" }],
+      "ageEvents": []
+    },
+    { "id": "simeon", "name": "Simeon", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 29:33", "note": "Birth" }, { "ref": "Genesis 34:25-26", "note": "Avenges Dinah, with Levi" }, { "ref": "Genesis 42:24", "note": "Held hostage in Egypt by Joseph" }], "ageEvents": [] },
+    { "id": "levi", "name": "Levi", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 29:34", "note": "Birth" }, { "ref": "Genesis 34:25-26", "note": "Avenges Dinah, with Simeon" }, { "ref": "Genesis 49:5-7", "note": "Jacob's blessing rebukes his and Simeon's cruelty" }], "ageEvents": [] },
+    { "id": "issachar", "name": "Issachar", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:17-18", "note": "Birth, named for Leah's mandrake-traded 'hire'" }], "ageEvents": [] },
+    { "id": "zebulun", "name": "Zebulun", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "leah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:19-20", "note": "Birth" }], "ageEvents": [] },
+    { "id": "dan", "name": "Dan", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "bilhah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:5-6", "note": "Birth, borne by Bilhah on Rachel's behalf" }], "ageEvents": [] },
+    { "id": "naphtali", "name": "Naphtali", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "bilhah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:7-8", "note": "Birth, borne by Bilhah on Rachel's behalf" }], "ageEvents": [] },
+    { "id": "gad", "name": "Gad", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "zilpah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:10-11", "note": "Birth, borne by Zilpah on Leah's behalf" }], "ageEvents": [] },
+    { "id": "asher", "name": "Asher", "role": "named",
+      "genealogy": { "father": "jacob", "mother": "zilpah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 30:12-13", "note": "Birth, borne by Zilpah on Leah's behalf" }], "ageEvents": [] },
+    { "id": "er", "name": "Er", "role": "named",
+      "genealogy": { "father": "judah", "mother": "unnamed — daughter of Shuah", "spouses": ["tamar"], "children": [] },
+      "verses": [{ "ref": "Genesis 38:3, 7", "note": "'Wicked in the sight of the LORD'; slain" }], "ageEvents": [] },
+    { "id": "onan", "name": "Onan", "role": "named",
+      "genealogy": { "father": "judah", "mother": "unnamed — daughter of Shuah", "spouses": ["tamar (by levirate custom)"], "children": [] },
+      "verses": [{ "ref": "Genesis 38:4, 8-10", "note": "Refuses his levirate duty to Tamar; slain" }], "ageEvents": [] },
+    { "id": "shelah", "name": "Shelah", "role": "named",
+      "genealogy": { "father": "judah", "mother": "unnamed — daughter of Shuah", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 38:5, 11, 14, 26", "note": "Withheld from Tamar by Judah, out of fear" }], "ageEvents": [] },
+    { "id": "pharez", "name": "Pharez", "role": "named",
+      "genealogy": { "father": "judah", "mother": "tamar", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 38:29", "note": "Birth" }], "ageEvents": [] },
+    { "id": "zarah", "name": "Zarah", "role": "named",
+      "genealogy": { "father": "judah", "mother": "tamar", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 38:30", "note": "Birth — the scarlet thread tied on his hand" }], "ageEvents": [] },
+    { "id": "manasseh", "name": "Manasseh", "role": "named",
+      "genealogy": { "father": "joseph", "mother": "unnamed — Asenath", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 41:51", "note": "Birth — name means 'forgetting'" }, { "ref": "Genesis 48:14-20", "note": "Jacob crosses his hands, blessing Ephraim above him" }], "ageEvents": [] },
+    { "id": "ephraim", "name": "Ephraim", "role": "named",
+      "genealogy": { "father": "joseph", "mother": "unnamed — Asenath", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Genesis 41:52", "note": "Birth — name means 'fruitful'" }, { "ref": "Genesis 48:14-20", "note": "Receives the greater blessing despite being younger" }], "ageEvents": [] }
+  ],
+  "genealogyLists": {
+    "note": "Bulk genealogical rosters with no individual narrative action attached — named in full in Genesis but not given individual character entries above. Shown as compact reference lists on the genealogy diagram rather than full nodes.",
+    "tableOfNations": { "ref": "Genesis 10", "note": "~70 names total across Japheth's, Ham's, and Shem's lines — only direct sons listed here, grandchildren+ not itemized", "japhethSons": ["Gomer", "Magog", "Madai", "Javan", "Tubal", "Meshech", "Tiras"], "hamSons": ["Cush (Nimrod's father)", "Mizraim", "Phut", "Canaan"], "shemSons": ["Elam", "Asshur", "Arphaxad", "Lud", "Aram"] },
+    "ishmaelSons": { "ref": "Genesis 25:13-15", "names": ["Nebajoth", "Kedar", "Adbeel", "Mibsam", "Mishma", "Dumah", "Massa", "Hadar", "Tema", "Jetur", "Naphish", "Kedemah"] },
+    "keturahSons": { "ref": "Genesis 25:2", "names": ["Zimran", "Jokshan", "Medan", "Midian", "Ishbak", "Shuah"] },
+    "nahorSonsViaMilcah": { "ref": "Genesis 22:20-24", "names": ["Huz", "Buz", "Kemuel", "Chesed", "Hazo", "Pildash", "Jidlaph", "Bethuel"] },
+    "nahorSonsViaReumah": { "ref": "Genesis 22:24", "names": ["Tebah", "Gaham", "Thahash", "Maachah"] },
+    "edomGenealogy": { "ref": "Genesis 36", "note": "Esau's line — sons, grandsons, the eight kings who reigned in Edom before Israel had a king, and the eleven 'dukes' are all listed in full in Genesis 36 but not itemized as individual entries here", "esauSons": ["Eliphaz", "Reuel", "Jeush", "Jaalam", "Korah"], "eliphazSons": ["Teman", "Omar", "Zepho", "Gatam", "Kenaz", "Amalek (via the concubine Timna)"] }
+  }
+}

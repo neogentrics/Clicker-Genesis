@@ -1,0 +1,853 @@
+{
+  "book": "Ezekiel",
+  "canonicalOrder": 26,
+  "notes": "Redraft from scratch correcting the first draft's three flagged issues: (1) 5:1-4 now correctly cites \"a sharp knife...a barber's razor\" per KJV, never \"sword\"; (2) the Babylonian king is spelled \"Nebuchadrezzar\" throughout (matching Ezekiel's own KJV usage at 26:7, 29:18-19, 30:10), with a funFact explicitly flagging the divergence from \"Nebuchadnezzar\" used in 2 Kings/2 Chronicles/Daniel/Esther; (3) added full law-tier coverage for ch.18 (individual_responsibility, \"the soul that sinneth, it shall die\") and ch.34 (shepherds_of_israel, \"I will set up one shepherd...my servant David\"), plus a related citation to 37:24-25's echo of the same promise. Also corrected \"Oholah/Oholibah\" to KJV's actual spelling \"Aholah\"/\"Aholibah\" (23:4). Flagged two same-book naming collisions per methodology: two distinct men named Jaazaniah (8:11 son of Shaphan vs. 11:1 son of Azur), and the ambiguous \"Daniel\" cited at 14:14/14:20/28:3 (possibly the prophet, possibly an unrelated ancient figure — text does not resolve it, so no claim is asserted either way). Pharaoh in ch.29-32 is deliberately left unnamed, as Ezekiel's own text never gives him a personal name (unlike Jeremiah 44:30's \"Pharaoh-hophra\"). Gog (ch.38-39) and the \"prince/king of Tyrus\" (ch.28) are treated as person-type managers since they are addressed as rulers, even though ch.28's second half shifts into cherub/Eden imagery — the text itself does not state whether this is the same ruler described two ways or two different figures, so no interpretation is asserted beyond what's written. Pelatiah son of Benaiah (11:1,13) is included as a submanager under glory_departs_temple since his death is a genuine, individually-recorded narrative beat (it triggers Ezekiel's intercession), unlike the two Jaazaniahs or the 70 elders, who remain a cited bulk group. All verse citations were checked against the specific chapter/verse content described (no invented details).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Scroll",
+      "managerId": "ezekiel",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wheel Within a Wheel",
+      "managerId": "cherubim_and_wheels_vision",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Watchman's Trumpet",
+      "managerId": "watchman_commission",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Clay Siege Tablet",
+      "managerId": "siege_sign_acts",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Departing Glory",
+      "managerId": "glory_departs_temple",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Two Sisters' Allegory",
+      "managerId": "aholah_and_aholibah",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Eagle and the Vine",
+      "managerId": "eagles_and_vine_parable",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Soul That Sinneth",
+      "managerId": "individual_responsibility",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Nations' Reckoning",
+      "managerId": "judgment_on_neighbor_nations",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Merchant Ships of Tyre",
+      "managerId": "tyre_lament",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Babylon's Siege Engine",
+      "managerId": "nebuchadrezzar",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Signet of Perfection",
+      "managerId": "prince_of_tyrus",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Great Dragon of the Nile",
+      "managerId": "pharaoh_king_of_egypt",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "One Shepherd's Staff",
+      "managerId": "shepherds_of_israel",
+      "type": "law"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Valley of Dry Bones",
+      "managerId": "valley_of_dry_bones",
+      "type": "law"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Gog's War Horde",
+      "managerId": "gog",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "River from the Threshold",
+      "managerId": "new_temple_vision",
+      "type": "law"
+    }
+  ],
+  "genealogyLists": {
+    "gogs_allies_ch38": [
+      "Persia (38:5)",
+      "Ethiopia/Cush (38:5)",
+      "Libya/Put (38:5)",
+      "Gomer (38:6)",
+      "House of Togarmah of the north quarters (38:6)"
+    ],
+    "nations_in_the_pit_ch32": [
+      "Asshur (32:22)",
+      "Elam (32:24)",
+      "Meshech and Tubal (32:26)",
+      "Edom (32:29)",
+      "Princes of the north (32:30)",
+      "Zidonians (32:30)"
+    ],
+    "neighboring_nations_ch25": [
+      "Ammon (25:1-7)",
+      "Moab, alongside Seir (25:8-11)",
+      "Edom (25:12-14)",
+      "Philistia (25:15-17)"
+    ],
+    "tyres_trading_partners_ch27": [
+      "Tarshish (27:12)",
+      "Javan, Tubal, and Meshech (27:13)",
+      "Togarmah (27:14)",
+      "Dedan (27:15)",
+      "Syria (27:16)",
+      "Judah and Israel (27:17)",
+      "Damascus (27:18)",
+      "Arabia and Kedar (27:21)",
+      "Sheba and Raamah (27:22)"
+    ],
+    "seventy_elders_ch8": [
+      "Seventy elders of the house of Israel, led by Jaazaniah the son of Shaphan, seen offering incense to idols in a dark chamber (8:11) — a different Jaazaniah than the one named later at 11:1"
+    ]
+  },
+  "characters": [
+    {
+      "id": "ezekiel",
+      "name": "Ezekiel",
+      "role": "manager",
+      "scribeTier": "Tier 1",
+      "genealogy": {
+        "father": "Buzi the priest",
+        "mother": null,
+        "children": [],
+        "spouses": [
+          "unnamed wife, referred to only as 'the desire of thine eyes,' whose death is recorded as a sign-act (24:15-18)"
+        ],
+        "note": "Identified as 'Ezekiel the priest, the son of Buzi' (1:3), placing him in Israel's priestly line; he prophesied among the Judean exiles by the river Chebar in Babylon. No wife's name or children are given in the text."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "1:1-3",
+          "note": "Priest-prophet, son of Buzi, receives visions by the river Chebar among the Babylonian exiles, 'in the thirtieth year.'"
+        },
+        {
+          "ref": "2:9-3:3",
+          "note": "Given a scroll of lamentation to eat; it is 'in my mouth as honey for sweetness.'"
+        },
+        {
+          "ref": "3:17",
+          "note": "Commissioned 'a watchman unto the house of Israel.'"
+        },
+        {
+          "ref": "3:26-27",
+          "note": "Struck mute except when the LORD gives him a message, a state lifted in 33:22."
+        },
+        {
+          "ref": "4:1-5:4",
+          "note": "Performs successive sign-acts against Jerusalem: a clay siege model, lying bound on his side for a set number of days, and shaving his head and beard with a sharp knife and a barber's razor."
+        },
+        {
+          "ref": "24:15-18",
+          "note": "Told his wife will die suddenly as a sign to Israel; forbidden to publicly mourn her."
+        },
+        {
+          "ref": "33:21-22",
+          "note": "His mouth is opened once a fugitive brings news that Jerusalem has fallen."
+        },
+        {
+          "ref": "40:1-4",
+          "note": "Carried in visions to a very high mountain to be shown the new temple."
+        }
+      ],
+      "funFacts": [
+        "His name means 'God strengthens.'",
+        "Called 'son of man' roughly 90 times across the book, more than any other biblical figure.",
+        "Every sign-act attributed to him (siege model, shaving, wife's death, cooking over dung) is something the text says he actually did or was commanded to do, not merely spoke about."
+      ],
+      "perkFlavor": "watchmans-vigilance",
+      "perkNote": "Grants a small steady passive Ink trickle representing Ezekiel's role as Israel's watchman."
+    },
+    {
+      "id": "cherubim_and_wheels_vision",
+      "name": "Vision of the Cherubim and Wheels",
+      "role": "law",
+      "scribeTier": "Tier 2",
+      "deliveredBy": "Shown to Ezekiel in a vision by the river Chebar",
+      "purpose": "Establishes Ezekiel's prophetic call by revealing the mobile, all-seeing throne-chariot of God's glory, teaching that God's presence is not confined to the Jerusalem temple, even among exiles in Babylon.",
+      "verses": [
+        {
+          "ref": "1:4-14",
+          "note": "Four living creatures, each with four faces (man, lion, ox, eagle) and four wings, come from a stormy wind out of the north."
+        },
+        {
+          "ref": "1:15-21",
+          "note": "A wheel is beside each creature; 'a wheel in the middle of a wheel,' rims full of eyes, moving wherever the spirit went."
+        },
+        {
+          "ref": "1:22-28",
+          "note": "Above the creatures, a firmament, a sapphire throne, and 'the likeness as the appearance of a man' — 'the appearance of the likeness of the glory of the LORD.'"
+        },
+        {
+          "ref": "10:1-22",
+          "note": "The vision recurs, explicitly identifying the four living creatures as cherubims."
+        }
+      ],
+      "funFacts": [
+        "The phrase 'wheel within a wheel' from 1:16 has become a common English idiom.",
+        "Ezekiel falls on his face at the sight of the glory (1:28), the standard prophetic response to a theophany."
+      ],
+      "perkFlavor": "vigilance-vision",
+      "perkNote": "The all-seeing wheels theme a small passive-output bonus representing unblinking oversight."
+    },
+    {
+      "id": "watchman_commission",
+      "name": "The Watchman Commission",
+      "role": "law",
+      "scribeTier": "Tier 3",
+      "deliveredBy": "The word of the LORD to Ezekiel",
+      "purpose": "Defines the prophet's personal accountability: he must warn Israel of coming judgment or their blood is required at his hand; if he warns and they don't listen, he is guiltless.",
+      "verses": [
+        {
+          "ref": "3:17-21",
+          "note": "'Son of man, I have made thee a watchman unto the house of Israel'; failure to warn the wicked makes their blood Ezekiel's own responsibility."
+        },
+        {
+          "ref": "33:1-9",
+          "note": "The watchman charge is restated in full near the book's turning point, after news of Jerusalem's fall."
+        },
+        {
+          "ref": "33:10-20",
+          "note": "Restates that a wicked man who turns from sin shall live, and a righteous man who turns to sin shall die — individual moral accounting, echoing ch.18."
+        }
+      ],
+      "funFacts": [
+        "The watchman image assumes a city sentry whose sole job is to sound a trumpet warning, not to personally repel the enemy."
+      ],
+      "perkFlavor": "warning-bonus",
+      "perkNote": "A small Ink-cost discount themed on the watchman's early warning."
+    },
+    {
+      "id": "siege_sign_acts",
+      "name": "Siege Sign-Acts",
+      "role": "law",
+      "scribeTier": "Tier 4",
+      "deliveredBy": "Commanded of Ezekiel by the LORD",
+      "purpose": "Dramatizes the coming siege and exile of Jerusalem before it happens, acting out judgment so vividly that words alone could not.",
+      "verses": [
+        {
+          "ref": "4:1-3",
+          "note": "Ezekiel draws Jerusalem on a clay tile and builds a mock siege (fort, mount, camps, battering rams), setting an iron pan as a wall between himself and the city."
+        },
+        {
+          "ref": "4:4-6",
+          "note": "Lies on his left side 390 days bearing Israel's iniquity, then his right side 40 days bearing Judah's."
+        },
+        {
+          "ref": "4:9-17",
+          "note": "Eats bread baked over cow dung (changed from human dung after his protest, 4:12-15) with rationed water, acting out siege famine."
+        },
+        {
+          "ref": "5:1-4",
+          "note": "Takes 'a sharp knife...a barber's razor' to shave his head and beard, then divides the hair: a third burned, a third struck with the knife, a third scattered to the wind, with a few hairs bound in his skirts."
+        }
+      ],
+      "funFacts": [
+        "The sign-act's own explanation (5:5-12) makes clear the divided hair represents Jerusalem's population, split between plague/famine, sword, and scattering among the nations."
+      ],
+      "perkFlavor": "endurance-act",
+      "perkNote": "A stamina-themed bonus for enduring long, costly sign-acts."
+    },
+    {
+      "id": "glory_departs_temple",
+      "name": "The Glory Departs the Temple",
+      "role": "law",
+      "scribeTier": "Tier 5",
+      "deliveredBy": "Shown to Ezekiel in a vision, brought by the Spirit to Jerusalem while his body remained in Babylon",
+      "purpose": "Exposes idolatry practiced inside the Jerusalem temple and shows its consequence: God's glory itself withdraws from the house before it is destroyed.",
+      "verses": [
+        {
+          "ref": "8:3-6",
+          "note": "The Spirit lifts Ezekiel to Jerusalem to see 'the image of jealousy' at the temple's north gate."
+        },
+        {
+          "ref": "8:10-11",
+          "note": "Seventy elders, led by Jaazaniah the son of Shaphan, offer incense to idols carved on the wall in a dark chamber."
+        },
+        {
+          "ref": "8:14",
+          "note": "Women weeping for Tammuz at the temple's north gate."
+        },
+        {
+          "ref": "8:16",
+          "note": "Twenty-five men worship the sun with their backs to the temple."
+        },
+        {
+          "ref": "9:2-6",
+          "note": "A man clothed in linen with a writer's inkhorn marks the foreheads of those who sigh and cry over the abominations; the rest are struck down."
+        },
+        {
+          "ref": "10:4,18-19",
+          "note": "The glory of the LORD rises from the cherub to the threshold, then departs to the east gate of the temple."
+        },
+        {
+          "ref": "11:1,13",
+          "note": "Among the princes plotting evil counsel are Jaazaniah the son of Azur and Pelatiah the son of Benaiah — a different Jaazaniah than the elder in 8:11, a real KJV naming collision within this same book."
+        },
+        {
+          "ref": "11:13",
+          "note": "Pelatiah dies as Ezekiel prophesies, prompting him to cry, 'Ah Lord GOD! wilt thou make a full end of the remnant of Israel?'"
+        },
+        {
+          "ref": "11:23",
+          "note": "The glory of the LORD finally departs the city, standing upon the mountain on its east side."
+        }
+      ],
+      "funFacts": [
+        "Two different men named Jaazaniah appear within this single vision: son of Shaphan (8:11, an idolatrous elder) and son of Azur (11:1, a scheming prince) — not the same person.",
+        "This vision's departure of the glory (ch.10-11) is deliberately answered later when the glory returns to the new temple in ch.43."
+      ],
+      "perkFlavor": "exposed-idolatry",
+      "perkNote": "A cautionary-themed bonus tied to correctly identifying a problem before it can be fixed."
+    },
+    {
+      "id": "pelatiah_son_of_benaiah",
+      "name": "Pelatiah son of Benaiah",
+      "role": "submanager",
+      "parentManagerId": "glory_departs_temple",
+      "genealogy": {
+        "father": "Benaiah",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Identified only by patronymic, 'Pelatiah the son of Benaiah' (11:1); named among 'the princes of the people' devising evil counsel in Jerusalem."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "11:1",
+          "note": "Named among the princes at the temple's east gate plotting evil counsel."
+        },
+        {
+          "ref": "11:13",
+          "note": "Dies suddenly as Ezekiel prophesies against the princes — the only one of the group whose individual fate is recorded."
+        }
+      ],
+      "funFacts": [
+        "His death is the direct, on-the-page trigger for Ezekiel's anguished intercession ('wilt thou make a full end of the remnant of Israel?', 11:13)."
+      ],
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A minor bonus representing intercession for the remnant, a small passive trickle even when this tier is otherwise idle."
+    },
+    {
+      "id": "aholah_and_aholibah",
+      "name": "Aholah and Aholibah",
+      "role": "law",
+      "scribeTier": "Tier 6",
+      "deliveredBy": "Spoken by the LORD through Ezekiel, expanding an allegory already begun in ch.16",
+      "purpose": "Uses the allegory of two adulterous sisters to indict Samaria and Jerusalem for political and religious unfaithfulness, describing alliances with foreign nations and their gods as harlotry.",
+      "verses": [
+        {
+          "ref": "23:4",
+          "note": "'The names of them were Aholah the elder, and Aholibah her sister': Aholah is Samaria, Aholibah is Jerusalem."
+        },
+        {
+          "ref": "23:5-10",
+          "note": "Aholah's harlotry with Assyria leads to her destruction by those same lovers."
+        },
+        {
+          "ref": "23:11-35",
+          "note": "Aholibah, 'more corrupt' than her sister, dotes on Assyrians, Chaldeans, and Egyptians alike, and is judged accordingly."
+        },
+        {
+          "ref": "16:1-14",
+          "note": "An earlier, related allegory: Jerusalem as an abandoned infant grown into a bride adorned by the LORD, before turning to harlotry from 16:15 onward."
+        }
+      ],
+      "funFacts": [
+        "KJV spells the names 'Aholah' and 'Aholibah' (with an initial A), not 'Oholah'/'Oholibah' as in some modern translations — a real spelling difference worth preserving exactly."
+      ],
+      "perkFlavor": "allegory-insight",
+      "perkNote": "Bonus themed on correctly reading political alliances, tied to the two-sisters allegory."
+    },
+    {
+      "id": "eagles_and_vine_parable",
+      "name": "The Two Eagles and the Vine",
+      "role": "law",
+      "scribeTier": "Tier 7",
+      "deliveredBy": "A riddle/parable given to Ezekiel to speak to 'the house of Israel'",
+      "purpose": "Explains in coded imagery Judah's recent political history — Babylon's deportation of a Judean king, the installation and rebellion of a vassal king, and his doomed appeal to Egypt — as covenant-breaking God himself will judge.",
+      "verses": [
+        {
+          "ref": "17:3-4",
+          "note": "A great eagle takes the top of a cedar into 'a land of traffick' and sets it in 'a city of merchants.'"
+        },
+        {
+          "ref": "17:5-6",
+          "note": "The eagle plants a seed that grows into a low, spreading vine."
+        },
+        {
+          "ref": "17:7-10",
+          "note": "The vine bends toward a second great eagle seeking help instead, and is warned it will wither."
+        },
+        {
+          "ref": "17:22-24",
+          "note": "The chapter closes with a contrasting promise: the LORD himself will plant a tender branch from the cedar's top on Israel's high mountain, where it will flourish."
+        },
+        {
+          "ref": "19:1-14",
+          "note": "A related lament for 'the princes of Israel' pictures them as a lioness's whelps and as a vine, similarly stripped and destroyed."
+        }
+      ],
+      "funFacts": [
+        "The parable never names any nation or ruler directly — it is deliberately told as a riddle (17:2), though the outcome (17:11-21) explains the history plainly."
+      ],
+      "perkFlavor": "riddle-bonus",
+      "perkNote": "Output compounds gradually, themed on the parable's slow-growing vine."
+    },
+    {
+      "id": "individual_responsibility",
+      "name": "The Soul That Sinneth",
+      "role": "law",
+      "scribeTier": "Tier 8",
+      "deliveredBy": "Spoken by the LORD through Ezekiel, answering a popular proverb",
+      "purpose": "Overturns the proverb of inherited guilt, teaching that each person is judged for their own righteousness or sin, and that repentance genuinely changes a person's standing before God.",
+      "verses": [
+        {
+          "ref": "18:2-4",
+          "note": "Quotes and rejects the proverb 'The fathers have eaten sour grapes, and the children's teeth are set on edge': 'the soul that sinneth, it shall die.'"
+        },
+        {
+          "ref": "18:20",
+          "note": "'The son shall not bear the iniquity of the father, neither shall the father bear the iniquity of the son.'"
+        },
+        {
+          "ref": "18:21-23",
+          "note": "A wicked man who turns from all his sins 'shall surely live, he shall not die'; 'Have I any pleasure at all that the wicked should die?... and not that he should return from his ways, and live?'"
+        },
+        {
+          "ref": "18:26-28",
+          "note": "Likewise, a righteous man who turns to sin loses his prior righteousness before God."
+        }
+      ],
+      "funFacts": [
+        "One of the Old Testament's clearest statements against corporate/inherited guilt, directly addressing exiles who blamed captivity entirely on earlier generations' sins."
+      ],
+      "perkFlavor": "personal-accounting",
+      "perkNote": "Bonus tied strictly to this tier's own purchases, themed on individual moral accounting."
+    },
+    {
+      "id": "daniel_noah_job_ch14",
+      "name": "Daniel, Noah, and Job (as cited in Ezekiel)",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "This entry cites three distinct, separately-attested biblical figures exactly as Ezekiel groups them; it is not a genealogical record of a single person."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "14:14",
+          "note": "'Though these three men, Noah, Daniel, and Job, were in it, they should deliver but their own souls by their righteousness, saith the Lord GOD' — cited as men so righteous that even they could only save themselves, not their household, from judgment."
+        },
+        {
+          "ref": "14:20",
+          "note": "The same three are repeated: their righteousness would deliver 'neither son nor daughter.'"
+        },
+        {
+          "ref": "28:3",
+          "note": "In the oracle against the prince of Tyrus, the LORD says sarcastically, 'thou art wiser than Daniel; there is no secret that they can hide from thee.'"
+        }
+      ],
+      "funFacts": [
+        "The 'Daniel' named here is a real, unresolved ambiguity: this could be the prophet Daniel, a contemporary of Ezekiel also taken to Babylon, or it could reference an ancient figure named Daniel/Danel known from other ancient Near Eastern tradition, since 14:14 groups him with Noah and Job as figures from the distant past — Ezekiel's own text does not settle which is meant.",
+        "Noah and Job are the same figures known from Genesis and the Book of Job respectively — no ambiguity there."
+      ]
+    },
+    {
+      "id": "judgment_on_neighbor_nations",
+      "name": "Judgment on Ammon, Moab, Edom, and Philistia",
+      "role": "law",
+      "scribeTier": "Tier 9",
+      "deliveredBy": "The LORD through Ezekiel",
+      "purpose": "Announces judgment on four nations that rejoiced over or exploited Judah's fall, teaching that gloating over a covenant people's suffering brings judgment on the gloaters too.",
+      "verses": [
+        {
+          "ref": "25:1-7",
+          "note": "Ammon judged for saying 'Aha' over the temple's profaning and Judah's captivity."
+        },
+        {
+          "ref": "25:8-11",
+          "note": "Moab judged alongside Seir for treating Judah 'like all the heathen.'"
+        },
+        {
+          "ref": "25:12-14",
+          "note": "Edom judged for taking vengeance on the house of Judah."
+        },
+        {
+          "ref": "25:15-17",
+          "note": "Philistia judged for acting 'in despite' out of old hatred."
+        }
+      ],
+      "funFacts": [
+        "All four oracles are deliberately brief compared to the multi-chapter oracles against Tyre and Egypt that follow, matching their smaller scale."
+      ],
+      "perkFlavor": "multi-nation-bonus",
+      "perkNote": "A small stacked bonus from four short oracles rather than one large one."
+    },
+    {
+      "id": "tyre_lament",
+      "name": "Lamentation for Tyre",
+      "role": "law",
+      "scribeTier": "Tier 10",
+      "deliveredBy": "A lamentation the LORD commands Ezekiel to take up for Tyrus",
+      "purpose": "Mourns and pronounces judgment on Tyre as a proud maritime trading power, personified as a magnificent ship built and wrecked, warning that commercial wealth and beauty are not lasting security.",
+      "verses": [
+        {
+          "ref": "26:3-5",
+          "note": "Many nations will come against Tyre 'as the sea causeth his waves to come up'; it will become 'a place for the spreading of nets.'"
+        },
+        {
+          "ref": "26:7",
+          "note": "'Behold, I will bring upon Tyrus Nebuchadrezzar king of Babylon, a king of kings, from the north.'"
+        },
+        {
+          "ref": "27:2-9",
+          "note": "Tyre described as a beautifully built ship, its planks, masts, sails, and oars sourced from named nations (Senir, Lebanon, Bashan, the isles of Chittim, Egypt)."
+        },
+        {
+          "ref": "27:12-24",
+          "note": "An extensive trading-partner list, including Tarshish, Javan, Tubal, Meshech, Togarmah, Dedan, Syria, Judah and Israel, Damascus, and Arabia, trading silver, iron, ivory, and wine among other goods."
+        },
+        {
+          "ref": "27:26-36",
+          "note": "The ship of Tyre is wrecked 'in the heart of the seas'; other merchants lament her fall."
+        },
+        {
+          "ref": "28:20-23",
+          "note": "A brief, related oracle judges neighboring Sidon."
+        }
+      ],
+      "funFacts": [
+        "This is one of the most detailed trade-goods lists anywhere in the Old Testament, functioning almost as an ancient shipping manifest."
+      ],
+      "perkFlavor": "merchant-trade",
+      "perkNote": "Themed on Tyre's trade wealth, boosts Ink from bulk/multiplier purchases."
+    },
+    {
+      "id": "nebuchadrezzar",
+      "name": "Nebuchadrezzar",
+      "role": "manager",
+      "scribeTier": "Tier 11",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Ezekiel gives no genealogical detail for Nebuchadrezzar, only his role as king of Babylon and the LORD's chosen instrument of judgment against Tyre and Egypt."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "26:7",
+          "note": "Named as the king the LORD will bring against Tyre: 'a king of kings, from the north, with horses, and with chariots, and with horsemen.'"
+        },
+        {
+          "ref": "29:18-19",
+          "note": "His army labored hard against Tyre ('every head made bald, and every shoulder peeled') and received no wages for it, so the LORD gives him Egypt as payment instead."
+        },
+        {
+          "ref": "30:10",
+          "note": "'I will also make the multitude of Egypt to cease by the hand of Nebuchadrezzar king of Babylon.'"
+        }
+      ],
+      "funFacts": [
+        "Ezekiel's own text consistently spells this king's name 'Nebuchadrezzar' (with an r), never 'Nebuchadnezzar' — the same spelling used in Jeremiah. 2 Kings, 2 Chronicles, Daniel, and Esther instead use 'Nebuchadnezzar' (with an n) for the same king; this is a real, deliberate KJV spelling divergence between books, not a typo.",
+        "In other Ezekiel passages (e.g. 17:12, 21:19, 24:2) he is referred to only as 'the king of Babylon,' without his personal name appearing in that specific verse."
+      ],
+      "perkFlavor": "siege-instrument",
+      "perkNote": "Represents Babylon's military machine as the LORD's chosen instrument against Tyre and Egypt, boosting output tied to those oracle tiers."
+    },
+    {
+      "id": "prince_of_tyrus",
+      "name": "Prince of Tyrus / King of Tyrus",
+      "role": "manager",
+      "scribeTier": "Tier 12",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "No personal name or genealogy is given for either the 'prince of Tyrus' or the 'king of Tyrus' — both titles appear only within this one oracle (ch.28) directed at Tyre's ruler(s)."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "28:2",
+          "note": "The prince of Tyrus condemned for pride: 'thou hast said, I am a God, I sit in the seat of God... yet thou art a man, and not God.'"
+        },
+        {
+          "ref": "28:3",
+          "note": "Sarcastically told he is 'wiser than Daniel' — see the Daniel naming note elsewhere in this book."
+        },
+        {
+          "ref": "28:5",
+          "note": "His riches, gained 'by thy great wisdom and by thy traffick,' are named as the root of his pride."
+        },
+        {
+          "ref": "28:12-13",
+          "note": "A lament for 'the king of Tyrus' shifts into different imagery: 'full of wisdom, and perfect in beauty... thou hast been in Eden the garden of God.'"
+        },
+        {
+          "ref": "28:14-15",
+          "note": "Called 'the anointed cherub that covereth,' 'perfect in thy ways from the day that thou wast created, till iniquity was found in thee.'"
+        },
+        {
+          "ref": "28:16-19",
+          "note": "Cast out of 'the mountain of God' for violence and corrupted wisdom; brought to ashes and destruction 'in the sight of all them that behold thee.'"
+        }
+      ],
+      "funFacts": [
+        "Ezekiel 28 addresses Tyre's ruler in two distinct oracles within the same chapter: a plainer indictment of a human 'prince' (28:1-10) and a lament for a 'king' in vivid Eden/cherub imagery (28:11-19) — the text itself never explicitly states whether these describe two different individuals or one ruler described two ways; this entry keeps both oracles together as the text presents them, without asserting an interpretation the passage doesn't state."
+      ],
+      "perkFlavor": "pride-and-fall",
+      "perkNote": "High-risk/high-reward flavor bonus themed on Tyre's ruler's rise and fall."
+    },
+    {
+      "id": "pharaoh_king_of_egypt",
+      "name": "Pharaoh, king of Egypt",
+      "role": "manager",
+      "scribeTier": "Tier 13",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Ezekiel never gives this Pharaoh's personal name, referring to him only by title throughout chapters 29-32 — unlike some other scripture passages that name specific Pharaohs (e.g. Pharaoh-hophra in Jeremiah 44:30), Ezekiel's oracles leave this ruler unnamed."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "29:3",
+          "note": "Called 'the great dragon that lieth in the midst of his rivers,' who claims 'My river is mine own, and I have made it for myself.'"
+        },
+        {
+          "ref": "29:6-7",
+          "note": "Egypt described as 'a staff of reed' that broke and pierced the hand of the house of Israel when leaned upon, judgment for being an unreliable ally."
+        },
+        {
+          "ref": "29:19-20",
+          "note": "Given to Nebuchadrezzar as spoil, as wages for his army's labor against Tyre."
+        },
+        {
+          "ref": "31:2-9",
+          "note": "Egypt compared to Assyria, pictured as a cedar in Lebanon of great height and beauty, envied by every tree in Eden, before being cut down."
+        },
+        {
+          "ref": "32:2-8",
+          "note": "A lamentation calls Pharaoh 'a young lion of the nations' and 'a whale in the seas,' whose fall darkens the sun, moon, and stars."
+        },
+        {
+          "ref": "32:17-32",
+          "note": "Egypt is sent down to the pit alongside other fallen powers already there: Asshur, Elam, Meshech and Tubal, Edom, the princes of the north, and the Zidonians."
+        }
+      ],
+      "funFacts": [
+        "Because Ezekiel never names this Pharaoh personally, the oracles are placed historically by the book's internal dating (e.g. 29:17's 'seven and twentieth year') rather than by a named ruler."
+      ],
+      "perkFlavor": "broken-reed",
+      "perkNote": "Themed on Egypt as an unreliable staff, bonus emphasizes stability over raw power."
+    },
+    {
+      "id": "shepherds_of_israel",
+      "name": "The Shepherds of Israel",
+      "role": "law",
+      "scribeTier": "Tier 14",
+      "deliveredBy": "The LORD through Ezekiel, against Israel's failed leaders",
+      "purpose": "Condemns Israel's rulers, its 'shepherds,' for feeding themselves instead of the flock, and promises the LORD will personally shepherd His people and set up a single righteous ruler, 'my servant David,' establishing a covenant of peace.",
+      "verses": [
+        {
+          "ref": "34:2-4",
+          "note": "'Woe be to the shepherds of Israel that do feed themselves! should not the shepherds feed the flocks?' — condemned for not strengthening the weak, healing the sick, or seeking the lost."
+        },
+        {
+          "ref": "34:11-16",
+          "note": "The LORD says He himself will search for and gather the scattered sheep, feed them, and bind up the broken."
+        },
+        {
+          "ref": "34:23-24",
+          "note": "'I will set up one shepherd over them, and he shall feed them, even my servant David; he shall feed them, and he shall be their shepherd... my servant David a prince among them.'"
+        },
+        {
+          "ref": "34:25",
+          "note": "'I will make with them a covenant of peace.'"
+        }
+      ],
+      "funFacts": [
+        "'My servant David' here does not literally mean the historical King David, long dead by Ezekiel's time — Ezekiel elsewhere (37:24-25) uses the identical phrase in the same promised-ruler sense, without the text explicitly identifying who or what this figure is beyond that name and title."
+      ],
+      "perkFlavor": "shepherd-care",
+      "perkNote": "Boosts overall tier health, themed on gathering the scattered sheep."
+    },
+    {
+      "id": "valley_of_dry_bones",
+      "name": "The Valley of Dry Bones",
+      "role": "law",
+      "scribeTier": "Tier 15",
+      "deliveredBy": "A vision the Spirit of the LORD sets Ezekiel down within",
+      "purpose": "Pictures national restoration as a resurrection, God breathing life back into Israel's dead hope of return, and reuniting the divided kingdoms of Judah and Israel/Joseph under one king.",
+      "verses": [
+        {
+          "ref": "37:1-3",
+          "note": "Set down in a valley 'full of bones,' very dry; asked, 'Son of man, can these bones live?'"
+        },
+        {
+          "ref": "37:7-10",
+          "note": "At Ezekiel's prophesying, the bones come together, are covered with sinew, flesh, and skin, and 'breath came into them, and they lived, and stood up upon their feet, an exceeding great army.'"
+        },
+        {
+          "ref": "37:11-14",
+          "note": "Interpreted plainly: 'these bones are the whole house of Israel,' with a promise the LORD will open their graves and bring them into their own land."
+        },
+        {
+          "ref": "37:16-19",
+          "note": "Two sticks, one for Judah and one for Joseph/Ephraim and Israel, are joined into one stick in Ezekiel's hand, a sign of the two kingdoms reunited."
+        },
+        {
+          "ref": "37:24-25",
+          "note": "Again promises 'David my servant shall be king over them,' echoing ch.34's shepherd oracle."
+        }
+      ],
+      "funFacts": [
+        "A related promise just before this vision, 36:26-27, pairs the same restoration hope with 'A new heart also will I give you, and a new spirit will I put within you.'"
+      ],
+      "perkFlavor": "revival-surge",
+      "perkNote": "A resurgence-themed bonus representing breath entering dry bones."
+    },
+    {
+      "id": "gog",
+      "name": "Gog",
+      "role": "manager",
+      "scribeTier": "Tier 16",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Not a human genealogy in the usual sense — Gog is described by title and territory: 'the chief prince of Meshech and Tubal' (38:2-3), 'of the land of Magog' (38:2)."
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "38:2-3",
+          "note": "Addressed as 'Gog, the land of Magog, the chief prince of Meshech and Tubal.'"
+        },
+        {
+          "ref": "38:5-6",
+          "note": "His invading coalition includes Persia, Ethiopia, and Libya, plus Gomer and 'the house of Togarmah of the north quarters.'"
+        },
+        {
+          "ref": "38:16",
+          "note": "Comes up 'against my people of Israel, as a cloud to cover the land.'"
+        },
+        {
+          "ref": "38:19-22",
+          "note": "Defeated by a great shaking, pestilence, blood, overflowing rain, great hailstones, fire, and brimstone; his own soldiers turn their swords against one another."
+        },
+        {
+          "ref": "39:11",
+          "note": "Given a burial place, 'the valley of the passengers,' afterward renamed 'the valley of Hamongog.'"
+        },
+        {
+          "ref": "39:17-20",
+          "note": "Birds and beasts are summoned to feast on the slain of Gog's army, described as a great sacrificial 'supper.'"
+        }
+      ],
+      "funFacts": [
+        "Gog and Magog are picked up centuries later in Revelation 20:8 as end-times imagery, but that usage belongs to a different book; Ezekiel's own text situates this as a specific invasion oracle against Israel."
+      ],
+      "perkFlavor": "invasion-repelled",
+      "perkNote": "Defensive-themed bonus representing Israel's deliverance from Gog's horde."
+    },
+    {
+      "id": "new_temple_vision",
+      "name": "The New Temple Vision",
+      "role": "law",
+      "scribeTier": "Tier 17",
+      "deliveredBy": "Shown to Ezekiel by 'a man, whose appearance was like the appearance of brass,' with a measuring reed and line",
+      "purpose": "Closes the book with a detailed vision of a rebuilt temple, the glory of the LORD returning to dwell in it, a life-giving river flowing from it, and the land re-divided among the twelve tribes, a hope of restored worship and presence after judgment.",
+      "verses": [
+        {
+          "ref": "40:1-4",
+          "note": "Ezekiel is set on 'a very high mountain' and told to observe carefully everything he is shown, to declare it to the house of Israel."
+        },
+        {
+          "ref": "40:5-42:20",
+          "note": "Extensive measurement of gates, chambers, courts, and the temple building itself."
+        },
+        {
+          "ref": "43:2,4",
+          "note": "'The glory of the God of Israel came from the way of the east... and the glory of the LORD came into the house by the way of the gate whose prospect is toward the east,' answering the glory's earlier departure in ch.10-11."
+        },
+        {
+          "ref": "47:1",
+          "note": "Waters issue out from under the threshold of the temple eastward."
+        },
+        {
+          "ref": "47:9,12",
+          "note": "'Every thing shall live whither the river cometh'; trees along the banks bear fruit for food, 'and the leaf thereof for medicine.'"
+        },
+        {
+          "ref": "48:1-29",
+          "note": "The land is divided into portions for the twelve tribes."
+        },
+        {
+          "ref": "48:35",
+          "note": "The book's final words rename the city: 'the name of the city from that day shall be, The LORD is there.'"
+        }
+      ],
+      "funFacts": [
+        "This vision deliberately mirrors and reverses the ch.8-11 vision: idolatry defiling the temple and the glory departing is answered here by a purified temple and the glory returning."
+      ],
+      "perkFlavor": "river-of-life",
+      "perkNote": "Capstone bonus themed on the healing river flowing from the temple threshold."
+    }
+  ],
+  "status": "draft — corrected pass complete (second, adversarially-informed redraft), 2026-08-06"
+}

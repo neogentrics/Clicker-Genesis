@@ -1,0 +1,168 @@
+{
+  "book": "Leviticus",
+  "canonicalOrder": 3,
+  "translation": "KJV",
+  "status": "REVISED 2026-08-06 — rebuilt from a 4-person model to a 14-tier law/theme model, per the user's direction that thin-narrative, law-heavy books should be themed around their actual content rather than forced into a people-only roster.",
+  "notes": "SCHEMA NOTE: this book introduces role:\"law\" alongside the existing role:\"manager\"/\"submanager\"/\"named\" used in people-driven books. A law entry has 'deliveredBy' (who relays it — usually Moses, purely as transmission, not a submanager relationship) and 'purpose' (WHY this law exists / what it teaches — not just what it says) instead of 'genealogy'. Aaron is kept as a full PERSON manager, not folded into a law tier, because his role in this book is personally embodied (ordained, grieves in silence, physically performs the Day of Atonement) rather than pure content-transmission — Moses, by contrast, is almost entirely 'the LORD spake unto Moses, saying' in this book, so he's treated as a deliverer note on the law tiers rather than a manager. This distinction (embodied role vs. pure transmission) is the actual test going forward for hybrid books, not a mechanical law-vs-person split. UNDERLYING THEME tying every tier together: Leviticus is placed immediately after the tabernacle is completed (Exodus 40) — a holy God now dwells in the camp's center, and the whole book teaches how a sinful, ordinary people can safely live in His presence without being destroyed by that holiness, and how that holiness is meant to shape not just ritual but everyday social and ethical life.",
+  "scribeTiers": [
+    { "tier": 1, "scribeName": "Scapegoat", "managerId": "aaron", "type": "person" },
+    { "tier": 2, "scribeName": "Altar Flame", "managerId": "burnt_offering", "type": "law" },
+    { "tier": 3, "scribeName": "Fine Flour", "managerId": "grain_offering", "type": "law" },
+    { "tier": 4, "scribeName": "Fellowship Portion", "managerId": "peace_offering", "type": "law" },
+    { "tier": 5, "scribeName": "Blood Basin", "managerId": "sin_offering", "type": "law" },
+    { "tier": 6, "scribeName": "Restitution Scale", "managerId": "trespass_offering", "type": "law" },
+    { "tier": 7, "scribeName": "Cloven Hoof", "managerId": "clean_unclean_animals", "type": "law" },
+    { "tier": 8, "scribeName": "Leprosy Cloth", "managerId": "purity_laws", "type": "law" },
+    { "tier": 9, "scribeName": "Holiness Tablet", "managerId": "holiness_code", "type": "law" },
+    { "tier": 10, "scribeName": "Golden Lampstand", "managerId": "priestly_regulations", "type": "law" },
+    { "tier": 11, "scribeName": "Feast Scroll", "managerId": "seven_feasts", "type": "law" },
+    { "tier": 12, "scribeName": "Jubilee Trumpet", "managerId": "jubilee", "type": "law" },
+    { "tier": 13, "scribeName": "Covenant Ledger", "managerId": "blessings_curses", "type": "law" },
+    { "tier": 14, "scribeName": "Vow Tablet", "managerId": "vows_tithes", "type": "law" }
+  ],
+  "characters": [
+    {
+      "id": "aaron", "name": "Aaron", "role": "manager", "scribeTier": "Scapegoat", "parentManagerId": null,
+      "genealogy": { "father": "amram", "mother": "jochebed", "spouses": ["elisheba"], "children": ["nadab", "abihu", "eleazar", "ithamar"] },
+      "verses": [
+        { "ref": "Leviticus 8:1-9:24", "note": "Consecrated as high priest by Moses; offers the first sacrifices" },
+        { "ref": "Leviticus 10:1-3", "note": "Silent after his two elder sons are killed for offering 'strange fire' — 'And Aaron held his peace'" },
+        { "ref": "Leviticus 16:1-34", "note": "The Day of Atonement — enters the Most Holy Place, sends the scapegoat into the wilderness bearing the people's sins" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["'And Aaron held his peace' (Leviticus 10:3) — his entire recorded reaction to watching two of his sons die in front of him, moments after his own ordination as high priest.", "Kept as a full person-manager rather than folded into the Ordination law, because unlike Moses (who mostly just relays content in this book), Aaron personally performs and is personally marked by these events."]
+    },
+    {
+      "id": "burnt_offering", "name": "The Burnt Offering", "role": "law", "scribeTier": "Altar Flame", "deliveredBy": "moses",
+      "purpose": "Wholly consumed on the altar — nothing kept back for the offerer. Teaches total, unreserved surrender/devotion to God as the starting posture for approaching a holy God at all.",
+      "verses": [{ "ref": "Leviticus 1:1-17", "note": "Procedure for the burnt offering, from herd, flock, or fowl depending on the offerer's means" }],
+      "ageEvents": []
+    },
+    {
+      "id": "grain_offering", "name": "The Grain Offering", "role": "law", "scribeTier": "Fine Flour", "deliveredBy": "moses",
+      "purpose": "The one bloodless offering — fine flour, oil, and frankincense. Represents the fruit of ordinary daily labor being given back to God, not just dramatic sacrifice.",
+      "verses": [{ "ref": "Leviticus 2:1-16", "note": "Procedure; explicitly forbids leaven or honey, requires salt — 'the salt of the covenant'" }],
+      "ageEvents": []
+    },
+    {
+      "id": "peace_offering", "name": "The Peace Offering", "role": "law", "scribeTier": "Fellowship Portion", "deliveredBy": "moses",
+      "purpose": "The only offering where the offerer eats part of the meat themselves, alongside the priest's portion and God's portion (the fat, burnt on the altar) — a shared meal representing restored fellowship, not just atonement.",
+      "verses": [{ "ref": "Leviticus 3:1-17", "note": "Procedure for peace offerings from the herd or flock" }],
+      "ageEvents": []
+    },
+    {
+      "id": "sin_offering", "name": "The Sin Offering", "role": "law", "scribeTier": "Blood Basin", "deliveredBy": "moses",
+      "purpose": "Addresses unintentional sin, with the required animal scaled to the offender's status (priest, whole congregation, ruler, or common person) — teaches that sin has real weight regardless of intent, but also that provision for it is graded to what each person can actually bring.",
+      "verses": [{ "ref": "Leviticus 4:1-5:13", "note": "Procedures for unintentional sin, by the priest, the congregation, a ruler, and a common person" }],
+      "ageEvents": []
+    },
+    {
+      "id": "trespass_offering", "name": "The Trespass Offering", "role": "law", "scribeTier": "Restitution Scale", "deliveredBy": "moses",
+      "purpose": "Specifically for sins involving damage or deception against God or a neighbor — requires restitution PLUS a fifth added on top, not just a sacrifice. Teaches that wronging someone isn't fixed by ritual alone; the actual harm has to be repaid.",
+      "verses": [{ "ref": "Leviticus 5:14-6:7", "note": "Restitution plus a fifth part added, then the trespass offering itself" }],
+      "ageEvents": []
+    },
+    {
+      "id": "clean_unclean_animals", "name": "Clean & Unclean Animals", "role": "law", "scribeTier": "Cloven Hoof", "deliveredBy": "moses",
+      "purpose": "Dietary law — animals that both chew the cud and part the hoof are clean. Functions as a constant, daily, embodied reminder that Israel is set apart from the surrounding nations, woven into something as ordinary as every meal.",
+      "verses": [{ "ref": "Leviticus 11:1-47", "note": "Clean and unclean land animals, water creatures, birds, and swarming things" }],
+      "ageEvents": []
+    },
+    {
+      "id": "purity_laws", "name": "Purity Laws", "role": "law", "scribeTier": "Leprosy Cloth", "deliveredBy": "moses",
+      "purpose": "Covers childbirth, skin disease, mold in clothing/houses, and bodily discharges — the common thread is anything involving blood, death, or decay disrupting the boundary between life and death that holiness requires guarding.",
+      "verses": [
+        { "ref": "Leviticus 12:1-8", "note": "Purification after childbirth" },
+        { "ref": "Leviticus 13-14", "note": "Diagnosing and cleansing leprosy, in skin, clothing, and houses" },
+        { "ref": "Leviticus 15:1-33", "note": "Bodily discharges" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "holiness_code", "name": "\"Be Ye Holy\" — The Holiness Code", "role": "law", "scribeTier": "Holiness Tablet", "deliveredBy": "moses",
+      "purpose": "Extends holiness from ritual into ethics — sexual morality, honesty in business, care for the poor and the stranger, honoring the elderly. Explicitly grounds all of it in one repeated line: 'Ye shall be holy: for I the LORD your God am holy' (19:2) — holiness isn't only what happens at the altar.",
+      "verses": [
+        { "ref": "Leviticus 18:1-30", "note": "Sexual morality laws" },
+        { "ref": "Leviticus 19:1-37", "note": "Broad ethical laws — 'thou shalt love thy neighbour as thyself' (19:18)" },
+        { "ref": "Leviticus 20:1-27", "note": "Penalties for violating the preceding chapters" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "priestly_regulations", "name": "Priestly Regulations & the Sacred Lamp", "role": "law", "scribeTier": "Golden Lampstand", "deliveredBy": "moses",
+      "purpose": "Sets stricter purity standards for priests than for ordinary Israelites (who they may marry, physical blemish rules for service) since they mediate directly at the altar, then turns to the tabernacle's ongoing daily/weekly maintenance (the lamp, the showbread) — closing with the one narrative episode in this stretch, a real test of how the holiness laws apply even to a mixed-heritage member of the camp.",
+      "verses": [
+        { "ref": "Leviticus 21:1-22:33", "note": "Priestly conduct and blemish regulations" },
+        { "ref": "Leviticus 24:1-9", "note": "The tabernacle lamp and showbread, maintained continually" },
+        { "ref": "Leviticus 24:10-23", "note": "A man blasphemes during a camp fight and is stoned per the LORD's judgment — see Shelomith and her son" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seven_feasts", "name": "The Seven Feasts", "role": "law", "scribeTier": "Feast Scroll", "deliveredBy": "moses",
+      "purpose": "A full annual calendar binding the nation's sense of time itself to God's actions — deliverance (Passover, Unleavened Bread), harvest and provision (Firstfruits, Weeks), and a run of autumn feasts (Trumpets, Atonement, Tabernacles) closing the year by re-centering the whole community on God rather than the harvest alone.",
+      "verses": [{ "ref": "Leviticus 23:1-44", "note": "The full feast calendar" }],
+      "provisions": ["Passover", "Feast of Unleavened Bread", "Feast of Firstfruits", "Feast of Weeks (Pentecost)", "Feast of Trumpets", "Day of Atonement", "Feast of Tabernacles"],
+      "ageEvents": []
+    },
+    {
+      "id": "jubilee", "name": "The Year of Jubilee", "role": "law", "scribeTier": "Jubilee Trumpet", "deliveredBy": "moses",
+      "purpose": "Every 50th year, land returns to its original family and debt-slaves go free — a hard economic reset built into the calendar itself. Teaches that the land ultimately belongs to God ('the land is mine,' 25:23), not to whoever has accumulated it, and that no family's poverty is meant to become permanent and inherited.",
+      "verses": [{ "ref": "Leviticus 25:1-55", "note": "The sabbath year and the year of Jubilee" }],
+      "ageEvents": []
+    },
+    {
+      "id": "blessings_curses", "name": "Blessings & Curses", "role": "law", "scribeTier": "Covenant Ledger", "deliveredBy": "moses",
+      "purpose": "Closes the legal core of the book by tying the WHOLE nation's future — not just individual behavior — to covenant faithfulness, with real, escalating consequences laid out either direction. Functions as the book's own built-in stakes statement.",
+      "verses": [{ "ref": "Leviticus 26:1-46", "note": "Blessings for obedience, escalating curses for disobedience" }],
+      "ageEvents": []
+    },
+    {
+      "id": "vows_tithes", "name": "Vows & Tithes", "role": "law", "scribeTier": "Vow Tablet", "deliveredBy": "moses",
+      "purpose": "Closing chapter — the valuation of vowed persons, animals, houses, and land, and the tithe. Ends the book on the theme of what's voluntarily and formally devoted to God, as a deliberate counterpart to the involuntary, required offerings that opened it in chapter 1.",
+      "verses": [{ "ref": "Leviticus 27:1-34", "note": "Valuations for vows, and the tithe of the land" }],
+      "ageEvents": []
+    },
+    {
+      "id": "nadab", "name": "Nadab", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Leviticus 10:1-2", "note": "Offers 'strange fire before the LORD, which he commanded them not' — 'there went out fire from the LORD, and devoured them'" }],
+      "ageEvents": [],
+      "funFacts": ["Was a full manager in the earlier 4-person draft of this book; now attached as context to Aaron's tier instead — the death itself is now framed as part of Aaron's story, not its own separate tier."]
+    },
+    {
+      "id": "abihu", "name": "Abihu", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Leviticus 10:1-2", "note": "Dies alongside Nadab, offering unauthorized fire in his censer" }],
+      "ageEvents": []
+    },
+    {
+      "id": "eleazar", "name": "Eleazar", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [
+        { "ref": "Leviticus 10:6", "note": "Told, with Ithamar, not to mourn his brothers' deaths publicly" },
+        { "ref": "Leviticus 10:16", "note": "Questioned by Moses over the sin offering, alongside Ithamar; Aaron answers for both" }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ithamar", "name": "Ithamar", "role": "named",
+      "genealogy": { "father": "aaron", "mother": "elisheba", "spouses": [], "children": [] },
+      "verses": [{ "ref": "Leviticus 10:6, 16", "note": "Same episodes as Eleazar" }],
+      "ageEvents": []
+    },
+    {
+      "id": "shelomith", "name": "Shelomith", "role": "named",
+      "genealogy": { "father": "dibri — Leviticus 24:11, not individually indexed", "mother": null, "spouses": ["unnamed — an Egyptian man"], "children": ["unnamed son"] },
+      "verses": [
+        { "ref": "Leviticus 24:10-11", "note": "Named as the mother of a man who blasphemed 'the name of the LORD' in a camp fight" },
+        { "ref": "Leviticus 24:23", "note": "Her son is stoned per the LORD's judgment" }
+      ],
+      "ageEvents": [],
+      "funFacts": ["Of the tribe of Dan. Her son himself is never named — only identified by his mother's name and his Egyptian father, itself part of the episode's point (his mixed lineage is raised during the dispute that leads to the blasphemy)."]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Nothing bulk to list — Leviticus names no genealogical rosters."
+  }
+}

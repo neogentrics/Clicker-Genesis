@@ -37,13 +37,16 @@ namespace ClickerGenesis.Core
         public GameObject StatusBanner;
         public TMP_Text StatusLabel;
 
-        [Header("Scribes/Managers tabs (2026-08-04)")]
+        [Header("Scribes/Managers/Support tabs (2026-08-04, 3rd tab added 2026-08-06)")]
         public Button ScribesTabButton;
         public Button ManagersTabButton;
+        public Button SupportTabButton;
         public GameObject ScribeListRoot;
         public GameObject ManagerListRoot;
+        public GameObject SupportListRoot;
         public Image ScribesTabBackground;
         public Image ManagersTabBackground;
+        public Image SupportTabBackground;
 
         [Header("Scribes header (2026-08-04) - 'Multiplier' caption + bulk-buy cycle button, Scribes tab only")]
         public TMP_Text ScribesHeaderLabel;
@@ -85,36 +88,41 @@ namespace ClickerGenesis.Core
             TapButton.onClick.AddListener(HandleTap);
             if (ClickPowerButton != null) ClickPowerButton.onClick.AddListener(HandleBuyClickPower);
             if (PrestigeButton != null) PrestigeButton.onClick.AddListener(HandlePrestigeClick);
-            if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(false));
-            if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(true));
+            if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(0));
+            if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(1));
+            if (SupportTabButton != null) SupportTabButton.onClick.AddListener(() => SetTab(2));
             if (AutoBuyToggleButton != null) AutoBuyToggleButton.onClick.AddListener(() => Controller?.ToggleManagerAutoBuy());
             if (AutoBuyReserveButton != null) AutoBuyReserveButton.onClick.AddListener(() => Controller?.CycleManagerAutoBuyReserve());
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            SetTab(false);
+            SetTab(0);
             Refresh();
         }
 
-        /// <summary>Same pattern as BuyVerseScreenUI.SetTab for Verses/Chapters.</summary>
-        private void SetTab(bool managers)
+        /// <summary>Same pattern as BuyVerseScreenUI.SetTab for Verses/Chapters. Extended to a
+        /// 3-way tab (2026-08-06, task #161) - 0=Scribes, 1=Managers, 2=Support (submanagers, moved
+        /// out of the Managers tab into their own tab so manager rows aren't crowded).</summary>
+        private void SetTab(int tab)
         {
-            if (ScribeListRoot != null) ScribeListRoot.SetActive(!managers);
-            if (ManagerListRoot != null) ManagerListRoot.SetActive(managers);
-            if (ScribesTabBackground != null) ScribesTabBackground.color = managers ? InactiveTabColor : ActiveTabColor;
-            if (ManagersTabBackground != null) ManagersTabBackground.color = managers ? ActiveTabColor : InactiveTabColor;
+            if (ScribeListRoot != null) ScribeListRoot.SetActive(tab == 0);
+            if (ManagerListRoot != null) ManagerListRoot.SetActive(tab == 1);
+            if (SupportListRoot != null) SupportListRoot.SetActive(tab == 2);
+            if (ScribesTabBackground != null) ScribesTabBackground.color = tab == 0 ? ActiveTabColor : InactiveTabColor;
+            if (ManagersTabBackground != null) ManagersTabBackground.color = tab == 1 ? ActiveTabColor : InactiveTabColor;
+            if (SupportTabBackground != null) SupportTabBackground.color = tab == 2 ? ActiveTabColor : InactiveTabColor;
 
             // 2026-08-06 user correction: the "Managers" title, Auto-Buy toggle, and Reserve button
-            // don't apply to the Managers tab at all (auto-buy/reserve are a Scribes-only bulk-buy
-            // concept) and were previously left visible there for no reason, eating space that
-            // could hold future Managers-tab-specific controls. Grace stays visible on both tabs -
-            // it's the one thing relevant regardless of which tab is open.
+            // don't apply to the Managers/Support tabs at all (auto-buy/reserve are a Scribes-only
+            // bulk-buy concept) and were previously left visible there for no reason, eating space
+            // that could hold future tab-specific controls. Grace stays visible on every tab - it's
+            // the one thing relevant regardless of which tab is open.
             if (ScribesHeaderLabel != null)
             {
-                ScribesHeaderLabel.gameObject.SetActive(!managers);
+                ScribesHeaderLabel.gameObject.SetActive(tab == 0);
                 ScribesHeaderLabel.text = "Multiplier";
             }
-            if (ScribeMultiplierButtonRoot != null) ScribeMultiplierButtonRoot.SetActive(!managers);
-            if (AutoBuyToggleButton != null) AutoBuyToggleButton.gameObject.SetActive(!managers);
-            if (AutoBuyReserveButton != null) AutoBuyReserveButton.gameObject.SetActive(!managers);
+            if (ScribeMultiplierButtonRoot != null) ScribeMultiplierButtonRoot.SetActive(tab == 0);
+            if (AutoBuyToggleButton != null) AutoBuyToggleButton.gameObject.SetActive(tab == 0);
+            if (AutoBuyReserveButton != null) AutoBuyReserveButton.gameObject.SetActive(tab == 0);
         }
 
         private void OnDestroy()
