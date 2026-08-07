@@ -24,12 +24,6 @@ namespace ClickerGenesis.Core
 
         public Transform Content;
         public GameObject RowTemplate;
-        public Sprite ScrollIcon;
-        public Sprite JournalIcon;
-        [Tooltip("Forbidden Fruit tier (2026-08-06) - a real thematic fit from the already-imported Homeless icon pack.")]
-        public Sprite AppleIcon;
-        [Tooltip("Joseph's Storehouse tier (2026-08-06) - grain/famine storehouse fits a bread icon.")]
-        public Sprite BreadIcon;
 
         [Header("Bulk buy (bug #26 - Scribes never had one like Verses/Click Power did)")]
         public Button MultiplierButton;
@@ -38,16 +32,43 @@ namespace ClickerGenesis.Core
         private readonly List<Row> rows = new List<Row>();
         private GameLoopController Controller => GameLoopController.Instance;
 
+        /// <summary>Which book's roster the current `rows` were built from (2026-08-08, multi-book
+        /// economy) - Refresh() compares this against the active book every call and rebuilds the
+        /// row hierarchy from scratch on a mismatch, since a different book can have a different
+        /// tier count entirely (Genesis' 19 vs. Exodus' 10) - reusing stale rows against the new
+        /// roster indexes past the new config's tier list and throws.</summary>
+        private string builtForBookId;
+
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
             if (MultiplierButton != null) MultiplierButton.onClick.AddListener(() => Controller?.CycleScribeBuyMultiplier());
-            BuildRows();
-            Refresh();
+            RebuildRows();
             ForceLayoutRebuild();
             // The immediate refresh above was verified correct in scripted testing but reported
             // still blank in real, uninterrupted Play sessions - see UiRefreshUtil.DeferredFullRefresh.
             StartCoroutine(UiRefreshUtil.DeferredFullRefresh(Content));
+        }
+
+        /// <summary>Destroys any existing rows and rebuilds from the active book's current roster
+        /// (2026-08-08) - called once from Awake and again from Refresh() whenever the active book
+        /// has changed since the rows were last built.</summary>
+        private void RebuildRows()
+        {
+            rows.Clear();
+            // RowTemplate itself lives as a (normally inactive) child of Content, alongside the
+            // instantiated row clones - must be skipped here or a book-switch rebuild destroys the
+            // template BuildRows() needs to Instantiate from, silently leaving the list empty on
+            // every subsequent book switch (2026-08-08, real bug caught testing the Exodus switch).
+            if (Content != null)
+                for (int i = Content.childCount - 1; i >= 0; i--)
+                {
+                    var child = Content.GetChild(i).gameObject;
+                    if (child != RowTemplate) Destroy(child);
+                }
+            BuildRows();
+            builtForBookId = Controller != null ? Controller.ActiveBookResourceId : null;
+            Refresh();
         }
 
         /// <summary>
@@ -121,17 +142,10 @@ namespace ClickerGenesis.Core
                 };
 
                 row.NameText.text = def.displayName;
-                // Icons only where a genuine thematic fit exists in the already-imported asset
-                // packs (2026-08-06, user's "add icons if you can" ask, best-effort) - forcing a
-                // mismatched icon (e.g. a coin on "Cain's City Wall") would read worse than the
-                // existing color-gradient fallback, so most tiers deliberately stay ungraded.
-                row.Icon.sprite = def.id switch
-                {
-                    "arks_manifest" => JournalIcon,
-                    "forbidden_fruit" => AppleIcon,
-                    "josephs_storehouse" => BreadIcon,
-                    _ => null,
-                };
+                // Icon now comes straight from data (2026-08-08, replaces the old per-book
+                // hardcoded C# switch) - ScribeDefinition.icon is set per-tier in each book's
+                // ScribeSetConfig asset, so a new book's roster never requires editing this file.
+                row.Icon.sprite = def.icon;
                 row.Icon.color = row.Icon.sprite != null
                     ? Color.white
                     : Color.Lerp(Hex("#7A5C2E"), Hex("#D4AF37"), tierIndex / (float)(scribes.TierCount - 1));
@@ -146,6 +160,17 @@ namespace ClickerGenesis.Core
         {
             if (Controller == null || Controller.Scribes == null) return;
 
+            // The active book changed since these rows were built (2026-08-08, multi-book
+            // economy) - a different book can have an entirely different tier count, so reusing
+            // the old rows against the new roster would index past its tier list. Rebuild instead
+            // of refreshing in place; RebuildRows() calls back into Refresh() once rows match.
+            if (Controller.ActiveBookResourceId != builtForBookId)
+            {
+                RebuildRows();
+                ForceLayoutRebuild();
+                return;
+            }
+
             var scribes = Controller.Scribes;
             int level = Controller.Levels.CurrentLevel;
 
@@ -158,9 +183,10 @@ namespace ClickerGenesis.Core
             {
                 var def = scribes.GetDefinition(i);
                 var row = rows[i];
-                // Genesis-specific gating (not the active book's cursor) - see
-                // GameLoopController.GenesisNextVerseIndex for why (Phase F book-switching, 2026-08-06).
-                bool unlocked = scribes.IsUnlocked(i, Controller.GenesisNextVerseIndex);
+                // Gates against the ACTIVE book's own progress (2026-08-08) - correct now that
+                // Scribes always mirrors whichever book is active (multi-book economy), unlike the
+                // pre-Exodus Genesis-only special case this used to need.
+                bool unlocked = scribes.IsUnlocked(i, Controller.NextVerseIndex);
 
                 if (!unlocked)
                 {
@@ -172,7 +198,7 @@ namespace ClickerGenesis.Core
                     // report: "they say that they unlock at, like, a verse, but then don't give the
                     // verse reference... needs better instructions"). A player has no way to know
                     // what a bare number like "verse 52" means relative to their current chapter.
-                    row.DescText.text = $"Unlocks at {DescribeGenesisVerse(def.unlockAtVerseIndex)}.";
+                    row.DescText.text = $"Unlocks at {DescribeVerse(def.unlockAtVerseIndex)}.";
                     row.OwnedText.text = "";
                     row.CostText.text = "Locked";
                     row.BuyButton.interactable = false;
@@ -235,14 +261,15 @@ namespace ClickerGenesis.Core
             return c;
         }
 
-        /// <summary>Same helper as ManagerListUI's - converts a Genesis-relative verse index into
-        /// a human "Genesis X:Y" reference (2026-08-06).</summary>
-        private string DescribeGenesisVerse(int verseIndex)
+        /// <summary>Converts a verse index (within the active book) into a human "BookName X:Y"
+        /// reference (2026-08-06, generalized 2026-08-08 for multi-book - same helper shape as
+        /// ManagerListUI's, was hardcoded to "Genesis" before Exodus existed).</summary>
+        private string DescribeVerse(int verseIndex)
         {
-            var db = Controller.GenesisVerseDatabase;
+            var db = Controller.Verses;
             if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
             var v = db.GetVerse(verseIndex);
-            return $"Genesis {v.Reference}";
+            return $"{db.BookName} {v.Reference}";
         }
     }
 }

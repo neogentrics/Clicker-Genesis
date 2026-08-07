@@ -38,6 +38,21 @@ namespace ClickerGenesis.Economy
 
         public ScribeDefinition GetDefinition(int tierIndex) => config.tiers[tierIndex];
 
+        /// <summary>Resolves a manager id (e.g. "paul") to that manager's display name (e.g.
+        /// "Paul") within THIS book's roster only - used by a Law tier's deliveredByManagerId
+        /// attribution (2026-08-08, per CharacterIndex-Integration-Mapping.md §8). Returns null if
+        /// no tier in this book's config has a matching managerId - a law tier's deliveredBy is
+        /// attribution only, not a hard reference, so a miss should degrade gracefully (omit the
+        /// "as taught by" line) rather than throw.</summary>
+        public string GetManagerDisplayName(string managerId)
+        {
+            if (string.IsNullOrEmpty(managerId)) return null;
+            foreach (var tier in config.tiers)
+                if (tier.managerId == managerId)
+                    return tier.managerName;
+            return null;
+        }
+
         public int GetOwned(int tierIndex) => owned[tierIndex];
 
         /// <summary>Whether the player has bought enough verses to unlock this tier for purchase.</summary>
@@ -194,6 +209,44 @@ namespace ClickerGenesis.Economy
             for (int i = 0; i < TierCount; i++)
                 total += GetTierInkPerSecond(i, playerLevel, progressMultiplier, managerBonusBoost);
             return total;
+        }
+
+        /// <summary>Snapshots owned/managerUnlocked/submanagerOwned for a save file (2026-08-08).
+        /// Cloned, not the live arrays - the caller may hold this across a frame boundary while
+        /// serializing.</summary>
+        public int[] ExportOwned() => (int[])owned.Clone();
+        public bool[] ExportManagerUnlocked() => (bool[])managerUnlocked.Clone();
+        public bool[][] ExportSubmanagerOwned()
+        {
+            var result = new bool[submanagerOwned.Length][];
+            for (int i = 0; i < submanagerOwned.Length; i++)
+                result[i] = (bool[])submanagerOwned[i].Clone();
+            return result;
+        }
+
+        /// <summary>Restores owned/managerUnlocked/submanagerOwned from a save file (2026-08-08).
+        /// Length-bounds every copy against THIS book's current config rather than trusting the
+        /// saved array lengths - a roster can grow (more tiers/submanagers added to a book after
+        /// the save was written) or, in principle, shrink, and an old save should load whatever
+        /// still applies rather than throwing.</summary>
+        public void ImportState(int[] savedOwned, bool[] savedManagerUnlocked, bool[][] savedSubmanagerOwned)
+        {
+            if (savedOwned != null)
+                for (int i = 0; i < owned.Length && i < savedOwned.Length; i++)
+                    owned[i] = savedOwned[i];
+
+            if (savedManagerUnlocked != null)
+                for (int i = 0; i < managerUnlocked.Length && i < savedManagerUnlocked.Length; i++)
+                    managerUnlocked[i] = savedManagerUnlocked[i];
+
+            if (savedSubmanagerOwned != null)
+                for (int i = 0; i < submanagerOwned.Length && i < savedSubmanagerOwned.Length; i++)
+                {
+                    var savedTierSubs = savedSubmanagerOwned[i];
+                    if (savedTierSubs == null) continue;
+                    for (int j = 0; j < submanagerOwned[i].Length && j < savedTierSubs.Length; j++)
+                        submanagerOwned[i][j] = savedTierSubs[j];
+                }
         }
     }
 }

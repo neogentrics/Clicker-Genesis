@@ -1,0 +1,567 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: JudgesScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Judges
+  tiers:
+  - id: othniel_deliverer
+    displayName: Othniel the Deliverer
+    flavorText: Israel's first judge, delivering the nation from Chushanrishathaim.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: othniel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Othniel
+    managerFlavorText: Israel's first judge, delivering the nation from Chushanrishathaim.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 67
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: ehuds_blade
+    displayName: Ehud's Hidden Blade
+    flavorText: A left-handed deliverer who hides a dagger on his right thigh to
+      slay Eglon.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ehud
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 17.73082561961462
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.886541280980731
+    unlockAtVerseIndex: 20
+    managerName: Ehud
+    managerFlavorText: A left-handed deliverer who hides a dagger on his right thigh
+      to slay Eglon.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 73
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 400
+    submanagers:
+    - id: eglon
+      displayName: Eglon
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 72
+      unlockCost: 300
+  - id: shamgars_goad
+    displayName: Shamgar's Ox-Goad
+    flavorText: Slays six hundred Philistines with an ox-goad.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: shamgar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 31.43821771531821
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.5719108857659105
+    unlockAtVerseIndex: 40
+    managerName: Shamgar
+    managerFlavorText: Slays six hundred Philistines with an ox-goad.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 89
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 700
+    submanagers: []
+  - id: deborah_prophetess
+    displayName: Deborah the Prophetess
+    flavorText: Judges Israel from beneath a palm tree; summons Barak to battle.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: deborah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 55.742555610178634
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.7871277805089316
+    unlockAtVerseIndex: 65
+    managerName: Deborah
+    managerFlavorText: Judges Israel from beneath a palm tree; summons Barak to battle.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 93
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2000
+    submanagers:
+    - id: jabin
+      displayName: Jabin
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 91
+      unlockCost: 1500
+  - id: baraks_charge
+    displayName: Barak's Charge at Tabor
+    flavorText: Leads ten thousand men down from Tabor at Deborah's word.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: barak
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 98.83615331157479
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4.9418076655787395
+    unlockAtVerseIndex: 90
+    managerName: Barak
+    managerFlavorText: Leads ten thousand men down from Tabor at Deborah's word.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 95
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3500
+    submanagers:
+    - id: sisera
+      displayName: Sisera
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 104
+      unlockCost: 3000
+  - id: jaels_peg
+    displayName: Jael's Tent Peg
+    flavorText: Drives a tent peg through Sisera's temple as he sleeps in her tent.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jael
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 175.24465992810286
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.762232996405142
+    unlockAtVerseIndex: 100
+    managerName: Jael
+    managerFlavorText: Drives a tent peg through Sisera's temple as he sleeps in
+      her tent.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 106
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 8000
+    submanagers:
+    - id: heber
+      displayName: Heber the Kenite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 100
+      unlockCost: 6000
+  - id: gideons_300
+    displayName: Gideon's Three Hundred
+    flavorText: Whittles his army from thirty-two thousand to three hundred before
+      routing Midian.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gideon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 310.72325059538576
+    costGrowthRate: 1.15
+    baseInkPerSecond: 15.536162529769289
+    unlockAtVerseIndex: 145
+    managerName: Gideon
+    managerFlavorText: Whittles his army from thirty-two thousand to three hundred
+      before routing Midian.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 155
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 20000
+    submanagers:
+    - id: joash
+      displayName: Joash
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 169
+      unlockCost: 12000
+    - id: purah
+      displayName: Purah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 194
+      unlockCost: 12000
+    - id: jether
+      displayName: Jether
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 229
+      unlockCost: 12000
+    - id: zebah_zalmunna
+      displayName: Zebah and Zalmunna
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 219
+      unlockCost: 15000
+    - id: oreb_zeeb
+      displayName: Oreb and Zeeb
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 208
+      unlockCost: 15000
+  - id: abimelech_bramble
+    displayName: Abimelech, the Bramble King
+    flavorText: Gideon's son, murders his seventy brothers and crowns himself king
+      of Shechem.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: abimelech
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 550.9379772266598
+    costGrowthRate: 1.15
+    baseInkPerSecond: 27.546898861332988
+    unlockAtVerseIndex: 235
+    managerName: Abimelech
+    managerFlavorText: Gideon's son, murders his seventy brothers and crowns himself
+      king of Shechem.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 245
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 45000
+    submanagers:
+    - id: jotham
+      displayName: Jotham
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 249
+      unlockCost: 30000
+    - id: gaal
+      displayName: Gaal
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 270
+      unlockCost: 30000
+    - id: zebul
+      displayName: Zebul
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 274
+      unlockCost: 35000
+    - id: woman_thebez
+      displayName: The Woman of Thebez
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 297
+      unlockCost: 40000
+  - id: tola_issachar
+    displayName: Tola of Issachar
+    flavorText: Judges Israel twenty-three years, dwelling in mount Ephraim.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: tola
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 976.8585201429116
+    costGrowthRate: 1.15
+    baseInkPerSecond: 48.84292600714558
+    unlockAtVerseIndex: 290
+    managerName: Tola
+    managerFlavorText: Judges Israel twenty-three years, dwelling in mount Ephraim.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 302
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 90000
+    submanagers: []
+  - id: jairs_cities
+    displayName: Jair's Thirty Cities
+    flavorText: Thirty sons ride thirty ass colts over thirty cities in Gilead.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jair_gileadite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1732.0508075688758
+    costGrowthRate: 1.15
+    baseInkPerSecond: 86.60254037844379
+    unlockAtVerseIndex: 300
+    managerName: Jair
+    managerFlavorText: Thirty sons ride thirty ass colts over thirty cities in Gilead.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 304
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150000
+    submanagers: []
+  - id: jephthahs_vow
+    displayName: Jephthah's Vow
+    flavorText: A rejected outcast turned deliverer, bound by a rash vow that costs
+      him his daughter.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jephthah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3071.069083331641
+    costGrowthRate: 1.15
+    baseInkPerSecond: 153.55345416658207
+    unlockAtVerseIndex: 315
+    managerName: Jephthah
+    managerFlavorText: A rejected outcast turned deliverer, bound by a rash vow that
+      costs him his daughter.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 320
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 300000
+    submanagers:
+    - id: jephthahs_daughter
+      displayName: Jephthah's Daughter
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 353
+      unlockCost: 200000
+  - id: ibzan_bethlehem
+    displayName: Ibzan of Bethlehem
+    flavorText: Thirty sons and thirty daughters, judges Israel seven years.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ibzan
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5445.259038234306
+    costGrowthRate: 1.15
+    baseInkPerSecond: 272.2629519117153
+    unlockAtVerseIndex: 360
+    managerName: Ibzan
+    managerFlavorText: Thirty sons and thirty daughters, judges Israel seven years.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 367
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 500000
+    submanagers: []
+  - id: elon_zebulunite
+    displayName: Elon the Zebulunite
+    flavorText: Judges Israel ten years; buried in Aijalon in the country of Zebulun.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9654.893846056288
+    costGrowthRate: 1.15
+    baseInkPerSecond: 482.74469230281437
+    unlockAtVerseIndex: 365
+    managerName: Elon
+    managerFlavorText: Judges Israel ten years; buried in Aijalon in the country
+      of Zebulun.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 370
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 850000
+    submanagers: []
+  - id: abdon_pirathon
+    displayName: Abdon of Pirathon
+    flavorText: Forty sons and thirty nephews that rode on seventy ass colts.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: abdon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 17118.923916031432
+    costGrowthRate: 1.15
+    baseInkPerSecond: 855.9461958015715
+    unlockAtVerseIndex: 370
+    managerName: Abdon
+    managerFlavorText: Forty sons and thirty nephews that rode on seventy ass colts.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 372
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1400000
+    submanagers: []
+  - id: samsons_strength
+    displayName: Samson's Strength
+    flavorText: A Nazarite from the womb, his strength bound to his uncut hair.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: samson
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 30353.265475060358
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1517.6632737530178
+    unlockAtVerseIndex: 390
+    managerName: Samson
+    managerFlavorText: A Nazarite from the womb, his strength bound to his uncut
+      hair.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 398
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2500000
+    submanagers:
+    - id: manoah
+      displayName: Manoah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 376
+      unlockCost: 1500000
+    - id: manoahs_wife
+      displayName: Manoah's Wife
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 377
+      unlockCost: 1500000
+    - id: timnite_wife
+      displayName: Samson's Timnite Wife
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 414
+      unlockCost: 1800000
+  - id: delilahs_snare
+    displayName: Delilah's Snare
+    flavorText: Wears Samson down until he tells her the secret of his strength.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: delilah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 53818.845712416405
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2690.9422856208203
+    unlockAtVerseIndex: 435
+    managerName: Delilah
+    managerFlavorText: Wears Samson down until he tells her the secret of his strength.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 443
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4000000
+    submanagers: []
+  - id: micahs_idols
+    displayName: Micah's Idols
+    flavorText: Makes a graven and molten image, hiring a wandering Levite as his
+      own priest.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: micah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 95425.25683757992
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4771.2628418789955
+    unlockAtVerseIndex: 465
+    managerName: Micah
+    managerFlavorText: Makes a graven and molten image, hiring a wandering Levite
+      as his own priest.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 471
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 7000000
+    submanagers:
+    - id: micahs_mother
+      displayName: Micah's Mother
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 472
+      unlockCost: 4500000
+    - id: jonathan_levite
+      displayName: Jonathan the Levite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 477
+      unlockCost: 4500000
+  - id: levites_concubine
+    displayName: The Levite's Concubine
+    flavorText: His concubine's death at Gibeah becomes the spark for civil war against
+      Benjamin.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: levite_of_ephraim
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 169196.85886940671
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8459.842943470336
+    unlockAtVerseIndex: 505
+    managerName: The Levite of Ephraim
+    managerFlavorText: His concubine's death at Gibeah becomes the spark for civil
+      war against Benjamin.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 515
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12000000
+    submanagers:
+    - id: levites_concubine_sub
+      displayName: The Levite's Concubine
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 515
+      unlockCost: 8000000
+    - id: concubines_father
+      displayName: The Concubine's Father
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 518
+      unlockCost: 8000000
+    - id: old_man_gibeah
+      displayName: The Old Man of Gibeah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 530
+      unlockCost: 8000000
+  - id: war_against_benjamin
+    displayName: The War Against Benjamin
+    flavorText: Inquires of the LORD at Bethel as Israel wars against its own tribe
+      of Benjamin.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: phinehas
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 299999.99999999953
+    costGrowthRate: 1.15
+    baseInkPerSecond: 14999.999999999976
+    unlockAtVerseIndex: 560
+    managerName: Phinehas
+    managerFlavorText: Inquires of the LORD at Bethel as Israel wars against its
+      own tribe of Benjamin.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 571
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 25000000
+    submanagers: []

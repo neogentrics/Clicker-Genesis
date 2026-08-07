@@ -62,5 +62,16 @@ namespace ClickerGenesis.Economy
             balance = 0;
             OnBalanceChanged?.Invoke(balance);
         }
+
+        /// <summary>Restores state from a save file (2026-08-08) — bypasses Add/TrySpend's
+        /// LifetimeEarned/TotalSpent bookkeeping since those totals are themselves being restored
+        /// directly, not re-derived from replayed transactions.</summary>
+        public void LoadState(double savedBalance, double savedLifetimeEarned, double savedTotalSpent)
+        {
+            balance = Math.Max(0, savedBalance);
+            LifetimeEarned = Math.Max(0, savedLifetimeEarned);
+            TotalSpent = Math.Max(0, savedTotalSpent);
+            OnBalanceChanged?.Invoke(balance);
+        }
     }
 }

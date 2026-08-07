@@ -16,6 +16,9 @@ namespace ClickerGenesis.Economy
         public string id;
         public string displayName;
 
+        [Tooltip("Symbolic icon for this submanager's Support-tab row (2026-08-08, data-driven - replaces the old per-book hardcoded C# switch so new books' rosters don't require editing SupportListUI.cs). Left null where no genuine fit exists.")]
+        public Sprite icon;
+
         [Tooltip("\"cost-cutter\" (reduces this tier's next scribe cost by perkAmount) or \"loyalty-boost\" (adds perkAmount to the parent manager's own output-bonus multiplier).")]
         public string perkFlavor;
 
@@ -30,6 +33,16 @@ namespace ClickerGenesis.Economy
     }
 
     /// <summary>
+    /// Person tier (a named manager with genealogy-adjacent flavor) vs. Law/theme tier (a
+    /// teaching/ritual with a purpose and an attributed deliverer instead of a person's own
+    /// story) - 2026-08-08, per CharacterIndex-Integration-Mapping.md §3/§8. Roughly 40% of the
+    /// full 66-book Bible index uses Law (Leviticus's offerings, most of Paul's epistles,
+    /// Hebrews, James, Revelation's visions) - not an edge case once books beyond Genesis/Exodus
+    /// are built.
+    /// </summary>
+    public enum TierType { Person, Law }
+
+    /// <summary>
     /// One scribe tier within a book's roster. Data-only — actual owned-count/cost-curve state
     /// lives in ScribeSystem, matching the InkWallet/VersePricingConfig split.
     /// </summary>
@@ -39,6 +52,24 @@ namespace ClickerGenesis.Economy
         public string id;
         public string displayName;
         [TextArea] public string flavorText;
+
+        [Header("Tier type (2026-08-08 - law/theme tiers: Leviticus's offerings, most of the NT's epistles, Revelation's visions)")]
+        public TierType tierType = TierType.Person;
+
+        [Tooltip("Only meaningful when tierType == Law. Why this teaching/ritual exists - shown in place of a person's relationship/bonus info. Sourced from the character index's own 'purpose' field, never invented.")]
+        [TextArea] public string purpose;
+
+        [Tooltip("Only meaningful when tierType == Law. Attribution only (e.g. \"paul\", \"jesus\") - matches another tier's managerId elsewhere in this SAME book's ScribeSetConfig. NOT a submanager relationship, just who delivers/teaches this content.")]
+        public string deliveredByManagerId;
+
+        [Tooltip("The underlying CharacterIndex character id for this tier's manager (e.g. \"moses\", \"paul\") - distinct from this ScribeDefinition's own tier id above (e.g. \"burning_bush\"). Lets a law tier's deliveredByManagerId resolve to a display name via ScribeSystem.GetManagerDisplayName without string-matching on managerName.")]
+        public string managerId;
+
+        [Tooltip("Scribe-tier icon for the Scribes tab (2026-08-08, data-driven - replaces the old per-book hardcoded C# switch so new books' rosters don't require editing ScribeListUI.cs). Left null to fall back to the color-gradient placeholder.")]
+        public Sprite icon;
+
+        [Tooltip("Manager icon for the Managers tab (2026-08-08, data-driven) - deliberately a separate field from icon above, since a manager's symbolic icon often differs from their tier's own object icon (e.g. Sarah's manager icon is a gift, not her tier's own item). Left null to hide the icon slot on that row.")]
+        public Sprite managerIcon;
 
         public double baseCost;
         public double costGrowthRate;
@@ -67,5 +98,13 @@ namespace ClickerGenesis.Economy
         public List<SubmanagerDefinition> submanagers = new List<SubmanagerDefinition>();
 
         public bool HasManager => managerUnlockLevel > 0 && !string.IsNullOrEmpty(managerName);
+
+        /// <summary>True if this tier should get a row in the Managers tab at all - generalizes
+        /// HasManager (kept above, unchanged, in case other call sites depend on its person-only
+        /// semantics) to also cover Law tiers, which have no managerName/managerUnlockLevel but
+        /// still need a row (2026-08-08).</summary>
+        public bool HasManagerRow => tierType == TierType.Law
+            ? !string.IsNullOrEmpty(purpose)
+            : HasManager;
     }
 }

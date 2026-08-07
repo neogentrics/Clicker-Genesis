@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: DeuteronomyScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Deuteronomy
+  tiers:
+  - id: unworn_sandal
+    displayName: Unworn Sandal
+    flavorText: '''Thy raiment waxed not old upon thee... these forty years.'''
+    tierType: 1
+    purpose: A deliberate historical recap, not a repeat for its own sake - reminds
+      the new generation of the spies' failure at Kadesh-barnea, the defeats of Sihon
+      and Og, and the golden calf, specifically so they don't repeat their parents'
+      unbelief now that they're the ones about to cross in.
+    deliveredByManagerId: moses
+    managerId: wilderness_lessons
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 12
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.6
+    unlockAtVerseIndex: 0
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: two_tablets
+    displayName: Two Tablets
+    flavorText: The Ten Commandments, restated in full to a new generation.
+    tierType: 1
+    purpose: 'Re-given word for word to the generation that was not at Sinai - explicitly
+      framed as THEIR covenant now, not an inherited one: ''The LORD made not this
+      covenant with our fathers, but with us, even us, who are all of us here alive
+      this day'' (5:3).'
+    deliveredByManagerId: moses
+    managerId: ten_commandments
+    icon: {fileID: 21300000, guid: ce52596dcf36a334f983ef43a62dfd9c, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 45.7
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.29
+    unlockAtVerseIndex: 166
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: doorpost_scroll
+    displayName: Doorpost Scroll
+    flavorText: The Shema - bound into daily life, not encountered once and set aside.
+    tierType: 1
+    purpose: '''Hear, O Israel: The LORD our God is one LORD'' - the foundational
+      confession undergirding every other law in the book, meant to be taught constantly
+      and bound into daily life (hands, forehead, doorposts) rather than encountered
+      once and set aside.'
+    deliveredByManagerId: moses
+    managerId: the_shema
+    icon: {fileID: 21300000, guid: 66304532cdab97f4f8b8892aae96a11f, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 174.2
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.71
+    unlockAtVerseIndex: 197
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: boundary_stone
+    displayName: Boundary Stone
+    flavorText: '''Thou shalt not remove thy neighbour''s landmark.'''
+    tierType: 1
+    purpose: 'The bulk of the book (chapters 12-26) - law adapted specifically for
+      settled life in the land, not the wilderness camp: one central place of worship,
+      kingship rules, courts and judges, warfare conduct, property and landmark law.'
+    deliveredByManagerId: moses
+    managerId: laws_for_the_land
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 664
+    costGrowthRate: 1.15
+    baseInkPerSecond: 33.2
+    unlockAtVerseIndex: 348
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: twin_mountains
+    displayName: Twin Mountains
+    flavorText: Blessing from Gerizim, cursing from Ebal - obedience made a staged,
+      communal choice.
+    tierType: 1
+    purpose: A physical ceremony planned for the moment they enter the land - half
+      the tribes standing on Mount Gerizim for blessing, half on Mount Ebal for cursing
+      - making the choice between obedience and disobedience a literal, staged, communal
+      event.
+    deliveredByManagerId: moses
+    managerId: covenant_ceremony
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 2530.2
+    costGrowthRate: 1.15
+    baseInkPerSecond: 126.51
+    unlockAtVerseIndex: 693
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: witness_song
+    displayName: Witness Song
+    flavorText: A song commanded to outlast Moses, testifying after he is gone.
+    tierType: 1
+    purpose: Commanded by God to be written down and taught specifically because
+      it will outlast Moses himself - 'this song shall testify against them as a
+      witness' (31:21) after the people inevitably drift, when there's no living
+      leader left to confront them directly.
+    deliveredByManagerId: moses
+    managerId: song_of_moses
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9641.5
+    costGrowthRate: 1.15
+    baseInkPerSecond: 482.07
+    unlockAtVerseIndex: 854
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: tribal_blessing_scroll
+    displayName: Tribal Blessing Scroll
+    flavorText: Moses' final act - a blessing for each tribe before he climbs the
+      mountain to die.
+    tierType: 1
+    purpose: Moses' final act before going up the mountain to die - a personal blessing
+      for each tribe, echoing Jacob's blessing of his twelve sons back in Genesis
+      49, closing the loop from the family that went down into Egypt to the nation
+      about to enter the land.
+    deliveredByManagerId: moses
+    managerId: blessing_of_tribes
+    icon: {fileID: 21300000, guid: 4d4d49e200b2e2f4ea76f07889d0f7d5, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 36739.7
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1836.99
+    unlockAtVerseIndex: 918
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: mount_nebo
+    displayName: Mount Nebo
+    flavorText: Views the whole land from Pisgah, then dies at 120 - buried by the
+      LORD himself.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: moses
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 140000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7000
+    unlockAtVerseIndex: 842
+    managerName: Moses
+    managerFlavorText: '''His eye was not dim, nor his natural force abated'' - the
+      one personal cost of striking the rock back in Numbers 20.'
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 951
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2000000
+    submanagers:
+    - id: joshua_deut
+      displayName: Joshua
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 842
+      unlockCost: 500000

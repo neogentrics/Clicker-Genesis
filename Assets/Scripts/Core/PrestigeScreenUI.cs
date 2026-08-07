@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using ClickerGenesis.Progression;
 
@@ -152,11 +153,18 @@ namespace ClickerGenesis.Core
         }
 
         /// <summary>Mouse scroll-wheel zoom (2026-08-05, user's explicit ask) - same clamp/step as
-        /// the +/- buttons, just a faster path for a mouse-equipped desktop player.</summary>
+        /// the +/- buttons, just a faster path for a mouse-equipped desktop player. Reads via the
+        /// new Input System (2026-08-08 fix) - the legacy UnityEngine.Input class this used to call
+        /// throws InvalidOperationException every single frame when Player Settings' Active Input
+        /// Handling is set to "Input System Package" only (not "Both"), which this project uses -
+        /// silently broke the feature since it shipped. Sign-only (not magnitude-scaled): one wheel
+        /// notch always applies exactly one ZoomStep, same granularity as a single +/- button
+        /// click, regardless of the raw per-platform scroll-delta units the new API reports.</summary>
         private void Update()
         {
-            float scroll = Input.mouseScrollDelta.y;
-            if (scroll != 0f) Zoom(scroll * ZoomStep);
+            if (Mouse.current == null) return;
+            float scroll = Mouse.current.scroll.ReadValue().y;
+            if (scroll != 0f) Zoom(Mathf.Sign(scroll) * ZoomStep);
         }
 
         private void OnDestroy()

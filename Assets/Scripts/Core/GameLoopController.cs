@@ -4,6 +4,7 @@ using System.Linq;
 using ClickerGenesis.Data;
 using ClickerGenesis.Economy;
 using ClickerGenesis.Progression;
+using ClickerGenesis.Save;
 using UnityEngine;
 
 namespace ClickerGenesis.Core
@@ -15,10 +16,22 @@ namespace ClickerGenesis.Core
     /// </summary>
     public class GameLoopController : MonoBehaviour
     {
+        /// <summary>One book's scribe roster, wired in the Inspector alongside the book it belongs
+        /// to (2026-08-08, multi-book economy) - additionalScribeConfigs holds every book beyond
+        /// Genesis (which keeps its own dedicated scribeConfig field for backwards Inspector
+        /// compatibility).</summary>
+        [System.Serializable]
+        public class BookScribeConfig
+        {
+            public string bookResourceId;
+            public ScribeSetConfig config;
+        }
+
         [Header("Config")]
         [SerializeField] private VersePricingConfig pricingConfig;
         [SerializeField] private XpConfig xpConfig;
         [SerializeField] private ScribeSetConfig scribeConfig;
+        [SerializeField] private List<BookScribeConfig> additionalScribeConfigs = new List<BookScribeConfig>();
         [SerializeField] private string verseResourcePath = "Verses/genesis_1";
         [SerializeField] private double tapAmount = 1;
         [SerializeField] private double startingInk = 0;
@@ -32,7 +45,20 @@ namespace ClickerGenesis.Core
 
         public InkWallet Wallet { get; private set; }
         public LevelSystem Levels { get; private set; }
-        public ScribeSystem Scribes { get; private set; }
+
+        /// <summary>One ScribeSystem per book that actually has a roster authored (2026-08-08,
+        /// multi-book economy - was a single instance when only Genesis existed). Every registered
+        /// book's scribes keep producing Ink in the background regardless of which is active
+        /// (explicit user decision, 2026-08-08) - see EffectiveInkPerSecond, which sums across all
+        /// of these, not just the active one.</summary>
+        private readonly Dictionary<string, ScribeSystem> scribeSystemsByBook = new Dictionary<string, ScribeSystem>();
+
+        /// <summary>The ACTIVE book's scribe roster - what Scribes/Managers/Support tabs display
+        /// and what BuyScribe/BuyManager/BuySubmanager operate on. Null if the active book has no
+        /// roster authored yet.</summary>
+        public ScribeSystem Scribes =>
+            scribeSystemsByBook.TryGetValue(activeBookResourceId, out var s) ? s : null;
+
         public PrestigeSystem Prestige { get; private set; }
         public PrestigeSkillSystem Skills { get; private set; }
         public PrestigeSkillTreeConfig SkillTreeConfig => prestigeSkillTreeConfig;
@@ -52,25 +78,19 @@ namespace ClickerGenesis.Core
         private BookProgress ActiveBook =>
             bookProgress.TryGetValue(activeBookResourceId, out var bp) ? bp : null;
 
-        /// <summary>Scribe/manager unlock gating always reads Genesis' progress specifically, not
-        /// whichever book is currently active (2026-08-06 design decision) - the scribe roster
-        /// (Reed Pen -> Joseph's Storehouse) is Genesis-only content per its theming; if this read
-        /// the active book's cursor instead, switching to a fresh book would make already-unlocked
-        /// scribes look locked again the instant that book's own cursor starts at 0. Public so
-        /// ScribeListUI/ManagerListUI can gate their own display the same way instead of reading
-        /// the (now book-relative, post-Phase-F) NextVerseIndex directly - fixes a real latent bug
-        /// where switching away from Genesis would make the Scribes/Managers tabs read the new
-        /// active book's fresh cursor and show already-unlocked scribes as locked again.</summary>
-        public int GenesisNextVerseIndex =>
-            bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.NextVerseIndex : 0;
+        // ---------- Save/load (2026-08-08, per Save-System-Design.md) ----------
+        private ISaveStorage saveStorage;
+        private float autoSaveTimer;
+        private const float AutoSaveIntervalSeconds = 30f;
 
-        /// <summary>Genesis' own VerseDatabase specifically, independent of whichever book is
-        /// currently active - lets UI convert a Genesis-relative unlockAtVerseIndex (scribes,
-        /// managers, submanagers) into a real "Genesis X:Y" reference for locked-state text
-        /// (2026-08-06, submanager system).</summary>
-        public VerseDatabase GenesisVerseDatabase =>
-            bookProgress.TryGetValue(GenesisResourceId, out var g) ? g.Database : null;
-
+        /// <summary>Superseded 2026-08-08 (multi-book economy): scribe/manager gating used to
+        /// always read Genesis' progress specifically regardless of the active book, since only
+        /// Genesis had a roster and the Scribes/Managers/Support tabs needed to keep showing it
+        /// correctly no matter which book was active. Now that every book gets its OWN roster and
+        /// the tabs only ever display the ACTIVE book's roster (explicit user decision,
+        /// 2026-08-08), gating against NextVerseIndex/Verses (the active-book proxies below) is
+        /// simply correct again - Genesis' scribes only ever need Genesis' progress because they
+        /// only ever show while Genesis is active.</summary>
         public VerseDatabase Verses => ActiveBook?.Database;
 
         /// <summary>Index (within the ACTIVE book) of the next verse that has not yet been
@@ -342,25 +362,67 @@ namespace ClickerGenesis.Core
             // Play mode actually starts, so this still persists correctly at runtime.
             if (Application.isPlaying) DontDestroyOnLoad(gameObject);
 
+            BuildFreshState();
+
+            if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
+
+            // Save/load (2026-08-08, per Save-System-Design.md) - LoadGame() overwrites the
+            // just-built default/fresh state above ONLY if a real save exists on disk; a fresh
+            // install's SaveData comes back with an empty activeBookResourceId, which LoadGame()
+            // treats as "nothing to apply" so a brand-new player still starts at Genesis verse 0.
+            if (Application.isPlaying)
+            {
+                saveStorage = new LocalFileSaveStorage();
+                LoadGame();
+            }
+        }
+
+        /// <summary>Builds the same brand-new-player default state Awake() has always built -
+        /// factored out (2026-08-08) so the Settings screen's "Delete Saved Game" reset option can
+        /// reuse it directly instead of duplicating this logic. Wipes every in-memory system back
+        /// to a fresh Genesis-at-verse-0 start; does NOT touch disk (ResetGameAndDeleteSave below
+        /// is the caller responsible for actually deleting the save file first).</summary>
+        private void BuildFreshState()
+        {
             Wallet = new InkWallet(startingInk);
             Levels = new LevelSystem(xpConfig);
-            if (scribeConfig != null) Scribes = new ScribeSystem(scribeConfig);
+            scribeSystemsByBook.Clear();
+            if (scribeConfig != null) scribeSystemsByBook[GenesisResourceId] = new ScribeSystem(scribeConfig);
+            foreach (var entry in additionalScribeConfigs)
+                if (entry.config != null && !string.IsNullOrEmpty(entry.bookResourceId))
+                    scribeSystemsByBook[entry.bookResourceId] = new ScribeSystem(entry.config);
             Prestige = new PrestigeSystem();
             Skills = new PrestigeSkillSystem(prestigeSkillTreeConfig);
 
             // Genesis is always the hardcoded starting book (2026-08-06) - seeded into
             // bookProgress exactly like the old single-book init, just wrapped in a BookProgress
             // record now so other books can get their own records alongside it.
+            bookProgress.Clear();
             activeBookResourceId = GenesisResourceId;
             var genesisDb = VerseDatabase.LoadFromResources(verseResourcePath);
             bookProgress[activeBookResourceId] = new BookProgress(activeBookResourceId, "Genesis", genesisDb);
 
-            if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
+            ClickPowerLevel = 0;
+            ProgressMultiplier = 1f;
+        }
+
+        /// <summary>Settings screen's "Delete Saved Game" option (2026-08-08, explicit user ask -
+        /// "if the game is corrupt or something went wrong, we can undo it," on top of the plain
+        /// full-restart use case). Deletes the on-disk save FIRST, then rebuilds in-memory state to
+        /// the same fresh-install shape Awake() would produce - so even if the caller's own
+        /// subsequent scene load to MainMenu were somehow skipped, the live game state is already
+        /// correct, not just the file on disk.</summary>
+        public void ResetGameAndDeleteSave()
+        {
+            saveStorage?.DeleteSave();
+            BuildFreshState();
+            autoSaveTimer = 0f;
+            OnStateChanged?.Invoke();
         }
 
         private void Update()
         {
-            if (Scribes == null) return;
+            if (scribeSystemsByBook.Count == 0) return;
 
             bool changed = false;
 
@@ -377,31 +439,186 @@ namespace ClickerGenesis.Core
             // allocations, no UI work) — this is not the kind of per-frame cost that caused the
             // forced-UI-rebuild lag in bug #22. Opt-out toggle + a spendable-reserve floor added
             // per the user's follow-up request once they'd seen it always-on for a while.
+            // Loops every registered book's roster (2026-08-08, multi-book economy), not just the
+            // active one - a manager keeps auto-buying for a book you've switched away from, same
+            // "scribes keep working in the background" rule EffectiveInkPerSecond follows.
             if (GameSettings.ManagerAutoBuyEnabled)
             {
                 double reserve = GameSettings.ManagerAutoBuyReserve;
-                for (int i = 0; i < Scribes.TierCount; i++)
+                foreach (var kvp in scribeSystemsByBook)
                 {
-                    if (!Scribes.IsManagerUnlocked(i)) continue;
-                    if (!Scribes.IsUnlocked(i, GenesisNextVerseIndex)) continue;
+                    var sys = kvp.Value;
+                    int verseIndex = VerseIndexForBook(kvp.Key);
+                    for (int i = 0; i < sys.TierCount; i++)
+                    {
+                        if (!sys.IsManagerUnlocked(i)) continue;
+                        if (!sys.IsUnlocked(i, verseIndex)) continue;
 
-                    double cost = Scribes.GetNextCost(i);
-                    if (Wallet.Balance - cost < reserve) continue;
-                    if (!Wallet.TrySpend(cost)) continue;
+                        double cost = sys.GetNextCost(i);
+                        if (Wallet.Balance - cost < reserve) continue;
+                        if (!Wallet.TrySpend(cost)) continue;
 
-                    Scribes.Buy(i);
-                    changed = true;
+                        sys.Buy(i);
+                        changed = true;
+                    }
                 }
             }
 
             if (changed) OnStateChanged?.Invoke();
+
+            // Debounced periodic save (2026-08-08) - on top of the forced synchronous saves in
+            // OnApplicationPause/OnApplicationQuit below. §6's reasoning: save-on-every-change is
+            // the most robust option but the most I/O; a throttled interval is the safer default
+            // for a mobile target, since a desktop session that's just idling with the window
+            // open still wants SOME periodic safety net beyond "only saves when backgrounded."
+            if (saveStorage != null)
+            {
+                autoSaveTimer += Time.deltaTime;
+                if (autoSaveTimer >= AutoSaveIntervalSeconds)
+                {
+                    autoSaveTimer = 0f;
+                    SaveGame();
+                }
+            }
         }
+
+        /// <summary>Android has no guaranteed quit event - OnApplicationPause(true) is the last
+        /// reliable hook before the OS may kill a backgrounded process, so it forces an immediate
+        /// synchronous save rather than waiting for the next debounced autosave tick (§6).</summary>
+        private void OnApplicationPause(bool pauseStatus)
+        {
+            if (pauseStatus) SaveGame();
+        }
+
+        private void OnApplicationQuit()
+        {
+            SaveGame();
+        }
+
+        /// <summary>Writes the current live state to disk via saveStorage. Safe to call anytime
+        /// after Awake() - no-ops if saveStorage hasn't been set up yet (e.g. called from an
+        /// editor-time context outside Play mode).</summary>
+        public void SaveGame()
+        {
+            if (saveStorage == null) return;
+            saveStorage.Save(CaptureSaveData());
+        }
+
+        private void LoadGame()
+        {
+            var data = saveStorage.Load();
+            // A fresh install's SaveData comes back with activeBookResourceId still at its C#
+            // default (null/empty) - that's the signal to leave Awake()'s just-built default
+            // state alone rather than applying an empty save over it.
+            if (string.IsNullOrEmpty(data.activeBookResourceId)) return;
+
+            ApplySaveData(data);
+            OnStateChanged?.Invoke();
+        }
+
+        /// <summary>Builds a SaveData snapshot of the current live state - the save-file
+        /// counterpart to ApplySaveData below. Walks every system's own public state rather than
+        /// duplicating values, so this can't silently drift from what SaveGame actually persists.</summary>
+        public SaveData CaptureSaveData()
+        {
+            var data = new SaveData();
+
+            data.economy.inkBalance = Wallet.Balance;
+            data.economy.inkLifetimeEarned = Wallet.LifetimeEarned;
+            data.economy.inkTotalSpent = Wallet.TotalSpent;
+            data.economy.clickPowerLevel = ClickPowerLevel;
+            data.economy.progressMultiplier = ProgressMultiplier;
+            foreach (var kvp in scribeSystemsByBook)
+            {
+                var sys = kvp.Value;
+                var bookState = new BookScribeState { bookResourceId = kvp.Key };
+                bookState.owned.AddRange(sys.ExportOwned());
+                bookState.managerUnlocked.AddRange(sys.ExportManagerUnlocked());
+                foreach (var tierSubs in sys.ExportSubmanagerOwned())
+                    bookState.submanagerOwned.Add(new TierSubmanagerState { owned = new List<bool>(tierSubs) });
+                data.economy.scribeBooks.Add(bookState);
+            }
+
+            data.progression.totalXp = Levels.TotalXp;
+            data.progression.currentLevel = Levels.CurrentLevel;
+
+            data.prestige.grace = Prestige.Grace;
+            data.prestige.graceEverSpent = Prestige.GraceEverSpent;
+            data.prestige.freePrestigeCount = Prestige.FreePrestigeCount;
+            data.prestige.resetPrestigeCount = Prestige.ResetPrestigeCount;
+            foreach (var kvp in Skills.ExportRanks())
+                data.prestige.skillRanks.Add(new SkillRankEntry { nodeId = kvp.Key, rank = kvp.Value });
+
+            foreach (var kvp in bookProgress)
+            {
+                var bp = kvp.Value;
+                data.books.Add(new BookProgressEntry
+                {
+                    resourceId = bp.ResourceId,
+                    nextVerseIndex = bp.NextVerseIndex,
+                    unlockedChapterNumber = bp.UnlockedChapterNumber,
+                    chaptersCompletedInBook = bp.ChaptersCompletedInBook
+                });
+            }
+            data.activeBookResourceId = activeBookResourceId;
+
+            return data;
+        }
+
+        /// <summary>Restores live state from a loaded save file - the counterpart to
+        /// CaptureSaveData above. A book referenced in the save but not yet touched this session
+        /// (i.e. not Genesis) gets a fresh BookProgress record created and its VerseDatabase
+        /// lazy-loaded, same as SwitchActiveBook's own lazy-load path.</summary>
+        private void ApplySaveData(SaveData data)
+        {
+            Wallet.LoadState(data.economy.inkBalance, data.economy.inkLifetimeEarned, data.economy.inkTotalSpent);
+            ClickPowerLevel = data.economy.clickPowerLevel;
+            ProgressMultiplier = data.economy.progressMultiplier;
+
+            foreach (var bookState in data.economy.scribeBooks)
+            {
+                if (!scribeSystemsByBook.TryGetValue(bookState.bookResourceId, out var sys)) continue;
+                var submanagerOwned = new bool[bookState.submanagerOwned.Count][];
+                for (int i = 0; i < bookState.submanagerOwned.Count; i++)
+                    submanagerOwned[i] = bookState.submanagerOwned[i].owned.ToArray();
+                sys.ImportState(bookState.owned.ToArray(), bookState.managerUnlocked.ToArray(), submanagerOwned);
+            }
+
+            Levels.LoadState(data.progression.totalXp, data.progression.currentLevel);
+
+            Prestige.LoadState(data.prestige.grace, data.prestige.graceEverSpent,
+                data.prestige.freePrestigeCount, data.prestige.resetPrestigeCount);
+            Skills.LoadState(data.prestige.skillRanks.Select(e => new KeyValuePair<string, int>(e.nodeId, e.rank)));
+
+            foreach (var entry in data.books)
+            {
+                if (!bookProgress.TryGetValue(entry.resourceId, out var bp))
+                {
+                    bp = new BookProgress(entry.resourceId, CanonicalBookOrder.DisplayNameOf(entry.resourceId));
+                    bookProgress[entry.resourceId] = bp;
+                }
+                if (bp.Database == null)
+                    bp.Database = VerseDatabase.LoadFromResources($"Verses/{entry.resourceId}");
+                bp.NextVerseIndex = entry.nextVerseIndex;
+                bp.UnlockedChapterNumber = entry.unlockedChapterNumber;
+                bp.ChaptersCompletedInBook = entry.chaptersCompletedInBook;
+            }
+
+            if (!string.IsNullOrEmpty(data.activeBookResourceId) && bookProgress.ContainsKey(data.activeBookResourceId))
+                activeBookResourceId = data.activeBookResourceId;
+        }
+
+        /// <summary>Verse progress for a specific book's own BookProgress record, independent of
+        /// which book is currently active (2026-08-08) - lets a non-active book's scribe system
+        /// still gate correctly against its own progress (manager auto-buy, background income).</summary>
+        private int VerseIndexForBook(string bookResourceId) =>
+            bookProgress.TryGetValue(bookResourceId, out var bp) ? bp.NextVerseIndex : 0;
 
         /// <summary>Attempts to buy one more of a scribe tier. Returns false if unaffordable, locked, or config missing.</summary>
         public bool BuyScribe(int tierIndex)
         {
             if (Scribes == null) return false;
-            if (!Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return false;
+            if (!Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return false;
 
             double cost = Scribes.GetNextCost(tierIndex);
             if (!Wallet.TrySpend(cost)) return false;
@@ -427,7 +644,7 @@ namespace ClickerGenesis.Core
 
         public bool BuyManager(int tierIndex)
         {
-            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, EffectiveManagerLevel, GenesisNextVerseIndex)) return false;
+            if (Scribes == null || !Scribes.CanUnlockManager(tierIndex, EffectiveManagerLevel, NextVerseIndex)) return false;
 
             double cost = Scribes.GetDefinition(tierIndex).managerUnlockCost;
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
@@ -438,11 +655,11 @@ namespace ClickerGenesis.Core
         }
 
         /// <summary>Hires a submanager (2026-08-06) - gated on the character's own real
-        /// first-mention verse (GenesisNextVerseIndex, same Genesis-specific reasoning as every
-        /// other scribe/manager gate) rather than the active book's cursor.</summary>
+        /// first-mention verse within their book (the active book's NextVerseIndex, 2026-08-08 -
+        /// see the multi-book economy note on Verses above for why this is correct now).</summary>
         public bool BuySubmanager(int tierIndex, int subIndex)
         {
-            if (Scribes == null || !Scribes.CanBuySubmanager(tierIndex, subIndex, GenesisNextVerseIndex, EffectiveManagerLevel)) return false;
+            if (Scribes == null || !Scribes.CanBuySubmanager(tierIndex, subIndex, NextVerseIndex, EffectiveManagerLevel)) return false;
 
             double cost = Scribes.GetSubmanagerDefinition(tierIndex, subIndex).unlockCost;
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
@@ -476,7 +693,7 @@ namespace ClickerGenesis.Core
         /// resolves to however many the current wallet balance can actually afford.</summary>
         public double ScribeBulkCost(int tierIndex)
         {
-            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return 0;
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
             var def = Scribes.GetDefinition(tierIndex);
             int owned = Scribes.GetOwned(tierIndex);
             int count = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
@@ -491,7 +708,7 @@ namespace ClickerGenesis.Core
         /// were actually bought.</summary>
         public int BuyScribeBulk(int tierIndex)
         {
-            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, GenesisNextVerseIndex)) return 0;
+            if (Scribes == null || !Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return 0;
 
             int target = ScribeBuyMultiplier == MaxBuyMultiplier ? MaxAffordableScribeCount(tierIndex) : ScribeBuyMultiplier;
             int bought = 0;
@@ -620,13 +837,17 @@ namespace ClickerGenesis.Core
         {
             get
             {
-                if (Scribes == null) return 0;
+                if (scribeSystemsByBook.Count == 0) return 0;
                 double skillIncomeBoost = 1.0
                     + Skills.GetTotalEffect(SkillEffectType.IncomeMultiplier)
                     + Skills.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost)
                     + Skills.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost);
                 double managerBonusBoost = Skills.GetTotalEffect(SkillEffectType.ManagerBonusBoost);
-                double scribeIncome = Scribes.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier, managerBonusBoost) * skillIncomeBoost;
+                // Sums every registered book's roster (2026-08-08, multi-book economy), not just
+                // the active one - a book's scribes keep earning Ink in the background after
+                // switching away, explicit user decision.
+                double scribeIncome = scribeSystemsByBook.Values
+                    .Sum(s => s.TotalInkPerSecond(Levels.CurrentLevel, ProgressMultiplier, managerBonusBoost)) * skillIncomeBoost;
 
                 double resetBaseBonus = Prestige.ResetPrestigeCount * ResetBaseInkPerSecondPerReset;
                 double bookCompletionMultiplier = (BooksCompletedCount > 0 && Prestige.ResetPrestigeCount > 0)
@@ -713,7 +934,10 @@ namespace ClickerGenesis.Core
                 Levels.ResetForPrestige();
                 Wallet.ResetBalance();
                 ClickPowerLevel = 0;
-                Scribes.ResetOwned();
+                // Every registered book's scribe owned-counts reset (2026-08-08), not just the
+                // active book's - a reset wipes the whole shared economy, matching how Ink/Click
+                // Power/Level reset globally too.
+                foreach (var sys in scribeSystemsByBook.Values) sys.ResetOwned();
             }
 
             OnStateChanged?.Invoke();

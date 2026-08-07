@@ -23,6 +23,7 @@ namespace ClickerGenesis.Core
         private class Row
         {
             public int TierIndex;
+            public Image Icon;
             public TMP_Text NameText;
             public TMP_Text DescText;
             public TMP_Text CostText;
@@ -35,13 +36,32 @@ namespace ClickerGenesis.Core
         private readonly List<Row> rows = new List<Row>();
         private GameLoopController Controller => GameLoopController.Instance;
 
+        /// <summary>See ScribeListUI's field of the same name - which book's roster `rows` were
+        /// built from (2026-08-08, multi-book economy).</summary>
+        private string builtForBookId;
+
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            BuildRows();
-            Refresh();
+            RebuildRows();
             ForceLayoutRebuild();
             StartCoroutine(UiRefreshUtil.DeferredFullRefresh(Content));
+        }
+
+        /// <summary>See ScribeListUI.RebuildRows for why this exists and why RowTemplate is
+        /// skipped when clearing Content's children.</summary>
+        private void RebuildRows()
+        {
+            rows.Clear();
+            if (Content != null)
+                for (int i = Content.childCount - 1; i >= 0; i--)
+                {
+                    var child = Content.GetChild(i).gameObject;
+                    if (child != RowTemplate) Destroy(child);
+                }
+            BuildRows();
+            builtForBookId = Controller != null ? Controller.ActiveBookResourceId : null;
+            Refresh();
         }
 
         private void OnDestroy()
@@ -80,22 +100,36 @@ namespace ClickerGenesis.Core
             for (int i = 0; i < scribes.TierCount; i++)
             {
                 var def = scribes.GetDefinition(i);
-                if (!def.HasManager) continue;
+                // Was def.HasManager - generalized 2026-08-08 to also cover Law tiers (a
+                // teaching/ritual with a purpose instead of a person), which have neither
+                // managerName nor managerUnlockLevel set and would otherwise silently never get a
+                // row at all. See ScribeDefinition.HasManagerRow's doc comment.
+                if (!def.HasManagerRow) continue;
 
                 int tierIndex = i;
                 var rowGo = Instantiate(RowTemplate, Content);
                 rowGo.SetActive(true);
-                rowGo.name = $"ManagerRow_{def.managerName}";
+                rowGo.name = def.tierType == ClickerGenesis.Economy.TierType.Law
+                    ? $"LawRow_{def.displayName}"
+                    : $"ManagerRow_{def.managerName}";
 
                 var row = new Row
                 {
                     TierIndex = tierIndex,
+                    Icon = rowGo.transform.Find("Icon").GetComponent<Image>(),
                     NameText = rowGo.transform.Find("Name").GetComponent<TMP_Text>(),
                     DescText = rowGo.transform.Find("Desc").GetComponent<TMP_Text>(),
                     CostText = rowGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
                     BuyButton = rowGo.transform.Find("BuyButton").GetComponent<Button>()
                 };
                 EnableCostTextAutoSize(row.CostText);
+                // Icon now comes straight from data (2026-08-08, replaces the old per-book
+                // hardcoded C# switch) - ScribeDefinition.managerIcon is set per-tier in each
+                // book's ScribeSetConfig asset, so a new book's roster never requires editing this
+                // file. Deliberately a separate field from the scribe tier's own icon - a
+                // manager's symbolic icon often differs from their tier's object icon.
+                row.Icon.sprite = def.managerIcon;
+                row.Icon.color = row.Icon.sprite != null ? Color.white : new Color(0, 0, 0, 0);
                 row.BuyButton.onClick.AddListener(() => Controller.BuyManager(tierIndex));
                 rows.Add(row);
             }
@@ -109,15 +143,16 @@ namespace ClickerGenesis.Core
             text.fontSizeMax = text.fontSize;
         }
 
-        /// <summary>Converts a Genesis-relative verse index into a human "Genesis X:Y" reference
-        /// (2026-08-06) - falls back to a plain index if Genesis' own VerseDatabase isn't loaded
-        /// yet for any reason.</summary>
-        private string DescribeGenesisVerse(int verseIndex)
+        /// <summary>Converts a verse index (within the active book) into a human "BookName X:Y"
+        /// reference (2026-08-06, generalized 2026-08-08 for multi-book - was hardcoded to
+        /// "Genesis" before Exodus existed) - falls back to a plain index if the active book's
+        /// VerseDatabase isn't loaded yet for any reason.</summary>
+        private string DescribeVerse(int verseIndex)
         {
-            var db = Controller.GenesisVerseDatabase;
+            var db = Controller.Verses;
             if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
             var v = db.GetVerse(verseIndex);
-            return $"Genesis {v.Reference}";
+            return $"{db.BookName} {v.Reference}";
         }
 
         /// <summary>Color-codes one requirement line green (satisfied) or red (unsatisfied)
@@ -132,6 +167,15 @@ namespace ClickerGenesis.Core
         private void Refresh()
         {
             if (Controller == null || Controller.Scribes == null) return;
+
+            // See ScribeListUI.Refresh's identical check for why (2026-08-08, multi-book economy).
+            if (Controller.ActiveBookResourceId != builtForBookId)
+            {
+                RebuildRows();
+                ForceLayoutRebuild();
+                return;
+            }
+
             var scribes = Controller.Scribes;
             int level = Controller.EffectiveManagerLevel;
             // Overseer's Wisdom (Grace Skill Tree) boosts every manager's output bonus - the row
@@ -142,6 +186,36 @@ namespace ClickerGenesis.Core
             foreach (var row in rows)
             {
                 var def = scribes.GetDefinition(row.TierIndex);
+
+                // Law tier (2026-08-08): a teaching/ritual, not a person - shown once reachable
+                // with no separate Ink cost or level gate (informational, not a second purchase
+                // step, per CharacterIndex-Integration-Mapping.md §8's explicit design call).
+                if (def.tierType == ClickerGenesis.Economy.TierType.Law)
+                {
+                    row.NameText.text = def.displayName;
+                    bool reachable = scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
+
+                    if (reachable)
+                    {
+                        string deliveredByLine = "";
+                        if (!string.IsNullOrEmpty(def.deliveredByManagerId))
+                        {
+                            string deliveredByName = scribes.GetManagerDisplayName(def.deliveredByManagerId);
+                            if (!string.IsNullOrEmpty(deliveredByName))
+                                deliveredByLine = $"\n<i>as taught by {deliveredByName}</i>";
+                        }
+                        row.DescText.text = def.purpose + deliveredByLine;
+                    }
+                    else
+                    {
+                        row.DescText.text = ReqLine(false, "", $"Reach {DescribeVerse(def.unlockAtVerseIndex)}");
+                    }
+
+                    row.CostText.text = "—";
+                    row.BuyButton.interactable = false;
+                    continue;
+                }
+
                 row.NameText.text = def.managerName;
 
                 bool active = scribes.IsManagerActive(row.TierIndex, level);
@@ -149,14 +223,14 @@ namespace ClickerGenesis.Core
                 bool levelEligible = scribes.IsManagerLevelEligible(row.TierIndex, level);
                 // A manager tied to a scribe tier the player hasn't unlocked yet (verse progress)
                 // must stay locked even if the level threshold is already met - fixes a real bug
-                // where Noah could be bought before Ark's Manifest itself was unlocked. Genesis-
-                // specific gating (not the active book's cursor) - see
-                // GameLoopController.GenesisNextVerseIndex for why (Phase F book-switching, 2026-08-06).
-                bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.GenesisNextVerseIndex);
+                // where Noah could be bought before Ark's Manifest itself was unlocked. Gates
+                // against the ACTIVE book's own progress (2026-08-08) - correct now that Scribes
+                // always mirrors whichever book is active (multi-book economy).
+                bool scribeTierUnlocked = scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
                 // The manager's own character verse (real CharacterIndex data, 2026-08-06) -
                 // deliberately separate from scribeTierUnlocked above, see ScribeSystem's doc
                 // comment on IsManagerVerseReached for why they can't share a field.
-                bool managerVerseReached = scribes.IsManagerVerseReached(row.TierIndex, Controller.GenesisNextVerseIndex);
+                bool managerVerseReached = scribes.IsManagerVerseReached(row.TierIndex, Controller.NextVerseIndex);
                 bool allRequirementsMet = scribeTierUnlocked && managerVerseReached && levelEligible;
 
                 // Redesigned 2026-08-06 (task #160, real user correction - the first pass only ever
@@ -182,8 +256,8 @@ namespace ClickerGenesis.Core
                     {
                         ReqLine(scribeTierUnlocked, $"{def.displayName} unlocked", $"Unlock {def.displayName} first"),
                         ReqLine(managerVerseReached,
-                            $"{DescribeGenesisVerse(def.managerUnlockAtVerseIndex)} reached",
-                            $"Reach {DescribeGenesisVerse(def.managerUnlockAtVerseIndex)}"),
+                            $"{DescribeVerse(def.managerUnlockAtVerseIndex)} reached",
+                            $"Reach {DescribeVerse(def.managerUnlockAtVerseIndex)}"),
                         ReqLine(levelEligible, $"Level {def.managerUnlockLevel} reached", $"Reach level {def.managerUnlockLevel}")
                     };
                     row.DescText.text = string.Join("\n", lines);

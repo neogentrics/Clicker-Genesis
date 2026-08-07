@@ -61,5 +61,15 @@ namespace ClickerGenesis.Progression
             TotalXp = 0;
             CurrentLevel = 1;
         }
+
+        /// <summary>Restores state from a save file (2026-08-08) — sets TotalXp/CurrentLevel
+        /// directly rather than replaying AddXp, since CurrentLevel is itself the saved value, not
+        /// something to re-derive (a save written under an older XpConfig curve should still load
+        /// at the level the player actually reached, not whatever the current curve would compute).</summary>
+        public void LoadState(int savedTotalXp, int savedCurrentLevel)
+        {
+            TotalXp = Math.Max(0, savedTotalXp);
+            CurrentLevel = Math.Max(1, savedCurrentLevel);
+        }
     }
 }

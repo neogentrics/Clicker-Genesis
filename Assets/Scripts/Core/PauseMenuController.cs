@@ -37,6 +37,12 @@ namespace ClickerGenesis.Core
         public TMP_Text StatsContentLabel;
         public Button StatsBackButton;
 
+        [Header("Credits panel (2026-08-07) - real third-party asset attribution, built now that pre-releases go out to testers")]
+        public Button CreditsButton;
+        public GameObject CreditsPanel;
+        public TMP_Text CreditsContentLabel;
+        public Button CreditsBackButton;
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -68,6 +74,9 @@ namespace ClickerGenesis.Core
             }
             if (StatsBackButton != null) StatsBackButton.onClick.AddListener(CloseStats);
             if (StatsPanel != null) StatsPanel.SetActive(false);
+            if (CreditsButton != null) CreditsButton.onClick.AddListener(OpenCredits);
+            if (CreditsBackButton != null) CreditsBackButton.onClick.AddListener(CloseCredits);
+            if (CreditsPanel != null) CreditsPanel.SetActive(false);
             if (AchievementsButton != null)
             {
                 AchievementsButton.interactable = false;
@@ -186,6 +195,74 @@ namespace ClickerGenesis.Core
             if (!any) sb.Append("None yet.\n");
 
             return sb.ToString();
+        }
+
+        // Set when Credits was opened directly from the Main Menu's own info button (no paused
+        // game to return to), rather than via the in-game Pause overlay's Credits button - tells
+        // CloseCredits() whether "back" means "show the pause list again" or "close entirely".
+        private bool _creditsOpenedStandalone;
+
+        /// <summary>Real third-party attribution (2026-08-07) - the user's explicit call that
+        /// credits can no longer wait for a later build now that pre-release testers are
+        /// downloading real GitHub releases. Static text, not data-driven - this list only grows
+        /// when a new asset actually gets wired into something, same "log it when it's used, not
+        /// when it's imported" rule as the CLAUDE.md Assets &amp; Credits tracking section.</summary>
+        private void OpenCredits()
+        {
+            if (CreditsContentLabel != null) CreditsContentLabel.text = BuildCreditsText();
+            if (MainPanel != null) MainPanel.SetActive(false);
+            if (CreditsPanel != null) CreditsPanel.SetActive(true);
+        }
+
+        /// <summary>Main Menu's own info/Credits button calls this directly - there is no paused
+        /// game to resume from the menu, so this opens the overlay straight into the Credits
+        /// panel (skipping the Resume/Settings/Stats list) and closes it entirely on Back,
+        /// instead of falling through to that list. Replaces the old ComingSoonButton stub
+        /// (2026-08-07) now that real Credits content exists.</summary>
+        public void ShowCreditsStandalone()
+        {
+            _creditsOpenedStandalone = true;
+            Show();
+            OpenCredits();
+        }
+
+        private void CloseCredits()
+        {
+            if (CreditsPanel != null) CreditsPanel.SetActive(false);
+            if (_creditsOpenedStandalone)
+            {
+                _creditsOpenedStandalone = false;
+                Hide();
+            }
+            else if (MainPanel != null)
+            {
+                MainPanel.SetActive(true);
+            }
+        }
+
+        private static string BuildCreditsText()
+        {
+            return
+                "<b>Scripture</b>\n" +
+                "King James Version (KJV) - public domain.\n" +
+                "\n<b>Art & UI</b>\n" +
+                "Fantasy Wooden GUI Free - Black Hammer\n" +
+                "UI button pack 2 / UI button pack 3 - RR Studio\n" +
+                "Icon packs (scroll, journal) - Homeless\n" +
+                "40 Free Skill/Ability Icons Volume 1 - CaptainCatSparrow\n" +
+                "FREE - RPG Fantasy Spell Icons - Blink\n" +
+                "RPG Item Icons - Concept Hamster\n" +
+                "Modern RPG - Free icons pack - JenniferBertaggia\n" +
+                "SpellBook. Preface - Rexard\n" +
+                "Animal Icons 2D Pack - Ferro Entertainment\n" +
+                "Skybox backdrops - AssetProviderForAll\n" +
+                "\n<b>Fonts</b>\n" +
+                "Georgia / Georgia Bold - Microsoft (prototype build only - a properly licensed " +
+                "serif replaces this before any commercial release)\n" +
+                "\n<b>Tools</b>\n" +
+                "Built with Unity, using Unity-MCP for AI-assisted development.\n" +
+                "\n<i>A few recently-imported icon packs still need their publisher name " +
+                "confirmed before the next release - not omitted on purpose, just not verified yet.</i>";
         }
 
         private void OpenSettings()

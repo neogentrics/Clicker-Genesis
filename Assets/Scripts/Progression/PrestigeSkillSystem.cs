@@ -133,5 +133,24 @@ namespace ClickerGenesis.Progression
             }
             return result;
         }
+
+        /// <summary>Every purchased node id + its rank, regardless of whether it still resolves
+        /// against the current config (2026-08-08, save system) - unlike GetAllPurchased above,
+        /// this doesn't filter through config.nodes, so a save written against an older tree
+        /// shape still round-trips its raw rank data even if a node was since renamed/removed
+        /// (SaveMigrator's job to reconcile that, not this export).</summary>
+        public IEnumerable<KeyValuePair<string, int>> ExportRanks() => ranks;
+
+        /// <summary>Restores rank state from a save file (2026-08-08). Silently ignores node ids
+        /// that no longer exist in the current config - a real day-one bit of forward compat, not
+        /// an edge case, since this tree is explicitly expected to keep growing.</summary>
+        public void LoadState(IEnumerable<KeyValuePair<string, int>> savedRanks)
+        {
+            ranks.Clear();
+            if (savedRanks == null) return;
+            foreach (var kvp in savedRanks)
+                if (!string.IsNullOrEmpty(kvp.Key) && kvp.Value > 0)
+                    ranks[kvp.Key] = kvp.Value;
+        }
     }
 }

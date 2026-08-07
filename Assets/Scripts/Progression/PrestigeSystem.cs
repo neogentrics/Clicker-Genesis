@@ -61,5 +61,14 @@ namespace ClickerGenesis.Progression
             GraceEverSpent += cost;
             return true;
         }
+
+        /// <summary>Restores state from a save file (2026-08-08).</summary>
+        public void LoadState(double savedGrace, double savedGraceEverSpent, int savedFreeCount, int savedResetCount)
+        {
+            Grace = Math.Max(0, savedGrace);
+            GraceEverSpent = Math.Max(0, savedGraceEverSpent);
+            FreePrestigeCount = Math.Max(0, savedFreeCount);
+            ResetPrestigeCount = Math.Max(0, savedResetCount);
+        }
     }
 }

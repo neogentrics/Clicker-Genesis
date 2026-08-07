@@ -18,6 +18,7 @@ namespace ClickerGenesis.Core
         {
             public int TierIndex;
             public int SubIndex;
+            public Image Icon;
             public TMP_Text NameText;
             public TMP_Text DescText;
             public TMP_Text CostText;
@@ -30,13 +31,32 @@ namespace ClickerGenesis.Core
         private readonly List<Row> rows = new List<Row>();
         private GameLoopController Controller => GameLoopController.Instance;
 
+        /// <summary>See ScribeListUI's field of the same name - which book's roster `rows` were
+        /// built from (2026-08-08, multi-book economy).</summary>
+        private string builtForBookId;
+
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            BuildRows();
-            Refresh();
+            RebuildRows();
             ForceLayoutRebuild();
             StartCoroutine(UiRefreshUtil.DeferredFullRefresh(Content));
+        }
+
+        /// <summary>See ScribeListUI.RebuildRows for why this exists and why RowTemplate is
+        /// skipped when clearing Content's children.</summary>
+        private void RebuildRows()
+        {
+            rows.Clear();
+            if (Content != null)
+                for (int i = Content.childCount - 1; i >= 0; i--)
+                {
+                    var child = Content.GetChild(i).gameObject;
+                    if (child != RowTemplate) Destroy(child);
+                }
+            BuildRows();
+            builtForBookId = Controller != null ? Controller.ActiveBookResourceId : null;
+            Refresh();
         }
 
         private void OnDestroy()
@@ -88,12 +108,18 @@ namespace ClickerGenesis.Core
                     {
                         TierIndex = tierIndex,
                         SubIndex = subIndex,
+                        Icon = rowGo.transform.Find("Icon").GetComponent<Image>(),
                         NameText = rowGo.transform.Find("Name").GetComponent<TMP_Text>(),
                         DescText = rowGo.transform.Find("Desc").GetComponent<TMP_Text>(),
                         CostText = rowGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
                         BuyButton = rowGo.transform.Find("BuyButton").GetComponent<Button>()
                     };
                     EnableCostTextAutoSize(row.CostText);
+                    // Icon now comes straight from data (2026-08-08, replaces the old per-book
+                    // hardcoded C# switch) - SubmanagerDefinition.icon is set per-submanager in
+                    // each book's ScribeSetConfig asset.
+                    row.Icon.sprite = subDef.icon;
+                    row.Icon.color = row.Icon.sprite != null ? Color.white : new Color(0, 0, 0, 0);
                     row.BuyButton.onClick.AddListener(() => Controller.BuySubmanager(tierIndex, subIndex));
                     rows.Add(row);
                 }
@@ -108,12 +134,15 @@ namespace ClickerGenesis.Core
             text.fontSizeMax = text.fontSize;
         }
 
-        private string DescribeGenesisVerse(int verseIndex)
+        /// <summary>Converts a verse index (within the active book) into a human "BookName X:Y"
+        /// reference - generalized 2026-08-08 for multi-book, was hardcoded to "Genesis" before
+        /// Exodus existed.</summary>
+        private string DescribeVerse(int verseIndex)
         {
-            var db = Controller.GenesisVerseDatabase;
+            var db = Controller.Verses;
             if (db == null || !db.HasVerse(verseIndex)) return $"verse {verseIndex + 1}";
             var v = db.GetVerse(verseIndex);
-            return $"Genesis {v.Reference}";
+            return $"{db.BookName} {v.Reference}";
         }
 
         private static string ReqLine(bool satisfied, string metText, string unmetText)
@@ -124,6 +153,15 @@ namespace ClickerGenesis.Core
         private void Refresh()
         {
             if (Controller == null || Controller.Scribes == null) return;
+
+            // See ScribeListUI.Refresh's identical check for why (2026-08-08, multi-book economy).
+            if (Controller.ActiveBookResourceId != builtForBookId)
+            {
+                RebuildRows();
+                ForceLayoutRebuild();
+                return;
+            }
+
             var scribes = Controller.Scribes;
 
             foreach (var row in rows)
@@ -135,7 +173,7 @@ namespace ClickerGenesis.Core
                 row.NameText.text = $"{subDef.displayName} ({parentDef.managerName})";
 
                 bool parentOwned = scribes.IsManagerUnlocked(row.TierIndex);
-                bool verseReached = Controller.GenesisNextVerseIndex >= subDef.unlockAtVerseIndex;
+                bool verseReached = Controller.NextVerseIndex >= subDef.unlockAtVerseIndex;
                 bool allRequirementsMet = parentOwned && verseReached;
 
                 if (owned)
@@ -151,8 +189,8 @@ namespace ClickerGenesis.Core
                     {
                         ReqLine(parentOwned, $"{parentDef.managerName} hired", $"Requires {parentDef.managerName}"),
                         ReqLine(verseReached,
-                            $"{DescribeGenesisVerse(subDef.unlockAtVerseIndex)} reached",
-                            $"Reach {DescribeGenesisVerse(subDef.unlockAtVerseIndex)}")
+                            $"{DescribeVerse(subDef.unlockAtVerseIndex)} reached",
+                            $"Reach {DescribeVerse(subDef.unlockAtVerseIndex)}")
                     };
                     row.DescText.text = string.Join("\n", lines);
                 }

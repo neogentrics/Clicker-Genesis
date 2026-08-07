@@ -67,5 +67,24 @@ namespace ClickerGenesis.Data
         public FlatVerse GetVerse(int indexInBook) => flatVerses[indexInBook];
 
         public bool HasVerse(int indexInBook) => indexInBook >= 0 && indexInBook < flatVerses.Count;
+
+        /// <summary>Reverse lookup: chapter/verse -> flat book-relative index (2026-08-08, per
+        /// CharacterIndex-Integration-Mapping.md §2) - needed to convert a CharacterIndex verse
+        /// reference string like "Exodus 2:1" into the ScribeDefinition.unlockAtVerseIndex/
+        /// managerUnlockAtVerseIndex this project actually stores. Linear scan is fine - this only
+        /// runs at content-authoring time, never per-frame.</summary>
+        public bool TryGetIndexOfVerse(int chapterNumber, int verseNumber, out int indexInBook)
+        {
+            for (int i = 0; i < flatVerses.Count; i++)
+            {
+                if (flatVerses[i].ChapterNumber == chapterNumber && flatVerses[i].VerseNumber == verseNumber)
+                {
+                    indexInBook = i;
+                    return true;
+                }
+            }
+            indexInBook = -1;
+            return false;
+        }
     }
 }

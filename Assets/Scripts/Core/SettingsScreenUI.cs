@@ -50,6 +50,15 @@ namespace ClickerGenesis.Core
         [Header("Back to Game (2026-08-04) - only shown when reached from actual gameplay, not from MainMenu")]
         public GameObject BackToGameButton;
 
+        [Header("Delete Saved Game (2026-08-08) - full reset. Explicit user ask: red/white button" +
+            " so it doesn't read as a normal safe toggle, plus a Yes/No confirmation (green No/" +
+            "safe, red Yes/danger) before anything actually happens.")]
+        public Button DeleteSaveButton;
+        public GameObject DeleteConfirmPanel;
+        public TMP_Text DeleteConfirmMessageLabel;
+        public Button DeleteConfirmYesButton;
+        public Button DeleteConfirmNoButton;
+
         private void Awake()
         {
             if (!GameLoopController.EnsureBootstrapped()) return;
@@ -70,6 +79,10 @@ namespace ClickerGenesis.Core
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
             if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
+            if (DeleteSaveButton != null) DeleteSaveButton.onClick.AddListener(ShowDeleteConfirm);
+            if (DeleteConfirmYesButton != null) DeleteConfirmYesButton.onClick.AddListener(HandleDeleteConfirmYes);
+            if (DeleteConfirmNoButton != null) DeleteConfirmNoButton.onClick.AddListener(HandleDeleteConfirmNo);
+            if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(false);
 
             // Same button/label slot does double duty: exact resolution picking only makes sense
             // on desktop (windowed mode, arbitrary monitor sizes) - mobile has no windowing to
@@ -239,6 +252,38 @@ namespace ClickerGenesis.Core
         {
             if (RunInBackgroundLabel != null)
                 RunInBackgroundLabel.text = GameSettings.RunInBackground ? "Run in Background: On" : "Run in Background: Off";
+        }
+
+        /// <summary>Opens the confirmation popup - the actual delete never happens on the first
+        /// click (2026-08-08, explicit user ask: this is a deliberately rare, deliberately scary
+        /// action, not a normal toggle).</summary>
+        private void ShowDeleteConfirm()
+        {
+            if (DeleteConfirmMessageLabel != null)
+                DeleteConfirmMessageLabel.text = "Are you sure you wish to delete your saved game?\nThis cannot be undone.";
+            if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(true);
+        }
+
+        /// <summary>Deletes the save file, resets all in-memory progress to a fresh start, and
+        /// returns to the Main Menu (2026-08-08, per the user's explicit spec - "brings them back
+        /// to the main menu, and starts the game over again").</summary>
+        private void HandleDeleteConfirmYes()
+        {
+            if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(false);
+
+            var controller = GameLoopController.Instance;
+            if (controller != null) controller.ResetGameAndDeleteSave();
+
+            if (SceneTransitioner.Instance != null) SceneTransitioner.Instance.LoadScene("MainMenu");
+            else UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
+        }
+
+        /// <summary>Just closes the popup - no save deletion, no navigation. The player stays
+        /// exactly where they were (2026-08-08, per the user's explicit spec: "No" should not
+        /// itself navigate anywhere, it should just cancel).</summary>
+        private void HandleDeleteConfirmNo()
+        {
+            if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(false);
         }
     }
 }
