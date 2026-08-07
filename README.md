@@ -1,6 +1,6 @@
 # Clicker Genesis
 
-A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn Ink, spend Ink to unlock the next verse of Scripture in canonical order, and grow a roster of themed "scribes" that keep generating Ink while you're away — all wrapped around the goal of helping players actually **read and memorize the Bible** through play.
+A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and Android. Tap to earn Ink, spend Ink to unlock the next verse of Scripture in canonical order, and grow a roster of themed "scribes" that keep generating Ink while you're away — all wrapped around the goal of helping players actually **read and memorize the Bible** through play.
 
 > Micro-transactions exist in the eventual design but are never required for progress or content. Scripture text is never altered, paraphrased, or reinterpreted — only unedited, recognized translations are used (KJV in v1). This constraint overrides convenience in every implementation decision.
 
@@ -21,6 +21,22 @@ A Bible-verse idle/incremental clicker for Android, built in Unity. Tap to earn 
 **Version 0.3.3** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
+
+## Download
+
+Three platforms as of v0.3.3 — pick yours:
+
+| Platform | Download | Minimum version |
+|---|---|---|
+| 🪟 Windows | [ClickerGenesis-Windows-v0.3.3.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Windows-v0.3.3.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.3.3.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Mac-v0.3.3.zip) | macOS 12.0 (Monterey) or later |
+| 🤖 Android | [ClickerGenesis-Android-v0.3.3.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Android-v0.3.3.apk) | Android 8.0 (Oreo, API 26) or later |
+
+- **Windows:** unzip and run `ClickerGenesis.exe`.
+- **macOS:** unzip, then right-click `ClickerGenesis.app` → **Open** the first time (the build is unsigned/unnotarized — no Apple Developer account in this pipeline yet — so Gatekeeper blocks a plain double-click on first launch; this is expected for an indie unsigned build, not broken packaging).
+- **Android:** download the `.apk` directly to your device and install it (you'll need to allow installs from this source in Android settings — this is a test build, not distributed via the Play Store). This is the first mobile test pass, so expect rough edges on touch input and small-screen layout.
+
+All releases (including older versions and full changelogs) are on the [Releases page](https://github.com/neogentrics/Clicker-Genesis/releases).
 
 ## Core loop
 
