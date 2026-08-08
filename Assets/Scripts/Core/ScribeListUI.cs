@@ -19,6 +19,7 @@ namespace ClickerGenesis.Core
             public TMP_Text DescText;
             public TMP_Text CostText;
             public TMP_Text OwnedText;
+            public TMP_Text OwnedBadgeText;
             public Button BuyButton;
         }
 
@@ -138,6 +139,10 @@ namespace ClickerGenesis.Core
                     DescText = rowGo.transform.Find("Desc").GetComponent<TMP_Text>(),
                     CostText = rowGo.transform.Find("BuyButton/CostText").GetComponent<TMP_Text>(),
                     OwnedText = rowGo.transform.Find("Owned").GetComponent<TMP_Text>(),
+                    // Small stack-count badge on the icon's corner (2026-08-08) - replaces the
+                    // "Owned: N" text prefix so the text line has room as more bonus lines get
+                    // appended; badge is optional (older templates without it just leave this null).
+                    OwnedBadgeText = rowGo.transform.Find("OwnedBadge/Text")?.GetComponent<TMP_Text>(),
                     BuyButton = rowGo.transform.Find("BuyButton").GetComponent<Button>()
                 };
 
@@ -200,6 +205,7 @@ namespace ClickerGenesis.Core
                     // what a bare number like "verse 52" means relative to their current chapter.
                     row.DescText.text = $"Unlocks at {DescribeVerse(def.unlockAtVerseIndex)}.";
                     row.OwnedText.text = "";
+                    if (row.OwnedBadgeText != null) row.OwnedBadgeText.text = "";
                     row.CostText.text = "Locked";
                     row.BuyButton.interactable = false;
                     continue;
@@ -237,7 +243,10 @@ namespace ClickerGenesis.Core
                 row.DescText.text = string.Join("\n", descLines);
 
                 double managerBonusBoost = Controller.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ManagerBonusBoost);
-                row.OwnedText.text = $"Owned: {owned}  ·  {NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier, managerBonusBoost))} Ink/s";
+                // Owned count now lives on the icon's corner badge instead of this text line
+                // (2026-08-08) - frees room here as more bonus lines get appended.
+                if (row.OwnedBadgeText != null) row.OwnedBadgeText.text = owned.ToString();
+                row.OwnedText.text = $"{NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier, managerBonusBoost))} Ink/s";
                 string quantityPrefix = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
                     ? "Max  "
                     : Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
