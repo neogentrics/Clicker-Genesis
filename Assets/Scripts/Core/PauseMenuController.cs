@@ -257,8 +257,7 @@ namespace ClickerGenesis.Core
                 "Animal Icons 2D Pack - Ferro Entertainment\n" +
                 "Skybox backdrops - AssetProviderForAll\n" +
                 "\n<b>Fonts</b>\n" +
-                "Georgia / Georgia Bold - Microsoft (prototype build only - a properly licensed " +
-                "serif replaces this before any commercial release)\n" +
+                "Ibarra Real Nova - Google Fonts / The Ibarra Real Nova Project Authors (SIL Open Font License 1.1)\n" +
                 "\n<b>Tools</b>\n" +
                 "Built with Unity, using Unity-MCP for AI-assisted development.\n" +
                 "\n<i>A few recently-imported icon packs still need their publisher name " +
