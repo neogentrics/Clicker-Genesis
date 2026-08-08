@@ -10,28 +10,12 @@ namespace ClickerGenesis.Core
     [RequireComponent(typeof(Button))]
     public class PauseButtonTrigger : MonoBehaviour
     {
-        private Button button;
-
         private void Awake()
         {
-            button = GetComponent<Button>();
-            button.onClick.AddListener(() =>
-            {
-                PauseMenuController.Instance?.Show();
-                StartCoroutine(ResetSelectionStateNextFrame());
-            });
-        }
-
-        /// <summary>The pause overlay covers this button the instant it opens, with no real mouse
-        /// movement - Unity's EventSystem never sends a clean OnPointerExit, so the button's
-        /// Selectable gets stuck reporting whatever visual state (Highlighted/Pressed) it was in
-        /// at the moment of click until something else nudges it. Toggling the component forces
-        /// Selectable's own OnEnable reset, snapping it cleanly back to Normal so the next real
-        /// hover, once the overlay closes, starts fresh instead of appearing "stuck."</summary>
-        private System.Collections.IEnumerator ResetSelectionStateNextFrame()
-        {
-            yield return null;
-            if (button != null) { button.enabled = false; button.enabled = true; }
+            // Reverted the Button-toggle "unstick the hover glow" fix (2026-08-08) - it introduced
+            // a real click reliability regression (menu sometimes failed to open at all). Reopen
+            // task #217 for the glow issue itself; this button just needs to reliably open the menu.
+            GetComponent<Button>().onClick.AddListener(() => PauseMenuController.Instance?.Show());
         }
     }
 }
