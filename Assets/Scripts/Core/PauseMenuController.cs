@@ -89,6 +89,11 @@ namespace ClickerGenesis.Core
         public void Show()
         {
             if (OverlayRoot != null) OverlayRoot.SetActive(true);
+            // A plain pause always lands on the main button list - Stats/Credits are opened
+            // explicitly afterward (see OpenStats/OpenCredits), which re-hide this again.
+            if (StatsPanel != null) StatsPanel.SetActive(false);
+            if (CreditsPanel != null) CreditsPanel.SetActive(false);
+            if (MainPanel != null) MainPanel.SetActive(true);
         }
 
         public void Hide()
