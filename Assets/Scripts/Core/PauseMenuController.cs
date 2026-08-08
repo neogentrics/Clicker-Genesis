@@ -256,6 +256,8 @@ namespace ClickerGenesis.Core
                 "SpellBook. Preface - Rexard\n" +
                 "Animal Icons 2D Pack - Ferro Entertainment\n" +
                 "Skybox backdrops - AssetProviderForAll\n" +
+                "Metallic GUI - kat_amirah\n" +
+                "Super Pixel Effects Gigapack (light burst particles) - unTied Games\n" +
                 "\n<b>Fonts</b>\n" +
                 "Ibarra Real Nova - Google Fonts / The Ibarra Real Nova Project Authors (SIL Open Font License 1.1)\n" +
                 "\n<b>Tools</b>\n" +
