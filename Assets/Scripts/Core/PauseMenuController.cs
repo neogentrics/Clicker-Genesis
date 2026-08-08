@@ -263,6 +263,7 @@ namespace ClickerGenesis.Core
                 "Skybox backdrops - AssetProviderForAll\n" +
                 "Metallic GUI - kat_amirah\n" +
                 "Super Pixel Effects Gigapack (light burst particles) - unTied Games\n" +
+                "Retro Pixel Ribbons, Banners and Frames 2 - BDragon1727\n" +
                 "\n<b>Fonts</b>\n" +
                 "Ibarra Real Nova - Google Fonts / The Ibarra Real Nova Project Authors (SIL Open Font License 1.1)\n" +
                 "\n<b>Tools</b>\n" +
