@@ -99,11 +99,24 @@ namespace ClickerGenesis.Core
             if (ScribesTabButton != null) ScribesTabButton.onClick.AddListener(() => SetTab(0));
             if (ManagersTabButton != null) ManagersTabButton.onClick.AddListener(() => SetTab(1));
             if (SupportTabButton != null) SupportTabButton.onClick.AddListener(() => SetTab(2));
-            if (AutoBuyToggleButton != null) AutoBuyToggleButton.onClick.AddListener(() => Controller?.ToggleManagerAutoBuy());
-            if (AutoBuyReserveButton != null) AutoBuyReserveButton.onClick.AddListener(() => Controller?.CycleManagerAutoBuyReserve());
+            if (AutoBuyToggleButton != null) AutoBuyToggleButton.onClick.AddListener(() => { Controller?.ToggleManagerAutoBuy(); StartCoroutine(ResetSelectionStateNextFrame(AutoBuyToggleButton)); });
+            if (AutoBuyReserveButton != null) AutoBuyReserveButton.onClick.AddListener(() => { Controller?.CycleManagerAutoBuyReserve(); StartCoroutine(ResetSelectionStateNextFrame(AutoBuyReserveButton)); });
             if (Controller != null) Controller.OnStateChanged += Refresh;
             SetTab(0);
             Refresh();
+        }
+
+        /// <summary>Clicking Auto-Buy/Reserve fires an immediate Refresh() that updates several
+        /// label texts across the panel - on some machines/timings this rebuild lands close enough
+        /// to the click that Unity's EventSystem never sends the button a clean OnPointerExit,
+        /// leaving its Selectable stuck reporting the Pressed/Highlighted visual state until
+        /// something else nudges it (real bug reported 2026-08-08 - button "grows" via
+        /// ButtonHoverScale on later hovers but never re-tints). Toggling the component forces
+        /// Selectable's own OnEnable reset, snapping it cleanly back to Normal.</summary>
+        private IEnumerator ResetSelectionStateNextFrame(Button button)
+        {
+            yield return null;
+            if (button != null) { button.enabled = false; button.enabled = true; }
         }
 
         /// <summary>Same pattern as BuyVerseScreenUI.SetTab for Verses/Chapters. Extended to a

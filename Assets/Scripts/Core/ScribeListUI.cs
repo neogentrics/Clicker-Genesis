@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -43,12 +44,22 @@ namespace ClickerGenesis.Core
         private void Awake()
         {
             if (Controller != null) Controller.OnStateChanged += Refresh;
-            if (MultiplierButton != null) MultiplierButton.onClick.AddListener(() => Controller?.CycleScribeBuyMultiplier());
+            if (MultiplierButton != null) MultiplierButton.onClick.AddListener(() => { Controller?.CycleScribeBuyMultiplier(); StartCoroutine(ResetSelectionStateNextFrame(MultiplierButton)); });
             RebuildRows();
             ForceLayoutRebuild();
             // The immediate refresh above was verified correct in scripted testing but reported
             // still blank in real, uninterrupted Play sessions - see UiRefreshUtil.DeferredFullRefresh.
             StartCoroutine(UiRefreshUtil.DeferredFullRefresh(Content));
+        }
+
+        /// <summary>Same fix as ClickerScreenUI's Auto-Buy/Reserve buttons - clicking Multiplier
+        /// fires an immediate Refresh() close enough to the click that the button's Selectable can
+        /// get stuck reporting the Pressed/Highlighted visual state on later hovers. Toggling the
+        /// component forces Selectable's own OnEnable reset, snapping it back to Normal.</summary>
+        private IEnumerator ResetSelectionStateNextFrame(Button button)
+        {
+            yield return null;
+            if (button != null) { button.enabled = false; button.enabled = true; }
         }
 
         /// <summary>Destroys any existing rows and rebuilds from the active book's current roster
