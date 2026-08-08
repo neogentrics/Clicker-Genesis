@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: AmosScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Amos
+  tiers:
+  - id: shepherds_staff
+    displayName: Shepherd's Staff
+    flavorText: A herdman of Tekoa is taken from following the flock and sent by
+      the LORD to prophesy against Israel.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: amos
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Amos
+    managerFlavorText: A herdman of Tekoa is taken from following the flock and sent
+      by the LORD to prophesy against Israel.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 113
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: fire_sealed_scroll
+    displayName: Fire-Sealed Scroll
+    flavorText: The LORD indicts Israel's neighbors and Judah one by one for their
+      atrocities before the same judgment formula lands, unavoidably, on Israel itself.
+    tierType: 1
+    purpose: A rhetorical trap - Amos indicts Israel's neighbors and Judah one by
+      one for their own well-known atrocities, letting a Judean/Israelite audience
+      nod along in agreement, before the same 'for three transgressions...and for
+      four' formula lands, unavoidably, on Israel itself.
+    deliveredByManagerId: amos
+    managerId: oracles_against_the_nations
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 70.96668207625552
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.5483341038127763
+    unlockAtVerseIndex: 24
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: ever_flowing_stream
+    displayName: Ever-Flowing Stream
+    flavorText: Amos condemns Israel's exploitation of the poor, corrupt courts,
+      and empty ritual worship, crying that judgment should run down like waters.
+    tierType: 1
+    purpose: 'Details exactly why judgment falls on Israel: exploitation of the poor,
+      corrupt courts, luxury built on oppression, and empty ritual worship offered
+      without justice.'
+    deliveredByManagerId: amos
+    managerId: social_injustice_and_false_worship
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 503.6269964912326
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25.18134982456163
+    unlockAtVerseIndex: 49
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: altar_horns
+    displayName: Altar Horns
+    flavorText: Amaziah, priest of Bethel, orders Amos to stop prophesying and flee
+      to Judah, and is answered with a judgment oracle naming his own household.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: amaziah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3574.0736945012754
+    costGrowthRate: 1.15
+    baseInkPerSecond: 178.70368472506377
+    unlockAtVerseIndex: 74
+    managerName: Amaziah
+    managerFlavorText: Amaziah, priest of Bethel, orders Amos to stop prophesying
+      and flee to Judah, and is answered with a judgment oracle naming his own household.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 111
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 53611
+    submanagers: []
+  - id: plumbline_of_judgment
+    displayName: Plumbline of Judgment
+    flavorText: The LORD shows Amos three further visions, unlike the first two,
+      declaring judgment on Israel final and unappealable.
+    tierType: 1
+    purpose: Where the first two visions of the cycle (grasshoppers, fire) were turned
+      aside by Amos's intercession, these three are not - judgment moves from a warning
+      that could still be averted to a sentence declared final and unappealable.
+    deliveredByManagerId: amos
+    managerId: visions_of_judgment
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 25364.015159478
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1268.2007579739
+    unlockAtVerseIndex: 99
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: restored_booth
+    displayName: Restored Booth
+    flavorText: After chapters of judgment, the LORD promises to raise up the fallen
+      tabernacle of David and restore Israel to its land.
+    tierType: 1
+    purpose: After nine chapters of near-unrelieved judgment, the book ends on a
+      sudden reversal - a promise to raise up the fallen tabernacle (booth) of David,
+      rebuild ruined cities, and restore agricultural abundance.
+    deliveredByManagerId: amos
+    managerId: restoration_of_davids_fallen_booth
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 180000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9000.000000000004
+    unlockAtVerseIndex: 124
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

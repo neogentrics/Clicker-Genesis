@@ -1,0 +1,295 @@
+{
+  "book": "1 Thessalonians",
+  "canonicalOrder": 52,
+  "translation": "KJV",
+  "status": "drafted via multi-agent workflow, adversarially fact-checked and corrected",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paul the Apostle",
+      "managerId": "paul_1thessalonians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Timotheus, Our Brother",
+      "managerId": "timothy_1thessalonians",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Sanctification and Brotherly Love",
+      "managerId": "sanctification_brotherly_love_1thess",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Dead in Christ",
+      "managerId": "dead_in_christ_1thess",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Day of the Lord",
+      "managerId": "day_of_the_lord_1thess",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Quench Not the Spirit",
+      "managerId": "quench_not_the_spirit_1thess",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_1thessalonians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": null,
+      "perkNote": "id suffixed '_1thessalonians' since Paul will need his own independent, book-specific manager tier in every Pauline epistle indexed later (same precedent as Jesus getting a separate tier per Gospel) — do not reuse this id or cross-reference it from Romans, Corinthians, etc.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Thessalonians 1:1",
+          "note": "Salutation — letter sent jointly from Paul, Silvanus, and Timotheus to the church of the Thessalonians."
+        },
+        {
+          "ref": "1 Thessalonians 1:2-3",
+          "note": "Gives thanks to God always for them, remembering without ceasing their work of faith, labour of love, and patience of hope."
+        },
+        {
+          "ref": "1 Thessalonians 2:1-2",
+          "note": "Recalls his entrance among them was not in vain, and that he spoke the gospel boldly despite having suffered and been shamefully entreated at Philippi."
+        },
+        {
+          "ref": "1 Thessalonians 2:7-8",
+          "note": "Describes his conduct among them as gentle, 'even as a nurse cherisheth her children,' willing to have imparted not only the gospel but his own soul, because they were dear to him."
+        },
+        {
+          "ref": "1 Thessalonians 2:9",
+          "note": "Laboured night and day (working with his hands) so as not to be chargeable to any of them while he preached the gospel."
+        },
+        {
+          "ref": "1 Thessalonians 2:11",
+          "note": "Exhorted, comforted, and charged every one of them, 'as a father doth his children.'"
+        },
+        {
+          "ref": "1 Thessalonians 2:17-18",
+          "note": "Taken from them 'in presence, not in heart' — endeavoured the more abundantly to see their face, but says Satan hindered him."
+        },
+        {
+          "ref": "1 Thessalonians 3:1-5",
+          "note": "Left alone at Athens, sent Timothy to establish and comfort them, fearing the tempter had tempted them and his labour would be in vain."
+        },
+        {
+          "ref": "1 Thessalonians 3:6-10",
+          "note": "Comforted greatly by Timothy's return with good tidings of their faith and charity; prays night and day to see their face and perfect what is lacking in their faith."
+        },
+        {
+          "ref": "1 Thessalonians 5:25-28",
+          "note": "Closing requests — asks them to pray for him, charges the epistle be read to all the holy brethren, and gives the benediction of grace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Writes this letter in the plural ('we'/'us') throughout most of the book, reflecting the joint ministry of Paul, Silvanus, and Timotheus rather than speaking solely in his own voice."
+      ]
+    },
+    {
+      "id": "timothy_1thessalonians",
+      "name": "Timotheus (Timothy)",
+      "role": "manager",
+      "scribeTier": "Timotheus, Our Brother",
+      "parentManagerId": null,
+      "perkNote": "Promoted to a full tier rather than a submanager under Paul — his journey to Thessalonica and the report he brought back are a real scene whose outcome (Paul's comfort, and the occasion for this letter itself) genuinely depends on his action, not merely his presence.",
+      "genealogy": {
+        "father": "unnamed Greek father — Acts 16:1, not itself narrated in 1 Thessalonians",
+        "mother": "eunice — 2 Timothy 1:5, not itself narrated in 1 Thessalonians",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Thessalonians 1:1",
+          "note": "Named alongside Paul and Silvanus as a co-sender of the letter."
+        },
+        {
+          "ref": "1 Thessalonians 3:2",
+          "note": "Sent by Paul from Athens as 'our brother, and minister of God, and our fellowlabourer in the gospel of Christ, to establish you, and to comfort you concerning your faith.'"
+        },
+        {
+          "ref": "1 Thessalonians 3:5",
+          "note": "The purpose of his sending stated again — to know their faith, lest the tempter had tempted them and Paul's labour be in vain."
+        },
+        {
+          "ref": "1 Thessalonians 3:6",
+          "note": "Returns from Thessalonica to Paul 'and brought us good tidings of your faith and charity,' bringing word of their good remembrance of Paul and desire to see him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His grandmother Lois and mother Eunice (2 Timothy 1:5) are not mentioned in 1 Thessalonians itself, but are logged here as the earliest scripturally-stated family connection for this character, per the genealogy-carries-forward rule."
+      ]
+    },
+    {
+      "id": "silvanus_1thessalonians",
+      "name": "Silvanus (Silas)",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_1thessalonians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Silvanus is the Latinized form of the name Silas used in Acts — same individual, not a naming collision, flagged here for player clarity since the two names could otherwise read as different people.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Thessalonians 1:1",
+          "note": "Named as a co-sender of the letter alongside Paul and Timotheus — this is his only mention in the book; the text gives him no independent action here."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sanctification_brotherly_love_1thess",
+      "name": "Sanctification and Brotherly Love",
+      "role": "law",
+      "scribeTier": "Sanctification and Brotherly Love",
+      "parentManagerId": null,
+      "deliveredBy": "paul_1thessalonians",
+      "purpose": "Instructs the church on practical holy living now that they have received the gospel — sexual purity ('possess his vessel in sanctification and honour'), continuing in brotherly love which they are already 'taught of God' to practice, and living quietly, minding one's own business, and working with one's own hands so as to walk honestly before outsiders and be dependent on no one.",
+      "verses": [
+        {
+          "ref": "1 Thessalonians 4:3-4",
+          "note": "'This is the will of God, even your sanctification... that every one of you should know how to possess his vessel in sanctification and honour.'"
+        },
+        {
+          "ref": "1 Thessalonians 4:9",
+          "note": "'As touching brotherly love ye need not that I write unto you: for ye yourselves are taught of God to love one another.'"
+        },
+        {
+          "ref": "1 Thessalonians 4:11-12",
+          "note": "'Study to be quiet, and to do your own business, and to work with your own hands... that ye may walk honestly toward them that are without, and that ye may have lack of nothing.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "dead_in_christ_1thess",
+      "name": "The Dead in Christ",
+      "role": "law",
+      "scribeTier": "The Dead in Christ",
+      "parentManagerId": null,
+      "deliveredBy": "paul_1thessalonians",
+      "purpose": "Addresses grief among the Thessalonians over believers who had already died before the Lord's return, so that they would 'not sorrow, even as others which have no hope' — teaching that those who sleep in Jesus will be raised and reunited with living believers at Christ's coming, meant explicitly as comfort ('comfort one another with these words'), not merely doctrine.",
+      "verses": [
+        {
+          "ref": "1 Thessalonians 4:13",
+          "note": "'I would not have you to be ignorant, brethren, concerning them which are asleep, that ye sorrow not, even as others which have no hope.'"
+        },
+        {
+          "ref": "1 Thessalonians 4:14",
+          "note": "'Them also which sleep in Jesus will God bring with him.'"
+        },
+        {
+          "ref": "1 Thessalonians 4:16-17",
+          "note": "'The Lord himself shall descend from heaven with a shout... the dead in Christ shall rise first: Then we which are alive and remain shall be caught up together with them in the clouds, to meet the Lord in the air.'"
+        },
+        {
+          "ref": "1 Thessalonians 4:18",
+          "note": "'Wherefore comfort one another with these words.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is the single best-known passage in the book — the 'caught up together... in the clouds, to meet the Lord in the air' language (4:17) is the specific source of the term 'rapture,' though that exact word does not itself appear in the KJV text."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_1thess",
+      "name": "The Day of the Lord",
+      "role": "law",
+      "scribeTier": "The Day of the Lord",
+      "parentManagerId": null,
+      "deliveredBy": "paul_1thessalonians",
+      "purpose": "Teaches that the day of the Lord's coming will arrive suddenly and unexpectedly ('as a thief in the night'), so believers, as 'children of light,' should live watchful and sober lives rather than being taken unaware — framed as a call to readiness, not a timetable.",
+      "verses": [
+        {
+          "ref": "1 Thessalonians 5:2",
+          "note": "'The day of the Lord so cometh as a thief in the night.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:4-5",
+          "note": "'Ye, brethren, are not in darkness, that that day should overtake you as a thief... Ye are all the children of light, and the children of the day.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:6",
+          "note": "'Let us not sleep, as do others; but let us watch and be sober.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:8",
+          "note": "Exhorts them, being of the day, to be sober, 'putting on the breastplate of faith and love; and for an helmet, the hope of salvation.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "quench_not_the_spirit_1thess",
+      "name": "Quench Not the Spirit",
+      "role": "law",
+      "scribeTier": "Quench Not the Spirit",
+      "parentManagerId": null,
+      "deliveredBy": "paul_1thessalonians",
+      "purpose": "A rapid series of closing instructions for orderly, Spirit-led congregational life — honoring those who labour and lead, admonishing the unruly while comforting the fainthearted and supporting the weak, pursuing joy and unceasing prayer, and not suppressing the Spirit's work (including prophesying) while still testing everything against what is good.",
+      "verses": [
+        {
+          "ref": "1 Thessalonians 5:12-13",
+          "note": "Instructs the church to know and esteem highly in love those who labour among them, are over them in the Lord, and admonish them."
+        },
+        {
+          "ref": "1 Thessalonians 5:14",
+          "note": "'Warn them that are unruly, comfort the feebleminded, support the weak, be patient toward all men.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:16-18",
+          "note": "'Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:19-21",
+          "note": "'Quench not the Spirit. Despise not prophesyings. Prove all things; hold fast that which is good.'"
+        },
+        {
+          "ref": "1 Thessalonians 5:23",
+          "note": "Closing benediction: 'the very God of peace sanctify you wholly... your whole spirit and soul and body be preserved blameless unto the coming of our Lord Jesus Christ.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "churches_of_judaea": {
+      "ref": "1 Thessalonians 2:14",
+      "note": "Paul holds up 'the churches of God which in Judaea are in Christ Jesus' as an example of suffering persecution from their own countrymen, parallel to what the Thessalonians suffered from theirs — a collective reference, not itself indexed as a character or group manager."
+    },
+    "those_who_killed_and_persecuted": {
+      "ref": "1 Thessalonians 2:15-16",
+      "note": "A collective, unnamed polemical reference to those responsible for the death of the Lord Jesus and the prophets, and for persecuting Paul and hindering his preaching to the Gentiles — kept as a bulk reference, not resolved to any individually indexed character."
+    }
+  },
+  "notes": "1 Thessalonians is one of Paul's earliest letters and, notably, one of the sparsest in named individuals of any NT epistle indexed so far — only three people are named in the entire book (Paul, Silvanus, and Timotheus, all in the salutation at 1:1), and only Paul and Timothy have any independently narrated action within the text itself. This produced a roster weighted toward law/theme tiers rather than person tiers: four of the six tiers cover Paul's major teaching blocks (practical sanctification, the fate of dead believers, the day of the Lord, and closing congregational instructions) rather than characters, since the bulk of the book's content is Paul's own doctrinal and pastoral writing rather than narrated scenes involving other people. Per the personally-embodied-vs-pure-transmission test, Timothy was promoted to his own full manager tier rather than folded into Paul's as a submanager: his mission to Thessalonica and the report he brought back in chapter 3 are a real, consequential scene (Paul's comfort, and by his own account the very occasion for writing this letter, depend on Timothy's action), not mere attribution. Silvanus, by contrast, has no independent action in the book beyond being named in the greeting, so he stays a loyalty-boost submanager under Paul; a funFact flags that Silvanus/Silas are the same person (Latinized vs. Hellenized form of the name) so the naming variant isn't mistaken for two different companions. No other individuals are named anywhere in the book's five chapters — the references to 'the churches of Judaea' and to those who killed the Lord Jesus and persecuted the church (2:14-16) are both collective and left as bulk genealogyLists entries rather than invented into individual characters, per the rule against differentiating a group the text itself does not differentiate. Both Paul's and Timothy's ids are suffixed '_1thessalonians' since Paul in particular will need independent, book-specific manager tiers in every future Pauline epistle, the same precedent already established for Jesus getting a separate tier per Gospel."
+}

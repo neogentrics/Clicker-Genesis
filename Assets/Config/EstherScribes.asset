@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: EstherScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Esther
+  tiers:
+  - id: the_golden_sceptre
+    displayName: The Golden Sceptre
+    flavorText: Rules over 127 provinces from India to Ethiopia, deposes Vashti for
+      refusing his summons, and later hands his signet ring to Haman to authorize
+      a decree against the Jews.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ahasuerus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Ahasuerus
+    managerFlavorText: Rules over 127 provinces from India to Ethiopia, deposes Vashti
+      for refusing his summons, and later hands his signet ring to Haman to authorize
+      a decree against the Jews.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: memucan
+      displayName: Memucan
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 15
+      unlockCost: 105
+    - id: bigthan_and_teresh
+      displayName: Bigthan and Teresh
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 42
+      unlockCost: 105
+  - id: the_crown_royal
+    displayName: The Crown Royal
+    flavorText: Refuses to appear before King Ahasuerus and his guests, and is deposed
+      by royal decree, her royal estate given to another.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: vashti
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 70.96668207625552
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.5483341038127763
+    unlockAtVerseIndex: 28
+    managerName: Vashti
+    managerFlavorText: Refuses to appear before King Ahasuerus and his guests, and
+      is deposed by royal decree, her royal estate given to another.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 18
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1064
+    submanagers: []
+  - id: the_royal_apparel
+    displayName: The Royal Apparel
+    flavorText: Approaches King Ahasuerus unbidden in her royal apparel, risking
+      death, and he extends to her the golden sceptre.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: esther
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 503.6269964912326
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25.18134982456163
+    unlockAtVerseIndex: 56
+    managerName: Esther
+    managerFlavorText: Approaches King Ahasuerus unbidden in her royal apparel, risking
+      death, and he extends to her the golden sceptre.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 77
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 7554
+    submanagers:
+    - id: hegai
+      displayName: Hegai
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 29
+      unlockCost: 5287
+    - id: hatach
+      displayName: Hatach
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 64
+      unlockCost: 5287
+  - id: the_kings_ring
+    displayName: The King's Ring
+    flavorText: Uncovers a plot against the king, refuses to bow to Haman, and receives
+      the king's ring after Haman's fall.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: mordecai
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3574.0736945012754
+    costGrowthRate: 1.15
+    baseInkPerSecond: 178.70368472506377
+    unlockAtVerseIndex: 84
+    managerName: Mordecai
+    managerFlavorText: Uncovers a plot against the king, refuses to bow to Haman,
+      and receives the king's ring after Haman's fall.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 116
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 53611
+    submanagers: []
+  - id: the_gallows
+    displayName: The Gallows
+    flavorText: Plots to destroy all the Jews after Mordecai refuses to bow to him,
+      builds gallows for Mordecai, and is hanged on it himself.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: haman
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 25364.015159478
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1268.2007579739
+    unlockAtVerseIndex: 112
+    managerName: Haman
+    managerFlavorText: Plots to destroy all the Jews after Mordecai refuses to bow
+      to him, builds gallows for Mordecai, and is hanged on it himself.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 110
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 380460
+    submanagers:
+    - id: zeresh
+      displayName: Zeresh
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 86
+      unlockCost: 266322
+    - id: harbona
+      displayName: Harbona
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 113
+      unlockCost: 266322
+  - id: the_pur_the_lot
+    displayName: The Pur (the Lot)
+    flavorText: Mordecai and Esther establish the annual feast of Purim, named for
+      the lot Haman cast to set the date of the Jews' destruction, turning that day
+      into a lasting celebration of deliverance.
+    tierType: 1
+    purpose: Establishes an annual two-day feast (the 14th and 15th of Adar) commemorating
+      the Jews' deliverance from Haman's planned massacre, turning mourning into
+      a lasting memorial kept in every generation, family, province, and city. Named
+      Purim after the Pur (lot) Haman cast to set the date of destruction, so the
+      instrument of the intended destruction becomes the name of the celebrated deliverance
+      instead.
+    deliveredByManagerId: mordecai
+    managerId: purim
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 180000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9000.000000000004
+    unlockAtVerseIndex: 141
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: JobScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Job
+  tiers:
+  - id: potsherd
+    displayName: Potsherd
+    flavorText: Sits among the ashes scraping his boils with a potsherd, refusing
+      to curse God despite his wife's plea to do so.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: job
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Job
+    managerFlavorText: Sits among the ashes scraping his boils with a potsherd, refusing
+      to curse God despite his wife's plea to do so.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 29
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: job_wife
+      displayName: Job's wife
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 30
+      unlockCost: 105
+  - id: broken_hedge
+    displayName: Broken Hedge
+    flavorText: Challenges God that Job's righteousness only holds because of the
+      hedge of protection around him, then is permitted to strike his possessions,
+      children, and body.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: satan
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 42.24199911264493
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.112099955632247
+    unlockAtVerseIndex: 129
+    managerName: Satan
+    managerFlavorText: Challenges God that Job's righteousness only holds because
+      of the hedge of protection around him, then is permitted to strike his possessions,
+      children, and body.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 9
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 633
+    submanagers: []
+  - id: whispering_spirit
+    displayName: Whispering Spirit
+    flavorText: Recounts a night vision of a spirit gliding past his face and argues
+      that no innocent man ever perished, urging Job to seek God.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: eliphaz_temanite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 178.43864890326955
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.921932445163478
+    unlockAtVerseIndex: 259
+    managerName: Eliphaz the Temanite
+    managerFlavorText: Recounts a night vision of a spirit gliding past his face
+      and argues that no innocent man ever perished, urging Job to seek God.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 72
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2676
+    submanagers: []
+  - id: withering_rush
+    displayName: Withering Rush
+    flavorText: Appeals to the wisdom of former ages, comparing the hope of the godless
+      to a rush withering without water.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: bildad_shuhite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 753.7605248633474
+    costGrowthRate: 1.15
+    baseInkPerSecond: 37.68802624316737
+    unlockAtVerseIndex: 389
+    managerName: Bildad the Shuhite
+    managerFlavorText: Appeals to the wisdom of former ages, comparing the hope of
+      the godless to a rush withering without water.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 167
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 11306
+    submanagers: []
+  - id: measuring_line
+    displayName: Measuring Line
+    flavorText: Rebukes Job bluntly, declaring that the secrets of God's wisdom are
+      longer than the earth and broader than the sea, beyond human measure.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zophar_naamathite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3184.0351422424305
+    costGrowthRate: 1.15
+    baseInkPerSecond: 159.20175711212153
+    unlockAtVerseIndex: 519
+    managerName: Zophar the Naamathite
+    managerFlavorText: Rebukes Job bluntly, declaring that the secrets of God's wisdom
+      are longer than the earth and broader than the sea, beyond human measure.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 245
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 47760
+    submanagers: []
+  - id: new_bottles
+    displayName: New Bottles
+    flavorText: Bursts with pent-up words like new wineskins ready to burst, breaking
+      his youthful silence to challenge both Job and his three friends.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elihu_buzite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 13450.000965323505
+    costGrowthRate: 1.15
+    baseInkPerSecond: 672.5000482661752
+    unlockAtVerseIndex: 649
+    managerName: Elihu the Buzite
+    managerFlavorText: Bursts with pent-up words like new wineskins ready to burst,
+      breaking his youthful silence to challenge both Job and his three friends.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 776
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 201750
+    submanagers: []
+  - id: whirlwind
+    displayName: Whirlwind
+    flavorText: Answers Job out of the whirlwind, questioning him about the foundations
+      of the earth and the wild creatures no man can tame.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: the_lord
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 56815.4928842269
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2840.774644211345
+    unlockAtVerseIndex: 779
+    managerName: The LORD
+    managerFlavorText: Answers Job out of the whirlwind, questioning him about the
+      foundations of the earth and the wild creatures no man can tame.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 924
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 852232
+    submanagers: []
+  - id: horn_of_eyepaint
+    displayName: Horn of Eye-paint
+    flavorText: Named first among Job's three restored daughters, granted an inheritance
+      alongside her seven brothers in an unprecedented departure from custom.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jemima
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 239999.99999999974
+    costGrowthRate: 1.15
+    baseInkPerSecond: 11999.999999999987
+    unlockAtVerseIndex: 909
+    managerName: Jemima
+    managerFlavorText: Named first among Job's three restored daughters, granted
+      an inheritance alongside her seven brothers in an unprecedented departure from
+      custom.
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 1066
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3599999
+    submanagers:
+    - id: kezia
+      displayName: Kezia
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1066
+      unlockCost: 2519999
+    - id: keren_happuch
+      displayName: Keren-happuch
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1066
+      unlockCost: 2519999

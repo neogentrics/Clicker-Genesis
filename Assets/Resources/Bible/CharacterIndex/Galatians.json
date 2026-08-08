@@ -1,0 +1,475 @@
+{
+  "book": "Galatians",
+  "canonicalOrder": 48,
+  "translation": "KJV",
+  "status": "drafted via multi-agent workflow, adversarially fact-checked and corrected",
+  "notes": "Galatians is Paul's most polemical letter — short (6 chapters, 149 verses) but dense, mixing real autobiographical narrative (his conversion and calling, two visits to Jerusalem, and the public confrontation with Peter at Antioch) with sustained doctrinal argument against a Judaizing faction demanding circumcision and law-observance from Gentile converts. The tier structure reflects that mix: two person-tiers carry the book's only genuinely embodied narrative action (Paul throughout, and Peter specifically for the Antioch incident in 2:11-14, where he acts, is confronted, and is described changing his behavior under social pressure — a real scene, not mere transmission), while the doctrinal core of the letter (justification by faith, the law's temporary role and the believer's adoption/freedom, the fruit of the Spirit versus works of the flesh, and practical burden-bearing) is captured as four law/theme tiers, all deliveredBy Paul since he is the letter's sole author and voice throughout — unlike the Pentateuch there is no separate transmitter relaying content from someone else. Barnabas and Titus are indexed as submanagers under Paul (his traveling companions to the Jerusalem council in 2:1-10, with Titus serving as the chapter's live test case for Gentile freedom from circumcision); James 'the Lord's brother' and John are indexed as submanagers under Peter, both named only in the 'pillars' passage (2:9), with James named again as the source of the men whose arrival at Antioch prompted Peter's withdrawal (2:12). The unnamed Judaizers/false brethren (1:7; 2:4; 5:10,12; 6:12-13) are collapsed into a single collective submanager under Paul, since the text never individuates its members. Naming/wording notes, corrected after fact-check: (1) 'Cephas' and 'Peter' refer to the same person within this letter, but the KJV text specifically names him 'Peter' at 1:18, 2:7, 2:8, 2:11, and 2:14, and 'Cephas' only once, at 2:9 — the reverse pattern (Cephas at 1:18/2:11/2:14) belongs to modern critical-text translations (NIV, ESV, etc.), not the KJV this project exclusively uses. (2) The scribeTier name for Peter's tier is 'The Right Hands of Fellowship' (plural), matching the exact KJV wording of Galatians 2:9 ('they gave to me and Barnabas the right hands of fellowship'). (3) James 'the Lord's brother' is a distinct figure from the two apostles also named James (son of Zebedee; son of Alphaeus); 'John' in 2:9 is presumed to be the apostle son of Zebedee, though the text itself gives no further identifying detail beyond the bare name, and is not to be confused with John the Baptist, who does not appear in this letter. James's submanager perkFlavor is set to loyalty-boost rather than cost-cutter: Galatians 2:9 shows him personally extending the right hand of fellowship to Paul alongside Cephas and John, a directly supportive act, even though 2:12 also notes that men associated with him prompted Peter's withdrawal at Antioch — the supportive 'pillar' role is the more textually direct relationship to the manager (Peter) whose tier he's attached to.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Marks of the Lord Jesus",
+      "managerId": "paul_galatians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Right Hands of Fellowship",
+      "managerId": "peter_galatians",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Just Shall Live by Faith",
+      "managerId": "paul_galatians",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Abba, Father",
+      "managerId": "paul_galatians",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Fruit of the Spirit",
+      "managerId": "paul_galatians",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Sowing to the Spirit",
+      "managerId": "paul_galatians",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_galatians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Marks of the Lord Jesus",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "unnamed — Galatians 1:15 ('separated me from my mother's womb')",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 1:1",
+          "note": "Opens by insisting his apostleship is not of men, neither by man, but by Jesus Christ and God the Father."
+        },
+        {
+          "ref": "Galatians 1:11-12",
+          "note": "States the gospel he preached is not after man — he neither received it of man nor was taught it, but by the revelation of Jesus Christ."
+        },
+        {
+          "ref": "Galatians 1:13-14",
+          "note": "Recounts his former life in Judaism, persecuting and wasting the church of God, exceeding his peers in zeal for the traditions of the fathers."
+        },
+        {
+          "ref": "Galatians 1:15-17",
+          "note": "Describes God separating him from his mother's womb and calling him by grace to reveal His Son in him and preach among the heathen; he conferred not with flesh and blood, but went into Arabia and returned to Damascus."
+        },
+        {
+          "ref": "Galatians 1:18-20",
+          "note": "After three years went up to Jerusalem to see Peter and abode with him fifteen days, seeing no other apostle save James the Lord's brother."
+        },
+        {
+          "ref": "Galatians 2:1-2",
+          "note": "Fourteen years later went up to Jerusalem again, with Barnabas, taking Titus also, by revelation, and privately communicated the gospel he preached among the Gentiles."
+        },
+        {
+          "ref": "Galatians 2:11-14",
+          "note": "Publicly withstands Peter to the face at Antioch for withdrawing from eating with Gentile believers out of fear of the circumcision party."
+        },
+        {
+          "ref": "Galatians 2:20",
+          "note": "'I am crucified with Christ: nevertheless I live; yet not I, but Christ liveth in me' — states the core of his justification-by-faith theology in personal terms."
+        },
+        {
+          "ref": "Galatians 4:13-15",
+          "note": "Recalls preaching to the Galatians at first through bodily infirmity, and that they received him as an angel of God, even as Christ Jesus."
+        },
+        {
+          "ref": "Galatians 4:19-20",
+          "note": "'My little children, of whom I travail in birth again until Christ be formed in you' — a direct, anguished personal appeal."
+        },
+        {
+          "ref": "Galatians 6:11",
+          "note": "Notes the large letters he has written with his own hand, emphasizing the letter's personal, non-dictated authorship."
+        },
+        {
+          "ref": "Galatians 6:17",
+          "note": "'I bear in my body the marks of the Lord Jesus' — closes the letter asserting his authority through physical suffering endured for Christ."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Galatians 1-2 is one of Paul's most detailed autobiographical passages in any of his letters, given specifically to prove his gospel came directly from Christ rather than secondhand from the Jerusalem apostles.",
+        "The 'marks' (Greek stigmata) of Galatians 6:17 are widely understood by readers as scars from persecution, though the text of Galatians itself does not specify their origin."
+      ]
+    },
+    {
+      "id": "peter_galatians",
+      "name": "Peter (Cephas)",
+      "role": "manager",
+      "scribeTier": "The Right Hands of Fellowship",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 1:18-19",
+          "note": "Paul goes to Jerusalem specifically to see Peter and stays with him fifteen days."
+        },
+        {
+          "ref": "Galatians 2:7-9",
+          "note": "Recognized alongside James and John as a 'pillar' apostle; perceiving the grace given to Paul, gives Paul and Barnabas the right hands of fellowship, with Peter assigned to the circumcision as Paul is to the heathen."
+        },
+        {
+          "ref": "Galatians 2:11",
+          "note": "Comes to Antioch, where Paul withstands him to the face because 'he was to be blamed.'"
+        },
+        {
+          "ref": "Galatians 2:12-13",
+          "note": "Eats with the Gentiles until certain men come from James, then withdraws and separates himself, fearing those of the circumcision; the other Jews, and even Barnabas, are carried away with the same dissimulation."
+        },
+        {
+          "ref": "Galatians 2:14",
+          "note": "Publicly rebuked by Paul: 'If thou, being a Jew, livest after the manner of Gentiles, and not as do the Jews, why compellest thou the Gentiles to live as do the Jews?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Cephas' is the Aramaic name for Peter (compare John 1:42). In the KJV text of Galatians specifically, the name 'Peter' is used at 1:18, 2:7, 2:8, 2:11, and 2:14, while 'Cephas' appears only once, at 2:9 — both names refer to the same man, but the KJV's distribution of the two names differs from some modern translations, which use 'Cephas' at 1:18, 2:11, and 2:14 instead."
+      ]
+    },
+    {
+      "id": "barnabas_galatians",
+      "name": "Barnabas",
+      "role": "submanager",
+      "scribeTier": "The Marks of the Lord Jesus",
+      "parentManagerId": "paul_galatians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Despite being Paul's companion and a fellow recipient of the right hands of fellowship (2:9), Barnabas is named as having wavered alongside Peter at Antioch (2:13) — a real, textually-stated lapse, not smoothed over for a tidier 'loyal companion' portrayal.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 2:1",
+          "note": "Accompanies Paul on his second visit to Jerusalem."
+        },
+        {
+          "ref": "Galatians 2:9",
+          "note": "Given the right hands of fellowship alongside Paul by James, Cephas, and John."
+        },
+        {
+          "ref": "Galatians 2:13",
+          "note": "'Barnabas also was carried away with their dissimulation' — withdraws from eating with Gentiles at Antioch along with Peter and the other Jews."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "titus_galatians",
+      "name": "Titus",
+      "role": "submanager",
+      "scribeTier": "The Marks of the Lord Jesus",
+      "parentManagerId": "paul_galatians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 2:1",
+          "note": "Taken by Paul to Jerusalem alongside Barnabas."
+        },
+        {
+          "ref": "Galatians 2:3",
+          "note": "'Neither Titus, who was with me, being a Greek, was compelled to be circumcised' — serves as the letter's live test case for Gentile freedom from the law."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A Gentile (Greek) believer whose uncircumcision Paul treats as a deliberate precedent (2:3-5) — indexed here strictly on what Galatians itself states about him."
+      ]
+    },
+    {
+      "id": "james_lords_brother_galatians",
+      "name": "James, the Lord's Brother",
+      "role": "submanager",
+      "scribeTier": "The Right Hands of Fellowship",
+      "parentManagerId": "peter_galatians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "NAMING COLLISION: this is James 'the Lord's brother' (1:19), a leader of the Jerusalem church — not the apostle James son of Zebedee (brother of John) nor the apostle James son of Alphaeus, neither of whom is otherwise distinguished by that title in this letter. PERK RECONSIDERED: originally flagged cost-cutter for his role in 2:12 (men from James prompt Peter's withdrawal at Antioch), but Galatians 2:9 shows him personally, directly extending the right hand of fellowship to Paul and Barnabas as one of the three Jerusalem 'pillars' — a supportive act, and the more direct textual relationship to Peter's tier — so loyalty-boost fits at least as well; the 2:12 association is noted but not treated as decisive.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 1:19",
+          "note": "The only other apostle Paul saw in Jerusalem besides Peter on his first post-conversion visit."
+        },
+        {
+          "ref": "Galatians 2:9",
+          "note": "Named alongside Cephas and John as one of the Jerusalem 'pillars' who gave Paul and Barnabas the right hands of fellowship."
+        },
+        {
+          "ref": "Galatians 2:12",
+          "note": "'Before that certain came from James' — the arrival of men associated with James is what prompts Peter to withdraw from eating with the Gentiles at Antioch."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Described in the text itself as 'the Lord's brother' (1:19), a family relationship to Jesus stated directly by Paul."
+      ]
+    },
+    {
+      "id": "john_apostle_galatians",
+      "name": "John",
+      "role": "submanager",
+      "scribeTier": "The Right Hands of Fellowship",
+      "parentManagerId": "peter_galatians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "NAMING COLLISION: named only once, in the list of Jerusalem 'pillars' (2:9); presumed to be the apostle John son of Zebedee, though the text gives no further identifying detail — not to be confused with John the Baptist, who does not appear anywhere in this letter.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 2:9",
+          "note": "Named alongside James and Cephas as a 'pillar' apostle who gave Paul and Barnabas the right hands of fellowship."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "judaizers_galatians",
+      "name": "The Judaizers / False Brethren",
+      "role": "submanager",
+      "scribeTier": "The Marks of the Lord Jesus",
+      "parentManagerId": "paul_galatians",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Collective entry covering multiple related but textually undifferentiated opposition references (1:7; 2:4's 'false brethren'; 5:10; 5:12; 6:12-13) — the text never names or individually distinguishes members of this group, so per the indexing rule against inventing differentiation, they are recorded as one collective rather than as separate invented individuals.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Galatians 1:7",
+          "note": "'Some that trouble you, and would pervert the gospel of Christ.'"
+        },
+        {
+          "ref": "Galatians 2:4",
+          "note": "'False brethren unawares brought in, who came in privily to spy out our liberty... that they might bring us into bondage.'"
+        },
+        {
+          "ref": "Galatians 5:10",
+          "note": "'He that troubleth you shall bear his judgment, whosoever he be.'"
+        },
+        {
+          "ref": "Galatians 5:12",
+          "note": "'I would they were even cut off which trouble you' — regarding those urging circumcision on the Galatians."
+        },
+        {
+          "ref": "Galatians 6:12-13",
+          "note": "Those who desire to make a fair shew in the flesh constrain the Galatians to be circumcised, only to avoid persecution for the cross of Christ, and to glory in the Galatians' flesh."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "justification_by_faith_galatians",
+      "name": "Justification by Faith, Not Works of the Law",
+      "role": "law",
+      "scribeTier": "The Just Shall Live by Faith",
+      "deliveredBy": "paul_galatians",
+      "purpose": "Refutes the Judaizers' demand that Gentile believers keep the Mosaic law (especially circumcision) to be justified before God; establishes that righteousness comes by faith in Jesus Christ, not by works of the law, grounding the letter's central doctrinal argument and directly following from the Antioch confrontation with Peter.",
+      "verses": [
+        {
+          "ref": "Galatians 2:16",
+          "note": "'A man is not justified by the works of the law, but by the faith of Jesus Christ... for by the works of the law shall no flesh be justified.'"
+        },
+        {
+          "ref": "Galatians 2:20-21",
+          "note": "'I am crucified with Christ'; 'if righteousness come by the law, then Christ is dead in vain.'"
+        },
+        {
+          "ref": "Galatians 3:2",
+          "note": "'Received ye the Spirit by the works of the law, or by the hearing of faith?'"
+        },
+        {
+          "ref": "Galatians 3:6-9",
+          "note": "Abraham believed God, and it was accounted to him for righteousness; 'they which are of faith, the same are the children of Abraham.'"
+        },
+        {
+          "ref": "Galatians 3:10-13",
+          "note": "'As many as are of the works of the law are under the curse'; 'the just shall live by faith' (quoting Habakkuk 2:4); Christ redeemed believers from the curse of the law, being made a curse for them."
+        },
+        {
+          "ref": "Galatians 3:24",
+          "note": "'The law was our schoolmaster to bring us unto Christ, that we might be justified by faith.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_freedom_sonship_galatians",
+      "name": "The Law's Purpose, Sonship, and Freedom in Christ",
+      "role": "law",
+      "scribeTier": "Abba, Father",
+      "deliveredBy": "paul_galatians",
+      "purpose": "Explains the temporary, preparatory role of the Mosaic law relative to God's earlier promise to Abraham, describes believers' adoption as sons and heirs through Christ, and — via the allegory of Hagar and Sarah — contrasts bondage under the law with freedom in Christ, urging the Galatians not to return to that bondage by accepting circumcision.",
+      "verses": [
+        {
+          "ref": "Galatians 3:15-18",
+          "note": "The promise made to Abraham 430 years before the law was given; the law does not disannul that earlier promise."
+        },
+        {
+          "ref": "Galatians 3:19",
+          "note": "'Wherefore then serveth the law? It was added because of transgressions, till the seed should come.'"
+        },
+        {
+          "ref": "Galatians 3:26-28",
+          "note": "'Ye are all the children of God by faith in Christ Jesus... there is neither Jew nor Greek, there is neither bond nor free, there is neither male nor female: for ye are all one in Christ Jesus.'"
+        },
+        {
+          "ref": "Galatians 4:4-7",
+          "note": "'God sent forth his Son, made of a woman, made under the law, to redeem them that were under the law, that we might receive the adoption of sons'; believers cry 'Abba, Father' and are made heirs of God through Christ."
+        },
+        {
+          "ref": "Galatians 4:9-10",
+          "note": "Warns against turning again to the 'weak and beggarly elements,' observing days, and months, and times, and years."
+        },
+        {
+          "ref": "Galatians 4:22-26",
+          "note": "The allegory of Hagar and Sarah: two covenants; Hagar answers to Jerusalem which now is, in bondage with her children; 'Jerusalem which is above is free, which is the mother of us all.'"
+        },
+        {
+          "ref": "Galatians 4:30-31",
+          "note": "'Cast out the bondwoman and her son'; believers are children of the free woman, not the bondwoman."
+        },
+        {
+          "ref": "Galatians 5:1",
+          "note": "'Stand fast therefore in the liberty wherewith Christ hath made us free, and be not entangled again with the yoke of bondage.'"
+        },
+        {
+          "ref": "Galatians 5:4",
+          "note": "'Christ is become of no effect unto you, whosoever of you are justified by the law; ye are fallen from grace.'"
+        },
+        {
+          "ref": "Galatians 5:9",
+          "note": "'A little leaven leaveneth the whole lump' — warns how a small compromise (accepting circumcision) corrupts the whole."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "fruit_of_spirit_galatians",
+      "name": "The Fruit of the Spirit vs. the Works of the Flesh",
+      "role": "law",
+      "scribeTier": "The Fruit of the Spirit",
+      "deliveredBy": "paul_galatians",
+      "purpose": "Contrasts the visible outcomes of living by sinful human nature ('the flesh') with the character produced by the Holy Spirit, instructing believers to walk in the Spirit rather than gratify the flesh — the practical, ethical expression of the freedom just described in the preceding section.",
+      "verses": [
+        {
+          "ref": "Galatians 5:16-17",
+          "note": "'Walk in the Spirit, and ye shall not fulfil the lust of the flesh. For the flesh lusteth against the Spirit, and the Spirit against the flesh: and these are contrary the one to the other.'"
+        },
+        {
+          "ref": "Galatians 5:19-21",
+          "note": "Lists the works of the flesh — adultery, fornication, uncleanness, lasciviousness, idolatry, witchcraft, hatred, variance, emulations, wrath, strife, seditions, heresies, envyings, murders, drunkenness, revellings — warning that 'they which do such things shall not inherit the kingdom of God.'"
+        },
+        {
+          "ref": "Galatians 5:22-23",
+          "note": "Lists the fruit of the Spirit — love, joy, peace, longsuffering, gentleness, goodness, faith, meekness, temperance — 'against such there is no law.'"
+        },
+        {
+          "ref": "Galatians 5:24-25",
+          "note": "'They that are Christ's have crucified the flesh with the affections and lusts. If we live in the Spirit, let us also walk in the Spirit.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "burdens_sowing_galatians",
+      "name": "Bearing One Another's Burdens; Sowing to the Spirit",
+      "role": "law",
+      "scribeTier": "Sowing to the Spirit",
+      "deliveredBy": "paul_galatians",
+      "purpose": "Practical instruction for community life among believers — restoring those overtaken in fault, sharing one another's burdens, supporting teachers, and the principle that what a person sows (to the flesh or to the Spirit) determines what they will reap — closing the letter's ethical instruction just before its final warnings about the circumcision party.",
+      "verses": [
+        {
+          "ref": "Galatians 6:1",
+          "note": "If a man is overtaken in a fault, the spiritual are to restore such a one in the spirit of meekness."
+        },
+        {
+          "ref": "Galatians 6:2",
+          "note": "'Bear ye one another's burdens, and so fulfil the law of Christ.'"
+        },
+        {
+          "ref": "Galatians 6:5",
+          "note": "'Every man shall bear his own burden.'"
+        },
+        {
+          "ref": "Galatians 6:6",
+          "note": "'Let him that is taught in the word communicate unto him that teacheth in all good things.'"
+        },
+        {
+          "ref": "Galatians 6:7-8",
+          "note": "'Whatsoever a man soweth, that shall he also reap. For he that soweth to his flesh shall of the flesh reap corruption; but he that soweth to the Spirit shall of the Spirit reap life everlasting.'"
+        },
+        {
+          "ref": "Galatians 6:9-10",
+          "note": "'Let us not be weary in well doing... let us do good unto all men, especially unto them who are of the household of faith.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "churchesOfGalatia": {
+      "ref": "Galatians 1:2",
+      "note": "The letter's addressees — a collective of congregations in the Roman province of Galatia, not individually named or indexed."
+    },
+    "churchesOfJudaea": {
+      "ref": "Galatians 1:22",
+      "note": "Congregations in Judaea who had only heard secondhand of Paul's conversion; mentioned collectively, never as individuals."
+    },
+    "themOfTheCircumcision": {
+      "ref": "Galatians 2:12",
+      "note": "The party in Jerusalem/Antioch whose arrival caused Peter to withdraw from eating with Gentiles — substantially overlaps with the Judaizers/false brethren submanager entry above; the text does not name individuals within this group."
+    }
+  }
+}

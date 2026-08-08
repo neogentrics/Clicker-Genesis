@@ -1,0 +1,397 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: EzekielScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Ezekiel
+  tiers:
+  - id: watchmans_scroll
+    displayName: Watchman's Scroll
+    flavorText: Eats a scroll of lamentation handed to him by God, finding it sweet
+      as honey in his mouth.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ezekiel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Ezekiel
+    managerFlavorText: Eats a scroll of lamentation handed to him by God, finding
+      it sweet as honey in his mouth.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 36
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: wheel_within_a_wheel
+    displayName: Wheel Within a Wheel
+    flavorText: Four living creatures and wheels within wheels, rims full of eyes,
+      appear in a vision by the river Chebar.
+    tierType: 1
+    purpose: Establishes Ezekiel's prophetic call by revealing the mobile throne-chariot
+      of God's glory, showing His presence is not confined to Jerusalem's temple.
+    deliveredByManagerId: 
+    managerId: cherubim_and_wheels_vision
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 19.688976290835583
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.9844488145417791
+    unlockAtVerseIndex: 67
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: watchmans_trumpet
+    displayName: Watchman's Trumpet
+    flavorText: God appoints Ezekiel a watchman over Israel, charging him to warn
+      the wicked or answer for their blood.
+    tierType: 1
+    purpose: Defines the prophet's personal accountability to warn Israel of coming
+      judgment or bear responsibility for their blood.
+    deliveredByManagerId: 
+    managerId: watchman_commission
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 38.76557873810857
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.9382789369054287
+    unlockAtVerseIndex: 135
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: clay_siege_tablet
+    displayName: Clay Siege Tablet
+    flavorText: Ezekiel builds a mock siege of Jerusalem on a clay tile, then lies
+      bound on his side for months bearing Israel's sin.
+    tierType: 1
+    purpose: Dramatizes the coming siege and exile of Jerusalem through acted-out
+      sign-acts too vivid for words alone.
+    deliveredByManagerId: ezekiel
+    managerId: siege_sign_acts
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 76.32545606751395
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.8162728033756976
+    unlockAtVerseIndex: 202
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: departing_glory
+    displayName: Departing Glory
+    flavorText: Carried in vision to Jerusalem, Ezekiel watches the glory of the
+      LORD rise from the temple and depart toward the east.
+    tierType: 1
+    purpose: Exposes idolatry inside the Jerusalem temple and shows God's glory withdrawing
+      from it before its destruction.
+    deliveredByManagerId: 
+    managerId: glory_departs_temple
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 150.27700949004952
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7.513850474502476
+    unlockAtVerseIndex: 270
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers:
+    - id: pelatiah_son_of_benaiah
+      displayName: Pelatiah son of Benaiah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 203
+      unlockCost: 1577
+  - id: two_sisters_allegory
+    displayName: Two Sisters' Allegory
+    flavorText: Samaria and Jerusalem are pictured as two harlot sisters, Aholah
+      and Aholibah, doting on foreign lovers and their gods.
+    tierType: 1
+    purpose: Uses the allegory of two adulterous sisters, Samaria and Jerusalem,
+      to indict their political and religious unfaithfulness.
+    deliveredByManagerId: ezekiel
+    managerId: aholah_and_aholibah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 295.88004769072586
+    costGrowthRate: 1.15
+    baseInkPerSecond: 14.794002384536293
+    unlockAtVerseIndex: 338
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: eagle_and_the_vine
+    displayName: Eagle and the Vine
+    flavorText: A great eagle carries off the top of a cedar and plants a vine that
+      bends toward a second eagle instead of trusting God.
+    tierType: 1
+    purpose: Explains Judah's recent political history in coded imagery as covenant-breaking
+      that God himself will judge.
+    deliveredByManagerId: ezekiel
+    managerId: eagles_and_vine_parable
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 582.5575243914003
+    costGrowthRate: 1.15
+    baseInkPerSecond: 29.127876219570016
+    unlockAtVerseIndex: 405
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: soul_that_sinneth
+    displayName: Soul That Sinneth
+    flavorText: God declares that the soul who sins shall die, and a son shall not
+      bear his father's iniquity.
+    tierType: 1
+    purpose: Overturns the proverb of inherited guilt, teaching that each person
+      is judged for their own sin and that repentance changes their standing.
+    deliveredByManagerId: ezekiel
+    managerId: individual_responsibility
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1146.9961285790152
+    costGrowthRate: 1.15
+    baseInkPerSecond: 57.349806428950764
+    unlockAtVerseIndex: 473
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: nations_reckoning
+    displayName: Nations' Reckoning
+    flavorText: God pronounces judgment on Ammon, Moab, Edom, and Philistia for rejoicing
+      over Jerusalem's downfall.
+    tierType: 1
+    purpose: Announces judgment on four nations that gloated over or exploited Judah's
+      fall.
+    deliveredByManagerId: ezekiel
+    managerId: judgment_on_neighbor_nations
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 2258.3179581272434
+    costGrowthRate: 1.15
+    baseInkPerSecond: 112.91589790636218
+    unlockAtVerseIndex: 541
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: merchant_ships_of_tyre
+    displayName: Merchant Ships of Tyre
+    flavorText: Tyre is pictured as a beautifully built merchant ship, loaded with
+      trade goods from many nations, before being wrecked in the heart of the seas.
+    tierType: 1
+    purpose: Mourns and judges Tyre as a proud trading power, personified as a magnificent
+      ship built and wrecked.
+    deliveredByManagerId: ezekiel
+    managerId: tyre_lament
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 4446.396873473552
+    costGrowthRate: 1.15
+    baseInkPerSecond: 222.31984367367758
+    unlockAtVerseIndex: 608
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: babylons_siege_engine
+    displayName: Babylon's Siege Engine
+    flavorText: Brought by God as 'a king of kings' from the north to besiege and
+      plunder Tyre.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: nebuchadrezzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 8754.500262146623
+    costGrowthRate: 1.15
+    baseInkPerSecond: 437.72501310733116
+    unlockAtVerseIndex: 676
+    managerName: Nebuchadrezzar
+    managerFlavorText: Brought by God as 'a king of kings' from the north to besiege
+      and plunder Tyre.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 642
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 131317
+    submanagers: []
+  - id: signet_of_perfection
+    displayName: Signet of Perfection
+    flavorText: Declares in his pride, 'I am a God, I sit in the seat of God,' though
+      he is only a man.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: prince_of_tyrus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 17236.714809951874
+    costGrowthRate: 1.15
+    baseInkPerSecond: 861.8357404975937
+    unlockAtVerseIndex: 743
+    managerName: Prince of Tyrus / King of Tyrus
+    managerFlavorText: Declares in his pride, 'I am a God, I sit in the seat of God,'
+      though he is only a man.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 694
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 258550
+    submanagers: []
+  - id: great_dragon_of_the_nile
+    displayName: Great Dragon of the Nile
+    flavorText: Boasts as 'the great dragon that lieth in the midst of his rivers,'
+      claiming the Nile as his own making.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pharaoh_king_of_egypt
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 33937.3269225037
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1696.866346125185
+    unlockAtVerseIndex: 811
+    managerName: Pharaoh, king of Egypt
+    managerFlavorText: Boasts as 'the great dragon that lieth in the midst of his
+      rivers,' claiming the Nile as his own making.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 721
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 509059
+    submanagers: []
+  - id: one_shepherds_staff
+    displayName: One Shepherd's Staff
+    flavorText: God vows to set up one shepherd, His servant David, to feed His scattered
+      flock and make a covenant of peace.
+    tierType: 1
+    purpose: Condemns Israel's rulers for feeding themselves instead of the flock,
+      and promises God will shepherd His people through 'my servant David.'
+    deliveredByManagerId: ezekiel
+    managerId: shepherds_of_israel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 66819.12251515115
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3340.9561257575574
+    unlockAtVerseIndex: 879
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: valley_of_dry_bones
+    displayName: Valley of Dry Bones
+    flavorText: Dry bones in a valley come together, are covered in flesh, and rise
+      as breath enters them, 'an exceeding great army.'
+    tierType: 1
+    purpose: Pictures national restoration as resurrection, God breathing life into
+      Israel's dead hope and reuniting Judah and Israel under one king.
+    deliveredByManagerId: ezekiel
+    managerId: valley_of_dry_bones
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 131560.01189752488
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6578.000594876244
+    unlockAtVerseIndex: 946
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: gogs_war_horde
+    displayName: Gog's War Horde
+    flavorText: Addressed as chief prince of Meshech and Tubal, leading a great coalition
+      to invade Israel like a covering cloud.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gog
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 259028.19550724147
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12951.409775362074
+    unlockAtVerseIndex: 1014
+    managerName: Gog
+    managerFlavorText: Addressed as chief prince of Meshech and Tubal, leading a
+      great coalition to invade Israel like a covering cloud.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 962
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3885422
+    submanagers: []
+  - id: river_from_the_threshold
+    displayName: River from the Threshold
+    flavorText: Waters flow out from beneath the temple threshold, bringing life
+      to everything they touch as the land is divided among the twelve tribes.
+    tierType: 1
+    purpose: Closes the book with a vision of a rebuilt temple, the glory of God
+      returning to dwell in it, and a life-giving river flowing from its threshold.
+    deliveredByManagerId: 
+    managerId: new_temple_vision
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 510000.0000000001
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25500.000000000007
+    unlockAtVerseIndex: 1082
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

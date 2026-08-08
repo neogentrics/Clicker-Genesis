@@ -1,0 +1,429 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: MatthewScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Matthew
+  tiers:
+  - id: star_of_bethlehem
+    displayName: Star of Bethlehem
+    flavorText: A star leads the Magi to Bethlehem, where Mary gives birth to Jesus,
+      conceived of the Holy Spirit.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jesus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Jesus Christ
+    managerFlavorText: A star leads the Magi to Bethlehem, where Mary gives birth
+      to Jesus, conceived of the Holy Spirit.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 17
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: mary_mother_of_jesus
+      displayName: Mary (mother of Jesus)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 17
+      unlockCost: 105
+    - id: joseph_husband_of_mary
+      displayName: Joseph (husband of Mary)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 18
+      unlockCost: 105
+  - id: locust_and_wild_honey
+    displayName: Locust & Wild Honey
+    flavorText: John the Baptist preaches repentance in the wilderness of Judaea,
+      clothed in camel's hair and eating locusts and wild honey.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: john_the_baptist
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 24.131744431604677
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.2065872215802338
+    unlockAtVerseIndex: 75
+    managerName: John the Baptist
+    managerFlavorText: John the Baptist preaches repentance in the wilderness of
+      Judaea, clothed in camel's hair and eating locusts and wild honey.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 48
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 361
+    submanagers:
+    - id: herod_antipas
+      displayName: Herod Antipas ("Herod the tetrarch")
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 458
+      unlockCost: 252
+    - id: herodias
+      displayName: Herodias
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 455
+      unlockCost: 252
+  - id: frankincense_casket
+    displayName: Frankincense Casket
+    flavorText: The Magi follow the star to the young child in Bethlehem and present
+      him with gold, frankincense, and myrrh.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: the_magi
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 58.23410893122833
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.9117054465614163
+    unlockAtVerseIndex: 151
+    managerName: The Magi (Wise Men)
+    managerFlavorText: The Magi follow the star to the young child in Bethlehem and
+      present him with gold, frankincense, and myrrh.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 33
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 873
+    submanagers: []
+  - id: herods_crown
+    displayName: Herod's Crown
+    flavorText: Herod the Great orders the slaughter of every male child two years
+      old and under in Bethlehem after the Magi fail to return to him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: herod_the_great
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 140.52906339306293
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7.026453169653147
+    unlockAtVerseIndex: 227
+    managerName: Herod the Great
+    managerFlavorText: Herod the Great orders the slaughter of every male child two
+      years old and under in Bethlehem after the Magi fail to return to him.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 40
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2107
+    submanagers: []
+  - id: fishermans_net
+    displayName: Fisherman's Net
+    flavorText: Jesus calls Simon Peter and his brother Andrew away from casting
+      their net into the Sea of Galilee to become fishers of men.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: peter
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 339.12114430141673
+    costGrowthRate: 1.15
+    baseInkPerSecond: 16.956057215070835
+    unlockAtVerseIndex: 303
+    managerName: Simon Peter
+    managerFlavorText: Jesus calls Simon Peter and his brother Andrew away from casting
+      their net into the Sea of Galilee to become fishers of men.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 82
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 5086
+    submanagers:
+    - id: andrew
+      displayName: Andrew
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 82
+      unlockCost: 3560
+  - id: tax_collectors_table
+    displayName: Tax Collector's Table
+    flavorText: Jesus calls Matthew away from his tax collector's table, and Matthew
+      hosts him for a meal with publicans and sinners.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: matthew_apostle
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 818.3584785635118
+    costGrowthRate: 1.15
+    baseInkPerSecond: 40.91792392817559
+    unlockAtVerseIndex: 379
+    managerName: Matthew (the Publican)
+    managerFlavorText: Jesus calls Matthew away from his tax collector's table, and
+      Matthew hosts him for a meal with publicans and sinners.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 243
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12275
+    submanagers:
+    - id: james_zebedee
+      displayName: James (son of Zebedee)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 85
+      unlockCost: 8592
+    - id: john_apostle
+      displayName: John (son of Zebedee)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 85
+      unlockCost: 8592
+    - id: philip_apostle
+      displayName: Philip
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 275
+      unlockCost: 8592
+    - id: bartholomew
+      displayName: Bartholomew
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 275
+      unlockCost: 8592
+    - id: thomas
+      displayName: Thomas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 275
+      unlockCost: 8592
+    - id: james_alphaeus
+      displayName: James (son of Alphaeus)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 275
+      unlockCost: 8592
+    - id: lebbaeus_thaddaeus
+      displayName: Lebbaeus, whose surname was Thaddaeus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 275
+      unlockCost: 8592
+    - id: simon_the_canaanite
+      displayName: Simon the Canaanite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 276
+      unlockCost: 8592
+  - id: thirty_silver_pieces
+    displayName: Thirty Silver Pieces
+    flavorText: Judas Iscariot agrees with the chief priests to betray Jesus for
+      thirty pieces of silver.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: judas_iscariot
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1974.8417658131502
+    costGrowthRate: 1.15
+    baseInkPerSecond: 98.7420882906575
+    unlockAtVerseIndex: 455
+    managerName: Judas Iscariot
+    managerFlavorText: Judas Iscariot agrees with the chief priests to betray Jesus
+      for thirty pieces of silver.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 923
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 29622
+    submanagers: []
+  - id: torn_robe
+    displayName: Torn Robe
+    flavorText: Caiaphas tears his robe and declares Jesus guilty of blasphemy before
+      the Sanhedrin.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: caiaphas
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 4765.6376785461825
+    costGrowthRate: 1.15
+    baseInkPerSecond: 238.28188392730914
+    unlockAtVerseIndex: 530
+    managerName: Caiaphas
+    managerFlavorText: Caiaphas tears his robe and declares Jesus guilty of blasphemy
+      before the Sanhedrin.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 966
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 71484
+    submanagers:
+    - id: the_pharisees
+      displayName: The Pharisees
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 774
+      unlockCost: 50038
+    - id: the_sadducees
+      displayName: The Sadducees
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 750
+      unlockCost: 50038
+  - id: basin_of_water
+    displayName: Basin of Water
+    flavorText: Pilate washes his hands before the crowd, declaring himself innocent
+      of Jesus's blood, and delivers him to be crucified.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pontius_pilate
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 11500.315051230227
+    costGrowthRate: 1.15
+    baseInkPerSecond: 575.0157525615114
+    unlockAtVerseIndex: 606
+    managerName: Pontius Pilate
+    managerFlavorText: Pilate washes his hands before the crowd, declaring himself
+      innocent of Jesus's blood, and delivers him to be crucified.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 1008
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 172504
+    submanagers:
+    - id: barabbas
+      displayName: Barabbas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1000
+      unlockCost: 120752
+    - id: pilates_wife
+      displayName: Pilate's Wife
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1003
+      unlockCost: 120752
+  - id: salt_and_light
+    displayName: Salt & Light
+    flavorText: Jesus teaches the Beatitudes, the Lord's Prayer, and the ethics of
+      the Kingdom in the Sermon on the Mount.
+    tierType: 1
+    purpose: "Opens with the Beatitudes and moves through the Lord's Prayer, teaching
+      on anger, adultery, oaths, retaliation, love of enemies, giving, prayer, fasting,
+      treasure, worry, judging others, and the wise and foolish builders \u2014 the
+      core statement of Kingdom ethics in Matthew."
+    deliveredByManagerId: jesus
+    managerId: sermon_on_the_mount
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 27752.26636992245
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1387.6133184961225
+    unlockAtVerseIndex: 682
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: mustard_seed
+    displayName: Mustard Seed
+    flavorText: Jesus teaches the Parables of the Kingdom, comparing heaven to a
+      mustard seed, hidden treasure, and a pearl of great price.
+    tierType: 1
+    purpose: "A chapter of short earthly stories \u2014 the sower, the wheat and
+      tares, the mustard seed, the leaven, the hidden treasure, the pearl of great
+      price, the net \u2014 each illustrating some facet of what the Kingdom of Heaven
+      is like."
+    deliveredByManagerId: jesus
+    managerId: parables_of_the_kingdom
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 66971.05994367859
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3348.552997183929
+    unlockAtVerseIndex: 758
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: fig_trees_budding
+    displayName: Fig Tree's Budding
+    flavorText: Jesus delivers the Olivet Discourse on the Mount of Olives, teaching
+      watchfulness for the end of the age.
+    tierType: 1
+    purpose: "Delivered privately on the Mount of Olives in response to the disciples'
+      question about the temple's destruction and his coming \u2014 signs of the
+      end, the parable of the fig tree, and the closing parables of readiness, teaching
+      watchfulness rather than date-setting."
+    deliveredByManagerId: jesus
+    managerId: olivet_discourse
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 161612.85028745286
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8080.642514372643
+    unlockAtVerseIndex: 834
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: commission_scroll
+    displayName: Commission Scroll
+    flavorText: The risen Jesus commissions his eleven remaining disciples to make
+      disciples of all nations, promising to be with them always.
+    tierType: 1
+    purpose: "The risen Jesus's final recorded words in this Gospel, given to the
+      eleven remaining disciples on a mountain in Galilee \u2014 a direct charge
+      to make disciples of all nations, baptizing and teaching, closing with the
+      promise of his abiding presence."
+    deliveredByManagerId: jesus
+    managerId: great_commission
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 390000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 19500.000000000004
+    unlockAtVerseIndex: 910
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

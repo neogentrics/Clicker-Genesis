@@ -18,13 +18,13 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.3.3** — pre-release, core loop implemented and playable, actively being stabilized through real-device playtesting. See [Versioning](#versioning) below for what that number means.
+**Version 0.3.4** — pre-release, core loop implemented and playable. This build's headline change is content, not features: the full Old Testament (39 books) is now playable end-to-end, and all 27 New Testament books' scribe/manager data is imported and ready but **deliberately not exposed in gameplay yet** — a "New Testament — Coming Soon" row shows in the Books tab instead, while the Old Testament experience itself gets polished first (real bugs from mobile playtesting are still being triaged, see [Bug Tracker](#bug-tracker--known-issues)). No new release build has been cut for 0.3.4 yet — hold off if you're looking for a fresh download, the last published build is still v0.3.3 below.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
 ## Download
 
-Three platforms as of v0.3.3 — pick yours:
+Three platforms — pick yours (still on v0.3.3, the last cut release; v0.3.4 is source-only until mobile bugs are triaged):
 
 | Platform | Download | Minimum version |
 |---|---|---|
@@ -68,6 +68,8 @@ All releases (including older versions and full changelogs) are on the [Releases
 - Shared passive "progress multiplier": every 5 verses bought adds +0.1 to a multiplier applied across all scribe output, and it doubles outright on every chapter completed
 - Real hover/press visual feedback on every button in the game, plus tooltips throughout
 - Managers are correctly locked until their own scribe tier is unlocked by verse progress, not just by player level — and that gating stays keyed to Genesis' progress specifically, so switching to a different active book never re-locks already-unlocked scribes/managers
+- **Full Old Testament, all 39 books playable**: every book from Genesis through Malachi has its own real scribe/manager/submanager roster (408 tiers total), computed against its real KJV verse positions, switchable via the Books tab in canonical order
+- **All 27 New Testament books' data imported** (276 more tiers — Matthew through Revelation, each Gospel's Jesus independently authored per book) but intentionally not switchable in-game yet — a "New Testament — Coming Soon" row shows in the Books tab instead, until the Old Testament experience is polished
 
 ## Tech stack
 

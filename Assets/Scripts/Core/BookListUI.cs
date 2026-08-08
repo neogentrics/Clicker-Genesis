@@ -94,6 +94,33 @@ namespace ClickerGenesis.Core
                 if (row.Button != null) row.Button.onClick.AddListener(() => Controller.SwitchActiveBook(id));
                 rows.Add(row);
             }
+
+            BuildComingSoonRow();
+        }
+
+        /// <summary>Static row appended after the last canonical OT book (2026-08-08) - the New
+        /// Testament's scribe/manager data is fully imported (all 27 books) but deliberately not
+        /// exposed anywhere in gameplay yet (CanonicalBookOrder only lists the 39 OT books, so there
+        /// is no code path to switch into or unlock an NT book) until the OT experience itself is
+        /// polished. This row is purely informational - never added to `rows`, so Refresh() never
+        /// touches it and its text/disabled state never changes.</summary>
+        private void BuildComingSoonRow()
+        {
+            var rowGo = Instantiate(RowTemplate, Content);
+            rowGo.SetActive(true);
+            rowGo.name = "BookRow_NewTestamentComingSoon";
+
+            var referenceText = rowGo.transform.Find("Reference").GetComponent<TMP_Text>();
+            var costText = rowGo.transform.Find("Cost").GetComponent<TMP_Text>();
+            var button = rowGo.GetComponent<Button>();
+
+            referenceText.text = "New Testament";
+            costText.text = "Coming Soon";
+            if (button != null) button.interactable = false;
+
+            var tooltip = rowGo.gameObject.AddComponent<HoverTooltip>();
+            tooltip.enabled = true;
+            tooltip.Text = "The New Testament's own book roster is being polished and isn't playable yet - hang tight!";
         }
 
         private void Refresh()

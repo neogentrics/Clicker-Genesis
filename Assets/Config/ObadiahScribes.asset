@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: ObadiahScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Obadiah
+  tiers:
+  - id: watchmans_scroll
+    displayName: Watchman's Scroll
+    flavorText: Receives a single vision from the LORD concerning Edom, the sole
+      word of the shortest book in the Old Testament.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: obadiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Obadiah
+    managerFlavorText: Receives a single vision from the LORD concerning Edom, the
+      sole word of the shortest book in the Old Testament.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: cleft_of_the_rock
+    displayName: Cleft of the Rock
+    flavorText: Edom boasts in its rock-cut dwellings and towering pride, certain
+      nothing can bring it down to the ground.
+    tierType: 1
+    purpose: Warns that Edom's pride in its secure rock-dwellings, wisdom, and allies
+      will not spare it from total destruction, since even a thief leaves something
+      behind while Edom will be stripped utterly bare.
+    deliveredByManagerId: obadiah
+    managerId: edom_pride_and_doom
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 246.62120743304698
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.331060371652349
+    unlockAtVerseIndex: 2
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: brothers_betrayal
+    displayName: Brother's Betrayal
+    flavorText: Edom stands aloof and loots Jerusalem's substance while foreigners
+      cast lots on the city, betraying its brother Jacob in his day of calamity.
+    tierType: 1
+    purpose: Catalogs Edom's specific sins against brother Jacob during Jerusalem's
+      calamity - standing aloof, gloating, looting, blocking escape routes, and delivering
+      survivors to the enemy.
+    deliveredByManagerId: obadiah
+    managerId: violence_against_jacob
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6082.201995573398
+    costGrowthRate: 1.15
+    baseInkPerSecond: 304.1100997786699
+    unlockAtVerseIndex: 9
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: zions_flame
+    displayName: Zion's Flame
+    flavorText: The day of the LORD draws near upon all nations, and the house of
+      Jacob becomes a consuming fire against the house of Esau.
+    tierType: 1
+    purpose: Promises that the day of the LORD is near upon all nations and that
+      Edom's own deeds will be repaid on its own head, while deliverance rests on
+      Mount Zion and the kingdom becomes the LORD's.
+    deliveredByManagerId: obadiah
+    managerId: day_of_the_lord
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 149999.99999999994
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7499.999999999997
+    unlockAtVerseIndex: 14
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

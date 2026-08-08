@@ -1,0 +1,433 @@
+{
+  "book": "Romans",
+  "canonicalOrder": 45,
+  "translation": "KJV",
+  "status": "drafted via multi-agent workflow, adversarially fact-checked and corrected",
+  "notes": "Romans is an epistle, not a narrative, so its structure is dominated by law/theme tiers rather than person tiers — Paul lays out a single sustained theological argument (universal guilt, justification by faith, union with Christ, Israel's place in God's plan, practical living) rather than a sequence of scenes with different actors. The five law tiers cover that argument in canonical chapter order and are all deliveredBy Paul, since he is the sole author. Paul himself gets one full person tier (\"The Apostle's Pen\") for the genuinely personal material that is NOT pure doctrinal transmission — his self-introduction (1:1-17), his personal grief and longing for Israel's salvation (9:1-5, spoken in the first person as his own anguish, not a doctrinal point), his account of his own calling and ministry ambitions (15:14-21), his travel plans and prayer request (15:22-33), his warning against those who cause divisions (16:17-20), the personal greetings of chapter 16, and the letter's closing doxology (16:25-27) — this passes the \"personally embodied\" test (he expresses grief, states his own plans, names people he personally knows, and closes the letter in his own voice) rather than the \"pure transmission\" test; every verse of Romans 16 is now accounted for under this tier, including the transitional warning at 16:17-20 and the closing doxology at 16:25-27, so no material at the book's end is left uncovered. Old Testament figures Paul cites as scriptural examples within his argument (Abraham, Sarah, Adam, Isaac, Ishmael, Jacob, Esau, Pharaoh, Elijah, David) are not given new character entries here since they take no new action in Romans itself — they are cited, not narratively present — and are instead cross-referenced in genealogyLists pointing to their existing indexed entries in Genesis/Exodus (or flagged as not-yet-indexed for books later than Exodus in this project's pipeline); Pharaoh's cross-reference now explicitly names the real indexed id (\"pharaoh_exodus\") rather than leaving it to be guessed. Chapter 16's long list of greeted names is treated the same way per the collective-entry rule: Phoebe (the commended sister, 16:1-2), Priscilla and Aquila (paired as a single collective entry per the text's own consistent pairing of them, 16:3-5), and Andronicus and Junia (paired as a single collective entry the same way, since the text names and credits them together and never differentiates an individual action by either one, 16:7) are all promoted to submanagers, since the guidance singles all three out as load-bearing — Andronicus and Junia are named as Paul's own kinsmen and fellow-prisoners who are \"of note among the apostles,\" a mark of textual distinction comparable to Phoebe's own commendation, so they are held to the same promotion threshold rather than left in the bulk note. The remaining ~24 names Paul greets are logged as a bulk genealogyLists note with short individual descriptors where the text supplies one (Tertius the actual scribe of the letter, Erastus the city treasurer, Gaius Paul's host, Mary who \"bestowed much labour\" — flagged there as a distinct individual from Mary the mother of Jesus, already indexed in this project's Matthew.json, and from any other Mary that may appear in a future NT book, since Romans itself supplies no identifying detail beyond her name and labor — Rufus and his mother). Naming-collision flag: this Paul entry (paul_romans) is deliberately id-suffixed because Paul will very likely recur as his own person tier in every future Pauline epistle indexed in this project, following the same per-book-independent-manager precedent already established for Jesus across the four Gospels — future books should use their own paul_[book] id rather than reusing this one. Ageevents are empty throughout, as is typical for the New Testament epistles, which almost never state ages.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Pen",
+      "managerId": "paul_romans",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Wrath Revealed",
+      "managerId": "the_wrath_revealed",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Ledger of Faith",
+      "managerId": "the_ledger_of_faith",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Newness of Life",
+      "managerId": "the_newness_of_life",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Wild Olive Branch",
+      "managerId": "the_wild_olive_branch",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Living Sacrifice",
+      "managerId": "the_living_sacrifice",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_romans",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": null,
+      "perkNote": "Paul is expected to recur as his own independent per-book manager tier in future Pauline epistles (same precedent as Jesus getting a separate tier per Gospel) — future indexing should use a book-specific id such as paul_1corinthians, not reuse paul_romans.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 1:1",
+          "note": "Introduces himself as \"a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God.\""
+        },
+        {
+          "ref": "Romans 1:8-15",
+          "note": "Thanks God for the Roman believers' faith, states his longing to visit them and to preach the gospel at Rome also, though he has been hindered until now."
+        },
+        {
+          "ref": "Romans 1:16-17",
+          "note": "States he is not ashamed of the gospel, \"the power of God unto salvation to every one that believeth\"; \"the just shall live by faith.\""
+        },
+        {
+          "ref": "Romans 9:1-5",
+          "note": "Personal anguish: \"I have great heaviness and continual sorrow in my heart... I could wish that myself were accursed from Christ for my brethren, my kinsmen according to the flesh,\" who are Israelites."
+        },
+        {
+          "ref": "Romans 11:13-14",
+          "note": "Addresses Gentile readers directly, identifying himself as \"the apostle of the Gentiles\" and magnifying his office in hope of provoking his own kinsmen to jealousy and saving some of them."
+        },
+        {
+          "ref": "Romans 15:14-21",
+          "note": "Describes his own calling as a minister of Jesus Christ to the Gentiles, and his personal ambition to preach the gospel only where Christ had not already been named, so as not to build on another man's foundation."
+        },
+        {
+          "ref": "Romans 15:22-29",
+          "note": "Explains his travel plans: long hindered from visiting Rome, he now hopes to see them on his way to Spain, but must first go to Jerusalem to deliver a contribution for the poor among the saints there."
+        },
+        {
+          "ref": "Romans 15:30-33",
+          "note": "Asks the Roman believers to strive together with him in prayer, for deliverance from unbelievers in Judaea and that his service to Jerusalem be accepted."
+        },
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Commends Phoebe to the church at Rome."
+        },
+        {
+          "ref": "Romans 16:3-16",
+          "note": "Sends personal greetings to a long list of individuals and households at Rome, including Priscilla and Aquila, and Andronicus and Junia among his own kinsmen and fellow-prisoners."
+        },
+        {
+          "ref": "Romans 16:17-20",
+          "note": "Warns the Roman believers to mark and avoid those who cause divisions and offences contrary to the doctrine they have learned, since such persons serve their own belly rather than Christ and deceive the simple by good words and fair speeches; expresses confidence in their obedience and promises that \"the God of peace shall bruise Satan under your feet shortly.\""
+        },
+        {
+          "ref": "Romans 16:21-23",
+          "note": "Relays greetings from his own companions — Timotheus (his workfellow), and Lucius, Jason, and Sosipater (his kinsmen), Tertius (who wrote the epistle), Gaius (his host), Erastus (the city's chamberlain), and Quartus."
+        },
+        {
+          "ref": "Romans 16:25-27",
+          "note": "Closes the letter with a doxology: God is able to establish them according to Paul's gospel and the preaching of Jesus Christ, according to the revelation of a mystery kept secret since the world began but now made known to all nations for the obedience of faith; \"to God only wise, be glory through Jesus Christ for ever. Amen.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Though Paul is the letter's author, Romans 16:22 records that Tertius — the scribe who physically wrote it down at Paul's dictation — inserted his own personal greeting into the text, a rare moment where a biblical letter's actual penman names himself directly.",
+        "Paul wrote Romans without having yet visited the church there (Romans 1:13, 15:22-23) — unlike most of his other epistles, this letter was addressed to a congregation he had not personally founded or met."
+      ]
+    },
+    {
+      "id": "phoebe",
+      "name": "Phoebe",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Paul commends her as \"our sister,\" a servant of the church at Cenchrea, asking the Roman believers to receive her and assist her, \"for she hath been a succourer of many, and of myself also.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Phoebe is traditionally understood by many readers to have personally carried this letter from Corinth to Rome, since Paul commends her for reception just before the letter's close — but the text of Romans itself never explicitly states that she was the courier; that detail is inference, not stated fact."
+      ]
+    },
+    {
+      "id": "priscilla_and_aquila_romans",
+      "name": "Priscilla and Aquila",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Treated as a single collective entry because Romans itself always names and credits them as a pair and never differentiates an individual action by either one alone.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:3-5",
+          "note": "Paul greets them as \"my helpers in Christ Jesus: who have for my life laid down their own necks: unto whom not only I give thanks, but also all the churches of the Gentiles,\" and greets \"the church that is in their house.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans itself does not state that Priscilla and Aquila are husband and wife or describe the incident where they risked their lives for Paul — both facts come from other New Testament passages (e.g. Acts 18:2, Acts 18:26) not yet indexed in this project's pipeline; noted here only as cross-reference context, not asserted as content of this book."
+      ]
+    },
+    {
+      "id": "andronicus_and_junia_romans",
+      "name": "Andronicus and Junia",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Treated as a single collective entry because Romans itself always names and credits them together and never differentiates an individual action by either one. Promoted to a submanager (rather than left in the bulk genealogyLists greeting note) because Paul distinguishes them by name as his own kinsmen and fellow-prisoners \"of note among the apostles\" — a mark of textual distinction comparable to Phoebe's own commendation and to Priscilla/Aquila's, so held to the same promotion threshold. Naming/identity flag: Junia's identity has long been a matter of scholarly debate — some manuscripts and translators have read the name as the masculine 'Junias' rather than the far more common feminine 'Junia' — noted here as an open textual question, not asserted as settled fact either way.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:7",
+          "note": "Paul greets them as \"my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in Christ before me.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paul states they were \"in Christ before me\" — i.e. they became believers earlier than Paul's own conversion, making them among the earliest Christians he personally names in this letter."
+      ]
+    },
+    {
+      "id": "the_wrath_revealed",
+      "name": "The Wrath Revealed",
+      "role": "law",
+      "scribeTier": "The Wrath Revealed",
+      "deliveredBy": "paul_romans",
+      "purpose": "Establishes that both Gentiles (who suppress the truth about God evident in creation and conscience) and Jews (who possess the law but do not keep it) stand equally guilty before God, so that every mouth is stopped and the whole world held accountable — the necessary foundation before a righteousness apart from the law can be introduced.",
+      "verses": [
+        {
+          "ref": "Romans 1:18-23",
+          "note": "God's wrath is revealed against ungodliness; Gentiles are without excuse, having suppressed the truth about God evident in creation, and turned instead to idolatry."
+        },
+        {
+          "ref": "Romans 1:24-32",
+          "note": "As a result, God gives them over to uncleanness and a reprobate mind; a catalog of resulting sins follows, ending with those who not only do such things but approve of others who do them."
+        },
+        {
+          "ref": "Romans 2:1-16",
+          "note": "Jew and Gentile alike will be judged by God according to truth, not according to mere possession or hearing of the law; God will judge the secrets of men by Jesus Christ."
+        },
+        {
+          "ref": "Romans 2:17-29",
+          "note": "Warns those who boast in the law but break it; true circumcision, Paul states, is \"of the heart, in the spirit, and not in the letter.\""
+        },
+        {
+          "ref": "Romans 3:1-8",
+          "note": "Addresses the advantage of the Jew — chiefly, that they were entrusted with the oracles of God — despite unbelief, and defends God's faithfulness as unaffected by man's unfaithfulness."
+        },
+        {
+          "ref": "Romans 3:9-20",
+          "note": "Concludes that Jews and Gentiles are all under sin, chaining together Old Testament quotations (\"there is none righteous, no, not one\"); states \"by the law is the knowledge of sin.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans 3:10-18 strings together quotations drawn from several different Psalms and from Isaiah into one continuous indictment, a technique of chained scriptural citation."
+      ]
+    },
+    {
+      "id": "the_ledger_of_faith",
+      "name": "The Ledger of Faith",
+      "role": "law",
+      "scribeTier": "The Ledger of Faith",
+      "deliveredBy": "paul_romans",
+      "purpose": "Introduces a righteousness apart from the law, received by faith and credited (\"counted\"/\"imputed\") rather than earned by works, using Abraham's own justification — which occurred before his circumcision — as the scriptural proof, and contrasts the one trespass of Adam that brought condemnation to all with the one act of righteousness in Christ that brings justification and life.",
+      "verses": [
+        {
+          "ref": "Romans 3:21-26",
+          "note": "The righteousness of God apart from the law is now manifested, witnessed by the law and the prophets; all are \"justified freely by his grace through the redemption that is in Christ Jesus.\""
+        },
+        {
+          "ref": "Romans 3:27-31",
+          "note": "Boasting is excluded; a man is justified by faith without the deeds of the law; the law is established, not made void, through faith."
+        },
+        {
+          "ref": "Romans 4:1-8",
+          "note": "Abraham was justified by faith, not works — \"it was counted unto him for righteousness\" (citing Genesis 15:6) — with David's words also cited about the blessedness of the man to whom God imputes righteousness apart from works."
+        },
+        {
+          "ref": "Romans 4:9-17",
+          "note": "The blessing is not confined to the circumcised, since Abraham was justified while still uncircumcised, making him the father of all who believe, whether circumcised or not."
+        },
+        {
+          "ref": "Romans 4:18-25",
+          "note": "Abraham's faith is described as strong though his and Sarah's bodies were as good as dead, being \"fully persuaded that, what he had promised, he was able also to perform.\""
+        },
+        {
+          "ref": "Romans 5:1-11",
+          "note": "Being justified by faith, believers have peace with God and access into grace; God's own love is commended in that Christ died for the ungodly while they were yet sinners."
+        },
+        {
+          "ref": "Romans 5:12-21",
+          "note": "Through one man (Adam) sin and death entered the world and passed upon all men; contrasted with the free gift through the one man Jesus Christ, whose obedience makes many righteous — \"where sin abounded, grace did much more abound.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The recurring word \"counted\" (Greek logizomai) is an accounting term — Paul's argument in chapter 4 pictures righteousness as something credited to a person's account rather than earned wage, a deliberate financial metaphor."
+      ]
+    },
+    {
+      "id": "the_newness_of_life",
+      "name": "The Newness of Life",
+      "role": "law",
+      "scribeTier": "The Newness of Life",
+      "deliveredBy": "paul_romans",
+      "purpose": "Answers the objection that grace should be exploited to keep sinning, by explaining the believer's union with Christ's death and resurrection through baptism, describes the ongoing internal struggle against indwelling sin even for one who delights in God's law, and closes with the assurance that life in the Spirit brings no condemnation and that nothing in creation can separate believers from the love of God in Christ Jesus.",
+      "verses": [
+        {
+          "ref": "Romans 6:1-14",
+          "note": "Shall we continue in sin that grace may abound? \"God forbid\"; baptized into Christ's death and buried with him, believers are to \"walk in newness of life\" and reckon themselves dead indeed unto sin."
+        },
+        {
+          "ref": "Romans 6:15-23",
+          "note": "Believers become servants of righteousness rather than servants of sin; \"the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.\""
+        },
+        {
+          "ref": "Romans 7:1-6",
+          "note": "Uses the law of marriage as an illustration; believers are dead to the law through the body of Christ, freed to serve in newness of spirit."
+        },
+        {
+          "ref": "Romans 7:7-13",
+          "note": "The law itself is not sin, but sin used the commandment to produce all manner of wrong desire in him; \"the law is holy, and the commandment holy, and just, and good.\""
+        },
+        {
+          "ref": "Romans 7:14-25",
+          "note": "Describes the inward struggle: \"the good that I would I do not: but the evil which I would not, that I do\"; cries out \"O wretched man that I am,\" then gives thanks to God through Jesus Christ."
+        },
+        {
+          "ref": "Romans 8:1-11",
+          "note": "\"There is therefore now no condemnation to them which are in Christ Jesus\"; the law of the Spirit of life sets one free from the law of sin and death."
+        },
+        {
+          "ref": "Romans 8:12-17",
+          "note": "Those led by the Spirit of God are the sons of God; \"the Spirit itself beareth witness with our spirit, that we are the children of God,\" and joint-heirs with Christ."
+        },
+        {
+          "ref": "Romans 8:18-27",
+          "note": "Present sufferings are \"not worthy to be compared with the glory which shall be revealed\"; the whole creation groans, and the Spirit itself makes intercession \"with groanings which cannot be uttered.\""
+        },
+        {
+          "ref": "Romans 8:28-30",
+          "note": "\"All things work together for good to them that love God\"; those God foreknew he also predestinated, called, justified, and glorified."
+        },
+        {
+          "ref": "Romans 8:31-39",
+          "note": "\"If God be for us, who can be against us?\"; concludes that nothing in all creation \"shall be able to separate us from the love of God, which is in Christ Jesus our Lord.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_wild_olive_branch",
+      "name": "The Wild Olive Branch",
+      "role": "law",
+      "scribeTier": "The Wild Olive Branch",
+      "deliveredBy": "paul_romans",
+      "purpose": "Explains that God's word has not failed even though most of Israel has not believed, because true Israel was never merely physical descent but God's own sovereign election (illustrated through Isaac/Ishmael and Jacob/Esau), describes Israel's present stumbling as the very means by which salvation has become available to the Gentiles (pictured as a wild olive branch grafted into the cultivated tree), and looks forward to a future restoration in which \"all Israel shall be saved.\"",
+      "verses": [
+        {
+          "ref": "Romans 9:6-13",
+          "note": "\"They are not all Israel, which are of Israel\"; God's purpose according to election is illustrated through Isaac (not Ishmael) and Jacob (not Esau), chosen \"before the children were born, neither having done any good or evil.\""
+        },
+        {
+          "ref": "Romans 9:14-24",
+          "note": "\"Is there unrighteousness with God? God forbid\"; discusses God's mercy and hardening (citing Pharaoh) and the potter's right over the clay."
+        },
+        {
+          "ref": "Romans 9:25-33",
+          "note": "Cites Hosea and Isaiah on calling a people \"not my people\" and on a remnant being saved; Israel \"stumbled at that stumblingstone.\""
+        },
+        {
+          "ref": "Romans 10:1-13",
+          "note": "Paul's own heart's desire and prayer for Israel's salvation; describes their zeal without knowledge, seeking to establish their own righteousness; \"whosoever shall call upon the name of the Lord shall be saved.\""
+        },
+        {
+          "ref": "Romans 10:14-21",
+          "note": "\"How shall they hear without a preacher?\"; \"faith cometh by hearing\"; Israel has heard, yet not all have obeyed the gospel."
+        },
+        {
+          "ref": "Romans 11:1-10",
+          "note": "\"Hath God cast away his people? God forbid\"; there is a remnant according to the election of grace, as in Elijah's day when seven thousand had not bowed the knee to Baal."
+        },
+        {
+          "ref": "Romans 11:11-24",
+          "note": "Through Israel's fall, salvation has come to the Gentiles, provoking Israel to jealousy; pictures an olive tree with some natural branches broken off and a wild olive branch grafted in among them, warning the grafted branch not to boast."
+        },
+        {
+          "ref": "Romans 11:25-32",
+          "note": "Reveals the \"mystery\" that blindness in part has happened to Israel until the fullness of the Gentiles come in, \"and so all Israel shall be saved.\""
+        },
+        {
+          "ref": "Romans 11:33-36",
+          "note": "Closes with a doxology: \"O the depth of the riches both of the wisdom and knowledge of God!\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_living_sacrifice",
+      "name": "The Living Sacrifice",
+      "role": "law",
+      "scribeTier": "The Living Sacrifice",
+      "deliveredBy": "paul_romans",
+      "purpose": "Turns from doctrine to practice, calling believers to present themselves as a living sacrifice, exercise their differing spiritual gifts within the one body of Christ, love genuinely, submit to governing authorities, fulfill the law through love of neighbor, and bear with one another's differing convictions on disputable matters (food, days) without judging, following the example of Christ, \"who pleased not himself.\"",
+      "verses": [
+        {
+          "ref": "Romans 12:1-2",
+          "note": "\"Present your bodies a living sacrifice\"; \"be not conformed to this world: but be ye transformed by the renewing of your mind.\""
+        },
+        {
+          "ref": "Romans 12:3-8",
+          "note": "One body with many members; differing gifts — prophecy, ministry, teaching, exhortation, giving, ruling, mercy — to be exercised according to their proportion."
+        },
+        {
+          "ref": "Romans 12:9-21",
+          "note": "A run of practical exhortations: love without dissimulation, rejoice in hope, bless persecutors, recompense no man evil for evil, \"overcome evil with good.\""
+        },
+        {
+          "ref": "Romans 13:1-7",
+          "note": "Calls for subjection to the governing authorities, \"ordained of God\"; render tribute, custom, fear, and honour to whom each is due."
+        },
+        {
+          "ref": "Romans 13:8-10",
+          "note": "\"Owe no man any thing, but to love one another: for he that loveth another hath fulfilled the law.\""
+        },
+        {
+          "ref": "Romans 13:11-14",
+          "note": "\"The night is far spent, the day is at hand\"; exhortation to cast off the works of darkness and \"put on the armour of light.\""
+        },
+        {
+          "ref": "Romans 14:1-12",
+          "note": "Receive the one who is weak in faith, without disputing over opinions; some esteem one day above another, others esteem every day alike; \"none of us liveth to himself.\""
+        },
+        {
+          "ref": "Romans 14:13-23",
+          "note": "\"Let us not therefore judge one another any more\"; the kingdom of God is not meat and drink, \"but righteousness, and peace, and joy in the Holy Ghost.\""
+        },
+        {
+          "ref": "Romans 15:1-13",
+          "note": "The strong ought to bear the infirmities of the weak and not please themselves, following Christ's own example, who \"pleased not himself\"; exhorts believers to \"receive ye one another, as Christ also received us.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references kept out of the character list above — either because Romans cites them only as scriptural examples within Paul's argument rather than narratively presenting them (already indexed, or awaiting future indexing, elsewhere in this project), or because they belong to the large closing greeting list of Romans 16 where the text does not differentiate individual actions beyond a name and a short descriptor.",
+    "pauline_scriptural_examples": {
+      "ref": "Romans 4, 5:12-21, 9:6-13, 9:17, 11:2-4, 4:6-8",
+      "note": "Old Testament figures Paul cites as examples within his theological argument, not narratively present in Romans itself: Abraham and Sarah (Romans 4, already indexed in this project's Genesis file as 'abraham'/'sarah'), Adam (Romans 5:12-21, already indexed in Genesis as 'adam'), Isaac and Ishmael (Romans 9:6-9, already indexed in Genesis), Jacob and Esau (Romans 9:10-13, already indexed in Genesis), Pharaoh (Romans 9:17, already indexed in this project's Exodus file as 'pharaoh_exodus'), Elijah (Romans 11:2-4, citing 1 Kings 19 — not yet indexed in this project's pipeline), and David (Romans 4:6-8, quoting Psalm 32 — not yet indexed in this project's pipeline)."
+    },
+    "romans_16_greeting_list": {
+      "ref": "Romans 16:5-16, 16:21-23",
+      "note": "Remaining individuals and households Paul greets or who send greetings, kept as a collective bulk note since the text gives most of them only a name with no differentiated action: Epaenetus (\"the firstfruits of Achaia\"); Mary (\"who bestowed much labour on us\" — a different Mary from Mary the mother of Jesus, already indexed in this project's Matthew.json, and from any other Mary that may be indexed in a future NT book; Romans itself supplies no identifying detail beyond her name and labor, so no further disambiguation is possible from this text alone); Amplias, Urbane, Stachys, Apelles; the household of Aristobulus; Herodion (Paul's kinsman); the household of Narcissus; Tryphena and Tryphosa; Persis (\"which laboured much in the Lord\"); Rufus (\"chosen in the Lord\") and his mother (\"his mother and mine,\" i.e. one who had been like a mother to Paul); Asyncritus, Phlegon, Hermas, Patrobas, Hermes; Philologus, Julia, Nereus and his sister, Olympas; and, among Paul's own companions sending greetings at the letter's close, Timotheus (called Paul's \"workfellow\"), and Lucius, Jason, and Sosipater (called his kinsmen), Tertius (who personally wrote the epistle at Paul's dictation), Gaius (Paul's host, described as host \"of the whole church\"), Erastus (\"the chamberlain of the city\"), and Quartus. Andronicus and Junia (Romans 16:7) are NOT included in this bulk note — they have been promoted to their own submanager entry ('andronicus_and_junia_romans') per the same textual-distinction threshold used for Phoebe and Priscilla/Aquila."
+    }
+  }
+}

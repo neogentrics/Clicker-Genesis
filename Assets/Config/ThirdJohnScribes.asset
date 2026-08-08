@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: ThirdJohnScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 3 John
+  tiers:
+  - id: ink_and_pen
+    displayName: Ink and Pen
+    flavorText: The elder sets down his pen, preferring to say the rest face to face
+      rather than trust it all to ink and paper.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elder_3john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: The Elder
+    managerFlavorText: The elder sets down his pen, preferring to say the rest face
+      to face rather than trust it all to ink and paper.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 12
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: the_open_door
+    displayName: The Open Door
+    flavorText: Gaius welcomes traveling brothers and strangers into his home, sending
+      them on their way in a manner worthy of God.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gaius_3john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 246.62120743304698
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.331060371652349
+    unlockAtVerseIndex: 3
+    managerName: Gaius
+    managerFlavorText: Gaius welcomes traveling brothers and strangers into his home,
+      sending them on their way in a manner worthy of God.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 4
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3699
+    submanagers:
+    - id: brethren_and_strangers_3john
+      displayName: The Brethren and Strangers
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 4
+      unlockCost: 2589
+  - id: the_seat_of_preeminence
+    displayName: The Seat of Preeminence
+    flavorText: Diotrephes, loving to have the preeminence, refuses the elder, prates
+      against him with malicious words, and casts willing brethren out of the church.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: diotrephes_3john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6082.201995573398
+    costGrowthRate: 1.15
+    baseInkPerSecond: 304.1100997786699
+    unlockAtVerseIndex: 7
+    managerName: Diotrephes
+    managerFlavorText: Diotrephes, loving to have the preeminence, refuses the elder,
+      prates against him with malicious words, and casts willing brethren out of
+      the church.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 8
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 91233
+    submanagers: []
+  - id: the_good_report
+    displayName: The Good Report
+    flavorText: Demetrius has good report of all men and of the truth itself, and
+      the elder himself bears record that it is true.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: demetrius_3john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 149999.99999999994
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7499.999999999997
+    unlockAtVerseIndex: 11
+    managerName: Demetrius
+    managerFlavorText: Demetrius has good report of all men and of the truth itself,
+      and the elder himself bears record that it is true.
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 11
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2249999
+    submanagers: []

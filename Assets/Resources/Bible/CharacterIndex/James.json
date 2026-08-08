@@ -1,0 +1,450 @@
+{
+  "book": "James",
+  "canonicalOrder": 59,
+  "translation": "KJV",
+  "status": "drafted by hand following the established Old Testament/Matthew indexing methodology (single-pass, not multi-agent workflow); pending user read-through and confirmation",
+  "notes": "James is intensely practical wisdom literature in epistle form, closer in tone and structure to Proverbs than to Paul's doctrinal epistles, and it has almost no narrative scenes of its own — the entire letter is direct instruction from one author to \"the twelve tribes scattered abroad\" (James 1:1), a collective audience never individuated in the text and therefore not modeled as a character, per the established rule against inventing differentiation a text doesn't support. This makes James the most law/theme-tier-heavy book indexed so far: one person tier (the author) anchors ten law tiers built around the letter's actual standalone teaching units, sized to match where the text itself marks real breaks (the standalone \"faith without works\" argument at 2:14-26, the tongue passage at 3:1-12, the two-part warning against worldly presumption spanning 4:13-5:6, and the closing prayer/healing/restoration unit at 5:12-20) rather than compressed to a fixed count or padded past what the content supports. There are no submanagers in this file: James has no supporting cast carrying scenes the way a narrative book does, and the only named figures who appear are Old Testament examples cited for illustration (Abraham, Rahab, Job, Elias/Elijah) — each already indexed, or eligible for indexing, in their own book's file, and cross-referenced here in genealogyLists rather than duplicated. The book's authorship carries a real naming-collision risk: this James is neither James son of Zebedee nor James son of Alphaeus (both numbered among the Twelve, per Matthew.json's own documented structure most likely captured there only as submanagers under Matthew's tier rather than full manager tiers — hedged, not asserted, since this was not independently re-verified against that file) but is traditionally identified as James the Lord's brother, leader of the Jerusalem church — an identification built from cross-references (Mark 6:3, Galatians 1:19, Acts 15) and early church tradition, not an explicit self-statement in the letter itself, which only says \"James, a servant of God and of the Lord Jesus Christ\" (James 1:1); this is flagged directly on his character entry rather than asserted as settled textual fact. Separately, this James's own family relationship to Jesus (full brother, half-brother, or cousin/kinsman) is itself a longstanding, unresolved doctrinal question the text does not settle (the Helvidian/Epiphanian/Hieronymian views) — flagged on his genealogy fields rather than answered, matching the care Matthew.json already takes hedging Jesus's own genealogy.father as null.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "James, Servant of Christ",
+      "managerId": "james_brother_of_jesus",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Trials, Wisdom, and the Perfect Gift",
+      "managerId": "trials_wisdom_gift",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Doers of the Word",
+      "managerId": "doers_of_the_word",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Respect of Persons Forbidden",
+      "managerId": "respect_of_persons",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Faith Without Works Is Dead",
+      "managerId": "faith_without_works",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Taming the Tongue",
+      "managerId": "taming_the_tongue",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Wisdom From Above",
+      "managerId": "wisdom_from_above",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Wars, Worldliness, and Humility",
+      "managerId": "wars_worldliness_humility",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Presumption of Riches",
+      "managerId": "presumption_of_riches",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Patience Unto the Coming of the Lord",
+      "managerId": "patience_unto_the_lord",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Prayer, Oaths, and the Wandering Soul",
+      "managerId": "prayer_oaths_wandering_soul",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "james_brother_of_jesus",
+      "name": "James, Servant of God and of the Lord Jesus Christ",
+      "role": "manager",
+      "scribeTier": "James, Servant of Christ",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Traditionally identified with Joseph the carpenter, husband of Mary — Matthew 13:55 and Mark 6:3 both list a James among Jesus's \"brethren,\" and Joseph is Jesus's own legal father (Matthew 1:16). However, whether James was Joseph's and Mary's own son (a full brother of Jesus, the Helvidian view), Joseph's son by an earlier marriage (a half-brother, the Epiphanian view), or a cousin/kinsman of Jesus through Mary's sister or Joseph's brother Clopas (the Hieronymian/Jerome view, under which Joseph would not be his literal father at all) is a longstanding, unresolved doctrinal question that the text itself does not settle — the epistle of James makes no genealogical claim whatsoever. Not individually indexed in this file.",
+        "mother": "Traditionally identified with Mary, mother of Jesus (Matthew 13:55, Mark 6:3, naming James among the \"brethren\" born of her household) — subject to the same unresolved question described in the father field above; not asserted here as settled textual fact beyond what the \"brethren\" language itself states.",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "James 1:1",
+          "note": "Identifies himself only as \"a servant of God and of the Lord Jesus Christ,\" writing to \"the twelve tribes which are scattered abroad, greeting\" — the letter's sole self-description of its author."
+        },
+        {
+          "ref": "Matthew 13:55",
+          "note": "The people of Nazareth ask, \"Is not this the carpenter's son? is not his mother called Mary? and his brethren, James, and Joses, and Simon, and Judas?\" — the first textual link between Jesus and a brother named James."
+        },
+        {
+          "ref": "Mark 6:3",
+          "note": "Parallel account: \"Is not this the carpenter, the son of Mary, the brother of James, and Joses, and of Juda, and Simon?\" — again naming James among Jesus's brethren."
+        },
+        {
+          "ref": "Acts 12:17",
+          "note": "Peter, freed from prison by an angel, instructs the gathered believers to \"go shew these things unto James, and to the brethren,\" reflecting James's recognized standing in the Jerusalem church."
+        },
+        {
+          "ref": "Acts 15:13-21",
+          "note": "At the Jerusalem council, James speaks last and delivers the deciding judgment — quoting the prophets, he rules that Gentile converts should not be troubled with circumcision, only asked to abstain from certain things."
+        },
+        {
+          "ref": "Acts 21:18",
+          "note": "On Paul's final visit to Jerusalem, Paul and his companions go in to James, with all the elders present."
+        },
+        {
+          "ref": "1 Corinthians 15:7",
+          "note": "Paul records that the risen Christ \"was seen of James; then of all the apostles\" among the resurrection appearances."
+        },
+        {
+          "ref": "Galatians 1:19",
+          "note": "Paul, recounting his first post-conversion visit to Jerusalem, says he saw none of the other apostles \"save James the Lord's brother.\""
+        },
+        {
+          "ref": "Galatians 2:9",
+          "note": "Paul names James, Cephas (Peter), and John as those \"who seemed to be pillars,\" who gave him the right hand of fellowship."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified as \"James the Just,\" brother of the Lord (Mark 6:3, Galatians 1:19) and leader of the Jerusalem church — this identification is built from cross-reference with Acts and Galatians and from early church tradition, not from an explicit self-statement within the epistle itself, which only says \"James, a servant of God and of the Lord Jesus Christ\" (James 1:1). Flagged here as tradition-supported, not asserted as settled textual fact.",
+        "NAMING COLLISION FLAG: multiple New Testament men are named James, including James son of Zebedee (brother of John) and James son of Alphaeus, both numbered among the Twelve in the Gospels (e.g. Matthew 10:2-3). Per this project's own documented Matthew.json structure, the Twelve's members besides Peter, Matthew, and Judas Iscariot are captured as submanagers rather than full manager tiers, so these two James figures most likely appear there only as submanagers under Matthew's tier (if at all) — this has not been independently re-verified against that file and should be checked directly rather than assumed. This epistle's traditional author, James the Lord's brother, is a third, distinct figure who was not among the original Twelve — do not conflate the three.",
+        "Mark 6:3 lists James among Jesus's brothers, alongside Joses, Juda (Jude), and Simon; the Epistle of Jude identifies its own author as \"the brother of James\" (Jude 1:1), traditionally the same Jude named there. Whether these \"brethren\" were full siblings, half-siblings, or cousins of Jesus is a separate, unresolved doctrinal question — see the genealogy fields on this entry.",
+        "John 7:5 records that Jesus's brothers, including James, did not believe in him during his earthly ministry — a detail consistent with 1 Corinthians 15:7's account of a specific resurrection appearance to James, which tradition connects to his later change into a leader of the Jerusalem church, though the epistle of James itself makes no reference to this personal history."
+      ]
+    },
+    {
+      "id": "trials_wisdom_gift",
+      "name": "Trials, Wisdom, and the Perfect Gift",
+      "role": "law",
+      "scribeTier": "Trials, Wisdom, and the Perfect Gift",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Teaches that the trying of faith through divers temptations produces patience, which must be allowed to finish its work; that wisdom lacking in trial should be asked of God in faith without wavering; that the poor brother should glory in his exaltation and the rich in his abasement, since riches fade like the flower of the grass; that no man should say he is tempted of God, since God tempts no man and each man is instead drawn away and enticed by his own lust, which conceives sin and brings forth death; and that every good and perfect gift descends from the unchanging Father of lights, who of his own will begat believers with the word of truth as a kind of firstfruits of his creatures.",
+      "verses": [
+        {
+          "ref": "James 1:2-4",
+          "note": "Count it all joy when ye fall into divers temptations, knowing the trying of your faith worketh patience; let patience have her perfect work, that ye may be perfect and entire, wanting nothing."
+        },
+        {
+          "ref": "James 1:5-8",
+          "note": "If any lack wisdom, let him ask of God, who giveth to all men liberally and upbraideth not; but let him ask in faith, nothing wavering, for a wavering man is like a wave of the sea driven with the wind and tossed."
+        },
+        {
+          "ref": "James 1:9-11",
+          "note": "The brother of low degree is to rejoice in his exaltation, the rich in his abasement, since the rich man shall pass away as the flower of the grass."
+        },
+        {
+          "ref": "James 1:12-15",
+          "note": "Blessed is the man that endureth temptation, for he shall receive the crown of life; let no man say he is tempted of God, for every man is tempted when drawn away of his own lust and enticed, and lust, when it hath conceived, bringeth forth sin, and sin, when finished, bringeth forth death."
+        },
+        {
+          "ref": "James 1:16-18",
+          "note": "Every good gift and every perfect gift is from above, coming down from the Father of lights, with whom is no variableness, neither shadow of turning; of his own will begat he us with the word of truth, that we should be a kind of firstfruits of his creatures."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "doers_of_the_word",
+      "name": "Doers of the Word",
+      "role": "law",
+      "scribeTier": "Doers of the Word",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Teaches that every man should be swift to hear, slow to speak, and slow to wrath, laying apart filthiness and receiving the engrafted word with meekness; warns that a hearer of the word who is not a doer deceives himself, like a man beholding his natural face in a glass and straightway forgetting what manner of man he was; teaches that an unbridled tongue makes a man's religion vain, and that pure religion and undefiled before God is to visit the fatherless and widows in their affliction and to keep oneself unspotted from the world.",
+      "verses": [
+        {
+          "ref": "James 1:19-20",
+          "note": "Let every man be swift to hear, slow to speak, slow to wrath, for the wrath of man worketh not the righteousness of God."
+        },
+        {
+          "ref": "James 1:21-25",
+          "note": "Lay apart all filthiness and receive the engrafted word; be doers of the word and not hearers only, illustrated by a man beholding his natural face in a glass and forgetting it; the doer of the perfect law of liberty shall be blessed in his deed."
+        },
+        {
+          "ref": "James 1:26-27",
+          "note": "If any man seem religious and bridleth not his tongue, his religion is vain; pure religion before God is to visit the fatherless and widows in their affliction and to keep himself unspotted from the world."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "respect_of_persons",
+      "name": "Respect of Persons Forbidden",
+      "role": "law",
+      "scribeTier": "Respect of Persons Forbidden",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Rebukes favoritism shown to the rich and contempt shown to the poor within the assembly, illustrated by a man with a gold ring in goodly apparel being seated above a poor man in vile raiment; asks whether God hath not chosen the poor of this world to be rich in faith and heirs of the kingdom; teaches the \"royal law,\" to love thy neighbour as thyself, and warns that to offend in one point of the law is to be guilty of all, since mercy rejoiceth against judgment.",
+      "verses": [
+        {
+          "ref": "James 2:1-4",
+          "note": "Warns against holding the faith of the Lord Jesus Christ \"with respect of persons,\" illustrated by favoring a man with a gold ring and goodly apparel over a poor man in vile raiment."
+        },
+        {
+          "ref": "James 2:5-7",
+          "note": "Asks whether God hath not chosen the poor of this world rich in faith and heirs of the promised kingdom, and notes it is the rich who oppress and blaspheme the worthy name."
+        },
+        {
+          "ref": "James 2:8-11",
+          "note": "Fulfilling the royal law, \"thou shalt love thy neighbour as thyself,\" is doing well; but to have respect of persons is sin, and whosoever keeps the whole law yet offends in one point is guilty of all."
+        },
+        {
+          "ref": "James 2:12-13",
+          "note": "Speak and act as those who shall be judged by the law of liberty; judgment without mercy is for him that hath shewed no mercy, and mercy rejoiceth against judgment."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "faith_without_works",
+      "name": "Faith Without Works Is Dead",
+      "role": "law",
+      "scribeTier": "Faith Without Works Is Dead",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "The epistle's best-known standalone argument: faith without works is dead, being alone, and cannot save, illustrated first by a brother or sister in want of daily food being merely wished well rather than helped; notes even the devils believe there is one God, and tremble; uses Abraham's offering of Isaac upon the altar as proof that faith wrought together with his works and was made perfect by works, fulfilling \"Abraham believed God, and it was imputed unto him for righteousness,\" so that he was called the Friend of God; uses Rahab the harlot's reception of the messengers as a second witness that a person is justified by works and not by faith only; concludes that as the body without the spirit is dead, so faith without works is dead also.",
+      "verses": [
+        {
+          "ref": "James 2:14-17",
+          "note": "What doth it profit if a man say he hath faith and have not works — can that faith save him? Faith, if it hath not works, is dead, being alone."
+        },
+        {
+          "ref": "James 2:18-20",
+          "note": "A man may claim faith apart from works, but even the devils believe there is one God, and tremble; faith without works is dead."
+        },
+        {
+          "ref": "James 2:21-24",
+          "note": "Abraham our father was justified by works when he offered Isaac his son upon the altar; faith wrought with his works and by works faith was made perfect, fulfilling \"Abraham believed God, and it was imputed unto him for righteousness,\" and he was called the Friend of God — a man is justified by works, and not by faith only."
+        },
+        {
+          "ref": "James 2:25-26",
+          "note": "Likewise Rahab the harlot was justified by works when she received the messengers and sent them out another way; as the body without the spirit is dead, so faith without works is dead also."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Abraham (Genesis 22) and Rahab (Joshua 2) are cited here purely as illustrations from earlier scripture — both are already indexed as characters in their own books (Genesis.json and Joshua's file respectively) and are deliberately not duplicated as characters in this James.json file; see genealogyLists below."
+      ]
+    },
+    {
+      "id": "taming_the_tongue",
+      "name": "Taming the Tongue",
+      "role": "law",
+      "scribeTier": "Taming the Tongue",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Warns that not many should become masters/teachers, since teachers receive the greater condemnation, and that all men offend in many things; likens the tongue, though a little member, to a bit that turns a horse and a small helm that turns a great ship, boasting great things; calls it a fire, a world of iniquity, setting on fire the course of nature and set on fire of hell itself; observes that every kind of beast, bird, serpent, and sea creature has been tamed by mankind, but the tongue can be tamed by no man, an unruly evil full of deadly poison; teaches that blessing and cursing proceeding out of the same mouth ought not to be, no more than a fountain sends forth sweet water and bitter, or a fig tree bears olive berries.",
+      "verses": [
+        {
+          "ref": "James 3:1-2",
+          "note": "Be not many masters, for teachers shall receive the greater condemnation; in many things we all offend, and the man who offends not in word is a perfect man."
+        },
+        {
+          "ref": "James 3:3-6",
+          "note": "The tongue compared to a bit in a horse's mouth and a small helm turning a great ship; though a little member, it boasts great things — a fire, a world of iniquity, setting on fire the course of nature, and itself set on fire of hell."
+        },
+        {
+          "ref": "James 3:7-8",
+          "note": "Every kind of beast, bird, serpent, and sea creature is tamed of mankind, but the tongue can no man tame, an unruly evil, full of deadly poison."
+        },
+        {
+          "ref": "James 3:9-12",
+          "note": "With the tongue we bless God and curse men made after the similitude of God; blessing and cursing proceeding out of the same mouth ought not so to be, no more than a fountain sends forth sweet water and bitter, or a fig tree bears olive berries."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wisdom_from_above",
+      "name": "Wisdom From Above",
+      "role": "law",
+      "scribeTier": "Wisdom From Above",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Contrasts earthly, sensual, devilish wisdom — marked by bitter envying and strife in the heart, and by confusion and every evil work — with the wisdom that is from above, which is first pure, then peaceable, gentle, easy to be intreated, full of mercy and good fruits, without partiality and without hypocrisy; concludes that the fruit of righteousness is sown in peace by those that make peace.",
+      "verses": [
+        {
+          "ref": "James 3:13",
+          "note": "Who is a wise man among you? let him shew out of a good conversation his works with meekness of wisdom."
+        },
+        {
+          "ref": "James 3:14-16",
+          "note": "Bitter envying and strife in the heart is not wisdom from above but earthly, sensual, devilish, and where they are found, confusion and every evil work follow."
+        },
+        {
+          "ref": "James 3:17-18",
+          "note": "The wisdom from above is first pure, then peaceable, gentle, easy to be intreated, full of mercy and good fruits, without partiality and without hypocrisy; the fruit of righteousness is sown in peace of them that make peace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wars_worldliness_humility",
+      "name": "Wars, Worldliness, and Humility",
+      "role": "law",
+      "scribeTier": "Wars, Worldliness, and Humility",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Traces wars and fightings among believers to the lusts warring in their members; rebukes asking amiss in order to consume it upon one's lusts, and warns that friendship with the world is enmity with God; calls for submission to God, resistance of the devil, and drawing nigh to God with cleansed hands and purified hearts; instructs believers to humble themselves before the Lord, who shall lift the humble up since God resisteth the proud but giveth grace unto the humble; forbids speaking evil of or judging a brother, since there is one lawgiver able to save and to destroy.",
+      "verses": [
+        {
+          "ref": "James 4:1-3",
+          "note": "Wars and fightings come from the lusts that war in the members; asking and not receiving comes from asking amiss, to consume it upon one's lusts."
+        },
+        {
+          "ref": "James 4:4-6",
+          "note": "Friendship of the world is enmity with God; God resisteth the proud but giveth grace unto the humble."
+        },
+        {
+          "ref": "James 4:7-10",
+          "note": "Submit yourselves to God, resist the devil and he will flee; draw nigh to God and he will draw nigh to you; cleanse your hands, purify your hearts, and humble yourselves in the sight of the Lord, that he may lift you up."
+        },
+        {
+          "ref": "James 4:11-12",
+          "note": "Speak not evil one of another; there is one lawgiver, able to save and to destroy — who art thou that judgest another?"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "presumption_of_riches",
+      "name": "The Presumption of Riches",
+      "role": "law",
+      "scribeTier": "The Presumption of Riches",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Rebukes those who boast of tomorrow's business and gain without regard for God's will, noting that life is but a vapour that appeareth for a little time and then vanisheth away, and that to know to do good and not do it is sin; pronounces a woe upon oppressive rich men — their riches corrupted, garments moth-eaten, gold and silver cankered, having heaped up treasure for the last days; condemns the fraudulent withholding of hired labourers' wages, which crieth out to the Lord of sabaoth, and a life lived in pleasure and wantonness while the just is condemned and killed, not resisting.",
+      "verses": [
+        {
+          "ref": "James 4:13-16",
+          "note": "Rebukes those who say \"today or tomorrow we will go into such a city... and get gain,\" not knowing what shall be on the morrow, since life is even a vapour that appeareth for a little time and then vanisheth away."
+        },
+        {
+          "ref": "James 4:17",
+          "note": "To him that knoweth to do good, and doeth it not, to him it is sin."
+        },
+        {
+          "ref": "James 5:1-3",
+          "note": "\"Go to now, ye rich men, weep and howl for your miseries that shall come upon you\" — riches corrupted, garments moth-eaten, gold and silver cankered, the rust a witness against them, having heaped treasure together for the last days."
+        },
+        {
+          "ref": "James 5:4-6",
+          "note": "The hire of labourers who reaped the fields, kept back by fraud, crieth out, entering into the ears of the Lord of sabaoth; the rich have lived in pleasure and been wanton, nourished their hearts as in a day of slaughter, and condemned and killed the just, who doth not resist them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "patience_unto_the_lord",
+      "name": "Patience Unto the Coming of the Lord",
+      "role": "law",
+      "scribeTier": "Patience Unto the Coming of the Lord",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Calls believers to be patient unto the coming of the Lord, likened to the husbandman who waits with long patience for the precious fruit of the earth, for the early and latter rain; instructs them to stablish their hearts, for the coming of the Lord draweth nigh, and to grudge not one against another lest they be condemned, for the judge standeth before the door; holds up the prophets who spoke in the name of the Lord as an example of suffering affliction and patience, and points to the patience of Job and the tender, pitiful end of the Lord as the model to be counted happy for enduring.",
+      "verses": [
+        {
+          "ref": "James 5:7-8",
+          "note": "Be patient unto the coming of the Lord, as the husbandman waiteth with long patience for the precious fruit of the earth, for the early and latter rain; stablish your hearts, for the coming of the Lord draweth nigh."
+        },
+        {
+          "ref": "James 5:9",
+          "note": "Grudge not one against another, brethren, lest ye be condemned; behold, the judge standeth before the door."
+        },
+        {
+          "ref": "James 5:10-11",
+          "note": "Take the prophets who spoke in the name of the Lord as an example of suffering affliction and of patience; we count them happy which endure, having heard of the patience of Job, and seen the end of the Lord, that he is very pitiful and of tender mercy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Job (James 5:11) is cited only as an example of endurance and is the subject of his own separate canonical book; he is not indexed as a character in this James.json file — see genealogyLists below."
+      ]
+    },
+    {
+      "id": "prayer_oaths_wandering_soul",
+      "name": "Prayer, Oaths, and the Wandering Soul",
+      "role": "law",
+      "scribeTier": "Prayer, Oaths, and the Wandering Soul",
+      "parentManagerId": null,
+      "deliveredBy": "james_brother_of_jesus",
+      "purpose": "Forbids swearing by heaven, earth, or any other oath, instructing that yea be yea and nay be nay, lest one fall into condemnation; instructs the afflicted to pray, the merry to sing psalms, and the sick to call for the elders of the church to pray over them and anoint them with oil in the name of the Lord, the prayer of faith saving the sick and the Lord raising him up, with any sins forgiven; calls believers to confess their faults one to another and pray for one another, that they may be healed, since the effectual fervent prayer of a righteous man availeth much; holds up Elias as a man of like passions who prayed and stopped the rain for three years and six months, then prayed again and the heaven gave rain; closes by teaching that converting a sinner from the error of his way saves a soul from death and hides a multitude of sins.",
+      "verses": [
+        {
+          "ref": "James 5:12",
+          "note": "Above all things, swear not, neither by heaven, nor earth, nor any other oath; let your yea be yea and your nay, nay, lest ye fall into condemnation."
+        },
+        {
+          "ref": "James 5:13-15",
+          "note": "Is any afflicted, let him pray; is any merry, let him sing psalms; is any sick, let him call for the elders of the church to pray over him and anoint him with oil in the name of the Lord — the prayer of faith shall save the sick, and the Lord shall raise him up, and any sins committed shall be forgiven."
+        },
+        {
+          "ref": "James 5:16",
+          "note": "Confess your faults one to another, and pray one for another, that ye may be healed; the effectual fervent prayer of a righteous man availeth much."
+        },
+        {
+          "ref": "James 5:17-18",
+          "note": "Elias, a man subject to like passions as we are, prayed earnestly that it might not rain, and it rained not on the earth for three years and six months; he prayed again, and the heaven gave rain, and the earth brought forth her fruit."
+        },
+        {
+          "ref": "James 5:19-20",
+          "note": "If any err from the truth and one convert him, let him know that converting a sinner from the error of his way shall save a soul from death and shall hide a multitude of sins."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Elias (Elijah, James 5:17-18) is cited as an example of prevailing prayer and is not indexed as a character in this James.json file; his narrative belongs to 1 Kings — see genealogyLists below."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Figures cited by James purely as illustrations from earlier or separate scripture, deliberately kept out of the character list above so they aren't duplicated across book files.",
+    "abraham_reference": {
+      "ref": "James 2:21-23",
+      "note": "Abraham's offering of Isaac (Genesis 22) is cited as proof that faith and works operated together in him, fulfilling Genesis 15:6 and earning him the title \"the Friend of God.\" Abraham is already indexed as a major figure in Genesis.json."
+    },
+    "rahab_reference": {
+      "ref": "James 2:25",
+      "note": "Rahab the harlot's reception of the spies and their escape (Joshua 2) is cited as a second witness that works justify faith. Indexed, if at all, in the Joshua book file, not here."
+    },
+    "job_reference": {
+      "ref": "James 5:11",
+      "note": "The patience of Job is cited as a model of endurance. Job is the subject of his own separate canonical book and is not indexed in this file."
+    },
+    "elias_reference": {
+      "ref": "James 5:17-18",
+      "note": "Elijah's prayer that stopped rain for three and a half years and then restored it (1 Kings 17:1, 18:1, 18:42-45) is cited as an example of effectual fervent prayer. Indexed, if at all, under 1 Kings, not here."
+    },
+    "twelve_tribes_scattered_abroad": {
+      "ref": "James 1:1",
+      "note": "The letter's addressees — a collective audience never individuated in the text, so not modeled as a character per the collective-group rule (rule 5)."
+    }
+  }
+}
