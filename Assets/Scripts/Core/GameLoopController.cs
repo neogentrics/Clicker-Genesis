@@ -110,6 +110,24 @@ namespace ClickerGenesis.Core
         /// <summary>Every OT book in canonical order (Genesis first) - for the Books tab (Phase F3).</summary>
         public IReadOnlyList<(string resourceId, string displayName)> AllBooksInOrder => CanonicalBookOrder.Books;
 
+        /// <summary>Fraction (0-1) of the ACTIVE book's verses bought so far - for the triple-lane
+        /// progress bar's "current book" lane (2026-08-08). Uses the active book's own loaded
+        /// VerseDatabase.VerseCount rather than a hardcoded table, since it's already in memory.</summary>
+        public float ActiveBookProgressFraction =>
+            Verses != null && Verses.VerseCount > 0 ? Mathf.Clamp01((float)NextVerseIndex / Verses.VerseCount) : 0f;
+
+        /// <summary>Full KJV Old Testament verse count (Genesis-Malachi), confirmed against
+        /// kjv_outline.json - see CLAUDE.md's "Full canonical KJV outline" note. A fixed constant
+        /// rather than summing per-book counts at runtime, since most books' VerseDatabase isn't
+        /// loaded until the player actually switches into them.</summary>
+        private const int OldTestamentTotalVerses = 31102;
+
+        /// <summary>Fraction (0-1) of the full Old Testament bought so far, summed across every
+        /// book ever touched (2026-08-08) - for the triple-lane progress bar's bottom "overall OT
+        /// progress" lane. Untouched books simply contribute 0, which is correct.</summary>
+        public float OldTestamentProgressFraction =>
+            Mathf.Clamp01(bookProgress.Values.Sum(b => b.NextVerseIndex) / (float)OldTestamentTotalVerses);
+
         public string ActiveBookResourceId => activeBookResourceId;
 
         public bool IsBookActive(string resourceId) => resourceId == activeBookResourceId;

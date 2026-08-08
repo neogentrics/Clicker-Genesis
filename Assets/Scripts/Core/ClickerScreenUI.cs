@@ -16,6 +16,14 @@ namespace ClickerGenesis.Core
         public TMP_Text LevelLabel;
         public Image XpBarFill;
 
+        [Header("Triple-lane progress bar (2026-08-08) - book/XP/OT overall, replaces the old single XpBar")]
+        public Image BookLaneFill;
+        public TMP_Text BookLaneLabel;
+        public Image XpLaneFill;
+        public TMP_Text XpLaneLabel;
+        public Image OtLaneFill;
+        public TMP_Text OtLaneLabel;
+
         public Button TapButton;
         public TMP_Text TapButtonLabel;
 
@@ -255,6 +263,29 @@ namespace ClickerGenesis.Core
                 fillRt.anchorMin = new Vector2(0f, 0f);
                 fillRt.anchorMax = new Vector2(fraction, 1f);
             }
+
+            // Triple-lane bar (2026-08-08): book progress (top-left), XP (top-right, same fraction
+            // as the legacy bar above), overall OT progress across every book ever touched (bottom,
+            // full width). Same anchorMax.x-driven Simple-sprite fill trick used everywhere else.
+            void SetLane(Image fill, TMP_Text label, float fraction, string text)
+            {
+                if (fill != null)
+                {
+                    var rt = fill.rectTransform;
+                    rt.anchorMin = new Vector2(0f, 0f);
+                    rt.anchorMax = new Vector2(Mathf.Clamp01(fraction), 1f);
+                }
+                if (label != null) label.text = text;
+            }
+
+            float xpFraction = levels.XpRequiredForNextLevel > 0
+                ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
+                : 0f;
+            SetLane(XpLaneFill, XpLaneLabel, xpFraction, $"XP: Lv {levels.CurrentLevel} ({xpFraction * 100f:F0}%)");
+            SetLane(BookLaneFill, BookLaneLabel, Controller.ActiveBookProgressFraction,
+                $"{Controller.Verses?.BookName ?? "Book"}: {Controller.ActiveBookProgressFraction * 100f:F0}%");
+            SetLane(OtLaneFill, OtLaneLabel, Controller.OldTestamentProgressFraction,
+                $"Old Testament: {Controller.OldTestamentProgressFraction * 100f:F1}%");
 
             if (TapValueLabel != null)
                 TapValueLabel.text = $"Each tap: {NumberFormatter.Format(Controller.EffectiveTapAmount)} Ink";
