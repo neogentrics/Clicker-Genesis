@@ -1,0 +1,360 @@
+{
+  "book": "Book of Meqabyan III",
+  "translation": "Ethiopian",
+  "canonicalOrder": 24,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This book is almost entirely a moral/theological discourse, not a narrative - it opens (ch1-2:7) as Deeyablos's own first-person boast and his failed plea to JAH for mercy on his followers, then (ch2:8 onward) an unnamed \"prophet\" rebukes him, recounting Adam and Hiewan's creation, deception, and expulsion as a contrast case, before the discourse widens into general moral exhortation (false balances/greed in ch5, gluttony/demons-at-death in ch6, trust-in-JAH testimonies of David and Job in ch7-8, JAH's unsearchable sovereignty in ch9:1-22, and bodily resurrection/final exhortation in ch9:23-10:29) addressed to a general \"unu\" (you-all) audience rather than to any single named figure. Given this shape, most tiers are law/theme tiers with deliveredBy set to the unnamed prophet, per the same rule used for Leviticus/Deuteronomy - only Deeyablos, Adam (with Hiewan as his submanager), David, and Job are personally embodied enough (they act, plead, weep, suffer, are judged/restored) to warrant full person tiers. The prophet who speaks from 2:8 onward is never named in this text - kept as its own 'named' (non-manager) character rather than invented a name for, per the naming-collision/no-invention rule. Solomon and Moses are each quoted once (4:15-18 on preexistent wisdom before creation; 6:10-11 on Jacob's/Israel's gluttony) as citation-only voices inside the prophet's discourse, kept as standalone 'named' characters rather than managers of their own, since neither takes any action in THIS text. The ch8:7-8 list of eight faithful judges/heroes (Mordecai, Esther, Judith, Gideon, Deborah, Barak, Jephthah, Samson) is a single undifferentiated exemplar list with no individual action described for any of them here, so it is kept as one genealogyLists bulk entry rather than eight invented individual characters, per rule 5. Saul and the symbolic 'Jacob' (standing for Israel) inside Moses's quote are likewise background-only mentions, logged in genealogyLists rather than given character entries. NAMING-COLLISION NOTE: this book's Adam, Hiewan (Eve), David, Job, Solomon, and Moses are the same figures known from Genesis/Exodus/Job/Psalms/etc. in other books and translations - all ids here are suffixed `_ethiopian_meqabyan3` specifically to avoid any id collision with those other books' character entries, per the schema's collision-avoidance instruction, not because this text presents them as different people. CORRECTION: the unnamed prophet's first-person testimony verse was mis-cited in the original draft as 9:18 - the exact phrase \"I-man sight up what JAH do fe Him friends\" appears in 9:17, not 9:18 (verse 18 begins a different sentence, \"I-man sight up that Him give them all them begged Him...\"); the reference has been corrected to 9:17.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Fallen Throne",
+      "managerId": "deeyablos_ethiopian_meqabyan3",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Adam's Repentant Dust",
+      "managerId": "adam_ethiopian_meqabyan3",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Weight of False Gain",
+      "managerId": "unnamed_prophet_ethiopian_meqabyan3",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Feast of Excess",
+      "managerId": "unnamed_prophet_ethiopian_meqabyan3",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "David's Unshaken Trust",
+      "managerId": "daweet_ethiopian_meqabyan3",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Job's Tested Faith",
+      "managerId": "iyob_ethiopian_meqabyan3",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Potter's Unsearchable Ways",
+      "managerId": "unnamed_prophet_ethiopian_meqabyan3",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Resurrection of the Dust",
+      "managerId": "unnamed_prophet_ethiopian_meqabyan3",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "deeyablos_ethiopian_meqabyan3",
+      "name": "Deeyablos (the Devil)",
+      "role": "manager",
+      "scribeTier": "The Fallen Throne",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 1:1-2",
+          "note": "Opens the book in his own first-person voice, promising Christ will one day revenge and destroy him for wronging the innocent."
+        },
+        {
+          "ref": "Meqabyan III 1:3-4",
+          "note": "Boasts of his own pride: 'who are it who are loftier than mi?' - claims none can depose his authority."
+        },
+        {
+          "ref": "Meqabyan III 1:6-11",
+          "note": "Describes his own methods of misleading Adam's children: money, beautiful women, jewels/gold, fine clothes, jealousy, and false omens/signs."
+        },
+        {
+          "ref": "Meqabyan III 1:16-17",
+          "note": "JAH multiplies wrath on him and commands he be bound and cast into Gehannem."
+        },
+        {
+          "ref": "Meqabyan III 1:18-21",
+          "note": "Pleads with JAH to let the persons he misled join him in Gehannem, and to give his own throne/crown to those who refused him."
+        },
+        {
+          "ref": "Meqabyan III 2:1",
+          "note": "JAH refuses his plea and instead promises the Kingdom of Heaven to persons Deeyablos failed to mislead, naming Job (Iyob) as the example."
+        },
+        {
+          "ref": "Meqabyan III 2:8-13",
+          "note": "The unnamed prophet rebukes him directly, recounting that he was made subtle from wind and fire, was arrogant ('Mi are the Irator'), and was cast down separated from all the angel-hosts who erred with him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Speaks in first person for the entire first chapter and a half of the book - one of the only books in this index where the antagonist narrates his own boast before being rebuked."
+      ]
+    },
+    {
+      "id": "adam_ethiopian_meqabyan3",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Adam's Repentant Dust",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "hiewan_ethiopian_meqabyan3"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 2:14-15",
+          "note": "JAH gives Adam a single Law: do not eat the one fig fruit that brings death, though he may eat any other fruit in the Garden."
+        },
+        {
+          "ref": "Meqabyan III 2:16-18",
+          "note": "Deeyablos lodges perfidy against him through Hiewan, made from Adam's own side bone, making him 'a Law demolisher.'"
+        },
+        {
+          "ref": "Meqabyan III 3:5-6",
+          "note": "Deceived through the snake's word to Hiewan and then to himself, bringing death on himself and his children."
+        },
+        {
+          "ref": "Meqabyan III 3:7-11",
+          "note": "Expelled from the Garden, but not abandoned - JAH calms Adam and Hiewan in the land, giving them crops and 'woods more verdant than the Garden woods.'"
+        },
+        {
+          "ref": "Meqabyan III 4:24",
+          "note": "Contrasted with Deeyablos: Adam 'returned ina repentance while him totally wept before JAH becau him sin.'"
+        },
+        {
+          "ref": "Meqabyan III 4:28",
+          "note": "Adam 'downbased him ras self and pleaded pon the iniquity him wronged - him weren't proud,' held up as the model of humble repentance."
+        },
+        {
+          "ref": "Meqabyan III 4:31",
+          "note": "JAH returns Adam - who was without arrogance or malice - to repentance, mourning, and sadness rather than condemning him alongside Deeyablos."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book uses Adam as the direct moral opposite of Deeyablos: where the Devil pleaded pride and was refused, Adam pleaded humility and was restored - the two petitions to JAH in chapters 1-4 mirror each other on purpose."
+      ]
+    },
+    {
+      "id": "hiewan_ethiopian_meqabyan3",
+      "name": "Hiewan (Eve)",
+      "role": "submanager",
+      "scribeTier": "Adam's Repentant Dust",
+      "parentManagerId": "adam_ethiopian_meqabyan3",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "adam_ethiopian_meqabyan3"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 2:16",
+          "note": "Identified as 'found from Adam side bone.'"
+        },
+        {
+          "ref": "Meqabyan III 2:18",
+          "note": "Described as Irated 'bein like unto a innocent dove' who 'don't know thy malice' before being deceived."
+        },
+        {
+          "ref": "Meqabyan III 3:5-6",
+          "note": "Hears and heeds the snake, eats the fig fruit, then goes and misleads Adam, bringing death on herself and her children."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unnamed_prophet_ethiopian_meqabyan3",
+      "name": "The Prophet (unnamed)",
+      "role": "named",
+      "scribeTier": "The Weight of False Gain",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": null,
+      "purpose": "Delivers the book's entire moral discourse from 2:8 onward - first rebuking Deeyablos directly and recounting Adam's creation and fall, then widening into general teaching against dishonest gain, gluttony, JAH's unsearchable sovereignty, and the bodily resurrection.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 2:8",
+          "note": "'An the prophet told him' - the narrative voice shifts here from Deeyablos's own first-person boast to this speaker's rebuke, and never returns to Deeyablos's voice."
+        },
+        {
+          "ref": "Meqabyan III 5:1",
+          "note": "Continues addressing 'thee-I' directly with warnings about death, judgment, and repentance."
+        },
+        {
+          "ref": "Meqabyan III 9:17",
+          "note": "Speaks in his own first person ('I-man sight up what JAH do fe Him friends') as a personal witness to JAH's justice."
+        },
+        {
+          "ref": "Meqabyan III 10:29",
+          "note": "Closes the book with a final direct exhortation to refuse worldly comforts and hold to the resurrection hope."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never given a name anywhere in the text - kept unnamed here rather than assigned one, per the project's rule against inventing identities the text itself doesn't supply."
+      ]
+    },
+    {
+      "id": "selomon_ethiopian_meqabyan3",
+      "name": "Selomon (Solomon)",
+      "role": "named",
+      "scribeTier": "The Potter's Unsearchable Ways",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 4:15-18",
+          "note": "Quoted at length: before hills, mountains, sun, moon, stars, day and night, or the sea's boundary were made, the angels - and Adam - already existed in JAH's own reasoning/plan."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Quoted only once, as a citation embedded inside the prophet's own rebuke of Deeyablos - he takes no action in this book himself."
+      ]
+    },
+    {
+      "id": "mussie_ethiopian_meqabyan3",
+      "name": "Mussie (Moses)",
+      "role": "named",
+      "scribeTier": "The Feast of Excess",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 6:10-11",
+          "note": "Quoted warning that 'Ya`iqob ate an were sated an fattened... an JAH Who Irated him were separated from him' - cited as proof that being sated 'without measure nor moderation' distances a person from JAH."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "daweet_ethiopian_meqabyan3",
+      "name": "Daweet (David)",
+      "role": "manager",
+      "scribeTier": "David's Unshaken Trust",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 7:1",
+          "note": "Quoted: 'I-man believed ina JAH - I-man won't fear' - cited as proof persons who trust JAH have no fright."
+        },
+        {
+          "ref": "Meqabyan III 7:2",
+          "note": "Quoted again: even surrounded by warriors, he trusted and 'begged JAH one thing.'"
+        },
+        {
+          "ref": "Meqabyan III 9:23-24",
+          "note": "Quoted on the vanity of man's short life set against JAH living forever."
+        },
+        {
+          "ref": "Meqabyan III 9:25",
+          "note": "Quoted on JAH's eternal kingdom, and noted as the one to whom JAH 'returned a kingdom... bringin from Sa'ol.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only figure in this book quoted from multiple separate passages (Psalm-style sayings) rather than a single citation - functionally the book's second-most-used voice after the unnamed prophet."
+      ]
+    },
+    {
+      "id": "iyob_ethiopian_meqabyan3",
+      "name": "'Iyob (Job)",
+      "role": "manager",
+      "scribeTier": "Job's Tested Faith",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan III 2:1",
+          "note": "Named directly by JAH as the example of a person Deeyablos failed to mislead, and promised the Kingdom of Heaven for it."
+        },
+        {
+          "ref": "Meqabyan III 8:1",
+          "note": "'Iyob believed ina JAH... JAH saved him from all the tribulation' - quotes his own words, 'JAH gave, JAH withheld, it happened like unto JAH loved pon I.'"
+        },
+        {
+          "ref": "Meqabyan III 8:2-3",
+          "note": "JAH sees his heart is cleansed from sin, receives him in honor, and gives him more money than he had before, curing his wounds because he endured."
+        },
+        {
+          "ref": "Meqabyan III 8:7-8",
+          "note": "Held up alongside a list of other faithful, undefeated figures (Mordecai, Esther, Judith, Gideon, Deborah, Barak, Jephthah, Samson) as examples of persons disciplined through belief in JAH."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only figure in this book both named directly by JAH within the narrative (2:1) and given his own full first-person testimony (8:1) - the clearest 'answer' the book gives to Deeyablos's opening boast."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list, per rule 5 (undifferentiated named groups) and the rule against inventing detail the text doesn't supply.",
+    "faithfulJudgesList": {
+      "ref": "Meqabyan III 8:7-8",
+      "note": "A single undifferentiated list of eight faithful, undefeated figures named alongside Job as examples of belief in JAH: Merdokyos (Mordecai), 'Astier (Esther), Yodeet (Judith), Giediewon (Gideon), Deebora (Deborah), Bariq (Barak), Yoftahie (Jephthah), and Somson (Samson). No individual action is described for any of them in this text - each is already a full character elsewhere in the index (e.g. Gideon/Deborah/Barak/Jephthah/Samson in Judges, Esther/Mordecai in Esther, Judith in the book of Judith) and should NOT be re-created here."
+    },
+    "saol": {
+      "ref": "Meqabyan III 9:25",
+      "note": "Sa'ol (Saul) is mentioned only as the king from whom JAH took the kingdom to give to David - no action of his own described in this book."
+    },
+    "yaiqob": {
+      "ref": "Meqabyan III 6:10",
+      "note": "'Ya`iqob' inside Moses's quoted saying stands symbolically for Israel as a nation growing fat and complacent, not a personal appearance of the patriarch Jacob in this book's own narrative."
+    }
+  }
+}

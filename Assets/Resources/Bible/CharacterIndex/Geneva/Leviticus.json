@@ -1,0 +1,594 @@
+{
+  "book": "Leviticus",
+  "translation": "Geneva",
+  "canonicalOrder": 3,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read Assets/Resources/Verses/Geneva/leviticus_3.json directly (chapters 1-10 verse-by-verse in full, then spot-checked chapters 22-23 for the feasts/holiness sections) and cross-referenced the already-built KJV Leviticus.json for tier-naming-style inspiration per the task instructions. Content is structurally and narratively identical to the KJV across every checked chapter: same 27-chapter law-heavy shape (Aaron's ordination/Nadab-and-Abihu narrative in ch.8-10, clean/unclean animals ch.11, purity laws ch.12-15, holiness code ch.18-20, the Shelomith blasphemer episode ch.24, the seven feasts ch.23, Jubilee ch.25, blessings/curses ch.26, vows/tithes ch.27) — only the English is archaic 1560 Geneva prose ('vnto', 'sonnes', 'Aarons', 'kall' for caul/fat, 'floure' for flour, etc.), not a different underlying text. No Geneva-specific content divergence found (unlike this Bible's own Ezra/1-Esdras situation) — so the KJV's 14-tier law/theme model (built after the user's explicit correction that thin-narrative/law-heavy books should be themed around actual content) is reused directly as the correct shape for this translation too, re-verified line-by-line against Geneva's own wording rather than assumed. Same person-vs-transmission test applied: Aaron stays the one full person-manager (personally ordained ch.8, personally silent after Nadab and Abihu die ch.10:3 - 'but Aaron helde his peace' in Geneva's own phrasing, personally performs the Day of Atonement ch.16); Moses is deliveredBy-only on every law tier since in this book he is almost entirely 'the LORD spake vnto Moses, saying' (matches Geneva's own repeated phrasing verbatim across chapters 4, 5, 6, 7, 8, etc.). NAMING-COLLISION CHECK: no collisions found in this book - Nadab, Abihu, Eleazar, Ithamar, and Shelomith are each single, unambiguous individuals in this text. IDs suffixed _geneva throughout to avoid cross-translation collision with the existing KJV entries (e.g. aaron_geneva, not aaron).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Scapegoat",
+      "managerId": "aaron_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Altar Flame",
+      "managerId": "burnt_offering_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Fine Flour",
+      "managerId": "grain_offering_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Fellowship Portion",
+      "managerId": "peace_offering_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Blood Basin",
+      "managerId": "sin_offering_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Restitution Scale",
+      "managerId": "trespass_offering_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Cloven Hoof",
+      "managerId": "clean_unclean_animals_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Leprosy Cloth",
+      "managerId": "purity_laws_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Holiness Tablet",
+      "managerId": "holiness_code_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Golden Lampstand",
+      "managerId": "priestly_regulations_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Feast Scroll",
+      "managerId": "seven_feasts_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Jubilee Trumpet",
+      "managerId": "jubilee_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Covenant Ledger",
+      "managerId": "blessings_curses_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Vow Tablet",
+      "managerId": "vows_tithes_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "aaron_geneva",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "amram_geneva (unindexed reference)",
+        "mother": "jochebed_geneva (unindexed reference)",
+        "spouses": [
+          "elisheba_geneva (unindexed reference)"
+        ],
+        "children": [
+          "nadab_geneva",
+          "abihu_geneva",
+          "eleazar_geneva",
+          "ithamar_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 8:1-9:24",
+          "note": "Consecrated as high priest by Moses; washed, robed, anointed, and offers the first sacrifices with his sons"
+        },
+        {
+          "ref": "Leviticus 10:1-3",
+          "note": "Silent after Nadab and Abihu are killed for offering 'strange fire' - Geneva's own text: 'but Aaron helde his peace'"
+        },
+        {
+          "ref": "Leviticus 16:1-34",
+          "note": "The Day of Atonement - enters the Most Holy Place, sends the scapegoat into the wilderness bearing the people's sins"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's rendering of Leviticus 10:3, 'but Aaron helde his peace,' is his entire recorded reaction to watching two of his sons die moments after his own ordination.",
+        "Kept as a full person-manager rather than folded into the Ordination law, since unlike Moses (who mostly just relays content in this book) Aaron personally performs and is personally marked by these events."
+      ]
+    },
+    {
+      "id": "burnt_offering_geneva",
+      "name": "The Burnt Offering",
+      "role": "law",
+      "scribeTier": "Altar Flame",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Wholly consumed on the altar - nothing kept back for the offerer. Teaches total, unreserved surrender/devotion to God as the starting posture for approaching a holy God at all.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 1:1-17",
+          "note": "Procedure for the burnt offering, from herd, flock, or fowl depending on the offerer's means - Geneva: 'he shall offer a male without blemish'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "grain_offering_geneva",
+      "name": "The Grain Offering",
+      "role": "law",
+      "scribeTier": "Fine Flour",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "The one bloodless offering - fine flour, oil, and frankincense-bearing incense. Represents the fruit of ordinary daily labor being given back to God, not just dramatic sacrifice.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 2:1-16",
+          "note": "Procedure; explicitly forbids leaven or honey, requires salt - Geneva: 'the salt of the couenant of thy God'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "peace_offering_geneva",
+      "name": "The Peace Offering",
+      "role": "law",
+      "scribeTier": "Fellowship Portion",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "The only offering where the offerer eats part of the meat themselves, alongside the priest's portion and God's portion (the fat, burned on the altar) - a shared meal representing restored fellowship, not just atonement.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 3:1-17",
+          "note": "Procedure for peace offerings from the herd or flock, male or female, ending 'ye shall eate neither fatte nor blood'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sin_offering_geneva",
+      "name": "The Sin Offering",
+      "role": "law",
+      "scribeTier": "Blood Basin",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Addresses unintentional sin, with the required animal scaled to the offender's status (priest, whole congregation, ruler, or common person) - teaches that sin has real weight regardless of intent, but provision for it is graded to what each person can actually bring.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 4:1-5:13",
+          "note": "Procedures for unintentional sin by the anointed priest, the whole congregation, a ruler, and a common person"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "trespass_offering_geneva",
+      "name": "The Trespass Offering",
+      "role": "law",
+      "scribeTier": "Restitution Scale",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Specifically for sins involving damage or deception against God or a neighbor - requires restitution PLUS a fifth part added on top, not just a sacrifice. Teaches that wronging someone isn't fixed by ritual alone; the actual harm has to be repaid.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 5:14-6:7",
+          "note": "Restitution plus a fifth part added, then the trespass offering itself - Geneva: 'shall put the fift part more thereto'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "clean_unclean_animals_geneva",
+      "name": "Clean & Unclean Animals",
+      "role": "law",
+      "scribeTier": "Cloven Hoof",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Dietary law - animals that both chew the cud and part the hoof are clean. A constant, daily, embodied reminder that Israel is set apart from the surrounding nations, woven into something as ordinary as every meal.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 11:1-47",
+          "note": "Clean and unclean land animals, water creatures, birds, and swarming things"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "purity_laws_geneva",
+      "name": "Purity Laws",
+      "role": "law",
+      "scribeTier": "Leprosy Cloth",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Covers childbirth, skin disease, mold in clothing/houses, and bodily discharges - the common thread is anything involving blood, death, or decay disrupting the boundary between life and death that holiness requires guarding.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 12:1-8",
+          "note": "Purification after childbirth"
+        },
+        {
+          "ref": "Leviticus 13-14",
+          "note": "Diagnosing and cleansing leprosy in skin, clothing, and houses"
+        },
+        {
+          "ref": "Leviticus 15:1-33",
+          "note": "Bodily discharges"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "holiness_code_geneva",
+      "name": "\"Be Ye Holy\" - The Holiness Code",
+      "role": "law",
+      "scribeTier": "Holiness Tablet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Extends holiness from ritual into ethics - sexual morality, honesty in business, care for the poor and the stranger, honoring the elderly. Grounded in one repeated line, 'Ye shalbe holie: for I the Lord your God am holie' (19:2, Geneva's own wording) - holiness isn't only what happens at the altar.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 18:1-30",
+          "note": "Sexual morality laws"
+        },
+        {
+          "ref": "Leviticus 19:1-37",
+          "note": "Broad ethical laws - 'thou shalt loue thy neighbour as thy selfe' (19:18)"
+        },
+        {
+          "ref": "Leviticus 20:1-27",
+          "note": "Penalties for violating the preceding chapters"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "priestly_regulations_geneva",
+      "name": "Priestly Regulations & the Sacred Lamp",
+      "role": "law",
+      "scribeTier": "Golden Lampstand",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Sets stricter purity standards for priests than ordinary Israelites (who they may marry, physical blemish rules for service), then turns to the tabernacle's ongoing daily/weekly maintenance (the lamp, the showbread), closing with the one narrative episode in this stretch, a real test of how the holiness laws apply even to a mixed-heritage member of the camp.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 21:1-22:33",
+          "note": "Priestly conduct, blemish regulations for priests and for acceptable offerings alike - confirmed matching the standard-canon shape via direct read of ch.22"
+        },
+        {
+          "ref": "Leviticus 24:1-9",
+          "note": "The tabernacle lamp and showbread, maintained continually"
+        },
+        {
+          "ref": "Leviticus 24:10-23",
+          "note": "A man blasphemes during a camp fight and is stoned per the LORD's judgment - see Shelomith and her son"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seven_feasts_geneva",
+      "name": "The Seven Feasts",
+      "role": "law",
+      "scribeTier": "Feast Scroll",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "A full annual calendar binding the nation's sense of time itself to God's actions - deliverance (Passover, Unleavened Bread), harvest and provision (Firstfruits, Weeks), and a run of autumn feasts (Trumpets, Atonement, Tabernacles) closing the year by re-centering the community on God rather than the harvest alone.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 23:1-44",
+          "note": "The full feast calendar - directly confirmed via Geneva's own ch.23 text: Passover 23:5, Unleavened Bread 23:6-8, Firstfruits 23:10-14, Weeks 23:15-21, and the closing autumn feasts"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jubilee_geneva",
+      "name": "The Year of Jubilee",
+      "role": "law",
+      "scribeTier": "Jubilee Trumpet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Every 50th year, land returns to its original family and debt-slaves go free - a hard economic reset built into the calendar itself. Teaches that the land ultimately belongs to God, not whoever has accumulated it, and no family's poverty is meant to become permanent and inherited.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 25:1-55",
+          "note": "The sabbath year and the year of Jubilee"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blessings_curses_geneva",
+      "name": "Blessings & Curses",
+      "role": "law",
+      "scribeTier": "Covenant Ledger",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Closes the legal core of the book by tying the whole nation's future - not just individual behavior - to covenant faithfulness, with real, escalating consequences laid out either direction. The book's own built-in stakes statement.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 26:1-46",
+          "note": "Blessings for obedience, escalating curses for disobedience"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "vows_tithes_geneva",
+      "name": "Vows & Tithes",
+      "role": "law",
+      "scribeTier": "Vow Tablet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Closing chapter - the valuation of vowed persons, animals, houses, and land, and the tithe. Ends the book on what's voluntarily and formally devoted to God, a deliberate counterpart to the involuntary, required offerings that opened it in chapter 1.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 27:1-34",
+          "note": "Valuations for vows, and the tithe of the land"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nadab_geneva",
+      "name": "Nadab",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": "aaron_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "aaron_geneva",
+        "mother": "elisheba_geneva (unindexed reference)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:1-2",
+          "note": "Offers 'strange fire before the Lord, which he had not commanded them' (Geneva's own phrasing) - fire from the Lord consumes them"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abihu_geneva",
+      "name": "Abihu",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": "aaron_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "aaron_geneva",
+        "mother": "elisheba_geneva (unindexed reference)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:1-2",
+          "note": "Dies alongside Nadab, offering unauthorized fire in his censer"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eleazar_geneva",
+      "name": "Eleazar",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": "aaron_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "aaron_geneva",
+        "mother": "elisheba_geneva (unindexed reference)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:6",
+          "note": "Told, with Ithamar, not to mourn his brothers' deaths publicly"
+        },
+        {
+          "ref": "Leviticus 10:16",
+          "note": "Questioned by Moses over the sin offering, alongside Ithamar; Aaron answers for both"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ithamar_geneva",
+      "name": "Ithamar",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": "aaron_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "aaron_geneva",
+        "mother": "elisheba_geneva (unindexed reference)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:6, 16",
+          "note": "Same episodes as Eleazar"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shelomith_geneva",
+      "name": "Shelomith",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": "priestly_regulations_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "dibri_geneva (unindexed reference, Leviticus 24:11)",
+        "mother": null,
+        "spouses": [
+          "unnamed - an Egyptian man"
+        ],
+        "children": [
+          "unnamed son"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 24:10-11",
+          "note": "Named as the mother of a man who blasphemed 'the name of the Lord' in a camp fight - confirmed via direct read of Geneva's own ch.24"
+        },
+        {
+          "ref": "Leviticus 24:23",
+          "note": "Her son is stoned per the Lord's judgment"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Of the tribe of Dan. Her son himself is never named in Geneva's text either - identified only by his mother's name and Egyptian father, itself part of the episode's point."
+      ]
+    },
+    {
+      "id": "moses_geneva",
+      "name": "Moses",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram_geneva (unindexed reference)",
+        "mother": "jochebed_geneva (unindexed reference)",
+        "spouses": [
+          "zipporah_geneva (unindexed reference)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 1:1",
+          "note": "Geneva's opening line: 'Nowe the Lord called Moses, and spake vnto him out of the Tabernacle of the Congregation, saying' - the recurring transmission formula for nearly every law tier in this book"
+        },
+        {
+          "ref": "Leviticus 8:1-36",
+          "note": "Personally consecrates Aaron and his sons, performing the ordination rites himself"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Has no scribe tier of his own in this book - per the person-vs-transmission test, he is almost entirely 'the LORD spake vnto Moses, saying' here, so he's carried only as deliveredBy on the law tiers, matching Leviticus's own live KJV precedent."
+      ]
+    }
+  ]
+}

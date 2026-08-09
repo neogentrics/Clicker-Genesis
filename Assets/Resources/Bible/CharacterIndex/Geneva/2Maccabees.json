@@ -1,0 +1,1216 @@
+{
+  "book": "2 Maccabees",
+  "translation": "Geneva",
+  "canonicalOrder": 51,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "2 Maccabees does not appear in the KJV Character Index at all (Apocrypha book, unique to this Geneva translation) - drafted fresh. Real structural feature found in the text itself: the book explicitly frames itself as an ABRIDGEMENT of a lost 5-volume history by Jason of Cyrene (2 Macc 2:23-32), not a first-hand chronicle - a genuinely different authorial device from any narrative OT/NT book indexed so far. Chapters 1-2 are two prefatory festal letters (not narrative), covering the Nephthar fire-miracle under Nehemiah and the founding of a sacred library by Nehemiah/Judas - handled as a single Law/theme tier rather than forced into a person tier, since no single character carries it. REAL NAMING COLLISIONS FOUND, kept deliberately separate per the naming-collision rule: (1) Jason, brother of Onias who buys the high priesthood and Hellenizes Jerusalem (ch4-5) vs. Jason OF CYRENE, the otherwise-unmentioned original historian whose 5-book work this text abridges (ch2:23) - two unrelated Jasons; (2) Eleazar the aged scribe martyred for refusing swine's flesh (ch6:18-31) vs. Eleazar the brother of Judas Maccabaeus, a field commander (ch8:23) - two unrelated Eleazars; (3) at least three distinct men named Apollonius - son of Thraseus (ch3:5-7, reports the treasury to the king), son of Menestheus (ch4:21, ch5:24, leads the Sabbath massacre), and son of Gennaeus (ch12:2, harasses the Jews) - never merged; (4) at least four distinct Ptolemys (Philometor the Egyptian king, Ptolemy Macron the sympathetic governor, Ptolemy son of Dorymenes who bribes on Menelaus's behalf, and the unnamed-surname governor of Coelesyria/Phoenicia who receives Nicanor in ch8:8) - kept separate, several left in genealogyLists as insufficiently individuated; (5) a possible but NOT confirmed collision - Dositheus, one of Maccabaeus's captains who helps destroy Timotheus's garrison (ch12:19,24) vs. \"a certain Dositheus, one of Bacenor's company\" who nearly captures Gorgias (ch12:35) - the text never states whether these are the same man, so they are kept as two separate unresolved entries rather than merged. The mother and her seven sons (ch7) are never individually named by the text itself (only counted/ordinaled: \"the first,\" \"the second,\" etc.) - per the collective-entry rule, they are logged as one manager entry representing the whole family rather than eight invented individuals. Eleazar the scribe's age (90, \"fourscore years and ten\") is the one explicit age given in the whole book - logged as an ageEvent. Text uses archaic 1560 Geneva spellings (Judæa, Cœlesyria, Phœnicia, Maccabæus) preserved in verse notes only where directly quoting reference context, not altering the underlying data structure.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Nephthar Flame",
+      "managerId": "sacred_fire_letters_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Guardian of the Treasury",
+      "managerId": "onias_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Golden Horseman's Scourge",
+      "managerId": "heliodorus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Purchased Priesthood",
+      "managerId": "jason_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Stolen Vessels",
+      "managerId": "menelaus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The King Eaten by Worms",
+      "managerId": "antiochus_epiphanes_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Untasted Flesh",
+      "managerId": "eleazar_scribe_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Seven Crowns of Fire",
+      "managerId": "mother_and_seven_sons_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Lion of Modin",
+      "managerId": "judas_maccabeus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Slave-Trader's Reckoning",
+      "managerId": "nicanor_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The King's Guardian",
+      "managerId": "lysias_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Fortress of Carnion",
+      "managerId": "timotheus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Father of the Jews",
+      "managerId": "razis_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Chaplet of Gold",
+      "managerId": "alcimus_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "sacred_fire_letters_geneva",
+      "name": "The Festal Letters of Jerusalem",
+      "role": "law",
+      "scribeTier": "The Nephthar Flame",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Two letters sent from the Jews of Jerusalem to the Jews of Egypt urging them to keep the Feast of Tabernacles/Dedication in Chislev, recounting how the priests hid the altar-fire before the Persian exile and Nehemiah later recovered it as thick water that miraculously kindled into flame (Nephthar, 'Cleansing'), and how Nehemiah founded a library gathering the books of the kings, prophets, and David.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 1:1",
+          "note": "The brethren in Jerusalem and Judæa send greeting to the Jews of Egypt."
+        },
+        {
+          "ref": "2 Maccabees 1:18",
+          "note": "States the purpose: to certify the coming purification-feast of the temple in Chislev."
+        },
+        {
+          "ref": "2 Maccabees 1:19-21",
+          "note": "Priests hid the sacred fire in a dry well before the Persian exile; Nehemiah's men later found only thick water there."
+        },
+        {
+          "ref": "2 Maccabees 1:22",
+          "note": "When poured on the altar and struck by sunlight, the water miraculously kindles into a great blaze."
+        },
+        {
+          "ref": "2 Maccabees 1:36",
+          "note": "Nehemiah names the substance Nephthar, meaning 'Cleansing.'"
+        },
+        {
+          "ref": "2 Maccabees 2:13-14",
+          "note": "Nehemiah founds a library of sacred books; Judas Maccabaeus later regathers writings scattered by war."
+        },
+        {
+          "ref": "2 Maccabees 2:23",
+          "note": "States this whole book is an abridgement of a five-volume history by Jason of Cyrene."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book explicitly names itself as a condensed abridgement of a longer, now-lost work - a rare piece of self-aware authorial framing for a book in this collection."
+      ]
+    },
+    {
+      "id": "onias_geneva",
+      "name": "Onias III",
+      "role": "manager",
+      "scribeTier": "The Guardian of the Treasury",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 3:1",
+          "note": "His godliness and hatred of wickedness keep the holy city at peace and the laws well kept."
+        },
+        {
+          "ref": "2 Maccabees 3:9-12",
+          "note": "Explains to Heliodorus that the treasury holds widows' and orphans' deposits, not royal funds."
+        },
+        {
+          "ref": "2 Maccabees 3:15-21",
+          "note": "Leads the priests in prostrate prayer as Heliodorus moves to seize the treasury."
+        },
+        {
+          "ref": "2 Maccabees 3:31-33",
+          "note": "At the request of Heliodorus's friends, offers sacrifice for the fallen man's deliverance."
+        },
+        {
+          "ref": "2 Maccabees 4:33-34",
+          "note": "Publicly rebukes Menelaus for temple theft from a sanctuary at Daphne; is treacherously murdered by Andronicus."
+        },
+        {
+          "ref": "2 Maccabees 4:35-38",
+          "note": "Jews and Greeks alike protest his unjust murder; Antiochus weeps and has Andronicus executed."
+        },
+        {
+          "ref": "2 Maccabees 15:12-14",
+          "note": "Appears to Judas in a dream, praised by Jeremiah as one who prays constantly for the whole people."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His murder is avenged personally by King Antiochus IV, who strips Andronicus of his purple robe and has him executed on the very spot where Onias was killed."
+      ]
+    },
+    {
+      "id": "simon_benjamite_geneva",
+      "name": "Simon of Benjamin",
+      "role": "submanager",
+      "scribeTier": "The Guardian of the Treasury",
+      "parentManagerId": "onias_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 3:4",
+          "note": "Temple guardian of the tribe of Benjamin who quarrels with Onias over control of the marketplace."
+        },
+        {
+          "ref": "2 Maccabees 3:6",
+          "note": "Reports the temple's untold wealth to Apollonius, setting Heliodorus's mission in motion."
+        },
+        {
+          "ref": "2 Maccabees 4:1",
+          "note": "Slanders Onias as the instigator of the Heliodorus affair."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "seleucus_iv_geneva",
+      "name": "Seleucus IV",
+      "role": "submanager",
+      "scribeTier": "The Guardian of the Treasury",
+      "parentManagerId": "onias_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 3:3",
+          "note": "Personally bears all costs of temple sacrifices from his own royal revenues."
+        },
+        {
+          "ref": "2 Maccabees 3:7",
+          "note": "Sends his chancellor Heliodorus to seize the temple treasury after Apollonius's report."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "heliodorus_geneva",
+      "name": "Heliodorus",
+      "role": "manager",
+      "scribeTier": "The Golden Horseman's Scourge",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 3:7-8",
+          "note": "Sent by King Seleucus, under cover of visiting cities, to seize the Jerusalem temple treasury."
+        },
+        {
+          "ref": "2 Maccabees 3:24-26",
+          "note": "A terrible armored horseman and two radiant young men strike him down and scourge him before the treasury."
+        },
+        {
+          "ref": "2 Maccabees 3:27-29",
+          "note": "Falls speechless and helpless; carried out on a litter."
+        },
+        {
+          "ref": "2 Maccabees 3:31-35",
+          "note": "Restored to life through Onias's sacrifice; offers his own sacrifice of thanks and returns to the king."
+        },
+        {
+          "ref": "2 Maccabees 3:36-39",
+          "note": "Testifies to the king that a divine power personally guards the temple."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "After his ordeal he becomes an unwitting witness FOR the temple's sanctity - warning the king that any future enemy of the Jews sent there will be scourged the same way."
+      ]
+    },
+    {
+      "id": "apollonius_thraseus_geneva",
+      "name": "Apollonius, son of Thraseus",
+      "role": "submanager",
+      "scribeTier": "The Golden Horseman's Scourge",
+      "parentManagerId": "heliodorus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 3:5-7",
+          "note": "Governor of Coelesyria and Phoenicia; relays Simon's report of the treasury's wealth to King Seleucus, causing Heliodorus's mission."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of at least three distinct men named Apollonius in this book - not to be confused with Apollonius son of Menestheus or Apollonius son of Gennaeus."
+      ]
+    },
+    {
+      "id": "jason_geneva",
+      "name": "Jason",
+      "role": "manager",
+      "scribeTier": "The Purchased Priesthood",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:7-9",
+          "note": "Brother of Onias; buys the high priesthood from newly-crowned Antiochus Epiphanes and permission to build a Greek gymnasium."
+        },
+        {
+          "ref": "2 Maccabees 4:12-15",
+          "note": "Establishes Greek customs; priests neglect the altar to attend the palaestra."
+        },
+        {
+          "ref": "2 Maccabees 4:18-20",
+          "note": "Sends money meant for a pagan sacrifice to Hercules toward the city's galleys instead."
+        },
+        {
+          "ref": "2 Maccabees 4:23-26",
+          "note": "Outbid by Menelaus for the high priesthood and driven into exile among the Ammonites."
+        },
+        {
+          "ref": "2 Maccabees 5:5-10",
+          "note": "On a false rumor of Antiochus's death, attacks Jerusalem and slaughters his own countrymen; dies friendless and unburied in a foreign land."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not to be confused with 'Jason of Cyrene,' the otherwise unmentioned historian whose five-volume original work this entire book claims to abridge (2 Macc 2:23) - two unrelated men sharing the name."
+      ]
+    },
+    {
+      "id": "menelaus_geneva",
+      "name": "Menelaus",
+      "role": "manager",
+      "scribeTier": "The Stolen Vessels",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lysimachus_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:23-24",
+          "note": "Brother of Simon of Benjamin; outbids Jason for the high priesthood by 300 talents."
+        },
+        {
+          "ref": "2 Maccabees 4:27",
+          "note": "Fails to pay the promised money to the king."
+        },
+        {
+          "ref": "2 Maccabees 4:32",
+          "note": "Steals golden temple vessels to bribe Andronicus."
+        },
+        {
+          "ref": "2 Maccabees 4:34",
+          "note": "Persuades Andronicus to murder Onias for exposing the theft."
+        },
+        {
+          "ref": "2 Maccabees 5:15",
+          "note": "Personally guides Antiochus into the holy temple to plunder its sacred vessels."
+        },
+        {
+          "ref": "2 Maccabees 11:29",
+          "note": "Sent by the king to encourage the Jews after Lysias's peace terms."
+        },
+        {
+          "ref": "2 Maccabees 13:3-8",
+          "note": "Betrays his own country for personal advancement; executed by being pushed into a tower of ashes at Beroea - a fate the text calls fitting since he had sinned against the holy altar's ashes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lysimachus_geneva",
+      "name": "Lysimachus",
+      "role": "submanager",
+      "scribeTier": "The Stolen Vessels",
+      "parentManagerId": "menelaus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:29",
+          "note": "Left by his brother Menelaus as deputy high priest."
+        },
+        {
+          "ref": "2 Maccabees 4:39-42",
+          "note": "Commits many temple sacrileges with Menelaus's consent; killed by an angry mob near the treasury while leading 3,000 armed men against them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "andronicus_geneva",
+      "name": "Andronicus",
+      "role": "submanager",
+      "scribeTier": "The Stolen Vessels",
+      "parentManagerId": "menelaus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:31-32",
+          "note": "Left as the king's deputy; receives stolen golden vessels from Menelaus."
+        },
+        {
+          "ref": "2 Maccabees 4:34",
+          "note": "Lures Onias out of sanctuary under a false oath of friendship and kills him."
+        },
+        {
+          "ref": "2 Maccabees 4:38",
+          "note": "Stripped of his purple robe and executed by Antiochus at the very site of Onias's murder."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ptolemy_dorymenes_geneva",
+      "name": "Ptolemy, son of Dorymenes",
+      "role": "submanager",
+      "scribeTier": "The Stolen Vessels",
+      "parentManagerId": "menelaus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:45-46",
+          "note": "Bribed by Menelaus to persuade the king to acquit him of the charges brought by the senate's envoys."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of at least four distinct men named Ptolemy in this book."
+      ]
+    },
+    {
+      "id": "antiochus_epiphanes_geneva",
+      "name": "Antiochus IV Epiphanes",
+      "role": "manager",
+      "scribeTier": "The King Eaten by Worms",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "antiochus_eupator_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:21-22",
+          "note": "Marches on Jerusalem, magnificently received by Jason with torches."
+        },
+        {
+          "ref": "2 Maccabees 5:11-14",
+          "note": "On hearing of revolt, sacks Jerusalem, killing 80,000 in three days."
+        },
+        {
+          "ref": "2 Maccabees 5:15-16",
+          "note": "Enters the holy of holies itself and plunders the sacred vessels."
+        },
+        {
+          "ref": "2 Maccabees 6:1-9",
+          "note": "Orders the temple renamed for Zeus/Jupiter Olympius and forces pagan worship on the Jews."
+        },
+        {
+          "ref": "2 Maccabees 9:5-10",
+          "note": "Struck with a fatal bowel disease; worms swarm from his living body."
+        },
+        {
+          "ref": "2 Maccabees 9:12-17",
+          "note": "Vows to free Jerusalem, honor the Jews, and even become a Jew himself if healed."
+        },
+        {
+          "ref": "2 Maccabees 9:28",
+          "note": "Dies in agony among the mountains of a foreign land."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text frames his death as exact poetic justice: he tormented other men's bowels with strange sufferings, and is himself killed by an incurable disease of the bowels (9:5-6)."
+      ]
+    },
+    {
+      "id": "philip_phrygian_geneva",
+      "name": "Philip the Phrygian",
+      "role": "submanager",
+      "scribeTier": "The King Eaten by Worms",
+      "parentManagerId": "antiochus_epiphanes_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 5:22",
+          "note": "Left by Antiochus as governor at Jerusalem, 'more barbarous than him that set him there.'"
+        },
+        {
+          "ref": "2 Maccabees 6:11",
+          "note": "Betrays and burns Jews who had hidden in caves to keep the sabbath secretly."
+        },
+        {
+          "ref": "2 Maccabees 9:29",
+          "note": "As the king's foster-brother, conveys his corpse home, then flees to Ptolemy Philometor in Egypt fearing the new king's son."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "apollonius_menestheus_geneva",
+      "name": "Apollonius, son of Menestheus",
+      "role": "submanager",
+      "scribeTier": "The King Eaten by Worms",
+      "parentManagerId": "antiochus_epiphanes_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 4:21",
+          "note": "Sent to Egypt for the enthronement of Ptolemy Philometor."
+        },
+        {
+          "ref": "2 Maccabees 5:24",
+          "note": "Sent with 22,000 troops; feigns peace on the sabbath, then massacres Jews at their rest."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A different Apollonius from both the son of Thraseus (ch3) and the son of Gennaeus (ch12) - the text itself distinguishes them by patronymic."
+      ]
+    },
+    {
+      "id": "eleazar_scribe_geneva",
+      "name": "Eleazar the Scribe",
+      "role": "manager",
+      "scribeTier": "The Untasted Flesh",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 6:18",
+          "note": "One of the principal scribes, elderly and noble, compelled to eat swine's flesh."
+        },
+        {
+          "ref": "2 Maccabees 6:19-20",
+          "note": "Spits out the meat rather than pollute himself, even at the cost of his life."
+        },
+        {
+          "ref": "2 Maccabees 6:21-22",
+          "note": "Old friends secretly urge him to fake compliance with permitted meat; he refuses."
+        },
+        {
+          "ref": "2 Maccabees 6:24-28",
+          "note": "Explains he will not mislead the young into apostasy by his example, at 90 years old."
+        },
+        {
+          "ref": "2 Maccabees 6:30-31",
+          "note": "Dies under the scourge, leaving his death as 'an ensample of nobleness' to his whole nation."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Maccabees 6:24",
+          "note": "Explicitly stated to be 'the man of fourscore years and ten' (90 years old) at his martyrdom - the one explicit age given anywhere in this book."
+        }
+      ],
+      "funFacts": [
+        "Not the same Eleazar as Judas Maccabaeus's brother, a field commander who appears two chapters later (8:23) - the text never links the two."
+      ]
+    },
+    {
+      "id": "mother_and_seven_sons_geneva",
+      "name": "The Mother and Her Seven Sons",
+      "role": "manager",
+      "scribeTier": "The Seven Crowns of Fire",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 7:1",
+          "note": "Seven brothers and their mother arrested and tortured to force them to eat swine's flesh."
+        },
+        {
+          "ref": "2 Maccabees 7:3-5",
+          "note": "The eldest brother is mutilated and fried alive in a pan for refusing, before the eyes of his brothers and mother."
+        },
+        {
+          "ref": "2 Maccabees 7:9",
+          "note": "The second son, dying, declares the King of the world will raise the faithful to eternal life."
+        },
+        {
+          "ref": "2 Maccabees 7:20-23",
+          "note": "The mother is praised as 'marvellous' for enduring the death of all seven sons in one day with courage."
+        },
+        {
+          "ref": "2 Maccabees 7:27-29",
+          "note": "In her own language, she urges her youngest son to accept death rather than betray the law."
+        },
+        {
+          "ref": "2 Maccabees 7:41",
+          "note": "After all seven sons, the mother herself dies last."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "None of the eight family members are individually named anywhere in the text - only counted ordinally ('the first,' 'the second,' etc.) - so they are kept here as a single collective entry rather than invented as eight separate characters, per the indexing rule against inventing names for undifferentiated groups."
+      ]
+    },
+    {
+      "id": "judas_maccabeus_geneva",
+      "name": "Judas Maccabaeus",
+      "role": "manager",
+      "scribeTier": "The Lion of Modin",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 5:27",
+          "note": "Withdraws to the mountains with nine companions to avoid forced pollution."
+        },
+        {
+          "ref": "2 Maccabees 8:1-7",
+          "note": "Gathers 6,000 men and begins a guerrilla campaign of night raids."
+        },
+        {
+          "ref": "2 Maccabees 8:16-27",
+          "note": "Defeats Nicanor's massive relief force, keeping the sabbath instead of pursuing further."
+        },
+        {
+          "ref": "2 Maccabees 10:1-8",
+          "note": "Recovers and cleanses the temple; institutes the eight-day feast of dedication."
+        },
+        {
+          "ref": "2 Maccabees 12:43-45",
+          "note": "Takes up a collection and sends money to Jerusalem for a sin offering for the fallen dead, 'in that he took thought for a resurrection.'"
+        },
+        {
+          "ref": "2 Maccabees 13:14-15",
+          "note": "Pitches camp at Modin and raids Antiochus Eupator's royal camp by night."
+        },
+        {
+          "ref": "2 Maccabees 15:12-16",
+          "note": "In a dream, receives a golden sword from the prophet Jeremiah, symbol of divine backing for the coming battle."
+        },
+        {
+          "ref": "2 Maccabees 15:27-30",
+          "note": "Defeats and kills Nicanor at last, cutting off his head and hand for public display in Jerusalem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Uniquely for this book, he is shown taking up a collection for a sin offering for dead soldiers found wearing forbidden idol-tokens - the text explicitly cites this as evidence of a belief in resurrection (12:43-45)."
+      ]
+    },
+    {
+      "id": "simon_brother_geneva",
+      "name": "Simon (brother of Judas)",
+      "role": "submanager",
+      "scribeTier": "The Lion of Modin",
+      "parentManagerId": "judas_maccabeus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:22",
+          "note": "Given command of 1,500 men as one of Judas's band-leaders."
+        },
+        {
+          "ref": "2 Maccabees 10:19-20",
+          "note": "Left with a force to besiege two towers; he and his men accept bribes and let some defenders escape."
+        },
+        {
+          "ref": "2 Maccabees 10:21",
+          "note": "Rebuked by Judas for the bribery before the assembled leaders of the people."
+        },
+        {
+          "ref": "2 Maccabees 14:17",
+          "note": "Engages Nicanor but is checked by a sudden panic among his own men."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "judas_brethren_geneva",
+      "name": "Joseph, Jonathan, and Eleazar (Judas's brothers)",
+      "role": "submanager",
+      "scribeTier": "The Lion of Modin",
+      "parentManagerId": "judas_maccabeus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:22-23",
+          "note": "Named alongside Simon as band-commanders of 1,500 men each under Judas; Eleazar reads the sacred book and gives the watchword before the first battle with Nicanor."
+        },
+        {
+          "ref": "2 Maccabees 10:19",
+          "note": "Joseph named again as a co-leader left to besiege the towers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Eleazar is distinct from Eleazar the scribe martyred in chapter 6 - the text never links them, and the naming is a coincidence typical of the period."
+      ]
+    },
+    {
+      "id": "dositheus_sosipater_geneva",
+      "name": "Dositheus and Sosipater",
+      "role": "submanager",
+      "scribeTier": "The Lion of Modin",
+      "parentManagerId": "judas_maccabeus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 12:19",
+          "note": "Captains of Maccabaeus who destroy a garrison left behind by Timotheus, over 10,000 men."
+        },
+        {
+          "ref": "2 Maccabees 12:24-25",
+          "note": "Capture Timotheus himself but release him under oath to save their captive kinsmen."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A separate, unrelated 'Dositheus, one of Bacenor's company' also appears later (12:35) nearly capturing Gorgias - the text never confirms whether this is the same Dositheus or a different man; kept unresolved rather than merged."
+      ]
+    },
+    {
+      "id": "nicanor_geneva",
+      "name": "Nicanor",
+      "role": "manager",
+      "scribeTier": "The Slave-Trader's Reckoning",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:9-11",
+          "note": "Sent by Ptolemy with 20,000 men to destroy Judaea; plans to sell captive Jews as slaves to pay Rome's tribute."
+        },
+        {
+          "ref": "2 Maccabees 8:24",
+          "note": "His army routed by Judas's much smaller force; he flees in disguise to Antioch."
+        },
+        {
+          "ref": "2 Maccabees 14:12-13",
+          "note": "Appointed governor of Judaea by Demetrius, ordered to kill Judas and install Alcimus as high priest."
+        },
+        {
+          "ref": "2 Maccabees 14:24-25",
+          "note": "Grows to genuinely respect and befriend Judas, urging him to marry and settle."
+        },
+        {
+          "ref": "2 Maccabees 14:33",
+          "note": "Threatens to burn the temple to the ground if Judas is not surrendered to him."
+        },
+        {
+          "ref": "2 Maccabees 15:25-28",
+          "note": "Killed in the final battle; found dead in full armor by Judas's returning men."
+        },
+        {
+          "ref": "2 Maccabees 15:30-33",
+          "note": "His severed head, hand, and tongue are displayed at Jerusalem as a sign of the Lord's help."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gorgias_geneva",
+      "name": "Gorgias",
+      "role": "submanager",
+      "scribeTier": "The Slave-Trader's Reckoning",
+      "parentManagerId": "nicanor_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:9",
+          "note": "Sent alongside Nicanor as an experienced war captain."
+        },
+        {
+          "ref": "2 Maccabees 10:14",
+          "note": "Made governor of the district; wages continual war against the Jews."
+        },
+        {
+          "ref": "2 Maccabees 12:32-35",
+          "note": "Defeated in battle; narrowly escapes capture by a horseman named Dositheus, fleeing to Marisa."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lysias_geneva",
+      "name": "Lysias",
+      "role": "manager",
+      "scribeTier": "The King's Guardian",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 10:11",
+          "note": "Appointed chancellor and supreme governor of Coelesyria and Phoenicia under Antiochus Eupator."
+        },
+        {
+          "ref": "2 Maccabees 11:1-4",
+          "note": "Marches against the Jews with a huge force, planning to resettle Jerusalem with Greeks."
+        },
+        {
+          "ref": "2 Maccabees 11:11-12",
+          "note": "Routed by Judas's forces; escapes by shameful flight."
+        },
+        {
+          "ref": "2 Maccabees 11:14-21",
+          "note": "Negotiates peace terms and secures the king's agreement to restore Jewish rights."
+        },
+        {
+          "ref": "2 Maccabees 13:2",
+          "note": "Returns with Antiochus Eupator and a far larger force including elephants and scythed chariots."
+        },
+        {
+          "ref": "2 Maccabees 13:26",
+          "note": "Defends the peace treaty before an angry crowd at Ptolemais and successfully pacifies them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "antiochus_eupator_geneva",
+      "name": "Antiochus V Eupator",
+      "role": "submanager",
+      "scribeTier": "The King's Guardian",
+      "parentManagerId": "lysias_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "antiochus_epiphanes_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 10:10",
+          "note": "Succeeds his father Antiochus Epiphanes, 'a true son of that ungodly man.'"
+        },
+        {
+          "ref": "2 Maccabees 13:1-2",
+          "note": "Marches into Judaea with Lysias and an enormous army."
+        },
+        {
+          "ref": "2 Maccabees 13:23",
+          "note": "Makes peace with the Jews, offers sacrifice, and honors the sanctuary before departing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ptolemy_macron_geneva",
+      "name": "Ptolemy Macron",
+      "role": "submanager",
+      "scribeTier": "The King's Guardian",
+      "parentManagerId": "lysias_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 10:12-13",
+          "note": "Sets an example of just dealing with the Jews; accused of treachery before Eupator, takes poison and kills himself."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of at least four distinct men named Ptolemy in this book."
+      ]
+    },
+    {
+      "id": "timotheus_geneva",
+      "name": "Timotheus",
+      "role": "manager",
+      "scribeTier": "The Fortress of Carnion",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:30",
+          "note": "His forces, together with Bacchides, defeated by Judas's men, over 20,000 killed."
+        },
+        {
+          "ref": "2 Maccabees 10:24",
+          "note": "Gathers a huge foreign force and horsemen to invade Judaea again."
+        },
+        {
+          "ref": "2 Maccabees 10:37",
+          "note": "Found hidden in a cistern at Gazara and killed along with his brother Chaereas."
+        },
+        {
+          "ref": "2 Maccabees 12:2",
+          "note": "Named again among the district governors harassing the Jews (a fresh campaign, since his prior death account is sometimes read as a separate Timotheus or a narrative doublet in the underlying source)."
+        },
+        {
+          "ref": "2 Maccabees 12:21-24",
+          "note": "Flees to the fortress of Carnion, sending women and baggage ahead; later captured and released under oath by Dositheus and Sosipater."
+        },
+        {
+          "ref": "2 Maccabees 12:26",
+          "note": "Judas destroys Carnion and the temple of Atergatis after him, killing 25,000."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text describes a Timotheus apparently killed at Gazara in chapter 10 and a Timotheus very much alive leading campaigns in chapter 12 - kept as one entry per the shared name and role, but flagged here as a real internal tension in the source text worth a closer read before assuming it is a single unbroken storyline."
+      ]
+    },
+    {
+      "id": "bacchides_geneva",
+      "name": "Bacchides",
+      "role": "submanager",
+      "scribeTier": "The Fortress of Carnion",
+      "parentManagerId": "timotheus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 8:30",
+          "note": "Fights alongside Timotheus's forces; over 20,000 of their combined men are killed by Judas."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "razis_geneva",
+      "name": "Razis",
+      "role": "manager",
+      "scribeTier": "Father of the Jews",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 14:37",
+          "note": "An elder of Jerusalem, beloved for his good will toward his countrymen, called 'Father of the Jews.'"
+        },
+        {
+          "ref": "2 Maccabees 14:39-41",
+          "note": "Nicanor sends 500 soldiers to seize him; besieged in his own tower, he falls on his own sword rather than be taken."
+        },
+        {
+          "ref": "2 Maccabees 14:43-46",
+          "note": "Missing his stroke, he leaps from the wall, and though mortally wounded, tears out his own entrails and hurls them at the crowd, calling on God to restore them to him, before he dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His death (14:37-46) is one of the most graphic single scenes in the whole book, deliberately framed by the text as an act of ultimate resistance rather than despair."
+      ]
+    },
+    {
+      "id": "alcimus_geneva",
+      "name": "Alcimus",
+      "role": "manager",
+      "scribeTier": "The Chaplet of Gold",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 14:3",
+          "note": "A former high priest who had wilfully defiled himself during the years of Hellenizing compromise."
+        },
+        {
+          "ref": "2 Maccabees 14:4",
+          "note": "Presents King Demetrius with a golden chaplet, a palm, and temple olive-boughs to win his favor."
+        },
+        {
+          "ref": "2 Maccabees 14:6-10",
+          "note": "Accuses Judas and the Hasidaeans of keeping the kingdom in constant war, urging the king to act."
+        },
+        {
+          "ref": "2 Maccabees 14:13",
+          "note": "Secures Nicanor's appointment as governor of Judaea with orders to kill Judas."
+        },
+        {
+          "ref": "2 Maccabees 14:26",
+          "note": "Learning that Nicanor and Judas have become friendly, slanders Nicanor to Demetrius as disloyal, reigniting the conflict that leads to the book's final battle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "demetrius_i_geneva",
+      "name": "Demetrius I",
+      "role": "submanager",
+      "scribeTier": "The Chaplet of Gold",
+      "parentManagerId": "alcimus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Maccabees 14:1-2",
+          "note": "Son of Seleucus; takes the kingdom after the deaths of Antiochus Eupator and Lysias."
+        },
+        {
+          "ref": "2 Maccabees 14:11-13",
+          "note": "Persuaded by his Friends and by Alcimus to send Nicanor against Judas."
+        },
+        {
+          "ref": "2 Maccabees 14:27",
+          "note": "Enraged by Alcimus's fresh accusations, orders Nicanor to send Judas to Antioch as a prisoner, forcing Nicanor's hand."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list - minor figures mentioned once or twice without enough independent narrative weight for a full entry, or genuinely ambiguous identities.",
+    "jason_of_cyrene": {
+      "ref": "2 Maccabees 2:23",
+      "note": "The unnamed-elsewhere historian whose five-volume original work this entire book claims to abridge - never appears as a character in the narrative itself, purely an authorial reference."
+    },
+    "aristobulus": {
+      "ref": "2 Maccabees 1:10",
+      "note": "Recipient of the opening letter, described as King Ptolemy's teacher and of the priestly line."
+    },
+    "hyrcanus_son_of_tobias": {
+      "ref": "2 Maccabees 3:11",
+      "note": "A prominent man whose money was deposited in the temple treasury Heliodorus sought to seize."
+    },
+    "john_father_of_eupolemus": {
+      "ref": "2 Maccabees 4:11",
+      "note": "Secured earlier royal favors for the Jews via a Roman embassy; referenced only in passing."
+    },
+    "apollonius_gennaeus_geneva": {
+      "ref": "2 Maccabees 12:2",
+      "note": "A third, separate man named Apollonius among the district governors harassing the Jews after the peace of chapter 11 - distinct from the son of Thraseus and the son of Menestheus."
+    },
+    "john_and_absalom": {
+      "ref": "2 Maccabees 11:17",
+      "note": "Jewish envoys who delivered the petition to Lysias; named once, no further role."
+    },
+    "rhodocus": {
+      "ref": "2 Maccabees 13:21",
+      "note": "A Jewish soldier who betrayed his countrymen's secrets to the enemy; captured and imprisoned."
+    },
+    "hegemonides": {
+      "ref": "2 Maccabees 13:24",
+      "note": "Left as governor from Ptolemais to the Gerrenians by Lysias after the peace settlement."
+    },
+    "posidonius_theodotus_mattathias": {
+      "ref": "2 Maccabees 14:19",
+      "note": "Envoys sent by Nicanor to exchange pledges of friendship with Judas's camp."
+    },
+    "esdris": {
+      "ref": "2 Maccabees 12:36",
+      "note": "Commander of a Jewish company fighting alongside Judas against Gorgias's forces."
+    },
+    "callisthenes": {
+      "ref": "2 Maccabees 8:33",
+      "note": "One of those who had set the temple gates on fire; burned alive in an outhouse in reprisal."
+    },
+    "hauran": {
+      "ref": "2 Maccabees 4:40",
+      "note": "An elderly, notably reckless henchman of Lysimachus who led the attack on the rioting crowd."
+    },
+    "apollophanes": {
+      "ref": "2 Maccabees 10:37",
+      "note": "Killed alongside Timotheus and Chaereas at Gazara."
+    },
+    "ptolemy_philometor": {
+      "ref": "2 Maccabees 4:21",
+      "note": "King of Egypt referenced multiple times as a regional political figure; never appears directly in the narrated action."
+    }
+  }
+}

@@ -79,8 +79,9 @@ namespace ClickerGenesis.Core
             if (CreditsPanel != null) CreditsPanel.SetActive(false);
             if (AchievementsButton != null)
             {
-                AchievementsButton.interactable = false;
-                if (AchievementsButtonLabel != null) AchievementsButtonLabel.text = "Achievements (Coming Soon)";
+                AchievementsButton.interactable = true;
+                if (AchievementsButtonLabel != null) AchievementsButtonLabel.text = "Achievements";
+                AchievementsButton.onClick.AddListener(GoToAchievements);
             }
 
             if (OverlayRoot != null) OverlayRoot.SetActive(false);
@@ -290,6 +291,18 @@ namespace ClickerGenesis.Core
                 SceneTransitioner.Instance.LoadScene("MainMenu");
             else
                 SceneManager.LoadScene("MainMenu");
+        }
+
+        /// <summary>Achievements is a dedicated scene, not another Pause Menu panel (2026-08-08) -
+        /// deliberately so the achievement content session can build its own UI there without
+        /// touching this controller, same reasoning as GoToMainMenu.</summary>
+        private void GoToAchievements()
+        {
+            Hide();
+            if (SceneTransitioner.Instance != null)
+                SceneTransitioner.Instance.LoadScene("AchievementScreen");
+            else
+                SceneManager.LoadScene("AchievementScreen");
         }
     }
 }

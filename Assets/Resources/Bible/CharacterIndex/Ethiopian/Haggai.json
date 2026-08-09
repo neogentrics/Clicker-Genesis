@@ -1,0 +1,278 @@
+{
+  "book": "Haggai",
+  "translation": "Ethiopian",
+  "canonicalOrder": 57,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Verified against this translation's own extracted text (2 chapters, 38 verses: 15+23, matching the stated verse count exactly) — content is verbatim-identical in substance to the KJV Haggai already indexed (same four dated oracles, same two named human addressees, same priestly-ruling episode), so the KJV structure was adapted rather than invented from scratch, with every verse re-checked against this translation's own file. Two named humans beyond the prophet: Zerubbabel (governor) and Joshua son of Josedech (high priest), always addressed together, plus Darius the king as a non-acting dating anchor (kept as a 'named' entry, not folded silently into others). No submanagers - the 'remnant of the people' acts only as an undifferentiated group, cited within the entries it belongs to. Two law/theme tiers split out because each is independently load-bearing: the temple-rebuilding charge (the book's central theme, 1:2-11/2:1-9) and the priests' ceremonial-defilement ruling (2:10-19), a distinct self-contained teaching, not a restatement of the temple charge. NAMING-COLLISION FLAGS carried over and re-verified against this text: this Joshua (son of Josedech) is not Joshua son of Nun; this Darius is conventionally Darius I of Persia but the text itself never distinguishes him from other scriptural Dariuses (Darius the Mede, Darius the Persian) - the identification is external, not textual. All ids suffixed _ethiopian to keep this translation's roster distinct from the existing KJV character set per the project's cross-translation scoping rule.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Prophet's Scroll",
+      "managerId": "haggai_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Governor's Signet",
+      "managerId": "zerubbabel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "High Priest's Mitre",
+      "managerId": "joshua_son_of_josedech_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Temple Cornerstone",
+      "managerId": "temple_rebuilding_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Priestly Ruling",
+      "managerId": "priests_law_of_defilement_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "haggai_ethiopian",
+      "name": "Haggai the prophet",
+      "role": "manager",
+      "scribeTier": "Prophet's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "In Darius's 2nd year, 6th month, day 1, the word of the LORD comes by Haggai the prophet to Zerubbabel and to Joshua the high priest."
+        },
+        {
+          "ref": "Haggai 1:2-9",
+          "note": "Rebukes the people for dwelling in 'cieled houses' while the LORD's house 'lie[s] waste'; commands them to go to the mountain, bring wood, and build."
+        },
+        {
+          "ref": "Haggai 1:12-13",
+          "note": "The people obey and fear before the LORD; Haggai, called 'the LORD's messenger,' delivers the LORD's reassurance, 'I am with you.'"
+        },
+        {
+          "ref": "Haggai 2:1-9",
+          "note": "Second message: encourages the discouraged builders, promises the latter house's glory will exceed the former's, and 'in this place will I give peace.'"
+        },
+        {
+          "ref": "Haggai 2:10-14",
+          "note": "At the LORD's instruction, poses two ceremonial-law questions to the priests and applies the answer to the nation's uncleanness."
+        },
+        {
+          "ref": "Haggai 2:20-23",
+          "note": "Delivers the final oracle to Zerubbabel alone, promising he will be made 'as a signet.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Every one of his messages in this text carries an exact date (1:1; 2:1; 2:10; 2:20)."
+      ]
+    },
+    {
+      "id": "zerubbabel_ethiopian",
+      "name": "Zerubbabel the son of Shealtiel",
+      "role": "manager",
+      "scribeTier": "Governor's Signet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Shealtiel",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the son of Shealtiel' throughout this text (1:1, 1:12, 1:14, 2:2, 2:4, 2:21, 2:23), matching the KJV's own genealogical claim for him."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "Addressed as 'governor of Judah' alongside Joshua the high priest."
+        },
+        {
+          "ref": "Haggai 1:12",
+          "note": "Obeys the voice of the LORD along with Joshua and the remnant of the people."
+        },
+        {
+          "ref": "Haggai 1:14",
+          "note": "The LORD stirs up his spirit, and he comes to work on the house of the LORD."
+        },
+        {
+          "ref": "Haggai 2:4",
+          "note": "Told directly, 'be strong, O Zerubbabel... and work: for I am with you.'"
+        },
+        {
+          "ref": "Haggai 2:20-23",
+          "note": "Final oracle addressed to him alone: 'I will take thee, O Zerubbabel, my servant... and will make thee as a signet: for I have chosen thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Titled 'governor of Judah' (a Persian-appointed provincial administrator) throughout, never 'king' - Judah had no throne at this time."
+      ]
+    },
+    {
+      "id": "joshua_son_of_josedech_ethiopian",
+      "name": "Joshua the son of Josedech, the high priest",
+      "role": "manager",
+      "scribeTier": "High Priest's Mitre",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Josedech",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Naming collision flag: this Joshua is a different person from Joshua son of Nun, Moses' successor - name only, no relation."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "Addressed as 'the high priest' alongside Zerubbabel."
+        },
+        {
+          "ref": "Haggai 1:12",
+          "note": "Obeys the voice of the LORD along with Zerubbabel and the remnant of the people."
+        },
+        {
+          "ref": "Haggai 1:14",
+          "note": "The LORD stirs up his spirit as well, and he joins the temple work."
+        },
+        {
+          "ref": "Haggai 2:4",
+          "note": "Told directly, 'be strong, O Joshua, son of Josedech, the high priest... and work: for I am with you.'"
+        },
+        {
+          "ref": "Haggai 2:10-13",
+          "note": "Present as the priestly-office holder when Haggai poses the LORD's ceremonial-law question to 'the priests.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paired with Zerubbabel as joint addressee of every message in the book - civil and religious leadership approached together throughout."
+      ]
+    },
+    {
+      "id": "temple_rebuilding_ethiopian",
+      "name": "The Rebuilding of the House of the LORD",
+      "role": "law",
+      "scribeTier": "Temple Cornerstone",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "haggai_ethiopian",
+      "purpose": "To reorder the returned exiles' priorities after they let the temple's reconstruction stall while finishing their own houses (1:2-4, 1:9); ties recent drought/crop failure directly to this neglect (1:6, 1:9-11); once work resumes, promises the rebuilt house's glory will exceed the former's (2:7-9) and that from the day the foundation work resumes, the LORD will bless (2:18-19).",
+      "verses": [
+        {
+          "ref": "Haggai 1:2-4",
+          "note": "The people say 'the time is not come' to build, while dwelling in their own 'cieled houses' - the charge that opens the book."
+        },
+        {
+          "ref": "Haggai 1:9-11",
+          "note": "Poor harvests and drought explained as the consequence of the house lying waste while everyone runs to his own house."
+        },
+        {
+          "ref": "Haggai 1:14-15",
+          "note": "Work actually begins on the 24th day of the 6th month."
+        },
+        {
+          "ref": "Haggai 2:3-9",
+          "note": "Compares the modest new foundation to the house's former glory, but promises 'the glory of this latter house shall be greater than of the former,' ending 'in this place will I give peace.'"
+        },
+        {
+          "ref": "Haggai 2:18-19",
+          "note": "Marks the day of the temple's (re-)foundation as the turning point for blessing: 'from this day will I bless you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "priests_law_of_defilement_ethiopian",
+      "name": "The Priests' Ruling on Holiness and Defilement",
+      "role": "law",
+      "scribeTier": "Priestly Ruling",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "joshua_son_of_josedech_ethiopian",
+      "purpose": "At the LORD's instruction, Haggai poses two questions to the priests concerning the law: whether holy flesh carried in a garment's skirt sanctifies bread, pottage, wine, oil, or other meat it touches (answered no), and whether one made unclean by touching a dead body defiles those same things by touching them (answered yes, 2:12-13). Applied: 'so is this people, and so is this nation before me... and that which they offer there is unclean' (2:14) - holiness does not spread by mere contact, but uncleanness does, explaining the nation's fruitless labor before the temple work resumed.",
+      "verses": [
+        {
+          "ref": "Haggai 2:11-13",
+          "note": "The LORD instructs Haggai to 'ask now the priests concerning the law' - the two hypothetical questions and the priests' answers ('No' / 'It shall be unclean')."
+        },
+        {
+          "ref": "Haggai 2:14",
+          "note": "Application: 'so is this people, and so is this nation before me, saith the LORD... and that which they offer there is unclean.'"
+        },
+        {
+          "ref": "Haggai 2:15-17",
+          "note": "Recalls earlier crop failures ('smote you with blasting and with mildew and with hail') as consequence, before the temple work resumed."
+        },
+        {
+          "ref": "Haggai 2:18-19",
+          "note": "Marks the same day (the 24th of the 9th month) as the turning point: 'from this day will I bless you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "darius_ethiopian",
+      "name": "Darius the king",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "'In the second year of Darius the king' - opens the book's dating formula; no further description given."
+        },
+        {
+          "ref": "Haggai 1:15",
+          "note": "'The second year of Darius the king' - repeated to date the start of the temple work."
+        },
+        {
+          "ref": "Haggai 2:10",
+          "note": "'The second year of Darius' - dates the priests'-ruling message."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision flag: at least two other kings named Darius appear elsewhere in scripture (Darius the Mede, Darius the Persian) - conventionally read as different rulers, though this text never draws the distinction itself."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogy references in this book - both named human figures beyond the prophet have their father named directly in-text."
+  }
+}

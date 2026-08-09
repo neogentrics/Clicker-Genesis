@@ -1,0 +1,322 @@
+{
+  "book": "Philemon",
+  "translation": "Ethiopian",
+  "canonicalOrder": 77,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Verified against the already-completed KJV Philemon.json: this Ethiopian translation's 25-verse text is word-for-word identical to KJV Philemon (no structural or content divergence found, unlike this same translation's own Ezra). Structure adapted directly from KJV's validated 3-tier person-only model, re-verified line by line against this translation's own extracted text rather than assumed. All three scribe tiers are role:person - Philemon is entirely personal correspondence in miniature, not doctrinal/legal content, so no law tiers apply. Two collective/split submanagers preserved from the KJV precedent because the text itself (not an editorial choice) draws real distinctions: 'the church in thy house' (v.2) is one undifferentiated congregation attached to Philemon; the closing greetings split into two separate submanager entries under Paul because v.23 calls Epaphras alone 'my fellowprisoner in Christ Jesus' while v.24 calls Marcus/Aristarchus/Demas/Lucas together 'my fellowlabourers' - a real textual status distinction, not an arbitrary grouping choice. Onesimus is called 'servant' (v.16) by this text, never 'slave', and the text never states outright that he ran away (only that he 'departed for a season', v.15, and 'hath wronged thee, or oweth thee ought', v.18) - 'runaway' is a hedged contextual inference here, not asserted as fact, matching the KJV entry's discipline. Apphia/Archippus are greeted alongside Philemon (v.2) with no stated family relationship in the text - the tradition that Apphia is his wife and Archippus his son is flagged only in perkNote/funFacts, never asserted in genealogy fields. No naming collisions found within this book. All ids suffixed '_ethiopian' to keep this translation's character graph fully independent from the KJV index per the project's per-translation isolation rule, even where content is identical.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Aged Prisoner's Pen",
+      "managerId": "paul_philemon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Beloved Fellowlabourer's House",
+      "managerId": "philemon_recipient_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Profitable Name Returned",
+      "managerId": "onesimus_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_philemon_ethiopian",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "onesimus_ethiopian — described as 'my son... whom I have begotten in my bonds' (v.10), a spiritual/conversion relationship, not a literal biological son"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Identifies himself as 'a prisoner of Jesus Christ,' writing jointly with Timothy, to Philemon 'our dearly beloved, and fellowlabourer.'"
+        },
+        {
+          "ref": "Philemon 1:4-7",
+          "note": "Gives thanks for Philemon in his prayers, having heard of his love and faith toward the Lord Jesus and all saints; the saints' hearts are refreshed by him."
+        },
+        {
+          "ref": "Philemon 1:8-9",
+          "note": "Chooses to beseech rather than command Philemon, describing himself as 'Paul the aged, and now also a prisoner of Jesus Christ.'"
+        },
+        {
+          "ref": "Philemon 1:10",
+          "note": "Beseeches Philemon on behalf of 'my son Onesimus, whom I have begotten in my bonds.'"
+        },
+        {
+          "ref": "Philemon 1:11-14",
+          "note": "Plays on Onesimus's name (once unprofitable, now profitable); would do nothing without Philemon's consent so any good deed is willing, not forced."
+        },
+        {
+          "ref": "Philemon 1:17-19",
+          "note": "Asks Philemon to receive Onesimus 'as myself'; offers to personally repay any debt Onesimus owes, writing it 'with mine own hand.'"
+        },
+        {
+          "ref": "Philemon 1:20-21",
+          "note": "Asks for joy and refreshing 'in the Lord,' stating confidence Philemon will do even more than asked."
+        },
+        {
+          "ref": "Philemon 1:22",
+          "note": "Asks Philemon to prepare him a lodging, expecting to be restored to them through their prayers."
+        },
+        {
+          "ref": "Philemon 1:25",
+          "note": "Closes with a benediction: 'The grace of our Lord Jesus Christ be with your spirit. Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Calls himself 'Paul the aged' (v.9), one of the only places in his own writings referencing his own advancing age.",
+        "The shortest of Paul's New Testament epistles and the only one addressed primarily to a private individual about a personal, non-doctrinal matter."
+      ]
+    },
+    {
+      "id": "philemon_recipient_ethiopian",
+      "name": "Philemon",
+      "role": "manager",
+      "scribeTier": "The Beloved Fellowlabourer's House",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Addressed by Paul as 'our dearly beloved, and fellowlabourer' - the letter's primary recipient."
+        },
+        {
+          "ref": "Philemon 1:2",
+          "note": "The greeting extends to Apphia, Archippus, and 'the church in thy house' - a congregation meets in his home."
+        },
+        {
+          "ref": "Philemon 1:4-7",
+          "note": "Praised for his love and faith toward the Lord Jesus and all saints, and for refreshing 'the bowels of the saints.'"
+        },
+        {
+          "ref": "Philemon 1:10-16",
+          "note": "The subject of Paul's central appeal: asked to receive back Onesimus - called a 'servant' by the text itself (v.16) - 'not now as a servant, but above a servant, a brother beloved.'"
+        },
+        {
+          "ref": "Philemon 1:17-21",
+          "note": "Asked to receive Onesimus 'as myself,' charge any debt to Paul, and trusted to do even more than explicitly asked."
+        },
+        {
+          "ref": "Philemon 1:22",
+          "note": "Asked by Paul to prepare a lodging, anticipating a personal visit."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "onesimus_ethiopian",
+      "name": "Onesimus",
+      "role": "manager",
+      "scribeTier": "The Profitable Name Returned",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:10",
+          "note": "Called Paul's son, 'whom I have begotten in my bonds' - converted by Paul while imprisoned."
+        },
+        {
+          "ref": "Philemon 1:11",
+          "note": "Paul plays on his name (meaning 'profitable'/'useful'): 'which in time past was to thee unprofitable, but now profitable to thee and to me.'"
+        },
+        {
+          "ref": "Philemon 1:12",
+          "note": "Sent back to Philemon, called by Paul 'mine own bowels.'"
+        },
+        {
+          "ref": "Philemon 1:13-14",
+          "note": "Paul would have liked to keep him to minister in his imprisonment, but would not act without Philemon's consent."
+        },
+        {
+          "ref": "Philemon 1:15-16",
+          "note": "Paul suggests his departure 'for a season' may allow Philemon to receive him back permanently - 'not now as a servant, but above a servant, a brother beloved.'"
+        },
+        {
+          "ref": "Philemon 1:18",
+          "note": "Paul acknowledges he may have wronged Philemon or owes him something, and offers to cover it personally."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name means 'profitable' or 'useful,' which Paul directly plays on in v.11.",
+        "The text never calls him a 'slave' and never explicitly states he ran away - only that he 'departed for a season' (v.15) and 'hath wronged thee, or oweth thee ought' (v.18); 'runaway' status is a hedged contextual inference, not this text's own wording."
+      ]
+    },
+    {
+      "id": "apphia_ethiopian",
+      "name": "Apphia",
+      "role": "submanager",
+      "scribeTier": "The Beloved Fellowlabourer's House",
+      "parentManagerId": "philemon_recipient_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted by Paul as 'our beloved Apphia,' alongside Philemon and Archippus and the church in Philemon's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Widely traditional (not textual) identification as Philemon's wife - the text itself states no family relationship, only a shared greeting."
+      ]
+    },
+    {
+      "id": "archippus_ethiopian",
+      "name": "Archippus",
+      "role": "submanager",
+      "scribeTier": "The Beloved Fellowlabourer's House",
+      "parentManagerId": "philemon_recipient_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted by Paul as 'Archippus our fellowsoldier,' alongside Philemon and Apphia and the church in Philemon's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Widely traditional (not textual) identification as Philemon's son - the text itself states no family relationship."
+      ]
+    },
+    {
+      "id": "timothy_philemon_ethiopian",
+      "name": "Timothy",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_philemon_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Named as co-sender of the letter: 'Paul, a prisoner of Jesus Christ, and Timothy our brother, unto Philemon...'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "philemons_household_church_ethiopian",
+      "name": "The Church in Philemon's House",
+      "role": "submanager",
+      "scribeTier": "The Beloved Fellowlabourer's House",
+      "parentManagerId": "philemon_recipient_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted collectively as part of the letter's addressees: 'and to the church in thy house' - an undifferentiated congregation, no individual members named."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "epaphras_philemon_ethiopian",
+      "name": "Epaphras",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_philemon_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:23",
+          "note": "Named alone, distinctly from the group in v.24, in Paul's closing greetings: 'There salute thee Epaphras, my fellowprisoner in Christ Jesus.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pauls_fellow_labourers_philemon_ethiopian",
+      "name": "Paul's Fellowlabourers (Marcus, Aristarchus, Demas, Lucas)",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_philemon_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:24",
+          "note": "Named together in Paul's closing greetings, distinctly from Epaphras in the preceding verse: 'Marcus, Aristarchus, Demas, Lucas, my fellowlabourers.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "traditional_identifications_not_asserted": {
+      "ref": "n/a — post-biblical tradition, not this translation's text",
+      "note": "Two identifications are widely repeated in tradition but are NOT stated by this text and are not asserted as fact anywhere in this index: (1) Apphia as Philemon's wife and Archippus as his son - the text only places them together in one greeting; (2) any later ecclesiastical figure sharing the name Onesimus."
+    },
+    "onesimus_status_note": {
+      "ref": "Philemon 1:15-16, 1:18",
+      "note": "This text calls Onesimus a 'servant' (v.16) and never 'slave'; it never states outright that he ran away, only that he 'departed for a season' (v.15) and 'hath wronged thee, or oweth thee ought' (v.18). 'Runaway servant/slave' is a common contextual reading, not this text's own wording - used only in hedged form, never asserted as flat textual fact."
+    }
+  }
+}

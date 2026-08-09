@@ -1,0 +1,1046 @@
+{
+  "book": "John",
+  "translation": "Geneva",
+  "canonicalOrder": 55,
+  "status": "drafted via direct read-through of the real Geneva 1560 text (Assets/Resources/Verses/Geneva/john_55.json), cross-checked against the existing KJV John.json for tier-naming-style inspiration only, not copied",
+  "notes": "This Geneva Bible (1560) text of John was read in full, chapter by chapter, before drafting. Its narrative content, chapter/verse divisions, and overall structure match the standard KJV/Textus Receptus tradition of John exactly - no real canonical or structural differences were found versus this project's existing KJV John index; both the disputed pericope of the woman taken in adultery (Geneva 7:53-8:11, present and unbracketed here) and the 'angel troubled the water' clause at 5:4 appear in this Geneva text exactly as they do in the KJV. The differences are entirely in the archaic 1560 English itself (Iesus/Iohn spelling, 'beleeue'/'trueth'/'sonne'/'shepheard,' thou/thee forms) rather than in content, so scribe-tier names below were drawn fresh from this translation's own distinctive phrasing rather than reused from the KJV file, even where the underlying scene is identical. Structurally the book still organizes around a small set of sign-bearers and long discourses rather than a broad crowd of minor characters, so the tier list leans toward full person-tiers for anyone with a genuinely independent scene (the Samaritan woman, the ruler/nobleman of Capernaum, the impotent man at Bethesda, the man born blind, Lazarus, Thomas, Mary Magdalene, the unnamed beloved disciple, and Joseph of Arimathea all carry their own arcs) plus four law/theme tiers for Jesus's major 'I am' discourse blocks (Bread of Life, Good Shepherd, the Upper Room/True Vine discourse of ch.14-16, and the High Priestly Prayer of ch.17), since Jesus himself stays personally embodied - present, speaking, acting - throughout even his teaching, unlike a pure-transmission OT law tier. Per the Gospel-specific rule, Jesus gets his own fully independent tier and id (jesus_geneva_john) populated only from this book's own verses, not shared with any other Gospel or translation. Real naming collisions flagged rather than silently merged: John the Baptist (named repeatedly) versus the unnamed 'disciple whom Iesus loued,' whom later tradition - but not this book's own text - identifies as John the son of Zebedee; Judas Iscariot ('Simon's son,' 6:71/13:26) versus the separately-named 'Iudas, not Iscariot' of 14:22; Simon Peter versus Judas's father, a different man also named Simon; and three clearly distinct women named Mary (mother of Jesus, Magdalene, of Bethany) plus a fourth, genuinely ambiguous mention at the cross (19:25, 'his mothers sister, Marie the wife of Cleopas') left unindexed as her own character rather than guessed at. Martha and Mary of Bethany are kept as submanagers under Lazarus's tier rather than promoted to their own tiers, since both their scenes (Martha's confession, Mary's anointing) orbit and serve Lazarus's death-and-raising as the book's actual narrative hinge. Annas is promoted to a submanager under Caiaphas (his son-in-law, who conducts Jesus's first, informal interrogation, John 18:13-24) rather than left unindexed, since he has a real personally-embodied scene of his own, not pure incidental mention.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "That Word Made Flesh",
+      "managerId": "jesus_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Voyce In the Wildernesse",
+      "managerId": "john_baptist_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "A Stone, Called Cephas",
+      "managerId": "simon_peter_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Come, and See",
+      "managerId": "philip_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Ruler Who Came By Night",
+      "managerId": "nicodemus_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "That Water of Life",
+      "managerId": "samaritan_woman_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Thy Sonne Liueth",
+      "managerId": "ruler_of_capernaum_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Wilt Thou Be Made Whole",
+      "managerId": "impotent_man_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Poole of Siloam",
+      "managerId": "man_born_blind_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Loose Him, and Let Him Goe",
+      "managerId": "lazarus_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Bagge He Bare",
+      "managerId": "judas_iscariot_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "One Man For the People",
+      "managerId": "caiaphas_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Beholde the Man",
+      "managerId": "pilate_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Print of the Nailes",
+      "managerId": "thomas_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Rabboni",
+      "managerId": "mary_magdalene_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Disciple Whom Iesus Loued",
+      "managerId": "beloved_disciple_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Secret Disciple",
+      "managerId": "joseph_of_arimathea_geneva_john",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "I Am That Bread of Life",
+      "managerId": "bread_of_life_discourse_geneva_john",
+      "type": "law"
+    },
+    {
+      "tier": 19,
+      "scribeName": "I Am That Good Shepheard",
+      "managerId": "good_shepherd_discourse_geneva_john",
+      "type": "law"
+    },
+    {
+      "tier": 20,
+      "scribeName": "I Am That True Vine",
+      "managerId": "upper_room_discourse_geneva_john",
+      "type": "law"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Sanctifie Them With Thy Trueth",
+      "managerId": "high_priestly_prayer_geneva_john",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_geneva_john",
+      "name": "Iesus Christ",
+      "role": "manager",
+      "scribeTier": "That Word Made Flesh",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ioseph — named only by others as Iesus's father (John 1:45, 6:42), not narrated as present in this book",
+        "mother": "mary_mother_of_jesus_geneva_john",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:1,14",
+          "note": "'In the beginning was that Word...that Word was made flesh, and dwelt among vs' — identifies Iesus as the eternal Word incarnate."
+        },
+        {
+          "ref": "John 2:1-11",
+          "note": "turns water to wine at the wedding in Cana, 'This beginning of miracles did Iesus.'"
+        },
+        {
+          "ref": "John 11:43-44",
+          "note": "calls Lazarus forth from the tomb four days after his death."
+        },
+        {
+          "ref": "John 19:30",
+          "note": "'It is finished,' bows his head and gives up the ghost on the cross."
+        },
+        {
+          "ref": "John 20:19-20",
+          "note": "appears to the disciples behind shut doors after the resurrection, shows them his hands and side."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Every 'I am' saying in this Gospel — bread of life, the doore, the good shepheard, the way/trueth/life, the true vine — is unique to this book, not paralleled in the other three Gospels."
+      ]
+    },
+    {
+      "id": "john_baptist_geneva_john",
+      "name": "Iohn the Baptist",
+      "role": "manager",
+      "scribeTier": "The Voyce In the Wildernesse",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:6-8",
+          "note": "'a man sent from God, whose name was Iohn,' sent as a witness of the light."
+        },
+        {
+          "ref": "John 1:19-23",
+          "note": "denies being the Christ, Elias, or 'that Prophet'; identifies himself only as the voice crying in the wilderness."
+        },
+        {
+          "ref": "John 1:29,36",
+          "note": "twice calls Iesus 'that Lambe of God.'"
+        },
+        {
+          "ref": "John 3:27-30",
+          "note": "answers his own disciples' jealousy over Iesus's growing following: 'He must increase, but I must decrease.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Distinct from the unnamed 'disciple whom Iesus loued' later in this book — a real naming collision worth flagging, since only the Baptist is ever explicitly named 'Iohn' inside this Gospel's own text."
+      ]
+    },
+    {
+      "id": "simon_peter_geneva_john",
+      "name": "Simon Peter",
+      "role": "manager",
+      "scribeTier": "A Stone, Called Cephas",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iona (Ionas) — Iesus calls him 'Simon the sonne of Iona,' John 1:42, 21:15-17",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:40-42",
+          "note": "brought to Iesus by his brother Andrew; renamed 'Cephas...a stone.'"
+        },
+        {
+          "ref": "John 6:68-69",
+          "note": "when many disciples depart, confesses 'thou hast the wordes of eternall life... thou art that Christ.'"
+        },
+        {
+          "ref": "John 13:6-9",
+          "note": "objects to having his feet washed, then asks for his hands and head too."
+        },
+        {
+          "ref": "John 18:10-11,17,25-27",
+          "note": "cuts off Malchus's ear in the garden; denies Iesus three times before the cock crows."
+        },
+        {
+          "ref": "John 21:15-19",
+          "note": "three times charged 'Feede my sheepe'; told by what death he would glorify God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Renamed 'a stone' (Cephas) the very first time he meets Iesus, before he has done anything to earn the name (John 1:42)."
+      ]
+    },
+    {
+      "id": "andrew_geneva_john",
+      "name": "Andrew",
+      "role": "submanager",
+      "scribeTier": "A Stone, Called Cephas",
+      "parentManagerId": "simon_peter_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:40-42",
+          "note": "Simon Peter's brother; one of the two who followed after hearing Iohn the Baptist point to Iesus, then found and brought Simon to him."
+        },
+        {
+          "ref": "John 6:8-9",
+          "note": "points out the little boy with five barley loaves and two small fishes."
+        },
+        {
+          "ref": "John 12:22",
+          "note": "joins Philip in bringing the Greeks' request to see Iesus."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "philip_geneva_john",
+      "name": "Philip",
+      "role": "manager",
+      "scribeTier": "Come, and See",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:43-44",
+          "note": "called directly by Iesus, 'Followe me'; of Bethsaida, the same city as Andrew and Peter."
+        },
+        {
+          "ref": "John 1:45-46",
+          "note": "finds Nathanael and tells him of Iesus; answers his doubt with 'Come, and see.'"
+        },
+        {
+          "ref": "John 6:5-7",
+          "note": "tested by Iesus over how to feed the five thousand: 'Two hundreth penie worth of bread is not sufficient.'"
+        },
+        {
+          "ref": "John 12:20-22",
+          "note": "approached by Greek pilgrims at the feast; brings their request to Iesus together with Andrew."
+        },
+        {
+          "ref": "John 14:8-9",
+          "note": "'Lord, shewe vs thy Father'; told that whoever has seen Iesus has seen the Father."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nathanael_geneva_john",
+      "name": "Nathanael",
+      "role": "submanager",
+      "scribeTier": "Come, and See",
+      "parentManagerId": "philip_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 1:46-47",
+          "note": "doubts anything good can come from Nazareth, but Iesus calls him 'an Israelite, in whom is no guile.'"
+        },
+        {
+          "ref": "John 1:48-49",
+          "note": "amazed that Iesus saw him under the fig tree before Philip called him; confesses 'thou art that Sonne of God: thou art that King of Israel.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Later identified as being 'of Cana in Galile' (John 21:2)."
+      ]
+    },
+    {
+      "id": "nicodemus_geneva_john",
+      "name": "Nicodemus",
+      "role": "manager",
+      "scribeTier": "The Ruler Who Came By Night",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 3:1-2",
+          "note": "'a man of the Pharises...a ruler of the Iewes,' comes to Iesus by night."
+        },
+        {
+          "ref": "John 3:3-10",
+          "note": "told he must be 'borne againe' of water and the Spirit to see the kingdom of God."
+        },
+        {
+          "ref": "John 7:50-51",
+          "note": "defends Iesus before the council: 'Doth our Law iudge a man before it heare him?'"
+        },
+        {
+          "ref": "John 19:39",
+          "note": "brings about a hundred pounds of myrrh and aloes for Iesus's burial, joining Joseph of Arimathea."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "samaritan_woman_geneva_john",
+      "name": "The Woman of Samaria",
+      "role": "named",
+      "scribeTier": "That Water of Life",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "five past husbands, unnamed (John 4:18)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 4:7-15",
+          "note": "asked by Iesus for a drink at Iacob's well; offered 'that water of life.'"
+        },
+        {
+          "ref": "John 4:16-19",
+          "note": "Iesus names her five past husbands and her current unmarried partner; she calls him a Prophet."
+        },
+        {
+          "ref": "John 4:28-29,39",
+          "note": "leaves her waterpot and testifies in the city; many Samaritans of that city believe on her word."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ruler_of_capernaum_geneva_john",
+      "name": "The Ruler of Capernaum",
+      "role": "manager",
+      "scribeTier": "Thy Sonne Liueth",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed son, healed at a distance while dying of fever (John 4:46-53)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "John 4:46-47",
+          "note": "a certain ruler whose son is sick at Capernaum besought Iesus to come down and heal him."
+        },
+        {
+          "ref": "John 4:50-53",
+          "note": "told 'thy sonne liueth'; believes the word and finds it true at the very hour spoken; he and his whole household believe."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "impotent_man_geneva_john",
+      "name": "The Impotent Man at Bethesda",
+      "role": "named",
+      "scribeTier": "Wilt Thou Be Made Whole",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 5:5-7",
+          "note": "lying by the pool of Bethesda, 'diseased eight and thirtie yeeres,' with no one to help him into the water when it is troubled."
+        },
+        {
+          "ref": "John 5:8-9",
+          "note": "told 'Rise: take vp thy bed, and walke'; immediately made whole, on the Sabbath day."
+        },
+        {
+          "ref": "John 5:14",
+          "note": "found again by Iesus in the Temple, warned 'sinne no more, lest a worse thing come vnto thee.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "man_born_blind_geneva_john",
+      "name": "The Man Born Blind",
+      "role": "named",
+      "scribeTier": "The Poole of Siloam",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "unnamed, questioned separately by the Pharises about their son (John 9:18-23) — see submanager Parents of the Blind Man",
+        "mother": "unnamed, questioned together with the father (John 9:18-23) — see submanager Parents of the Blind Man",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 9:1,6-7",
+          "note": "blind from birth; Iesus anoints his eyes with clay made of spittle and sends him to wash in the pool of Siloam."
+        },
+        {
+          "ref": "John 9:24-25",
+          "note": "'one thing I know, that I was blinde, and nowe I see.'"
+        },
+        {
+          "ref": "John 9:34,38",
+          "note": "cast out of the synagogue by the Pharisees; worships Iesus after being found by him again."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "parents_of_blind_man_geneva_john",
+      "name": "The Parents of the Blind Man",
+      "role": "submanager",
+      "scribeTier": "The Poole of Siloam",
+      "parentManagerId": "man_born_blind_geneva_john",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "man_born_blind_geneva_john"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "John 9:18-21",
+          "note": "confirm to the Pharisees that their son was born blind, but deflect how he now sees: 'aske him: hee shall answere for himselfe.'"
+        },
+        {
+          "ref": "John 9:22-23",
+          "note": "answer cautiously 'because they feared the Iewes,' who had already threatened excommunication for confessing Iesus as Christ."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lazarus_geneva_john",
+      "name": "Lazarus",
+      "role": "manager",
+      "scribeTier": "Loose Him, and Let Him Goe",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 11:1-4,14",
+          "note": "falls sick at Bethania; Iesus says the sickness is 'not vnto death, but for the glorie of God,' then later tells the disciples plainly, 'Lazarus is dead.'"
+        },
+        {
+          "ref": "John 11:39,43-44",
+          "note": "four days in the grave; Iesus cries 'Lazarus, come foorth,' and he emerges bound hand and foot in graveclothes."
+        },
+        {
+          "ref": "John 12:1-2,9-10",
+          "note": "sits at supper with Iesus six days before the Passover; the chief priests plot to kill him too, since many believe on Iesus because of him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Explicitly named 'him whome thou louest' by his sisters (John 11:3) — no other named individual in this Gospel is described that way by someone else."
+      ]
+    },
+    {
+      "id": "martha_geneva_john",
+      "name": "Martha",
+      "role": "submanager",
+      "scribeTier": "Loose Him, and Let Him Goe",
+      "parentManagerId": "lazarus_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 11:21-22",
+          "note": "tells Iesus 'if thou hadst bene here, my brother had not bene dead,' but trusts God will give him what he asks."
+        },
+        {
+          "ref": "John 11:24,27",
+          "note": "affirms belief in the resurrection at the last day, then confesses Iesus as 'that Christ that Sonne of God.'"
+        },
+        {
+          "ref": "John 11:39",
+          "note": "objects when Iesus orders the stone removed: 'he stinketh alreadie: for he hath bene dead foure dayes.'"
+        },
+        {
+          "ref": "John 12:2",
+          "note": "serves at the supper given for Iesus in Bethania."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mary_of_bethany_geneva_john",
+      "name": "Mary of Bethania",
+      "role": "submanager",
+      "scribeTier": "Loose Him, and Let Him Goe",
+      "parentManagerId": "lazarus_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 11:2,32",
+          "note": "identified as the Mary who anointed the Lord; falls at Iesus's feet weeping over her brother's death."
+        },
+        {
+          "ref": "John 12:3",
+          "note": "anoints Iesus's feet with a pound of costly spikenard ointment and wipes them with her hair."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "judas_iscariot_geneva_john",
+      "name": "Iudas Iscariot",
+      "role": "manager",
+      "scribeTier": "The Bagge He Bare",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Simon — named only as 'Iudas Iscariot Simons sonne' (John 6:71, 13:26); distinct from Simon Peter and from 'Iudas, not Iscariot' at John 14:22, a real naming collision",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 6:70-71",
+          "note": "identified by Iesus as 'a deuill' among the twelve."
+        },
+        {
+          "ref": "John 12:4-6",
+          "note": "objects to Mary's costly ointment, 'not that he cared for the poore, but because hee was a theefe, and had the bagge.'"
+        },
+        {
+          "ref": "John 13:26-27,30",
+          "note": "given the sop by Iesus; 'Satan entred into him'; goes out into the night."
+        },
+        {
+          "ref": "John 18:2-3",
+          "note": "leads the band of men and officers to arrest Iesus in the garden."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "caiaphas_geneva_john",
+      "name": "Caiaphas",
+      "role": "manager",
+      "scribeTier": "One Man For the People",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 11:49-52",
+          "note": "counsels the council, prophesying (unknowingly) 'that one man die for the people.'"
+        },
+        {
+          "ref": "John 18:13-14",
+          "note": "'the hie Priest that same yere'; Iesus is led first to Annas, his father in law, then sent bound to him."
+        },
+        {
+          "ref": "John 18:24,28",
+          "note": "receives Iesus bound from Annas; from Caiaphas, Iesus is led on to the common hall and to Pilate."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text itself frames his political calculation as an unwitting prophecy (John 11:51)."
+      ]
+    },
+    {
+      "id": "annas_geneva_john",
+      "name": "Annas",
+      "role": "submanager",
+      "scribeTier": "One Man For the People",
+      "parentManagerId": "caiaphas_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "caiaphas_geneva_john (son-in-law, John 18:13)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "John 18:13",
+          "note": "Iesus is brought to him first, 'for he was father in lawe to Caiaphas.'"
+        },
+        {
+          "ref": "John 18:19-23",
+          "note": "questions Iesus about his disciples and doctrine; an officer strikes Iesus for his answer."
+        },
+        {
+          "ref": "John 18:24",
+          "note": "sends Iesus, still bound, on to Caiaphas the hie Priest."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "malchus_geneva_john",
+      "name": "Malchus",
+      "role": "submanager",
+      "scribeTier": "One Man For the People",
+      "parentManagerId": "caiaphas_geneva_john",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 18:10",
+          "note": "'the hie Priests seruant'; Simon Peter cuts off his right ear with a sword."
+        },
+        {
+          "ref": "John 18:26",
+          "note": "a kinsman of his, also a servant of the high priest, recognizes Peter in the courtyard and prompts Peter's third denial."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pilate_geneva_john",
+      "name": "Pontius Pilate",
+      "role": "manager",
+      "scribeTier": "Beholde the Man",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 18:29-31,33-38",
+          "note": "questions Iesus, asks 'What is trueth?', finds 'no cause at all' in him."
+        },
+        {
+          "ref": "John 19:1-6",
+          "note": "has Iesus scourged and mocked with a crown of thorns; presents him, 'Beholde the man.'"
+        },
+        {
+          "ref": "John 19:12-16",
+          "note": "pressured with 'if thou deliuer him, thou art not Cesars friende'; delivers Iesus to be crucified."
+        },
+        {
+          "ref": "John 19:19-22",
+          "note": "writes the title 'JESUS OF NAZARETH THE KING OF THE JEWES' and refuses to change it."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "barabbas_geneva_john",
+      "name": "Barabbas",
+      "role": "submanager",
+      "scribeTier": "Beholde the Man",
+      "parentManagerId": "pilate_geneva_john",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 18:40",
+          "note": "the crowd chooses his release over Iesus's at the Passover custom; described only as 'a murtherer.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "thomas_geneva_john",
+      "name": "Thomas",
+      "role": "manager",
+      "scribeTier": "The Print of the Nailes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 11:16",
+          "note": "'called Didymus'; says 'Let vs also goe, that we may die with him' when Iesus decides to return to Iudea."
+        },
+        {
+          "ref": "John 14:5",
+          "note": "'Lord, we know not whither thou goest: how can we then know ye way?'"
+        },
+        {
+          "ref": "John 20:24-25",
+          "note": "absent at Iesus's first appearance; declares he will not believe without touching the wounds."
+        },
+        {
+          "ref": "John 20:26-28",
+          "note": "invited to touch the print of the nails; confesses 'Thou art my Lord, and my God.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mary_magdalene_geneva_john",
+      "name": "Marie Magdalene",
+      "role": "manager",
+      "scribeTier": "Rabboni",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 19:25",
+          "note": "stands by the cross with Iesus's mother and her sister."
+        },
+        {
+          "ref": "John 20:1-2",
+          "note": "finds the stone taken away from the tomb; runs to tell Simon Peter and the other disciple."
+        },
+        {
+          "ref": "John 20:11-16",
+          "note": "weeps at the empty tomb; mistakes the risen Iesus for the gardener until he says her name, 'Marie.'"
+        },
+        {
+          "ref": "John 20:18",
+          "note": "tells the disciples 'I haue seene the Lord,' and reports what he said to her."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "beloved_disciple_geneva_john",
+      "name": "The Disciple Whom Iesus Loued",
+      "role": "manager",
+      "scribeTier": "The Disciple Whom Iesus Loued",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 13:23",
+          "note": "'leaned on Iesus bosome' at the supper, the one Simon Peter beckons to ask who the betrayer is."
+        },
+        {
+          "ref": "John 19:26-27",
+          "note": "given charge of Iesus's mother from the cross: 'Beholde thy mother.'"
+        },
+        {
+          "ref": "John 20:3-8",
+          "note": "outruns Peter to the empty tomb, sees the linen clothes lying, 'and beleeued.'"
+        },
+        {
+          "ref": "John 21:7,20-24",
+          "note": "recognizes the risen Iesus at the sea of Tiberias, 'It is the Lord'; identified in the closing verses as the one who 'wrote these things.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never named within this Gospel's own text — the identification with Iohn the son of Zebedee is a later tradition, not something this book itself states, and is kept distinct here from Iohn the Baptist, who is named repeatedly throughout."
+      ]
+    },
+    {
+      "id": "joseph_of_arimathea_geneva_john",
+      "name": "Ioseph of Arimathea",
+      "role": "manager",
+      "scribeTier": "The Secret Disciple",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "John 19:38",
+          "note": "'a disciple of Iesus, but secretly for feare of the Iewes'; obtains Pilate's permission and takes down Iesus's body."
+        },
+        {
+          "ref": "John 19:41-42",
+          "note": "lays Iesus in his own new sepulchre in a nearby garden, joined by Nicodemus."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mary_mother_of_jesus_geneva_john",
+      "name": "Marie, the Mother of Iesus",
+      "role": "submanager",
+      "scribeTier": "That Word Made Flesh",
+      "parentManagerId": "jesus_geneva_john",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Ioseph (referenced only by others, John 1:45, 6:42; not narrated as present in this book)"
+        ],
+        "children": [
+          "jesus_geneva_john"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "John 2:1-5",
+          "note": "at the wedding in Cana, tells Iesus 'They haue no wine,' then instructs the servants 'Whatsoeuer he sayeth vnto you, doe it.'"
+        },
+        {
+          "ref": "John 19:25-27",
+          "note": "stands by the cross; Iesus commits her to the beloved disciple's care."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "bread_of_life_discourse_geneva_john",
+      "name": "That Bread of Life",
+      "role": "law",
+      "scribeTier": "I Am That Bread of Life",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_geneva_john",
+      "purpose": "Jesus's extended teaching after feeding the five thousand, declaring himself 'that bread of life' come down from heaven and that whoever eats his flesh and drinks his blood has eternal life — a hard saying that causes many disciples to turn back (John 6:26-71).",
+      "verses": [
+        {
+          "ref": "John 6:35",
+          "note": "'I am that bread of life: he that commeth to me, shall not hunger.'"
+        },
+        {
+          "ref": "John 6:53-58",
+          "note": "except a man eat the Son of man's flesh and drink his blood, he has no life in him."
+        },
+        {
+          "ref": "John 6:66-69",
+          "note": "many disciples walk no more with him; the twelve stay, per Peter's confession."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "good_shepherd_discourse_geneva_john",
+      "name": "That Good Shepheard",
+      "role": "law",
+      "scribeTier": "I Am That Good Shepheard",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_geneva_john",
+      "purpose": "Jesus's discourse identifying himself as both the door of the sheepfold and the good shepherd who lays down his life for the sheep, delivered at the feast of the Dedication amid a dispute over his identity (John 10:1-42).",
+      "verses": [
+        {
+          "ref": "John 10:9",
+          "note": "'I am that doore: by me if any man enter in, he shall be saued.'"
+        },
+        {
+          "ref": "John 10:11",
+          "note": "'I am that good shepheard: that good shepheard giueth his life for his sheepe.'"
+        },
+        {
+          "ref": "John 10:30",
+          "note": "'I and my Father are one' — provokes an attempt to stone him for blasphemy."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "upper_room_discourse_geneva_john",
+      "name": "That True Vine",
+      "role": "law",
+      "scribeTier": "I Am That True Vine",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_geneva_john",
+      "purpose": "Jesus's farewell teaching to the eleven remaining disciples after Judas departs — the new commandment to love one another, the vine and branches, the promise of the Comforter, and a warning that the world will hate them — given on the night of his betrayal to prepare them for his death (John 14:1-16:33).",
+      "verses": [
+        {
+          "ref": "John 14:6",
+          "note": "'I am that Way, and that Trueth, and that Life. No man commeth vnto the Father, but by me.'"
+        },
+        {
+          "ref": "John 15:5",
+          "note": "'I am that vine: ye are the branches... without me can ye doe nothing.'"
+        },
+        {
+          "ref": "John 15:12-13",
+          "note": "the new commandment: love one another as Iesus has loved them; greater love has no man than laying down his life for his friends."
+        },
+        {
+          "ref": "John 16:33",
+          "note": "'In the world ye shall haue affliction, but be of good comfort: I haue ouercome the world.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "high_priestly_prayer_geneva_john",
+      "name": "Sanctifie Them With Thy Trueth",
+      "role": "law",
+      "scribeTier": "Sanctifie Them With Thy Trueth",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_geneva_john",
+      "purpose": "Jesus's prayer to the Father immediately before his arrest — for his own glorification, for the disciples given him, and for all future believers, that they may be made one — spoken aloud in the disciples' hearing (John 17:1-26).",
+      "verses": [
+        {
+          "ref": "John 17:3",
+          "note": "defines eternal life as knowing the Father and Iesus Christ whom he sent."
+        },
+        {
+          "ref": "John 17:11",
+          "note": "prays the Father keep the disciples in his Name, 'that they may bee one, as we are.'"
+        },
+        {
+          "ref": "John 17:20-21",
+          "note": "extends the prayer to all who will believe through the disciples' word, 'that they all may bee one.'"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "judas_not_iscariot": {
+      "ref": "John 14:22",
+      "note": "'Iudas sayd vnto him (not Iscariot)' — a distinct disciple from Judas Iscariot, mentioned once with a single question in the upper room; the parenthetical is the text's own explicit disambiguation, a real naming collision worth flagging rather than merging."
+    },
+    "women_at_the_cross": {
+      "ref": "John 19:25",
+      "note": "'his mother, and his mothers sister, Marie the wife of Cleopas, and Marie Magdalene' — genuinely ambiguous whether this names three or four women (i.e. whether 'his mothers sister' and 'Marie the wife of Cleopas' are the same person or two different ones); Mary the wife of Cleophas is left unindexed as her own character since the text gives her no independent action beyond standing by the cross."
+    },
+    "the_greeks": {
+      "ref": "John 12:20-21",
+      "note": "unnamed Greek pilgrims who came to worship at the feast and asked Philip to see Iesus; treated as a collective, not individuated by the text."
+    },
+    "the_five_thousand": {
+      "ref": "John 6:10",
+      "note": "the multitude fed from five barley loaves and two fishes, numbered 'about fiue thousande'; a collective, not indexed individually."
+    }
+  }
+}

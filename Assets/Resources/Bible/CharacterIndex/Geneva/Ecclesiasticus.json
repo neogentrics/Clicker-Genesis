@@ -1,0 +1,1098 @@
+{
+  "book": "Ecclesiasticus",
+  "translation": "Geneva",
+  "canonicalOrder": 46,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Structural shape: chapters 1-43 are almost entirely sustained wisdom/ethical instruction in the voice of the author (\"My son...\"), not narrative - grouped into 10 law/theme tiers by topic cluster, all deliveredBy the author (Jesus son of Sirach) except the \"Wisdom's Self-Praise\" tier (ch.24), which is explicitly voiced in the first person BY Wisdom herself, not by Sirach - deliveredBy left null there since Wisdom-personified is a literary figure, not a human manager. Chapters 44-52 (\"Let us now praise famous men\") are a compressed biographical catalogue of the whole OT canon from Adam to Nehemiah, giving real (if often brief) person-tiers - this is the book's one genuinely narrative/historical section and the natural home for most of its manager roster. The author closes the book by naming himself explicitly (50:27, \"I Jesus, the son of Sirach Eleazar, of Jerusalem\") and then gives his own first-person testimony of a near-death deliverance and lifelong pursuit of wisdom - personally embodied, not transmission-only, so he gets his own Person tier rather than being folded into the law tiers he delivers everything else through. REAL DATA-QUALITY ISSUE FOUND IN THIS FILE, flagged per project rule rather than silently fixed: chapter 51 in this JSON is a verbatim duplicate of chapter 50 (the entire Simon-the-high-priest passage repeats word-for-word), and the text that is traditionally chapter 51 of Ecclesiasticus (Sirach's own autobiographical thanksgiving/wisdom-quest poem) is instead labeled chapter 52 here - an apparent off-by-one mislabeling during extraction, not a genuine content difference. Verse references below cite the file's actual (mislabeled) chapter numbers as they exist in ecclesiasticus_46.json today, so they resolve correctly against the live data; if the extraction is ever corrected, these two chapter numbers will need to shift down by one. NAMING COLLISION explicitly flagged, not merged: two different men named Jesus appear in this book - the author \"Jesus, the son of Sirach Eleazar\" (50:27, 52) and \"Jesus the son of Josedek\" the co-builder of the Second Temple alongside Zerubbabel (49:12) - kept as fully separate characters, ids suffixed distinctly. Genealogy fields are left null throughout except where this text itself states a lineage (e.g. \"son of Nun\" for Joshua, \"son of Jesse\" for David, \"son of Onias\" for Simon) - Ecclesiasticus is a praise-catalogue, not a genealogical record, and does not restate most figures' parentage; fuller genealogy for these same figures lives in their own books' Character Index entries (Genesis, Exodus, Numbers, Samuel, Kings, etc.) and was not re-derived here to avoid inventing beyond what this text actually says. Undifferentiated group per rule 5: \"the twelve prophets\" (49:10) are given one collective entry rather than twelve invented individuals, since the text itself only ever refers to them collectively. Chapters 28-32, 34-37, 41-43 were confirmed present and topically consistent with the surrounding wisdom-instruction chapters via direct read but are represented through the same 10 topic-cluster law tiers rather than being split further, since none introduced content-distinct enough (a new named figure or a genuinely separate teaching subject) to warrant an 11th tier on its own.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Fountain of Wisdom",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Honor of Father and Mother",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Mercy to the Poor",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Discipline of the Tongue",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "True and False Friendship",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Household, Wife, and Daughters",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Pride, Power, and the Proud",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Wisdom's Self-Praise",
+      "managerId": "wisdom_personified_ecclesiasticus_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Physician and the Mourner",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Praise of Craftsmen and the Scribe",
+      "managerId": "jesus_sirach_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Ancient Patriarchs",
+      "managerId": "adam_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Enoch's Translation",
+      "managerId": "enoch_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Noah's Remnant",
+      "managerId": "noah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Abraham's Covenant",
+      "managerId": "abraham_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Moses, Beloved of God",
+      "managerId": "moses_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Aaron's Robe of Glory",
+      "managerId": "aaron_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Phinehas's Zeal",
+      "managerId": "phinehas_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Joshua's Inheritance",
+      "managerId": "joshua_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Samuel the Judge-Prophet",
+      "managerId": "samuel_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 20,
+      "scribeName": "David's Diadem",
+      "managerId": "david_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Solomon's Sanctuary",
+      "managerId": "solomon_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 22,
+      "scribeName": "Elijah's Chariot of Fire",
+      "managerId": "elijah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 23,
+      "scribeName": "Isaiah's Vision",
+      "managerId": "isaiah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 24,
+      "scribeName": "Hezekiah's Fortified City",
+      "managerId": "hezekiah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 25,
+      "scribeName": "Josiah's Sweet Incense",
+      "managerId": "josiah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 26,
+      "scribeName": "Jeremiah, Sanctified in the Womb",
+      "managerId": "jeremiah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 27,
+      "scribeName": "Ezekiel's Chariot of the Cherubim",
+      "managerId": "ezekiel_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 28,
+      "scribeName": "The Twelve Prophets",
+      "managerId": "twelve_minor_prophets_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 29,
+      "scribeName": "Zerubbabel's Signet",
+      "managerId": "zerubbabel_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 30,
+      "scribeName": "Nehemiah's Walls",
+      "managerId": "nehemiah_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 31,
+      "scribeName": "Joseph, Governor of His Brethren",
+      "managerId": "joseph_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 32,
+      "scribeName": "Simon's Sanctuary Robe",
+      "managerId": "simon_ben_onias_ecclesiasticus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 33,
+      "scribeName": "Jesus Son of Sirach's Testimony",
+      "managerId": "jesus_sirach_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_sirach_geneva",
+      "name": "Jesus, son of Sirach Eleazar (the author)",
+      "role": "manager",
+      "scribeTier": "Jesus Son of Sirach's Testimony",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Sirach Eleazar (stated in text, 50:27)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 50:27",
+          "note": "Names himself as the author: 'I have written in this book the instruction of understanding and knowledge, I Jesus, the son of Sirach Eleazar, of Jerusalem, who out of his heart poured forth wisdom.'"
+        },
+        {
+          "ref": "Ecclesiasticus 52:1-12",
+          "note": "First-person thanksgiving: recounts being delivered from slander, false accusation, and near-death peril, and praises the Lord as his protector."
+        },
+        {
+          "ref": "Ecclesiasticus 52:13-22",
+          "note": "Recounts his own lifelong personal pursuit of Wisdom from his youth, 'from my youth I tracked her out,' and gives thanks for the wisdom he attained."
+        },
+        {
+          "ref": "Ecclesiasticus 52:23-30",
+          "note": "Closes the book inviting the unlearned to come and receive instruction 'without money.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Is the one named human author of an entire book in this Character Index project so far - the whole text is explicitly framed as his personal instruction to 'my son,' making every law/theme tier in this book his own delivered teaching."
+      ]
+    },
+    {
+      "id": "wisdom_personified_ecclesiasticus_geneva",
+      "name": "Wisdom (personified)",
+      "role": "law",
+      "scribeTier": "Wisdom's Self-Praise",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": "Wisdom herself speaks in the first person, recounting that she came forth from the mouth of the Most High before all creation, sought a resting place among every people, and was given her dwelling specifically in Israel and in the Law of Moses - a distinct hymn voiced by Wisdom, not by the author.",
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 24:3",
+          "note": "'I came forth from the mouth of the Most High, and covered the earth as a mist.'"
+        },
+        {
+          "ref": "Ecclesiasticus 24:8",
+          "note": "The Creator commands her tabernacle to rest specifically 'in Jacob... in Israel.'"
+        },
+        {
+          "ref": "Ecclesiasticus 24:23",
+          "note": "Identifies herself with 'the law which Moses commanded us for a heritage.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "adam_ecclesiasticus_geneva",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Ancient Patriarchs",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 17:1",
+          "note": "'The Lord created man of the earth, and turned him back unto it again.'"
+        },
+        {
+          "ref": "Ecclesiasticus 33:10",
+          "note": "'And all men are from the ground, and Adam was created of earth.'"
+        },
+        {
+          "ref": "Ecclesiasticus 40:1",
+          "note": "'A heavy yoke is upon the sons of Adam' - his name used as the general term for mankind bearing the burden of mortality."
+        },
+        {
+          "ref": "Ecclesiasticus 49:16",
+          "note": "'Above every living thing in the creation is Adam' - final summary line of the Praise of the Fathers catalogue."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shem_ecclesiasticus_geneva",
+      "name": "Shem",
+      "role": "submanager",
+      "scribeTier": "Ancient Patriarchs",
+      "parentManagerId": "adam_ecclesiasticus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "not restated in this text",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:16",
+          "note": "Paired with Seth: 'Shem and Seth were glorified among men' - no distinguishing action given in this text."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seth_ecclesiasticus_geneva",
+      "name": "Seth",
+      "role": "submanager",
+      "scribeTier": "Ancient Patriarchs",
+      "parentManagerId": "adam_ecclesiasticus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "not restated in this text",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:16",
+          "note": "Paired with Shem: 'Shem and Seth were glorified among men' - no distinguishing action given in this text."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "enoch_ecclesiasticus_geneva",
+      "name": "Enoch",
+      "role": "manager",
+      "scribeTier": "Enoch's Translation",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 44:16",
+          "note": "'Enoch pleased the Lord, and was translated, being an example of repentance to all generations.'"
+        },
+        {
+          "ref": "Ecclesiasticus 49:14",
+          "note": "'No man was created upon the earth such as was Enoch; for he was taken up from the earth.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "noah_ecclesiasticus_geneva",
+      "name": "Noah",
+      "role": "manager",
+      "scribeTier": "Noah's Remnant",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 44:17",
+          "note": "'Noah was found perfect and righteous; in the season of wrath he was taken in exchange for the world.'"
+        },
+        {
+          "ref": "Ecclesiasticus 44:18",
+          "note": "'Everlasting covenants were made with him, that all flesh should no more be blotted out by a flood.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abraham_ecclesiasticus_geneva",
+      "name": "Abraham",
+      "role": "manager",
+      "scribeTier": "Abraham's Covenant",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "isaac_ecclesiasticus_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 44:19",
+          "note": "'Abraham was a great father of a multitude of nations; and there was none found like him in glory.'"
+        },
+        {
+          "ref": "Ecclesiasticus 44:20",
+          "note": "Kept the law of the Most High and was found faithful when proved - a reference to his circumcision covenant."
+        },
+        {
+          "ref": "Ecclesiasticus 44:21",
+          "note": "Sworn oath that his seed would be multiplied as the dust of the earth and the stars, and given the land 'from sea to sea.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "isaac_ecclesiasticus_geneva",
+      "name": "Isaac",
+      "role": "submanager",
+      "scribeTier": "Abraham's Covenant",
+      "parentManagerId": "abraham_ecclesiasticus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "abraham_ecclesiasticus_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jacob_ecclesiasticus_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 44:22",
+          "note": "'In Isaac also did he establish likewise, for Abraham his father's sake, the blessing of all men, and the covenant.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jacob_ecclesiasticus_geneva",
+      "name": "Jacob",
+      "role": "submanager",
+      "scribeTier": "Abraham's Covenant",
+      "parentManagerId": "abraham_ecclesiasticus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "isaac_ecclesiasticus_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 44:23",
+          "note": "The covenant rests upon his head; his inheritance divided among twelve tribes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Jacob'/'the heritage of Jacob' is also used dozens of times throughout the wisdom-instruction chapters (e.g. 23:12, 24:8) as a poetic stand-in for Israel as a whole, not as further narrative about Jacob personally."
+      ]
+    },
+    {
+      "id": "moses_ecclesiasticus_geneva",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Moses, Beloved of God",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 45:1",
+          "note": "'A man beloved of God and men, even Moses, whose memorial is blessed.'"
+        },
+        {
+          "ref": "Ecclesiasticus 45:3-5",
+          "note": "Given commandments face to face, led into the thick darkness, given 'the law of life and knowledge' to teach Jacob."
+        },
+        {
+          "ref": "Ecclesiasticus 45:15",
+          "note": "Consecrates and anoints Aaron with holy oil for the everlasting priesthood."
+        },
+        {
+          "ref": "Ecclesiasticus 45:18",
+          "note": "Dathan, Abiram, and the congregation of Korah rise against him in the wilderness and are destroyed by the Lord's wrath."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "aaron_ecclesiasticus_geneva",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Aaron's Robe of Glory",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 45:6",
+          "note": "'He exalted Aaron, a holy man like unto him, even his brother, of the tribe of Levi.'"
+        },
+        {
+          "ref": "Ecclesiasticus 45:7-12",
+          "note": "Given the everlasting priestly covenant and described at length in his priestly vestments - ephod, breastplate with Urim and Thummim, gold mitre inscribed HOLINESS."
+        },
+        {
+          "ref": "Ecclesiasticus 45:20-22",
+          "note": "Given the firstfruits of the people's increase as his priestly portion, since 'he himself is thy portion and inheritance.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "phinehas_ecclesiasticus_geneva",
+      "name": "Phinehas, son of Eleazar",
+      "role": "manager",
+      "scribeTier": "Phinehas's Zeal",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Eleazar (stated in text)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 45:23",
+          "note": "'Third in glory' after Moses and Aaron, 'in that he was zealous in the fear of the Lord... and he made reconciliation for Israel' when the people turned away."
+        },
+        {
+          "ref": "Ecclesiasticus 45:24",
+          "note": "Granted a covenant of peace, that he and his seed should hold the dignity of the priesthood for ever."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joshua_ecclesiasticus_geneva",
+      "name": "Joshua, son of Nun",
+      "role": "manager",
+      "scribeTier": "Joshua's Inheritance",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Nun (stated in text)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 46:1",
+          "note": "'Valiant in war, and was the successor of Moses in prophecies... that he might give Israel their inheritance.'"
+        },
+        {
+          "ref": "Ecclesiasticus 46:4",
+          "note": "'Did not the sun go back by his hand? And did not one day become as two?' - the long-day miracle."
+        },
+        {
+          "ref": "Ecclesiasticus 46:7",
+          "note": "With Caleb, withstood the adversary and stilled the murmuring of wickedness in the time of Moses."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "caleb_ecclesiasticus_geneva",
+      "name": "Caleb, son of Jephunneh",
+      "role": "submanager",
+      "scribeTier": "Joshua's Inheritance",
+      "parentManagerId": "joshua_ecclesiasticus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jephunneh (stated in text)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 46:7-9",
+          "note": "Alongside Joshua, one of only two of the six hundred thousand preserved to enter the land; the Lord's strength remained with him unto his old age."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "samuel_ecclesiasticus_geneva",
+      "name": "Samuel",
+      "role": "manager",
+      "scribeTier": "Samuel the Judge-Prophet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 46:13",
+          "note": "'The prophet of the Lord, beloved of his Lord, established a kingdom, and anointed princes over his people.'"
+        },
+        {
+          "ref": "Ecclesiasticus 46:19",
+          "note": "Before his death, protests before the Lord and his anointed that he never took so much as a shoe from any man."
+        },
+        {
+          "ref": "Ecclesiasticus 46:20",
+          "note": "Even after death, prophesies from the earth, showing the king his end."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "david_ecclesiasticus_geneva",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "David's Diadem",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jesse (stated in text, 47:1's tribe reference and 'son of Jesse' at 45:25)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "solomon_ecclesiasticus_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 47:3-4",
+          "note": "'Played with lions as with kids... in his youth did he not slay a giant... when he lifted up his hand with a sling stone, and beat down the boasting of Goliath?'"
+        },
+        {
+          "ref": "Ecclesiasticus 47:9-10",
+          "note": "Set singers before the altar and ordered the feast seasons in the sanctuary."
+        },
+        {
+          "ref": "Ecclesiasticus 47:11",
+          "note": "'The Lord took away his sins, and exalted his horn for ever; and gave him a covenant of kings.'"
+        },
+        {
+          "ref": "Ecclesiasticus 45:25",
+          "note": "A separate covenant made with David 'the son of Jesse, of the tribe of Judah,' that the kingship inherits son to son, paired directly with Aaron's priestly inheritance."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nathan_ecclesiasticus_geneva",
+      "name": "Nathan",
+      "role": "submanager",
+      "scribeTier": "David's Diadem",
+      "parentManagerId": "david_ecclesiasticus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 47:1",
+          "note": "'After him rose up Nathan to prophesy in the days of David.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "solomon_ecclesiasticus_geneva",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "Solomon's Sanctuary",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "david_ecclesiasticus_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "rehoboam_ecclesiasticus_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 47:12-13",
+          "note": "'A son, a man of understanding... reigned in days of peace... that he might set up a house for his name.'"
+        },
+        {
+          "ref": "Ecclesiasticus 47:14-17",
+          "note": "Praised for wisdom filling him 'as a river,' his songs, proverbs, and parables famed even to distant isles."
+        },
+        {
+          "ref": "Ecclesiasticus 47:19-20",
+          "note": "'Thou didst bow thy loins unto women... thou didst blemish thine honour' - his downfall through foreign wives, causing the kingdom's division."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "rehoboam_ecclesiasticus_geneva",
+      "name": "Rehoboam",
+      "role": "named",
+      "scribeTier": "Solomon's Sanctuary",
+      "parentManagerId": "solomon_ecclesiasticus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "solomon_ecclesiasticus_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 47:23",
+          "note": "Left behind by Solomon as heir, described as 'the foolishness of the people, and one that lacked understanding, who made the people to revolt by his counsel.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named alongside Jeroboam son of Nebat ('who made Israel to sin') as the two figures blamed for the kingdom's division - Jeroboam is not given his own submanager entry here since the text gives him no independent action beyond that single indictment line."
+      ]
+    },
+    {
+      "id": "elijah_ecclesiasticus_geneva",
+      "name": "Elijah",
+      "role": "manager",
+      "scribeTier": "Elijah's Chariot of Fire",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 48:1-3",
+          "note": "'Arose... as fire, and his word burned like a torch... by the word of the Lord he shut up the heaven: thrice did he thus bring down fire.'"
+        },
+        {
+          "ref": "Ecclesiasticus 48:5",
+          "note": "'Who did raise up a dead man from death.'"
+        },
+        {
+          "ref": "Ecclesiasticus 48:9",
+          "note": "'Who was taken up in a tempest of fire, in a chariot of fiery horses.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "elisha_ecclesiasticus_geneva",
+      "name": "Elisha",
+      "role": "submanager",
+      "scribeTier": "Elijah's Chariot of Fire",
+      "parentManagerId": "elijah_ecclesiasticus_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 48:12-14",
+          "note": "'Elisha was filled with his spirit... nothing was too high for him; and when he was laid on sleep his body prophesied.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "isaiah_ecclesiasticus_geneva",
+      "name": "Isaiah",
+      "role": "manager",
+      "scribeTier": "Isaiah's Vision",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 48:20",
+          "note": "The Lord 'delivered them by the hand of Isaiah' when Sennacherib besieged Jerusalem."
+        },
+        {
+          "ref": "Ecclesiasticus 48:22",
+          "note": "'Isaiah the prophet... was great and faithful in his vision.'"
+        },
+        {
+          "ref": "Ecclesiasticus 48:23-25",
+          "note": "By his word the sun went backward for Hezekiah, and he foretold hidden things to come."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hezekiah_ecclesiasticus_geneva",
+      "name": "Hezekiah",
+      "role": "manager",
+      "scribeTier": "Hezekiah's Fortified City",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 48:17",
+          "note": "'Fortified his city, and brought in water into the midst of them: he digged the sheer rock with iron, and builded up wells for waters.'"
+        },
+        {
+          "ref": "Ecclesiasticus 48:18-19",
+          "note": "Sennacherib and Rabshakeh come against him; the people are in anguish 'as women in travail.'"
+        },
+        {
+          "ref": "Ecclesiasticus 48:22",
+          "note": "'Hezekiah did that which was pleasing to the Lord, and was strong in the ways of David his father.'"
+        },
+        {
+          "ref": "Ecclesiasticus 49:4",
+          "note": "Named, with David and Josiah, as one of only three kings of Judah who did not commit trespass against the law."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "josiah_ecclesiasticus_geneva",
+      "name": "Josiah",
+      "role": "manager",
+      "scribeTier": "Josiah's Sweet Incense",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:1",
+          "note": "'The memorial of Josiah is like the composition of incense... it shall be sweet as honey in every mouth.'"
+        },
+        {
+          "ref": "Ecclesiasticus 49:2-3",
+          "note": "'He behaved himself uprightly in the conversion of the people, and took away the abominations of iniquity.'"
+        },
+        {
+          "ref": "Ecclesiasticus 49:4",
+          "note": "Named, with David and Hezekiah, as one of only three kings of Judah who did not commit trespass against the law."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jeremiah_ecclesiasticus_geneva",
+      "name": "Jeremiah",
+      "role": "manager",
+      "scribeTier": "Jeremiah, Sanctified in the Womb",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:6",
+          "note": "The burning of the city 'was written by the hand of Jeremiah.'"
+        },
+        {
+          "ref": "Ecclesiasticus 49:7",
+          "note": "'He was sanctified in the womb to be a prophet, to root out, and to afflict, and to destroy; and in like manner to build and to plant.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ezekiel_ecclesiasticus_geneva",
+      "name": "Ezekiel",
+      "role": "manager",
+      "scribeTier": "Ezekiel's Chariot of the Cherubim",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:8",
+          "note": "'It was Ezekiel who saw the vision of glory, which God shewed him upon the chariot of the cherubim.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "twelve_minor_prophets_ecclesiasticus_geneva",
+      "name": "The Twelve Prophets (collective)",
+      "role": "manager",
+      "scribeTier": "The Twelve Prophets",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:10",
+          "note": "'Also of the twelve prophets may the bones flourish again out of their place... and he comforted Jacob, and delivered them by confidence of hope.' Named only collectively - no individual minor prophet is distinguished by name in this text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as one collective entry per the project's rule against inventing individuals for an undifferentiated named group - the text gives them no individual lines to divide."
+      ]
+    },
+    {
+      "id": "zerubbabel_ecclesiasticus_geneva",
+      "name": "Zerubbabel",
+      "role": "manager",
+      "scribeTier": "Zerubbabel's Signet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:11",
+          "note": "'How shall we magnify Zerubbabel? And he was as a signet on the right hand.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jesus_son_of_josedek_ecclesiasticus_geneva",
+      "name": "Jesus, son of Josedek",
+      "role": "submanager",
+      "scribeTier": "Zerubbabel's Signet",
+      "parentManagerId": "zerubbabel_ecclesiasticus_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Josedek (stated in text)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:12",
+          "note": "'So was Jesus the son of Josedek: who in their days builded the house, and exalted a people holy to the Lord.' Co-builder of the Second Temple alongside Zerubbabel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION, deliberately not merged: this is a different 'Jesus' from the book's own author, Jesus son of Sirach - see book-level notes."
+      ]
+    },
+    {
+      "id": "nehemiah_ecclesiasticus_geneva",
+      "name": "Nehemiah",
+      "role": "manager",
+      "scribeTier": "Nehemiah's Walls",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:13",
+          "note": "'Of Nehemiah the memorial is great; who raised up for us the walls that were fallen, and set up the gates and bars, and raised up our homes again.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_ecclesiasticus_geneva",
+      "name": "Joseph",
+      "role": "manager",
+      "scribeTier": "Joseph, Governor of His Brethren",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 49:15",
+          "note": "'Neither was there a man born like unto Joseph, a governor of his brethren, a stay of the people: yea, his bones were visited.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simon_ben_onias_ecclesiasticus_geneva",
+      "name": "Simon, son of Onias",
+      "role": "manager",
+      "scribeTier": "Simon's Sanctuary Robe",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Onias (stated in text)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ecclesiasticus 50:1-2",
+          "note": "'The great priest, who in his life repaired the house, and in his days strengthened the temple... built from the foundation the height of the double wall.'"
+        },
+        {
+          "ref": "Ecclesiasticus 50:5-10",
+          "note": "Extended series of similes describing his glory when emerging from the sanctuary - as the morning star, the full moon, the sun, the rainbow, roses, lilies, an olive tree, a cypress."
+        },
+        {
+          "ref": "Ecclesiasticus 50:11-21",
+          "note": "Officiates the full sacrificial service at the altar, robed in glory, surrounded by 'all the sons of Aaron,' the trumpets sounded, and blesses the whole congregation."
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list - none of these are given independent action in this text and are not worth inventing individual entries for.",
+    "adversariesOfMoses": {
+      "ref": "Ecclesiasticus 45:18",
+      "note": "Dathan, Abiram, and the congregation of Korah rise against Moses and Aaron and are destroyed - named as antagonists, not managers/submanagers, since they oppose rather than support the tier's manager."
+    },
+    "jeroboam": {
+      "ref": "Ecclesiasticus 47:23",
+      "note": "'Jeroboam the son of Nebat, who made Israel to sin, and gave unto Ephraim a way of sin' - given one indictment line alongside Rehoboam, no independent action of his own in this text; not promoted to a submanager entry."
+    },
+    "twoNationsAndAFoolishPeople": {
+      "ref": "Ecclesiasticus 50:25-26",
+      "note": "'They that sit upon the mountain of Samaria, and the Philistines, and that foolish people that dwelleth in Sichem' - collective peoples the author's soul is vexed by, not individual characters."
+    }
+  }
+}

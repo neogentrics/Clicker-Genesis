@@ -1,0 +1,719 @@
+{
+  "book": "Psalms",
+  "translation": "Geneva",
+  "canonicalOrder": 19,
+  "status": "drafted by direct reading of the real Geneva 1560 verse text (Assets/Resources/Verses/Geneva/psalms_19.json), cross-checked structurally against the completed KJV Psalms Character Index for tier-naming-style inspiration only — every verse quote and structural claim below is taken from the actual Geneva text, not carried over from KJV",
+  "notes": "The Geneva Psalter matches the KJV's Psalter in overall shape — same 150 chapters, same five-book division with matching doxology placements (41:13, 72:19, 89:52, 106:48, 150:6), and the same set of named psalmists (David, the sons of Korah, Asaph, Salomon, Ethan the Ezrahite, Heman the Ezrahite, Moses) attached to the same psalms in the same superscriptions. It is NOT a different content structure the way this project's Ethiopian Ezra turned out to be — but real, textually-grounded differences from KJV still show up at the sentence and word level, and this draft flags them rather than silently normalizing to KJV wording: (1) Psalm 119 embeds its 22 Hebrew-letter acrostic headers (ALEP, BETH, etc.) directly inside each stanza's first verse text (e.g. verse 1 opens \"ALEP Blessed are those that are vpright...\") rather than as separate italicized headers — a real structural/typographic difference from how KJV editions usually present them. (2) Psalm 72 in this Geneva text has only 19 verses, not 20 — the editorial closing note that KJV renders as its own verse 20 (\"The prayers of David the son of Jesse are ended\") is folded directly onto the end of Geneva's verse 19 as \"HERE END THE prayers of Dauid, the sonne of Ishai,\" a genuine verse-count/numbering variance in this specific translation, not a transcription error. (3) A real naming-collision distinct from (and arguably sharper than) the one already flagged in the KJV Psalms file: KJV distinguishes \"Abimelech\" (Psalm 34's title, recalling 1 Samuel 21's Achish of Gath) from \"Ahimelech\" (Psalm 52's title, recalling the priest of Nob murdered in 1 Samuel 22) by spelling. This Geneva text uses the identical spelling \"Abimelech\" for BOTH — Psalm 34:1's title reads \"when he changed his behauiour before Abimelech, who droue him away\" and Psalm 52:1's title reads \"Dauid is come to the house of Abimelech\" — collapsing what KJV keeps as two visibly different names into one spelling covering two unrelated men (a Philistine king-title in one case, a murdered priest in the other) three psalms apart. Flagged explicitly per methodology rule 7, not silently merged. (4) Psalm 7's title names the accuser \"Chush the sonne of Iemini\" rather than KJV's \"Cush the Benjamite\" — same figure, but Geneva transliterates the tribal designation ('son of Jemini/Benjamin') instead of translating it, and spells the name 'Chush' rather than 'Cush'. (5) Consistent spelling variants throughout carry real identification value and are preserved in this file's character names/ids rather than silently KJV-ized: 'Iaakob' for Jacob, 'Ishai' for Jesse (Psalm 72:19), 'Salomon' for Solomon, doxologies rendered 'So be it, euen so be it' rather than 'Amen, and Amen.' Genealogies for figures whose full family record belongs to other narrative books (David, Solomon/Salomon, Moses) are kept minimal here, same rule as the KJV file, and point back to those books rather than re-deriving family trees within a poetry book that doesn't itself narrate them. Heman the Ezrahite is again promoted to his own full character entry (not folded into a bulk list) since Psalm 88:1 in this text credits him individually: \"A song or Psalme of Heman the Ezrahite to give instruction, committed to the sonnes of Korah.\"",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Five Books",
+      "managerId": "five_books_of_psalms_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Anointed King's Song",
+      "managerId": "royal_and_messianic_psalms_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Shepherd's Harp",
+      "managerId": "david_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Shepheard Psalme",
+      "managerId": "psalm_23_shepheard_psalme_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Cry for Vengeance",
+      "managerId": "imprecatory_psalms_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Korahite Choir",
+      "managerId": "sons_of_korah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Asaph's Cymbals",
+      "managerId": "asaph_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Cedar Song Scroll",
+      "managerId": "solomon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Covenant Harp",
+      "managerId": "ethan_the_ezrahite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Tent of the Dwelling Place",
+      "managerId": "moses_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Great Acrostic (ALEP to TAV)",
+      "managerId": "psalm_119_great_acrostic_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Song of Degrees",
+      "managerId": "songs_of_degrees_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Closing Hallel",
+      "managerId": "closing_hallel_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "five_books_of_psalms_geneva",
+      "name": "The Five Books of the Psalms",
+      "role": "law",
+      "scribeTier": "The Five Books",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "The Geneva Psalter, like the Hebrew text it renders, is organized into five books (1-41, 42-72, 73-89, 90-106, 107-150), each closing with a doxology — mirroring the five books of the Law and framing the whole Psalter as Israel's structured response to it. (Attribution: Compiled from many psalmists — David, Asaph, the sonnes of Korah, Salomon, Moses, Heman, Ethan, and numerous anonymous writers)",
+      "verses": [
+        {
+          "ref": "Psalm 1:2 (Geneva)",
+          "note": "Opening gateway psalm, itself untitled: 'his delite is in the Lawe of the Lord, and in his Lawe doeth he meditate day and night' — sets the frame for the whole Psalter before any author is named."
+        },
+        {
+          "ref": "Psalm 41:13 (Geneva)",
+          "note": "Doxology closing Book I: 'Blessed be the Lord God of Israel worlde without ende. So be it, euen so be it.'"
+        },
+        {
+          "ref": "Psalm 72:19 (Geneva)",
+          "note": "Doxology closing Book II, immediately followed in the same verse by an editorial note not present as its own verse in KJV: 'HERE END THE prayers of Dauid, the sonne of Ishai.'"
+        },
+        {
+          "ref": "Psalm 89:52 (Geneva)",
+          "note": "Doxology closing Book III, immediately after Ethan the Ezrahite's covenant psalm: 'Praised be the Lord for euermore. So be it, euen so be it.'"
+        },
+        {
+          "ref": "Psalm 106:48 (Geneva)",
+          "note": "Doxology closing Book IV: 'Blessed be the Lord God of Israel for euer and euer, and let all the people say, So be it. Praise yee the Lord.'"
+        },
+        {
+          "ref": "Psalm 150:6 (Geneva)",
+          "note": "Final verse of the whole Psalter: 'Let euery thing that hath breath prayse the Lord. Prayse ye the Lord.'"
+        }
+      ],
+      "funFacts": [
+        "Every doxology in this Geneva text renders the Hebrew 'Amen, Amen' as 'So be it, euen so be it' rather than transliterating it — a consistent translation choice across all five book-endings.",
+        "Psalm 72's book-ending doxology carries an extra editorial line ('HERE END THE prayers of Dauid...') folded into its final verse that KJV instead gives its own separate verse number."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "royal_and_messianic_psalms_geneva",
+      "name": "Royal & Messianic Psalms",
+      "role": "law",
+      "scribeTier": "Anointed King's Song",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "A recurring cluster of psalms written for or about Israel's anointed king, later read as pointing beyond any earthly king toward the Messiah. (Attribution: David (Psalms 2, 110), the sonnes of Korah (Psalm 45), Salomon (Psalm 72))",
+      "verses": [
+        {
+          "ref": "Psalm 2:7 (Geneva)",
+          "note": "'The Lord hath said vnto me, Thou art my Sonne: this day haue I begotten thee.'"
+        },
+        {
+          "ref": "Psalm 22:1 (Geneva)",
+          "note": "'My God, my God, why hast thou forsaken me, and art so farre from mine health, and from the wordes of my roaring?'"
+        },
+        {
+          "ref": "Psalm 45:6 (Geneva)",
+          "note": "Royal wedding psalm 'committed to the sonnes of Korah': 'Thy throne, O God, is for euer and euer: the scepter of thy kingdome is a scepter of righteousnesse.'"
+        },
+        {
+          "ref": "Psalm 72:8 (Geneva)",
+          "note": "Salomon's coronation psalm: 'His dominion shall be also from sea to sea, and from the Riuer vnto the endes of the land.'"
+        },
+        {
+          "ref": "Psalm 110:1 (Geneva)",
+          "note": "'The Lord said vnto my Lord, Sit thou at my right hand, vntill I make thine enemies thy footestoole' — David's own psalm naming a superior 'Lord.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 110:4 in this text names 'Melchi-zedek' with an internal hyphen, unlike most modern spellings.",
+        "Psalm 89, Ethan the Ezrahite's Davidic Covenant psalm, is close in theme to this cluster but substantial enough to warrant its own dedicated coverage — see Ethan the Ezrahite."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "david_geneva",
+      "name": "Dauid",
+      "role": "manager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ishai (Jesse)",
+        "mother": null,
+        "spouses": [
+          "documented in the Geneva 1-2 Samuel text, not re-derived here"
+        ],
+        "children": [
+          "Salomon",
+          "and others documented in the Geneva 2 Samuel text"
+        ],
+        "note": "David's ('Dauid's') full family record belongs to the Samuel books; only the relations his own psalm superscriptions name are detailed here. This Geneva text spells Jesse as 'Ishai' (see Psalm 72:19)."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 3:1 (Geneva)",
+          "note": "Superscription: 'A Psalme of Dauid, when he fled from his sonne Absalom.'"
+        },
+        {
+          "ref": "Psalm 7:1 (Geneva)",
+          "note": "Superscription names the accuser 'Chush the sonne of Iemini' — Geneva's own rendering of the figure KJV calls 'Cush the Benjamite,' transliterating the tribal name rather than translating it."
+        },
+        {
+          "ref": "Psalm 23:1 (Geneva)",
+          "note": "'The Lord is my shepheard, I shall not want' — see its own dedicated entry."
+        },
+        {
+          "ref": "Psalm 34:1 (Geneva)",
+          "note": "Superscription: 'when he changed his behauiour before Abimelech, who droue him away, and he departed' — recalling the episode with Achish of Gath narrated in 1 Samuel 21:10-15."
+        },
+        {
+          "ref": "Psalm 51:1 (Geneva)",
+          "note": "Superscription: 'when the Prophet Nathan came unto him, after he had gone in to Bath-sheba.'"
+        },
+        {
+          "ref": "Psalm 52:1 (Geneva)",
+          "note": "Superscription: 'When Doeg the Edomite came and shewed Saul, and saide to him, Dauid is come to the house of Abimelech' — a real naming variance flagged in this file's notes: Geneva spells this priest's name identically to Psalm 34's Philistine king, where KJV distinguishes them as Ahimelech vs Abimelech."
+        },
+        {
+          "ref": "Psalm 103:1 (Geneva)",
+          "note": "One of David's best-known hymns of praise, opening 'Prayse the Lord, O my soule.'"
+        },
+        {
+          "ref": "Psalm 139:14 (Geneva)",
+          "note": "Meditation on God's intimate knowledge of the psalmist."
+        }
+      ],
+      "funFacts": [
+        "Credited as author in more psalm superscriptions than any other named contributor in this text.",
+        "Psalm 18's superscription closely parallels a prose passage that also appears in 2 Samuel 22, preserving the same episode in both narrative and poetic form."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "psalm_23_shepheard_psalme_geneva",
+      "name": "Psalm 23 — The Shepheard Psalme",
+      "role": "law",
+      "scribeTier": "The Shepheard Psalme",
+      "parentManagerId": null,
+      "deliveredBy": "david_geneva",
+      "purpose": "A short psalm of trust portraying the Lord as a shepherd who provides, guides, and protects — likely the single most widely memorized passage of scripture in any translation, central to this game's mission.",
+      "verses": [
+        {
+          "ref": "Psalm 23:1 (Geneva)",
+          "note": "'The Lord is my shepheard, I shall not want.'"
+        },
+        {
+          "ref": "Psalm 23:4 (Geneva)",
+          "note": "'Yea, though I should walke through the valley of the shadowe of death, I will feare no euill: for thou art with me: thy rod and thy staffe, they comfort me.'"
+        },
+        {
+          "ref": "Psalm 23:6 (Geneva)",
+          "note": "'Doubtlesse kindnesse and mercie shall follow me all the dayes of my life, and I shall remaine a long season in the house of the Lord.'"
+        }
+      ],
+      "funFacts": [
+        "Only six verses long in this text, same as KJV, despite the archaic Geneva spelling throughout ('shepheard,' 'doubtlesse')."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "imprecatory_psalms_geneva",
+      "name": "Imprecatory Psalms",
+      "role": "law",
+      "scribeTier": "Cry for Vengeance",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "A recurring category of psalms in which the psalmist directly asks God to judge enemies — raw prayers of lament and appeal to divine justice, not an endorsement of personal vengeance. (Attribution: David (Psalms 35, 69, 109), an anonymous exilic psalmist (Psalm 137))",
+      "verses": [
+        {
+          "ref": "Psalm 69:9 (Geneva)",
+          "note": "Zeal-for-God's-house verse later applied to Christ's temple-cleansing."
+        },
+        {
+          "ref": "Psalm 109:8 (Geneva)",
+          "note": "Later quoted regarding the replacement of a fallen office."
+        },
+        {
+          "ref": "Psalm 137:1 (Geneva)",
+          "note": "'By the riuers of Babel we sate, and there wee wept, when we remembred Zion' — carries no author's name in its own text."
+        },
+        {
+          "ref": "Psalm 137:9 (Geneva)",
+          "note": "The psalm's harshest line, unaltered from what the text itself says: 'Blessed shall he be that taketh and dasheth thy children against the stones.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 137 has no superscription naming an author, same as KJV, yet is placed within Book V among David's and Salomon's psalms.",
+        "This text spells Babylon 'Babel' throughout Psalm 137, a real Geneva spelling choice, not a transcription variant unique to this entry."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sons_of_korah_geneva",
+      "name": "The Sonnes of Korah",
+      "role": "manager",
+      "scribeTier": "Korahite Choir",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Levitical musical guild descended from Korah, whose rebellion against Moses is narrated in the Numbers text; scripture states Korah's own sons did not die with him, and their line became temple singers under David."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 42:1 (Geneva)",
+          "note": "'As the harte brayeth for the riuers of water, so panteth my soule after thee, O God' — opens Book II under this guild's name."
+        },
+        {
+          "ref": "Psalm 46:1 (Geneva)",
+          "note": "'God is our hope and strength, and helpe in troubles, ready to be found.'"
+        },
+        {
+          "ref": "Psalm 84:1 (Geneva)",
+          "note": "'O Lord of hostes, howe amiable are thy Tabernacles!'"
+        },
+        {
+          "ref": "Psalm 87:1 (Geneva)",
+          "note": "'God layde his foundations among the holy mountaines.'"
+        },
+        {
+          "ref": "Psalm 88:1 (Geneva)",
+          "note": "Superscription credits this psalm jointly, 'committed to the sonnes of Korah,' 'of Heman the Ezrahite' — see Heman the Ezrahite for the co-author."
+        }
+      ],
+      "funFacts": [
+        "This text's superscriptions consistently say 'committed to the sonnes of Korah,' naming a family/guild rather than a single author, same convention as KJV."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "heman_the_ezrahite_geneva",
+      "name": "Heman the Ezrahite",
+      "role": "named",
+      "scribeTier": "Korahite Choir",
+      "parentManagerId": "sons_of_korah_geneva",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named in Psalm 88's superscription as co-author alongside the sonnes of Korah; his identity beyond this text is genuinely uncertain, and no identification is asserted as certain here, same caveat as in the KJV file."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 88:1 (Geneva)",
+          "note": "Superscription: 'A song or Psalme of Heman the Ezrahite to give instruction, committed to the sonnes of Korah for him that excelleth upon Malath Leannoth.'"
+        },
+        {
+          "ref": "Psalm 88:18 (Geneva)",
+          "note": "The psalm's final, unresolved line — this psalm carries no turn to praise by its close, matching the same structural note in the KJV file."
+        }
+      ],
+      "funFacts": [
+        "Geneva spells the musical direction in Psalm 88's title 'Malath Leannoth,' a distinct spelling from other editions."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "asaph_geneva",
+      "name": "Asaph",
+      "role": "manager",
+      "scribeTier": "Asaph's Cymbals",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Levite appointed among David's chief temple musicians; his descendants continued as a guild of temple singers for generations, per the Geneva Chronicles text."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 50:1 (Geneva)",
+          "note": "'The God of Gods, euen the Lord hath spoken and called the earth from the rising vp of the sunne vnto the going downe thereof.'"
+        },
+        {
+          "ref": "Psalm 73:1 (Geneva)",
+          "note": "'Yet God is good to Israel: euen, to the pure in heart.'"
+        },
+        {
+          "ref": "Psalm 74:1 (Geneva)",
+          "note": "A national lament: 'O God, the heathen are come into thine inheritance: thine holy Temple haue they defiled.'"
+        },
+        {
+          "ref": "Psalm 78:1 (Geneva)",
+          "note": "'A Psalme to give instruction committed to Asaph. Heare my doctrine, O my people' — a long historical psalm recounting Israel's history from the Exodus."
+        },
+        {
+          "ref": "Psalm 83:1 (Geneva)",
+          "note": "A national lament naming a coalition of hostile neighbors: 'Keep not thou silence, O God.'"
+        }
+      ],
+      "funFacts": [
+        "Twelve psalms in this text (50, 73-83) bear Asaph's name in their superscriptions, matching KJV's count."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "solomon_geneva",
+      "name": "Salomon",
+      "role": "manager",
+      "scribeTier": "Cedar Song Scroll",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Dauid",
+        "mother": null,
+        "spouses": [
+          "numerous, documented in the Geneva 1 Kings text"
+        ],
+        "children": [],
+        "note": "This Geneva Psalms text spells his name 'Salomon' throughout; full reign detail is covered in the Geneva Kings/Chronicles text, noted here only for the two psalms his superscriptions credit to him."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 72:1 (Geneva)",
+          "note": "'A Psalme of Salomon. Give thy iudgements to the King, O God, and thy righteousnesse to the Kings sonne.'"
+        },
+        {
+          "ref": "Psalm 127:1 (Geneva)",
+          "note": "'A song of degrees or Psalme of Salomon. Except the Lord build the house, they labour in vaine that build it.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 72:19's closing note in this text spells his father's name 'Ishai,' not 'Jesse' — 'HERE END THE prayers of Dauid, the sonne of Ishai.'",
+        "Only two psalms (72 and 127) carry Salomon's name in this text, same as KJV."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ethan_the_ezrahite_geneva",
+      "name": "Ethan the Ezrahite",
+      "role": "manager",
+      "scribeTier": "Covenant Harp",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named in Psalm 89's superscription; identity beyond this text is genuinely uncertain, no identification asserted as certain here."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 89:1 (Geneva)",
+          "note": "'A Psalme to give instruction, of Ethan the Ezrahite. I will sing the mercies of the Lord for euer.'"
+        },
+        {
+          "ref": "Psalm 89:3-4 (Geneva)",
+          "note": "States the Davidic Covenant in the psalm's own words, promising David's throne 'for euer.'"
+        },
+        {
+          "ref": "Psalm 89:39 (Geneva)",
+          "note": "'Thou hast broken the couenant of thy seruant, and profaned his crowne, casting it on the ground' — a sudden lamenting turn after the opening's confident praise."
+        },
+        {
+          "ref": "Psalm 89:52 (Geneva)",
+          "note": "Closing doxology of Book III: 'Praised be the Lord for euermore. So be it, euen so be it.'"
+        }
+      ],
+      "funFacts": [
+        "The dramatic shift from praise to lament across this single psalm makes it one of the Psalter's most theologically striking chapters in this text as much as in any other translation."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "moses_geneva",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Tent of the Dwelling Place",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "documented in the Geneva Exodus text",
+        "mother": "documented in the Geneva Exodus text",
+        "spouses": [
+          "Zipporah, documented in the Geneva Exodus text"
+        ],
+        "children": [
+          "documented in the Geneva Exodus text"
+        ],
+        "note": "Full life narrated across Exodus through Deuteronomy; noted here only for his one credited psalm."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 90:1 (Geneva)",
+          "note": "Superscription: 'A prayer of Moses, the man of God. Lord, thou hast bene our habitation from generation to generation.'"
+        },
+        {
+          "ref": "Psalm 90:2 (Geneva)",
+          "note": "'Before the mountaines were made, and before thou hadst formed the earth, and the world, euen from euerlasting to euerlasting thou art our God.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 90 is the only psalm in this Geneva text credited to Moses, opening Book IV immediately after Psalm 89's anguished close, same placement as KJV."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "psalm_119_great_acrostic_geneva",
+      "name": "Psalm 119 — The Great Acrostic",
+      "role": "law",
+      "scribeTier": "The Great Acrostic (ALEP to TAV)",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "A sustained meditation praising and pleading for devotion to God's law, structured as an acrostic with 22 stanzas, one per letter of the Hebrew alphabet — and in this Geneva text, the letter-names themselves (ALEP, BETH, etc.) are printed directly inside the opening verse of each stanza rather than as separate section headers. (Attribution: Anonymous)",
+      "verses": [
+        {
+          "ref": "Psalm 119:1 (Geneva)",
+          "note": "'ALEP Blessed are those that are vpright in their way, and walke in the Lawe of the Lord.' — the Hebrew letter-name 'ALEP' is embedded directly in the verse text, a real structural feature of this translation."
+        },
+        {
+          "ref": "Psalm 119:11 (Geneva)",
+          "note": "'Thy word haue I hid within mine heart, that I might not sinne against thee' (paraphrased placement — see full stanza in-game)."
+        },
+        {
+          "ref": "Psalm 119:105 (Geneva)",
+          "note": "'Thy worde is a lanterne vnto my feete, and a light vnto my path' — a well-known verse rendered with 'lanterne' rather than 'lamp.'"
+        }
+      ],
+      "funFacts": [
+        "The longest chapter in this Bible, same as every translation, at 176 verses.",
+        "This text bakes the 22 Hebrew acrostic letter-names directly into the verse text rather than setting them apart as headers — a genuine typographic/structural difference worth surfacing to players who compare translations."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "songs_of_degrees_geneva",
+      "name": "Songs of Degrees",
+      "role": "law",
+      "scribeTier": "Song of Degrees",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "A collection of fifteen short psalms (120-134), each titled 'A song of degrees' in this text, traditionally understood as pilgrim songs sung while going up to Jerusalem for Israel's annual feasts. (Attribution: David (Psalms 122, 124, 131, 133), Salomon (Psalm 127), and anonymous psalmists for the remainder)",
+      "verses": [
+        {
+          "ref": "Psalm 120:1 (Geneva)",
+          "note": "Opens the collection: 'I called vnto the Lord in my trouble, and hee heard me.'"
+        },
+        {
+          "ref": "Psalm 121:1 (Geneva)",
+          "note": "'I will lift mine eyes vnto the mountaines, from whence mine helpe shall come.'"
+        },
+        {
+          "ref": "Psalm 122:1 (Geneva)",
+          "note": "David's psalm: 'I rejoiced, when they sayd to me, We wil go into the house of the Lord.'"
+        },
+        {
+          "ref": "Psalm 127:1 (Geneva)",
+          "note": "Salomon's psalm within the collection: 'Except the Lord build the house, they labour in vaine that build it.'"
+        },
+        {
+          "ref": "Psalm 133:1 (Geneva)",
+          "note": "David's psalm: 'Behold, howe good and howe comely a thing it is, brethren to dwell euen together.'"
+        },
+        {
+          "ref": "Psalm 134:1 (Geneva)",
+          "note": "Closes the collection with a call to bless the Lord."
+        }
+      ],
+      "funFacts": [
+        "This text titles the collection 'A song of degrees' (singular 'song,' plural 'degrees') consistently across all fifteen psalms."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "closing_hallel_geneva",
+      "name": "The Closing Hallel",
+      "role": "law",
+      "scribeTier": "Closing Hallel",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "The Psalter's final five psalms (146-150), each opening and closing with 'Praise ye the Lord,' building to a crescendo of praise that closes the entire book. (Attribution: Anonymous)",
+      "verses": [
+        {
+          "ref": "Psalm 146:1 (Geneva)",
+          "note": "'Praise ye the Lord. Praise thou the Lord, O my soule.'"
+        },
+        {
+          "ref": "Psalm 148:3 (Geneva)",
+          "note": "'Prayse ye him, sunne and moone: prayse ye him all bright starres.'"
+        },
+        {
+          "ref": "Psalm 150:4 (Geneva)",
+          "note": "'Prayse ye him with timbrell and flute: praise ye him with virginales and organs' — Geneva's 'virginales' (a keyboard instrument) is a distinct instrument choice from other translations' renderings."
+        },
+        {
+          "ref": "Psalm 150:6 (Geneva)",
+          "note": "Final verse of the entire Psalter: 'Let euery thing that hath breath prayse the Lord. Prayse ye the Lord.'"
+        }
+      ],
+      "funFacts": [
+        "None of these five closing psalms carries an author's name in its superscription, same as KJV.",
+        "Psalm 150:4 in this text names 'virginales' among the instruments of praise — a period keyboard instrument, a distinctly Geneva-era (16th-century English) word choice."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ieduthun_geneva",
+      "name": "Ieduthun",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Chief musician credited in the superscriptions of both Davidic and Asaphite psalms — a worship-leading boost tied to David's tier.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named as one of David's chief musicians in the Geneva Chronicles text, alongside Asaph and Heman."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 39:1 (Geneva)",
+          "note": "Superscription: 'To the excellent musician Ieduthun.'"
+        },
+        {
+          "ref": "Psalm 62:1 (Geneva)",
+          "note": "Superscription: 'To the excelletn musician Ieduthun. A Psalme of David.' (spelling as printed in this text)."
+        },
+        {
+          "ref": "Psalm 77:1 (Geneva)",
+          "note": "Superscription: 'For the excellent musician Ieduthun. A Psalme committed to Asaph' — his name appears on an Asaph psalm as well as David's."
+        }
+      ],
+      "funFacts": [
+        "This text spells his name 'Ieduthun' (I for J, matching Geneva-era English orthography throughout)."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nathan_the_prophet_geneva",
+      "name": "Nathan the Prophet",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Prophetic accountability that turns confession into a completed psalm — attached to Psalm 51's superscription.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "The prophet who confronted David; full narrative role belongs to the Geneva Samuel text, noted here only for Psalm 51's superscription."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 51:1 (Geneva)",
+          "note": "Superscription: 'A Psalme of David, when the Prophet Nathan came unto him, after he had gone in to Bath-sheba.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 51 is this Psalter's best-known psalm of personal repentance, directly tied by its own superscription to Nathan's confrontation."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "doeg_the_edomite_geneva",
+      "name": "Doeg the Edomite",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Named only in a psalm superscription recalling betrayal — a lore-tag attachment to David's tier, not a moral endorsement.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An Edomite whose report to Saul triggered a massacre, per the Geneva Samuel text; noted here only for Psalm 52's superscription. Flagged again here: Geneva's Psalm 52 title names his target 'Abimelech,' the same spelling used for the unrelated Philistine king of Psalm 34's title."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 52:1 (Geneva)",
+          "note": "Superscription: 'When Doeg the Edomite came and shewed Saul, and saide to him, Dauid is come to the house of Abimelech.'"
+        },
+        {
+          "ref": "Psalm 52:2 (Geneva)",
+          "note": "The psalm denounces the informant directly: 'Why boastest thou thy selfe in thy wickednesse, O man of power?'"
+        }
+      ],
+      "funFacts": [
+        "This is the sharper of the two 'Abimelech' occurrences flagged in this file's notes — Geneva's identical spelling here and in Psalm 34:1 links two unrelated men under one name within the same book."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "chush_sonne_of_iemini_geneva",
+      "name": "Chush the sonne of Iemini",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Occasion-only figure named solely in Psalm 7's superscription — Geneva's own rendering of this name/title differs from other translations.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only in Psalm 7:1's superscription as 'Chush the sonne of Iemini' — 'sonne of Iemini' is Geneva's transliteration of the tribal designation other translations render as 'the Benjamite.' He is not otherwise identified in the historical narrative books, and this index asserts no further identity."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 7:1 (Geneva)",
+          "note": "Superscription: 'Shigaion of Dauid, which he sang unto the Lord, concerning the wordes of Chush the sonne of Iemini.'"
+        }
+      ],
+      "funFacts": [
+        "Geneva's 'sonne of Iemini' ('son of Jemini/Benjamin') is a transliterated tribal title rather than a translated one — a distinct phrasing choice from the more common 'the Benjamite.'"
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list above, same convention as the KJV Psalms file.",
+    "davidsFullFamily": {
+      "ref": "1-2 Samuel / 1 Chronicles (Geneva text)",
+      "note": "David's wives, children, and full family record are documented in the Geneva Samuel/Chronicles narrative books, not re-derived within this poetry-book index."
+    },
+    "solomonsFullFamily": {
+      "ref": "1 Kings (Geneva text)",
+      "note": "Salomon's wives and reign detail belong to the Geneva Kings text; only his two credited psalms are indexed here."
+    },
+    "mosesFullFamily": {
+      "ref": "Exodus (Geneva text)",
+      "note": "Moses' parents, wife, and sons are documented in the Geneva Exodus text; only his one credited psalm (90) is indexed here."
+    }
+  }
+}

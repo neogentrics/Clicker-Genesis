@@ -12,10 +12,6 @@ namespace ClickerGenesis.Core
         public TMP_Text InkLabel;
         public TMP_Text ClickingPowerLabel;
 
-        [Header("XP bar (LevelLabel is the text drawn inside the bar)")]
-        public TMP_Text LevelLabel;
-        public Image XpBarFill;
-
         [Header("Triple-lane progress bar (2026-08-08) - book/XP/OT overall, replaces the old single XpBar")]
         public Image BookLaneFill;
         public TMP_Text BookLaneLabel;
@@ -263,19 +259,6 @@ namespace ClickerGenesis.Core
             // text blob built here.
 
             var levels = Controller.Levels;
-            LevelLabel.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
-            if (XpBarFill != null)
-            {
-                float fraction = levels.XpRequiredForNextLevel > 0
-                    ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
-                    : 0f;
-                // Sliced (not Filled) so the rounded-pill sprite's corners render correctly at any
-                // width - Filled crops the raw sprite rect and can't preserve a 9-slice border,
-                // which made the fill's rounded shape mismatch the Background's actual bounds.
-                var fillRt = XpBarFill.rectTransform;
-                fillRt.anchorMin = new Vector2(0f, 0f);
-                fillRt.anchorMax = new Vector2(fraction, 1f);
-            }
 
             // Triple-lane bar (2026-08-08): book progress (top-left), XP (top-right, same fraction
             // as the legacy bar above), overall OT progress across every book ever touched (bottom,

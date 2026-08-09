@@ -1,0 +1,1607 @@
+{
+  "book": "Luke",
+  "translation": "Ethiopian",
+  "canonicalOrder": 62,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read this translation's own extracted text for Luke chapters 1-7 directly (the birth narrative, John the Baptist's birth and ministry, the genealogy in ch.3, the temptation, the Nazareth rejection, the calling of Peter/James/John, the healing of the paralytic, the calling of Levi, the choosing of the twelve, the Sermon on the Plain, and the centurion's servant) and found the text verbatim identical in substance and near-identical in wording to the standard KJV text already indexed for this book -- no real content divergence of the kind found in this Ethiopian Bible's own Ezra (which follows the distinct 1 Esdras tradition). Given that direct verification and this project's own precedent (Genesis and Exodus already confirmed content-identical between KJV/Geneva/Ethiopian), this draft adapts the already-validated KJV Luke.json structure (24 scribe tiers: 17 person tiers + 7 law/theme tiers covering the Sermon on the Plain, the Commissioning of the Seventy, and five parable groupings) rather than inventing an unrelated structure, with every character id re-scoped with an '_ethiopian' suffix and every verse reference re-verified against this translation's own chapter/verse layout where read directly. All of KJV Luke's real naming-collision flags carry over unchanged since the same names appear in the same scenes: three distinct women named Mary (mother of Jesus, Magdalene, of Bethany, plus a fourth, mother of James, named only at the tomb), at least four men named Simon (Peter, of Cyrene, the Pharisee, called Zelotes), two named James (son of Zebedee vs. son of Alphaeus) and two named John (the Baptist vs. son of Zebedee) are kept fully separate. Herod Antipas again gets his own full tier (not merely a submanager, unlike his role in Matthew) given his expanded role across four scenes including the Luke-only trial appearance (23:6-12). Anonymous but textually significant figures (the Widow of Nain, the woman with the issue of blood, the centurion of Capernaum, Jairus, the penitent thief, Barabbas, Cleopas, Simon of Cyrene, the sinful woman of ch.7) are kept as unnamed submanagers, not assigned invented names -- 'Dismas' for the penitent thief and any identification of the ch.7 sinful woman with Mary Magdalene or Mary of Bethany are both explicitly declined as textual fact, matching the KJV index's own discipline. No verse text is altered, paraphrased, or reinterpreted anywhere in this index -- only described.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Jesus Christ",
+      "managerId": "jesus_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Zacharias",
+      "managerId": "zacharias_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Elisabeth",
+      "managerId": "elisabeth_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Gabriel",
+      "managerId": "gabriel_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Mary the Mother of Jesus",
+      "managerId": "mary_mother_of_jesus_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "John the Baptist",
+      "managerId": "john_the_baptist_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Shepherds of Bethlehem",
+      "managerId": "shepherds_bethlehem_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Simeon",
+      "managerId": "simeon_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Simon Peter",
+      "managerId": "simon_peter_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Judas Iscariot",
+      "managerId": "judas_iscariot_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Zacchaeus",
+      "managerId": "zacchaeus_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Martha of Bethany",
+      "managerId": "martha_bethany_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Mary Magdalene",
+      "managerId": "mary_magdalene_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Herod Antipas",
+      "managerId": "herod_antipas_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Pontius Pilate",
+      "managerId": "pilate_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Council of Chief Priests and Scribes",
+      "managerId": "council_chief_priests_scribes_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Ten Lepers",
+      "managerId": "ten_lepers_ethiopian_luke",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Sermon on the Plain",
+      "managerId": "sermon_on_the_plain_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 19,
+      "scribeName": "The Commissioning of the Seventy",
+      "managerId": "commissioning_of_seventy_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 20,
+      "scribeName": "The Good Samaritan",
+      "managerId": "parable_good_samaritan_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Parables of the Lost",
+      "managerId": "parables_of_the_lost_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 22,
+      "scribeName": "Lazarus and the Rich Man",
+      "managerId": "parable_lazarus_rich_man_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 23,
+      "scribeName": "Parables of Prayer and Humility",
+      "managerId": "parables_prayer_humility_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 24,
+      "scribeName": "The Parable of the Pounds",
+      "managerId": "parable_of_the_pounds_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_ethiopian_luke",
+      "name": "Jesus Christ",
+      "role": "manager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "mary_mother_of_jesus_ethiopian_luke",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:31-35",
+          "note": "Gabriel announces to Mary she will conceive by the Holy Ghost and bear a son called Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:7",
+          "note": "Born in Bethlehem, wrapped in swaddling clothes, laid in a manger (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:21",
+          "note": "Circumcised on the eighth day and named Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:41-52",
+          "note": "Found in the temple among the doctors at age twelve, hearing and asking questions (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:21-22",
+          "note": "Baptized by John; the Holy Ghost descends as a dove; a voice from heaven declares him the beloved Son (verified in the source text)."
+        },
+        {
+          "ref": "Luke 4:1-13",
+          "note": "Led by the Spirit into the wilderness, fasts forty days, tempted by the devil (verified in the source text)."
+        },
+        {
+          "ref": "Luke 4:16-30",
+          "note": "Reads from Isaiah in the Nazareth synagogue, declares it fulfilled, is rejected by his hometown (verified in the source text)."
+        },
+        {
+          "ref": "Luke 5:1-11",
+          "note": "Calls Simon Peter, James, and John to follow him after a miraculous catch of fish; only Simon and his partners James and John are named, not Andrew, matching the KJV wording exactly (verified in the source text)."
+        },
+        {
+          "ref": "Luke 6:12-16",
+          "note": "Spends a night in prayer, then chooses the twelve apostles (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:11-17",
+          "note": "Raises the only son of the widow of Nain from the dead."
+        },
+        {
+          "ref": "Luke 7:36-50",
+          "note": "Eats in the house of Simon the Pharisee; a sinful woman washes his feet with her tears, told her sins are forgiven for she loved much (verified in the source text)."
+        },
+        {
+          "ref": "Luke 9:10-17",
+          "note": "Feeds five thousand with five loaves and two fishes."
+        },
+        {
+          "ref": "Luke 9:28-36",
+          "note": "Transfigured on the mountain before Peter, James, and John; Moses and Elias appear."
+        },
+        {
+          "ref": "Luke 9:51",
+          "note": "Steadfastly sets his face to go to Jerusalem."
+        },
+        {
+          "ref": "Luke 11:1-4",
+          "note": "Teaches the disciples the Lord's Prayer at their request."
+        },
+        {
+          "ref": "Luke 19:28-40",
+          "note": "Triumphal entry into Jerusalem on a colt."
+        },
+        {
+          "ref": "Luke 22:14-20",
+          "note": "Institutes the Lord's Supper with the twelve."
+        },
+        {
+          "ref": "Luke 22:39-46",
+          "note": "Agonizes in prayer at Gethsemane; sweat as it were great drops of blood."
+        },
+        {
+          "ref": "Luke 23:26",
+          "note": "Led away to be crucified; the soldiers compel Simon of Cyrene to bear the cross after him."
+        },
+        {
+          "ref": "Luke 23:33-46",
+          "note": "Crucified at Calvary; prays for his executioners' forgiveness; dies commending his spirit to the Father."
+        },
+        {
+          "ref": "Luke 24:1-7",
+          "note": "Rises; the women find the tomb empty."
+        },
+        {
+          "ref": "Luke 24:13-31",
+          "note": "Appears unrecognized to two disciples on the road to Emmaus, known to them in the breaking of bread."
+        },
+        {
+          "ref": "Luke 24:44-49",
+          "note": "Opens the disciples' understanding of scripture and charges them as witnesses, sending the promise of the Father, kept inside Jesus's own tier per the project's embodiment test rather than as a separate law tier."
+        },
+        {
+          "ref": "Luke 24:50-51",
+          "note": "Ascends into heaven from near Bethany."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "Luke 3:23",
+          "note": "Jesus began to be about thirty years of age when he started his ministry (verified in the source text)."
+        }
+      ],
+      "funFacts": [
+        "Luke alone among the Gospels records the age of about thirty at the start of Jesus's ministry (3:23) and the childhood episode in the Temple at age twelve (2:41-52)."
+      ]
+    },
+    {
+      "id": "zacharias_ethiopian",
+      "name": "Zacharias",
+      "role": "manager",
+      "scribeTier": "Zacharias",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "elisabeth_ethiopian"
+        ],
+        "children": [
+          "john_the_baptist_ethiopian_luke"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:5-7",
+          "note": "A priest of the course of Abia, married to Elisabeth; both righteous before God, but childless and stricken in years (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:8-20",
+          "note": "While burning incense in the temple, the angel Gabriel appears announcing John's birth; Zacharias doubts and is struck dumb (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:59-64",
+          "note": "At John's circumcision he writes 'His name is John'; his speech is immediately restored (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:67-79",
+          "note": "Filled with the Holy Ghost, prophesies the canticle known as the Benedictus (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Belonged to the priestly course of Abia, one of the twenty-four priestly divisions established in 1 Chronicles 24:10."
+      ]
+    },
+    {
+      "id": "elisabeth_ethiopian",
+      "name": "Elisabeth",
+      "role": "manager",
+      "scribeTier": "Elisabeth",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "zacharias_ethiopian"
+        ],
+        "children": [
+          "john_the_baptist_ethiopian_luke"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:5-7",
+          "note": "Of the daughters of Aaron; barren and stricken in years (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:24-25",
+          "note": "Conceives and hides herself five months (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:36",
+          "note": "Gabriel tells Mary her cousin Elisabeth has also conceived in her old age (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:39-45",
+          "note": "Mary visits her; the babe leaps in her womb; filled with the Holy Ghost, she blesses Mary (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:57-60",
+          "note": "Gives birth to John and insists on the name John, against the family's expectation (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called Mary's 'cousin' in this translation's own text (Luke 1:36), same wording as KJV."
+      ]
+    },
+    {
+      "id": "gabriel_ethiopian_luke",
+      "name": "Gabriel",
+      "role": "manager",
+      "scribeTier": "Gabriel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:11-20",
+          "note": "Appears to Zacharias in the temple, announces John's birth, strikes him mute for unbelief (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:26-38",
+          "note": "Appears to Mary in Nazareth, announces she will conceive Jesus by the Holy Ghost (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Names himself only once, to Zacharias: 'I am Gabriel, that stand in the presence of God' (Luke 1:19), verified in the source text."
+      ]
+    },
+    {
+      "id": "mary_mother_of_jesus_ethiopian_luke",
+      "name": "Mary the Mother of Jesus",
+      "role": "manager",
+      "scribeTier": "Mary the Mother of Jesus",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "joseph_ethiopian_luke"
+        ],
+        "children": [
+          "jesus_ethiopian_luke"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:26-38",
+          "note": "Gabriel's annunciation; she answers, 'Be it unto me according to thy word' (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:39-45",
+          "note": "Visits her cousin Elisabeth (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:46-55",
+          "note": "Sings the canticle known as the Magnificat (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:1-7",
+          "note": "Travels to Bethlehem with Joseph and gives birth to Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:19",
+          "note": "Keeps all these sayings, and pondered them in her heart (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:22-38",
+          "note": "Presents Jesus in the temple; Simeon prophesies a sword shall pierce through her own soul also (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:41-51",
+          "note": "Searches for the twelve-year-old Jesus in Jerusalem for three days (verified in the source text)."
+        },
+        {
+          "ref": "Luke 8:19-21",
+          "note": "Comes with Jesus's brothers seeking him; he answers that those who hear and do the word of God are his mother and brethren."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Three distinct women named Mary appear in this book -- mother of Jesus, Magdalene, and of Bethany -- kept as fully separate entries."
+      ]
+    },
+    {
+      "id": "john_the_baptist_ethiopian_luke",
+      "name": "John the Baptist",
+      "role": "manager",
+      "scribeTier": "John the Baptist",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zacharias_ethiopian",
+        "mother": "elisabeth_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:13-17",
+          "note": "Gabriel foretells his birth and mission, 'in the spirit and power of Elias' (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:57-66",
+          "note": "Born; circumcised and named on the eighth day (verified in the source text)."
+        },
+        {
+          "ref": "Luke 1:80",
+          "note": "Grows and waxes strong in spirit, in the deserts until his public appearance to Israel (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:1-6",
+          "note": "Begins his wilderness ministry, preaching a baptism of repentance (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:7-14",
+          "note": "Preaches to the multitudes, publicans, and soldiers who come to him (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:15-17",
+          "note": "Denies he is the Christ; foretells one mightier who will baptize with the Holy Ghost and fire (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:19-20",
+          "note": "Reproves Herod the tetrarch and is shut up in prison (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:18-23",
+          "note": "Sends two disciples from prison to ask Jesus, 'Art thou he that should come?' (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:24-28",
+          "note": "Jesus praises him to the multitudes as more than a prophet (verified in the source text)."
+        },
+        {
+          "ref": "Luke 9:7-9",
+          "note": "Herod hears of Jesus and is perplexed, having already beheaded John -- his death is referenced, not narrated directly, in Luke."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Luke uniquely records John's own birth narrative in parallel with Jesus's."
+      ]
+    },
+    {
+      "id": "shepherds_bethlehem_ethiopian_luke",
+      "name": "The Shepherds of Bethlehem",
+      "role": "manager",
+      "scribeTier": "The Shepherds of Bethlehem",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 2:8-9",
+          "note": "Keeping watch over their flock by night when the angel of the Lord appears (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:10-14",
+          "note": "The angel announces the Saviour's birth; a multitude of the heavenly host praises God (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:15-16",
+          "note": "Go with haste to Bethlehem and find Mary, Joseph, and the babe (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:17-18",
+          "note": "Make known abroad the saying told them concerning the child (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:20",
+          "note": "Return, glorifying and praising God for all they had heard and seen (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Shepherds, not Matthew's Magi, are the first outside witnesses to Jesus's birth in Luke."
+      ]
+    },
+    {
+      "id": "simeon_ethiopian_luke",
+      "name": "Simeon",
+      "role": "manager",
+      "scribeTier": "Simeon",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 2:25-27",
+          "note": "A just and devout man awaiting the consolation of Israel; the Holy Ghost had revealed he would not see death before seeing the Lord's Christ (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:28-32",
+          "note": "Takes the infant Jesus in his arms and sings the canticle known as the Nunc Dimittis (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:33-35",
+          "note": "Blesses Mary and Joseph; prophesies to Mary that a sword shall pierce through her own soul also (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His canticle beginning 'Lord, now lettest thou thy servant depart in peace' (2:29) is traditionally called the Nunc Dimittis, verified word-for-word in the source text."
+      ]
+    },
+    {
+      "id": "simon_peter_ethiopian_luke",
+      "name": "Simon Peter",
+      "role": "manager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed wife -- Luke 4:38 (mother-in-law healed), not individually indexed"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 4:38-39",
+          "note": "Jesus heals his wife's mother of a great fever."
+        },
+        {
+          "ref": "Luke 5:1-11",
+          "note": "Miraculous catch of fish; says 'Depart from me for I am a sinful man, O Lord'; leaves all to follow Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 6:14",
+          "note": "Named first among the twelve apostles, surnamed Peter (verified in the source text)."
+        },
+        {
+          "ref": "Luke 8:45",
+          "note": "When Jesus asks who touched him amid the crowd, Peter answers on behalf of the group."
+        },
+        {
+          "ref": "Luke 9:20",
+          "note": "Confesses Jesus as 'The Christ of God.'"
+        },
+        {
+          "ref": "Luke 9:28-33",
+          "note": "Present at the Transfiguration; suggests building three tabernacles."
+        },
+        {
+          "ref": "Luke 22:31-34",
+          "note": "Jesus warns Satan desires to sift him, and foretells his threefold denial."
+        },
+        {
+          "ref": "Luke 22:54-62",
+          "note": "Denies Jesus three times; weeps bitterly after the cock crows."
+        },
+        {
+          "ref": "Luke 24:12",
+          "note": "Runs to the empty tomb, stoops down, sees the linen clothes, and wonders."
+        },
+        {
+          "ref": "Luke 24:34",
+          "note": "The risen Lord appears to Simon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from Simon of Cyrene and Simon the Pharisee, also named in this book -- at least four men named Simon appear across Luke."
+    },
+    {
+      "id": "andrew_ethiopian_luke",
+      "name": "Andrew",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "simon_peter_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 6:14",
+          "note": "Named among the twelve apostles as 'Andrew his brother' (Simon's brother), verified in the source text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Luke's own account of the miraculous catch of fish (5:1-11) does not name Andrew as present, unlike Matthew 4:18-20/Mark 1:16-20 -- confirmed by direct reading of this translation's text."
+      ]
+    },
+    {
+      "id": "james_son_of_zebedee_ethiopian_luke",
+      "name": "James the Son of Zebedee",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "simon_peter_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 5:10",
+          "note": "Partner with Peter in the fishing business, called by Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 6:14",
+          "note": "Named among the twelve, son of Zebedee (verified in the source text)."
+        },
+        {
+          "ref": "Luke 9:28",
+          "note": "Present at the Transfiguration with Peter and John."
+        },
+        {
+          "ref": "Luke 9:54",
+          "note": "With his brother John, asks Jesus if they should call fire down on a Samaritan village that rejected them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from James the son of Alphaeus (in the Other Apostles collective) and from James the Lord's brother, not individually named in Luke."
+    },
+    {
+      "id": "john_son_of_zebedee_ethiopian_luke",
+      "name": "John the Son of Zebedee",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "simon_peter_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 5:10",
+          "note": "Partner with Peter and James in the fishing business, called by Jesus (verified in the source text)."
+        },
+        {
+          "ref": "Luke 6:14",
+          "note": "Named among the twelve (verified in the source text)."
+        },
+        {
+          "ref": "Luke 9:28",
+          "note": "Present at the Transfiguration."
+        },
+        {
+          "ref": "Luke 9:49-50",
+          "note": "Reports forbidding a man who cast out devils in Jesus's name; Jesus corrects him."
+        },
+        {
+          "ref": "Luke 9:54",
+          "note": "With James, asks to call fire down on a Samaritan village."
+        },
+        {
+          "ref": "Luke 22:8",
+          "note": "Sent with Peter to prepare the Passover."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from John the Baptist, who has his own full manager tier -- two Johns in this book."
+    },
+    {
+      "id": "levi_matthew_ethiopian_luke",
+      "name": "Levi (Matthew)",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "simon_peter_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 5:27-28",
+          "note": "A publican named Levi, sitting at the receipt of custom, is called by Jesus and leaves all to follow him (verified in the source text)."
+        },
+        {
+          "ref": "Luke 5:29",
+          "note": "Makes Jesus a great feast in his own house (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'Levi' in the calling scene, identified with the apostle Matthew of 6:15 by comparison with the parallel Gospel accounts."
+      ]
+    },
+    {
+      "id": "other_apostles_ethiopian_luke",
+      "name": "The Other Apostles",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "simon_peter_ethiopian_luke",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 6:15-16",
+          "note": "Named in the full list of the twelve: Philip, Bartholomew, Thomas, James the son of Alphaeus, Simon called Zelotes, and Judas the brother of James (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "No individually differentiated action beyond inclusion in the list of the twelve; kept as one collective entry."
+      ],
+      "perkNote": "Includes 'Simon called Zelotes' -- distinct from Simon Peter, Simon of Cyrene, and Simon the Pharisee."
+    },
+    {
+      "id": "judas_iscariot_ethiopian_luke",
+      "name": "Judas Iscariot",
+      "role": "manager",
+      "scribeTier": "Judas Iscariot",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 6:16",
+          "note": "Named last among the twelve, 'which also was the traitor' (verified in the source text)."
+        },
+        {
+          "ref": "Luke 22:3-6",
+          "note": "Satan enters into Judas; he covenants with the chief priests and captains to betray Jesus for money."
+        },
+        {
+          "ref": "Luke 22:21-23",
+          "note": "Jesus announces at the Supper that his betrayer's hand is with him on the table."
+        },
+        {
+          "ref": "Luke 22:47-48",
+          "note": "Betrays Jesus with a kiss in Gethsemane."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unlike Matthew, Luke does not state the sum of money paid, only that they covenanted to give him money (22:5)."
+      ]
+    },
+    {
+      "id": "zacchaeus_ethiopian",
+      "name": "Zacchaeus",
+      "role": "manager",
+      "scribeTier": "Zacchaeus",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 19:1-4",
+          "note": "Chief among the publicans, rich, and of short stature, climbs a sycomore tree to see Jesus passing through Jericho."
+        },
+        {
+          "ref": "Luke 19:5-6",
+          "note": "Jesus calls him down and invites himself to his house; Zacchaeus receives him joyfully."
+        },
+        {
+          "ref": "Luke 19:7",
+          "note": "The crowd murmurs that Jesus has gone to be guest with a sinner."
+        },
+        {
+          "ref": "Luke 19:8",
+          "note": "Pledges half his goods to the poor and to restore fourfold anything taken by false accusation."
+        },
+        {
+          "ref": "Luke 19:9-10",
+          "note": "Jesus declares salvation has come to his house: 'the Son of man is come to seek and to save that which was lost.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Zacchaeus's story is unique to Luke's Gospel, fitting the book's recurring emphasis on outcasts."
+      ]
+    },
+    {
+      "id": "martha_bethany_ethiopian",
+      "name": "Martha of Bethany",
+      "role": "manager",
+      "scribeTier": "Martha of Bethany",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 10:38",
+          "note": "Receives Jesus into her house."
+        },
+        {
+          "ref": "Luke 10:40",
+          "note": "Cumbered about much serving; complains her sister has left her to serve alone."
+        },
+        {
+          "ref": "Luke 10:41-42",
+          "note": "Jesus answers, 'Martha, Martha, thou art careful and troubled about many things... Mary hath chosen that good part.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Their brother Lazarus is not mentioned in this passage in Luke -- his raising is recorded only in John's Gospel."
+      ]
+    },
+    {
+      "id": "mary_of_bethany_ethiopian_luke",
+      "name": "Mary of Bethany",
+      "role": "submanager",
+      "scribeTier": "Martha of Bethany",
+      "parentManagerId": "martha_bethany_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 10:39",
+          "note": "Sits at Jesus's feet and hears his word."
+        },
+        {
+          "ref": "Luke 10:42",
+          "note": "Jesus says she has chosen the good part, which shall not be taken from her."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A third, distinct Mary in this book alongside Mary the mother of Jesus and Mary Magdalene."
+      ]
+    },
+    {
+      "id": "mary_magdalene_ethiopian_luke",
+      "name": "Mary Magdalene",
+      "role": "manager",
+      "scribeTier": "Mary Magdalene",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 8:2",
+          "note": "Healed of evil spirits and infirmities; seven devils had gone out of her."
+        },
+        {
+          "ref": "Luke 8:3",
+          "note": "Among the women who ministered unto Jesus of their substance."
+        },
+        {
+          "ref": "Luke 23:49, 23:55",
+          "note": "With the women who followed from Galilee, beholds the crucifixion and where Jesus's body is laid."
+        },
+        {
+          "ref": "Luke 24:1-10",
+          "note": "Comes to the tomb with spices, finds it empty, sees the two men in shining garments, reports to the apostles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Not identified in Luke's text with the sinful woman of chapter 7 or with Mary of Bethany -- a traditional but text-unsupported conflation, not asserted here as fact."
+    },
+    {
+      "id": "joanna_ethiopian_luke",
+      "name": "Joanna",
+      "role": "submanager",
+      "scribeTier": "Mary Magdalene",
+      "parentManagerId": "mary_magdalene_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed reference: wife of Chuza, Herod's steward -- Luke 8:3, not individually indexed"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 8:3",
+          "note": "Wife of Chuza, Herod's steward; ministers to Jesus of her substance."
+        },
+        {
+          "ref": "Luke 24:10",
+          "note": "Among the women who report the empty tomb to the apostles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "susanna_ethiopian_luke",
+      "name": "Susanna",
+      "role": "submanager",
+      "scribeTier": "Mary Magdalene",
+      "parentManagerId": "mary_magdalene_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 8:3",
+          "note": "Named among the women who ministered to Jesus of their substance."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mary_mother_of_james_ethiopian_luke",
+      "name": "Mary the Mother of James",
+      "role": "submanager",
+      "scribeTier": "Mary Magdalene",
+      "parentManagerId": "mary_magdalene_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "James -- Luke 24:10, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 24:10",
+          "note": "Named among the women at the empty tomb who report to the apostles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from Mary the mother of Jesus, Mary Magdalene, and Mary of Bethany -- the fourth distinct Mary in this book."
+    },
+    {
+      "id": "herod_antipas_ethiopian_luke",
+      "name": "Herod Antipas",
+      "role": "manager",
+      "scribeTier": "Herod Antipas",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Herod the Great -- not individually indexed in this book",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 3:1",
+          "note": "Tetrarch of Galilee (verified in the source text)."
+        },
+        {
+          "ref": "Luke 3:19-20",
+          "note": "Reproved by John the Baptist for Herodias and other evils; shuts John up in prison (verified in the source text)."
+        },
+        {
+          "ref": "Luke 9:7-9",
+          "note": "Hears of Jesus's works and is perplexed, having beheaded John; desires to see Jesus."
+        },
+        {
+          "ref": "Luke 13:31-33",
+          "note": "Pharisees warn Jesus that Herod seeks to kill him; Jesus calls him 'that fox.'"
+        },
+        {
+          "ref": "Luke 23:6-12",
+          "note": "Pilate sends Jesus to Herod as a Galilean during the trial; Herod questions him, Jesus answers nothing, Herod and his men mock him and send him back in a gorgeous robe; Herod and Pilate become friends that day."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Same individual as the Herod Antipas who executes John the Baptist in Matthew (a submanager there); promoted to a full manager tier here given his expanded, unique role including the Luke-only trial scene (23:6-12). Distinct from Herod the Great and Herod Agrippa."
+    },
+    {
+      "id": "pilate_ethiopian_luke",
+      "name": "Pontius Pilate",
+      "role": "manager",
+      "scribeTier": "Pontius Pilate",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 3:1",
+          "note": "Governor of Judaea (verified in the source text)."
+        },
+        {
+          "ref": "Luke 13:1",
+          "note": "Reported to have mingled the blood of certain Galilaeans with their sacrifices."
+        },
+        {
+          "ref": "Luke 23:1-4",
+          "note": "The multitude brings Jesus to Pilate; Pilate finds no fault in him."
+        },
+        {
+          "ref": "Luke 23:6-7",
+          "note": "Learns Jesus is of Herod's jurisdiction and sends him to Herod."
+        },
+        {
+          "ref": "Luke 23:13-16",
+          "note": "Declares neither he nor Herod found Jesus guilty of anything worthy of death; proposes to chastise and release him."
+        },
+        {
+          "ref": "Luke 23:20-25",
+          "note": "Yields to the crowd's demand, releases Barabbas, delivers Jesus to their will."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "barabbas_ethiopian_luke",
+      "name": "Barabbas",
+      "role": "submanager",
+      "scribeTier": "Pontius Pilate",
+      "parentManagerId": "pilate_ethiopian_luke",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 23:18-19",
+          "note": "The multitude cries out to release Barabbas, who for a certain sedition and murder had been cast into prison."
+        },
+        {
+          "ref": "Luke 23:25",
+          "note": "Pilate releases him unto them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "council_chief_priests_scribes_ethiopian_luke",
+      "name": "The Council of Chief Priests and Scribes",
+      "role": "manager",
+      "scribeTier": "The Council of Chief Priests and Scribes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 3:2",
+          "note": "Annas and Caiaphas named as the high priests at the start of John's ministry (verified in the source text)."
+        },
+        {
+          "ref": "Luke 19:47-48",
+          "note": "Chief priests, scribes, and the chief of the people seek to destroy Jesus but fear the people."
+        },
+        {
+          "ref": "Luke 20:1-2, 20:19-20",
+          "note": "Chief priests and scribes challenge Jesus's authority and send spies to entangle him in his talk."
+        },
+        {
+          "ref": "Luke 22:2",
+          "note": "Chief priests and scribes seek how they might kill Jesus, fearing the people."
+        },
+        {
+          "ref": "Luke 22:52-54",
+          "note": "Chief priests, captains of the temple, and elders come to arrest Jesus in Gethsemane; he is led to the high priest's house."
+        },
+        {
+          "ref": "Luke 22:66-71",
+          "note": "The elders, chief priests, and scribes assemble, question Jesus, and lead him to Pilate."
+        },
+        {
+          "ref": "Luke 23:10",
+          "note": "Chief priests and scribes vehemently accuse Jesus before Herod."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Annas and Caiaphas are named together as the ruling high priests in 3:2, but neither is individually characterized in action here the way Caiaphas is in Matthew's trial account -- treated as part of the collective council."
+      ]
+    },
+    {
+      "id": "ten_lepers_ethiopian_luke",
+      "name": "The Ten Lepers",
+      "role": "manager",
+      "scribeTier": "The Ten Lepers",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 17:12-13",
+          "note": "Ten leprous men meet Jesus, stand afar off, and cry, 'Jesus, Master, have mercy on us.'"
+        },
+        {
+          "ref": "Luke 17:14",
+          "note": "Jesus tells them to show themselves to the priests; as they went, they were cleansed."
+        },
+        {
+          "ref": "Luke 17:15-16",
+          "note": "One of them, seeing he was healed, turns back glorifying God and falls at Jesus's feet giving thanks -- he was a Samaritan."
+        },
+        {
+          "ref": "Luke 17:17-19",
+          "note": "Jesus asks where the other nine are, and tells the man, 'thy faith hath made thee whole.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Only one of the ten is differentiated -- 'a Samaritan' -- not by name; the other nine are never distinguished individually, kept as one collective entry."
+      ]
+    },
+    {
+      "id": "joseph_ethiopian_luke",
+      "name": "Joseph",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "mary_mother_of_jesus_ethiopian_luke"
+        ],
+        "children": [
+          "jesus_ethiopian_luke -- legal/adoptive father, not by blood per Luke 1:34-35"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 1:27",
+          "note": "Espoused to Mary, of the house of David (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:4-5",
+          "note": "Goes up from Galilee to Bethlehem, being of the house and lineage of David, with Mary his espoused wife (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:16",
+          "note": "Found by the shepherds with Mary and the babe (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:22-27",
+          "note": "Brings Jesus to the temple to perform the custom of the law (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:41-48",
+          "note": "Goes to Jerusalem for the Passover; with Mary, seeks the twelve-year-old Jesus for three days (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jesus's genealogy (3:23-38), traced through Joseph, is introduced 'as was supposed' -- verified verbatim in the source text -- consistent with the virgin birth stated in 1:34-35."
+      ]
+    },
+    {
+      "id": "penitent_thief_ethiopian_luke",
+      "name": "The Penitent Thief",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 23:39-43",
+          "note": "One of the two malefactors crucified with Jesus rebukes the other, asks Jesus to remember him in his kingdom; Jesus answers, 'To day shalt thou be with me in paradise.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Unnamed in the biblical text; later Christian tradition's name 'Dismas' is not asserted here as textual fact."
+    },
+    {
+      "id": "cleopas_ethiopian_luke",
+      "name": "Cleopas",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 24:13-27",
+          "note": "Two disciples walk to Emmaus discussing the crucifixion, one named Cleopas; the risen Jesus joins them unrecognized and expounds the scriptures."
+        },
+        {
+          "ref": "Luke 24:28-32",
+          "note": "Jesus is made known to them in the breaking of bread, then vanishes out of their sight."
+        },
+        {
+          "ref": "Luke 24:33-35",
+          "note": "They return to Jerusalem and tell the eleven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Cleopas's companion on the road is not named in the text; not assigned an identity here."
+    },
+    {
+      "id": "jairus_ethiopian_luke",
+      "name": "Jairus",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed daughter -- Luke 8:42, about twelve years of age, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 8:41-42",
+          "note": "A ruler of the synagogue falls at Jesus's feet, beseeching him to come to his house for his only daughter, about twelve years old, lying at the point of death."
+        },
+        {
+          "ref": "Luke 8:49-50",
+          "note": "Told his daughter is dead; Jesus tells him, 'Fear not: believe only, and she shall be made whole.'"
+        },
+        {
+          "ref": "Luke 8:51-56",
+          "note": "Jesus raises the child, saying, 'Maid, arise.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "woman_with_issue_of_blood_ethiopian_luke",
+      "name": "The Woman with the Issue of Blood",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 8:43-44",
+          "note": "A woman with an issue of blood for twelve years, unable to be healed by any physician, touches the border of Jesus's garment and is immediately healed."
+        },
+        {
+          "ref": "Luke 8:45-48",
+          "note": "Jesus perceives virtue has gone out of him; she confesses; he tells her, 'Daughter, be of good comfort: thy faith hath made thee whole; go in peace.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Unnamed in the text."
+    },
+    {
+      "id": "centurion_ethiopian_luke",
+      "name": "The Centurion of Capernaum",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 7:1-5",
+          "note": "His servant, dear to him, is sick and ready to die; elders of the Jews beseech Jesus on his behalf, saying he loves the nation and built them a synagogue (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:6-8",
+          "note": "Sends friends saying he is not worthy that Jesus enter his roof, but to speak the word only, as a man himself under authority (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:9-10",
+          "note": "Jesus marvels and says, 'I have not found so great faith, no, not in Israel'; the servant is healed (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Unnamed in the text."
+    },
+    {
+      "id": "widow_of_nain_ethiopian_luke",
+      "name": "The Widow of Nain",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed son -- Luke 7:12, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Luke 7:11-13",
+          "note": "Jesus meets a funeral procession at Nain for her only son; she is a widow, and Jesus has compassion, saying 'Weep not' (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:14-15",
+          "note": "Touches the bier; the young man sits up and speaks; Jesus delivers him to his mother (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:16-17",
+          "note": "Fear comes on all; they glorify God, saying a great prophet is risen up (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Unnamed in the text."
+    },
+    {
+      "id": "simon_the_pharisee_ethiopian_luke",
+      "name": "Simon the Pharisee",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 7:36",
+          "note": "Desires Jesus to eat with him; Jesus goes into his house and sits down to meat (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:39-47",
+          "note": "Marvels within himself that Jesus allows a sinful woman to touch him; Jesus answers with the parable of the two debtors."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from Simon Peter, Simon of Cyrene, and Simon called Zelotes -- four men named Simon appear in this book."
+    },
+    {
+      "id": "sinful_woman_ethiopian_luke",
+      "name": "The Sinful Woman",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 7:37-38",
+          "note": "A woman in the city, a sinner, brings an alabaster box of ointment, stands at Jesus's feet weeping, washes them with her tears and the hairs of her head, kisses and anoints them (verified in the source text)."
+        },
+        {
+          "ref": "Luke 7:47-50",
+          "note": "Jesus tells Simon her many sins are forgiven, for she loved much; tells her, 'Thy faith hath saved thee; go in peace' (verified in the source text)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Unnamed in the text; not identified here with Mary Magdalene or Mary of Bethany as textual fact, per the project's no-invented-identity rule."
+    },
+    {
+      "id": "simon_of_cyrene_ethiopian_luke",
+      "name": "Simon of Cyrene",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 23:26",
+          "note": "Coming out of the country, is laid hold of and compelled to bear the cross after Jesus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [],
+      "perkNote": "Distinct from Simon Peter, Simon the Pharisee, and Simon called Zelotes."
+    },
+    {
+      "id": "anna_ethiopian_luke",
+      "name": "Anna the Prophetess",
+      "role": "submanager",
+      "scribeTier": "Jesus Christ",
+      "parentManagerId": "jesus_ethiopian_luke",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed husband -- Luke 2:36, seven years, not individually indexed"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Luke 2:36-37",
+          "note": "A prophetess, daughter of Phanuel, of the tribe of Aser, of great age, a widow of about fourscore and four years, serving God with fastings and prayers night and day (verified in the source text)."
+        },
+        {
+          "ref": "Luke 2:38",
+          "note": "Comes in that instant, gives thanks unto the Lord, and speaks of him to all that looked for redemption in Jerusalem (verified in the source text)."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "Luke 2:37",
+          "note": "A widow of about fourscore and four years (verified in the source text)."
+        }
+      ],
+      "funFacts": [],
+      "perkNote": "Attached as a submanager under Jesus's own tier rather than Simeon's -- Luke 2:25-38 depicts them as two independent witnesses in the same temple scene with no textual relationship between them, and Anna's real connection is to the infant Jesus, whom she speaks of, not to Simeon."
+    },
+    {
+      "id": "sermon_on_the_plain_ethiopian",
+      "name": "The Sermon on the Plain",
+      "role": "law",
+      "scribeTier": "The Sermon on the Plain",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "Jesus's teaching to his disciples and the multitude on the plain -- the Beatitudes and woes, love of enemies, judging not, and the parable of the two builders (verified against the source text: chapter 6, 'Blessed be ye poor...' through the house built on a rock)."
+    },
+    {
+      "id": "commissioning_of_seventy_ethiopian",
+      "name": "The Commissioning of the Seventy",
+      "role": "law",
+      "scribeTier": "The Commissioning of the Seventy",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "Jesus appoints seventy others and sends them two by two into every city and place he himself would come, with instructions for their mission (Luke 10:1-16)."
+    },
+    {
+      "id": "parable_good_samaritan_ethiopian",
+      "name": "The Good Samaritan",
+      "role": "law",
+      "scribeTier": "The Good Samaritan",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "In answer to a lawyer's question 'And who is my neighbour?', Jesus tells the parable of the man who fell among thieves and the Samaritan who showed him mercy (Luke 10:25-37)."
+    },
+    {
+      "id": "parables_of_the_lost_ethiopian",
+      "name": "Parables of the Lost",
+      "role": "law",
+      "scribeTier": "Parables of the Lost",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "The Lost Sheep, the Lost Coin, and the Prodigal Son, told in response to the Pharisees' and scribes' murmuring that Jesus receives sinners and eats with them (Luke 15)."
+    },
+    {
+      "id": "parable_lazarus_rich_man_ethiopian",
+      "name": "Lazarus and the Rich Man",
+      "role": "law",
+      "scribeTier": "Lazarus and the Rich Man",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "Jesus's parable of the rich man and the beggar Lazarus, illustrating the reversal of fortune after death and the sufficiency of Moses and the prophets to warn the living (Luke 16:19-31)."
+    },
+    {
+      "id": "parables_prayer_humility_ethiopian",
+      "name": "Parables of Prayer and Humility",
+      "role": "law",
+      "scribeTier": "Parables of Prayer and Humility",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "The Unjust Judge and the Persistent Widow, and the Pharisee and the Publican, teaching persistence in prayer and humility before God (Luke 18:1-14)."
+    },
+    {
+      "id": "parable_of_the_pounds_ethiopian",
+      "name": "The Parable of the Pounds",
+      "role": "law",
+      "scribeTier": "The Parable of the Pounds",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_ethiopian_luke",
+      "purpose": "A nobleman delivers pounds to his servants before going into a far country to receive a kingdom, then reckons with them on his return, told because the people thought the kingdom of God should immediately appear (Luke 19:11-27)."
+    }
+  ]
+}

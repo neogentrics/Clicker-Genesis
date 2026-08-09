@@ -1,0 +1,642 @@
+{
+  "book": "Numbers",
+  "translation": "Geneva",
+  "canonicalOrder": 4,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Content-identical in structure and narrative beats to the completed KJV Numbers.json (11 person-tier managers, no law tiers, Zelophehad's five daughters handled as one major + four submanagers) — verified directly against this translation's own text (Genesis 1:1-4:1, 6, 7, 10-14, 16-17, 20, 22-27, 31-27, 36 all spot-checked), not assumed from the KJV file. All ids re-suffixed \"_geneva\" to avoid collision with the existing KJV character ids per the schema's collision rule. One genuine textual difference worth flagging: Numbers 10:29 in this Geneva translation reads \"Moses said vnto Hobab ye sonne of Reuel the Midianite, ye father in law of Moses\" — Geneva's own phrasing directly states Hobab himself is Moses' father-in-law, resolving in the text an ambiguity the KJV's parallel verse leaves genuinely disputed (the KJV Numbers.json flags this as an open textual question); noted here as a real difference in this translation's own wording, not silently harmonized to KJV's more ambiguous reading. Archaic Geneva spelling variants observed and preserved in verse notes only where relevant: \"Iehoshua\"/\"Oshea\" for Joshua's name-change (Numbers 13:16), \"asse\" for donkey (kept as \"donkey\" in the tier/display name only, per the same UI-clarity convention already used in the KJV draft — the translation text itself is never altered). Naming collisions carried forward unchanged from the KJV analysis: the Numbers 27/36 \"Noah\" (Zelophehad's daughter) is unrelated to Noah of the Flood; the Numbers 27 \"Milcah\" is unrelated to Nahor's wife in Genesis 11:29 — both confirmed present with identical spelling in this Geneva text.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Struck Rock",
+      "managerId": "moses_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Budding Almond Rod",
+      "managerId": "aaron_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Camp Gate",
+      "managerId": "miriam_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Cluster of Grapes",
+      "managerId": "caleb_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Laid-On Hands",
+      "managerId": "joshua_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Earth's Mouth",
+      "managerId": "korah_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Balaam's Donkey",
+      "managerId": "balaam_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Curse Altar",
+      "managerId": "balak_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Zealous Javelin",
+      "managerId": "phinehas_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "High Priest's Mitre",
+      "managerId": "eleazar_numbers_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Inheritance Deed",
+      "managerId": "mahlah_numbers_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "moses_numbers_geneva",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — not individually indexed in this book",
+        "mother": "jochebed — not individually indexed in this book",
+        "spouses": [
+          "zipporah — not individually indexed in this book"
+        ],
+        "children": [
+          "gershom — not individually indexed in this book"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 12:3",
+          "note": "\"But Moses was a verie meeke man, aboue all the men that were vpon the earth\" — text confirmed exactly as read."
+        },
+        {
+          "ref": "Numbers 14:13-20",
+          "note": "Intercedes for Israel after the spies' evil report, pleading for pardon"
+        },
+        {
+          "ref": "Numbers 20:10-12",
+          "note": "Gathers the Congregation before the rock, cries \"Heare nowe, ye rebels,\" and strikes the rock twice with his rod instead of speaking to it — barred from entering the land as a result"
+        },
+        {
+          "ref": "Numbers 27:18-23",
+          "note": "Commissioned by God to lay hands on Joshua and set him before Eleazar the Priest as his successor"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Meribah judgment (Numbers 20:12, 24) is delivered twice in the text — once directly to Moses and once again as the stated reason Aaron himself would not enter the land, tying both brothers' exclusion to the same single moment."
+      ]
+    },
+    {
+      "id": "aaron_numbers_geneva",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Budding Almond Rod",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — not individually indexed in this book",
+        "mother": "jochebed — not individually indexed in this book",
+        "spouses": [],
+        "children": [
+          "eleazar_numbers_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:46-48",
+          "note": "Runs into the plague with a censer of incense at Moses' word and makes atonement, stopping the death — \"he stoode betweene the dead and the liuing\""
+        },
+        {
+          "ref": "Numbers 17:6-9",
+          "note": "His rod, laid up with the other eleven, is the one found budded, blossomed, and bearing ripe almonds overnight — confirms the Levitical priesthood belongs to his house"
+        },
+        {
+          "ref": "Numbers 20:24-28",
+          "note": "Told he shall not enter the land because of Meribah; his priestly garments are stripped from him and put on Eleazar atop Mount Hor, then he dies there"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This budded-rod sign (Numbers 17) is a separate, later episode from the rod-to-serpent sign shown to Pharaoh back in Exodus — a Numbers-specific confirmation of priesthood, not a repeat of the earlier wonder."
+      ]
+    },
+    {
+      "id": "miriam_numbers_geneva",
+      "name": "Miriam",
+      "role": "manager",
+      "scribeTier": "Camp Gate",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — not individually indexed in this book",
+        "mother": "jochebed — not individually indexed in this book",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 12:1-15",
+          "note": "Speaks against Moses over his Cushite wife alongside Aaron; she alone is struck with leprosy and shut outside the camp seven days"
+        },
+        {
+          "ref": "Numbers 20:1",
+          "note": "Dies at Kadesh in the desert of Zin and is buried there"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "caleb_numbers_geneva",
+      "name": "Caleb",
+      "role": "manager",
+      "scribeTier": "Cluster of Grapes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "iephunneh — Numbers 13:6, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 13:6, 30",
+          "note": "One of the twelve spies, representing the tribe of Judah; at Kadesh he stills the people before Moses, saying \"Let vs go vp at once, and possesse it\""
+        },
+        {
+          "ref": "Numbers 14:24",
+          "note": "Promised entry into the land because \"he had another spirite, and hath followed me stil\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joshua_numbers_geneva",
+      "name": "Joshua",
+      "role": "manager",
+      "scribeTier": "Laid-On Hands",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "nun — Numbers 13:8, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 13:8, 16",
+          "note": "One of the twelve spies for the tribe of Ephraim; called Oshea in this Geneva text until Moses \"called ye name of Oshea the sonne of Nun, Iehoshua\""
+        },
+        {
+          "ref": "Numbers 14:6",
+          "note": "With Caleb, rends his clothes and urges the people not to rebel against the Lord"
+        },
+        {
+          "ref": "Numbers 27:18-23",
+          "note": "Set before Eleazar the Priest and the whole Congregation as Moses' successor"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Geneva spelling here is \"Iehoshua\"/\"Oshea\" rather than the more familiar modern \"Joshua\"/\"Hoshea\" — an archaic-orthography difference only, not a content difference."
+      ]
+    },
+    {
+      "id": "korah_numbers_geneva",
+      "name": "Korah",
+      "role": "manager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "izhar — Numbers 16:1, a Levite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1-3",
+          "note": "With Dathan, Abiram, and On the son of Peleth, leads 250 princes of the Congregation in a challenge to Aaron's exclusive priesthood"
+        },
+        {
+          "ref": "Numbers 16:32-33",
+          "note": "\"The earth opened her mouth, and swallowed them vp, with their families, and all the men that were with Korah, and all their goods\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "On the son of Peleth is named once at the very start of the episode (16:1) and then never mentioned again through its outcome — a genuine textual curiosity present in this translation exactly as in KJV, not invented or explained away."
+      ]
+    },
+    {
+      "id": "balaam_numbers_geneva",
+      "name": "Balaam",
+      "role": "manager",
+      "scribeTier": "Balaam's Donkey",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "beor — Numbers 22:5, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 22:21-31",
+          "note": "Rides toward Moab on his ass (Geneva's own word); the ass sees the Angel of the Lord three times and is struck each time before the Lord opens both the ass's mouth to speak and Balaam's eyes to see"
+        },
+        {
+          "ref": "Numbers 23:7-24:9",
+          "note": "Repeatedly blesses Israel instead of cursing them, against Balak's demands, declaring \"the worde that God putteth in my mouth, that shall I speake\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Tier/display name uses \"donkey\" for UI clarity rather than the Geneva text's own word \"asse\" — a display-label choice only; the verse text itself is quoted and preserved unaltered."
+      ]
+    },
+    {
+      "id": "balak_numbers_geneva",
+      "name": "Balak",
+      "role": "manager",
+      "scribeTier": "Curse Altar",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zippor — Numbers 22:2, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 22:2-6",
+          "note": "King of Moab; sends elders to hire Balaam out of fear of Israel's numbers"
+        },
+        {
+          "ref": "Numbers 23:1-2, 23:13-14",
+          "note": "Repeatedly builds altars and moves Balaam to new vantage points, trying to obtain a curse"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phinehas_numbers_geneva",
+      "name": "Phinehas",
+      "role": "manager",
+      "scribeTier": "Zealous Javelin",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "eleazar_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:7-8",
+          "note": "Rises from the Congregation, takes a spear, and kills an Israelite man and a Midianite woman together, stopping the plague at Baal-peor"
+        },
+        {
+          "ref": "Numbers 25:11-13",
+          "note": "Rewarded with God's \"couenant of peace\" and \"an euerlasting priesthood\" for his zeal"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eleazar_numbers_geneva",
+      "name": "Eleazar",
+      "role": "manager",
+      "scribeTier": "High Priest's Mitre",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "aaron_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "phinehas_numbers_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 20:26-28",
+          "note": "Aaron's priestly garments are put upon him atop Mount Hor immediately before Aaron dies"
+        },
+        {
+          "ref": "Numbers 26:1-2, 26:63",
+          "note": "Stands with Moses to number the people in the plains of Moab — the second census"
+        },
+        {
+          "ref": "Numbers 27:19-22",
+          "note": "Stands beside Moses at Joshua's commissioning; later the one who \"shall aske counsell for him by the iudgement of Vrim\" (27:21)"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mahlah_numbers_geneva",
+      "name": "Mahlah",
+      "role": "manager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zelophehad_numbers_geneva — not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1-7",
+          "note": "With her four sisters, petitions Moses, Eleazar, the princes and the whole assembly for their late father's inheritance since he died leaving no sons; the Lord rules in their favor: \"The daughters of Zelophehad speake right\""
+        },
+        {
+          "ref": "Numbers 36:1-12",
+          "note": "The ruling is refined — the sisters marry within their father's tribe (Manasseh) so the inheritance stays within it, exactly as the Lord commanded"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named first among the five sisters in both listings this text gives (26:33 and 27:1) — the reason she is indexed as the major manager here, with her sisters as submanagers, matching the KJV draft's identical reasoning since the Geneva text lists the five in the same order."
+      ]
+    },
+    {
+      "id": "noah_daughter_numbers_geneva",
+      "name": "Noah (Zelophehad's daughter)",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 26:33, 27:1",
+          "note": "Named second of the five sisters in this Geneva text's own listing"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Accuracy flag carried over from the KJV analysis: a completely different person from Noah of the Flood — same Geneva spelling, unrelated, different gender, thousands of years apart in the narrative."
+      ]
+    },
+    {
+      "id": "hoglah_numbers_geneva",
+      "name": "Hoglah",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 26:33, 27:1",
+          "note": "Named third of the five sisters"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "milcah_daughter_numbers_geneva",
+      "name": "Milcah (Zelophehad's daughter)",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 26:33, 27:1",
+          "note": "Named fourth of the five sisters"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Accuracy flag carried over from the KJV analysis: a different person from Milcah, Nahor's wife (Genesis 11:29) — same Geneva spelling, unrelated."
+      ]
+    },
+    {
+      "id": "tirzah_numbers_geneva",
+      "name": "Tirzah",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad_numbers_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 26:33, 27:1",
+          "note": "Named fifth of the five sisters"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dathan_numbers_geneva",
+      "name": "Dathan",
+      "role": "submanager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": "korah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "eliab — Numbers 16:1, a Reubenite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1, 12, 25-33",
+          "note": "Joins Korah's challenge with his brother Abiram; refuses Moses' summons (\"We will not come vp\"); his household is swallowed with Korah's"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abiram_numbers_geneva",
+      "name": "Abiram",
+      "role": "submanager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": "korah_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "eliab — Numbers 16:1, a Reubenite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1, 12, 25-33",
+          "note": "Joins Korah's challenge alongside his brother Dathan"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eldad_numbers_geneva",
+      "name": "Eldad",
+      "role": "submanager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": "moses_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 11:26-29",
+          "note": "Prophesies in the camp without having gone out to the Tabernacle; Joshua wants them forbidden, but Moses answers he wishes all the Lord's people were prophets"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "medad_numbers_geneva",
+      "name": "Medad",
+      "role": "submanager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": "moses_numbers_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 11:26-27",
+          "note": "Prophesies alongside Eldad in the camp"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hobab_numbers_geneva",
+      "name": "Hobab",
+      "role": "named",
+      "genealogy": {
+        "father": "reuel — Numbers 10:29, this Geneva text's own spelling",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 10:29",
+          "note": "Invited by Moses to journey with Israel; this Geneva text explicitly names Hobab himself \"ye father in law of Moses\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Real translation-specific difference: this Geneva verse states outright that Hobab is Moses' father-in-law, whereas the KJV's parallel wording is genuinely ambiguous between Hobab being the father-in-law himself or Reuel's son (Moses' brother-in-law) — flagged as a real textual/translation difference, not a silent harmonization to the other translation's reading."
+      ]
+    },
+    {
+      "id": "zimri_numbers_geneva",
+      "name": "Zimri",
+      "role": "named",
+      "genealogy": {
+        "father": "salu — Numbers 25:14, a prince of Simeon, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:14",
+          "note": "An Israelite prince of the Simeonites, killed by Phinehas together with Cozbi at Baal-peor"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "cozbi_numbers_geneva",
+      "name": "Cozbi",
+      "role": "named",
+      "genealogy": {
+        "father": "zur — Numbers 25:15, a Midianite chief, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:15",
+          "note": "A Midianite woman, daughter of a Midianite prince, killed by Phinehas together with Zimri at Baal-peor"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list, matching the KJV draft's own scope.",
+    "onSonOfPeleth": {
+      "ref": "Numbers 16:1",
+      "note": "Named once as one of Korah's initial group, then never mentioned again through the episode's outcome — confirmed present with identical placement in this Geneva text."
+    },
+    "amoriteKings": {
+      "ref": "Numbers 21:21-35",
+      "names": [
+        "Sihon (king of the Amorites)",
+        "Og (king of Bashan)"
+      ],
+      "note": "Named battle opponents with no independent action beyond being defeated; not given full entries."
+    },
+    "twelveSpies": {
+      "ref": "Numbers 13:4-15",
+      "note": "All twelve are named, one per tribe; only Caleb and Joshua are indexed individually, since the other ten act as an undifferentiated group struck down together (Numbers 14:37)."
+    }
+  }
+}

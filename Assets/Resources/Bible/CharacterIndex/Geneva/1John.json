@@ -1,0 +1,666 @@
+{
+  "book": "1 John",
+  "translation": "Geneva",
+  "canonicalOrder": 74,
+  "status": "drafted directly from the real extracted Geneva 1560 verse text (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Geneva/1_john_74.json), cross-checked against the existing validated KJV 1John.json for structural/tier-naming precedent only",
+  "notes": "1 John in the Geneva 1560 text matches the KJV's book structure exactly - 5 chapters, 10/29/24/21/21 verses (105 total), no chapter/verse-numbering divergence found. Like the KJV version, this is almost entirely hortatory/thematic teaching rather than narrative (no story is told, only pastoral exhortation addressed to \"my litle children\" and \"Beloued\"), so 12 of 13 tiers are law/theme type and the one person tier is the unnamed author himself - justified under the personally-embodied test because 1:1-3 is a first-person eyewitness claim (\"which wee haue seene with these our eyes... these handes of ours haue handled\") and the whole letter is his own direct exhortation in his own voice, not him relaying someone else's separate teaching (unlike Matthew's discourse tiers, deliveredBy here always points back to the author himself). Jesus Christ is the letter's constant doctrinal subject (incarnation, atoning blood, advocacy, sonship) but never acts within a narrated scene in this book, so he gets a role:\"named\" entry rather than his own manager tier, same as the KJV version. REAL TRANSLATION-SPECIFIC DIFFERENCES FOUND (verified by reading the actual Geneva text, not assumed from KJV familiarity): (1) Geneva 1 John 2:23 reads only \"Whosoeuer denyeth the Sonne, the same hath not the Father.\" and STOPS there - it is missing the second clause found in the KJV, \"(but he that acknowledgeth the Son hath the Father also.)\" This is a genuine, well-documented textual-history fact: that clause was a later addition to English translations based on manuscripts not reflected in Beza's Greek text that underlies the 1560 Geneva Bible, so its absence here is not an extraction error, it is what this specific 1560 printing actually says - flagged descriptively, not silently patched to match KJV. (2) Where the KJV renders 2:2 and 4:10 as \"propitiation,\" the Geneva text uses \"reconciliation\" both times (\"he is the reconciliation for our sinnes\" / \"sent his Sonne to be a reconciliation for our sinnes\") - a real word-choice difference between the two translations of the same underlying Greek term (hilasmos), not a content difference, noted on the God Is Love and Walking in the Light tiers. (3) Throughout, archaic 1560 spelling/orthography is preserved verbatim in every quoted verse (vnto/vs/haue/knowe/sinne/loue/Iesus/Sonne, etc.) per the project's core rule that scripture text is never altered. (4) 5:7-8 in this Geneva printing DOES include the \"three that beare recorde in heauen, the Father, the Word, and the holy Ghost\" clause (the \"Comma Johanneum\"), matching the KJV's inclusion of this well-documented textual-criticism question - flagged the same way as in the KJV file, as a scholarly question about this printed text, not a doctrinal assertion. Cain (3:12) remains a one-verse moral cross-reference to Genesis, not re-indexed as a character here, logged in genealogyLists instead, consistent with the KJV file's handling. All character/tier ids use a \"_geneva\" suffix throughout to avoid any collision with the existing KJV CharacterIndex ids for the same book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Eyewitness",
+      "managerId": "author_1_john_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Walking in the Light",
+      "managerId": "walking_in_the_light_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Keeping His Commandements",
+      "managerId": "keeping_his_commandements_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Fathers, Yong Men, and Litle Children",
+      "managerId": "fathers_yong_men_litle_children_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Loue Not This World",
+      "managerId": "love_not_this_world_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Many Antichrists",
+      "managerId": "the_many_antichrists_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Sonnes of God",
+      "managerId": "sonnes_of_god_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Loue in Deede and in Trueth",
+      "managerId": "love_in_deed_and_trueth_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Trying the Spirits",
+      "managerId": "trying_the_spirits_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "God Is Loue",
+      "managerId": "god_is_love_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Ouercomming This World",
+      "managerId": "overcomming_this_world_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Three Witnesses",
+      "managerId": "the_three_witnesses_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Boldnes Toward God",
+      "managerId": "boldnes_toward_god_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "author_1_john_geneva",
+      "name": "The Eyewitness (traditionally John the Apostle)",
+      "role": "manager",
+      "scribeTier": "The Eyewitness",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zebedee — traditional identification only, not stated anywhere in this text itself",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 John 1:1",
+          "note": "Opens claiming direct physical eyewitness testimony of 'that Word of life' - 'which wee haue heard, which wee haue seene with these our eyes, which wee haue looked vpon, and these handes of ours haue handled.'"
+        },
+        {
+          "ref": "1 John 1:2",
+          "note": "States 'that life was made manifest, and wee haue seene it, and beare witnes, and shewe vnto you that eternall life, which was with the Father.'"
+        },
+        {
+          "ref": "1 John 1:3",
+          "note": "States his purpose: 'that yee may also haue fellowship with vs, and that our fellowship also may be with the Father, and with his Sonne Iesvs Christ.'"
+        },
+        {
+          "ref": "1 John 1:4",
+          "note": "'And these thinges write we vnto you, that that your ioy may be full.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Addresses readers repeatedly as 'litle children' and 'Beloued' throughout - a personal pastoral voice, not formal argument.",
+        "Never names himself anywhere in this letter, in either translation - the same real caveat about traditional authorship applies here as in the KJV index."
+      ]
+    },
+    {
+      "id": "jesus_christ_1_john_geneva",
+      "name": "Iesvs Christ",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "not stated in this book itself",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 John 1:3",
+          "note": "Named as the Father's Sonne, with whom fellowship is shared."
+        },
+        {
+          "ref": "1 John 1:7",
+          "note": "'The blood of Iesus Christ his Sonne clenseth vs from all sinne.'"
+        },
+        {
+          "ref": "1 John 2:1",
+          "note": "Called 'an Aduocate with the Father, Iesus Christ, the Iust.'"
+        },
+        {
+          "ref": "1 John 2:2",
+          "note": "'He is the reconciliation for our sinnes: and not for ours onely, but also for the sinnes of the whole world.'"
+        },
+        {
+          "ref": "1 John 2:22-23",
+          "note": "Denying 'that Iesus is that Christ' marks a man as 'Antichrist' - this printing's v.23 stops at 'the same hath not the Father,' without the KJV's added acknowledging-the-Son clause."
+        },
+        {
+          "ref": "1 John 4:2-3",
+          "note": "The test of the Spirit of God: confessing 'that Iesus Christ is come in the flesh.'"
+        },
+        {
+          "ref": "1 John 4:9-10",
+          "note": "God's loue shown by sending 'his onely begotten sonne into this world' and his Sonne 'to be a reconciliation for our sinnes.'"
+        },
+        {
+          "ref": "1 John 4:15",
+          "note": "'Whosoeuer confesseth that Iesus is the Sone of God, in him dwelleth God.'"
+        },
+        {
+          "ref": "1 John 5:1",
+          "note": "'Whosoeuer beleeueth that Iesus is that Christ, is borne of God.'"
+        },
+        {
+          "ref": "1 John 5:5",
+          "note": "Overcoming this world is defined as believing 'that Iesus is that Sonne of God.'"
+        },
+        {
+          "ref": "1 John 5:20",
+          "note": "Called 'his Sone Iesus Christ: this same is that very God, and that eternal life.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never acts within a narrated scene in this book in either translation - discussed purely as doctrinal subject, hence a role:'named' entry rather than a manager tier."
+      ]
+    },
+    {
+      "id": "walking_in_the_light_geneva",
+      "name": "Walking in the Light",
+      "role": "law",
+      "scribeTier": "Walking in the Light",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Teaches that fellowship with God requires walking in the light as God is light, that honest acknowledgement of sinne (not the self-deceiving claim to have none) is the true posture of a believer, and that Christ's blood cleanses while he also serves as Aduocate and reconciliation when a believer sinnes.",
+      "verses": [
+        {
+          "ref": "1 John 1:5",
+          "note": "'God is light, and in him is no darkenes.'"
+        },
+        {
+          "ref": "1 John 1:6",
+          "note": "Claiming fellowship with him while walking in darkness means 'we lie, and doe not truely.'"
+        },
+        {
+          "ref": "1 John 1:7",
+          "note": "Walking in the light brings fellowship 'one with another,' and Christ's blood 'clenseth vs from all sinne.'"
+        },
+        {
+          "ref": "1 John 1:8",
+          "note": "'If we say that we haue no sinne, we deceiue our selues, and trueth is not in vs.'"
+        },
+        {
+          "ref": "1 John 1:9",
+          "note": "'If we acknowledge our sinnes, he is faithfull and iust, to forgiue vs our sinnes, and to clense vs from all vnrighteousnes.'"
+        },
+        {
+          "ref": "1 John 1:10",
+          "note": "'If wee say we haue not sinned, wee make him a liar.'"
+        },
+        {
+          "ref": "1 John 2:1",
+          "note": "Written 'that ye sinne not,' but 'if any man sinne, wee haue an Aduocate with the Father, Iesus Christ, the Iust.'"
+        },
+        {
+          "ref": "1 John 2:2",
+          "note": "He is 'the reconciliation for our sinnes... also for the sinnes of the whole world.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "keeping_his_commandements_geneva",
+      "name": "Keeping His Commandements",
+      "role": "law",
+      "scribeTier": "Keeping His Commandements",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Teaches that true knowledge of God is proven by keeping his commandements, epitomized in an olde-yet-new commandement to loue one's brother; louing a brother is equated with walking in the light, hating one with abiding in darkenesse.",
+      "verses": [
+        {
+          "ref": "1 John 2:3",
+          "note": "'Hereby we are sure that we knowe him, if we keepe his commandements.'"
+        },
+        {
+          "ref": "1 John 2:4",
+          "note": "Claiming to know him without keeping commandements makes one 'a liar, and the trueth is not in him.'"
+        },
+        {
+          "ref": "1 John 2:5-6",
+          "note": "'The loue of God' is 'perfect in deede' in one who keeps his word, and 'ought euen so to walke, as he hath walked.'"
+        },
+        {
+          "ref": "1 John 2:7-8",
+          "note": "Calls it both 'an olde commandement, which ye haue had from the beginning' and 'a new comandement,' for 'the darkenes is past, and that true light now shineth.'"
+        },
+        {
+          "ref": "1 John 2:9",
+          "note": "Claiming to be in the light while hating a brother means being 'in darkenes, vntill this time.'"
+        },
+        {
+          "ref": "1 John 2:10",
+          "note": "'Hee that loueth his brother, abideth in that light.'"
+        },
+        {
+          "ref": "1 John 2:11",
+          "note": "Hating a brother leaves one walking in darkenesse, 'not whither hee goeth, because that darkenesse hath blinded his eyes.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "fathers_yong_men_litle_children_geneva",
+      "name": "Fathers, Yong Men, and Litle Children",
+      "role": "law",
+      "scribeTier": "Fathers, Yong Men, and Litle Children",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "A brief poetic assurance addressed in turn to three groups of believers by spiritual maturity - forgiuen litle children, fathers who haue knowen him 'from the beginning,' and yong men who haue ouercome 'that wicked one.'",
+      "verses": [
+        {
+          "ref": "1 John 2:12",
+          "note": "'Litle children, I write vnto you, because your sinnes are forgiuen you for his Names sake.'"
+        },
+        {
+          "ref": "1 John 2:13",
+          "note": "Addresses 'fathers' (who 'haue knowen him that is from the beginning') and 'yong men' (who 'haue ouercome that wicked one'), plus 'litle children' who 'haue knowen ye Father.'"
+        },
+        {
+          "ref": "1 John 2:14",
+          "note": "Restates the address, adding the yong men 'are strong, and the worde of God abideth in you.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "love_not_this_world_geneva",
+      "name": "Loue Not This World",
+      "role": "law",
+      "scribeTier": "Loue Not This World",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Warns against louing 'this world' - defined as 'the lust of the flesh, the lust of the eyes, and the pride of life' - contrasting the world's passing away with the abiding of one who fulfils the will of God.",
+      "verses": [
+        {
+          "ref": "1 John 2:15",
+          "note": "'Loue not this world, neither the things that are in this world. If any man loue this world, the loue of the Father is not in him.'"
+        },
+        {
+          "ref": "1 John 2:16",
+          "note": "Names the three components: 'the lust of the flesh, the lust of the eyes, and the pride of life.'"
+        },
+        {
+          "ref": "1 John 2:17",
+          "note": "'This world passeth away, and the lust thereof: but he that fulfilleth the will of God, abideth euer.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_many_antichrists_geneva",
+      "name": "The Many Antichrists",
+      "role": "law",
+      "scribeTier": "The Many Antichrists",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Warns 'it is the last time' and that many Antichrists - who 'went out from vs, but they were not of vs' - haue already come; reassures believers of 'an ointment from that Holy one,' and urges what was heard 'from the beginning' to abide in them.",
+      "verses": [
+        {
+          "ref": "1 John 2:18",
+          "note": "'It is the last time, and as ye haue heard that Antichrist shall come, euen now are there many Antichrists.'"
+        },
+        {
+          "ref": "1 John 2:19",
+          "note": "'They went out from vs, but they were not of vs... they should haue continued with vs.'"
+        },
+        {
+          "ref": "1 John 2:20",
+          "note": "'Ye haue an ointment from that Holy one, and know all things.'"
+        },
+        {
+          "ref": "1 John 2:22",
+          "note": "'Who is a liar, but he that denyeth that Iesus is that Christ? the same is that Antichrist that denyeth the Father and the Sonne.'"
+        },
+        {
+          "ref": "1 John 2:23",
+          "note": "'Whosoeuer denyeth the Sonne, the same hath not the Father.' - this Geneva printing ends the verse here, WITHOUT the KJV's added clause about acknowledging the Son also having the Father; a real, worth-flagging textual difference between the two translations."
+        },
+        {
+          "ref": "1 John 2:24-25",
+          "note": "Urges what was 'heard from the beginning' to 'abide in you,' promising 'that eternall life' in return."
+        },
+        {
+          "ref": "1 John 2:27",
+          "note": "'That anointing which ye receiued of him, dwelleth in you: and ye neede not that any man teach you.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sonnes_of_god_geneva",
+      "name": "Sonnes of God",
+      "role": "law",
+      "scribeTier": "Sonnes of God",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Contrasts the sonnes of God with the children of the deuil; teaches the hope of being made 'like him' when he shall appeare, and that sinne (defined as 'the transgression of the Law') is incompatible with abiding in him, while doing righteousnes and louing a brother are the visible marks of God's children.",
+      "verses": [
+        {
+          "ref": "1 John 2:29",
+          "note": "'He which doeth righteously, is borne of him.'"
+        },
+        {
+          "ref": "1 John 3:1",
+          "note": "'Behold, what loue the Father hath giuen to vs, that we should be called the sonnes of God.'"
+        },
+        {
+          "ref": "1 John 3:2",
+          "note": "'When he shalbe made manifest, we shalbe like him: for we shall see him as he is.'"
+        },
+        {
+          "ref": "1 John 3:4",
+          "note": "'Sinne is the transgression of the Lawe.'"
+        },
+        {
+          "ref": "1 John 3:5",
+          "note": "He 'was made manifest, that he might take away our sinnes, and in him is no sinne.'"
+        },
+        {
+          "ref": "1 John 3:8",
+          "note": "'He that comitteth sinne, is of the deuil... that he might loose the workes of the deuil.'"
+        },
+        {
+          "ref": "1 John 3:9",
+          "note": "'Whosoeuer is borne of God, sinneth not: for his seede remaineth in him... because he is borne of God.'"
+        },
+        {
+          "ref": "1 John 3:10",
+          "note": "'In this are the children of God knowen, and the children of the deuil: whosoeuer doeth not righteousnesse, is not of God, neither he that loueth not his brother.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "love_in_deed_and_trueth_geneva",
+      "name": "Loue in Deede and in Trueth",
+      "role": "law",
+      "scribeTier": "Loue in Deede and in Trueth",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Expands the command to loue one another as 'the message... from the beginning,' citing Cain as a negative example (a one-verse cross-reference, not indexed as a character - see genealogyLists), teaches that real loue is proven in sacrificial action - laying downe one's life for the brethren, sharing goods with a brother in need - 'not in worde, neither in tongue onely, but in deede and in trueth,' tying such loue to boldnes before God even 'if our heart condemne vs,' and to answered prayer.",
+      "verses": [
+        {
+          "ref": "1 John 3:11",
+          "note": "'This is the message... that ye heard from the beginning, that we should loue one another.'"
+        },
+        {
+          "ref": "1 John 3:12",
+          "note": "Cites Cain, 'which was of that wicked one, and slewe his brother... because his owne workes were euill, and his brothers good.'"
+        },
+        {
+          "ref": "1 John 3:13",
+          "note": "'Marueile not, my brethren, though this world hate you.'"
+        },
+        {
+          "ref": "1 John 3:14",
+          "note": "'We know that we are translated from death vnto life, because we loue the brethren.'"
+        },
+        {
+          "ref": "1 John 3:15",
+          "note": "'Whosoeuer hateth his brother, is a manslayer: and ye know that no manslayer hath eternall life abiding in him.'"
+        },
+        {
+          "ref": "1 John 3:16",
+          "note": "Christ 'layde downe his life for vs' as the model - 'we ought also to lay downe our liues for the brethren.'"
+        },
+        {
+          "ref": "1 John 3:17",
+          "note": "Withholding compassion from a brother in need calls into question whether 'the loue of God' dwells in a person."
+        },
+        {
+          "ref": "1 John 3:18",
+          "note": "'Let vs not loue in worde, neither in tongue onely, but in deede and in trueth.'"
+        },
+        {
+          "ref": "1 John 3:19-20",
+          "note": "'Hereby we know that we are of the trueth, and shall before him assure our hearts... God is greater then our heart, and knoweth all things.'"
+        },
+        {
+          "ref": "1 John 3:21",
+          "note": "'If our heart condemne vs not, then haue we boldnes toward God.'"
+        },
+        {
+          "ref": "1 John 3:22-23",
+          "note": "Keeping his commandements - beleeuing in the Name of his Sonne Iesus Christ and louing one another - is tied to receiuing whatsoeuer is asked of him."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "trying_the_spirits_geneva",
+      "name": "Trying the Spirits",
+      "role": "law",
+      "scribeTier": "Trying the Spirits",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Instructs believers not to 'beleeue euery spirit,' but to 'trie the spirits whether they are of God,' giving the concrete test of confessing 'that Iesus Christ is come in the flesh' to distinguish the Spirit of God/spirit of trueth from the spirit of Antichrist/spirit of errour.",
+      "verses": [
+        {
+          "ref": "1 John 4:1",
+          "note": "'Beleeue not euery spirit, but trie the spirits whether they are of God: for many false prophets are gone out into this worlde.'"
+        },
+        {
+          "ref": "1 John 4:2",
+          "note": "'Euery spirit which confesseth that Iesus Christ is come in the flesh, is of God.'"
+        },
+        {
+          "ref": "1 John 4:3",
+          "note": "Every spirit that does not is not of God - 'this is the spirit of Antichrist... nowe already he is in this world.'"
+        },
+        {
+          "ref": "1 John 4:4",
+          "note": "'Ye are of God, and haue ouercome them: for greater is he that is in you, then he that is in this world.'"
+        },
+        {
+          "ref": "1 John 4:6",
+          "note": "'Heereby knowe wee the spirit of trueth, and the spirit of errour.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "god_is_love_geneva",
+      "name": "God Is Loue",
+      "role": "law",
+      "scribeTier": "God Is Loue",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "The letter's central theological statement - that God's own nature is loue, demonstrated in sending 'his onely begotten sonne into this world, that we might liue through him' as 'a reconciliation for our sinnes'; because God loued first, believers are commanded to loue one another, and 'perfect loue casteth out feare.'",
+      "verses": [
+        {
+          "ref": "1 John 4:7",
+          "note": "'Beloued, let vs loue one another: for loue commeth of God, and euery one that loueth, is borne of God, and knoweth God.'"
+        },
+        {
+          "ref": "1 John 4:8",
+          "note": "'Hee that loueth not, knoweth not God: for God is loue.'"
+        },
+        {
+          "ref": "1 John 4:9",
+          "note": "God sent 'his onely begotten sonne into this world, that we might liue through him.'"
+        },
+        {
+          "ref": "1 John 4:10",
+          "note": "'Herein is that loue, not that we loued God, but that he loued vs, and sent his Sonne to be a reconciliation for our sinnes.'"
+        },
+        {
+          "ref": "1 John 4:11",
+          "note": "'Beloued, if God so loued vs, we ought also to loue one another.'"
+        },
+        {
+          "ref": "1 John 4:12",
+          "note": "'If we loue one another, God dwelleth in vs, and his loue is perfect in vs.'"
+        },
+        {
+          "ref": "1 John 4:16",
+          "note": "'God is loue, and he that dwelleth in loue, dwelleth in God, and God in him.'"
+        },
+        {
+          "ref": "1 John 4:18",
+          "note": "'There is no feare in loue, but perfect loue casteth out feare: for feare hath painefulnesse.'"
+        },
+        {
+          "ref": "1 John 4:19",
+          "note": "'We loue him, because he loued vs first.'"
+        },
+        {
+          "ref": "1 John 4:20",
+          "note": "Claiming to loue God while hating a brother makes one 'a liar.'"
+        },
+        {
+          "ref": "1 John 4:21",
+          "note": "'This commandement haue we of him, that he that loueth God, should loue his brother also.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "4:8 and 4:16 both render 'God is loue' - same thematic weight given here as in the KJV file's parallel tier, though the Geneva spelling ('loue') differs from KJV's 'love.'"
+      ]
+    },
+    {
+      "id": "overcomming_this_world_geneva",
+      "name": "Ouercomming This World",
+      "role": "law",
+      "scribeTier": "Ouercomming This World",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Teaches that faith that Iesus is the Christ, loue for God, and loue for God's children are bound together, and that this faith is itself 'that victorie that hath ouercome this world.'",
+      "verses": [
+        {
+          "ref": "1 John 5:1",
+          "note": "'Whosoeuer beleeueth that Iesus is that Christ, is borne of God.'"
+        },
+        {
+          "ref": "1 John 5:3",
+          "note": "'This is the loue of God, that we keepe his commandements: and his commandements are not burdenous.'"
+        },
+        {
+          "ref": "1 John 5:4",
+          "note": "'All that is borne of God, ouercommeth this world: and this is that victorie that hath ouercome this world, euen our faith.'"
+        },
+        {
+          "ref": "1 John 5:5",
+          "note": "'Who is it that ouercommeth this world, but he which beleeueth that Iesus is that Sonne of God?'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_three_witnesses_geneva",
+      "name": "The Three Witnesses",
+      "role": "law",
+      "scribeTier": "The Three Witnesses",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Presents the testimony establishing belief in the Sonne - 'the spirit, and the water and the blood' bearing record in earth, plus this printing's heavenly-witness clause (Father, Word, holy Ghost) at v.7, flagged as the well-documented 'Comma Johanneum' textual question rather than asserted as settled - concluding God's own witnes is greater than any man's, and is the basis of eternall life.",
+      "verses": [
+        {
+          "ref": "1 John 5:6",
+          "note": "'This is that Iesus Christ that came by water and blood... and it is that Spirit, that beareth witnesse: for that Spirit is trueth.'"
+        },
+        {
+          "ref": "1 John 5:7",
+          "note": "'For there are three, which beare recorde in heauen, the Father, the Worde, and the holy Ghost: and these three are one.' - present in this 1560 printing just as in the KJV; a widely-documented textual variant absent from the earliest Greek manuscripts, noted descriptively as a scholarly question, not a doctrinal assertion."
+        },
+        {
+          "ref": "1 John 5:8",
+          "note": "'There are three, which beare record in the earth, the spirit, and the water and the blood: and these three agree in one.'"
+        },
+        {
+          "ref": "1 John 5:9",
+          "note": "'If we receiue the witnesse of men, the witnesse of God is greater.'"
+        },
+        {
+          "ref": "1 John 5:11",
+          "note": "'This is that record, to wit, that God hath giuen vnto vs eternall life, and this life is in that his Sonne.'"
+        },
+        {
+          "ref": "1 John 5:12",
+          "note": "'He that hath that Sonne, hath that life: and he that hath not that Sonne of God, hath not that life.'"
+        },
+        {
+          "ref": "1 John 5:13",
+          "note": "States the letter's purpose: 'that ye may knowe that ye haue eternall life, and that ye may beleeue in the Name of that Sonne of God.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "boldnes_toward_god_geneva",
+      "name": "Boldnes Toward God",
+      "role": "law",
+      "scribeTier": "Boldnes Toward God",
+      "parentManagerId": null,
+      "deliveredBy": "author_1_john_geneva",
+      "purpose": "Closes the letter with practical pastoral instruction - assurance in prayer offered 'according to his will,' interceding for a brother's sinne 'that is not vnto death' while distinguishing (without naming) 'a sinne vnto death,' the statement that one borne of God 'sinneth not' since 'that wicked one toucheth him not,' and the final short warning to 'keepe your selues from idoles.'",
+      "verses": [
+        {
+          "ref": "1 John 5:14",
+          "note": "'This is that assurance, that we haue in him, that if we aske any thing according to his will, he heareth vs.'"
+        },
+        {
+          "ref": "1 John 5:16",
+          "note": "Distinguishes 'a sinne that is not vnto death' (for which one should pray) from 'a sinne vnto death,' which he does not instruct prayer for, without specifying further."
+        },
+        {
+          "ref": "1 John 5:18",
+          "note": "'Whosoeuer is borne of God, sinneth not... and that wicked one toucheth him not.'"
+        },
+        {
+          "ref": "1 John 5:19",
+          "note": "'We knowe that we are of God, and this whole world lieth in wickednesse.'"
+        },
+        {
+          "ref": "1 John 5:20",
+          "note": "'We know that that Sone of God is come, and hath giue vs a mind to know him, which is true.'"
+        },
+        {
+          "ref": "1 John 5:21",
+          "note": "Final line of the letter: 'Litle children, keepe your selues from idoles, Amen.'"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "cain_reference": {
+      "ref": "1 John 3:12",
+      "note": "Cited by name as a negative moral example ('Not as Cain which was of that wicked one, and slewe his brother') within the Loue in Deede and in Trueth tier. Cain is already indexed as a full character in the Genesis character index; not re-indexed here since he carries no scene of his own within 1 John itself, only a single-verse illustrative cross-reference - same handling as the KJV 1John.json file."
+    },
+    "the_elder_title_note": {
+      "ref": "2 John 1:1 / 3 John 1:1 (cross-reference only, not part of this book)",
+      "note": "The author of the Johannine epistles calls himself 'the Elder' in 2 John and 3 John, but 1 John itself never uses this or any other self-designation, in either the Geneva or KJV printings - flagged for continuity when 2 John/3 John (Geneva) are indexed."
+    }
+  }
+}

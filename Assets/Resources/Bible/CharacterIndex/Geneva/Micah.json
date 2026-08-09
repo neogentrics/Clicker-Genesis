@@ -1,0 +1,396 @@
+{
+  "book": "Micah",
+  "translation": "Geneva",
+  "canonicalOrder": 33,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from Assets/Resources/Verses/Geneva/micah_33.json (all 7 chapters, 105 verses, matching the stated total exactly: 16+13+12+13+15+16+20=105). This Geneva translation of Micah matches the standard KJV canon's structure and content exactly — same 7 chapters, same episodes in the same order, no deuterocanonical or structural divergence of the kind found elsewhere in this project (e.g. the Ethiopian Ezra/1 Esdras case). The tier structure therefore mirrors the shape of the existing KJV Micah.json (one person tier for the prophet himself, five law/theme tiers for the book's major oracles), but every character/manager id is suffixed \"_geneva\" to avoid collision with the KJV CharacterIndex, and every quoted verse comes from this translation's own archaic 1560 English, not re-used KJV phrasing. Real, worth-flagging WORDING differences found by reading the actual Geneva text (translation-level, not structural): Micah 4:3 renders the peace oracle's implements as \"mattockes\" and \"sithes\" rather than KJV's \"plowshares\" and \"pruninghooks\" — a genuinely different pair of agricultural tools named in the same verse; Micah 6:8 phrases the third clause as its own imperative, \"to humble thy selfe, to walke with thy God,\" rather than KJV's single adverbial \"walk humbly with thy God\"; Micah 7:18-19 reads \"taketh away iniquitie... because mercie pleaseth him... cast all their sinnes into the bottome of the sea\" versus KJV's \"pardoneth iniquity... he delighteth in mercy... the depths of the sea\"; Micah 5:4 says the ruler shall be \"magnified\" unto the ends of the world rather than KJV's \"great.\" Spelling variants throughout (not content differences): \"Iaakob\" for Jacob, \"Ierusalem\" for Jerusalem, \"Iudah\" for Judah, \"Beth-leem Ephrathah\" for Bethlehem Ephratah, \"Asshur\" for Assyria, and — notably — this translation spells the prophet's gentilic \"the Morashite\" (Micah 1:1), one letter different from the KJV's \"Morasthite.\" NAMING COLLISION (same as the KJV entry, re-confirmed by reading this translation's own 1:1 superscription): this Micah, active \"in the dayes of Iotham, Ahaz, and Hezekiah Kings of Iudah,\" is not the same person as the Micah of Judges 17-18 (the Ephraimite who made a household idol) despite the identical spelling in modern English — no relation is implied or stated in this text. Genealogy content is thin throughout, consistent with the KJV version: only Balaam gets a stated patronymic (\"Balaam the sonne of Beor,\" 6:5); Moses, Aaron, Miriam, and Balak are named without family lines in Micah's own text.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Morashite's Scroll",
+      "managerId": "micah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Bribed Judge's Scale",
+      "managerId": "judgment_against_leaders_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Mattock and Sithe",
+      "managerId": "mountain_of_the_lords_house_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Ephrathah's Seal",
+      "managerId": "bethlehem_ruler_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Mountains' Witnesse",
+      "managerId": "covenant_lawsuit_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Sea's Bottome",
+      "managerId": "divine_mercy_pardon_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "micah_geneva",
+      "name": "Micah",
+      "role": "manager",
+      "scribeTier": "Morashite's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 1:1",
+          "note": "\"The word of the Lord, that came vnto Micah the Morashite in the dayes of Iotham, Ahaz, and Hezekiah Kings of Iudah, which he sawe concerning Samaria, and Ierusalem.\" — the superscription naming the prophet and dating his ministry."
+        },
+        {
+          "ref": "Micah 1:8",
+          "note": "\"Therefore I will mourne and howle: I wil goe without clothes, and naked: I will make lamentation like the dragons, and mourning as the ostriches.\" — Micah's own dramatic, physical response to the coming judgment."
+        },
+        {
+          "ref": "Micah 3:8",
+          "note": "\"Yet notwithstanding I am full of power by the Spirite of the Lord, and of iudgement, and of strength to declare vnto Iaakob his transgression, and to Israel his sinne.\" — Micah's declaration of his own prophetic authority."
+        },
+        {
+          "ref": "Micah 7:7",
+          "note": "\"Therefore I will looke vnto the Lord: I will waite for God my Sauiour: my God will heare me.\" — Micah's personal statement of hope, opening the book's closing section."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation spells his hometown designation \"the Morashite\" (Micah 1:1) — one letter different from the more familiar \"Morasthite\" spelling.",
+        "Dated by his own superscription to the reigns of Iotham, Ahaz, and Hezekiah, kings of Iudah, placing him as a contemporary of Isaiah.",
+        "NAMING COLLISION: this Micah, prophesying concerning Samaria and Ierusalem, is a different individual from the Micah of Judges 17-18 who made a household idol — no connection is stated in this text."
+      ]
+    },
+    {
+      "id": "judgment_against_leaders_geneva",
+      "name": "Judgment Against Corrupt Leaders",
+      "role": "law",
+      "scribeTier": "Bribed Judge's Scale",
+      "parentManagerId": null,
+      "deliveredBy": "micah_geneva",
+      "purpose": "Indicts Iudah's civic and religious leadership - princes who hate good and love evil, prophets who prophesy for money yet lean on the Lord for false security, priests who teach for hire - and pronounces that because of this corruption Zion shall be plowed as a field.",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 3:1-3",
+          "note": "\"O heads of Iaakob, and yee princes of the house of Israel... they hate the good, and loue the euill: they plucke off their skinnes from them, and their flesh from their bones.\""
+        },
+        {
+          "ref": "Micah 3:5",
+          "note": "\"Concerning the prophets that deceiue my people, and bite them with their teeth, and cry peace, but if a man put not into their mouthes, they prepare warre against him.\""
+        },
+        {
+          "ref": "Micah 3:11",
+          "note": "\"The heads thereof iudge for rewardes, and the Priestes thereof teache for hyre, and the prophets thereof prophecie for money: yet wil they leane vpon the Lord, and say, Is not the Lord among vs? no euill can come vpon vs.\""
+        },
+        {
+          "ref": "Micah 3:12",
+          "note": "\"Therefore shall Zion for your sake bee plowed as a field, and Ierusalem shalbe an heape, and the mountaine of the house, as the hye places of the forest.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation's figurative indictment (\"plucke off their skinnes... and their flesh from their bones\") is the same graphic image found in the standard canon, describing exploitation rather than a literal act."
+      ]
+    },
+    {
+      "id": "mountain_of_the_lords_house_geneva",
+      "name": "The Mountaine of the Lord's House",
+      "role": "law",
+      "scribeTier": "Mattock and Sithe",
+      "parentManagerId": null,
+      "deliveredBy": "micah_geneva",
+      "purpose": "Envisions the Lord's house exalted above the mountains in the last days, with many nations flowing to it to be taught his ways and to convert weapons into farming tools, resulting in a future of secure, individual peace.",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 4:1",
+          "note": "\"The mountaine of the House of the Lord shall be prepared in the toppe of the mountaines, and it shall bee exalted aboue the hilles, and people shall flowe vnto it.\""
+        },
+        {
+          "ref": "Micah 4:2",
+          "note": "\"He will teache vs his wayes, and we wil walke in his pathes: for the Lawe shall goe forth of Zion, and the worde of the Lord from Ierusalem.\""
+        },
+        {
+          "ref": "Micah 4:3",
+          "note": "\"They shall breake their swordes into mattockes, and their speares into sithes: nation shall not lift vp a sword against nation, neither shall they learne to fight any more.\" — this translation's own choice of farming implements (mattocks/scythes) differs in wording from the more familiar plowshares/pruninghooks rendering."
+        },
+        {
+          "ref": "Micah 4:4",
+          "note": "\"They shall sit euery man vnder his vine, and vnder his figge tree, and none shall make them afraid: for the mouth of the Lord of hostes hath spoken it.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The \"mattockes\" and \"sithes\" of Micah 4:3 in this translation name different farm tools than the plowshares/pruninghooks pairing used elsewhere - a genuine wording choice, not an error."
+      ]
+    },
+    {
+      "id": "bethlehem_ruler_geneva",
+      "name": "Beth-leem Ephrathah's Ruler",
+      "role": "law",
+      "scribeTier": "Ephrathah's Seal",
+      "parentManagerId": null,
+      "deliveredBy": "micah_geneva",
+      "purpose": "Names Beth-leem Ephrathah, though little among the thousands of Iudah, as the origin of a future ruler in Israel whose goings forth have been from the beginning and from everlasting, promising he shall stand and feed his flock in the strength of the Lord and be Israel's peace against Asshur.",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 5:2",
+          "note": "\"Thou Beth-leem Ephrathah art litle to bee among the thousandes of Iudah, yet out of thee shall he come forth vnto me, that shalbe the ruler in Israel: whose goings forth haue bene from the beginning and from euerlasting.\""
+        },
+        {
+          "ref": "Micah 5:4",
+          "note": "\"He shall stand, and feed in the strength of the Lord, and in the maiestie of the Name of the Lord his God, and they shall dwel still: for now shall he be magnified vnto the ends of the world.\""
+        },
+        {
+          "ref": "Micah 5:5",
+          "note": "\"And hee shall be our peace when Asshur shall come into our lande... then shall we raise against him seuen shepheardes, and eight principall men.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation says the ruler shall be \"magnified\" unto the ends of the world (5:4), a slightly different word choice than the more familiar \"great.\"",
+        "Spells the town's fuller, older form \"Beth-leem Ephrathah\" (5:2), distinguishing it from any other town of the same shorter name."
+      ]
+    },
+    {
+      "id": "covenant_lawsuit_geneva",
+      "name": "The Lord's Covenant Lawsuit",
+      "role": "law",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": null,
+      "deliveredBy": "micah_geneva",
+      "purpose": "A formal lawsuit in which the Lord summons the mountains as witnesses, recounts his redemptive acts (bringing Israel from Egypt, sending Moses, Aaron, and Miriam, overturning Balak's plot with Balaam) as evidence of his own righteousness, rejects empty ritual sacrifice, and defines covenant faithfulness as doing justly, loving mercy, and humbling oneself to walk with God - followed by a sentence against the city's deceitful commerce and its adherence to the statutes of Omri and the house of Ahab.",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:1-2",
+          "note": "\"Arise thou, and contende before the mountaines... Heare ye, O mountaynes, the Lordes quarel... for the Lord hath a quarell against his people, and he will pleade with Israel.\""
+        },
+        {
+          "ref": "Micah 6:4",
+          "note": "\"Surely I brought thee vp out of the land of Egypt, and redeemed thee out of the house of seruants, and I haue sent before thee, Moses, Aaron, and Miriam.\""
+        },
+        {
+          "ref": "Micah 6:5",
+          "note": "\"O my people, remember nowe what Balak King of Moab had deuised, and what Balaam the sonne of Beor answered him, from Shittim vnto Gilgal, that ye may knowe the righteousnes of the Lord.\""
+        },
+        {
+          "ref": "Micah 6:6-7",
+          "note": "\"Wherewith shall I come before the Lord... shall I giue my first borne for my transgression, euen the fruite of my bodie, for the sinne of my soule?\""
+        },
+        {
+          "ref": "Micah 6:8",
+          "note": "\"He hath shewed thee, O man, what is good, and what the Lord requireth of thee: surely to doe iustly, and to loue mercie, and to humble thy selfe, to walke with thy God.\" — this translation frames the third clause as its own imperative, \"humble thy selfe,\" rather than a single adverbial phrase."
+        },
+        {
+          "ref": "Micah 6:11",
+          "note": "\"Shall I iustifie the wicked balances, and the bag of deceitfull weightes?\""
+        },
+        {
+          "ref": "Micah 6:16",
+          "note": "\"The statutes of Omri are kept, and all the maner of the house of Ahab, and ye walke in their counsels, that I should make thee waste, and the inhabitants thereof an hissing: therefore ye shall beare the reproche of my people.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Micah 6:8's three requirements are rendered here with the third as its own reflexive command, \"to humble thy selfe, to walke with thy God.\""
+      ]
+    },
+    {
+      "id": "moses_geneva",
+      "name": "Moses",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": "covenant_lawsuit_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "\"I sent before thee, Moses, Aaron, and Miriam\" — cited as the first of three leaders sent by God as evidence in the covenant lawsuit."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named only in this single verse in this book, with no further narrative detail supplied here."
+      ]
+    },
+    {
+      "id": "aaron_geneva",
+      "name": "Aaron",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": "covenant_lawsuit_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "Named as the second of the three leaders God \"sent before\" Israel out of Egypt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named only alongside Moses and Miriam in this single verse; no priestly detail is added here."
+      ]
+    },
+    {
+      "id": "miriam_geneva",
+      "name": "Miriam",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": "covenant_lawsuit_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "Named as the third of the three leaders God \"sent before\" Israel — the only woman named in this book."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only woman named anywhere in this translation's text of Micah, listed as one of Israel's three sent leaders."
+      ]
+    },
+    {
+      "id": "balak_geneva",
+      "name": "Balak",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": "covenant_lawsuit_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:5",
+          "note": "\"Remember nowe what Balak King of Moab had deuised\" — his plot against Israel recalled as proof of the Lord's preserved righteousness."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Identified only by title, \"Balak King of Moab\" — no genealogy is given in this text."
+      ]
+    },
+    {
+      "id": "balaam_geneva",
+      "name": "Balaam",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witnesse",
+      "parentManagerId": "covenant_lawsuit_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Beor",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 6:5",
+          "note": "\"What Balaam the sonne of Beor answered him, from Shittim vnto Gilgal, that ye may knowe the righteousnes of the Lord.\" — this text's own citation is evidentiary/neutral, naming him to demonstrate the Lord's righteousness."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is the only verse in this book supplying a patronymic for any figure besides Micah's own gentilic - \"Balaam the sonne of Beor.\""
+      ]
+    },
+    {
+      "id": "divine_mercy_pardon_geneva",
+      "name": "God's Pardoning Mercy",
+      "role": "law",
+      "scribeTier": "Sea's Bottome",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Closes the book on a note of hope — God delights in mercy, pardons iniquity, and casts sins into the depths of the sea, fulfilling the ancient oath to Abraham and Jacob.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Micah 7:18-19",
+          "note": "'Who is a God like vnto thee, that pardoneth iniquitie... he will cast all their sinnes into the bottome of the sea.'"
+        },
+        {
+          "ref": "Micah 7:20",
+          "note": "Performs the truth to Iaakob and the mercy to Abraham, sworn to the fathers of old."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references were needed for this book - every named figure in this translation's text of Micah (Micah, Moses, Aaron, Miriam, Balak, Balaam) is captured as an individual character entry above."
+  }
+}

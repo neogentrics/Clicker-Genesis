@@ -1,0 +1,552 @@
+{
+  "book": "Ephesians",
+  "translation": "Ethiopian",
+  "canonicalOrder": 69,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Verified by direct read of Assets/Resources/Verses/Ethiopian/ephesians_69.json (6 chapters, 155 verses): this Ethiopian-translation text of Ephesians is word-for-word identical (down to punctuation and archaic phrasing) to the KJV Ephesians already indexed at Assets/Resources/Bible/CharacterIndex/Ephesians.json - no content, verse-count, or structural differences were found (unlike Ezra elsewhere in this same Ethiopian Bible, which genuinely diverges). Per the task's own guidance for this case, the KJV's validated 13-tier structure (1 person tier + 12 law/theme tiers) is adapted here rather than invented from scratch, with every verse citation independently re-checked against this translation's own file and every id re-scoped with an \"_ethiopian\" suffix so it never collides with the KJV character set. Same two named individuals as KJV: Paul (full manager, writes in first person throughout, calls himself prisoner/ambassador in bonds) and Tychicus (submanager under Paul, the letter's courier, loyalty-boost - the only other named person in the book). No naming collisions. All household/addressee classes (saints at Ephesus, wives, husbands, children, fathers, servants, masters) remain undifferentiated per the text and are folded into the relevant law tiers' purpose/verses rather than invented as individual characters, per rule 5.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Ambassador in Bonds",
+      "managerId": "paul_ethiopian_ephesians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Chosen Before the Foundation of the World",
+      "managerId": "chosen_before_foundation_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Eyes of Your Understanding",
+      "managerId": "eyes_of_understanding_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Quickened Together With Christ",
+      "managerId": "quickened_with_christ_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "One New Man",
+      "managerId": "one_new_man_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Mystery Made Known",
+      "managerId": "mystery_made_known_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Rooted and Grounded in Love",
+      "managerId": "rooted_grounded_love_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Unity of the Spirit",
+      "managerId": "unity_of_spirit_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Put Off the Old Man",
+      "managerId": "old_man_new_man_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Walk as Children of Light",
+      "managerId": "children_of_light_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Wives, Husbands, and the Great Mystery",
+      "managerId": "marriage_household_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Children, Fathers, Servants, and Masters",
+      "managerId": "family_household_ethiopian_ephesians",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Whole Armour of God",
+      "managerId": "whole_armour_of_god_ethiopian_ephesians",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_ethiopian_ephesians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Ambassador in Bonds",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ephesians 1:1",
+          "note": "Opens the letter: \"Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus, and to the faithful in Christ Jesus.\""
+        },
+        {
+          "ref": "Ephesians 3:1",
+          "note": "Identifies himself as \"the prisoner of Jesus Christ for you Gentiles.\""
+        },
+        {
+          "ref": "Ephesians 3:7-8",
+          "note": "Describes being made a minister \"according to the gift of the grace of God given unto me,\" though \"less than the least of all saints,\" sent to preach \"the unsearchable riches of Christ\" among the Gentiles."
+        },
+        {
+          "ref": "Ephesians 3:13",
+          "note": "Asks that they not lose heart \"at my tribulations for you, which is your glory.\""
+        },
+        {
+          "ref": "Ephesians 4:1",
+          "note": "Beseeches them, \"as the prisoner of the Lord,\" to walk worthy of their calling."
+        },
+        {
+          "ref": "Ephesians 6:19-20",
+          "note": "Asks for prayer that utterance be given him to make known the mystery of the gospel, \"for which I am an ambassador in bonds.\""
+        },
+        {
+          "ref": "Ephesians 6:21-22",
+          "note": "Sends Tychicus to the Ephesians to report on his affairs and comfort their hearts."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paul calls himself \"prisoner\" twice in this letter (3:1, \"the prisoner of Jesus Christ\"; 4:1, \"the prisoner of the Lord\"); at 6:20 he uses different language, \"an ambassador in bonds,\" for the same confinement.",
+        "No family/genealogical details are given anywhere within this book's own text, so genealogy fields are left null rather than importing background from Acts or the other epistles."
+      ]
+    },
+    {
+      "id": "tychicus_ethiopian_ephesians",
+      "name": "Tychicus",
+      "role": "submanager",
+      "scribeTier": "The Ambassador in Bonds",
+      "parentManagerId": "paul_ethiopian_ephesians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ephesians 6:21",
+          "note": "Paul calls him \"a beloved brother and faithful minister in the Lord\" who will tell the Ephesians all of Paul's affairs."
+        },
+        {
+          "ref": "Ephesians 6:22",
+          "note": "Paul states he sent Tychicus \"for the same purpose, that ye might know our affairs, and that he might comfort your hearts.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only other named individual in the entire book - appears solely as the personal courier of the letter, a faithful supporting role, hence loyalty-boost rather than cost-cutter."
+      ]
+    },
+    {
+      "id": "chosen_before_foundation_ethiopian_ephesians",
+      "name": "Chosen Before the Foundation of the World",
+      "role": "law",
+      "scribeTier": "Chosen Before the Foundation of the World",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Establishes the believer's standing as chosen by God's grace before creation itself - predestined to adoption, redeemed through Christ's blood, and sealed with the Holy Spirit as \"the earnest of our inheritance.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 1:3",
+          "note": "\"Blessed be the God and Father of our Lord Jesus Christ, who hath blessed us with all spiritual blessings in heavenly places in Christ.\""
+        },
+        {
+          "ref": "Ephesians 1:4",
+          "note": "\"According as he hath chosen us in him before the foundation of the world, that we should be holy and without blame before him in love.\""
+        },
+        {
+          "ref": "Ephesians 1:5",
+          "note": "\"Having predestinated us unto the adoption of children by Jesus Christ to himself, according to the good pleasure of his will.\""
+        },
+        {
+          "ref": "Ephesians 1:7",
+          "note": "\"In whom we have redemption through his blood, the forgiveness of sins, according to the riches of his grace.\""
+        },
+        {
+          "ref": "Ephesians 1:13-14",
+          "note": "Believers are \"sealed with that holy Spirit of promise, which is the earnest of our inheritance until the redemption of the purchased possession.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eyes_of_understanding_ethiopian_ephesians",
+      "name": "The Eyes of Your Understanding",
+      "role": "law",
+      "scribeTier": "The Eyes of Your Understanding",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Paul's prayer that the saints receive \"the spirit of wisdom and revelation\" to grasp the hope of their calling, grounded in the same power that raised Christ from the dead and seated him as head over the church, \"which is his body.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 1:17",
+          "note": "Prays God would give them \"the spirit of wisdom and revelation in the knowledge of him.\""
+        },
+        {
+          "ref": "Ephesians 1:18",
+          "note": "\"The eyes of your understanding being enlightened that ye may know what is the hope of his calling.\""
+        },
+        {
+          "ref": "Ephesians 1:19-20",
+          "note": "The \"exceeding greatness of his power\" is the same power God \"wrought in Christ, when he raised him from the dead.\""
+        },
+        {
+          "ref": "Ephesians 1:22-23",
+          "note": "God \"gave him to be the head over all things to the church, which is his body, the fulness of him that filleth all in all.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "quickened_with_christ_ethiopian_ephesians",
+      "name": "Quickened Together With Christ",
+      "role": "law",
+      "scribeTier": "Quickened Together With Christ",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Describes salvation as God's rescue of the spiritually dead - \"by grace are ye saved through faith... not of works, lest any man should boast\" - teaching that believers are God's own \"workmanship, created in Christ Jesus unto good works.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 2:1",
+          "note": "The Ephesians were formerly \"dead in trespasses and sins.\""
+        },
+        {
+          "ref": "Ephesians 2:4-5",
+          "note": "\"God, who is rich in mercy, for his great love wherewith he loved us... hath quickened us together with Christ.\""
+        },
+        {
+          "ref": "Ephesians 2:8-9",
+          "note": "\"For by grace are ye saved through faith and that not of yourselves: it is the gift of God: not of works, lest any man should boast.\""
+        },
+        {
+          "ref": "Ephesians 2:10",
+          "note": "\"We are his workmanship, created in Christ Jesus unto good works, which God hath before ordained that we should walk in them.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "one_new_man_ethiopian_ephesians",
+      "name": "One New Man",
+      "role": "law",
+      "scribeTier": "One New Man",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Explains the reconciliation of Jew and Gentile in Christ - the \"middle wall of partition\" broken down, both made into \"one new man\" and built together as \"an holy temple in the Lord,\" with Christ as \"the chief corner stone.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 2:14",
+          "note": "\"He is our peace, who hath made both one, and hath broken down the middle wall of partition between us.\""
+        },
+        {
+          "ref": "Ephesians 2:15",
+          "note": "Christ's purpose was \"to make in himself of twain one new man, so making peace.\""
+        },
+        {
+          "ref": "Ephesians 2:16",
+          "note": "Christ's purpose was \"that he might reconcile both unto God in one body by the cross, having slain the enmity thereby.\""
+        },
+        {
+          "ref": "Ephesians 2:17-18",
+          "note": "Christ \"came and preached peace to you which were afar off, and to them that were nigh,\" so \"through him we both have access by one Spirit unto the Father.\""
+        },
+        {
+          "ref": "Ephesians 2:19-20",
+          "note": "Gentile believers are now \"fellowcitizens with the saints... built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone.\""
+        },
+        {
+          "ref": "Ephesians 2:21-22",
+          "note": "The whole building \"groweth unto an holy temple in the Lord,\" believers being \"builded together for an habitation of God through the Spirit.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mystery_made_known_ethiopian_ephesians",
+      "name": "The Mystery Made Known",
+      "role": "law",
+      "scribeTier": "The Mystery Made Known",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Explains the \"mystery of Christ\" specifically revealed to Paul by revelation - that the Gentiles are \"fellowheirs, and of the same body, and partakers of his promise in Christ by the gospel.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 3:3-4",
+          "note": "Paul states the mystery was made known to him \"by revelation... as I wrote afore in few words, whereby, when ye read, ye may understand my knowledge in the mystery of Christ.\""
+        },
+        {
+          "ref": "Ephesians 3:5",
+          "note": "The mystery \"which in other ages was not made known unto the sons of men, as it is now revealed unto his holy apostles and prophets by the Spirit.\""
+        },
+        {
+          "ref": "Ephesians 3:6",
+          "note": "\"That the Gentiles should be fellowheirs, and of the same body, and partakers of his promise in Christ by the gospel.\""
+        },
+        {
+          "ref": "Ephesians 3:8",
+          "note": "\"Unto me, who am less than the least of all saints, is this grace given, that I should preach among the Gentiles the unsearchable riches of Christ.\""
+        },
+        {
+          "ref": "Ephesians 3:9-10",
+          "note": "The purpose is that \"the manifold wisdom of God\" be made known \"by the church\" even to \"principalities and powers in heavenly places.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "rooted_grounded_love_ethiopian_ephesians",
+      "name": "Rooted and Grounded in Love",
+      "role": "law",
+      "scribeTier": "Rooted and Grounded in Love",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Paul's prayer that Christ dwell in the saints' hearts by faith, that they be \"rooted and grounded in love\" and comprehend the vastness of Christ's love that \"passeth knowledge,\" closing in a doxology.",
+      "verses": [
+        {
+          "ref": "Ephesians 3:16-17",
+          "note": "Prays they be \"strengthened with might by his Spirit in the inner man; that Christ may dwell in your hearts by faith.\""
+        },
+        {
+          "ref": "Ephesians 3:18-19",
+          "note": "Prays they comprehend \"the breadth, and length, and depth, and height; and to know the love of Christ, which passeth knowledge.\""
+        },
+        {
+          "ref": "Ephesians 3:20-21",
+          "note": "Closing doxology: \"unto him that is able to do exceeding abundantly above all that we ask or think... unto him be glory in the church by Christ Jesus.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "unity_of_spirit_ethiopian_ephesians",
+      "name": "The Unity of the Spirit",
+      "role": "law",
+      "scribeTier": "The Unity of the Spirit",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Calls believers to walk worthy of their calling in humility and unity - \"one body, and one Spirit... one Lord, one faith, one baptism, one God and Father of all\" - and explains the ministry gifts Christ gave to equip the saints and build up the body.",
+      "verses": [
+        {
+          "ref": "Ephesians 4:2-3",
+          "note": "Calls for \"lowliness and meekness, with longsuffering, forbearing one another in love; endeavouring to keep the unity of the Spirit in the bond of peace.\""
+        },
+        {
+          "ref": "Ephesians 4:4-6",
+          "note": "\"There is one body, and one Spirit... one Lord, one faith, one baptism, one God and Father of all.\""
+        },
+        {
+          "ref": "Ephesians 4:7",
+          "note": "\"Unto every one of us is given grace according to the measure of the gift of Christ.\""
+        },
+        {
+          "ref": "Ephesians 4:8-10",
+          "note": "Christ \"ascended up on high, he led captivity captive, and gave gifts unto men\" - the one who \"descended first into the lower parts of the earth\" is the same who \"ascended up far above all heavens, that he might fill all things.\""
+        },
+        {
+          "ref": "Ephesians 4:11-12",
+          "note": "Christ \"gave some, apostles and some, prophets and some, evangelists and some, pastors and teachers for the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ.\""
+        },
+        {
+          "ref": "Ephesians 4:15-16",
+          "note": "\"Speaking the truth in love,\" the body grows up \"into him in all things, which is the head, even Christ.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "old_man_new_man_ethiopian_ephesians",
+      "name": "Put Off the Old Man",
+      "role": "law",
+      "scribeTier": "Put Off the Old Man",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "A direct call to abandon the former \"vanity\" of Gentile life, be \"renewed in the spirit of your mind,\" and \"put on the new man,\" worked out in concrete instructions against lying, unresolved anger, theft, and corrupt speech.",
+      "verses": [
+        {
+          "ref": "Ephesians 4:17-19",
+          "note": "Paul testifies \"in the Lord, that ye henceforth walk not as other Gentiles walk, in the vanity of their mind\" - alienated from the life of God, past feeling, given over to lasciviousness."
+        },
+        {
+          "ref": "Ephesians 4:22-24",
+          "note": "Instructs them to put off \"the old man, which is corrupt\" and \"put on the new man, which after God is created in righteousness and true holiness.\""
+        },
+        {
+          "ref": "Ephesians 4:25",
+          "note": "\"Putting away lying, speak every man truth with his neighbour: for we are members one of another.\""
+        },
+        {
+          "ref": "Ephesians 4:26",
+          "note": "\"Be ye angry, and sin not: let not the sun go down upon your wrath.\""
+        },
+        {
+          "ref": "Ephesians 4:28",
+          "note": "\"Let him that stole steal no more: but rather let him labour, working with his hands the thing which is good.\""
+        },
+        {
+          "ref": "Ephesians 4:30",
+          "note": "\"Grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.\""
+        },
+        {
+          "ref": "Ephesians 4:31-32",
+          "note": "Calls to put away \"bitterness, and wrath, and anger, and clamour, and evil speaking\" and instead \"be ye kind one to another, tenderhearted, forgiving one another.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "children_of_light_ethiopian_ephesians",
+      "name": "Walk as Children of Light",
+      "role": "law",
+      "scribeTier": "Walk as Children of Light",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Exhorts believers to \"be followers of God, as dear children\" and \"walk in love,\" to have no fellowship with the \"unfruitful works of darkness,\" and to be filled with the Spirit rather than drunk with wine.",
+      "verses": [
+        {
+          "ref": "Ephesians 5:1-2",
+          "note": "\"Be ye therefore followers of God, as dear children and walk in love, as Christ also hath loved us.\""
+        },
+        {
+          "ref": "Ephesians 5:8",
+          "note": "\"Ye were sometimes darkness, but now are ye light in the Lord: walk as children of light.\""
+        },
+        {
+          "ref": "Ephesians 5:11",
+          "note": "\"Have no fellowship with the unfruitful works of darkness, but rather reprove them.\""
+        },
+        {
+          "ref": "Ephesians 5:18-19",
+          "note": "\"Be not drunk with wine... but be filled with the Spirit, speaking to yourselves in psalms and hymns and spiritual songs.\""
+        },
+        {
+          "ref": "Ephesians 5:21",
+          "note": "\"Submitting yourselves one to another in the fear of God.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "marriage_household_ethiopian_ephesians",
+      "name": "Wives, Husbands, and the Great Mystery",
+      "role": "law",
+      "scribeTier": "Wives, Husbands, and the Great Mystery",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Sets out the household code for marriage - wives submitting to their own husbands \"as unto the Lord,\" husbands loving their wives \"even as Christ also loved the church, and gave himself for it\" - framed as a living picture of Christ and the church: \"this is a great mystery.\"",
+      "verses": [
+        {
+          "ref": "Ephesians 5:22-23",
+          "note": "\"Wives, submit yourselves unto your own husbands, as unto the Lord... the husband is the head of the wife, even as Christ is the head of the church.\""
+        },
+        {
+          "ref": "Ephesians 5:25",
+          "note": "\"Husbands, love your wives, even as Christ also loved the church, and gave himself for it.\""
+        },
+        {
+          "ref": "Ephesians 5:28-29",
+          "note": "Husbands should love their wives \"as their own bodies... even as the Lord the church.\""
+        },
+        {
+          "ref": "Ephesians 5:31-32",
+          "note": "\"They two shall be one flesh. This is a great mystery: but I speak concerning Christ and the church.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "family_household_ethiopian_ephesians",
+      "name": "Children, Fathers, Servants, and Masters",
+      "role": "law",
+      "scribeTier": "Children, Fathers, Servants, and Masters",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "Extends the household code to parent-child and master-servant relationships - children obeying parents \"in the Lord\" under \"the first commandment with promise,\" fathers not provoking children to wrath, servants serving \"as unto Christ,\" and masters treating servants likewise.",
+      "verses": [
+        {
+          "ref": "Ephesians 6:1-2",
+          "note": "\"Children, obey your parents in the Lord: for this is right. Honour thy father and mother; which is the first commandment with promise.\""
+        },
+        {
+          "ref": "Ephesians 6:4",
+          "note": "\"Ye fathers, provoke not your children to wrath: but bring them up in the nurture and admonition of the Lord.\""
+        },
+        {
+          "ref": "Ephesians 6:5-6",
+          "note": "\"Servants, be obedient to them that are your masters according to the flesh... as the servants of Christ, doing the will of God from the heart.\""
+        },
+        {
+          "ref": "Ephesians 6:9",
+          "note": "\"Ye masters, do the same things unto them, forbearing threatening... neither is there respect of persons with him.\""
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "whole_armour_of_god_ethiopian_ephesians",
+      "name": "The Whole Armour of God",
+      "role": "law",
+      "scribeTier": "The Whole Armour of God",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_ephesians",
+      "purpose": "A vivid closing exhortation to spiritual warfare - the Christian's struggle is \"not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places\" - met by putting on each piece of \"the whole armour of God,\" sustained by watchful prayer.",
+      "verses": [
+        {
+          "ref": "Ephesians 6:11-12",
+          "note": "\"Put on the whole armour of God... we wrestle not against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.\""
+        },
+        {
+          "ref": "Ephesians 6:14",
+          "note": "\"Stand therefore, having your loins girt about with truth, and having on the breastplate of righteousness.\""
+        },
+        {
+          "ref": "Ephesians 6:15-16",
+          "note": "Feet \"shod with the preparation of the gospel of peace\" and \"the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.\""
+        },
+        {
+          "ref": "Ephesians 6:17",
+          "note": "\"The helmet of salvation, and the sword of the Spirit, which is the word of God.\""
+        },
+        {
+          "ref": "Ephesians 6:18",
+          "note": "\"Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance and supplication for all saints.\""
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Ephesians names almost no individuals at all - the addressees are a collective, \"the saints which are at Ephesus, and to the faithful in Christ Jesus\" (1:1), and the household-code categories (wives, husbands, children, fathers, servants, masters) are addressed as generic classes throughout chapters 5-6, never individuated by the text. Nothing here is invented as separate named characters, per the rule against inventing differentiation the text doesn't support.",
+    "the_saints_at_ephesus": {
+      "ref": "Ephesians 1:1",
+      "note": "The letter's collective addressees - \"the saints which are at Ephesus, and to the faithful in Christ Jesus\" - never individually named."
+    },
+    "closing_benediction": {
+      "ref": "Ephesians 6:23-24",
+      "note": "Paul's closing blessing of peace, love with faith, and grace \"to all them that love our Lord Jesus Christ in sincerity\" - addressed to the same collective body, not a person."
+    }
+  }
+}

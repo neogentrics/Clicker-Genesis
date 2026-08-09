@@ -1,0 +1,305 @@
+{
+  "book": "Joel",
+  "translation": "Ethiopian",
+  "canonicalOrder": 51,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Ethiopian translation's Joel text (3 chapters, 73 verses) is word-for-word identical in content and structure to the already-completed KJV Joel index - same locust plague/Day of the LORD, call to repentance, restoration of the years, outpouring of the Spirit, and Valley of Jehoshaphat judgment sequence, verse-for-verse matching (confirmed by direct read of joel_51.json against the KJV Joel.json source). No unique Ethiopian-canon content differences found here (unlike Ezra elsewhere in this translation) - this is a shared-canon book with identical text. Adapted KJV's validated 6-tier structure (1 person-manager + 5 law/theme tiers) with ids suffixed \"_ethiopian\" per the collision-avoidance rule, since Joel exists independently in the KJV CharacterIndex already. Same two naming notes carried over from the KJV draft, re-verified against this text: (1) \"valley of Jehoshaphat\" (3:2, 12) is almost certainly the symbolic name \"the LORD judges,\" not a reference to the historical King Jehoshaphat of Judah found elsewhere in the canon; (2) 3:9-11's \"beat your plowshares into swords\" is the deliberate mirror-image of Isaiah 2:4/Micah 4:3's \"beat their swords into plowshares,\" not a contradiction. Joel 3:7-8 correction also carried over: the LORD sells the OFFENDING NATIONS' sons and daughters into Judah's hand as recompense, and it is Judah who then sells them onward to the Sabeans - the LORD does not sell Judah's own children, nor sell directly to the Sabeans. Only one named human in the whole book: Joel himself, \"the son of Pethuel\" (1:1). All other figures are undifferentiated classes (priests, elders, drunkards, virgins, husbandmen) or nations named only in accusatory/judicial context (Tyre, Zidon, Palestine, the Grecians, the Sabeans, Egypt, Edom) - per rule 5, none promoted to a character entry; they are cited directly inside the relevant law tier's verse notes instead.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Prophet's Scroll",
+      "managerId": "joel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Locust Swarm",
+      "managerId": "locust_plague_day_of_the_lord_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Rend Your Heart",
+      "managerId": "call_to_repentance_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Renewed Years",
+      "managerId": "restoration_of_the_years_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Poured-Out Spirit",
+      "managerId": "outpouring_of_the_spirit_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Valley of Decision",
+      "managerId": "valley_of_jehoshaphat_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "joel_ethiopian",
+      "name": "Joel",
+      "role": "manager",
+      "scribeTier": "The Prophet's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Pethuel",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Joel 1:1",
+          "note": "\"The word of the LORD that came to Joel the son of Pethuel.\" The book's entire biographical content on its author, in full - no hometown, era marker, spouse, or children are ever given."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Nothing about Joel's age, hometown, or personal life beyond his father's name is given anywhere in the book.",
+        "His prophecy of the Spirit poured out \"upon all flesh\" (2:28-32) is directly quoted at length by the apostle Peter in Acts 2:17-21 as fulfilled at Pentecost."
+      ]
+    },
+    {
+      "id": "locust_plague_day_of_the_lord_ethiopian",
+      "name": "The Locust Army and the Day of the LORD",
+      "role": "law",
+      "scribeTier": "The Locust Swarm",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "joel_ethiopian",
+      "purpose": "To shock a complacent Judah into repentance by describing a devastating, unprecedented locust invasion - pictured throughout as an unstoppable invading army - and to identify this catastrophe as \"the day of the LORD,\" a day of darkness and judgment worse than anything the elders had seen in their lifetimes.",
+      "verses": [
+        {
+          "ref": "Joel 1:4",
+          "note": "\"That which the palmerworm hath left hath the locust eaten and that which the locust hath left hath the cankerworm eaten and that which the cankerworm hath left hath the caterpiller eaten.\" Four named stages/waves of devastation, repeated again in 2:25."
+        },
+        {
+          "ref": "Joel 1:6-7",
+          "note": "A nation \"strong, and without number,\" with the teeth of a lion, has laid the vine waste and barked the fig tree."
+        },
+        {
+          "ref": "Joel 1:15",
+          "note": "\"Alas for the day! for the day of the LORD is at hand, and as a destruction from the Almighty shall it come.\""
+        },
+        {
+          "ref": "Joel 2:1-2",
+          "note": "Trumpet blown in Zion; \"a day of darkness and of gloominess, a day of clouds and of thick darkness\" - a great and strong people, the like of which has never been nor ever shall be again."
+        },
+        {
+          "ref": "Joel 2:4-9",
+          "note": "The swarm described in military terms - appearance like horses, running like chariots, leaping upon the city, climbing into houses like a thief - the text blurs insect and army imagery throughout."
+        },
+        {
+          "ref": "Joel 2:10-11",
+          "note": "The earth quakes, the heavens tremble, sun and moon are darkened, stars withdraw their shining; \"the day of the LORD is great and very terrible: and who can abide it?\""
+        },
+        {
+          "ref": "Joel 2:20",
+          "note": "The LORD promises to drive \"the northern army\" far off, into a barren land and into the utmost sea."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Scholars remain divided on whether the \"locusts\" describe a literal insect plague, a coming human invading army pictured in locust imagery, or both at once - the text never settles the question.",
+        "The four insect names in 1:4 (palmerworm, locust, cankerworm, caterpiller) are read either as four successive growth-stages of one locust or four successive waves of the same swarm; the text does not specify."
+      ]
+    },
+    {
+      "id": "call_to_repentance_ethiopian",
+      "name": "Rend Your Heart",
+      "role": "law",
+      "scribeTier": "Rend Your Heart",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "joel_ethiopian",
+      "purpose": "To summon Judah to genuine inward repentance - fasting, weeping, and mourning from the heart - rather than mere outward ritual, grounded in an appeal to God's own character as \"gracious and merciful, slow to anger, and of great kindness.\"",
+      "verses": [
+        {
+          "ref": "Joel 2:12-13",
+          "note": "\"Turn ye even to me with all your heart, and with fasting, and with weeping, and with mourning: And rend your heart, and not your garments, and turn unto the LORD your God: for he is gracious and merciful, slow to anger, and of great kindness, and repenteth him of the evil.\""
+        },
+        {
+          "ref": "Joel 2:14",
+          "note": "\"Who knoweth if he will return and repent, and leave a blessing behind him...\""
+        },
+        {
+          "ref": "Joel 2:15-16",
+          "note": "Blow the trumpet in Zion, sanctify a fast, call a solemn assembly; gather the people, elders, children, and even the bride and bridegroom out of their chambers."
+        },
+        {
+          "ref": "Joel 2:17",
+          "note": "The priests, the LORD's ministers, weep between the porch and the altar and cry, \"Spare thy people, O LORD, and give not thine heritage to reproach.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Garment-rending was the conventional outward sign of grief and mourning in the ancient Near East (compare Genesis 37:34); Joel does not condemn the custom itself but demands the inward reality it was meant to represent."
+      ]
+    },
+    {
+      "id": "restoration_of_the_years_ethiopian",
+      "name": "I Will Restore the Years",
+      "role": "law",
+      "scribeTier": "Renewed Years",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": "To promise renewed material abundance - corn, wine, and oil - and the removal of reproach among the nations, and to reassure Israel of God's continuing presence, once genuine repentance has been made.",
+      "verses": [
+        {
+          "ref": "Joel 2:18-19",
+          "note": "The LORD, \"jealous for his land,\" pities his people and answers with corn, wine, and oil, promising Israel will \"be satisfied therewith\" and no more be a reproach among the nations."
+        },
+        {
+          "ref": "Joel 2:21-24",
+          "note": "The land and the beasts of the field are told not to fear; pastures spring up, floors are full of wheat, vats overflow with wine and oil."
+        },
+        {
+          "ref": "Joel 2:25",
+          "note": "\"I will restore to you the years that the locust hath eaten, the cankerworm, and the caterpiller, and the palmerworm, my great army which I sent among you.\""
+        },
+        {
+          "ref": "Joel 2:26-27",
+          "note": "The people shall eat in plenty and praise the name of the LORD; \"my people shall never be ashamed... I am the LORD your God, and none else.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "2:25 has the LORD explicitly call the locust swarm of chapters 1-2 \"my great army which I sent\" - directly claiming authorship of the very plague this tier's restoration promise reverses."
+      ]
+    },
+    {
+      "id": "outpouring_of_the_spirit_ethiopian",
+      "name": "Poured Out Upon All Flesh",
+      "role": "law",
+      "scribeTier": "Poured-Out Spirit",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": "To promise a future, universal outpouring of God's Spirit \"upon all flesh,\" producing prophecy, dreams, and visions across every class and both sexes, accompanied by cosmic signs, with deliverance promised to \"whosoever shall call on the name of the LORD.\"",
+      "verses": [
+        {
+          "ref": "Joel 2:28",
+          "note": "\"I will pour out my spirit upon all flesh and your sons and your daughters shall prophesy, your old men shall dream dreams, your young men shall see visions.\""
+        },
+        {
+          "ref": "Joel 2:29",
+          "note": "\"And also upon the servants and upon the handmaids in those days will I pour out my spirit.\""
+        },
+        {
+          "ref": "Joel 2:30-31",
+          "note": "Wonders in heaven and earth - blood, fire, and pillars of smoke; the sun turned to darkness and the moon to blood - \"before the great and the terrible day of the LORD come.\""
+        },
+        {
+          "ref": "Joel 2:32",
+          "note": "\"Whosoever shall call on the name of the LORD shall be delivered: for in mount Zion and in Jerusalem shall be deliverance, as the LORD hath said, and in the remnant whom the LORD shall call.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Quoted at length by the apostle Peter in Acts 2:17-21 as fulfilled at Pentecost - one of the most directly and extensively cited Old Testament passages anywhere in the New Testament.",
+        "The apostle Paul quotes 2:32's \"whosoever shall call upon the name of the Lord shall be saved\" in Romans 10:13."
+      ]
+    },
+    {
+      "id": "valley_of_jehoshaphat_ethiopian",
+      "name": "The Valley of Jehoshaphat",
+      "role": "law",
+      "scribeTier": "The Valley of Decision",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": "To pronounce judgment on the surrounding nations for scattering Israel, dividing up God's land, and trafficking Judah's children into slavery, and to vindicate and restore Judah and Jerusalem \"for ever.\"",
+      "verses": [
+        {
+          "ref": "Joel 3:1-2",
+          "note": "When the LORD brings again the captivity of Judah and Jerusalem, he will gather all nations into the valley of Jehoshaphat and \"plead with them there for my people and for my heritage Israel, whom they have scattered among the nations, and parted my land.\""
+        },
+        {
+          "ref": "Joel 3:3",
+          "note": "The nations have \"cast lots for my people\" and given a boy for a harlot and sold a girl for wine to drink."
+        },
+        {
+          "ref": "Joel 3:4-6",
+          "note": "Tyre, Zidon, and \"all the coasts of Palestine\" are directly accused: they took the LORD's silver and gold into their temples, and sold the children of Judah and Jerusalem to the Grecians, to remove them far from their own border."
+        },
+        {
+          "ref": "Joel 3:7-8",
+          "note": "CORRECTED READING (verified against this translation's own text): the LORD says he will raise Judah's sold children out of the place the offending nations sent them, turning the deed back on the offenders' own heads - he will sell THE OFFENDING NATIONS' sons and daughters into the hand of the children of Judah, and Judah, in turn, \"shall sell them to the Sabeans, to a people far off.\" It is Judah who sells the enemies' children to the Sabeans, not the LORD selling Judah's own children."
+        },
+        {
+          "ref": "Joel 3:9-11",
+          "note": "Call to prepare war among the nations: \"beat your plowshares into swords, and your pruninghooks into spears.\" This is the deliberate mirror-image of Isaiah 2:4 and Micah 4:3's \"beat their swords into plowshares\" - a contrast, not a contradiction."
+        },
+        {
+          "ref": "Joel 3:12-14",
+          "note": "The nations gather to the valley of Jehoshaphat for judgment; \"multitudes, multitudes in the valley of decision: for the day of the LORD is near in the valley of decision\" - the \"valley of decision\" is the same location under a second name fitting the verdict scene."
+        },
+        {
+          "ref": "Joel 3:16",
+          "note": "\"The LORD also shall roar out of Zion, and utter his voice from Jerusalem... but the LORD will be the hope of his people, and the strength of the children of Israel.\""
+        },
+        {
+          "ref": "Joel 3:18",
+          "note": "\"A fountain shall come forth of the house of the LORD, and shall water the valley of Shittim.\""
+        },
+        {
+          "ref": "Joel 3:19",
+          "note": "\"Egypt shall be a desolation, and Edom shall be a desolate wilderness, for the violence against the children of Judah, because they have shed innocent blood in their land.\""
+        },
+        {
+          "ref": "Joel 3:20-21",
+          "note": "\"But Judah shall dwell for ever, and Jerusalem from generation to generation... for the LORD dwelleth in Zion.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING NOTE: \"the valley of Jehoshaphat\" (3:2, 12) is almost certainly the symbolic name \"the LORD judges,\" not a reference to the historical King Jehoshaphat of Judah found elsewhere in the canon.",
+        "NAMING NOTE: \"the valley of Shittim\" (3:18) is a separate place-name from the \"valley of decision\"/\"valley of Jehoshaphat\" of the same chapter.",
+        "\"Grecians\" (3:6) and \"Sabeans\" (3:8) are this translation's own exact wording for these peoples, spelled per the text."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogy references in this book - the only named human is Joel himself, and every nation/group cited (Tyre, Zidon, Palestine, the Grecians, the Sabeans, Egypt, Edom) is a collective political entity, not a person, and is already captured directly inside the valley_of_jehoshaphat_ethiopian law tier's verse notes."
+  }
+}

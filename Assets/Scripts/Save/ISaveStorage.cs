@@ -15,5 +15,11 @@ namespace ClickerGenesis.Save
         /// "Delete Saved Game" reset option). The next Load() should behave exactly like a fresh
         /// install.</summary>
         void DeleteSave();
+
+        /// <summary>Cheap existence check (2026-08-08, save-slot system) - does a real save exist
+        /// in this storage's slot, without paying the cost of a full Load()/deserialize just to
+        /// find out. Used by the slot-picker screen to decide whether a slot shows "Continue" or
+        /// "New Game" and whether Delete/Copy are meaningful for it.</summary>
+        bool HasSave();
     }
 }

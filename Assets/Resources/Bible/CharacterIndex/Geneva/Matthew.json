@@ -1,0 +1,1009 @@
+{
+  "book": "Matthew",
+  "translation": "Geneva",
+  "canonicalOrder": 52,
+  "status": "drafted via direct read-through of the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/matthew_52.json, chapters 1-14 and 24-28 read in full, remaining chapters spot-checked), cross-referenced against the existing KJV Matthew.json for tier-naming-style inspiration only — not yet adversarially fact-checked by a separate pass",
+  "notes": "Read the real Geneva 1560 text directly rather than assuming KJV parity, and confirmed this Geneva Matthew is the SAME underlying narrative/textual tradition as the KJV (both are Textus-Receptus-based English translations of the same Greek text) — no deuterocanonical or structural surprises like the Ethiopian Ezra case. Differences found are archaic-spelling and minor-word-choice only, not content differences: e.g. Matthew is called to the \"custome\" (Geneva 9:9) rather than KJV's \"receipt of custom\"; Bethlehem is spelled \"Beth-leem\"; the disciple list (Matthew 10:2-4) is verbatim-equivalent to KJV including the distinctive double-name \"Lebbeus, whose surname was Thaddeus.\" Verse numbering and chapter count (28 chapters) match KJV exactly. Same tier structure/design decisions as the KJV Matthew draft apply here since the underlying content is the same: Jesus gets his own independent manager tier scoped to this specific book+translation (id jesus_geneva_matthew, never shared with jesus/jesus_mark/etc. from KJV or any other Gospel/translation). NAMING COLLISION (same as KJV, verified independently in this text): Matthew 2's \"Herod the King\" (2:1,3) is Herod the Great, tried and kept as his own tier; Matthew 14:1's \"Herod the Tetrarche\" is his son Herod Antipas, who beheads John the Baptist after his wife Herodias' daughter's request (14:1-11) — kept as a submanager under John the Baptist's tier rather than duplicated, since his whole role here is John's death. Genealogy (Matthew 1:1-17, read in full): confirms the same four women named in an otherwise all-male genealogy as KJV — \"Zara of Thamar\" (v3), \"Booz of Rachab\" (v5), \"Obed of Ruth\" (v5), and \"Salomon of her that was the wife of Vrias\" (v6, Bathsheba unnamed directly, same as KJV) — logged in genealogyLists rather than re-indexed as individual OT characters, same rule as KJV. All ids suffixed \"_geneva\" (Jesus further suffixed \"_matthew\") to avoid collision with the existing KJV CharacterIndex ids and with the same book's eventual Ethiopian-translation draft.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Star of Beth-leem",
+      "managerId": "jesus_geneva_matthew",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Locusts & Wilde Hony",
+      "managerId": "john_the_baptist_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Frankincense Casket",
+      "managerId": "the_magi_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Herod's Crowne",
+      "managerId": "herod_the_great_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Fisher's Net",
+      "managerId": "peter_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Custome Table",
+      "managerId": "matthew_apostle_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Thirtie Pieces of Siluer",
+      "managerId": "judas_iscariot_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Rent Robe",
+      "managerId": "caiaphas_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Bason of Water",
+      "managerId": "pontius_pilate_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Salt & Light",
+      "managerId": "sermon_on_the_mount_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Mustard Seede",
+      "managerId": "parables_of_the_kingdom_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Fig Tree's Budding",
+      "managerId": "olivet_discourse_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Commission Mountaine",
+      "managerId": "great_commission_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_geneva_matthew",
+      "name": "Jesus Christ",
+      "role": "manager",
+      "scribeTier": "Star of Beth-leem",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "mary_mother_of_jesus_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 1:18-25",
+          "note": "'His mother Mary was betrothed to Ioseph...shee was found with childe of the holy Ghost' — the Angel names him JESUS, 'for hee shall saue his people from their sinnes'"
+        },
+        {
+          "ref": "Matthew 3:13-17",
+          "note": "Baptized by John in Iordan; the Spirit descends 'like a doue'; a voice from heaven: 'This is my beloued Sonne, in whome I am well pleased'"
+        },
+        {
+          "ref": "Matthew 4:1-11",
+          "note": "Led into the wilderness, fasts forty days and nights, resists three temptations of 'the deuil'"
+        },
+        {
+          "ref": "Matthew 5-7",
+          "note": "Delivers the Sermon on the Mount to his disciples, the multitude also hearing"
+        },
+        {
+          "ref": "Matthew 8-9",
+          "note": "A run of healings/miracles: the leper, the Centurion's servant, Peter's wife's mother, the storm calmed, the Gergesene demoniacs, the paralytic let down, Matthew's own calling, the woman with the issue of blood, the ruler's daughter, two blind men"
+        },
+        {
+          "ref": "Matthew 13",
+          "note": "Teaches the Parables of the Kingdome from a ship, 'the whole multitude' standing on shore"
+        },
+        {
+          "ref": "Matthew 14:15-21",
+          "note": "Feeds five thousand men 'beside women and litle children' with five loaves and two fishes"
+        },
+        {
+          "ref": "Matthew 14:25-33",
+          "note": "Walks on the sea in the fourth watch of the night; catches Peter as he begins to sink"
+        },
+        {
+          "ref": "Matthew 26:26-29",
+          "note": "Institutes the Lord's Supper — 'Take, eate: this is my bodie...this is my blood of the Newe Testament'"
+        },
+        {
+          "ref": "Matthew 26:36-46",
+          "note": "Agony in Gethsemane — 'let this cup passe from me: neuerthelesse, not as I will, but as thou wilt'"
+        },
+        {
+          "ref": "Matthew 26:47-27:31",
+          "note": "Betrayed by Judas' kiss, tried before Caiaphas and the council, then before Pilate; scourged and mocked with a scarlet robe and crown of thorns"
+        },
+        {
+          "ref": "Matthew 27:32-56",
+          "note": "Crucified at Golgotha between two thieves; cries 'Eli, Eli, lamasabachthani'; yields up the ghost as the temple veil rends"
+        },
+        {
+          "ref": "Matthew 28:1-10",
+          "note": "Rises; an Angel rolls back the stone; meets the women on the way, 'Be not afraide'"
+        },
+        {
+          "ref": "Matthew 28:16-20",
+          "note": "Gives the Great Commission on a mountain in Galilee to the eleven"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Matthew's own Gospel is thick with 'that it might be fulfilled which was spoken by the Prophet' — this Geneva text repeats that exact framing at least five times in the birth narrative alone (1:22, 2:15, 2:17, 2:23)."
+      ]
+    },
+    {
+      "id": "john_the_baptist_geneva",
+      "name": "John the Baptist",
+      "role": "manager",
+      "scribeTier": "Locusts & Wilde Hony",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 3:1-6",
+          "note": "Preaches repentance in the wilderness of Iudea; 'his garment of camels heare, and a girdle of a skinne about his loynes: his meate was also locusts and wilde hony'"
+        },
+        {
+          "ref": "Matthew 3:13-17",
+          "note": "'Iohn earnestly put him backe, saying, I haue neede to be baptized of thee' before consenting to baptize Jesus"
+        },
+        {
+          "ref": "Matthew 11:2-6",
+          "note": "From prison, sends disciples to ask 'Art thou he that shoulde come, or shall we looke for another?'"
+        },
+        {
+          "ref": "Matthew 14:1-12",
+          "note": "Imprisoned 'for Herodias sake, his brother Philips wife'; beheaded at her daughter's request, his head brought in a platter"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book gives him no birth account (found instead in Luke) — he simply enters the narrative already preaching as an adult in chapter 3, so no genealogy is recorded for him here."
+      ]
+    },
+    {
+      "id": "the_magi_geneva",
+      "name": "The Wisemen",
+      "role": "manager",
+      "scribeTier": "Frankincense Casket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 2:1-2",
+          "note": "'Wisemen from the East' arrive in Hierusalem seeking 'that King of the Iewes that is borne,' having seen 'his starre in the East'"
+        },
+        {
+          "ref": "Matthew 2:7-8",
+          "note": "Herod 'priuily called the Wisemen' and sends them to Beth-leem to search and report back"
+        },
+        {
+          "ref": "Matthew 2:9-11",
+          "note": "The star leads them to the house; they worship and 'opened their treasures' — 'golde, and frankincense, and myrrhe'"
+        },
+        {
+          "ref": "Matthew 2:12",
+          "note": "Warned in a dream not to return to Herod, 'they returned into their countrey another way'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never numbered or named in this text — 'three' wise men is only inferred from the three gifts (2:11), a tradition, not something the verse itself states — kept as a collective tier for that reason."
+      ]
+    },
+    {
+      "id": "herod_the_great_geneva",
+      "name": "Herod the King (Herod the Great)",
+      "role": "manager",
+      "scribeTier": "Herod's Crowne",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "herod_antipas_geneva — not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Matthew 2:3-8",
+          "note": "'When King Herod heard this, he was troubled' — secretly questions the Wisemen and the chief priests/scribes about Christ's birthplace"
+        },
+        {
+          "ref": "Matthew 2:16",
+          "note": "'Exceeding wroth,' orders every male child in Beth-leem 'from two yeere old and vnder' slain after being 'mocked of the Wisemen'"
+        },
+        {
+          "ref": "Matthew 2:19-20",
+          "note": "His death is reported to Joseph in a dream in Egypt, clearing the way for the family's return"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION, flagged not merged: this is Herod the King of chapter 2, distinct from 'Herod the Tetrarche' of chapter 14 (his son, Herod Antipas) — kept as a separate submanager under John the Baptist's tier instead of duplicated here."
+      ]
+    },
+    {
+      "id": "peter_geneva",
+      "name": "Simon Peter",
+      "role": "manager",
+      "scribeTier": "Fisher's Net",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 4:18-20",
+          "note": "Called with his brother Andrew 'casting a net into the sea' — 'I will make you fishers of men'"
+        },
+        {
+          "ref": "Matthew 14:28-31",
+          "note": "Steps out of the ship onto the water toward Jesus, then 'sawe a mightie winde, he was afraide' and begins to sink"
+        },
+        {
+          "ref": "Matthew 16:16-19",
+          "note": "Confesses 'Thou art the Christ, the Sonne of the liuing God'"
+        },
+        {
+          "ref": "Matthew 26:33-35",
+          "note": "'Though that al men should be offended by thee, yet will I neuer be offended'"
+        },
+        {
+          "ref": "Matthew 26:69-75",
+          "note": "Denies Jesus three times before the cock crows; 'went out, and wept bitterly'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given his own full manager tier rather than lumped with the other apostles — remove him from the water-walking, the confession, and the denial and Matthew's whole faltering-but-real-faith throughline loses its central case study."
+      ]
+    },
+    {
+      "id": "matthew_apostle_geneva",
+      "name": "Matthew (the Publicane)",
+      "role": "manager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 9:9",
+          "note": "Called by Jesus while 'sitting at the custome, named Matthewe' — note the Geneva wording differs slightly from KJV's 'receipt of custom'"
+        },
+        {
+          "ref": "Matthew 9:10-13",
+          "note": "Hosts Jesus for a meal — 'many Publicanes and sinners...sate downe at the table' — drawing the Pharisees' complaint"
+        },
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve apostles, still identified as 'Matthewe that Publicane'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally credited as this Gospel's own author — a tax collector, a genuinely disreputable trade to a first-century Jewish reader, called and then immediately celebrated at his own table."
+      ]
+    },
+    {
+      "id": "judas_iscariot_geneva",
+      "name": "Judas Iscariot",
+      "role": "manager",
+      "scribeTier": "Thirtie Pieces of Siluer",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:4",
+          "note": "Named among the Twelve, already flagged 'who also betraied him'"
+        },
+        {
+          "ref": "Matthew 26:14-16",
+          "note": "Bargains with the chief priests: 'What will ye giue me, and I will deliuer him vnto you?' — paid 'thirtie pieces of siluer'"
+        },
+        {
+          "ref": "Matthew 26:47-50",
+          "note": "Identifies Jesus to the arresting crowd with a kiss and the words 'God saue thee, Master'"
+        },
+        {
+          "ref": "Matthew 27:3-5",
+          "note": "'Repented himselfe,' returns the silver to the priests, and 'went, and hanged himselfe'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book alone records both the exact price and Judas's own death by hanging shortly after."
+      ]
+    },
+    {
+      "id": "caiaphas_geneva",
+      "name": "Caiaphas",
+      "role": "manager",
+      "scribeTier": "Rent Robe",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 26:3-4",
+          "note": "Chief priests and elders gather 'into the hall of the high Priest called Caiaphas' to plot Jesus's death by subtlety"
+        },
+        {
+          "ref": "Matthew 26:57-66",
+          "note": "Presides over the night trial; 'rent his clothes' when Jesus affirms he is the Christ — 'Hee hath blasphemed'"
+        },
+        {
+          "ref": "Matthew 26:66",
+          "note": "Puts the sentence to the council: 'He is guiltie of death'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only named high priest given a real decision-making role in this trial narrative — the recurring 'Scribes and Pharises' bloc is attached to his tier as a collective submanager rather than invented as individuals."
+      ]
+    },
+    {
+      "id": "pontius_pilate_geneva",
+      "name": "Pontius Pilate",
+      "role": "manager",
+      "scribeTier": "Bason of Water",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:11-14",
+          "note": "'Art thou that King of the Iewes?' — marvels that Jesus 'answered him not to one worde'"
+        },
+        {
+          "ref": "Matthew 27:15-23",
+          "note": "Offers to release Barabbas or Jesus per the feast custom; the crowd, persuaded by the priests, chooses Barabbas"
+        },
+        {
+          "ref": "Matthew 27:24-26",
+          "note": "'Tooke water and washed his hands before the multitude' — 'I am innocent of the blood of this iust man' — then delivers Jesus to be crucified"
+        },
+        {
+          "ref": "Matthew 27:62-66",
+          "note": "Grants the chief priests a watch to seal and guard the sepulchre"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Gospel alone records his wife's dream-warning and his own hand-washing — both unique to Matthew among the four Gospel accounts of this trial."
+      ]
+    },
+    {
+      "id": "mary_mother_of_jesus_geneva",
+      "name": "Mary (mother of Jesus)",
+      "role": "submanager",
+      "scribeTier": "Star of Beth-leem",
+      "parentManagerId": "jesus_geneva_matthew",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "joseph_husband_of_mary_geneva"
+        ],
+        "children": [
+          "jesus_geneva_matthew"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Matthew 1:18-25",
+          "note": "'Found with childe of the holy Ghost' before she and Ioseph came together; he takes her as wife on the Angel's word"
+        },
+        {
+          "ref": "Matthew 2:11",
+          "note": "The Wisemen 'founde the babe with Mary his mother' and worship him"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_husband_of_mary_geneva",
+      "name": "Joseph (husband of Mary)",
+      "role": "submanager",
+      "scribeTier": "Star of Beth-leem",
+      "parentManagerId": "jesus_geneva_matthew",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Jesus's legal/adoptive father, not biological — 'shee was found with childe of the holy Ghost' before he and Mary came together (1:18-20). Kept off jesus_geneva_matthew's genealogy.father field for that reason.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "mary_mother_of_jesus_geneva"
+        ],
+        "children": [
+          "jesus_geneva_matthew"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Matthew 1:19-24",
+          "note": "'Minded to put her away secretly,' then obeys the Angel's dream-instruction to take Mary as his wife"
+        },
+        {
+          "ref": "Matthew 2:13-15",
+          "note": "Warned in a dream to 'flee into Egypt' with Mary and the babe to escape Herod"
+        },
+        {
+          "ref": "Matthew 2:19-23",
+          "note": "Warned again to return, then to settle in Nazareth rather than Iudea"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never once recorded speaking in this Gospel — every instruction reaches him through a dream, and he simply obeys."
+      ]
+    },
+    {
+      "id": "herod_antipas_geneva",
+      "name": "Herod the Tetrarche (Herod Antipas)",
+      "role": "submanager",
+      "scribeTier": "Locusts & Wilde Hony",
+      "parentManagerId": "john_the_baptist_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "NAMING COLLISION: son of Herod the King/Herod the Great (his own separate tier, chapter 2), not the same man. Attached here since his entire role in this book concerns John the Baptist's death specifically.",
+      "genealogy": {
+        "father": "herod_the_great_geneva",
+        "mother": null,
+        "spouses": [
+          "herodias_geneva"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 14:3-5",
+          "note": "Had imprisoned John 'for Herodias sake, his brother Philips wife' — John had told him 'It is not lawfull for thee to haue her'"
+        },
+        {
+          "ref": "Matthew 14:6-11",
+          "note": "Grants the dancing daughter's request for 'Iohn Baptists head in a platter' after a rash birthday oath, though 'the King was sorie'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "herodias_geneva",
+      "name": "Herodias",
+      "role": "submanager",
+      "scribeTier": "Locusts & Wilde Hony",
+      "parentManagerId": "john_the_baptist_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "herod_antipas_geneva"
+        ],
+        "children": [
+          "herodias_daughter_geneva — not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Matthew 14:3-8",
+          "note": "Herod's unlawfully-married wife; the daughter, 'being before instructed of her mother,' asks for John's head"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "andrew_geneva",
+      "name": "Andrew",
+      "role": "submanager",
+      "scribeTier": "Fisher's Net",
+      "parentManagerId": "peter_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 4:18-20",
+          "note": "Peter's brother, called together with him 'casting a net into the sea'"
+        },
+        {
+          "ref": "Matthew 10:2",
+          "note": "Named second among the twelve Apostles, immediately after Peter"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "james_zebedee_geneva",
+      "name": "James (sonne of Zebedeus)",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zebedeus_geneva — Matthew 4:21, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 4:21-22",
+          "note": "Called with his brother John 'in a ship with Zebedeus their father, mending their nets'"
+        },
+        {
+          "ref": "Matthew 20:20-23",
+          "note": "His mother asks that he and John sit at Jesus's right and left hand in his kingdom"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "john_apostle_geneva",
+      "name": "John (sonne of Zebedeus)",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zebedeus_geneva — Matthew 4:21, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 4:21-22",
+          "note": "Called with his brother James, mending nets"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not to be confused with John the Baptist, his own major tier in this same book — two different men named Iohn."
+      ]
+    },
+    {
+      "id": "philip_apostle_geneva",
+      "name": "Philippe",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve Apostles"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "bartholomew_geneva",
+      "name": "Bartlemewe",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve Apostles; Geneva spells the name 'Bartlemewe'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "thomas_geneva",
+      "name": "Thomas",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve Apostles"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His famous doubt at the resurrection belongs to John's Gospel, not this one — kept to what Matthew itself records: his name in the apostle list only."
+      ]
+    },
+    {
+      "id": "james_alphaeus_geneva",
+      "name": "James (sonne of Alpheus)",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "alpheus_geneva — Matthew 10:3, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve Apostles"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lebbaeus_thaddaeus_geneva",
+      "name": "Lebbeus, whose surname was Thaddeus",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:3",
+          "note": "Named among the twelve Apostles under this double name, verbatim-equivalent to the KJV's reading"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simon_the_canaanite_geneva",
+      "name": "Simon the Cananite",
+      "role": "submanager",
+      "scribeTier": "The Custome Table",
+      "parentManagerId": "matthew_apostle_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 10:4",
+          "note": "Named among the twelve Apostles"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not to be confused with Simon Peter or Simon of Cyrene — several Simons appear across this one Gospel."
+      ]
+    },
+    {
+      "id": "the_pharisees_geneva",
+      "name": "The Pharises",
+      "role": "submanager",
+      "scribeTier": "Rent Robe",
+      "parentManagerId": "caiaphas_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Recurring opposition bloc, never individually named — kept as a collective per the schema's own group-entity rule rather than inventing individual names the text doesn't give.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 12:14",
+          "note": "'Consulted against him, howe they might destroy him' after a Sabbath healing"
+        },
+        {
+          "ref": "Matthew 23",
+          "note": "Subject of the 'Woe vnto you, Scribes and Pharises, hypocrites' discourse"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_sadducees_geneva",
+      "name": "The Sadduces",
+      "role": "submanager",
+      "scribeTier": "Rent Robe",
+      "parentManagerId": "caiaphas_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Same treatment as the Pharisees — a recurring named class, never individuated in the text.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 22:23-33",
+          "note": "Question Jesus about the resurrection, 'which say that there is no resurrection'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "barabbas_geneva",
+      "name": "Barabbas",
+      "role": "submanager",
+      "scribeTier": "Bason of Water",
+      "parentManagerId": "pontius_pilate_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:16-26",
+          "note": "'A notable prisoner' released instead of Jesus at the crowd's demand"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pilates_wife_geneva",
+      "name": "Pilate's Wife",
+      "role": "submanager",
+      "scribeTier": "Bason of Water",
+      "parentManagerId": "pontius_pilate_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "pontius_pilate_geneva"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:19",
+          "note": "'His wife sent to him, saying, Haue thou nothing to do with that iust man: for I haue suffered many things this day in a dreame by reason of him'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never named in this text — later tradition calls her Claudia Procula, but that name is not present here, so she is kept as 'Pilate's Wife.'"
+      ]
+    },
+    {
+      "id": "sermon_on_the_mount_geneva",
+      "name": "The Sermon on the Mount",
+      "role": "law",
+      "scribeTier": "Salt & Light",
+      "deliveredBy": "jesus_geneva_matthew",
+      "purpose": "Opens with the Beatitudes ('Blessed are the poore in spirit...') and moves through the Lord's Prayer, teaching on anger, adultery, oaths, retaliation, love of enemies, almsgiving, prayer, fasting, treasure, worry, judging others, and the wise/foolish builders — the book's core statement of Kingdome ethics, what it looks like to actually live under God's reign rather than merely believe in it.",
+      "verses": [
+        {
+          "ref": "Matthew 5-7",
+          "note": "'And when he sawe the multitude, he went vp into a mountaine: and when he was set, his disciples came to him' — the full sermon"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "parables_of_the_kingdom_geneva",
+      "name": "The Parables of the Kingdome",
+      "role": "law",
+      "scribeTier": "Mustard Seede",
+      "deliveredBy": "jesus_geneva_matthew",
+      "purpose": "A chapter of short earthly stories (the sower, the wheat and tares, the mustard seede, the leauen, the hid treasure, the pearl of great price, the draw net) each illustrating what the Kingdome of heauen is like — deliberately indirect teaching, explained privately to the disciples but left as riddles to the crowd ('because they seeing, doe not see').",
+      "verses": [
+        {
+          "ref": "Matthew 13",
+          "note": "Seven parables plus Jesus's own explanation of why he teaches this way (13:10-17)"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "olivet_discourse_geneva",
+      "name": "The Olivet Discourse",
+      "role": "law",
+      "scribeTier": "Fig Tree's Budding",
+      "deliveredBy": "jesus_geneva_matthew",
+      "purpose": "Delivered privately in response to the disciples asking when the temple's destruction and his coming would be — signs of the end, the parable of the fig tree learning her lesson, and the closing parables of readiness (the ten virgins, the talents, the sheep and the goats). Teaches watchfulness rather than date-setting.",
+      "verses": [
+        {
+          "ref": "Matthew 24-25",
+          "note": "The full discourse, given just before the Passion narrative begins"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "great_commission_geneva",
+      "name": "The Great Commission",
+      "role": "law",
+      "scribeTier": "Commission Mountaine",
+      "deliveredBy": "jesus_geneva_matthew",
+      "purpose": "The risen Jesus's final recorded words in this Gospel, on a mountain in Galile — a direct charge to 'teach all nations, baptizing them in the Name of the Father, and the Sonne, and the holy Ghost,' closing with 'lo, I am with you alway, vntill the ende of the worlde.' The book's own closing thesis: what all of it was for.",
+      "verses": [
+        {
+          "ref": "Matthew 28:16-20",
+          "note": "The book's final verses"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mary_magdalene_geneva",
+      "name": "Marie Magdalene",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:56, 61",
+          "note": "Present at the crucifixion, 'beholding him a farre off,' and sitting 'ouer against the sepulchre' at the burial"
+        },
+        {
+          "ref": "Matthew 28:1-8",
+          "note": "One of the two women who come to the sepulchre and are first told 'He is not here, for he is risen'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_other_mary_geneva",
+      "name": "\"The Other Marie\"",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:56, 61; 28:1",
+          "note": "Named alongside Marie Magdalene at the crucifixion, burial, and empty tomb — likely 'Marie the mother of Iames, and Ioses' per 27:56, not individually indexed further here"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_of_arimathaea_geneva",
+      "name": "Joseph of Arimathea",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:57-60",
+          "note": "'A riche man of Arimathea...who had also himselfe bene Iesus disciple' asks Pilate for the body and buries it in his own new tomb"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simon_of_cyrene_geneva",
+      "name": "Simon (of Cyrene)",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Matthew 27:32",
+          "note": "'A man of Cyrene, named Simon: him they compelled to beare his crosse'"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "jesusGenealogy": {
+      "ref": "Matthew 1:1-17",
+      "note": "'Abraham to Dauid, are fourtene generations. And from Dauid vntil they were caried away into Babylon, fourtene generations: and after they were caried away into Babylon vntill Christ, fourteene generations.' Almost entirely OT figures already indexed in Genesis/Ruth/1&2 Samuel/1&2 Kings/1&2 Chronicles — not re-indexed here to avoid duplicating those books' own entries. Four women named in an otherwise all-male genealogy: 'Zara of Thamar' (v3), 'Booz of Rachab' (v5), 'Obed of Ruth' (v5), and 'Salomon of her that was the wife of Vrias' (v6, Bathsheba unnamed directly) — each with an unconventional or Gentile background, the same real textual feature confirmed in the KJV draft of this book."
+    },
+    "chiefPriestsAndScribes": {
+      "ref": "Matthew 2:4",
+      "note": "Consulted by Herod the King about where the Christ should be born — never individually named."
+    },
+    "theCenturionAtTheCross": {
+      "ref": "Matthew 27:54",
+      "note": "Unnamed — 'Truely this was the Sonne of God' — along with 'they that were with him watching Iesus'"
+    }
+  }
+}

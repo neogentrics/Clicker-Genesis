@@ -1,0 +1,284 @@
+{
+  "book": "2 Thessalonians",
+  "translation": "Ethiopian",
+  "canonicalOrder": 73,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian-translation text of 2 Thessalonians (3 chapters, 47 verses) directly from Assets/Resources/Verses/Ethiopian/2_thessalonians_73.json. Verse-for-verse this translation's English rendering is textually identical in content and structure to the KJV (same 12/17/18 verse-per-chapter split, same clauses, same events/teachings) - no real content differences were found for this book, unlike the Ethiopian canon's genuinely distinct texts elsewhere (e.g. its own Ezra). Per the task's own guidance for content-identical shared-canon books, this draft adapts the already-validated KJV 2Thessalonians.json structure (4 tiers: Paul as author/manager, the Thessalonian church as a collective manager-tier recipient, and two law/theme tiers carrying the letter's doctrinal weight) rather than inventing an unrelated shape, while every verse reference/note below was independently re-verified against this translation's own extracted text, not copied blind. Silvanus and Timotheus stay submanagers under Paul (named only as joint senders in 1:1, no differentiated action). The 'unreasonable and wicked men' of 3:2 are a minimal collective submanager, not invented individuals. The two law tiers (the man of sin passage in ch.2, and the command concerning the disorderly in ch.3) pass the personally-embodied-vs-transmission test: neither the man of sin, the restrainer, nor the disorderly busybodies act within this letter's own narrative - they are subjects of Paul's teaching, delivered by him. No naming collisions in this book. Per the same accuracy-over-invention rule the KJV index applied, the man of sin's identity and the restrainer's identity are both left unnamed/unresolved since this Ethiopian text never names either, and the letter 'as from us' (2:2) is described neutrally (falsely claiming Paul's authorship) rather than as 'forged,' since the text itself never uses that word. All character/manager ids are suffixed '_ethiopian' to avoid collision with the existing KJV index's ids for the same book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Own Hand",
+      "managerId": "paul_2thessalonians_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Beloved Brethren",
+      "managerId": "thessalonian_church_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Man of Sin",
+      "managerId": "man_of_sin_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Working with Quietness",
+      "managerId": "disorderly_command_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_2thessalonians_ethiopian",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Opens the letter jointly with Silvanus and Timotheus, addressed to the church of the Thessalonians in God our Father and the Lord Jesus Christ."
+        },
+        {
+          "ref": "2 Thessalonians 1:3-4",
+          "note": "We are bound to thank God always for you because your faith groweth exceedingly and your charity aboundeth; glories in their patience and faith amid persecutions and tribulations they endure."
+        },
+        {
+          "ref": "2 Thessalonians 1:11-12",
+          "note": "States he prays always that God would count them worthy of this calling and fulfil the work of faith with power, that the name of the Lord Jesus Christ may be glorified in them."
+        },
+        {
+          "ref": "2 Thessalonians 2:1-2",
+          "note": "Beseeches them by the coming of the Lord Jesus not to be soon shaken in mind or troubled by spirit, word, or letter as from us, claiming the day of Christ is at hand - the text states only that the letter falsely claimed his authorship, not that it was forged."
+        },
+        {
+          "ref": "2 Thessalonians 2:5",
+          "note": "Reminds them: remember ye not, that when I was yet with you, I told you these things - about the man of sin."
+        },
+        {
+          "ref": "2 Thessalonians 3:1-2",
+          "note": "Asks the brethren to pray for us, that the word of the Lord may have free course and be glorified, and that we may be delivered from unreasonable and wicked men, for all men have not faith."
+        },
+        {
+          "ref": "2 Thessalonians 3:3-5",
+          "note": "Expresses confidence in the Lord touching them that they both do and will do the things commanded, and prays the Lord direct their hearts into the love of God and the patient waiting for Christ."
+        },
+        {
+          "ref": "2 Thessalonians 3:7-9",
+          "note": "Cites his own conduct: we behaved not ourselves disorderly among you, neither did we eat any man's bread for nought but wrought with labour and travail night and day, to make ourselves an ensample unto you to follow."
+        },
+        {
+          "ref": "2 Thessalonians 3:17-18",
+          "note": "Writes the salutation of Paul with mine own hand, which is the token in every epistle, and pronounces the closing grace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "3:17 states Paul physically wrote the closing greeting himself as the authenticating token distinguishing his genuine letters from any letter merely purporting to be from him (2:2) - the text never calls that other letter forged, only falsely attributed.",
+        "3:7-9 shows Paul personally living out the very command about labor and self-support that the 'Working with Quietness' law tier teaches to the whole church."
+      ]
+    },
+    {
+      "id": "silvanus_2thessalonians_ethiopian",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_2thessalonians_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Named alongside Paul and Timotheus as a co-sender of the letter; this text gives him no individually differentiated action within the epistle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified with the Silas of Acts, Paul's companion on the second missionary journey - a cross-book identification, not something this letter itself states."
+      ]
+    },
+    {
+      "id": "timotheus_2thessalonians_ethiopian",
+      "name": "Timotheus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_2thessalonians_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "unindexed reference - a believing mother named in 2 Timothy 1:5, not stated in this letter itself",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Named alongside Paul and Silvanus as a co-sender of the letter; no separate action of his is recorded here."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unreasonable_wicked_men_2thessalonians_ethiopian",
+      "name": "Unreasonable and Wicked Men",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_2thessalonians_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 3:2",
+          "note": "Paul asks the church to pray that we may be delivered from unreasonable and wicked men: for all men have not faith - an unnamed, undifferentiated collective, not individuals."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "thessalonian_church_ethiopian",
+      "name": "The Church of the Thessalonians",
+      "role": "manager",
+      "scribeTier": "The Beloved Brethren",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1-2",
+          "note": "Addressed as unto the church of the Thessalonians in God our Father and the Lord Jesus Christ, greeted with grace and peace."
+        },
+        {
+          "ref": "2 Thessalonians 1:3-4",
+          "note": "Their faith groweth exceedingly and charity aboundeth; Paul glories in their patience and faith in all their persecutions and tribulations."
+        },
+        {
+          "ref": "2 Thessalonians 1:5-10",
+          "note": "Their suffering is a manifest token of God's righteous judgment, counting them worthy of the kingdom of God; God will recompense tribulation to their troublers and give them rest with Paul when the Lord Jesus is revealed from heaven with his mighty angels in flaming fire, to be glorified and admired in his saints because their testimony was believed."
+        },
+        {
+          "ref": "2 Thessalonians 2:13-14",
+          "note": "Called brethren beloved of the Lord, chosen from the beginning to salvation through sanctification of the Spirit and belief of the truth, called by the gospel to the obtaining of the glory of Christ."
+        },
+        {
+          "ref": "2 Thessalonians 3:4",
+          "note": "Paul states his confidence in the Lord touching them, that ye both do and will do the things which we command you."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paul, Silvanus, and Timotheus had already written to this same congregation once before, in 1 Thessalonians."
+      ]
+    },
+    {
+      "id": "man_of_sin_ethiopian",
+      "name": "The Man of Sin",
+      "role": "law",
+      "scribeTier": "The Man of Sin",
+      "parentManagerId": null,
+      "deliveredBy": "paul_2thessalonians_ethiopian",
+      "purpose": "Corrects an alarm among the Thessalonians over a letter or word purporting to be from Paul ('as from us,' 2:2) claiming the day of Christ is at hand. Paul teaches that day cannot come until a falling away comes first and that man of sin, the son of perdition, be revealed - one who opposeth and exalteth himself above all that is called God, so that he as God sitteth in the temple of God, shewing himself that he is God (2:3-4). A restraining power (he who now letteth) presently withholds this revealing until he be taken out of the way, after which that Wicked one will be revealed and consumed by the Lord with the spirit of his mouth and destroyed with the brightness of his coming (2:6-8). That one's own coming is after the working of Satan with all power and signs and lying wonders, and with all deceivableness of unrighteousness in them that perish because they received not the love of the truth; for this cause God shall send them strong delusion, that they should believe a lie, that they all might be damned who believed not the truth (2:9-12). The passage closes contrasting this with the Thessalonians' own calling - God hath from the beginning chosen you to salvation through sanctification of the Spirit and belief of the truth, urged to stand fast and hold the traditions taught by word or epistle, with a prayer that the Lord Jesus Christ and God our Father comfort their hearts and stablish them in every good word and work (2:13-17).",
+      "verses": [
+        {
+          "ref": "2 Thessalonians 2:1-4",
+          "note": "Beseeches them not to be soon shaken lest the day of Christ be thought at hand; that day requires a falling away first and the revealing of the man of sin, the son of perdition, who exalteth himself above God and sitteth in the temple of God."
+        },
+        {
+          "ref": "2 Thessalonians 2:6-8",
+          "note": "Ye know what withholdeth that he might be revealed in his time; the mystery of iniquity doth already work; that Wicked shall be revealed and consumed with the spirit of the Lord's mouth, destroyed with the brightness of his coming."
+        },
+        {
+          "ref": "2 Thessalonians 2:9-12",
+          "note": "His coming is after the working of Satan with all power and signs and lying wonders, deceiving them that perish because they received not the love of the truth; God shall send them strong delusion that they should believe a lie and be damned."
+        },
+        {
+          "ref": "2 Thessalonians 2:13-17",
+          "note": "Gives thanks that God hath chosen the Thessalonians to salvation through sanctification of the Spirit and belief of the truth, and exhorts them to stand fast and hold the traditions taught by word or epistle, with a prayer for comfort and establishment in every good word and work."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The identity of the man of sin/son of perdition is not named anywhere in this text, nor is the restrainer he who now letteth - this index describes only what the text states, per the accuracy-over-invention rule.",
+        "The letter warned of in 2:2 as 'as from us' is described by the text only as falsely purporting to be from Paul, not explicitly as forged - describing it as forged is a common interpretive gloss, avoided here."
+      ]
+    },
+    {
+      "id": "disorderly_command_ethiopian",
+      "name": "The Command Concerning the Disorderly",
+      "role": "law",
+      "scribeTier": "Working with Quietness",
+      "parentManagerId": null,
+      "deliveredBy": "paul_2thessalonians_ethiopian",
+      "purpose": "Addresses some walking disorderly, working not at all, but busybodies (3:11) - very plausibly tied to the end-times excitement corrected in chapter 2, where an expectation that the day of the Lord had already arrived may have led some to abandon ordinary labor. Paul commands the brethren, in the name of the Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us (3:6), grounds the command in his own personal example of laboring night and day among them so as not to be chargeable to any of them (3:7-9), restates the rule already given in person - if any would not work, neither should he eat (3:10) - and commands such people to work with quietness and eat their own bread (3:12). The church is told not to be weary in well doing (3:13), to note that man and have no company with him that he may be ashamed, but explicitly yet count him not as an enemy, but admonish him as a brother (3:14-15), teaching restorative rather than punitive church discipline.",
+      "verses": [
+        {
+          "ref": "2 Thessalonians 3:6",
+          "note": "Commands the brethren, in the name of our Lord Jesus Christ, that ye withdraw yourselves from every brother that walketh disorderly, and not after the tradition which he received of us."
+        },
+        {
+          "ref": "2 Thessalonians 3:10",
+          "note": "Restates the rule already commanded in person: if any would not work, neither should he eat."
+        },
+        {
+          "ref": "2 Thessalonians 3:11-12",
+          "note": "Notes reports that some walk among you disorderly, working not at all, but are busybodies, and commands and exhorts such by our Lord Jesus Christ to work with quietness and eat their own bread."
+        },
+        {
+          "ref": "2 Thessalonians 3:13-15",
+          "note": "Exhorts the brethren to be not weary in well doing, to note and have no company with any who disobey this word by the epistle, that he may be ashamed, yet not to count him as an enemy but admonish him as a brother."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "3:10's 'if any would not work, neither should he eat' is one of the most quoted single verses from this epistle outside its own context."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "manOfSinInterpretation": {
+      "ref": "2 Thessalonians 2:3-4, 2:6-9",
+      "note": "The man of sin/son of perdition and he who now letteth are never named by this text. This index deliberately does not assign either figure a specific historical or future identity, per the project's accuracy-over-invention rule."
+    },
+    "silvanusSilasIdentification": {
+      "ref": "2 Thessalonians 1:1; cf. Acts 15:22-40, 17:1-10, 18:5; 2 Corinthians 1:19",
+      "note": "Silvanus is widely identified with the Silas of Acts, based on parallel roles alongside Paul and Timothy across these passages - a cross-book identification, not something this letter states on its own."
+    },
+    "unnamedOpposition": {
+      "ref": "2 Thessalonians 3:2",
+      "note": "The unreasonable and wicked men Paul asks prayer for deliverance from are not otherwise identified in the text."
+    },
+    "letterAsFromUsInference": {
+      "ref": "2 Thessalonians 2:2",
+      "note": "The letter as from us is described by the text only as falsely purporting to be from Paul, not explicitly as forged or fraudulently intended. This index avoids the 'forged letter' characterization per the accuracy-over-invention rule."
+    },
+    "translationComparisonNote": {
+      "ref": "whole book",
+      "note": "This Ethiopian-translation text of 2 Thessalonians is verse-for-verse content-identical to the KJV rendering already indexed for this book - same chapter/verse structure (12/17/18), same clauses and teachings, no real textual differences found, unlike this Ethiopian Bible's genuinely distinct content elsewhere (e.g. its own Ezra matching the 1 Esdras tradition)."
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "book": "The Rest of Esther",
+  "translation": "Geneva",
+  "canonicalOrder": 44,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This entire book IS the Greek/Vulgate Additions to Esther (the material Jerome moved to the end of the book as ch.10:4-16:24, distinct from the LXX's lettered Addition A-F scheme) - it does not exist as a separate book in the KJV/Hebrew canon at all, so there is no prior KJV Character Index entry to reconcile against. Structure: Mordecai's dream + its interpretation bookend the fragment (10:4-13 interpreting, 11:2-12 the dream itself), then the eunuchs' plot (12), Aman's decree (13:1-7) plus Mordecai's prayer (13:8-18), Esther's prayer and royal audience (14-15), and the king's reversing decree naming Aman's crimes and fate (16). NAMING COLLISIONS flagged, not silently resolved: (1) \"Mardocheus\"/Mordecai and \"Aman\" are the same two figures as Mordecai and Haman in the canonical (Hebrew) Book of Esther - the Greek spelling is kept as-is per the actual text rather than silently normalized to the Hebrew form, and these ids are translation+book-scoped so they never collide with a future canonical-Esther index. (2) The king is called \"Artaxerxes\" throughout this Geneva text, not \"Ahasuerus\" as in the Hebrew-based canonical Esther - a real, textually-attested naming difference (the LXX/Vulgate tradition identifies the king differently than the Masoretic text), not an error to fix. (3) Aman's origin is given inconsistently within this very text: 12:6 calls him \"a Bugean\" (the Greek rendering of the Hebrew \"Agagite\"), but 16:10 calls him \"a Macedonian... alien in truth from the Persian blood\" - both kept as verse notes rather than harmonized, since the text itself does not reconcile them. Dositheus, Ptolemy (his son), and Lysimachus son of Ptolemy (11:1) are a scribal colophon about the letter's transmission/translation into Greek, not narrative characters - logged under genealogyLists rather than given character entries, matching the \"don't invent individuals for a non-narrative textual note\" spirit of rule 5. Note: the text at 11:1 distinguishes this Ptolemy (Dositheus's son) from Lysimachus's father Ptolemy of Jerusalem only by context/relationship, not by any explicit age qualifier - no \"younger\"/\"elder\" language appears in the verse itself. Nabuchodonosor (Nebuchadnezzar) and Jechonias (11:4) are historical-context references inside Mordecai's own genealogy note, not independent characters here. Gabatha and Tharra (the two conspiring eunuchs) are kept as submanagers under Mordecai rather than promoted to their own tier - the plot's outcome hinges on Mordecai's vigilance, not on the eunuchs as individuals, and the text gives them no further characterization beyond the single scene.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Mordecai's Dream and Prayer",
+      "managerId": "mordecai_geneva_rest",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Aman the Adversary",
+      "managerId": "aman_geneva_rest",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Decree of Destruction",
+      "managerId": "decree_of_destruction_geneva_rest",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Esther's Prayer and Audience",
+      "managerId": "esther_geneva_rest",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Artaxerxes the King",
+      "managerId": "artaxerxes_geneva_rest",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Decree of Deliverance",
+      "managerId": "decree_of_deliverance_geneva_rest",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "mordecai_geneva_rest",
+      "name": "Mordecai (Mardocheus)",
+      "role": "manager",
+      "scribeTier": "Mordecai's Dream and Prayer",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jairus",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 10:4-5",
+          "note": "Interprets his own dream after the fact: \"These things are of God... nothing thereof hath failed.\""
+        },
+        {
+          "ref": "The Rest of Esther 10:6-13",
+          "note": "Explains the dream's symbols: the little fountain that became a river is Esther; the two dragons are himself and Aman; the two lots set the day of judgement between Israel and the nations, resolved on 14th-15th Adar."
+        },
+        {
+          "ref": "The Rest of Esther 11:2-4",
+          "note": "Genealogy given: son of Jairus, son of Semeias, son of Kiseus, of the tribe of Benjamin; a Jew dwelling in Susa, a servitor in the king's court, among those carried captive from Jerusalem by Nabuchodonosor with Jechonias king of Judaea."
+        },
+        {
+          "ref": "The Rest of Esther 11:5-12",
+          "note": "The dream itself: two dragons ready to fight, all nations mustering against the righteous nation, a day of darkness and uproar, then a little fountain becomes a great river as the lowly are exalted over the glorious."
+        },
+        {
+          "ref": "The Rest of Esther 12:1-5",
+          "note": "Resting in the court, overhears the eunuchs Gabatha and Tharra plotting against King Artaxerxes, reports them, and is rewarded with a place serving in the court."
+        },
+        {
+          "ref": "The Rest of Esther 12:6",
+          "note": "Because of the exposed eunuchs, Aman begins seeking to molest Mordecai and his people."
+        },
+        {
+          "ref": "The Rest of Esther 13:8-14",
+          "note": "Prays to the Lord, explaining he refused to bow to Aman not from pride but because he would not give a man's glory the honor due to God alone."
+        },
+        {
+          "ref": "The Rest of Esther 13:15-18",
+          "note": "Prays for God to spare Israel, the inheritance redeemed out of Egypt, and to turn mourning into feasting."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His own dream's symbols are only explained at the very end of the book, so the reader sees the interpretation (ch.10) before ever reading the dream itself (ch.11) in this Geneva chapter ordering."
+      ]
+    },
+    {
+      "id": "aman_geneva_rest",
+      "name": "Aman (Haman)",
+      "role": "manager",
+      "scribeTier": "Aman the Adversary",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Amadathus",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 12:6",
+          "note": "Called \"the son of Amadathus, a Bugean,\" in great honour with the king; begins scheming against Mordecai and his people over the exposed conspiracy."
+        },
+        {
+          "ref": "The Rest of Esther 13:3-6",
+          "note": "Praised by the king as excelling in wisdom and constant fidelity, holding the second place in the kingdom and called \"a second father\"; it is Aman who identifies the Jews as a lawless people and urges their destruction."
+        },
+        {
+          "ref": "The Rest of Esther 16:10-14",
+          "note": "The king's own reversing letter unmasks him: called here \"a Macedonian... alien in truth from the Persian blood,\" who abused the king's favor and plotted to kill both Mordecai and Esther and seize the kingdom for the Macedonians."
+        },
+        {
+          "ref": "The Rest of Esther 16:18",
+          "note": "\"He, that was the worker of these things, is hanged at the gates of Susa with all his family.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text gives two different, unreconciled accounts of his origin within the same book: \"a Bugean\" (12:6) versus \"a Macedonian\" (16:10)."
+      ]
+    },
+    {
+      "id": "decree_of_destruction_geneva_rest",
+      "name": "The Decree of Destruction",
+      "role": "law",
+      "scribeTier": "The Decree of Destruction",
+      "parentManagerId": null,
+      "deliveredBy": "aman_geneva_rest",
+      "purpose": "The royal edict, dictated by Aman and issued in King Artaxerxes' name to all 127 provinces from India to Ethiopia, ordering that the Jewish people - with their wives and children - be destroyed, slain, and made to perish by the sword on the fourteenth day of the twelfth month, Adar, without mercy or pity.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 13:1-2",
+          "note": "Opening of the letter: the king describes himself as ruling with equity and mildness, seeking to settle his kingdom in peace."
+        },
+        {
+          "ref": "The Rest of Esther 13:4-6",
+          "note": "The decree's substance: a \"malignant people\" scattered among the nations, with laws contrary to all, must be utterly destroyed with their families on 14 Adar."
+        },
+        {
+          "ref": "The Rest of Esther 13:7",
+          "note": "Purpose stated: so that the troublesome people go down \"in one day with violence\" and the kingdom's affairs be settled without further trouble."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "esther_geneva_rest",
+      "name": "Queen Esther",
+      "role": "manager",
+      "scribeTier": "Esther's Prayer and Audience",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "artaxerxes_geneva_rest"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 14:1-2",
+          "note": "Seized with the agony of death, she lays aside her glorious apparel and covers herself in ashes and mourning, resorting to the Lord."
+        },
+        {
+          "ref": "The Rest of Esther 14:3-10",
+          "note": "Prays as one desolate with no other helper, recounts Israel's sin, and describes the enemy's desire to silence God's praise and exalt idols."
+        },
+        {
+          "ref": "The Rest of Esther 14:11-14",
+          "note": "Pleads for boldness and eloquent speech before \"the lion\" (the king), and that his heart be turned against her enemy."
+        },
+        {
+          "ref": "The Rest of Esther 14:15-18",
+          "note": "Declares she abhors the sign of her royal estate \"as a menstruous rag,\" and that she has eaten nothing at Aman's table nor honored the king's feast or its wine."
+        },
+        {
+          "ref": "The Rest of Esther 15:1-7",
+          "note": "On the third day, dressed again in glory, she approaches the king unsummoned; he looks on her in fierce anger and she faints from fear."
+        },
+        {
+          "ref": "The Rest of Esther 15:8-16",
+          "note": "God softens the king's heart; he catches her, comforts her, and assures her she will not die; she explains she saw him \"as an angel of God\" and again faints for faintness after speaking."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mordecai's dream (10:6) identifies her directly with \"the little fountain that became a river\" - light, sun, and much water."
+      ]
+    },
+    {
+      "id": "artaxerxes_geneva_rest",
+      "name": "King Artaxerxes",
+      "role": "manager",
+      "scribeTier": "Artaxerxes the King",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "esther_geneva_rest"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 12:2-5",
+          "note": "Informed by Mordecai of the eunuchs' plot against his life; has the two eunuchs examined, confessed, and executed, then rewards Mordecai."
+        },
+        {
+          "ref": "The Rest of Esther 13:1-6",
+          "note": "Issues Aman's decree of destruction in his own name, calling Aman a trusted counselor and \"a second father.\""
+        },
+        {
+          "ref": "The Rest of Esther 15:8-13",
+          "note": "God turns his spirit to mildness; he leaps from his throne to catch the fainting Esther, embraces her, and tells her \"I am thy brother, be of good cheer... thou shalt not die.\""
+        },
+        {
+          "ref": "The Rest of Esther 16:1-9",
+          "note": "Writes a second letter to every province, admitting his own edict was obtained through Aman's deception rather than his own judgment."
+        },
+        {
+          "ref": "The Rest of Esther 16:15-21",
+          "note": "Declares the Jews blameless, condemns the hanged Aman, and orders the original decree disregarded and the Jews permitted to live by their own laws and defend themselves."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "decree_of_deliverance_geneva_rest",
+      "name": "The Decree of Deliverance",
+      "role": "law",
+      "scribeTier": "The Decree of Deliverance",
+      "parentManagerId": null,
+      "deliveredBy": "artaxerxes_geneva_rest",
+      "purpose": "The king's second royal letter to all 127 provinces, rescinding Aman's edict, naming his treachery and execution, declaring the Jews blameless people living by just laws, and granting them the right to live by their own laws and to defend themselves on the thirteenth of Adar - establishing the day as one of the kingdom's commemorative feasts.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 16:1-9",
+          "note": "Opening: addressed to the governors of the 127 provinces, warning against flatterers and those unworthily placed in authority who abuse a prince's trust."
+        },
+        {
+          "ref": "The Rest of Esther 16:10-18",
+          "note": "Recounts Aman's true character and crimes as a Macedonian alien who plotted against both the king and Mordecai/Esther, and confirms he is \"hanged at the gates of Susa with all his family.\""
+        },
+        {
+          "ref": "The Rest of Esther 16:19-24",
+          "note": "Commands the letter published openly, grants the Jews leave to live after their own laws and to defend themselves on 13 Adar, and orders the day kept as a feast; any city refusing compliance is itself threatened with destruction."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gabatha_geneva_rest",
+      "name": "Gabatha",
+      "role": "submanager",
+      "scribeTier": "Mordecai's Dream and Prayer",
+      "parentManagerId": "mordecai_geneva_rest",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 12:1-3",
+          "note": "One of two eunuchs and keepers of the king's court; Mordecai overhears him and Tharra plotting to lay hands on King Artaxerxes, and reports them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tharra_geneva_rest",
+      "name": "Tharra",
+      "role": "submanager",
+      "scribeTier": "Mordecai's Dream and Prayer",
+      "parentManagerId": "mordecai_geneva_rest",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Rest of Esther 12:1-3",
+          "note": "The second of the two conspiring eunuchs alongside Gabatha; examined by the king after Mordecai's report and led to execution."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "colophon_11_1": {
+      "ref": "The Rest of Esther 11:1",
+      "note": "A scribal transmission note, not a narrative character: in the fourth year of Ptolemy and Cleopatra's reign, Dositheus (who said he was a priest and Levite) and his son Ptolemy brought this 'epistle of Phrurai' (Purim) to Egypt, claiming it was the same letter that Lysimachus the son of Ptolemy, of Jerusalem, had interpreted/translated. The text distinguishes Dositheus's son Ptolemy from Lysimachus's father Ptolemy of Jerusalem only by their different relationships in the sentence, not by any stated age difference."
+    },
+    "nebuchadnezzar_captivity_11_4": {
+      "ref": "The Rest of Esther 11:4",
+      "note": "Historical-context reference inside Mordecai's own genealogy verse, not an active character in this book: Nabuchodonosor (Nebuchadnezzar) king of Babylon carried Mordecai's family from Jerusalem into captivity along with Jechonias king of Judaea."
+    }
+  }
+}

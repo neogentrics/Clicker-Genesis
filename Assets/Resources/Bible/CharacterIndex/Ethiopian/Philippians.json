@@ -1,0 +1,279 @@
+{
+  "book": "Philippians",
+  "translation": "Ethiopian",
+  "canonicalOrder": 70,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Ethiopian translation's Philippians text is word-for-word identical in substance to the KJV (same underlying English rendering throughout all 4 chapters/104 verses - no Ezra-style structural divergence here), so this draft adapts the already-completed KJV Philippians Character Index's tier structure and character roster rather than inventing an unrelated shape, per the task's own guidance for shared-canon books that turn out content-identical. Re-verified every verse reference and quote directly against this translation's own philippians_70.json rather than assuming the KJV file's citations still apply unchecked. All ids suffixed \"_ethiopian\" to scope them to this translation and avoid collision with the KJV index's ids (e.g. \"paul_ethiopian\" not \"paul\"), per the task's explicit id-collision-avoidance instruction - note this deliberately diverges from the KJV file's own choice to keep Paul's id unsuffixed for reuse across future KJV Pauline epistles; that reuse rationale doesn't extend across translations. Same five-tier shape as KJV: Paul (The Joyful Chains), Timothy (The Son in the Faith), Epaphroditus (The Ministering Messenger), Euodias & Syntyche as one collective manager entry (Fellowlabourers in the Gospel, since 4:2's shared exhortation \"that they be of the same mind in the Lord\" does not differentiate their individual actions), and the Christ Hymn (2:6-11) as a law tier delivered by Paul (personally-embodied-vs-pure-transmission test: Paul relays Christ's own self-emptying/exaltation as an imitable pattern, not a scene of Paul's own present action). Clement (4:3) again indexed as a loyalty-boost submanager under Euodias & Syntyche's tier, with the same naming-collision flag - this Clement is named once with no independent action, and must not be conflated with the later extra-biblical \"Clement of Rome\" tradition, which the text itself never asserts. Unnamed/collective references (bishops and deacons, the unnamed \"true yokefellow,\" Caesar's household, the brethren with Paul, the \"dogs/evil workers/concision\" of 3:2, the \"enemies of the cross\" of 3:18-19) again logged in genealogyLists rather than given entries, since this translation's text does not name or differentiate any of them either.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Joyful Chains",
+      "managerId": "paul_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Son in the Faith",
+      "managerId": "timothy_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Ministering Messenger",
+      "managerId": "epaphroditus_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Fellowlabourers in the Gospel",
+      "managerId": "euodias_and_syntyche_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Form of a Servant",
+      "managerId": "christ_hymn_philippians_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_ethiopian",
+      "name": "Paul the Apostle",
+      "role": "manager",
+      "scribeTier": "The Joyful Chains",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 1:1",
+          "note": "Opens the letter jointly with Timotheus, addressing 'all the saints in Christ Jesus which are at Philippi, with the bishops and deacons.'"
+        },
+        {
+          "ref": "Philippians 1:7",
+          "note": "Says the Philippians are 'partakers of my grace' both in his bonds and in the defence and confirmation of the gospel."
+        },
+        {
+          "ref": "Philippians 1:12-14",
+          "note": "Reports that his imprisonment has actually furthered the gospel, becoming manifest 'in all the palace, and in all other places,' and emboldened other believers to speak the word without fear."
+        },
+        {
+          "ref": "Philippians 1:21",
+          "note": "'For to me to live is Christ, and to die is gain' - his own stated outlook while awaiting the outcome of his imprisonment."
+        },
+        {
+          "ref": "Philippians 1:27-30",
+          "note": "Exhorts the Philippians to stand fast in one spirit, unterrified by their adversaries, and to expect suffering for Christ's sake as he himself suffers ('having the same conflict which ye saw in me')."
+        },
+        {
+          "ref": "Philippians 3:4-6",
+          "note": "States his own credentials: 'Circumcised the eighth day, of the stock of Israel, of the tribe of Benjamin, an Hebrew of the Hebrews as touching the law, a Pharisee... touching the righteousness which is in the law, blameless.'"
+        },
+        {
+          "ref": "Philippians 3:7-11",
+          "note": "Counts all his former credentials as loss for the excellency of the knowledge of Christ Jesus, desiring the power of his resurrection and the fellowship of his sufferings."
+        },
+        {
+          "ref": "Philippians 3:12-14",
+          "note": "Presses 'toward the mark for the prize of the high calling of God in Christ Jesus,' not counting himself as having already apprehended it."
+        },
+        {
+          "ref": "Philippians 4:4",
+          "note": "'Rejoice in the Lord alway: and again I say, Rejoice.'"
+        },
+        {
+          "ref": "Philippians 4:11-13",
+          "note": "His own testimony of learned contentment: 'I have learned, in whatsoever state I am, therewith to be content... I can do all things through Christ which strengtheneth me.'"
+        },
+        {
+          "ref": "Philippians 4:15-18",
+          "note": "Thanks the Philippians for supporting him from the beginning of the gospel, including gifts sent to Thessalonica, and for the gift most recently received of Epaphroditus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Philippians reads as an 'epistle of joy' in this translation too - 'joy'/'rejoice' recur repeatedly despite being written from bonds/imprisonment.",
+        "The letter names Paul's bonds (1:7, 1:13, 4:22) but never names the city of imprisonment in the text itself."
+      ]
+    },
+    {
+      "id": "timothy_ethiopian",
+      "name": "Timotheus",
+      "role": "manager",
+      "scribeTier": "The Son in the Faith",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 1:1",
+          "note": "Named jointly with Paul as sender: 'Paul and Timotheus, the servants of Jesus Christ.'"
+        },
+        {
+          "ref": "Philippians 2:19-20",
+          "note": "Paul trusts in the Lord Jesus to send Timotheus shortly to Philippi, 'that I also may be of good comfort, when I know your state' - saying 'I have no man likeminded, who will naturally care for your state.'"
+        },
+        {
+          "ref": "Philippians 2:22",
+          "note": "Contrasted with those who 'seek their own' - the Philippians know Timotheus's proven character, 'that, as a son with the father, he hath served with me in the gospel.'"
+        },
+        {
+          "ref": "Philippians 2:23-24",
+          "note": "Paul hopes to send him presently once he sees how his own situation will go, and trusts he himself will come shortly also."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The letter's body is written in Paul's first-person singular voice throughout, even though Timotheus is named as joint sender in 1:1 - the text gives no indication which parts, if any, he contributed directly."
+      ]
+    },
+    {
+      "id": "epaphroditus_ethiopian",
+      "name": "Epaphroditus",
+      "role": "manager",
+      "scribeTier": "The Ministering Messenger",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 2:25",
+          "note": "Paul calls him 'my brother, and companion in labour, and fellowsoldier, but your messenger, and he that ministered to my wants' - sent by the Philippians to attend to Paul."
+        },
+        {
+          "ref": "Philippians 2:26-27",
+          "note": "He 'longed after you all, and was full of heaviness, because that ye had heard that he had been sick' - the text states he 'was sick nigh unto death: but God had mercy on him.'"
+        },
+        {
+          "ref": "Philippians 2:28-30",
+          "note": "Paul sends him back to Philippi so both may rejoice, instructing the church to 'receive him therefore in the Lord with all gladness, and hold such in reputation: because for the work of Christ he was nigh unto death, not regarding his life, to supply your lack of service toward me.'"
+        },
+        {
+          "ref": "Philippians 4:18",
+          "note": "Paul confirms receiving the Philippians' gift 'having received of Epaphroditus the things which were sent from you, an odour of a sweet smell, a sacrifice acceptable, wellpleasing to God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His near-fatal illness (2:26-27) and Paul's decision to send him home form the closest thing this letter has to a suspenseful personal episode."
+      ]
+    },
+    {
+      "id": "euodias_and_syntyche_ethiopian",
+      "name": "Euodias and Syntyche",
+      "role": "manager",
+      "scribeTier": "Fellowlabourers in the Gospel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 4:2",
+          "note": "Paul 'beseech[es] Euodias, and beseech[es] Syntyche, that they be of the same mind in the Lord' - the sole description of any disagreement between the two, given as one shared exhortation rather than separated accounts."
+        },
+        {
+          "ref": "Philippians 4:3",
+          "note": "Paul asks his 'true yokefellow' to help these women, describing them as those 'which laboured with me in the gospel, with Clement also, and with other my fellowlabourers, whose names are in the book of life.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Indexed as one collective entry rather than two, since the text applies the same shared exhortation to both women without differentiating their individual actions or the substance of their dispute."
+      ]
+    },
+    {
+      "id": "clement_ethiopian",
+      "name": "Clement",
+      "role": "submanager",
+      "scribeTier": "Fellowlabourers in the Gospel",
+      "parentManagerId": "euodias_and_syntyche_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Naming-collision flag: named only once, in Philippians 4:3, with no independent action recorded. Not to be conflated with the later, extra-biblical tradition identifying him as 'Clement of Rome' - the text itself makes no such identification; that association is tradition, not scripture.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 4:3",
+          "note": "Named by Paul alongside Euodias, Syntyche, and 'other my fellowlabourers' as one who laboured with him in the gospel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "christ_hymn_philippians_ethiopian",
+      "name": "The Form of a Servant",
+      "role": "law",
+      "scribeTier": "The Form of a Servant",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian",
+      "purpose": "Introduced in 2:1-5 as the pattern for the unity and lowliness of mind Paul urges on the Philippians ('Let this mind be in you, which was also in Christ Jesus') - presents Christ's own self-emptying, humbling, and obedience unto death, and his subsequent exaltation, as the model believers are called to imitate in how they treat one another.",
+      "verses": [
+        {
+          "ref": "Philippians 2:6-7",
+          "note": "Christ, 'being in the form of God, thought it not robbery to be equal with God: But made himself of no reputation, and took upon him the form of a servant, and was made in the likeness of men.'"
+        },
+        {
+          "ref": "Philippians 2:8",
+          "note": "'And being found in fashion as a man, he humbled himself, and became obedient unto death, even the death of the cross.'"
+        },
+        {
+          "ref": "Philippians 2:9-11",
+          "note": "'Wherefore God also hath highly exalted him, and given him a name which is above every name: That at the name of Jesus every knee should bow... And that every tongue should confess that Jesus Christ is Lord, to the glory of God the Father.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Widely regarded by scholars as an early Christian hymn or creedal statement Paul is quoting rather than composing fresh - the text itself doesn't state this either way."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list because this translation's text does not name or differentiate them as individuals.",
+    "philippian_bishops_and_deacons": {
+      "ref": "Philippians 1:1",
+      "note": "Paul's greeting names 'the saints in Christ Jesus which are at Philippi, with the bishops and deacons' collectively - no individual office-holder is named."
+    },
+    "true_yokefellow": {
+      "ref": "Philippians 4:3",
+      "note": "Paul addresses an unnamed 'true yokefellow,' asking him to help Euodias and Syntyche - no name is given in the text itself, so none is assigned here."
+    },
+    "caesars_household": {
+      "ref": "Philippians 4:22",
+      "note": "'All the saints salute you, chiefly they that are of Caesar's household' - an unnamed collective group at the letter's close."
+    },
+    "brethren_with_paul": {
+      "ref": "Philippians 4:21",
+      "note": "'The brethren which are with me greet you' - an unnamed collective group accompanying Paul at the time of writing."
+    },
+    "dogs_evil_workers_concision": {
+      "ref": "Philippians 3:2",
+      "note": "'Beware of dogs, beware of evil workers, beware of the concision' - commonly read as a warning against Judaizing teachers, but no individual is named."
+    },
+    "enemies_of_the_cross": {
+      "ref": "Philippians 3:18-19",
+      "note": "'Many walk, of whom I have told you often, and now tell you even weeping, that they are the enemies of the cross of Christ' - Paul says he has warned of these often, but names no individual within the letter."
+    }
+  }
+}

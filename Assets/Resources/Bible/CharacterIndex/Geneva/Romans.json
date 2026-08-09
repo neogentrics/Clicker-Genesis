@@ -1,0 +1,419 @@
+{
+  "book": "Romans",
+  "translation": "Geneva",
+  "canonicalOrder": 57,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read the full real Geneva 1560 text of Romans (all 16 chapters, 430 verses, matching the stated count) before drafting. REAL DATA-QUALITY FINDING: chapter 7 in this extracted file (Assets/Resources/Verses/Geneva/romans_57.json) is a verbatim, word-for-word duplicate of chapter 6 -- same 23 verses, same text, same order. The genuine Romans 7 material present in essentially every other translation of this book (the law is holy/just/good, \"O wretched man that I am,\" the inward struggle against indwelling sin) does not appear anywhere in this file. Because the whole-book verse total still sums to exactly 430 as extracted, this reads as a chapter/page-duplication artifact from the source extraction pipeline (the same class of issue already logged project-wide for ~3% of Geneva/Ethiopian chapters), not a deliberate 1560 Geneva textual choice -- the real 1560 Geneva Bible does contain a distinct Romans 7. Per this project's \"never invent, flag rather than guess\" rule, no Romans-7-specific content was fabricated to fill the gap; the \"Newnesse of Life\" law tier below draws only from chapter 6 (baptism/newness of life/servants of righteousness) and chapter 8 (no condemnation/Spirit of adoption/more than conquerors), skipping straight past the duplicate chapter 7 with that gap noted in the tier's own purpose text. This chapter should be flagged for the same needsReview/manual-recheck pass the Geneva-Bible-Extraction-QA.json file already tracks for other anomalous chapters.\n\nSTRUCTURE: like the already-built KJV Romans.json, this is Paul's sustained theological letter, not a narrative -- so the tier structure is dominated by law/theme tiers (all deliveredBy Paul, the letter's sole author) rather than person tiers. Paul himself gets one full person tier for the genuinely personal, non-doctrinal material: his self-introduction (1:1-17), his personal anguish over Israel (9:1-5, first-person grief, not a doctrinal point), his account of his own calling/travel plans/prayer request (15:14-33), his warning against those who cause divisions (16:17-20), his personal greetings (16:1-16, 16:21-24), and the closing doxology (16:25-27). Naming-collision/reuse rule: paul_geneva_romans is deliberately id-suffixed by both translation and book, since Paul is expected to recur as his own independent manager tier in every future Pauline epistle across every translation indexed in this project (same precedent as Jesus getting an independent tier per Gospel, and as paul_romans already does for the KJV) -- future books/translations should mint their own paul_[translation]_[book] id, never reuse this one.\n\nGENEVA-SPECIFIC TEXTUAL NOTES (real observations from the actual text, not KJV assumptions carried over): Geneva spells names distinctively from KJV in the chapter 16 greeting list -- \"Phebe\" not \"Phoebe,\" \"Iunia\" not \"Junia,\" \"Iulias\" (not \"Julia,\" and arguably read as a masculine form here) and \"Nereas\" not \"Nereus.\" Geneva 16:7 describes Andronicus and Iunia as Paul's \"cousins and fellowe prisoners,\" where KJV instead reads \"kinsmen\" -- a genuine translation-specific word choice, not an error, preserved in this entry's verse note rather than silently normalized to KJV's wording. Chapter 16's long remaining greeting list is treated the same way as the KJV version per the collective-entry/promotion-threshold rule: Phebe, Priscilla and Aquila (always paired in the text), and Andronicus and Iunia (named together, never differentiated, and distinguished as \"notable among the Apostles\") are promoted to submanagers; the ~24 remaining names are logged in genealogyLists as a bulk note, since the text gives most of them only a name with no differentiated action. Old Testament figures Paul cites as scriptural examples (Abraham, Sara, Adam, Isaac, Iacob, Esau, Pharao, Elias, Dauid, Moses) are cited within his argument, not narratively present in this book, so they are not given new character entries here -- cross-referenced in genealogyLists instead, consistent with how the KJV Romans.json handled the same material. Ageevents are empty throughout, typical for NT epistles, which almost never state ages.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Detter's Charge",
+      "managerId": "paul_geneva_romans",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Wrath Reueiled",
+      "managerId": "the_wrath_reueiled_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Counted for Righteousnesse",
+      "managerId": "counted_for_righteousnesse_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Newnesse of Life",
+      "managerId": "newnesse_of_life_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Wilde Oliue Tree",
+      "managerId": "the_wilde_oliue_tree_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Liuing Sacrifice",
+      "managerId": "the_liuing_sacrifice_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_romans",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Detter's Charge",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 1:1",
+          "note": "Introduces himself: \"Paul a seruant of Iesus Christ called to be an Apostle, put apart to preache the Gospel of God.\""
+        },
+        {
+          "ref": "Romans 1:8-15",
+          "note": "Thanks God for the Romans' faith \"published throughout the whole world,\" and states he has \"oftentimes purposed to come vnto you (but haue bene let hitherto),\" being \"detter both to the Grecians, and to the Barbarians.\""
+        },
+        {
+          "ref": "Romans 1:16-17",
+          "note": "\"I am not ashamed of the Gospel of Christ: for it is the power of God vnto saluation to euery one that beleeueth\"; \"the iust shall liue by faith.\""
+        },
+        {
+          "ref": "Romans 9:1-5",
+          "note": "Personal anguish, not doctrinal argument: \"I haue great heauinesse, and continuall sorow in mine heart\" for his \"brethren, that are my kinsemen according to the flesh,\" the Israelites."
+        },
+        {
+          "ref": "Romans 11:13-14",
+          "note": "Addresses Gentile readers directly as \"the Apostle of ye Gentiles,\" hoping to \"prouoke them of my flesh to follow them, and might saue some of them.\""
+        },
+        {
+          "ref": "Romans 15:14-21",
+          "note": "Describes his own ministry to the Gentiles and his personal ambition to preach where Christ was not already named, \"lest I should haue built on another mans foundation.\""
+        },
+        {
+          "ref": "Romans 15:22-29",
+          "note": "His travel plans: long hindered from Rome, now hoping to pass through on the way to Spain, but first carrying a collection from Macedonia and Achaia to \"the poore Saints which are at Hierusalem.\""
+        },
+        {
+          "ref": "Romans 15:30-33",
+          "note": "Asks the Romans to \"striue with me by prayers to God for me,\" for deliverance from the disobedient in Iudea."
+        },
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Commends Phebe, \"a seruaunt of the Church of Cenchrea,\" to the Roman church."
+        },
+        {
+          "ref": "Romans 16:3-16",
+          "note": "Sends personal greetings to a long list of named individuals and households at Rome, including Priscilla and Aquila, and Andronicus and Iunia among his own \"cousins and fellowe prisoners.\""
+        },
+        {
+          "ref": "Romans 16:17-20",
+          "note": "Warns the Romans to \"marke them diligently which cause diuision and offences,\" who \"serue not the Lord Iesus Christ, but their owne bellies\"; promises \"the God of peace shall treade Satan vnder your feete shortly.\""
+        },
+        {
+          "ref": "Romans 16:21-24",
+          "note": "Relays greetings from his own companions -- Timotheus, Lucius, Iason, and Sosipater his kinsmen; Tertius, who personally \"wrote out this Epistle\"; Gaius his host; Erastus \"the steward of the citie\"; and Quartus."
+        },
+        {
+          "ref": "Romans 16:25-27",
+          "note": "Closing doxology: God is able to establish them \"according to my Gospel,\" by revelation of \"the mysterie, which was kept secrete since the worlde began\"; \"To God, I say, only wise, be praise through Iesus Christ for euer. Amen.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans 16:22 records Tertius, the actual scribe who wrote the letter at Paul's dictation, inserting his own greeting into the text -- a rare case of a biblical letter's physical penman naming himself.",
+        "This letter was written to a church Paul had not yet personally visited (1:13, 15:22-23), unlike most of his other epistles."
+      ]
+    },
+    {
+      "id": "phebe_geneva_romans",
+      "name": "Phebe",
+      "role": "submanager",
+      "scribeTier": "The Detter's Charge",
+      "parentManagerId": "paul_geneva_romans",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Paul commends her as \"our sister,\" a servant of the church at Cenchrea, asking the Romans to receive her and assist her, \"for she hath giuen hospitalitie vnto many, and to me also.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text spells her name \"Phebe,\" distinct from the more familiar \"Phoebe\" spelling used in later translations."
+      ]
+    },
+    {
+      "id": "priscilla_and_aquila_geneva_romans",
+      "name": "Priscilla and Aquila",
+      "role": "submanager",
+      "scribeTier": "The Detter's Charge",
+      "parentManagerId": "paul_geneva_romans",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Treated as one collective entry -- the text always names and credits them as a pair and never differentiates an individual action by either one.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:3-5",
+          "note": "Greeted as \"my fellowe helpers in Christ Iesus,\" who \"haue for my life laide downe their owne necke,\" thanked by Paul and \"all the Churches of the Gentiles\"; their house-church is also greeted."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "andronicus_and_iunia_geneva_romans",
+      "name": "Andronicus and Iunia",
+      "role": "submanager",
+      "scribeTier": "The Detter's Charge",
+      "parentManagerId": "paul_geneva_romans",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Promoted to submanager rather than left in the bulk greeting note because Paul distinguishes them by name as \"notable among the Apostles,\" the same textual-distinction threshold used for Phebe and Priscilla/Aquila. Real Geneva-specific wording flag: this translation calls them Paul's \"cousins and fellowe prisoners\" -- a distinct word choice from other translations' \"kinsmen,\" preserved here rather than normalized. Iunia's gender has long been debated by translators/scholars generally; noted as an open textual question, not asserted either way.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:7",
+          "note": "Greeted as \"my cousins and fellowe prisoners, which are notable among the Apostles, and were in Christ before me.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paul states they were \"in Christ before me\" -- believers before his own conversion, making them among the earliest Christians he personally names in this letter."
+      ]
+    },
+    {
+      "id": "the_wrath_reueiled_geneva",
+      "name": "The Wrath Reueiled",
+      "role": "law",
+      "scribeTier": "The Wrath Reueiled",
+      "deliveredBy": "paul_geneva_romans",
+      "purpose": "Establishes that Gentiles (who suppress the truth of God evident in creation) and Iewes (who possess the Lawe but do not keepe it) stand equally guilty before God, so that \"euery mouth may bee stopped\" -- the necessary foundation before a righteousnesse apart from the Lawe can be introduced.",
+      "verses": [
+        {
+          "ref": "Romans 1:18-23",
+          "note": "\"The wrath of God is reueiled from heauen against all vngodlinesse\"; Gentiles are \"without excuse,\" having turned the glory of God \"to the similitude of the image of a corruptible man.\""
+        },
+        {
+          "ref": "Romans 1:24-32",
+          "note": "God gaue them vp \"vnto a reprobate minde\"; a long catalogue of resulting sins follows, ending with those who not only do such things but \"fauour them that doe them.\""
+        },
+        {
+          "ref": "Romans 2:1-16",
+          "note": "\"Thou art inexcusable, O man, whosoeuer thou art that condemnest\"; God will judge Iewe and Grecian alike \"according to trueth,\" and \"iudge the secretes of men by Iesus Christ.\""
+        },
+        {
+          "ref": "Romans 2:17-29",
+          "note": "Warns the one who \"gloriest in the Lawe\" yet breaks it; true circumcision is \"of the heart, in the spirite not in the letter.\""
+        },
+        {
+          "ref": "Romans 3:1-8",
+          "note": "Addresses the Iewes' advantage -- chiefly, that \"vnto them were of credite committed the oracles of God\" -- despite unbelief; \"let God be true, and euery man a lyar.\""
+        },
+        {
+          "ref": "Romans 3:9-20",
+          "note": "Concludes \"both Iewes and Gentiles are vnder sinne,\" chaining Old Testament citations: \"There is none righteous, no not one\"; \"by the Lawe commeth the knowledge of sinne.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans 3:13-18 strings together quotations from several different Psalms and Isaiah into one continuous indictment."
+      ]
+    },
+    {
+      "id": "counted_for_righteousnesse_geneva",
+      "name": "Counted for Righteousnesse",
+      "role": "law",
+      "scribeTier": "Counted for Righteousnesse",
+      "deliveredBy": "paul_geneva_romans",
+      "purpose": "Introduces a righteousnesse apart from the Lawe, receiued by faith and \"counted\"/\"imputed\" rather than earned by workes, using Abraham's own justification -- which occurred while he was still vncircumcised -- as scriptural proof, and contrasts the one offence of Adam that brought condemnation to all men with the one act of obedience in Christ that brings iustification and life.",
+      "verses": [
+        {
+          "ref": "Romans 3:21-26",
+          "note": "\"The righteousnesse of God is made manifest without the Lawe\"; believers are \"iustified freely by his grace, through the redemption that is in Christ Iesus.\""
+        },
+        {
+          "ref": "Romans 3:27-31",
+          "note": "\"A man is iustified by faith, without the workes of the Lawe\"; \"we establish the Lawe,\" not make it void."
+        },
+        {
+          "ref": "Romans 4:1-8",
+          "note": "\"Abraham beleeued God, and it was counted to him for righteousnesse\"; Dauid's words are cited on the blessedness of the man to whom God \"imputeth righteousnes without workes.\""
+        },
+        {
+          "ref": "Romans 4:9-17",
+          "note": "The blessing is not confined to \"the circumcision\": Abraham was justified \"when he was vncircumcised,\" making him \"the father of vs all.\""
+        },
+        {
+          "ref": "Romans 4:18-25",
+          "note": "Abraham's faith described though his body was \"almost an hundreth yeere olde,\" being \"fully assured that he which had promised, was also able to doe it.\""
+        },
+        {
+          "ref": "Romans 5:1-11",
+          "note": "\"Being iustified by faith, we haue peace toward God\"; \"while we were yet sinners, Christ died for vs.\""
+        },
+        {
+          "ref": "Romans 5:12-21",
+          "note": "\"As by one man sinne entred into ye world, and death by sinne\" (Adam), contrasted with \"the gift by grace, which is by one man Iesus Christ\": \"where sinne abounded, there grace abounded much more.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "newnesse_of_life_geneva",
+      "name": "Newnesse of Life",
+      "role": "law",
+      "scribeTier": "Newnesse of Life",
+      "deliveredBy": "paul_geneva_romans",
+      "purpose": "Answers the objection that grace should be exploited to keep sinning, explaining believers' union with Christ's death and resurrection through baptism into \"newnesse of life,\" then moves directly to assurance that life in the Spirit brings \"no condemnation\" and that nothing in creation can separate believers from the loue of God. NOTE: chapter 7 of this extracted Geneva source duplicates chapter 6 verbatim (see notes field) and is not usable as a source of distinct content -- this tier therefore jumps from chapter 6 straight to chapter 8, deliberately not inventing the real Romans 7 material (the law/inward-struggle passage) that is absent from this specific extraction.",
+      "verses": [
+        {
+          "ref": "Romans 6:1-14",
+          "note": "\"Shall we continue still in sinne, that grace may abounde? God forbid\"; baptized into Christ's death, believers \"should walke in newnesse of life.\""
+        },
+        {
+          "ref": "Romans 6:15-23",
+          "note": "Believers become \"seruants of righteousnesse\"; \"the wages of sinne is death: but the gift of God is eternall life, through Iesus Christ our Lord.\""
+        },
+        {
+          "ref": "Romans 8:1-11",
+          "note": "\"There is no condemnation to them that are in Christ Iesus, which walke not after the flesh, but after the Spirit.\""
+        },
+        {
+          "ref": "Romans 8:12-17",
+          "note": "\"As many as are ledde by the Spirit of God, they are the sonnes of God\"; \"we haue receiued the Spirit of adoption, whereby we cry Abba, Father.\""
+        },
+        {
+          "ref": "Romans 8:18-27",
+          "note": "\"The afflictions of this present time are not worthy of the glory, which shalbe shewed vnto vs\"; \"euery creature groneth,\" and the Spirit \"maketh request for vs with sighs, which cannot be expressed.\""
+        },
+        {
+          "ref": "Romans 8:28-30",
+          "note": "\"All thinges worke together for the best vnto them that loue God\"; whom he predestinated, called, iustified, and glorified."
+        },
+        {
+          "ref": "Romans 8:31-39",
+          "note": "\"If God be on our side, who can be against vs?\"; concludes \"nor any other creature shalbe able to separate vs from the loue of God, which is in Christ Iesus our Lord.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This tier deliberately skips the source file's chapter 7, which is a verbatim duplicate of chapter 6 rather than distinct content -- a real extraction anomaly, not a design choice."
+      ]
+    },
+    {
+      "id": "the_wilde_oliue_tree_geneva",
+      "name": "The Wilde Oliue Tree",
+      "role": "law",
+      "scribeTier": "The Wilde Oliue Tree",
+      "deliveredBy": "paul_geneva_romans",
+      "purpose": "Explains that God's worde has not failed even though most of Israel has not believed, since true Israel was never mere physical descent but God's owne election (Isaac not Ishmael, Iacob not Esau), pictures Israel's stumbling as the very means by which saluation reached the Gentiles (a wilde Oliue tree graft in among the natural branches), and looks toward a future restoration in which \"all Israel shalbe saued.\"",
+      "verses": [
+        {
+          "ref": "Romans 9:6-13",
+          "note": "\"They are not all Israel, which are of Israel\"; God's purpose by election shown through Isaac (not Ishmael) and Iacob (not Esau) -- \"I haue loued Iacob, and haue hated Esau.\""
+        },
+        {
+          "ref": "Romans 9:14-24",
+          "note": "\"Is there vnrighteousnes with God? God forbid\"; discusses mercy and hardening (citing Pharao) and the potter's power \"of the clay to make of the same lumpe one vessell to honour, and another vnto dishonour.\""
+        },
+        {
+          "ref": "Romans 9:25-33",
+          "note": "Cites Osee and Esaias on calling a people \"not my people\"; Israel \"haue stumbled at the stumbling stone.\""
+        },
+        {
+          "ref": "Romans 10:1-13",
+          "note": "Paul's own \"hearts desire and prayer to God for Israel\"; \"whosoeuer shall call vpon the Name of the Lord, shalbe saued.\""
+        },
+        {
+          "ref": "Romans 10:14-21",
+          "note": "\"How shall they preach, except they be sent?\"; \"faith is by hearing, and hearing by the worde of God.\""
+        },
+        {
+          "ref": "Romans 11:1-10",
+          "note": "\"Hath God cast away his people? God forbid\"; a remnant remains, as when Elias was told \"I haue reserued vnto my selfe seuen thousand men, which haue not bowed the knee to Baal.\""
+        },
+        {
+          "ref": "Romans 11:11-24",
+          "note": "Through Israel's fall, saluation comes to the Gentiles; pictures a wilde Oliue tree grafted in among broken-off natural branches, warning it not to \"boast\" against the roote."
+        },
+        {
+          "ref": "Romans 11:25-32",
+          "note": "Reveals the \"secret\" that partial obstinacie has come to Israel \"vntill the fulnesse of the Gentiles be come in,\" and \"so all Israel shalbe saued.\""
+        },
+        {
+          "ref": "Romans 11:33-36",
+          "note": "Closing doxology: \"O the deepenesse of the riches, both of the wisdome, and knowledge of God!\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_liuing_sacrifice_geneva",
+      "name": "The Liuing Sacrifice",
+      "role": "law",
+      "scribeTier": "The Liuing Sacrifice",
+      "deliveredBy": "paul_geneva_romans",
+      "purpose": "Turns from doctrine to practice: presenting bodies as a liuing sacrifice, exercising differing spiritual gifts within one body, loving genuinely, submitting to the higher powers, fulfilling the Lawe through loue of neighbour, and bearing with one another's differing convictions on disputable matters (meates, dayes) without judging, following Christ's own example, who \"would not please himselfe.\"",
+      "verses": [
+        {
+          "ref": "Romans 12:1-2",
+          "note": "\"Giue vp your bodies a liuing sacrifice, holy, acceptable vnto God\"; \"be yee changed by the renewing of your minde.\""
+        },
+        {
+          "ref": "Romans 12:3-8",
+          "note": "One body with many members and diuers gifts -- prophecy, office, teaching, exhortation, giuing, ruling, mercy -- each to be exercised \"according to the portion of faith.\""
+        },
+        {
+          "ref": "Romans 12:9-21",
+          "note": "\"Let loue be without dissimulation\"; \"blesse them which persecute you\"; \"ouercome euill with goodnesse.\""
+        },
+        {
+          "ref": "Romans 13:1-7",
+          "note": "\"Let euery soule be subiect vnto the higher powers: for there is no power but of God\"; \"giue to all men therefore their duetie.\""
+        },
+        {
+          "ref": "Romans 13:8-10",
+          "note": "\"Owe nothing to any man, but to loue one another: for he that loueth another, hath fulfilled the Lawe.\""
+        },
+        {
+          "ref": "Romans 13:11-14",
+          "note": "\"The night is past, and the day is at hande\"; \"let vs put on the armour of light... put yee on the Lord JESUS CHRIST.\""
+        },
+        {
+          "ref": "Romans 14:1-12",
+          "note": "\"Him that is weake in the faith, receiue vnto you, but not for controuersies of disputations\"; \"none of vs liueth to himselfe.\""
+        },
+        {
+          "ref": "Romans 14:13-23",
+          "note": "\"Let vs not therefore iudge one another any more\"; \"the kingdome of God, is not meate nor drinke, but righteousnes, and peace, and ioye in the holy Ghost.\""
+        },
+        {
+          "ref": "Romans 15:1-13",
+          "note": "\"We which are strong, ought to beare the infirmities of the weake\"; \"Christ also would not please himselfe\"; \"receiue ye one another, as Christ also receiued vs.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references kept out of the character list above -- either cited by Paul only as scriptural examples within his argument (not narratively present in this book), or belonging to the large closing greeting list of Romans 16 where the Geneva text supplies no more than a name and a short descriptor.",
+    "pauline_scriptural_examples": {
+      "ref": "Romans 4, 5:12-21, 9:6-17, 11:2-4, 4:6-8, 9:15, 10:5, 10:19",
+      "note": "Old Testament figures cited as examples within Paul's argument, not narratively present in this book: Abraham and Sara (Romans 4), Adam (5:12-21), Isaac and Ismael (9:7-9), Iacob and Esau (9:10-13), Pharao (9:17), Moses (9:15, 10:5, 10:19), Elias (11:2-4), and Dauid (4:6-8). Cross-reference their existing/eventual indexed entries elsewhere in this project's CharacterIndex rather than duplicating them here."
+    },
+    "romans_16_greeting_list": {
+      "ref": "Romans 16:5-16, 16:21-24",
+      "note": "Remaining individuals and households greeted, kept as a collective bulk note since the Geneva text gives most only a name with no differentiated action: Epenetus (\"the first fruites of Achaia\"); Marie (\"which bestowed much labour on vs\" -- a different Marie from any Gospel Mary, with no further identifying detail supplied by this book); Amplias, Vrbanus, Stachys, Apelles; the friends of Aristobulus; Herodion (Paul's kinsman); the friends of Narcissus; Tryphena and Tryphosa; Persis (\"which woman hath laboured much in the Lord\"); Rufus (\"chosen in the Lord\") and his mother; Asyncritus, Phlegon, Hermas, Patrobas, Mercurius; Philologus, Iulias, Nereas and his sister, Olympas (real Geneva-specific spellings, distinct from other translations' \"Julia\"/\"Nereus\" -- not asserted to be the same names/individuals without further textual confirmation); and among Paul's own companions at the letter's close: Timotheus, Lucius, Iason, and Sosipater his kinsemen, Tertius (who personally wrote the epistle), Gains (Paul's host, this Geneva printing's own spelling of the name elsewhere rendered Gaius), Erastus the steward of the citie, and Quartus."
+    }
+  }
+}

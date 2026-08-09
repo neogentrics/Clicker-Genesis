@@ -1,0 +1,653 @@
+{
+  "book": "2 Esdras",
+  "translation": "Geneva",
+  "canonicalOrder": 41,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "2 Esdras does not appear anywhere in the KJV canon at all — it is a Jewish-and-Christian apocalyptic work classed with the Apocrypha, entirely different in genre from the historical/narrative books indexed for the KJV so far. Unlike Genesis or Joshua, almost the entire text is one extended dialogue between the prophet Esdras (who identifies himself in 3:1 as \"Salathiel, the same is Esdras\") and the angel Uriel, punctuated by seven visionary episodes, so this tier structure leans heavily on vision/theme-typed Law tiers (matching this project's precedent for Daniel/Ezekiel/Revelation-style apocalyptic content) rather than a large narrative cast. Two real structural features are worth flagging. First: chapters 1-2 and 15-16 read as distinctly later material bracketing chapters 3-14's core dialogue — most scholars call these \"5 Ezra\" and \"6 Ezra\" (Christian-authored additions to an earlier Jewish apocalypse, \"4 Ezra\"), since 1-2's oracle about a \"people that shall come\" who will replace Israel and 15-16's oracles against Babylon/Asia/Egypt/Syria both read as more overtly Christian than the Esdras-Uriel dialogue at the book's center — but the Geneva Bible presents all sixteen chapters as one continuous, undivided \"Second Book of the Prophet Esdras,\" which is why they are indexed here as a single book rather than three. Second: chapter 7 of this specific source file contains two separate, overlapping runs of verse numbers (1 through 105, immediately followed by a second run restarting at 36 through 70) — a known feature of 2 Esdras/4 Ezra's manuscript history, tied to a portion of the Latin text that was lost from most manuscripts for centuries and only later recovered. Verse references into the second run are flagged inline with \"(second numbered sequence)\" to avoid confusion with the earlier verse of the same number. The single most striking content feature is 7:28-29, where the Most High explicitly promises the revealing of \"my son Jesus\" and later the death of \"my son Christ\" — an overt Christian messianic naming sitting inside a text otherwise concerned with Adam's fall, the fewness of the saved, and the fate of souls after death; this same figure reappears, unnamed but clearly the same figure, as a roaring lion \"of the seed of David\" in the eagle vision (ch. 11-12) and as a man rising from the sea in the vision of ch. 13, so all three appearances are combined into one character entry here rather than treated as unrelated visions. This book should not be confused with the very differently-structured \"Ezra\" found in the Ethiopian Bible (a 9-chapter text matching the Greek 1 Esdras tradition) — the two are unrelated works despite the similar name.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Rejection Oracle",
+      "managerId": "rejection_oracle_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Cup of Fire",
+      "managerId": "esdras_geneva_2esdras",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Grain of Evil Seed",
+      "managerId": "evil_seed_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Balance of Fire and Wind",
+      "managerId": "uriel_geneva_2esdras",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Signs of the End",
+      "managerId": "signs_of_end_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Carved Mountain",
+      "managerId": "messiah_geneva_2esdras",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Two Ages",
+      "managerId": "two_ages_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Seven Orders of Souls",
+      "managerId": "seven_orders_souls_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The City Rising from Ashes",
+      "managerId": "sion_woman_geneva_2esdras",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Eagle of Twelve Wings",
+      "managerId": "eagle_vision_geneva_2esdras",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Swift Tablets",
+      "managerId": "five_scribes_geneva_2esdras",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Oracles Against the Nations",
+      "managerId": "oracles_against_nations_geneva_2esdras",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "rejection_oracle_geneva_2esdras",
+      "name": "The Rejection Oracle",
+      "role": "law",
+      "scribeTier": "The Rejection Oracle",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "esdras_geneva_2esdras",
+      "purpose": "God's opening indictment of Israel's long history of rebellion (idolatry, ingratitude despite the Exodus deliverance, killing the prophets), followed by His decision to disinherit them and give their promised glory to \"a people that shall come\" — a new nation that never heard of Him yet will believe and obey, whose little ones rejoice with gladness and whose leaders will include Abraham and the twelve minor prophets.",
+      "verses": [
+        {
+          "ref": "2 Esdras 1:5-9",
+          "note": "Esdras is sent to tell the people their sins: idolatry and forgetting God despite being delivered from Egypt."
+        },
+        {
+          "ref": "2 Esdras 1:24-33",
+          "note": "\"What shall I do unto thee, O Jacob?... I will turn me to other nations, and unto them will I give my name\"; the hen-and-chickens image, then \"Your house is desolate.\""
+        },
+        {
+          "ref": "2 Esdras 1:35-40",
+          "note": "The new people's leaders are named: Abraham, Isaac, Jacob, then the twelve minor prophets in order, ending with \"Malachy, which is called also the angel of the Lord.\""
+        },
+        {
+          "ref": "2 Esdras 2:10-32",
+          "note": "The new inheritance promised — the kingdom of Jerusalem, the tree of life, resurrection instructions to the mother-figure, Esaias and Jeremy sent as helpers."
+        },
+        {
+          "ref": "2 Esdras 2:38-48",
+          "note": "Esdras sees a multitude crowned on Mount Sion by a young man of great stature, whom the angel identifies as \"the Son of God.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This oracle addresses a \"people that shall come\" from the east who never heard of God yet believe — a promise many later Christian readers took as pointing toward the Gentile Church."
+      ]
+    },
+    {
+      "id": "esdras_geneva_2esdras",
+      "name": "Esdras (Salathiel)",
+      "role": "manager",
+      "scribeTier": "The Cup of Fire",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Saraias",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 1:1-3",
+          "note": "Opens the book with his full priestly genealogy back to Aaron, and is identified as \"captive in the land of the Medes, in the reign of Artaxerxes king of the Persians.\""
+        },
+        {
+          "ref": "2 Esdras 3:1-3",
+          "note": "Identifies himself as \"Salathiel (the same is Esdras),\" lying troubled in Babylon in the thirtieth year after Jerusalem's ruin."
+        },
+        {
+          "ref": "2 Esdras 3:4-36",
+          "note": "Pours out his complaint to God, reviewing Adam's fall, the Flood, Abraham's covenant, and Sinai, and asking why Babylon prospers while Sion suffers."
+        },
+        {
+          "ref": "2 Esdras 5:21-6:6",
+          "note": "Fasts seven more days and returns to arguing with God over Israel's suffering."
+        },
+        {
+          "ref": "2 Esdras 7:75-101",
+          "note": "Asks Uriel directly what happens to a soul in the time between death and final judgement."
+        },
+        {
+          "ref": "2 Esdras 9:38-10:24",
+          "note": "Encounters the mourning woman in the field of Ardat and tries to comfort her over her dead son."
+        },
+        {
+          "ref": "2 Esdras 14:1-9",
+          "note": "Called by name from a voice out of a bush — deliberately echoing Moses' own call at the burning bush — and told he will be taken up to remain with \"my Son.\""
+        },
+        {
+          "ref": "2 Esdras 14:23-48",
+          "note": "Drinks a cup that looks like water but burns like fire, then dictates ninety-four books to five scribes over forty days: twenty-four to be published openly, seventy kept secret for the wise."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His priestly genealogy in the opening verses traces back seventeen generations to Aaron of the tribe of Levi.",
+        "God's call to him from a bush in chapter 14 deliberately echoes Moses' own call at the burning bush in Exodus.",
+        "He personally speaks 94 books into being over 40 days — 24 published openly and 70 kept as secret wisdom for the wise."
+      ]
+    },
+    {
+      "id": "evil_seed_geneva_2esdras",
+      "name": "The Grain of Evil Seed",
+      "role": "law",
+      "scribeTier": "The Grain of Evil Seed",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "uriel_geneva_2esdras",
+      "purpose": "Uriel's core teaching on why humanity suffers: Adam was given one commandment, broke it, and death — along with a permanently wicked heart, a \"grain of evil seed\" — passed to every one of his descendants, corrupting even those who later received God's law at Sinai. This explains, to Esdras's grief, why so few can ever be saved.",
+      "verses": [
+        {
+          "ref": "2 Esdras 3:4-7",
+          "note": "Adam is formed, given the breath of life, placed in paradise, given one commandment, transgresses it, and death is appointed for him and his descendants."
+        },
+        {
+          "ref": "2 Esdras 3:20-22",
+          "note": "Even the Law given at Sinai could not remove \"their wicked heart,\" so the disease of sin became permanent."
+        },
+        {
+          "ref": "2 Esdras 4:30-32",
+          "note": "The parable of the grain of evil seed sown in Adam's heart: \"how much wickedness hath it brought forth unto this time!... until the time of threshing come!\""
+        },
+        {
+          "ref": "2 Esdras 7:48",
+          "note": "\"For an evil heart hath grown up in us, which hath led us astray from these statutes... and that, not a few only, but well nigh all that have been created.\""
+        },
+        {
+          "ref": "2 Esdras 7:48 (second numbered sequence — see notes on this chapter's duplicate verse numbers)",
+          "note": "\"O thou Adam, what hast thou done? for though it was thou that sinned, the evil is not fallen on thee alone, but upon all of us that come of thee.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This teaching is the book's answer to why the Law given at Sinai never actually fixed humanity's wickedness — the corrupted heart was already there before the Law ever arrived."
+      ]
+    },
+    {
+      "id": "uriel_geneva_2esdras",
+      "name": "Uriel",
+      "role": "manager",
+      "scribeTier": "The Balance of Fire and Wind",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 4:1",
+          "note": "Introduced by name: \"the angel that was sent unto me, whose name was Uriel.\""
+        },
+        {
+          "ref": "2 Esdras 4:5-11",
+          "note": "Challenges Esdras with three impossible riddles — weigh fire, measure wind, recall a past day — to show the limits of human understanding."
+        },
+        {
+          "ref": "2 Esdras 4:13-21",
+          "note": "Tells the parable of the trees and the sea's waves quarrelling over territory."
+        },
+        {
+          "ref": "2 Esdras 5:31-40",
+          "note": "Answers Esdras's grief over Israel with the parable of the ring: no first, no last, all judged alike."
+        },
+        {
+          "ref": "2 Esdras 6:1-6",
+          "note": "Recounts that he alone, under God, witnessed the world's creation."
+        },
+        {
+          "ref": "2 Esdras 6:13-24",
+          "note": "Describes the mighty sounding voice and the cosmic signs that will mark the coming end."
+        },
+        {
+          "ref": "2 Esdras 10:28-59",
+          "note": "Comforts Esdras after the vision of the mourning woman turns into the city of Sion, and interprets it for him."
+        },
+        {
+          "ref": "2 Esdras 12:10-39",
+          "note": "Interprets the vision of the eagle and its three heads as the fourth kingdom, expanding on what was shown but never explained to Daniel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name means \"God is my light\" or \"flame of God\" — fitting for the angel who repeatedly answers Esdras out of fire, storm, and burning visions.",
+        "He tests Esdras with three deliberately impossible tasks before agreeing to teach him anything about the ways of the Most High."
+      ]
+    },
+    {
+      "id": "signs_of_end_geneva_2esdras",
+      "name": "The Signs of the End",
+      "role": "law",
+      "scribeTier": "The Signs of the End",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "uriel_geneva_2esdras",
+      "purpose": "A catalogue of cosmic and social portents Uriel gives Esdras as proof the end of the age is near — the sun shining at night, blood dripping from wood, women bearing monsters, friends destroying one another, understanding itself hiding away — given as tokens Esdras can watch for, not a fixed date.",
+      "verses": [
+        {
+          "ref": "2 Esdras 5:1-12",
+          "note": "Truth will be hidden, iniquity will increase, the sun will shine at night and moon by day, blood will drop from wood, men will hope but not obtain."
+        },
+        {
+          "ref": "2 Esdras 6:18-24",
+          "note": "A mighty sounding voice, infants speaking, harvests appearing suddenly unsown, and fountains running dry for three hours."
+        },
+        {
+          "ref": "2 Esdras 9:3-6",
+          "note": "Earthquakes, unrest among peoples, and wavering leaders as signs the Most High is about to visit the world."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "messiah_geneva_2esdras",
+      "name": "My Son (the Messiah)",
+      "role": "manager",
+      "scribeTier": "The Carved Mountain",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 7:28-29",
+          "note": "The Lord promises \"my son Jesus shall be revealed\" with those who are with him, bringing joy for four hundred years, after which \"my son Christ\" shall die, along with all who have the breath of life."
+        },
+        {
+          "ref": "2 Esdras 11:37-46",
+          "note": "A lion rises roaring out of the wood and rebukes the eagle (the fourth kingdom) for its unrighteousness, speaking with a man's voice."
+        },
+        {
+          "ref": "2 Esdras 12:31-34",
+          "note": "Uriel explains the lion is \"the anointed one... kept unto the end, who shall spring up out of the seed of David,\" who will judge and destroy the wicked and mercifully deliver the remnant of God's people."
+        },
+        {
+          "ref": "2 Esdras 13:3-4",
+          "note": "A man rises from the sea, flies with the clouds of heaven, and everything trembles at his glance and burns at the sound of his voice."
+        },
+        {
+          "ref": "2 Esdras 13:8-11",
+          "note": "From his mouth comes a flood of fire, a flaming breath, and a storm that consumes an entire army gathered against him."
+        },
+        {
+          "ref": "2 Esdras 13:32-38",
+          "note": "Uriel identifies the man as \"my Son,\" who will stand on Mount Sion, rebuke the assembled nations, and destroy them by the law, likened to fire."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This figure is shown to Esdras in three different forms across the book — named outright as \"Jesus\" and \"Christ\" in chapter 7, as a roaring lion in chapters 11-12, and as a man rising from the sea in chapter 13.",
+        "The explicit naming of \"Jesus\"/\"Christ\" in 7:28-29 is a well-known feature of this book's text — most scholars read chapters 1-2 and 15-16 as later Christian additions bracketing an earlier Jewish apocalyptic core (chapters 3-14), which this verse pair sits inside."
+      ]
+    },
+    {
+      "id": "two_ages_geneva_2esdras",
+      "name": "The Two Ages",
+      "role": "law",
+      "scribeTier": "The Two Ages",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "uriel_geneva_2esdras",
+      "purpose": "Uriel's answer to Esdras's protest that God should not have made a world with only one narrow, dangerous entrance: this present corruptible world was made strait and toilsome because of Adam's sin, while the greater world to come is wide and full of immortality — and only those who pass through the narrow gate now can ever reach it.",
+      "verses": [
+        {
+          "ref": "2 Esdras 7:3-14",
+          "note": "The parable of the sea reached only through a narrow channel, and the city reached only by a single path between fire and deep water."
+        },
+        {
+          "ref": "2 Esdras 7:47-61",
+          "note": "Esdras protests that there are more that perish than are saved; Uriel answers with the analogy of rare precious stones among common clay, and gold among far more abundant lesser metals."
+        },
+        {
+          "ref": "2 Esdras 8:1-3",
+          "note": "\"The Most High hath made this world for many, but the world to come for few,\" illustrated by the earth yielding far more common clay than gold."
+        },
+        {
+          "ref": "2 Esdras 8:41",
+          "note": "The husbandman's-seed parable: not everything sown comes up, and not everyone born will be saved."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "seven_orders_souls_geneva_2esdras",
+      "name": "The Seven Orders of Souls",
+      "role": "law",
+      "scribeTier": "The Seven Orders of Souls",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "uriel_geneva_2esdras",
+      "purpose": "A detailed teaching on what happens to a soul in the seven days immediately after death, before final judgement: the souls of the wicked wander through seven successive torments (starting with realizing they scorned God's law), while the souls of the righteous rest through seven successive joys (starting with relief at having overcome the evil thought planted in them at birth).",
+      "verses": [
+        {
+          "ref": "2 Esdras 7:78-87",
+          "note": "The seven ways of torment for souls that despised the Most High's law, ending in shame before His glory."
+        },
+        {
+          "ref": "2 Esdras 7:88-99",
+          "note": "The seven orders of rest for souls that kept the law, ending in bold, fearless joy at beholding God's face."
+        },
+        {
+          "ref": "2 Esdras 7:100-101",
+          "note": "Souls are given seven days of freedom to see these things before being gathered into their final resting places."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sion_woman_geneva_2esdras",
+      "name": "The Woman of Sion",
+      "role": "manager",
+      "scribeTier": "The City Rising from Ashes",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 9:38",
+          "note": "Esdras sees a woman on his right hand, mourning and weeping, her clothes rent, with ashes on her head."
+        },
+        {
+          "ref": "2 Esdras 9:43-47",
+          "note": "She tells Esdras she was barren thirty years, then bore a son whom she raised with great labour."
+        },
+        {
+          "ref": "2 Esdras 10:1",
+          "note": "Her son dies the moment he enters his marriage chamber."
+        },
+        {
+          "ref": "2 Esdras 10:6-24",
+          "note": "Esdras rebukes her grief as small next to Sion's own mourning, and lists everything lost when Jerusalem fell."
+        },
+        {
+          "ref": "2 Esdras 10:25-27",
+          "note": "Her face suddenly shines like lightning, she cries out, and vanishes, replaced by a great city being built on huge foundations."
+        },
+        {
+          "ref": "2 Esdras 10:44-50",
+          "note": "Uriel explains: she IS Sion; her thirty years' barrenness is the three thousand years before Solomon's Temple offerings began; her son's death is the destruction of Jerusalem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The vision only appears to Esdras because he deliberately went to a field with no buildings in it — Uriel says the city of the Most High could not be shown in any place already claimed by a man-made foundation."
+      ]
+    },
+    {
+      "id": "eagle_vision_geneva_2esdras",
+      "name": "The Eagle of Twelve Wings",
+      "role": "law",
+      "scribeTier": "The Eagle of Twelve Wings",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "uriel_geneva_2esdras",
+      "purpose": "The vision of a twelve-winged, three-headed eagle rising from the sea to rule the whole earth — explicitly identified as the same fourth kingdom shown to the prophet Daniel, but now given a fuller interpretation than Daniel received: twelve kings, eight lesser rulers, and three final oppressive heads, whose fall (rebuked by a roaring lion) clears the way for God's judgement on earth.",
+      "verses": [
+        {
+          "ref": "2 Esdras 11:1-6",
+          "note": "The eagle with twelve wings and three heads rises from the sea and spreads its wings to rule the whole earth unopposed."
+        },
+        {
+          "ref": "2 Esdras 11:11-24",
+          "note": "The twelve wings rise and vanish one after another, each ruling for a time."
+        },
+        {
+          "ref": "2 Esdras 11:29-35",
+          "note": "The middle head devours the two lesser heads and rules the world with heavy oppression, then vanishes; the two remaining heads finish by devouring each other."
+        },
+        {
+          "ref": "2 Esdras 12:11-12",
+          "note": "Uriel states plainly: \"The eagle, whom thou sawest come up from the sea, is the fourth kingdom which appeared in vision to thy brother Daniel... it was not expounded unto him, as I now expound it unto thee.\""
+        },
+        {
+          "ref": "2 Esdras 12:14-30",
+          "note": "Full breakdown of the vision: twelve kings, eight lesser kings, three final heads, and the small troubled two-winged kingdom left at the very end."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "five_scribes_geneva_2esdras",
+      "name": "The Five Scribes (Sarea, Dabria, Selemia, Ethanus, and Asiel)",
+      "role": "manager",
+      "scribeTier": "The Swift Tablets",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 14:24",
+          "note": "Esdras is told to bring five men \"ready to write swiftly\": Sarea, Dabria, Selemia, Ethanus, and Asiel."
+        },
+        {
+          "ref": "2 Esdras 14:37-44",
+          "note": "The five sit with Esdras in the field for forty days; he speaks continuously and they write in a script they do not themselves know, producing ninety-four books in all."
+        },
+        {
+          "ref": "2 Esdras 14:45-48",
+          "note": "Esdras is told to publish the first twenty-four books openly, for worthy and unworthy alike to read, but to keep the last seventy hidden for the wise among the people."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text names all five scribes individually but never distinguishes one's actions from another's — they act as a single writing team throughout, which is why they are kept as one collective entry here rather than five separate ones.",
+        "The passage is often read as the book's own account of how the rest of the Hebrew Scriptures (the 24 public books) were re-dictated from memory after being lost, alongside 70 additional secret books of esoteric wisdom."
+      ]
+    },
+    {
+      "id": "oracles_against_nations_geneva_2esdras",
+      "name": "The Oracles Against the Nations",
+      "role": "law",
+      "scribeTier": "The Oracles Against the Nations",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "esdras_geneva_2esdras",
+      "purpose": "A closing set of direct prophetic oracles pronouncing God's coming judgement by sword, fire, and famine on Babylon, Egypt, Syria, and \"Asia\" (named specifically for imitating Babylon's idolatry and cruelty toward God's chosen), followed by a general warning to God's own people to live through the coming evils as pilgrims, holding loosely to buying, selling, marrying, and building.",
+      "verses": [
+        {
+          "ref": "2 Esdras 15:5-16",
+          "note": "God declares He will no longer hold His peace over the world's wickedness, and brings sword, famine, and destruction on every land."
+        },
+        {
+          "ref": "2 Esdras 15:46-63",
+          "note": "A direct oracle against \"Asia,\" condemned for imitating Babylon's idolatry and glorying over the deaths of God's chosen people."
+        },
+        {
+          "ref": "2 Esdras 16:1-16",
+          "note": "A fourfold woe against Babylon, Asia, Egypt, and Syria: sword, fire, evil, and lightning that none can turn back."
+        },
+        {
+          "ref": "2 Esdras 16:40-46",
+          "note": "The faithful are told to live as pilgrims through the coming disaster: sellers as those fleeing, buyers as those expecting loss, builders as those who will not live in their houses."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phaltiel_geneva_2esdras",
+      "name": "Phaltiel",
+      "role": "submanager",
+      "scribeTier": "The Cup of Fire",
+      "parentManagerId": "esdras_geneva_2esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 5:16-18",
+          "note": "Comes to Esdras on the second night as \"the captain of the people,\" asking why he has abandoned Israel like a shepherd leaving his flock to wolves."
+        },
+        {
+          "ref": "2 Esdras 5:19",
+          "note": "Esdras sends him away for seven days so he can continue fasting and praying alone."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jeremiel_geneva_2esdras",
+      "name": "Jeremiel",
+      "role": "submanager",
+      "scribeTier": "The Balance of Fire and Wind",
+      "parentManagerId": "uriel_geneva_2esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "2 Esdras 4:35-36",
+          "note": "Identified as \"the archangel,\" he answers the souls of the righteous in their heavenly chambers when they ask how long until their reward, telling them it comes once their full number is complete."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "esdrasPriestlyLineage": {
+      "ref": "2 Esdras 1:1-3",
+      "note": "Esdras's full seventeen-generation priestly genealogy, given in the book's opening verses: son of Saraias, son of Azaraias, son of Helkias, son of Salemas, son of Sadoc, son of Ahitob, son of Achias, son of Phinees, son of Heli, son of Amarias, son of Aziei, son of Marimoth, son of Arna, son of Ozias, son of Borith, son of Abissei, son of Phinees, son of Eleazar, son of Aaron, of the tribe of Levi."
+    },
+    "leadersOfTheNewPeople": {
+      "ref": "2 Esdras 1:39-40",
+      "note": "The list of figures God names as leaders for the incoming people who will replace disobedient Israel: Abraham, Isaac, and Jacob, then the twelve minor prophets in order — Oseas (Hosea), Amos, Micheas (Micah), Joel, Abdias (Obadiah), Jonas (Jonah), Nahum, Abacuc (Habakkuk), Sophonias (Zephaniah), Aggaeus (Haggai), Zachary (Zechariah), and Malachy, \"which is called also the angel of the Lord.\""
+    },
+    "helperProphetsEsaiasAndJeremy": {
+      "ref": "2 Esdras 2:18",
+      "note": "God promises to send \"my servants Esaias and Jeremy\" (Isaiah and Jeremiah) to help the new people; the text never differentiates their individual actions, so they are logged here rather than indexed as separate characters."
+    },
+    "patriarchalHistoryRecap": {
+      "ref": "2 Esdras 3:7-27; 6:8-10",
+      "note": "Esdras's own retelling of salvation history while arguing with God — Adam, the Flood and Noah, Abraham's covenant and the choice of Jacob over Esau, the Exodus and Sinai, David building Jerusalem, and Solomon's Temple — used to make his case that Israel's fall is undeserved. These figures are referenced only as historical background within Esdras's argument, not as active characters within this book, so they are not separately indexed here."
+    }
+  }
+}

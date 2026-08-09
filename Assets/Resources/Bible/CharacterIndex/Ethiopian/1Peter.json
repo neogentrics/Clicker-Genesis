@@ -1,0 +1,574 @@
+{
+  "book": "1 Peter",
+  "translation": "Ethiopian",
+  "canonicalOrder": 79,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the real Ethiopian-translation text at Assets/Resources/Verses/Ethiopian/1_peter_79.json in full (all 5 chapters, 105 verses) before drafting. Content is textually identical to the KJV 1 Peter used in the already-built KJV Character Index (same wording verse-for-verse, no Ethiopian-canon-specific additions like the Ezra/Meqabyan cases) - this is one of the standard 27 NT books shared across both canons, so the tier/character structure is adapted directly from the validated KJV 1Peter.json (11 scribe tiers: 2 person + 9 law) rather than invented from scratch, with every verse re-checked against this translation's own text. All ids are freshly suffixed with _ethiopian (never reusing the KJV file's _1peter-suffixed or any other translation's ids), per the standing per-translation id-disambiguation rule. Same two tradition-vs-text flags carried over after re-verification against this translation's text: Marcus (5:13) is traditionally identified with John Mark, and 'Babylon' (5:13) is widely read as a cipher for Rome - neither identification is stated by this book's own text, so both stay flagged as tradition, not fact. Peter uses a fresh book+translation-scoped id (peter_1peter_ethiopian). Minor named figures cited but not acting within this text (Abraham, Sarah, Noah, and 'the prophets' as an undifferentiated collective per rule 5) are logged as role:'named', cross-referenced to their Genesis entries rather than re-indexed in full. Jesus Christ gets his own independent manager tier scoped to this book+translation (jesus_1peter_ethiopian) per the Gospel/epistle rule, though 1 Peter's own text never states his earthly genealogy - genealogy fields left null rather than imported from Gospel material this book doesn't itself state.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Peter, Apostle and Elder",
+      "managerId": "peter_1peter_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Christ, the Suffering and Risen Shepherd",
+      "managerId": "jesus_1peter_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Living Hope and the Trial of Faith",
+      "managerId": "living_hope_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Be Ye Holy: The New Birth",
+      "managerId": "call_to_holiness_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Living Stones, A Royal Priesthood",
+      "managerId": "royal_priesthood_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Submission to Every Ordinance of Man",
+      "managerId": "civil_submission_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Household Order: Servants, Wives, and Husbands",
+      "managerId": "household_order_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Suffering for Well-Doing",
+      "managerId": "suffering_welldoing_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Stewards of the Manifold Grace of God",
+      "managerId": "stewards_grace_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Fiery Trial",
+      "managerId": "fiery_trial_1peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Humility and Resisting the Adversary",
+      "managerId": "humility_adversary_1peter_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "peter_1peter_ethiopian",
+      "name": "Peter",
+      "role": "manager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:1",
+          "note": "Introduces himself as an apostle of Jesus Christ, writing to strangers scattered throughout Pontus, Galatia, Cappadocia, Asia, and Bithynia."
+        },
+        {
+          "ref": "1 Peter 5:1",
+          "note": "Identifies himself as also an elder, a witness of the sufferings of Christ, and a partaker of the glory that shall be revealed."
+        },
+        {
+          "ref": "1 Peter 5:2-4",
+          "note": "Exhorts fellow elders to feed the flock of God willingly, not as lords over God's heritage but as examples, promising a crown of glory at the chief Shepherd's appearing."
+        },
+        {
+          "ref": "1 Peter 5:12",
+          "note": "States he has written this brief letter by Silvanus, exhorting and testifying that this is the true grace of God."
+        },
+        {
+          "ref": "1 Peter 5:13-14",
+          "note": "Sends greeting from the church at Babylon and from Marcus his son, closing with a call to greet one another with a kiss of charity."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This epistle names its recipients across five Roman provinces of Asia Minor (Pontus, Galatia, Cappadocia, Asia, Bithynia) rather than a single church.",
+        "This is a fresh book+translation-scoped id, tracked separately from any KJV or Gospel indexing of Peter, per the standing per-translation id-disambiguation rule."
+      ]
+    },
+    {
+      "id": "jesus_1peter_ethiopian",
+      "name": "Jesus Christ",
+      "role": "manager",
+      "scribeTier": "Christ, the Suffering and Risen Shepherd",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:11",
+          "note": "The Spirit of Christ in the prophets testified beforehand of his sufferings and the glory that should follow."
+        },
+        {
+          "ref": "1 Peter 1:18-19",
+          "note": "Believers are redeemed not with silver or gold but with the precious blood of Christ, as of a lamb without blemish and without spot."
+        },
+        {
+          "ref": "1 Peter 1:20-21",
+          "note": "Foreordained before the foundation of the world, manifested in these last times, raised from the dead and given glory by God."
+        },
+        {
+          "ref": "1 Peter 2:4",
+          "note": "Described as a living stone, disallowed indeed of men, but chosen of God, and precious."
+        },
+        {
+          "ref": "1 Peter 2:6-8",
+          "note": "Identified with the prophesied chief corner stone in Sion - precious to believers, but a stone of stumbling to the disobedient."
+        },
+        {
+          "ref": "1 Peter 2:21-24",
+          "note": "Suffered for believers, leaving an example to follow; did no sin, no guile in his mouth; bore their sins in his own body on the tree, by whose stripes they were healed."
+        },
+        {
+          "ref": "1 Peter 2:25",
+          "note": "Called the Shepherd and Bishop of souls, to whom the once-straying are now returned."
+        },
+        {
+          "ref": "1 Peter 3:18",
+          "note": "Suffered once for sins, the just for the unjust, put to death in the flesh but quickened by the Spirit."
+        },
+        {
+          "ref": "1 Peter 3:19-20",
+          "note": "By the Spirit went and preached unto the spirits in prison, who were disobedient in the days of Noah while the ark was preparing."
+        },
+        {
+          "ref": "1 Peter 3:21-22",
+          "note": "His resurrection is the reality baptism figures; he is gone into heaven and on the right hand of God, with angels, authorities, and powers made subject unto him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "silvanus_1peter_ethiopian",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": "peter_1peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 5:12",
+          "note": "Called 'a faithful brother,' the one by whom Peter states he has written this brief letter, exhorting and testifying to the true grace of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Likely the same Silvanus/Silas who traveled with Paul (Acts 15:40, 2 Corinthians 1:19) - a plausible cross-reference, but 1 Peter's own text does not itself state this identification."
+      ]
+    },
+    {
+      "id": "marcus_1peter_ethiopian",
+      "name": "Marcus",
+      "role": "submanager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": "peter_1peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 5:13",
+          "note": "Called 'Marcus my son' by Peter, sending greeting alongside 'the church that is at Babylon.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified with John Mark, companion of Paul and Barnabas and traditional author of the Gospel of Mark - common tradition, not something 1 Peter's own text states."
+      ]
+    },
+    {
+      "id": "abraham_1peter_ethiopian",
+      "name": "Abraham",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:6",
+          "note": "Cited as the one Sara obeyed, 'calling him lord,' held up as an example within the instruction to wives."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Same figure indexed at length in Genesis - reused here only as a cited example, not re-indexed."
+      ]
+    },
+    {
+      "id": "sarah_1peter_ethiopian",
+      "name": "Sarah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:5-6",
+          "note": "Named among 'the holy women' of old who trusted in God, specifically noted for obeying Abraham and calling him lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Same figure indexed in Genesis - cited here only as the example of a wife's godly submission."
+      ]
+    },
+    {
+      "id": "noah_1peter_ethiopian",
+      "name": "Noah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:20",
+          "note": "Referenced via 'the days of Noah, while the ark was a preparing, wherein few, that is, eight souls were saved by water' - the type Peter uses to explain baptism."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Same figure indexed in Genesis - cited here only within Peter's baptism/ark typology."
+      ]
+    },
+    {
+      "id": "prophets_1peter_ethiopian",
+      "name": "The Prophets",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:10-12",
+          "note": "Described as having enquired and searched diligently, testifying beforehand of the sufferings of Christ and the glory that should follow; the things they ministered were then reported to believers by those who preached the gospel with the Holy Ghost sent down from heaven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Treated as one undifferentiated collective per rule 5 - the text does not name or individuate which prophets are meant."
+      ]
+    },
+    {
+      "id": "living_hope_1peter_ethiopian",
+      "name": "Living Hope and the Trial of Faith",
+      "role": "law",
+      "scribeTier": "Living Hope and the Trial of Faith",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Assures suffering, scattered believers of an incorruptible heavenly inheritance reserved for them, and explains that present trials test and refine genuine faith the way fire refines gold - a salvation so significant that even the prophets searched to understand it and angels desired to look into it.",
+      "verses": [
+        {
+          "ref": "1 Peter 1:3-5",
+          "note": "Believers are begotten again unto a lively hope by Christ's resurrection, unto an inheritance incorruptible, undefiled, reserved in heaven."
+        },
+        {
+          "ref": "1 Peter 1:6-7",
+          "note": "Manifold temptations are described as testing faith, more precious than gold that perisheth, though it be tried with fire."
+        },
+        {
+          "ref": "1 Peter 1:8-9",
+          "note": "Believers who love Christ unseen rejoice with joy unspeakable, receiving the end of their faith, the salvation of their souls."
+        },
+        {
+          "ref": "1 Peter 1:10-12",
+          "note": "The prophets searched diligently concerning this salvation, and angels desire to look into these things."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "call_to_holiness_1peter_ethiopian",
+      "name": "Be Ye Holy: The New Birth",
+      "role": "law",
+      "scribeTier": "Be Ye Holy: The New Birth",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Calls believers to personal holiness matching God's own holiness, grounded in redemption by the precious blood of Christ rather than silver or gold, and in a new birth by the incorruptible word of God rather than perishable means.",
+      "verses": [
+        {
+          "ref": "1 Peter 1:13-16",
+          "note": "Gird up the loins of your mind, be sober, and be holy in all manner of conversation, as he which hath called you is holy - 'Be ye holy for I am holy.'"
+        },
+        {
+          "ref": "1 Peter 1:17-19",
+          "note": "Pass the time of sojourning in fear, since ye were redeemed not with corruptible silver or gold but the precious blood of Christ, as of a lamb without blemish and without spot."
+        },
+        {
+          "ref": "1 Peter 1:22-25",
+          "note": "Purified souls should love one another fervently with a pure heart, being born again not of corruptible seed but by the word of God which liveth and abideth for ever - 'all flesh is as grass.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "royal_priesthood_1peter_ethiopian",
+      "name": "Living Stones, A Royal Priesthood",
+      "role": "law",
+      "scribeTier": "Living Stones, A Royal Priesthood",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Defines the corporate identity of believers as a spiritual house and royal priesthood built upon Christ the living/chief corner stone, called out of darkness into God's marvellous light to shew forth his praises.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:1-3",
+          "note": "Lay aside malice, guile, hypocrisies, envies, and evil speakings; desire the sincere milk of the word, having tasted that the Lord is gracious."
+        },
+        {
+          "ref": "1 Peter 2:4-5",
+          "note": "Coming to Christ the living stone, believers themselves are built up as lively stones into a spiritual house, an holy priesthood, to offer up spiritual sacrifices."
+        },
+        {
+          "ref": "1 Peter 2:9-10",
+          "note": "Believers are a chosen generation, a royal priesthood, an holy nation, a peculiar people - once not a people, now the people of God, having obtained mercy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "civil_submission_1peter_ethiopian",
+      "name": "Submission to Every Ordinance of Man",
+      "role": "law",
+      "scribeTier": "Submission to Every Ordinance of Man",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Instructs believers to submit to civil authority and honour the king for the Lord's sake, so good conduct silences the ignorance of foolish men, treating Christian liberty as service to God rather than a cloke for wrongdoing.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:11-12",
+          "note": "Abstain from fleshly lusts which war against the soul; keep honest conversation among the Gentiles so they glorify God in the day of visitation."
+        },
+        {
+          "ref": "1 Peter 2:13-15",
+          "note": "Submit to every ordinance of man for the Lord's sake, whether to the king as supreme or unto governors, so as to put to silence the ignorance of foolish men."
+        },
+        {
+          "ref": "1 Peter 2:16-17",
+          "note": "As free, but not using liberty for a cloke of maliciousness; honour all men, love the brotherhood, fear God, honour the king."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "household_order_1peter_ethiopian",
+      "name": "Household Order: Servants, Wives, and Husbands",
+      "role": "law",
+      "scribeTier": "Household Order: Servants, Wives, and Husbands",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Gives household-specific instruction: servants are to be subject to masters even when treated unjustly, and wives and husbands are to honour one another, with Sara's obedience to Abraham cited as an example and husbands told to honour wives as fellow heirs of the grace of life.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:18-20",
+          "note": "Servants are told to be subject to their masters with all fear, even the froward, since it is thankworthy to endure grief and suffer wrongfully for conscience toward God."
+        },
+        {
+          "ref": "1 Peter 3:1-2",
+          "note": "Wives are to be in subjection to their own husbands, so disobedient husbands may without the word be won by the wives' conversation."
+        },
+        {
+          "ref": "1 Peter 3:3-4",
+          "note": "Adorning should not be merely outward (plaiting hair, wearing gold, apparel) but the hidden man of the heart, a meek and quiet spirit."
+        },
+        {
+          "ref": "1 Peter 3:5-6",
+          "note": "Cites the holy women of old, including Sara obeying Abraham, calling him lord."
+        },
+        {
+          "ref": "1 Peter 3:7",
+          "note": "Husbands are told to dwell with their wives according to knowledge, giving honour as unto the weaker vessel and as heirs together of the grace of life, that their prayers be not hindered."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "suffering_welldoing_1peter_ethiopian",
+      "name": "Suffering for Well-Doing",
+      "role": "law",
+      "scribeTier": "Suffering for Well-Doing",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Calls believers to unity, compassion, and blessing rather than reviling when wronged, to sanctify the Lord God in their hearts and be ready to give a meek answer for their hope, since it is better to suffer for well-doing than for evil-doing.",
+      "verses": [
+        {
+          "ref": "1 Peter 3:8-9",
+          "note": "Be of one mind, having compassion, love as brethren, not rendering evil for evil or railing for railing, but blessing instead, that ye should inherit a blessing."
+        },
+        {
+          "ref": "1 Peter 3:10-12",
+          "note": "He that will love life must refrain his tongue from evil and his lips from guile, since the eyes of the Lord are over the righteous."
+        },
+        {
+          "ref": "1 Peter 3:13-14",
+          "note": "Followers of good need not fear harm, and are counted happy even if they suffer for righteousness' sake."
+        },
+        {
+          "ref": "1 Peter 3:15-16",
+          "note": "Sanctify the Lord God in your hearts, and be ready always to give an answer to every man that asketh a reason of your hope, with meekness and fear."
+        },
+        {
+          "ref": "1 Peter 3:17",
+          "note": "It is better, if the will of God be so, to suffer for well doing than for evil doing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "stewards_grace_1peter_ethiopian",
+      "name": "Stewards of the Manifold Grace of God",
+      "role": "law",
+      "scribeTier": "Stewards of the Manifold Grace of God",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Exhorts believers to arm themselves with the same mind as Christ's suffering to cease from sin and live for God's will rather than fleshly lusts, and to use whatever gift each has received to minister to one another as good stewards of God's manifold grace.",
+      "verses": [
+        {
+          "ref": "1 Peter 4:1-3",
+          "note": "Arm yourselves likewise with the same mind, for he that hath suffered in the flesh hath ceased from sin, and should no longer live to the lusts of men."
+        },
+        {
+          "ref": "1 Peter 4:7-8",
+          "note": "The end of all things is at hand: be sober and watch unto prayer, and above all have fervent charity, for charity shall cover the multitude of sins."
+        },
+        {
+          "ref": "1 Peter 4:9-11",
+          "note": "Use hospitality without grudging; minister the gift received as good stewards of the manifold grace of God, speaking as the oracles of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "fiery_trial_1peter_ethiopian",
+      "name": "The Fiery Trial",
+      "role": "law",
+      "scribeTier": "The Fiery Trial",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Reassures believers not to think it strange when suffering intensifies into a 'fiery trial,' but to rejoice as partakers of Christ's sufferings, and explains that judgment beginning at the house of God means the righteous are tested first - sufferers should commit their souls to God in well-doing.",
+      "verses": [
+        {
+          "ref": "1 Peter 4:12-13",
+          "note": "Think it not strange concerning the fiery trial which is to try you, but rejoice as ye are partakers of Christ's sufferings."
+        },
+        {
+          "ref": "1 Peter 4:14",
+          "note": "If reproached for the name of Christ, happy are ye, for the spirit of glory and of God resteth upon you."
+        },
+        {
+          "ref": "1 Peter 4:15-16",
+          "note": "Let none suffer as a murderer, thief, evildoer, or busybody, but if any suffer as a Christian, let him glorify God on this behalf."
+        },
+        {
+          "ref": "1 Peter 4:17-19",
+          "note": "Judgment must begin at the house of God; let sufferers according to God's will commit the keeping of their souls to him in well doing, as unto a faithful Creator."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "humility_adversary_1peter_ethiopian",
+      "name": "Humility and Resisting the Adversary",
+      "role": "law",
+      "scribeTier": "Humility and Resisting the Adversary",
+      "parentManagerId": null,
+      "deliveredBy": "peter_1peter_ethiopian",
+      "purpose": "Instructs younger believers to submit to elders and all to be clothed with humility, since God resisteth the proud but giveth grace to the humble; calls believers to cast their care upon God and stay sober and vigilant, since their adversary the devil seeks to devour them, and to resist him stedfast in the faith.",
+      "verses": [
+        {
+          "ref": "1 Peter 5:5",
+          "note": "The younger are told to submit to the elder, and all to be subject one to another, clothed with humility, for God resisteth the proud and giveth grace to the humble."
+        },
+        {
+          "ref": "1 Peter 5:6-7",
+          "note": "Humble yourselves under the mighty hand of God, casting all your care upon him, for he careth for you."
+        },
+        {
+          "ref": "1 Peter 5:8-9",
+          "note": "Be sober, be vigilant, because the adversary the devil, as a roaring lion, walketh about seeking whom he may devour; resist him stedfast in the faith."
+        },
+        {
+          "ref": "1 Peter 5:10-11",
+          "note": "The God of all grace, who hath called believers unto his eternal glory by Christ Jesus, will after they have suffered a while make them perfect, stablish, strengthen, settle them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "babylonChurch": {
+      "ref": "1 Peter 5:13",
+      "note": "'The church that is at Babylon, elected together with you, saluteth you' - many scholars read this as a symbolic cipher for Rome, but this book's own text does not state that identification, so it is left as an unresolved location/community reference."
+    },
+    "angels": {
+      "ref": "1 Peter 1:12",
+      "note": "Angels are noted as desiring to look into the things of this salvation - a brief mention, not indexed as a tracked character."
+    }
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "book": "Deuteronomy",
+  "translation": "Ethiopian",
+  "canonicalOrder": 5,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from Assets/Resources/Verses/Ethiopian/deuteronomy_5.json (chapters 1-18 and 32-34 read in full, chapters 19-31 sampled/confirmed against the same continuous law-code structure). Real finding: unlike some other books in this Ethiopian Bible translation (e.g. its 9-chapter 1-Esdras-form 'Ezra'), this book's Deuteronomy is textually identical in structure and wording to the standard-canon KJV-form Deuteronomy - same 34 chapters, same 959 verses, same chapter boundaries, same opening ('These be the words which Moses spake unto all Israel...' 1:1) and same closing (Moses' death and epitaph, 34:1-12). No unique Ethiopian-canon content or structural divergence was found in this book - it is one of the 70 books flagged in the project's own extraction QA as matching well-established chapter counts exactly. The book is framed throughout as Moses' own personal farewell address rather than impersonal 'the LORD spake unto Moses' transmission, so - following the same law/theme-tier methodology used for Leviticus/Numbers/the existing KJV Deuteronomy index - most tiers here are Law-type with Moses as deliveredBy, except his own death (ch. 34), which is the one truly singular, personally-embodied narrative beat and stays a Person tier. Ids are suffixed _eth_deut throughout to avoid colliding with the existing KJV CharacterIndex Deuteronomy ids (which reuse plain ids like 'moses') and with this same Ethiopian Moses appearing again under different ids in other Ethiopian-translation books (Exodus, Numbers, etc., not yet indexed). One real textual detail worth flagging, not a naming collision but a genuine variant-name reference: 32:44 names Joshua 'Hoshea the son of Nun' - the text's own 'son of Nun' identifier ties this directly to the Joshua named elsewhere in the same book (1:38, 3:21, 31:7, 34:9), so this is a legitimate same-text link, not an invented association.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Forty-Year Sandal",
+      "managerId": "wilderness_lessons_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Twin Stone Tablets",
+      "managerId": "ten_commandments_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Doorframe Shema",
+      "managerId": "shema_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Gate of Judgment",
+      "managerId": "laws_for_the_land_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Gerizim and Ebal",
+      "managerId": "covenant_ceremony_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Witness Song Scroll",
+      "managerId": "song_of_moses_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Twelve-Fold Blessing",
+      "managerId": "blessing_of_tribes_eth_deut",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Nebo's Summit",
+      "managerId": "moses_eth_deut",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "wilderness_lessons_eth_deut",
+      "name": "Lessons from the Wilderness",
+      "role": "law",
+      "scribeTier": "Forty-Year Sandal",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "A deliberate historical recap opening the book, not repetition for its own sake - reminds the new generation (whose parents died in the wilderness) of the twelve spies' report and the refusal to enter at Kadesh-barnea, the defeats of Sihon and Og on the way around Edom/Moab, and the golden calf at Horeb, specifically so this generation does not repeat the unbelief that kept their parents out.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 1:19-46",
+          "note": "Retells sending the twelve spies and Israel's refusal to go up and possess the land at Kadesh-barnea"
+        },
+        {
+          "ref": "Deuteronomy 2:1-3:11",
+          "note": "Retells passing Edom, Moab, and Ammon peaceably, then defeating Sihon king of the Amorites and Og king of Bashan in battle"
+        },
+        {
+          "ref": "Deuteronomy 8:2-4",
+          "note": "'Thy raiment waxed not old upon thee, neither did thy foot swell, these forty years'"
+        },
+        {
+          "ref": "Deuteronomy 9:7-21",
+          "note": "Retells the golden calf at Horeb and Moses' forty-day intercession; notes 'the LORD was very angry with Aaron to have destroyed him: and I prayed for Aaron also the same time' (9:20)"
+        },
+        {
+          "ref": "Deuteronomy 10:6-9",
+          "note": "Notes Aaron's death at Mosera, Eleazar his son succeeding him in the priesthood, and the tribe of Levi being set apart to bear the ark"
+        },
+        {
+          "ref": "Deuteronomy 11:6",
+          "note": "Recalls the earth swallowing Dathan and Abiram, sons of Eliab, in the midst of Israel"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ten_commandments_eth_deut",
+      "name": "The Ten Commandments Restated",
+      "role": "law",
+      "scribeTier": "Twin Stone Tablets",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "Re-given in full to the generation that was not itself present at Sinai/Horeb, explicitly framed as their own covenant and not merely an inherited one: 'The LORD made not this covenant with our fathers, but with us, even us, who are all of us here alive this day' (5:3).",
+      "verses": [
+        {
+          "ref": "Deuteronomy 5:6-21",
+          "note": "The Ten Commandments restated in full, word for word"
+        },
+        {
+          "ref": "Deuteronomy 5:22-27",
+          "note": "The people, afraid of the fire and the voice, ask Moses to stand between them and the LORD from then on"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The people's own request here - 'go thou near, and hear all that the LORD our God shall say... and we will hear it, and do it' (5:27) - is the text's own explanation for why the rest of the law comes through Moses rather than being spoken directly to the whole camp again."
+      ]
+    },
+    {
+      "id": "shema_eth_deut",
+      "name": "The Shema",
+      "role": "law",
+      "scribeTier": "Doorframe Shema",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "'Hear, O Israel: The LORD our God is one LORD' - the single confession underlying every other command in the book, meant to be bound into daily life (hand, forehead, doorposts, gates) and taught constantly to children rather than heard once and set aside.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 6:4-9",
+          "note": "The Shema itself and the command to teach it diligently, talk of it at home and on the road, bind it as a sign, and write it on doorposts and gates"
+        },
+        {
+          "ref": "Deuteronomy 11:18-21",
+          "note": "The same instruction repeated - lay up these words in heart and soul, teach the children, write them on the doorposts"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "laws_for_the_land_eth_deut",
+      "name": "Laws for the Land",
+      "role": "law",
+      "scribeTier": "Gate of Judgment",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "The bulk of the book (chapters 12-26) - law rewritten for settled life in the land rather than the wilderness camp: a single central place of worship, clean/unclean food, the sabbatical release of debts and servants, feast observance, courts and judges, kingship limits, cities of refuge for accidental killing, and property/warfare conduct.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 4:41-43",
+          "note": "Moses sets aside three cities of refuge east of Jordan - Bezer, Ramoth, Golan"
+        },
+        {
+          "ref": "Deuteronomy 12:1-14",
+          "note": "Commands a single central place of worship 'which the LORD your God shall choose', ending local high-place sacrifice"
+        },
+        {
+          "ref": "Deuteronomy 15:1-18",
+          "note": "The seven-year release of debts and of Hebrew bondservants"
+        },
+        {
+          "ref": "Deuteronomy 17:14-20",
+          "note": "Anticipates a future king - limits on horses, wives, silver and gold, and a requirement to personally copy and read the law"
+        },
+        {
+          "ref": "Deuteronomy 19:1-13",
+          "note": "Full cities-of-refuge law, distinguishing accidental killing from murder"
+        },
+        {
+          "ref": "Deuteronomy 24:1-4",
+          "note": "Law of divorce and remarriage"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "covenant_ceremony_eth_deut",
+      "name": "The Covenant Ceremony at Gerizim and Ebal",
+      "role": "law",
+      "scribeTier": "Gerizim and Ebal",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "A physical ceremony planned for the moment of entering the land - six tribes standing on Mount Gerizim to pronounce blessing, six on Mount Ebal to pronounce cursing - making obedience versus disobedience a staged, communal, literal event rather than an abstract choice, followed by extended lists of both.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 11:26-29",
+          "note": "First announces the blessing to be set on Gerizim and the curse on Ebal"
+        },
+        {
+          "ref": "Deuteronomy 27:11-13",
+          "note": "Names the tribes assigned to each mountain: Simeon, Levi, Judah, Issachar, Joseph, and Benjamin to bless on Gerizim; Reuben, Gad, Asher, Zebulun, Dan, and Naphtali to curse on Ebal"
+        },
+        {
+          "ref": "Deuteronomy 28:1-68",
+          "note": "The extended blessings for obedience and curses for disobedience"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "song_of_moses_eth_deut",
+      "name": "The Song of Moses",
+      "role": "law",
+      "scribeTier": "Witness Song Scroll",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "Commanded to be written and taught specifically because it will outlast Moses - 'this song shall testify against them as a witness' (31:21) - so that after the people inevitably drift, there is still a fixed, memorized text to confront them, once there is no living leader left to speak directly.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 31:19-22",
+          "note": "The LORD commands the song be written and taught to the children of Israel as a future witness"
+        },
+        {
+          "ref": "Deuteronomy 31:30-32:43",
+          "note": "Moses speaks the whole song 'in the ears of the people, he, and Hoshea the son of Nun' (32:44)"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blessing_of_tribes_eth_deut",
+      "name": "The Blessing of the Twelve Tribes",
+      "role": "law",
+      "scribeTier": "Twelve-Fold Blessing",
+      "deliveredBy": "moses_eth_deut",
+      "purpose": "Moses' final act before going up the mountain to die - a personal blessing spoken over each tribe by name, echoing Jacob's blessing of his own twelve sons in Genesis 49, closing the loop from the family that went down into Egypt to the nation now about to enter the land.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 33:1-29",
+          "note": "Blesses Reuben, Judah, Levi, Benjamin, Joseph (Ephraim and Manasseh together), Zebulun and Issachar together, Gad, Dan, Naphtali, and Asher by name"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Simeon is left out of the blessing entirely in this text, exactly as in the standard canon - a real textual gap, not an extraction error, likely echoing Jacob's own rebuke of Simeon and Levi for violence at Shechem in Genesis 49:5-7, though this passage itself gives no explanation."
+      ]
+    },
+    {
+      "id": "moses_eth_deut",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Nebo's Summit",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Amram (indexed under Exodus, not tracked in this book)",
+        "mother": "Jochebed (indexed under Exodus, not tracked in this book)",
+        "spouses": [
+          "Zipporah (indexed under Exodus, not tracked in this book)"
+        ],
+        "children": [
+          "Gershom and Eliezer, named in Exodus - not tracked in this book"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Deuteronomy 31:1-8",
+          "note": "Publicly commissions Joshua as his successor before all Israel: 'be strong and of a good courage... for the LORD thy God, he it is that doth go with thee'"
+        },
+        {
+          "ref": "Deuteronomy 34:1-4",
+          "note": "The LORD shows Moses the whole land from the top of Pisgah on Mount Nebo, but tells him he will not cross over into it"
+        },
+        {
+          "ref": "Deuteronomy 34:5-8",
+          "note": "Dies in the land of Moab at 120 years old; buried by the LORD in a valley 'no man knoweth of his sepulchre unto this day'; Israel weeps for him thirty days"
+        },
+        {
+          "ref": "Deuteronomy 34:10-12",
+          "note": "'There arose not a prophet since in Israel like unto Moses, whom the LORD knew face to face'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Died",
+          "age": 120,
+          "ref": "Deuteronomy 34:7"
+        }
+      ],
+      "funFacts": [
+        "'His eye was not dim, nor his natural force abated' (34:7) - his death is explicitly not framed as decline or frailty; the text is clear his exclusion is solely the consequence of striking the rock at Meribah, not physical failing."
+      ]
+    },
+    {
+      "id": "joshua_eth_deut",
+      "name": "Joshua",
+      "role": "submanager",
+      "scribeTier": "Nebo's Summit",
+      "parentManagerId": "moses_eth_deut",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Nun (indexed under Numbers/Joshua, not tracked in this book)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Deuteronomy 1:38",
+          "note": "Named as the one of that generation who, alongside Caleb, will go in and cause Israel to inherit the land"
+        },
+        {
+          "ref": "Deuteronomy 3:21-22, 28",
+          "note": "Charged by Moses directly: 'thine eyes have seen all that the LORD your God hath done unto these two kings... charge Joshua, and encourage him, and strengthen him'"
+        },
+        {
+          "ref": "Deuteronomy 31:7-8, 23",
+          "note": "Publicly and then privately commissioned by Moses before all Israel to lead the people into the land"
+        },
+        {
+          "ref": "Deuteronomy 32:44",
+          "note": "Present with Moses as he speaks the whole Song of Moses to the people, named there as 'Hoshea the son of Nun'"
+        },
+        {
+          "ref": "Deuteronomy 34:9",
+          "note": "'Full of the spirit of wisdom; for Moses had laid his hands upon him: and the children of Israel hearkened unto him'"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Nothing bulk to list for this book - every named figure encountered (Caleb, Sihon, Og, Aaron, Eleazar, Dathan, Abiram) appears only as a brief historical reference within Moses' own recap and is folded into the relevant law tier's verse notes above rather than given a separate entry, matching the restraint of the existing KJV Deuteronomy index."
+  }
+}

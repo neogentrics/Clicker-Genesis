@@ -1,0 +1,672 @@
+{
+  "book": "Numbers",
+  "translation": "Ethiopian",
+  "canonicalOrder": 4,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read the full extracted Ethiopian-translation text for Numbers (all 36 chapters, sampled/verified extensively across chapters 1-27, 31, and 35-36 including every major narrative and legal section) directly from Assets/Resources/Verses/Ethiopian/numbers_4.json before drafting, per this project's grounding rule. Unlike this same Ethiopian Bible's Ezra (a genuinely different 9-chapter/1-Esdras-tradition text) or other deuterocanonical additions found elsewhere in this translation set, this book's Numbers is textually identical to the standard/KJV-tradition Numbers throughout every chapter checked - same 36 chapters, same narrative arc (census, camp order, Levite consecration, the spies and rebellion at Kadesh, Korah's rebellion, Aaron's death and Eleazar's succession, Balaam and Balak, Baal-peor and Phinehas's zeal, the second census, Zelophehad's daughters' inheritance petition, the Midianite war, Transjordan settlement, the wilderness journey list, and the cities of refuge/inheritance-marriage laws closing the book). No real structural or content divergence from the established KJV Numbers Character Index was found, so this draft mirrors that file's tier structure and cast (verified independently against this translation's own text at every verse cited, not copied blind) with ids re-suffixed '_ethiopian' to avoid any cross-translation id collision. One minor textual variant spotted and flagged, not silently resolved: Numbers 36:11 in this file spells the eldest daughter's name 'Mahlal' rather than the 'Mahlah' used everywhere else in the book (26:33, 27:1) - almost certainly an extraction-artifact typo rather than a deliberate translation choice, since 36:1-10 and every other appearance use 'Mahlah,' but left as an open flag rather than silently corrected, per the project's scripture-fidelity rule. As in the KJV indexing pass, Zelophehad's five daughters are one major (Mahlah, named first in both group listings) plus four submanagers rather than five separate majors, since the text never differentiates their individual actions; Eleazar is indexed as a full manager (not a submanager under Aaron) because his succession to the high priesthood on Mount Hor (20:25-28) is a book-specific pivotal event in Numbers itself, matching the KJV file's own reasoning for the same promotion.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Struck Rock",
+      "managerId": "moses_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Budding Almond Rod",
+      "managerId": "aaron_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Camp Gate",
+      "managerId": "miriam_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Cluster of Grapes",
+      "managerId": "caleb_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Laid-On Hands",
+      "managerId": "joshua_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Earth's Mouth",
+      "managerId": "korah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Balaam's Donkey",
+      "managerId": "balaam_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Curse Altar",
+      "managerId": "balak_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Zealous Javelin",
+      "managerId": "phinehas_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "High Priest's Mitre",
+      "managerId": "eleazar_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Inheritance Deed",
+      "managerId": "mahlah_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "moses_ethiopian",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — Numbers 26:59, not individually indexed",
+        "mother": "jochebed — Numbers 26:59, not individually indexed",
+        "spouses": [
+          "zipporah — Exodus 2:21, not individually indexed"
+        ],
+        "children": [
+          "gershom — Exodus 2:22, not individually indexed",
+          "eliezer — Exodus 18:4, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 12:3",
+          "note": "'Now the man Moses was very meek, above all the men which were upon the face of the earth'"
+        },
+        {
+          "ref": "Numbers 14:13-20",
+          "note": "Intercedes for Israel after the spies' report, averting destruction"
+        },
+        {
+          "ref": "Numbers 20:7-12",
+          "note": "Strikes the rock at Meribah in anger instead of speaking to it as commanded — barred from entering the promised land as a result"
+        },
+        {
+          "ref": "Numbers 27:18-23",
+          "note": "Commissions Joshua as his successor by the laying on of hands"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The consequence of striking the rock (Numbers 20:12) is arguably the single most personally costly moment in his entire story — barred from the one goal that has driven the whole journey since Exodus 3."
+      ]
+    },
+    {
+      "id": "aaron_ethiopian",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Budding Almond Rod",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — Numbers 26:59, not individually indexed",
+        "mother": "jochebed — Numbers 26:59, not individually indexed",
+        "spouses": [
+          "elisheba — Exodus 6:23, not individually indexed"
+        ],
+        "children": [
+          "nadab — Numbers 3:2, died Numbers 3:4, not individually indexed",
+          "abihu — Numbers 3:2, died Numbers 3:4, not individually indexed",
+          "eleazar_ethiopian",
+          "ithamar — Numbers 3:2, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 12:1-15",
+          "note": "Joins Miriam in opposing Moses over his Ethiopian wife; only Miriam is struck with leprosy"
+        },
+        {
+          "ref": "Numbers 16:46-48",
+          "note": "Runs into the plague with a censer to make atonement, stopping it — 'he stood between the dead and the living'"
+        },
+        {
+          "ref": "Numbers 17:1-11",
+          "note": "His rod alone, of the twelve tribal rods, buds, blossoms, and yields almonds overnight — confirms the Levitical priesthood"
+        },
+        {
+          "ref": "Numbers 20:22-29",
+          "note": "Dies on Mount Hor; his priestly garments transferred to Eleazar before his death"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Numbers 12:1's 'Ethiopian woman' phrasing is this translation's own text at that verse (matching the wording used in the standard KJV tradition there as well) — noted here since this project's own working documentation elsewhere uses 'Cushite' when discussing this same verse; both refer to the same underlying reading, not a translation difference worth flagging as unique to this file."
+      ]
+    },
+    {
+      "id": "miriam_ethiopian",
+      "name": "Miriam",
+      "role": "manager",
+      "scribeTier": "Camp Gate",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — Numbers 26:59, not individually indexed",
+        "mother": "jochebed — Numbers 26:59, not individually indexed",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 12:1-15",
+          "note": "Speaks against Moses over his Ethiopian wife, is struck with leprosy, shut outside the camp seven days"
+        },
+        {
+          "ref": "Numbers 20:1",
+          "note": "Dies at Kadesh and is buried there"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "It is notably her, not Aaron, who bears the visible punishment for the same complaint against Moses."
+      ]
+    },
+    {
+      "id": "caleb_ethiopian",
+      "name": "Caleb",
+      "role": "manager",
+      "scribeTier": "Cluster of Grapes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jephunneh — Numbers 13:6, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 13:6, 30",
+          "note": "One of the twelve spies, representing Judah; alone with Joshua, urges the people to trust God and go up"
+        },
+        {
+          "ref": "Numbers 14:24",
+          "note": "Promised entry into the land 'because he had another spirit with him, and hath followed me fully'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joshua_ethiopian",
+      "name": "Joshua",
+      "role": "manager",
+      "scribeTier": "Laid-On Hands",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "nun — Numbers 13:8, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 13:8, 16",
+          "note": "One of the twelve spies, representing Ephraim — named 'Oshea' until Moses renames him Jehoshua/Joshua in this passage"
+        },
+        {
+          "ref": "Numbers 14:6-9",
+          "note": "With Caleb, tears his clothes and urges the people not to rebel against the LORD"
+        },
+        {
+          "ref": "Numbers 27:18-23",
+          "note": "Formally commissioned as Moses' successor"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "korah_ethiopian",
+      "name": "Korah",
+      "role": "manager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "izhar — Numbers 16:1, a Levite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1-3",
+          "note": "Leads a Levite challenge to Aaron's exclusive priesthood, joined by Dathan, Abiram, and 250 princes"
+        },
+        {
+          "ref": "Numbers 16:31-33",
+          "note": "'The earth opened her mouth, and swallowed them up... and all that appertained to Korah'"
+        },
+        {
+          "ref": "Numbers 26:11",
+          "note": "Explicitly noted that his own sons did not die with him"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "balaam_ethiopian",
+      "name": "Balaam",
+      "role": "manager",
+      "scribeTier": "Balaam's Donkey",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "beor — Numbers 22:5, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 22:1-35",
+          "note": "Hired by Balak to curse Israel; his donkey (this translation's own text also reads 'ass') sees the angel of the LORD and speaks to him three times before his own eyes are opened"
+        },
+        {
+          "ref": "Numbers 23-24",
+          "note": "Blesses Israel four times instead of cursing them, against Balak's repeated demands"
+        },
+        {
+          "ref": "Numbers 31:8",
+          "note": "Killed later, during Israel's war against Midian"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Tier name uses 'donkey' rather than this translation's own word 'ass' for UI clarity on a mobile screen — a display-label choice, not a text change; the underlying verse text is quoted/summarized exactly as extracted."
+      ]
+    },
+    {
+      "id": "balak_ethiopian",
+      "name": "Balak",
+      "role": "manager",
+      "scribeTier": "Curse Altar",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zippor — Numbers 22:2, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 22:2-6",
+          "note": "King of Moab; hires Balaam out of fear of Israel's numbers"
+        },
+        {
+          "ref": "Numbers 23:1-30",
+          "note": "Repeatedly builds altars and offers sacrifices, trying to get Balaam to curse Israel from a different vantage point"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phinehas_ethiopian",
+      "name": "Phinehas",
+      "role": "manager",
+      "scribeTier": "Zealous Javelin",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "eleazar_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:6-8",
+          "note": "Drives a javelin through an Israelite man and a Midianite woman, stopping a plague sent for Israel's apostasy at Baal-peor"
+        },
+        {
+          "ref": "Numbers 25:10-13",
+          "note": "Rewarded with 'my covenant of peace... an everlasting priesthood' for his zeal"
+        },
+        {
+          "ref": "Numbers 31:6",
+          "note": "Sent to the war against Midian carrying the holy instruments and the trumpets"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Aaron's grandson, Eleazar's son — the priesthood promise here is what makes his line, not just Aaron's in general, specifically significant going forward."
+      ]
+    },
+    {
+      "id": "eleazar_ethiopian",
+      "name": "Eleazar",
+      "role": "manager",
+      "scribeTier": "High Priest's Mitre",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "aaron_ethiopian",
+        "mother": "elisheba — Exodus 6:23, not individually indexed",
+        "spouses": [],
+        "children": [
+          "phinehas_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Numbers 20:25-28",
+          "note": "Aaron's priestly garments are stripped from Aaron and put on him atop Mount Hor, just before Aaron dies"
+        },
+        {
+          "ref": "Numbers 26:1-2",
+          "note": "Assists Moses in taking the second census"
+        },
+        {
+          "ref": "Numbers 27:19-22",
+          "note": "Stands with Moses at Joshua's commissioning"
+        },
+        {
+          "ref": "Numbers 31:12-54",
+          "note": "Handles the priestly duties around the Midianite war spoil alongside Moses"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mahlah_ethiopian",
+      "name": "Mahlah",
+      "role": "manager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zelophehad — Numbers 26:33, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1-11",
+          "note": "With her four sisters, petitions Moses for their father's inheritance since he died with no sons — the LORD rules in their favor, setting a lasting precedent"
+        },
+        {
+          "ref": "Numbers 36:1-12",
+          "note": "The ruling is refined — the sisters must marry within their own tribe so the inheritance doesn't pass out of it"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named first of the five sisters every time they appear as a group in this translation's text too (27:1, 36:11) — the reason she's indexed as the major manager here, with her sisters as submanagers, rather than five separate tiers for five people who otherwise act as one unit throughout."
+      ]
+    },
+    {
+      "id": "noah_daughter_ethiopian",
+      "name": "Noah (Zelophehad's daughter)",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1",
+          "note": "Named second of the five sisters"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Accuracy flag: a completely different person from Noah of the Flood (Genesis 6-9) — same spelling, unrelated, different gender, thousands of years apart."
+      ]
+    },
+    {
+      "id": "hoglah_ethiopian",
+      "name": "Hoglah",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1",
+          "note": "Named third of the five sisters"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "milcah_daughter_ethiopian",
+      "name": "Milcah (Zelophehad's daughter)",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1",
+          "note": "Named fourth of the five sisters"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Accuracy flag: a different person from Milcah, Nahor's wife in Genesis 11:29 — same spelling, unrelated."
+      ]
+    },
+    {
+      "id": "tirzah_ethiopian",
+      "name": "Tirzah",
+      "role": "submanager",
+      "scribeTier": "Inheritance Deed",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 27:1",
+          "note": "Named fifth of the five sisters"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dathan_ethiopian",
+      "name": "Dathan",
+      "role": "submanager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": "korah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "eliab — Numbers 16:1, a Reubenite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1, 25-33",
+          "note": "Joins Korah's challenge; his household swallowed with Korah's"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abiram_ethiopian",
+      "name": "Abiram",
+      "role": "submanager",
+      "scribeTier": "Earth's Mouth",
+      "parentManagerId": "korah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "eliab — Numbers 16:1, a Reubenite, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 16:1, 25-33",
+          "note": "Joins Korah's challenge alongside his brother Dathan"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eldad_ethiopian",
+      "name": "Eldad",
+      "role": "submanager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": "moses_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 11:26-29",
+          "note": "Prophesies in the camp without having gone to the tabernacle; Joshua wants them stopped, but Moses answers 'would God that all the LORD's people were prophets'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "medad_ethiopian",
+      "name": "Medad",
+      "role": "submanager",
+      "scribeTier": "Struck Rock",
+      "parentManagerId": "moses_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 11:26-29",
+          "note": "Prophesies alongside Eldad"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hobab_ethiopian",
+      "name": "Hobab",
+      "role": "named",
+      "genealogy": {
+        "father": "raguel — also spelled Reuel, Numbers 10:29",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 10:29-32",
+          "note": "Invited by Moses to journey with Israel as a guide, 'instead of eyes' to them in the wilderness"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Accuracy flag, genuinely disputed even in this translation's own text: Numbers 10:29 calls Raguel 'Moses' father in law,' but does not itself clarify whether that title belongs to Hobab or to Raguel — the same ambiguity present in the standard KJV tradition text. Not resolved here — flagged as an open textual question rather than silently picking one reading."
+      ]
+    },
+    {
+      "id": "zimri_ethiopian",
+      "name": "Zimri",
+      "role": "named",
+      "genealogy": {
+        "father": "salu — Numbers 25:14, a prince of Simeon, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:6-8, 14",
+          "note": "An Israelite prince, killed by Phinehas together with Cozbi at Baal-peor"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "cozbi_ethiopian",
+      "name": "Cozbi",
+      "role": "named",
+      "genealogy": {
+        "father": "zur — Numbers 25:15, a Midianite chief, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Numbers 25:6-8, 15",
+          "note": "A Midianite woman, killed by Phinehas together with Zimri at Baal-peor"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Deferred names with no individual narrative action, or too thin to index individually.",
+    "onSonOfPeleth": {
+      "ref": "Numbers 16:1",
+      "note": "Named once as one of Korah's initial group, then never mentioned again in the episode's outcome — a genuine textual curiosity present in this translation too, not something this project invents an explanation for."
+    },
+    "amoriteKings": {
+      "ref": "Numbers 21:21-35",
+      "names": [
+        "Sihon (king of the Amorites)",
+        "Og (king of Bashan)"
+      ],
+      "note": "Named battle opponents with no independent action beyond being defeated; not given full entries."
+    },
+    "twelveSpies": {
+      "ref": "Numbers 13:4-15",
+      "note": "All twelve are named, one per tribe — only Caleb and Joshua are indexed individually here, since the other ten act as an undifferentiated group ('the men that brought up the evil report') and are struck down together (Numbers 14:36-37)."
+    },
+    "mahlahSpellingVariant": {
+      "ref": "Numbers 36:11",
+      "note": "This file's own text spells the name 'Mahlal' at this single verse, versus 'Mahlah' everywhere else in the book (26:33, 27:1, 36:1-10) — flagged as a likely extraction artifact, not silently corrected."
+    }
+  }
+}

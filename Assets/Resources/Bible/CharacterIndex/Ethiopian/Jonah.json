@@ -1,0 +1,255 @@
+{
+  "book": "Jonah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 53,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This Ethiopian translation's Jonah is textually near-identical to the KJV rendering (same 4 chapters/48 verses, same wording almost throughout, including the LORD 'preparing' the fish (1:17), the worm, and the vehement east wind (4:6-8), and the same closing unanswered question at 4:11) - no genuine content/structural differences were found, so the KJV Character Index's proven 4-tier shape (one person-tier for Jonah + three law/theme tiers for the great fish, Jonah's prayer, and the gourd/worm/wind) is reused, re-verified line by line against this translation's own text rather than assumed. All ids are suffixed _ethiopian to keep this translation's characters distinct from the KJV index. Jonah's patronymic 'the son of Amittai' (1:1) matches the historical prophet of 2 Kings 14:25 (Gath-hepher) - a cross-book identification, not narrated within this book itself, so it is noted but not asserted as in-text fact. Two unnamed Gentile groups (the mariners of ch.1, the king of Nineveh + Nineveh's people of ch.3-4) respond to God more readily than Jonah does; captured as submanagers/genealogyLists since neither has an individually named member in this text. One small wording note (not a content difference): this translation renders 'What meanest thou, O sleeper?' (1:6) and keeps the KJV's 'gourd' (4:6-10) rather than any other plant name - flagged only as confirmation the text was actually read, not as a discrepancy.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Jonah, the Reluctant Prophet",
+      "managerId": "jonah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Great Fish",
+      "managerId": "great_fish_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Jonah's Prayer",
+      "managerId": "jonahs_prayer_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Gourd, the Worm, and the Wind",
+      "managerId": "gourd_worm_wind_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jonah_ethiopian",
+      "name": "Jonah",
+      "role": "manager",
+      "scribeTier": "Tier 1 — Jonah, the Reluctant Prophet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Amittai",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the son of Amittai' (Jonah 1:1). The same patronymic identifies the prophet Jonah 'of Gath-hepher' in 2 Kings 14:25 - traditionally understood as the same man, though this book never itself narrates that cross-reference."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:1-2",
+          "note": "The word of the LORD comes to Jonah, commanding him to arise, go to Nineveh, that great city, and cry against it for their wickedness."
+        },
+        {
+          "ref": "Jonah 1:3",
+          "note": "Jonah instead rises up to flee unto Tarshish from the presence of the LORD, finding a ship at Joppa and paying the fare."
+        },
+        {
+          "ref": "Jonah 1:12",
+          "note": "Jonah tells the terrified mariners to take him up and cast him forth into the sea, admitting the tempest is for his sake."
+        },
+        {
+          "ref": "Jonah 1:17",
+          "note": "The LORD had prepared a great fish to swallow up Jonah; he is in its belly three days and three nights."
+        },
+        {
+          "ref": "Jonah 3:3-4",
+          "note": "On a second word of the LORD, Jonah goes to Nineveh and, entering a day's journey, cries that in forty days Nineveh shall be overthrown."
+        },
+        {
+          "ref": "Jonah 3:10",
+          "note": "God sees their works, that they turned from their evil way, and repents of the evil he said he would do unto them."
+        },
+        {
+          "ref": "Jonah 4:1",
+          "note": "It displeases Jonah exceedingly, and he is very angry that Nineveh is spared."
+        },
+        {
+          "ref": "Jonah 4:9-11",
+          "note": "God asks whether Jonah does well to be angry over the withered gourd, then contrasts Jonah's pity for a plant he did not labor for with sparing Nineveh's more than sixscore thousand persons and much cattle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jonah is independently named as a historical prophet 'of Gath-hepher' in 2 Kings 14:25, during the reign of Jeroboam II of Israel.",
+        "The book ends on an unanswered question from God to Jonah (Jonah 4:11), rather than a resolved narrative."
+      ]
+    },
+    {
+      "id": "the_mariners_ethiopian",
+      "name": "The Mariners",
+      "role": "submanager",
+      "scribeTier": "Tier 1 — Jonah, the Reluctant Prophet",
+      "parentManagerId": "jonah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An unnamed company of shipmen bound for Tarshish out of Joppa (1:3), with a 'shipmaster' mentioned distinctly once (1:6) but also unnamed."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:5",
+          "note": "The mariners are afraid, cry every man unto his god, and cast the wares in the ship into the sea to lighten it, while Jonah sleeps below."
+        },
+        {
+          "ref": "Jonah 1:7-8",
+          "note": "They cast lots to learn for whose cause the evil is upon them; the lot falls upon Jonah, and they press him with questions."
+        },
+        {
+          "ref": "Jonah 1:13-14",
+          "note": "The men row hard to bring the ship to land but cannot, then cry to the LORD not to let them perish for this man's life or lay innocent blood upon them."
+        },
+        {
+          "ref": "Jonah 1:15-16",
+          "note": "They take up Jonah and cast him forth into the sea; the sea ceases from her raging, and the men fear the LORD exceedingly, offering a sacrifice and making vows."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Their fear of the LORD and vow-making (1:16) make them, alongside Nineveh, one of two Gentile groups in the book who turn to God before Jonah fully does."
+      ]
+    },
+    {
+      "id": "king_of_nineveh_ethiopian",
+      "name": "The King of Nineveh",
+      "role": "submanager",
+      "scribeTier": "Tier 1 — Jonah, the Reluctant Prophet",
+      "parentManagerId": "jonah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed in the text; called simply 'the king of Nineveh' (3:6). Not identified with a specific Assyrian monarch by name in this book."
+      },
+      "verses": [
+        {
+          "ref": "Jonah 3:6",
+          "note": "On hearing the word, the king arises from his throne, lays his robe from him, covers himself with sackcloth, and sits in ashes."
+        },
+        {
+          "ref": "Jonah 3:7-8",
+          "note": "By decree of himself and his nobles, he proclaims that neither man nor beast, herd nor flock, taste anything, that all be covered with sackcloth and cry mightily unto God, turning from evil ways and violence."
+        },
+        {
+          "ref": "Jonah 3:9",
+          "note": "The king reasons, 'Who can tell if God will turn and repent, and turn away from his fierce anger, that we perish not?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The decree extends fasting and sackcloth even to the city's animals (3:7-8), a detail unique to this account.",
+        "The proclamation is issued jointly, 'by the decree of the king and his nobles' (3:7)."
+      ]
+    },
+    {
+      "id": "great_fish_ethiopian",
+      "name": "The Great Fish",
+      "role": "law",
+      "scribeTier": "Tier 2 — The Great Fish",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_ethiopian",
+      "purpose": "God's appointed instrument of both judgment and rescue: prepared to swallow Jonah and save him from drowning after he is cast into the sea, then commanded to deliver him safely back to dry land - teaching that the LORD's sovereignty and mercy extend even over the sea and its creatures.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jonah 1:17",
+          "note": "The LORD had prepared a great fish to swallow up Jonah; he is in the fish's belly three days and three nights."
+        },
+        {
+          "ref": "Jonah 2:1",
+          "note": "Jonah prays unto the LORD his God out of the fish's belly."
+        },
+        {
+          "ref": "Jonah 2:10",
+          "note": "The LORD speaks unto the fish, and it vomits out Jonah upon the dry land."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation, like the KJV, calls it simply 'a great fish' (1:17), not a whale.",
+        "The fish acts twice at God's direct command: first to swallow Jonah (1:17), then to release him (2:10)."
+      ]
+    },
+    {
+      "id": "jonahs_prayer_ethiopian",
+      "name": "Jonah's Prayer",
+      "role": "law",
+      "scribeTier": "Tier 3 — Jonah's Prayer",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_ethiopian",
+      "purpose": "A prayer of thanksgiving offered in distress from within the fish, recounting Jonah's descent into the deep and affirming that 'salvation is of the LORD' (2:9) - modeling repentant prayer offered from the depths of consequence rather than a petition to be spared them.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jonah 2:2",
+          "note": "Jonah cries by reason of his affliction unto the LORD, and is heard out of the belly of hell."
+        },
+        {
+          "ref": "Jonah 2:5-6",
+          "note": "Jonah describes the waters compassing him about, the weeds wrapped about his head, and the earth's bars about him for ever, yet the LORD brings up his life from corruption."
+        },
+        {
+          "ref": "Jonah 2:9",
+          "note": "Jonah vows to sacrifice with the voice of thanksgiving and pay what he has vowed, declaring 'Salvation is of the LORD.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The prayer is offered from inside the fish, before Jonah has yet gone to Nineveh - thanksgiving for rescue, not a petition to be spared the mission."
+      ]
+    },
+    {
+      "id": "gourd_worm_wind_ethiopian",
+      "name": "The Gourd, the Worm, and the Wind",
+      "role": "law",
+      "scribeTier": "Tier 4 — The Gourd, the Worm, and the Wind",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_ethiopian",
+      "purpose": "Three things the LORD God prepares in succession to teach Jonah about misplaced pity - a gourd that shades and pleases him, a worm that destroys it, and a vehement east wind that afflicts him - exposing Jonah's greater concern for his own comfort than for Nineveh's many souls.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jonah 4:6",
+          "note": "The LORD God prepares a gourd to come up over Jonah, a shadow over his head to deliver him from his grief; Jonah is exceeding glad of it."
+        },
+        {
+          "ref": "Jonah 4:7",
+          "note": "God prepares a worm the next morning, which smites the gourd so that it withers."
+        },
+        {
+          "ref": "Jonah 4:8",
+          "note": "God prepares a vehement east wind and the sun beats upon Jonah's head, so that he faints and wishes to die."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation keeps the same 'prepared' language across the fish (1:17), the gourd, the worm, and the wind (4:6-8), tying chapters 1 and 4 together just as in the KJV wording."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "people_and_cattle_of_nineveh": {
+      "ref": "Jonah 4:11",
+      "note": "Nineveh's inhabitants, 'more than sixscore thousand persons that cannot discern between their right hand and their left hand,' together with 'much cattle.' At the king's decree they fasted, wore sackcloth, and cried mightily unto God (3:5-8); no individual is named beyond the king."
+    }
+  }
+}

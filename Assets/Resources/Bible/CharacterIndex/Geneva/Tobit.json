@@ -1,0 +1,517 @@
+{
+  "book": "Tobit",
+  "translation": "Geneva",
+  "canonicalOrder": 42,
+  "status": "drafted via direct grounded read of the real extracted Geneva Bible verse text (Assets/Resources/Verses/Geneva/tobit_42.json), not yet adversarially fact-checked by a second pass",
+  "notes": "Tobit does not exist anywhere in this project's validated KJV Character Index - the KJV's 66-book protocol used elsewhere in this project excludes the Apocrypha entirely, so this book is wholly new content, not a variant/re-tiering of an existing KJV entry. Structurally it is a tight, self-contained family narrative (exile, alms, blindness, a son's journey, a haunted bride, an angel in disguise, healing, homecoming, a deathbed testament) rather than a law-or-legal-code book, so every tier here is role:\"person\" - even Tobit's lengthy instructional speech to Tobias (ch.4) and his closing hymn/prophecy (ch.13-14) are personally embodied first-person speech by Tobit himself, not detached transmitted law, so they stay folded into his own tier rather than spun out as law-type tiers. Two deliberate naming-collision flags: (1) Sarah, daughter of Raguel, shares her name with Abraham's wife Sarah from Genesis - given a disambiguating id (sarah_geneva_tobit) and never merged with or treated as the same figure; (2) the angel here is explicitly named Raphael, textually distinct from Gabriel (who appears elsewhere in scripture, e.g. Luke) - no link between the two is asserted, since the text never makes one. Seven collective, unnamed prior husbands of Sarah (3:8, all slain by Asmodeus before consummation) and Tobias's six unnamed sons (14:3) are kept as bulk genealogyLists entries rather than invented individuals, per the collective-entry rule. Two figures named only in a brief cautionary aside at 14:10 (Aman, who plotted against Achiacharus, and Manasses, who \"escaped the snare of death\" through alms) are logged in genealogyLists only - the text gives no further scene, genealogy, or verse-by-verse presence for either inside this book, so they do not warrant their own character entries. Achiacharus (the historical/legendary Ahikar figure) and Gabael (the money-holding kinsman) are both real, named, textually-active supporting figures whose absence would meaningfully change plot mechanics (Achiacharus secures Tobit's safety and later nourishes him during his blindness; Gabael is the literal source of the ten-talent inheritance the whole second half of the plot hinges on) but who never carry their own independent narrative scene the way the seven majors do - both are submanagers rather than full tiers. Edna, Raguel's wife, is a loyalty-boost submanager under Raguel rather than her own tier - she has real emotional beats (weeping, comforting Sarah, preparing the bridal chamber) but always in direct support of Raguel's and Sarah's scenes rather than a scene of her own.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Almsgiver's Ledger",
+      "managerId": "tobit_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Spinner's Wages",
+      "managerId": "anna_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Wayfarer's Satchel",
+      "managerId": "tobias_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Guardian's Disguise",
+      "managerId": "raphael_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Bridal Veil",
+      "managerId": "sarah_geneva_tobit",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Tormenting Shadow",
+      "managerId": "asmodeus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Kinsman's Hearth",
+      "managerId": "raguel_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "tobit_geneva",
+      "name": "Tobit",
+      "role": "manager",
+      "scribeTier": "Almsgiver's Ledger",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Tobiel (son of Ananiel, son of Aduel, son of Gabael, of the seed of Asiel, tribe of Naphtali - Tobit 1:1)",
+        "mother": null,
+        "spouses": [
+          "Anna"
+        ],
+        "children": [
+          "Tobias"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Tobit 1:1-2",
+          "note": "Introduced by full genealogy; carried captive from Thisbe in Naphtali to Nineveh under Enemessar of Assyria."
+        },
+        {
+          "ref": "Tobit 1:3",
+          "note": "States his own character: walked in truth and righteousness all his life, did many almsdeeds among his captive brethren."
+        },
+        {
+          "ref": "Tobit 1:16-19",
+          "note": "Secretly buries the bodies of Israelites Sennacherib had slain, defying the king's search for the dead, and flees Nineveh in fear of execution."
+        },
+        {
+          "ref": "Tobit 2:9-10",
+          "note": "Sleeps by his courtyard wall after burying another body; sparrow dung falls in his open eyes, causing white films/blindness that physicians cannot cure."
+        },
+        {
+          "ref": "Tobit 3:1-6",
+          "note": "Grieved and wrongly accused by Anna over the kid, prays for God to release him in death rather than live with false reproach."
+        },
+        {
+          "ref": "Tobit 4:1-21",
+          "note": "Believing himself near death, instructs Tobias at length: bury his parents together, honor his mother, give alms generously, marry within his own kindred, pay wages promptly, and reveals the ten talents left with Gabael."
+        },
+        {
+          "ref": "Tobit 11:10-15",
+          "note": "Stumbles out to meet his returning son; Tobias applies the fish's gall to his eyes and the white films peel away, restoring his sight."
+        },
+        {
+          "ref": "Tobit 14:1-11",
+          "note": "In old age, gathers his son and six grandsons, prophesies Nineveh's fall and Jerusalem's eventual restoration, gives final counsel on alms and righteousness, and dies at 158."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Loses his sight",
+          "age": 58,
+          "ref": "Tobit 14:2"
+        },
+        {
+          "event": "Regains his sight (8 years blind)",
+          "age": 66,
+          "ref": "Tobit 14:2"
+        },
+        {
+          "event": "Dies",
+          "age": 158,
+          "ref": "Tobit 14:11"
+        }
+      ],
+      "funFacts": [
+        "Buried executed Israelites at the risk of his own life under a king actively hunting for the missing bodies (1:18-19).",
+        "His grandmother Deborah, his own father having died, personally taught him to tithe as an orphan (1:8).",
+        "His closing hymn (ch.13) is a psalm-style blessing envisioning Jerusalem rebuilt with sapphire, emerald, and gold."
+      ]
+    },
+    {
+      "id": "anna_geneva",
+      "name": "Anna",
+      "role": "manager",
+      "scribeTier": "Spinner's Wages",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Tobit"
+        ],
+        "children": [
+          "Tobias"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Tobit 1:9",
+          "note": "Taken to wife by Tobit 'of the seed of our own family'; bears him Tobias."
+        },
+        {
+          "ref": "Tobit 2:11-14",
+          "note": "Works spinning wool for wages and is given a kid as an unearned gift by her employers; when Tobit accuses her of theft she sharply rebukes him: 'Where are thine alms and thy righteous deeds?'"
+        },
+        {
+          "ref": "Tobit 5:17-22",
+          "note": "Weeps and protests when Tobias is sent away on the journey, calling him 'the staff of our hand'; Tobit reassures her."
+        },
+        {
+          "ref": "Tobit 10:4-7",
+          "note": "When Tobias is overdue, despairs daily, refuses food, and goes out each day to watch the road, weeping for her son as though he had perished."
+        },
+        {
+          "ref": "Tobit 11:9",
+          "note": "Runs to Tobias on his return and embraces him, saying she can now die content having seen him."
+        },
+        {
+          "ref": "Tobit 14:12",
+          "note": "Dies in old age and is buried by Tobit's side, per Tobit's own earlier instruction."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her rebuke of Tobit over the kid (2:14) is one of the book's few moments where a supporting figure directly challenges the title character's judgment and is narratively vindicated."
+      ]
+    },
+    {
+      "id": "tobias_geneva",
+      "name": "Tobias",
+      "role": "manager",
+      "scribeTier": "Wayfarer's Satchel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Tobit",
+        "mother": "Anna",
+        "spouses": [
+          "Sarah"
+        ],
+        "children": [
+          "six unnamed sons (Tobit 14:3)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Tobit 2:2-3",
+          "note": "Sent by Tobit to find a poor kinsman for the Pentecost feast; instead finds a murdered Israelite cast out in the marketplace."
+        },
+        {
+          "ref": "Tobit 4:2-21",
+          "note": "Receives his father's full testament of instructions before setting out for Media."
+        },
+        {
+          "ref": "Tobit 5:4-16",
+          "note": "Finds and hires the disguised angel 'Azarias' as a paid travel companion, with the family dog going along."
+        },
+        {
+          "ref": "Tobit 6:2-5",
+          "note": "Nearly swallowed by a great fish while washing in the Tigris; catches it on the angel's instruction and keeps its heart, liver, and gall."
+        },
+        {
+          "ref": "Tobit 7:9-8:9",
+          "note": "Marries Sarah at Raguel's house in Ecbatana, using the fish's heart and liver as a smoke-charm to drive off Asmodeus, and prays with her rather than merely consummating out of lust."
+        },
+        {
+          "ref": "Tobit 11:11-13",
+          "note": "Anoints his father's blind eyes with the fish's gall, healing him."
+        },
+        {
+          "ref": "Tobit 14:3,13",
+          "note": "In old age inherits Tobit's and Raguel's substance and has six sons before his own death at 127."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Dies at Ecbatana",
+          "age": 127,
+          "ref": "Tobit 14:14"
+        }
+      ],
+      "funFacts": [
+        "Travels with a dog that is mentioned twice in the narrative (5:16, 11:4) - an unusually concrete detail of a named-but-unnamed animal companion."
+      ]
+    },
+    {
+      "id": "raphael_geneva",
+      "name": "Raphael (as Azarias)",
+      "role": "manager",
+      "scribeTier": "Guardian's Disguise",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Tobit 5:4-13",
+          "note": "Appears to Tobias as a kinsman calling himself 'Azarias, the son of Ananias the great,' and is hired as a paid guide for the journey to Media."
+        },
+        {
+          "ref": "Tobit 6:2-8",
+          "note": "Instructs Tobias to catch the fish from the Tigris and preserve its heart, liver, and gall, explaining their uses against evil spirits and blindness."
+        },
+        {
+          "ref": "Tobit 6:10-17",
+          "note": "Reveals that Sarah is owed to Tobias by inheritance law and describes the fish-smoke remedy to repel the devil that has killed her seven husbands."
+        },
+        {
+          "ref": "Tobit 8:2-3",
+          "note": "The smoke he prescribed drives Asmodeus to flee to 'the uppermost parts of Egypt,' where the angel binds him."
+        },
+        {
+          "ref": "Tobit 9:1-6",
+          "note": "Travels to Rages of Media to collect the ten talents of silver from Gabael on Tobias's behalf."
+        },
+        {
+          "ref": "Tobit 12:6-15",
+          "note": "Reveals his true identity - 'I am Raphael, one of the seven holy angels' who presents the prayers of the saints - and explains he was sent to heal both Tobit and Sarah."
+        },
+        {
+          "ref": "Tobit 12:20-21",
+          "note": "Instructs them to write down all that happened, then ascends and 'they saw him no more.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Maintains his human disguise as 'Azarias' for the entire narrative until chapter 12, including accepting wages and a travel companion's trust the whole way.",
+        "States he neither ate nor drank during his time with them, and that what they saw of him eating was only 'a vision' (12:19)."
+      ]
+    },
+    {
+      "id": "sarah_geneva_tobit",
+      "name": "Sarah (daughter of Raguel)",
+      "role": "manager",
+      "scribeTier": "Bridal Veil",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Raguel",
+        "mother": "Edna",
+        "spouses": [
+          "seven unnamed husbands, all slain by Asmodeus before consummation (Tobit 3:8)",
+          "Tobias"
+        ],
+        "children": null
+      },
+      "verses": [
+        {
+          "ref": "Tobit 3:7-9",
+          "note": "Reproached by her father's maidservants at Ecbatana for having had seven husbands die, each accused of strangling them herself."
+        },
+        {
+          "ref": "Tobit 3:10-15",
+          "note": "Considers hanging herself rather than shame her aged father, but instead prays at her window for release or mercy."
+        },
+        {
+          "ref": "Tobit 3:17",
+          "note": "Raphael is sent in answer to both her prayer and Tobit's, to give her to Tobias as his rightful kinsman-wife and to bind Asmodeus."
+        },
+        {
+          "ref": "Tobit 7:1-8",
+          "note": "Greets Tobias and Azarias at her father's house in Ecbatana; Raguel remarks how closely Tobias resembles his father."
+        },
+        {
+          "ref": "Tobit 8:4-8",
+          "note": "Joins Tobias in prayer on their wedding night rather than immediate consummation, and answers his prayer with 'Amen.'"
+        },
+        {
+          "ref": "Tobit 10:12",
+          "note": "Departs with Tobias for Nineveh, charged by her mother Edna to honor her new parents-in-law."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "As Raguel's only daughter and heir, the law of Moses obligates her marriage to her nearest kinsman on pain of her father's own liability - the legal hinge the whole marriage plot turns on (6:12)."
+      ]
+    },
+    {
+      "id": "asmodeus_geneva",
+      "name": "Asmodeus",
+      "role": "manager",
+      "scribeTier": "Tormenting Shadow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Tobit 3:8",
+          "note": "Named as 'the evil spirit' who has killed each of Sarah's seven husbands before the marriage could be consummated."
+        },
+        {
+          "ref": "Tobit 6:14-15",
+          "note": "Tobias, warned by report of the deaths, fears he too will die, 'for a devil loveth her, which hurteth no man, but those which come unto her.'"
+        },
+        {
+          "ref": "Tobit 6:16-17",
+          "note": "Raphael prescribes the fish heart-and-liver smoke specifically to repel him from the bride-chamber."
+        },
+        {
+          "ref": "Tobit 8:2-3",
+          "note": "Smells the smoke, flees to 'the uppermost parts of Egypt,' and is bound there by the angel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only figure in the book given a specific place of banishment - 'the uppermost parts of Egypt' - rather than simply vanishing."
+      ]
+    },
+    {
+      "id": "raguel_geneva",
+      "name": "Raguel",
+      "role": "manager",
+      "scribeTier": "Kinsman's Hearth",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Edna"
+        ],
+        "children": [
+          "Sarah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Tobit 7:1-2",
+          "note": "Welcomes Tobias and Azarias into his house at Ecbatana, remarking to Edna how closely Tobias resembles his cousin Tobit."
+        },
+        {
+          "ref": "Tobit 7:9-13",
+          "note": "Gives Sarah to Tobias in marriage 'according to the law of Moses,' writes and seals a formal marriage instrument."
+        },
+        {
+          "ref": "Tobit 8:9-12",
+          "note": "Fearing Tobias will die like the seven before him, secretly digs a grave in the night, then rejoices to find the couple alive."
+        },
+        {
+          "ref": "Tobit 8:19-20",
+          "note": "Keeps a fourteen-day wedding feast for them, bound by his own oath that Tobias would not depart before it ended."
+        },
+        {
+          "ref": "Tobit 10:10-11",
+          "note": "Sends the couple away with Sarah, half of his goods, servants, and cattle, blessing them before he dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called Tobit's cousin/kinsman (7:2), which is the family tie that legally obligates Sarah's marriage to Tobias in the first place."
+      ]
+    },
+    {
+      "id": "edna_geneva",
+      "name": "Edna",
+      "role": "submanager",
+      "scribeTier": "Kinsman's Hearth",
+      "parentManagerId": "raguel_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Raguel"
+        ],
+        "children": [
+          "Sarah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Tobit 7:2,8",
+          "note": "Raguel's wife; weeps on hearing that Tobit, her husband's kinsman, has lost his sight."
+        },
+        {
+          "ref": "Tobit 7:16-18",
+          "note": "Prepares the bridal chamber for Sarah and comforts her daughter in tears before she is brought to Tobias."
+        },
+        {
+          "ref": "Tobit 10:12",
+          "note": "Charges Tobias, as the couple departs, to treat Sarah well and hopes to live to see their children."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "achiacharus_geneva",
+      "name": "Achiacharus",
+      "role": "submanager",
+      "scribeTier": "Almsgiver's Ledger",
+      "parentManagerId": "tobit_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Anael (Tobit's brother, Tobit 1:21)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Tobit 1:21-22",
+          "note": "Tobit's nephew; appointed cupbearer, keeper of the signet, steward, and overseer of accounts under king Sarchedonus, and secures Tobit's safe return to Nineveh."
+        },
+        {
+          "ref": "Tobit 2:10",
+          "note": "Nourishes and supports Tobit financially during his blindness, after the physicians fail to help him."
+        },
+        {
+          "ref": "Tobit 11:18",
+          "note": "Comes with his brother's son Nasbas to join the celebration of Tobias's return."
+        },
+        {
+          "ref": "Tobit 14:10",
+          "note": "Cited by Tobit in his final counsel as an example of one whom God delivered from a plot against his life set by 'Aman.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Held real political office (signet-keeper, steward) under the Assyrian court despite being only a supporting figure in Tobit's own story."
+      ]
+    },
+    {
+      "id": "gabael_geneva",
+      "name": "Gabael",
+      "role": "submanager",
+      "scribeTier": "Almsgiver's Ledger",
+      "parentManagerId": "tobit_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Tobit 1:14",
+          "note": "Entrusted by Tobit with ten talents of silver at Rages of Media, 'the brother of Gabrias.'"
+        },
+        {
+          "ref": "Tobit 9:5",
+          "note": "Repays the bond to Raphael, handing over the sealed bags of money on Tobias's behalf."
+        },
+        {
+          "ref": "Tobit 9:2,6",
+          "note": "Invited to and implicitly joins the wedding feast once the debt is settled."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above per the collective-entry and no-invention rules.",
+    "sarahsSevenHusbands": {
+      "ref": "Tobit 3:8",
+      "note": "Seven unnamed men given to Sarah in marriage, each slain by Asmodeus before the marriage could be consummated; the text never differentiates or names them individually."
+    },
+    "tobiasSixSons": {
+      "ref": "Tobit 14:3",
+      "note": "Tobias's six sons, gathered by Tobit on his deathbed along with their father; none are individually named in this book."
+    },
+    "amanAndManasses": {
+      "ref": "Tobit 14:10",
+      "note": "Two figures mentioned only in a single cautionary aside during Tobit's final counsel - Aman, who plotted against Achiacharus and was destroyed by his own snare, and Manasses, who gave alms and 'escaped the snare of death.' Neither has any other presence, genealogy, or scene in this book, so neither is indexed as a full character."
+    }
+  }
+}

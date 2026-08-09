@@ -1,0 +1,958 @@
+{
+  "book": "Isaiah",
+  "translation": "Geneva",
+  "canonicalOrder": 23,
+  "status": "drafted directly from the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/isaiah_23.json), cross-checked chapter-by-chapter against the book's key narrative/oracle sections before drafting",
+  "notes": "Read directly from the Geneva 1560 text (not from memory or the KJV draft): chapters 1, 6-9, 22, 28-31, 33, 36-40, 44-46, 52-53, 65-66 were checked verse-by-verse. Structurally this book matches the KJV's Isaiah almost exactly - same 66 chapters, same major beats (temple call vision ch.6; the Ahaz/Immanuel encounter ch.7-8; \"unto us a child is born\" ch.9; the \"burden of...\" oracle sequence against the nations ch.13-23; a sixfold lament sequence ch.28-33; the near-verbatim-with-2-Kings Hezekiah/Sennacherib narrative ch.36-39; \"comfort ye my people\" opening ch.40; the Cyrus oracles ch.44-45; the Servant passages including ch.53; the new-heavens-new-earth close ch.65-66). No canonical/structural differences from KJV were found (unlike this project's confirmed Ethiopian-Ezra case) - Geneva's Isaiah is the same 66-chapter book, just older English and a handful of real translation choices that differ from KJV's, flagged below rather than smoothed over.\n\nREAL TRANSLATION DIFFERENCES FOUND (not invented, verified against the actual text): (1) Isaiah 29:1 opens 'Ah altar, altar of the citie that Dauid dwelt in' - Geneva translates the Hebrew name/epithet 'Ariel' as the common noun 'altar' rather than transliterating it as a proper name the way the KJV's famous 'Woe to Ariel, to Ariel, the city where David dwelt!' does. This is the one of the six laments that does NOT open with 'Woe'/'Wo' in Geneva (it opens 'Ah'), and it never uses the name 'Ariel' at all - a genuine wording/translation-choice difference, not a numbering error. (2) Consistent Early-Modern-English spelling throughout (I/J and V/U used interchangeably per period typography: 'Iudah', 'Ierusalem', 'Iaakob', 'Vzziah', 'Iotham', 'Ioah', 'Vriah') plus several Geneva-specific proper-name spellings distinct from KJV's: 'Saneherib' (Sennacherib, throughout ch.36-39), 'Sheariashub' (Shearjashub, 7:3), 'Mahershalalhash-baz' (hyphenated, 8:1-3), 'Adramelech' (single m, 37:38, vs KJV's 'Adrammelech'), 'Merodach Baladan' (two words, no hyphen, 39:1). Character 'name' fields below use the modern/KJV-familiar spelling for cross-translation readability; the Geneva-specific spelling is preserved in each entry's funFacts/genealogy note since it is itself a real textual detail. (3) Close reading of 8:2 surfaced two named witnesses absent from the existing KJV Character Index draft for this book: 'Vriah the Priest, and Zechariah the sonne of Ieberechiah,' taken by Isaiah as 'faithfull witnesses to recorde' before the naming of Mahershalalhashbaz - added here as named entries since the KJV draft omitted them (the KJV text names them too; this is a genuine gap in that draft, not a Geneva-only detail).\n\nNaming-collision flag carried over from the standard methodology: Amoz (Isaiah's father, spelled with 'z', 1:1) is a different person from the minor prophet Amos (spelled with 's') - an easy English-spelling confusion between two unrelated names, confirmed distinct in this text. All genealogical claims are scoped strictly to what this book's own text states (e.g., Ahaz son of Jotham son of Uzziah is drawn only from 7:1; Hezekiah's own parentage is never stated within Isaiah itself, so father/mother are left null rather than imported from Kings/Chronicles).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Seraph's Coal",
+      "managerId": "isaiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Fuller's Field Conduit",
+      "managerId": "ahaz_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Immanuel Sign",
+      "managerId": "immanuel_sign_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Wonderfull, Counseller",
+      "managerId": "unto_us_a_child_is_born_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Burden",
+      "managerId": "oracles_against_the_nations_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Ah, Altar, Altar",
+      "managerId": "six_laments_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Sundial of Ahaz",
+      "managerId": "hezekiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Saneherib's Siege",
+      "managerId": "sennacherib_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Voice in the Wilderness",
+      "managerId": "comfort_ye_my_people_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Silent Lamb",
+      "managerId": "servant_of_the_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Shepherd's Anointing",
+      "managerId": "cyrus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "New Heauens, New Earth",
+      "managerId": "new_heavens_new_earth_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "isaiah_geneva",
+      "name": "Isaiah",
+      "role": "manager",
+      "scribeTier": "The Seraph's Coal",
+      "genealogy": {
+        "father": "Amoz",
+        "mother": null,
+        "spouses": [
+          "The prophetesse (unnamed) — Isaiah 8:3"
+        ],
+        "children": [
+          "Sheariashub (Geneva spelling of Shearjashub)",
+          "Mahershalalhash-baz"
+        ],
+        "note": "Called 'the sonne of Amoz' repeatedly (1:1, 2:1, 37:2, 38:1). Amoz (spelled with 'z') is a different name/person from the minor prophet Amos (spelled with 's'). His wife is named only 'the Prophetesse' (8:3), never given a personal name."
+      },
+      "funFacts": [
+        "Ministered under four kings of Judah named in the book's own opening superscription: Vzziah, Iotham, Ahaz and Hezekiah (1:1).",
+        "His call vision (6:1-8) came 'in the yeere of the death of King Vzziah'; a Seraph touched his lips with a hote cole from the altar and his sin was purged.",
+        "Commanded to walk 'naked and barefoote' three years as a sign against Egypt and Ethiopia (20:2-3).",
+        "Both his sons carry sign-names: Sheariashub ('a remnant shall return') and Mahershalalhash-baz ('haste to the spoyle, hurry to the praye')."
+      ],
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "Superscription: 'A vision of Isaiah, the sonne of Amoz... in the dayes of Vzziah, Iotham, Ahaz and Hezekiah Kings of Iudah.'"
+        },
+        {
+          "ref": "6:1-8",
+          "note": "Call vision in the temple; a Seraph purges his lips with a live coal; he answers 'Here am I, send me.'"
+        },
+        {
+          "ref": "7:3",
+          "note": "Sent by the Lord to meet Ahaz at the conduit of the vpper poole, taking his son Sheariashub."
+        },
+        {
+          "ref": "8:1-3",
+          "note": "Instructed to write, then name, his newborn son Mahershalalhash-baz, with Vriah the Priest and Zechariah the sonne of Ieberechiah as witnesses."
+        },
+        {
+          "ref": "20:2-3",
+          "note": "Commanded to loose his sackcloth and walk naked and barefoot three years as a sign against Egypt and Ethiopia."
+        },
+        {
+          "ref": "37:6-7,21",
+          "note": "Delivers the Lord's answering oracles to Hezekiah during the Assyrian crisis."
+        },
+        {
+          "ref": "38:1",
+          "note": "Comes to the dying Hezekiah with the Lord's word to 'put thine house in an order.'"
+        },
+        {
+          "ref": "39:3-7",
+          "note": "Confronts Hezekiah after the Babylonian envoys' visit, foretelling exile to Babel."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ahaz_geneva",
+      "name": "Ahaz",
+      "role": "manager",
+      "scribeTier": "The Fuller's Field Conduit",
+      "genealogy": {
+        "father": "Iotham",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Isaiah 7:1 states the chain directly: 'Ahaz, the sonne of Iotham, the sonne of Vzziah king of Iudah' — three generations named in a single verse, entirely within this book (Geneva's own I/V spelling of Jotham/Uzziah)."
+      },
+      "funFacts": [
+        "Faced with Rezin of Aram and Pekah of Israel marching on Jerusalem, 'his heart was moued, and the heart of his people, as the trees of the forest are moued by the winde' (7:2).",
+        "Told to 'aske a signe... either in the depth beneath or in the height aboue' and refuses: 'I wil not aske, neither will I tempt the Lord' (7:11-12).",
+        "The Immanuel sign (7:14) is given to 'the house of Dauid' regardless of his refusal."
+      ],
+      "verses": [
+        {
+          "ref": "7:1-2",
+          "note": "Rezin king of Aram and Pekah the sonne of Remaliah, king of Israel, march on Jerusalem but cannot overcome it; Ahaz's court is shaken."
+        },
+        {
+          "ref": "7:3-9",
+          "note": "Isaiah meets Ahaz and calls the two invading kings mere 'smoking firebrands,' soon spent."
+        },
+        {
+          "ref": "7:10-12",
+          "note": "Ahaz refuses to ask the Lord for a confirming sign."
+        },
+        {
+          "ref": "7:13-17",
+          "note": "Isaiah rebukes him ('Is it a small thing for you to grieue men, that ye will also grieue my God?') and gives the Immanuel sign regardless."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hezekiah_geneva",
+      "name": "Hezekiah",
+      "role": "manager",
+      "scribeTier": "Sundial of Ahaz",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Isaiah never states Hezekiah's own parentage within this book (unlike Ahaz's explicit father/grandfather chain in 7:1) — 1:1 lists him last among 'Vzziah, Iotham, Ahaz and Hezekiah' in reign order only."
+      },
+      "funFacts": [
+        "When Rabshakeh taunted Jerusalem, Hezekiah 'rent his clothes, and put on sackcloth and came into the House of the Lord' (37:1).",
+        "Spread Saneherib's letter before the Lord in the temple and prayed over it (37:14-15).",
+        "Told he would die, wept, and was granted fifteen more years, confirmed by the sun's shadow moving ten degrees backward on 'the diall of Ahaz' (38:1-8).",
+        "Left his own written psalm of thanksgiving after recovery, recorded in full (38:9-20).",
+        "Showed all his treasures to Merodach Baladan's envoys, prompting Isaiah's prophecy that his house's wealth and his own sons would one day be carried to Babel (39:2-7)."
+      ],
+      "verses": [
+        {
+          "ref": "36:1",
+          "note": "'In the fourteenth yeere of King Hezekiah,' Saneherib king of Asshur invades Judah's fortified cities."
+        },
+        {
+          "ref": "37:1",
+          "note": "Hezekiah's response to the Assyrian threat: torn clothes, sackcloth, the House of the Lord."
+        },
+        {
+          "ref": "37:14-20",
+          "note": "Prays over Saneherib's letter in the temple."
+        },
+        {
+          "ref": "37:21",
+          "note": "Receives Isaiah's answering oracle of deliverance."
+        },
+        {
+          "ref": "38:1-8",
+          "note": "Illness, the promise of fifteen added years, and the sign of the shadow on the sun dial of Ahaz moving backward."
+        },
+        {
+          "ref": "38:9-20",
+          "note": "Hezekiah's own written song of thanksgiving after his recovery."
+        },
+        {
+          "ref": "39:1-8",
+          "note": "Receives Merodach Baladan's envoys, shows his treasures, and hears Isaiah's prophecy of future exile to Babel."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sennacherib_geneva",
+      "name": "Sennacherib",
+      "role": "manager",
+      "scribeTier": "Saneherib's Siege",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Adramelech (37:38, Geneva's single-m spelling)",
+          "Sharezer (37:38)",
+          "Esarhaddon (37:38, successor)"
+        ],
+        "note": "Text spells him 'Saneherib' throughout ch.36-39 (a Geneva-specific spelling distinct from the KJV's 'Sennacherib'). Three sons named only at his death: Adramelech and Sharezer, who kill him, and Esarhaddon, who succeeds him (37:38). None has any other role in this book."
+      },
+      "funFacts": [
+        "King of Asshur; took 'all the strong cities of Iudah' before turning on Jerusalem itself (36:1).",
+        "Sent Rabshakeh with a great host and a taunting speech aimed at Hezekiah and the people on the wall (36:2-20).",
+        "Sent a written letter mocking the Lord's ability to deliver Jerusalem, which Hezekiah spread before the Lord in the temple (37:9-14).",
+        "The Angel of the Lord struck 'an hundreth, fourescore, and fiue thousand' in the Assyrian camp in a single night (37:36).",
+        "Assassinated by his own sons Adramelech and Sharezer while 'worshipping of Nisroch his god'; escaped to Ararat; his son Esarhaddon reigned in his place (37:38)."
+      ],
+      "verses": [
+        {
+          "ref": "36:1-2",
+          "note": "Invades Judah's fortified cities and sends Rabshakeh with an army to Jerusalem."
+        },
+        {
+          "ref": "37:9",
+          "note": "Hears that Tirhakah king of Ethiopia has come out to fight him and sends Hezekiah a further threatening letter."
+        },
+        {
+          "ref": "37:36",
+          "note": "185,000 in his camp struck dead by the Angel of the Lord in one night."
+        },
+        {
+          "ref": "37:37-38",
+          "note": "Withdraws to Nineveh; killed by his sons Adramelech and Sharezer while worshipping Nisroch his god; succeeded by his son Esarhaddon."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "cyrus_geneva",
+      "name": "Cyrus",
+      "role": "manager",
+      "scribeTier": "The Shepherd's Anointing",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy given for Cyrus in Isaiah; a Persian king named only within prophecy, generations before his own lifetime relative to Isaiah's ministry."
+      },
+      "funFacts": [
+        "Named directly by Isaiah roughly a century and a half before his own birth.",
+        "Called 'my shepheard' (44:28) and the Lord's 'anointed' (45:1) — the only foreign king in the book given the title 'anointed.'",
+        "Prophesied to authorize the rebuilding of Jerusalem and the temple's foundation (44:28) and to 'let goe my captiues, not for price nor rewarde' (45:13)."
+      ],
+      "verses": [
+        {
+          "ref": "44:28",
+          "note": "'He saith to Cyrus, Thou art my shepheard: and he shall performe all my desire: saying also to Ierusalem, Thou shalt be built: and to the Temple, Thy foundation shall be surely layed.'"
+        },
+        {
+          "ref": "45:1",
+          "note": "'Thus sayeth the Lord vnto Cyrus his anointed, whose right hand I haue holden to subdue nations before him.'"
+        },
+        {
+          "ref": "45:13",
+          "note": "Raised up 'in righteousnesse' to build the Lord's city and let go his captives 'not for price nor rewarde.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sheariashub_geneva",
+      "name": "Sheariashub (Shearjashub)",
+      "role": "submanager",
+      "parentManagerId": "isaiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "His very name — 'a remnant shall return' — is itself a standing sign of hope accompanying his father to Ahaz (7:3), reinforcing Isaiah's message.",
+      "genealogy": {
+        "father": "Isaiah",
+        "mother": "The prophetesse (unnamed)",
+        "spouses": [],
+        "children": [],
+        "note": "Named only in 7:3, spelled 'Sheariashub' in this translation (Geneva's rendering of Shearjashub); his name itself is the message."
+      },
+      "funFacts": [
+        "Only appears once, silently accompanying his father to meet Ahaz (7:3) — the text records no words of his own."
+      ],
+      "verses": [
+        {
+          "ref": "7:3",
+          "note": "Taken by Isaiah to meet Ahaz at the conduit of the vpper poole; his name itself is the sign."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mahershalalhashbaz_geneva",
+      "name": "Mahershalalhash-baz",
+      "role": "submanager",
+      "parentManagerId": "isaiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "His name — 'haste to the spoyle, hurry to the praye' — is a sign-name announcing the swift, imminent plunder of Damascus and Samaria by Asshur (8:1-4).",
+      "genealogy": {
+        "father": "Isaiah",
+        "mother": "The prophetesse (unnamed)",
+        "spouses": [],
+        "children": [],
+        "note": "Named in both 8:1 (written on a great roll before witnesses) and 8:3 (spoken at his birth). Geneva hyphenates the name 'Mahershalalhash-baz.'"
+      },
+      "funFacts": [
+        "Before he could say 'my father' or 'my mother,' the riches of Damascus and the spoil of Samaria would be taken by the king of Asshur (8:4)."
+      ],
+      "verses": [
+        {
+          "ref": "8:1-2",
+          "note": "The Lord instructs Isaiah to write the child's name on a great roll, witnessed by Vriah the Priest and Zechariah the sonne of Ieberechiah."
+        },
+        {
+          "ref": "8:3-4",
+          "note": "Born to Isaiah and 'the Prophetesse'; his name is confirmed, with a timetable tied to Asshur's conquests."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eliakim_geneva",
+      "name": "Eliakim",
+      "role": "submanager",
+      "parentManagerId": "hezekiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Given 'the key of the house of Dauid' and made 'a father of the inhabitats of Ierusalem' (22:20-22); still standing at Hezekiah's side through the whole Assyrian crisis (36:3,22; 37:2).",
+      "genealogy": {
+        "father": "Hilkiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the sonne of Hilkiah' throughout (22:20; 36:3,22) — a different Hilkiah than any high priest of that name elsewhere; Isaiah gives no further identification."
+      },
+      "funFacts": [
+        "Pictured as 'a naile in a sure place,' with his father's household hung upon him, 'all vessels of small quantitie' (22:23-24).",
+        "22:25 later pictures 'the naile' being cut down and falling; the text does not explicitly re-name Eliakim as the one meant.",
+        "Titled 'the stewarde of the house' when he reappears during the Assyrian crisis (36:3,22; 37:2)."
+      ],
+      "verses": [
+        {
+          "ref": "22:20-22",
+          "note": "The Lord calls him 'my seruant Eliakim,' clothes him with Shebna's robe, gives him 'the key of the house of Dauid.'"
+        },
+        {
+          "ref": "22:23-24",
+          "note": "Described as a nail fastened in a sure place, bearing his father's household's weight."
+        },
+        {
+          "ref": "36:3",
+          "note": "Comes out to meet Rabshakeh, titled 'the steward of the house,' alongside Shebna the chancellor and Ioah the recorder."
+        },
+        {
+          "ref": "37:2",
+          "note": "Sent by Hezekiah, with Shebna and the Elders of the Priests, to Isaiah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shebna_geneva",
+      "name": "Shebna",
+      "role": "submanager",
+      "parentManagerId": "hezekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Originally 'that treasurer, the steward of the house' (22:15) before being demoted; still functioning as court chancellor during the Assyrian crisis (36:3,22; 37:2).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Given no patronymic, unlike Eliakim ('sonne of Hilkiah'); Isaiah gives him no family details at all."
+      },
+      "funFacts": [
+        "Rebuked by name for hewing himself a sepulchre and for his 'charets of glorie' (22:15-18) — told the Lord will 'rolle and turne thee like a bal in a large countrey' where he will die.",
+        "Reappears with the title 'the chanceler' during Saneherib's invasion (36:3,22; 37:2), suggesting the demotion foretold in ch.22 had taken effect."
+      ],
+      "verses": [
+        {
+          "ref": "22:15-19",
+          "note": "Rebuked as 'that treasurer, the steward of the house' and told he will be removed and die in a foreign land."
+        },
+        {
+          "ref": "36:3",
+          "note": "Appears as 'Shebna the chanceler' alongside Eliakim and Ioah before Rabshakeh."
+        },
+        {
+          "ref": "37:2",
+          "note": "Sent with Eliakim and the Elders of the Priests to Isaiah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ioah_geneva",
+      "name": "Joah (Ioah)",
+      "role": "submanager",
+      "parentManagerId": "hezekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "The court recorder present at both confrontations with Rabshakeh (36:3,22), keeping the official account alongside Eliakim and Shebna.",
+      "genealogy": {
+        "father": "Asaph",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the sonne of Asaph' both times he appears (36:3, 36:22) — a different Asaph than the Levitical musician/psalm-writer of that name; Isaiah gives no further identification linking them. Geneva spells his own name 'Ioah' (I/J convention)."
+      },
+      "funFacts": [
+        "Never speaks in Isaiah's account; named only by title and patronymic, 'the recorder,' alongside Eliakim and Shebna."
+      ],
+      "verses": [
+        {
+          "ref": "36:3",
+          "note": "Named as 'Ioah the sonne of Asaph the recorder,' part of the delegation that meets Rabshakeh."
+        },
+        {
+          "ref": "36:22",
+          "note": "Reports back to Hezekiah with torn clothes after hearing Rabshakeh's words."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "rabshakeh_geneva",
+      "name": "Rabshakeh",
+      "role": "submanager",
+      "parentManagerId": "sennacherib_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Sent by Saneherib with a great host specifically to deliver and amplify the king's own words ('Thus sayth the great King,' 36:4) — presented as Saneherib's message, not his own agenda.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'Rabshakeh' is most likely a title (a chief officer) rather than a personal name, though the text never gives him any other name."
+      },
+      "funFacts": [
+        "Speaks deliberately in Hebrew, audible to the people on the wall, despite Hezekiah's officials asking him to use 'the Aramites language' instead (36:11-13).",
+        "Claims 'the Lord' himself sent Asshur against Jerusalem (36:10) — presented as his own boastful claim, not endorsed by the narrator."
+      ],
+      "verses": [
+        {
+          "ref": "36:2",
+          "note": "Sent by the King of Asshur from Lachish to Jerusalem with a great host."
+        },
+        {
+          "ref": "36:4-20",
+          "note": "Delivers a long taunting speech against Hezekiah, Judah's trust in Egypt, and the Lord's ability to deliver Jerusalem."
+        },
+        {
+          "ref": "37:4",
+          "note": "Hezekiah asks Isaiah to pray for 'the remnant that are left' against Rabshakeh's words, sent by 'the King of Asshur his master... to raile on the liuing God.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "uzziah_geneva",
+      "name": "Uzziah (Vzziah)",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Jotham"
+        ],
+        "note": "Named as Jotham's father via the chain in 7:1 ('Ahaz, the sonne of Iotham, the sonne of Vzziah'). Isaiah gives no further genealogy. Geneva spells his name 'Vzziah' (V/U convention)."
+      },
+      "funFacts": [
+        "His death year (6:1) is used to date Isaiah's call vision — the only detail Isaiah gives about him beyond his name."
+      ],
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "Named first among the four kings of Judah under whom Isaiah prophesied."
+        },
+        {
+          "ref": "6:1",
+          "note": "'In the yeere of the death of King Vzziah' dates Isaiah's temple vision."
+        },
+        {
+          "ref": "7:1",
+          "note": "Named as Ahaz's grandfather."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jotham_geneva",
+      "name": "Jotham (Iotham)",
+      "role": "named",
+      "genealogy": {
+        "father": "Uzziah",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Ahaz"
+        ],
+        "note": "Named explicitly as both Vzziah's son and Ahaz's father in the single chain of 7:1. Geneva spells his name 'Iotham' (I/J convention)."
+      },
+      "funFacts": [
+        "Given no independent action or speech at all — appears only as a name in the genealogical chain (7:1) and the four-king list (1:1)."
+      ],
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "Named second among the four kings of Judah under whom Isaiah prophesied."
+        },
+        {
+          "ref": "7:1",
+          "note": "Identified as 'the sonne of Vzziah' and the father of Ahaz."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "rezin_geneva",
+      "name": "Rezin",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Isaiah gives no genealogy for Rezin beyond his title 'the King of Aram.'"
+      },
+      "funFacts": [
+        "Allied with Pekah of Israel against Jerusalem but 'could not ouercome it' (7:1).",
+        "Called, with his ally, 'two tailes of smoking firebrands' — nearly spent, not truly dangerous (7:4)."
+      ],
+      "verses": [
+        {
+          "ref": "7:1",
+          "note": "King of Aram who marches on Jerusalem with Pekah but fails to take it."
+        },
+        {
+          "ref": "7:8",
+          "note": "'The head of Aram is Damascus, and the head of Damascus is Rezin.'"
+        },
+        {
+          "ref": "9:11",
+          "note": "Named again as an adversary the Lord would raise up against Israel."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pekah_geneva",
+      "name": "Pekah",
+      "role": "named",
+      "genealogy": {
+        "father": "Remaliah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named directly only once (7:1); every later mention calls him 'Remaliahs sonne' rather than by his own name."
+      },
+      "funFacts": [
+        "After his single named appearance, referred to consistently only by patronymic — 'the sonne of Remaliah' — through the rest of the Ahaz narrative."
+      ],
+      "verses": [
+        {
+          "ref": "7:1",
+          "note": "Named once as 'Pekah the sonne of Remaliah King of Israel,' allied with Rezin against Jerusalem."
+        },
+        {
+          "ref": "7:4-9",
+          "note": "Referred to only as 'Remaliahs sonne' in Isaiah's reassurance to Ahaz."
+        },
+        {
+          "ref": "8:6",
+          "note": "Referred to again only as 'Remaliahs sonne.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "tirhakah_geneva",
+      "name": "Tirhakah",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Given only the title 'King of Ethiopia'; no further genealogy."
+      },
+      "funFacts": [
+        "His advance against Saneherib (37:9) prompts the Assyrian king to send Hezekiah a second, more explicit letter of intimidation rather than withdrawing."
+      ],
+      "verses": [
+        {
+          "ref": "37:9",
+          "note": "Report that Tirhakah King of Ethiopia has come out to fight Saneherib, who responds by threatening Hezekiah further."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "merodach_baladan_geneva",
+      "name": "Merodach-baladan",
+      "role": "named",
+      "genealogy": {
+        "father": "Baladan",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the sonne of Baladan' in the same verse that names him (39:1); Geneva writes his name as two words, 'Merodach Baladan.'"
+      },
+      "funFacts": [
+        "Sends letters and a present to Hezekiah on hearing of his recovery from sickness (39:1).",
+        "His embassy is the occasion for Hezekiah showing off his treasures, prompting Isaiah's prophecy that they — and his own sons — would one day be carried to Babel (39:2-7)."
+      ],
+      "verses": [
+        {
+          "ref": "39:1",
+          "note": "King of Babel who sends envoys to Hezekiah after his recovery."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "uriah_priest_geneva",
+      "name": "Uriah the Priest (Vriah)",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Given only the title 'the Priest'; no further genealogy in this book. A minor figure surfaced by close reading of 8:2, absent from the existing KJV Character Index draft for this book."
+      },
+      "funFacts": [
+        "Named alongside Zechariah the sonne of Ieberechiah as one of the 'faithfull witnesses' Isaiah took to record the naming of Mahershalalhash-baz before the child's birth (8:2)."
+      ],
+      "verses": [
+        {
+          "ref": "8:2",
+          "note": "Taken by Isaiah, with Zechariah the sonne of Ieberechiah, as a faithful witness to the writing of the child's name on the great roll."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zechariah_ben_jeberechiah_geneva",
+      "name": "Zechariah, son of Jeberechiah (Ieberechiah)",
+      "role": "named",
+      "genealogy": {
+        "father": "Jeberechiah (Ieberechiah)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only once (8:2), with his patronymic given in full; not to be confused with the minor prophet Zechariah, a distinct figure never linked to him in this text."
+      },
+      "funFacts": [
+        "Named alongside Uriah the Priest as the second of the two witnesses Isaiah took to record the naming of Mahershalalhash-baz (8:2)."
+      ],
+      "verses": [
+        {
+          "ref": "8:2",
+          "note": "Taken by Isaiah, with Uriah the Priest, as a faithful witness to the writing of the child's name on the great roll."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "immanuel_sign_geneva",
+      "name": "The Immanuel Sign",
+      "role": "law",
+      "scribeTier": "The Immanuel Sign",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "A sign given to the house of David despite Ahaz's refusal to ask for one: a child to be called Immanu-el ('God with vs'), assuring God's continued presence with Judah under threat of invasion.",
+      "funFacts": [
+        "The name recurs twice more nearby — 'thy land, O Immanu-el' (8:8) and the Lord's own gloss 'God is with vs' (8:10).",
+        "The sign's timeline is tied to the child's growth: 'afore the childe shall haue knowledge to eschew the euill, and to chuse the good, the land, that thou abhorrest, shalbe forsaken of both her Kings' (7:16)."
+      ],
+      "verses": [
+        {
+          "ref": "7:14",
+          "note": "'Beholde, the virgine shall conceiue and beare a sonne, and she shall call his name Immanu-el.'"
+        },
+        {
+          "ref": "7:15-16",
+          "note": "The child's growth used as a timeline marker for the fall of Rezin and Pekah's kingdoms."
+        },
+        {
+          "ref": "8:8",
+          "note": "'The stretching out of his wings shall fill the breadth of thy land, O Immanu-el.'"
+        },
+        {
+          "ref": "8:10",
+          "note": "'Take counsell together, yet it shall be brought to nought... for God is with vs.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "unto_us_a_child_is_born_geneva",
+      "name": "Vnto Us a Child Is Born (Isaiah 9:6-7)",
+      "role": "law",
+      "scribeTier": "Wonderfull, Counseller",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "Announces a coming child/son upon whose shoulder government rests, given a string of throne-names, who establishes David's throne 'with iudgement and with iustice' forever — the book's best-known messianic passage.",
+      "funFacts": [
+        "Gives the child five throne-names in a row: 'Wonderfull, Counseller, The mightie God, The euerlasting Father, The prince of peace' (9:6).",
+        "Follows directly after 9:2's description of a people who 'walked in darkenes' seeing 'a great light.'"
+      ],
+      "verses": [
+        {
+          "ref": "9:6",
+          "note": "'For vnto vs a childe is borne, and vnto vs a Sonne is giuen... and he shall call his name Wonderfull, Counseller, The mightie God, The euerlasting Father, The prince of peace.'"
+        },
+        {
+          "ref": "9:7",
+          "note": "'The increase of his gouernement and peace shall haue none end: he shall sit vpon the throne of Dauid... with iudgement and with iustice, from hencefoorth, euen for euer.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "oracles_against_the_nations_geneva",
+      "name": "Oracles Against the Nations (Isaiah 13-23)",
+      "role": "law",
+      "scribeTier": "The Burden",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "A sequence of judgment oracles, most opening with the formula 'The burden of...', pronounced against Babel, Moab, Damascus, Egypt, Tyrus and others — asserting the Lord's sovereignty over every nation, not Judah alone.",
+      "funFacts": [
+        "The taunt against the King of Babel includes 'How art thou fallen from heauen, O Lucifer, sonne of the morning?' (14:12) — addressed to Babel's king within the oracle, not the name of a separate figure elsewhere in the book.",
+        "Isaiah's three-year sign of walking naked and barefoot (ch.20) is delivered as a live illustration of the oracle against Egypt."
+      ],
+      "verses": [
+        {
+          "ref": "13:1",
+          "note": "'The burden of Babel, which Isaiah the sonne of Amoz did see.'"
+        },
+        {
+          "ref": "14:12",
+          "note": "Taunt against the King of Babel: 'How art thou fallen from heauen, O Lucifer, sonne of the morning?'"
+        },
+        {
+          "ref": "15:1",
+          "note": "'The burden of Moab.'"
+        },
+        {
+          "ref": "17:1",
+          "note": "'The burden of Damascus.'"
+        },
+        {
+          "ref": "19:1",
+          "note": "'The burden of Egypt.'"
+        },
+        {
+          "ref": "21:1",
+          "note": "'The burden of the desert Sea.'"
+        },
+        {
+          "ref": "21:13",
+          "note": "'The burden against Arabia.'"
+        },
+        {
+          "ref": "23:1",
+          "note": "'The burden of Tyrus.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "six_laments_geneva",
+      "name": "The Sixfold Lament (Isaiah 28-33)",
+      "role": "law",
+      "scribeTier": "Ah, Altar, Altar",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "Six prophetic denunciations spanning chapters 28-33 against pride, hidden rebellion, and trust in political alliances (especially Egypt) instead of the Lord; five open with 'Woe'/'Wo,' the sixth opens 'Ah.'",
+      "funFacts": [
+        "Isaiah 29:1, unlike the other five, opens 'Ah altar, altar of the citie that Dauid dwelt in' rather than 'Woe' — Geneva translates the Hebrew name/epithet 'Ariel' as the common noun 'altar' instead of transliterating it as a proper name the way the KJV's famous 'Woe to Ariel, to Ariel' does, so this translation never uses the name 'Ariel' at all.",
+        "The laments are not evenly spaced — two fall within chapter 29 alone (29:1 and 29:15) — and the sixth (33:1) closes the whole sequence rather than opening a new oracle block."
+      ],
+      "verses": [
+        {
+          "ref": "28:1",
+          "note": "'Wo to the crowne of pride, the drunkards of Ephraim.'"
+        },
+        {
+          "ref": "29:1",
+          "note": "'Ah altar, altar of the citie that Dauid dwelt in: adde yere vnto yere: let them kill lambs.'"
+        },
+        {
+          "ref": "29:15",
+          "note": "'Wo vnto them that seeke deepe to hide their counsell from the Lord.'"
+        },
+        {
+          "ref": "30:1",
+          "note": "'Wo to the rebellious children, sayth the Lord, that take counsell, but not of me.'"
+        },
+        {
+          "ref": "31:1",
+          "note": "'Woe vnto them that goe downe into Egypt for helpe... but they looke not vnto the holy one of Israel.'"
+        },
+        {
+          "ref": "33:1",
+          "note": "'Woe to thee that spoylest, and wast not spoyled.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "comfort_ye_my_people_geneva",
+      "name": "Comfort Ye My People (Isaiah 40:1-11)",
+      "role": "law",
+      "scribeTier": "Voice in the Wilderness",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "Opens the book's latter section with a command to comfort Jerusalem, announces 'a voyce' preparing the Lord's way in the wilderness, and contrasts fading human life with the Lord's enduring word.",
+      "funFacts": [
+        "'All flesh is grasse' (40:6) is followed immediately by 'the worde of our God shall stand for euer' (40:8).",
+        "Closes picturing the Lord as a shepherd who 'shall gather the lambes with his arme, and cary them in his bosome' (40:11)."
+      ],
+      "verses": [
+        {
+          "ref": "40:1-2",
+          "note": "'Comfort ye, comfort ye my people, will your God say... her warrefare is accomplished, that her iniquitie is pardoned.'"
+        },
+        {
+          "ref": "40:3",
+          "note": "'A voyce cryeth in the wildernesse, Prepare ye the way of the Lord.'"
+        },
+        {
+          "ref": "40:6-8",
+          "note": "'All flesh is grasse... but the worde of our God shall stand for euer.'"
+        },
+        {
+          "ref": "40:11",
+          "note": "'He shall feede his flocke like a shepheard: he shall gather the lambes with his arme, and cary them in his bosome.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "servant_of_the_lord_geneva",
+      "name": "The Servant of the LORD (Servant Songs)",
+      "role": "law",
+      "scribeTier": "The Silent Lamb",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "A recurring figure, 'my seruant,' described across several passages culminating in 52:13-53:12: one who suffers, is rejected, is silent before his accusers, and bears the guilt of others, then is exalted — the book's central suffering/atonement portrait.",
+      "funFacts": [
+        "'He is brought as a sheepe to the slaughter... so he openeth not his mouth' (53:7) gives the tier its motif.",
+        "'With his stripes we are healed' (53:5) and 'he bare the sinne of many' (53:12) are among the most quoted lines in the book.",
+        "The servant 'made his graue with the wicked, and with the riche in his death' despite having 'done no wickednesse, neither was any deceite in his mouth' (53:9)."
+      ],
+      "verses": [
+        {
+          "ref": "42:1-4",
+          "note": "'Beholde my seruant, whom I vphold... he shall bring foorth iudgement to the Gentiles.'"
+        },
+        {
+          "ref": "49:1-6",
+          "note": "The servant called 'from the wombe,' set as 'a light to the Gentiles.'"
+        },
+        {
+          "ref": "50:4-9",
+          "note": "'I gaue my backe to the smiters... I hid not my face from shame and spitting.'"
+        },
+        {
+          "ref": "52:13-14",
+          "note": "The servant will be exalted, though 'his visage was so deformed of men.'"
+        },
+        {
+          "ref": "53:3",
+          "note": "'He is despised and reiected of men: he is a man full of sorowes and hath experience of infirmities.'"
+        },
+        {
+          "ref": "53:5",
+          "note": "'He was wounded for our transgressions, hee was broken for our iniquities... with his stripes we are healed.'"
+        },
+        {
+          "ref": "53:7",
+          "note": "'He is brought as a sheepe to the slaughter... so he openeth not his mouth.'"
+        },
+        {
+          "ref": "53:9",
+          "note": "'He made his graue with the wicked, and with the riche in his death.'"
+        },
+        {
+          "ref": "53:12",
+          "note": "'He bare the sinne of many, and prayed for the trespassers.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "new_heavens_new_earth_geneva",
+      "name": "New Heavens and a New Earth",
+      "role": "law",
+      "scribeTier": "New Heauens, New Earth",
+      "deliveredBy": "isaiah_geneva",
+      "purpose": "A closing eschatological promise of renewed creation, in which 'the former shall not be remembred nor come into minde' (65:17) and the new order 'shall remaine' permanently (66:22).",
+      "funFacts": [
+        "The promise repeats near-verbatim twice, once in ch.65 and again in ch.66, bracketing the material between them."
+      ],
+      "verses": [
+        {
+          "ref": "65:17",
+          "note": "'For lo, I will create newe heauens and a new earth: and the former shall not be remembred nor come into minde.'"
+        },
+        {
+          "ref": "66:22",
+          "note": "'For as the newe heauens, and the newe earth which I will make, shall remaine before me, saith the Lord, so shall your seede and your name continue.'"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list above.",
+    "isaiahsFourKings": {
+      "ref": "Isaiah 1:1",
+      "note": "Vzziah, Iotham, Ahaz, Hezekiah — reign-order list only, not a full genealogy chain; only Ahaz's own line (7:1) is stated explicitly within this book."
+    }
+  }
+}

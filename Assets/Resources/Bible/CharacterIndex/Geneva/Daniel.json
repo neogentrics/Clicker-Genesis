@@ -1,0 +1,691 @@
+{
+  "book": "Daniel",
+  "translation": "Geneva",
+  "canonicalOrder": 27,
+  "status": "drafted via direct read of the real Geneva Bible (1560) verse text (Assets/Resources/Verses/Geneva/daniel_27.json), following the established KJV Character Index methodology, not yet adversarially fact-checked by a second pass",
+  "notes": "Draft grounded in a direct read of the Geneva Bible (1560) text at Assets/Resources/Verses/Geneva/daniel_27.json (12 chapters, matching the standard canonical Daniel numbering — no Additions to Daniel / Susanna / Bel and the Dragon material present in this file, confirming this translation preserves the same 12-chapter Hebrew/Masoretic-tradition Daniel as KJV, not an expanded Greek-tradition version). Structure mirrors the book's established KJV-based tier pattern (six person-tiers for the major court/vision figures, four law-tiers for the defining pieces of royal instruction/proclamation/judgment/prophecy), but every character id, verse citation, and quoted phrase is drawn from THIS translation's own archaic-English wording, independently re-verified against the real text, not copied from the KJV index. All ids suffixed \"_geneva\" to avoid collision with the existing KJV CharacterIndex ids for the same figures.\n\nTwo genuine Geneva-specific findings worth flagging, not extraction errors or invented content:\n(1) Real CHAPTER-BOUNDARY difference from KJV spanning chs 3-4. Geneva keeps Nebuchadnezzar's kingdom-wide proclamation (\"I thought it good to declare the signes and wonders...\") as the tail end of chapter 3, verse 30, where KJV instead opens chapter 4 with that same material as its own verses 1-3. This pushes every subsequent Geneva chapter-4 verse number about three lower than its KJV equivalent for the identical event — e.g. the \"great Babel, that I haue built\" boast is Geneva 4:27 (vs KJV 4:30); the beast-like transformation (grass, eagle-feather hair, bird-claw nails) is Geneva 4:30 (vs KJV 4:33); the restoration of reason is Geneva 4:31 (vs KJV 4:34); the closing praise of \"the King of heauen\" is Geneva 4:34 (vs KJV 4:37). This is a real structural/verse-numbering divergence between the two translations for the same content, not a data error.\n(2) Real wording/title differences, kept rather than silently normalized to match KJV: Arioch is called \"the Kings chiefe stewarde\" in 2:14 and then \"the kings captaine\" in 2:15 — two different office titles for the same man across consecutive verses. Melzar (1:11, 1:16) is rendered as a plain proper name with no definite article (\"to Melzar\"), distinct from readings elsewhere that treat it as a title (\"the Melzar\"). Daniel 9:26 renders the Messiah's fate as \"Messiah be slaine, and shall haue nothing\" — a distinct 1560 phrasing choice worth preserving verbatim rather than smoothing into more familiar wording. Daniel 5:25-28's interpreted words are spelled MENE/MENE/TEKEL/UPHARSIN in the writing itself (5:25) but the fourth word's singular form PERES is what's actually interpreted in 5:28 — accurately reflected here, not treated as an inconsistency.\nNo new naming collisions found beyond the one already flagged in the KJV index (Daniel's given Babylonian name \"Belteshazzar,\" 1:7, vs the separate King \"Belshazzar\" of ch.5 — two distinct people with similar-looking names, still applies in this translation and is flagged again here per the naming-collision rule). Gabriel (named directly, 8:16 and 9:21 as \"the man Gabriel\") and the separate unnamed \"man clothed in linen\" of chs. 10 and 12 are deliberately NOT identified with each other, since the Geneva text itself never equates them — same restraint as the KJV index. No extended named genealogies appear in this book, so genealogyLists is empty.",
+  "genealogyLists": {
+    "note": "Daniel contains no extended named genealogy list (unlike Genesis/Chronicles/Ezra-Nehemiah); nothing to record here."
+  },
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Daniel's Window",
+      "managerId": "daniel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Fiery Furnace",
+      "managerId": "shadrach_meshach_abednego_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The King's Portion",
+      "managerId": "kings_portion_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Dream-Image of Gold and Clay",
+      "managerId": "nebuchadnezzar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Golden Image of Dura",
+      "managerId": "golden_image_dura_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Temple Vessels",
+      "managerId": "belshazzar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Handwriting on the Wall",
+      "managerId": "handwriting_wall_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Signet Ring",
+      "managerId": "darius_mede_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Ram and the He-Goat",
+      "managerId": "gabriel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Seventy Weeks",
+      "managerId": "seventy_weeks_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "daniel_geneva",
+      "name": "Daniel",
+      "role": "manager",
+      "scribeTier": "Daniel's Window",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not named in the text. Identified as one of 'the children of Iudah' among the royal/noble youths taken captive (1:3-6), and later called 'that Daniel, which art of the children of the captiuitie of Iudah' by Belshazzar (5:13)."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Renamed Belteshazzar by the chief of the eunuchs (1:7) — not to be confused with King Belshazzar of chapter 5, a separate person with a similar-looking name.",
+        "'Determined in his heart' not to defile himself with the king's meat and wine, and proposed a ten-day pulse-and-water trial instead (1:8-13).",
+        "Answered Arioch 'with counsel and wisedome' to buy time before Nebuchadnezzar's execution order could be carried out (2:14).",
+        "Made 'gouernour ouer the whole prouince of Babel, and chiefe of the rulers' after interpreting the king's dream (2:48).",
+        "Kept praying toward Ierusalem three times a day with his window open, 'as he did aforetime,' even after Darius's decree (6:10).",
+        "Came out of the lions' den with 'no maner of hurt... found vpon him, because he beleeued in his God' (6:23).",
+        "Called 'greatly beloued' across three separate verses by heavenly messengers (9:23; 10:11; 10:19).",
+        "Ate 'no pleasant bread,' flesh, or wine, and did not anoint himself, for three full weeks before his final vision (10:2-3).",
+        "The book closes with him told to 'goe thy way til the end be' and that he will 'stand vp in thy lot, at the end of ye daies' (12:13)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:8",
+          "note": "Purposed in his heart not to defile himself with the king's meat and wine."
+        },
+        {
+          "ref": "Daniel 1:20",
+          "note": "He and his companions found 'tenne times better then all the inchanters and astrologians' in the realm."
+        },
+        {
+          "ref": "Daniel 2:19",
+          "note": "The secret of Nebuchadnezzar's dream revealed to him in a night vision; he praises the God of heaven."
+        },
+        {
+          "ref": "Daniel 2:48",
+          "note": "Made ruler over the whole province of Babel and chief of the rulers over all its wise men."
+        },
+        {
+          "ref": "Daniel 6:10",
+          "note": "Prays toward Jerusalem three times a day with his window open, despite Darius's new decree."
+        },
+        {
+          "ref": "Daniel 6:22",
+          "note": "Tells the king his God 'hath sent his Angel and hath shut the lyons mouthes.'"
+        },
+        {
+          "ref": "Daniel 9:23",
+          "note": "Called 'greatly beloued' by the messenger sent at the start of his supplication."
+        },
+        {
+          "ref": "Daniel 10:11",
+          "note": "Called 'a man greatly beloued' by the figure who appears to him by the river Hiddekel."
+        },
+        {
+          "ref": "Daniel 10:19",
+          "note": "Called 'O man, greatly beloued' again, told 'feare not: peace be vnto thee: be strong.'"
+        },
+        {
+          "ref": "Daniel 12:13",
+          "note": "Told to go his way till the end, and that he will stand in his lot at the end of the days."
+        }
+      ]
+    },
+    {
+      "id": "shadrach_meshach_abednego_geneva",
+      "name": "Shadrach, Meshach, and Abednego",
+      "role": "manager",
+      "scribeTier": "The Fiery Furnace",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Parents not named. Identified together with Daniel as 'certeine of the children of Iudah' (1:6), given their Babylonian names by the chief of the eunuchs in place of their Hebrew names Hananiah, Mishael, and Azariah (1:7). They act throughout as a single collective unit, never individually distinguished."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Original names Hananiah, Mishael, and Azariah were changed to Shadrach, Meshach, and Abednego (1:7).",
+        "Joined Daniel's pulse-and-water trial and were likewise found faultless (1:11-20).",
+        "Set 'ouer the charge of the prouince of Babel' at Daniel's own request, while Daniel himself 'sate in the gate of the King' (2:49).",
+        "Told Nebuchadnezzar to his face: 'we are not carefull to answere thee in this matter' — and that they would not serve his gods even if God chose not to deliver them (3:16-18).",
+        "Thrown into a furnace heated seven times hotter than usual; the flame killed the men who cast them in, yet they themselves walked free with a fourth figure 'like the sonne of God' (3:19-25).",
+        "Came forth with 'not an heare of their head... burnt,' clothes unchanged, 'nor any smell of fire' upon them, and were promoted afterward (3:27-30)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:7",
+          "note": "Given the names Shadrach, Meshach, and Abednego in place of Hananiah, Mishael, and Azariah."
+        },
+        {
+          "ref": "Daniel 2:49",
+          "note": "Set by Daniel's request over the affairs of the province of Babel."
+        },
+        {
+          "ref": "Daniel 3:12",
+          "note": "Accused before the king of refusing to serve his gods or worship the golden image."
+        },
+        {
+          "ref": "Daniel 3:16-18",
+          "note": "Answer the king directly: God is able to deliver them, but they will not worship the image regardless."
+        },
+        {
+          "ref": "Daniel 3:25",
+          "note": "The king sees a fourth figure walking with them in the fire, 'like the sonne of God.'"
+        },
+        {
+          "ref": "Daniel 3:27",
+          "note": "Come out of the furnace unharmed — not even the smell of fire upon them."
+        }
+      ]
+    },
+    {
+      "id": "kings_portion_geneva",
+      "name": "The King's Portion (Ten-Day Test)",
+      "role": "law",
+      "scribeTier": "The King's Portion",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Tests whether conviction against defiling oneself with royal food can hold up under real pressure, and demonstrates that trust in God's provision (pulse and water) outperforms the king's own rich fare (1:15, 1:20). (Attribution: Proposed by Daniel to Melzar the steward (Daniel 1:8-13))",
+      "ageEvents": [],
+      "funFacts": [
+        "The trial was Daniel's own proposal, not something imposed on him (1:8, 1:11-12).",
+        "Set at exactly ten days by Daniel's own proposed terms (1:12-14).",
+        "Result: the four youths appeared 'fayrer, and in better liking then all the childrens, which did eate the portion of the Kings meate' (1:15)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:8",
+          "note": "Daniel purposes not to defile himself with the king's meat and wine."
+        },
+        {
+          "ref": "Daniel 1:12-13",
+          "note": "Proposes ten days of 'pulse to eate, and water to drinke' to Melzar."
+        },
+        {
+          "ref": "Daniel 1:15",
+          "note": "At the end of ten days their countenances 'appeared fayrer, and in better liking' than the others."
+        },
+        {
+          "ref": "Daniel 1:20",
+          "note": "Found ten times better than all the enchanters and astrologers in the kingdom."
+        }
+      ]
+    },
+    {
+      "id": "nebuchadnezzar_geneva",
+      "name": "Nebuchad-nezzar",
+      "role": "manager",
+      "scribeTier": "The Dream-Image of Gold and Clay",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Belshazzar (per the text's own repeated term 'father,' Geneva 5:2, 5:11, 5:13, 5:22)"
+        ],
+        "note": "Parents not named. Consistently spelled 'Nebuchad-nezzar' (hyphenated) throughout this translation. The queen and the text itself repeatedly call him Belshazzar's 'father' (5:2, 5:11, 5:13, 5:22)."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Besieged Jerusalem and carried vessels of the house of God to the treasury of his own god in the land of Shinar (1:1-2).",
+        "Threatened his wise men that if they could not tell him both his dream and its meaning, 'ye shall be drawen in pieces, and your houses shall be made a iakes' (2:5).",
+        "Fell on his face and worshipped before Daniel once the dream was told and interpreted, calling Daniel's God 'a God of gods' (2:46-47).",
+        "Set up the golden image, 'threescore cubits' high, in the plain of Dura (3:1).",
+        "Real chapter-boundary quirk: his kingdom-wide proclamation ('I thought it good to declare the signes and wonders...') appears as the tail end of chapter 3 (v.30) in this translation, not as its own chapter-opening verses the way KJV renders it — see book notes.",
+        "Boasts 'Is not this great Babel, that I haue built... by the might of my power' (4:27 in this translation's numbering) and is driven from men within the hour, eating grass and growing hair like eagles' feathers and nails like birds' claws (4:30).",
+        "Reason and honor are restored to him at the end of the appointed time; he closes his own words praising 'the King of heauen,' who 'is able to abase' those that walk in pride (4:34)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:1-2",
+          "note": "Besieges Jerusalem, carries vessels of the house of God to Shinar."
+        },
+        {
+          "ref": "Daniel 2:5",
+          "note": "Threatens the wise men: 'ye shall be drawen in pieces, and your houses shall be made a iakes.'"
+        },
+        {
+          "ref": "Daniel 2:46-47",
+          "note": "Falls on his face before Daniel, acknowledges Daniel's God as 'a God of gods.'"
+        },
+        {
+          "ref": "Daniel 3:1",
+          "note": "Sets up the golden image, threescore cubits high, in the plain of Dura."
+        },
+        {
+          "ref": "Daniel 3:19",
+          "note": "Orders the furnace heated seven times hotter in his fury."
+        },
+        {
+          "ref": "Daniel 3:28-30",
+          "note": "Blesses the God of Shadrach, Meshach, and Abednego and issues a kingdom-wide proclamation (the proclamation is embedded at the end of this verse in Geneva's chapter division — see book notes)."
+        },
+        {
+          "ref": "Daniel 4:27",
+          "note": "Boasts 'Is not this great Babel, that I haue built... by the might of my power' (KJV numbers this content as 4:30)."
+        },
+        {
+          "ref": "Daniel 4:30",
+          "note": "Driven from men, eats grass as oxen, hair like eagles' feathers, nails like birds' claws (KJV's 4:33)."
+        },
+        {
+          "ref": "Daniel 4:34",
+          "note": "Reason fully restored; praises, extols, and magnifies 'the King of heauen' (KJV's 4:37)."
+        }
+      ]
+    },
+    {
+      "id": "golden_image_dura_geneva",
+      "name": "The Golden Image of Dura",
+      "role": "law",
+      "scribeTier": "The Golden Image of Dura",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Demands universal worship of a ninety-foot golden image at the sound of a named list of instruments, on pain of death by fire; becomes the test of the three Hebrews' exclusive loyalty to God (3:12, 3:16-18). (Attribution: Decreed by King Nebuchad-nezzar (Daniel 3:1-6))",
+      "ageEvents": [],
+      "funFacts": [
+        "Measured 'three score cubits' high and 'sixe cubites' broad, set up 'in the plaine of Dura, in the prouince of Babel' (3:1).",
+        "All 'people, nations, and languages' commanded to fall down and worship at the sound of 'the cornet, trumpet, harpe, sackebut, psalterie, dulcimer, and all instruments of musike' (3:4-7).",
+        "The furnace was heated seven times hotter specifically because of Nebuchadnezzar's rage at the three Hebrews' refusal (3:19).",
+        "It is Nebuchadnezzar himself, not the three men, who describes seeing a fourth figure in the fire 'like the sonne of God' (3:25)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 3:1",
+          "note": "Nebuchadnezzar sets up the image in the plain of Dura."
+        },
+        {
+          "ref": "Daniel 3:5-6",
+          "note": "All peoples commanded to fall down and worship at the sound of the music, or be cast into the furnace."
+        },
+        {
+          "ref": "Daniel 3:19",
+          "note": "Furnace heated seven times hotter than usual."
+        },
+        {
+          "ref": "Daniel 3:28-29",
+          "note": "Nebuchadnezzar blesses their God and decrees against blasphemy toward Him."
+        }
+      ]
+    },
+    {
+      "id": "belshazzar_geneva",
+      "name": "Belshazzar",
+      "role": "manager",
+      "scribeTier": "The Temple Vessels",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Nebuchad-nezzar (per the text's own repeated term 'father,' Geneva 5:2, 5:11, 5:13, 5:22)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Caution: 'Belshazzar' (this king) is easily confused with 'Belteshazzar,' Daniel's separate Babylonian name (1:7) — two distinct people with similar-looking names. The unnamed 'Queene' who advises him (5:10-12) is not further identified by the text."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Made 'a great feast to a thousand of his princes' and commanded the golden and silver vessels his father Nebuchadnezzar took from the Jerusalem temple be brought in for the guests to drink from (5:1-3).",
+        "Praised 'the gods of golde, and of siluer, of brasse, of yron, of wood and of stone' at that same feast (5:4).",
+        "Saw fingers of a man's hand write on the wall; 'the ioynts of his loynes were loosed, and his knees smote one against the other' (5:5-6).",
+        "Offered Daniel purple robes, a gold chain, and 'the third ruler in the kingdome' — Daniel refused the rewards outright but read the writing anyway, and the king honored the offer regardless (5:16-17, 29).",
+        "Slain that same night; the kingdom passed to Darius the Mede (5:30-31)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 5:1-3",
+          "note": "Makes a great feast; commands the temple vessels his father took be used for drinking."
+        },
+        {
+          "ref": "Daniel 5:5-6",
+          "note": "Sees the hand writing on the wall; his countenance changes, his knees smite together."
+        },
+        {
+          "ref": "Daniel 5:16-17",
+          "note": "Offers Daniel purple, a gold chain, and third ruler in the kingdom; Daniel refuses the rewards."
+        },
+        {
+          "ref": "Daniel 5:22-23",
+          "note": "Rebuked by Daniel for not humbling his heart though he knew all his father's history."
+        },
+        {
+          "ref": "Daniel 5:29",
+          "note": "Still makes Daniel the third ruler despite the judgment just pronounced."
+        },
+        {
+          "ref": "Daniel 5:30",
+          "note": "Slain that same night; Babylon falls."
+        }
+      ]
+    },
+    {
+      "id": "handwriting_wall_geneva",
+      "name": "The Handwriting on the Wall",
+      "role": "law",
+      "scribeTier": "The Handwriting on the Wall",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Pronounces immediate divine judgment on Belshazzar for profaning the temple vessels and lifting himself against the Lord of heaven (5:22-23); announces the fall of Babylon that very night. (Attribution: Written by fingers of a man's hand appearing over against the candlestick (Daniel 5:5), interpreted by Daniel (5:26-28))",
+      "ageEvents": [],
+      "funFacts": [
+        "The hand is described only as 'fingers of a mans hand,' with no figure ever named or described further (5:5).",
+        "The words themselves: 'MENE, MENE, TEKEL UPHARSIN' (5:25).",
+        "None of Belshazzar's own wise men could read or interpret it, though the queen recalled Daniel had done similar things for Nebuchadnezzar (5:8-12).",
+        "Daniel's interpretation ties the words to numbering, weighing, and dividing the kingdom (5:26-28), fulfilled that same night (5:30). Note: the fourth word interpreted in 5:28 is spelled 'PERES' (the singular form of UPHARSIN), accurately reflecting the text rather than an inconsistency."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 5:5",
+          "note": "Fingers of a man's hand appear and write over against the candlestick."
+        },
+        {
+          "ref": "Daniel 5:25",
+          "note": "The writing: 'MENE, MENE, TEKEL UPHARSIN.'"
+        },
+        {
+          "ref": "Daniel 5:26-28",
+          "note": "Daniel's interpretation of each word, including 'PERES, thy kingdome is deuided, and giuen to the Medes and Persians.'"
+        },
+        {
+          "ref": "Daniel 5:30",
+          "note": "Belshazzar slain that night."
+        }
+      ]
+    },
+    {
+      "id": "darius_mede_geneva",
+      "name": "Darius of the Medes",
+      "role": "manager",
+      "scribeTier": "The Signet Ring",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahashuerosh, 'of the seede of the Medes' (9:1) — a different Ahashuerosh/Ahasuerus from the Persian king of the book of Esther and from the Ahasuerus named in Ezra 4:6; the three should not be conflated.",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Distinct from the later Persian king 'Darius' of Ezra, Haggai, and Zechariah — this text specifically titles him 'Darius of the Medes' / 'King Darius' (5:31, 6:1, 9:1, 11:1)."
+      },
+      "ageEvents": [
+        {
+          "age": 62,
+          "event": "Took the kingdom of Babel, 'being threescore and two yeere olde'",
+          "ref": "Daniel 5:31"
+        }
+      ],
+      "funFacts": [
+        "Took the kingdom at about sixty-two years old (5:31).",
+        "Set 120 governors over the kingdom and three rulers, including Daniel, whom he considered setting over the whole realm (6:1-3).",
+        "His rulers and governors, unable to find fault in Daniel, used his faithfulness to God against him via a decree they tricked Darius into sealing (6:4-9).",
+        "'Was sore displeased with himselfe' and 'laboured till the sunne went downe' trying to find a way to deliver Daniel, but could not overturn a sealed law of the Medes and Persians (6:14-15).",
+        "Passed the night fasting, with no instruments of music brought before him, and could not sleep (6:18).",
+        "Went to the den at dawn and 'cryed with a lamentable voyce' to ask if Daniel's God had delivered him (6:19-20).",
+        "Had Daniel's accusers, along with their children and wives, cast into the den in his place (6:24).",
+        "Identified as 'Darius the sonne of Ahashuerosh, of the seede of the Medes' (9:1)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 5:31",
+          "note": "Takes the kingdom of Babel at about sixty-two years old."
+        },
+        {
+          "ref": "Daniel 6:1-3",
+          "note": "Sets 120 governors and three rulers over the realm; considers setting Daniel over it all."
+        },
+        {
+          "ref": "Daniel 6:8-9",
+          "note": "Seals the decree, unchangeable 'according to the law of the Medes and Persians.'"
+        },
+        {
+          "ref": "Daniel 6:14",
+          "note": "Labors till sundown trying to deliver Daniel."
+        },
+        {
+          "ref": "Daniel 6:16",
+          "note": "Casts Daniel into the den, telling him 'thy God, whome thou alway seruest, euen he will deliuer thee.'"
+        },
+        {
+          "ref": "Daniel 6:19-20",
+          "note": "Rises early, goes to the den 'with a lamentable voyce.'"
+        },
+        {
+          "ref": "Daniel 6:25-27",
+          "note": "Decrees that all in his dominion tremble before the God of Daniel."
+        },
+        {
+          "ref": "Daniel 9:1",
+          "note": "Identified as 'Darius the sonne of Ahashuerosh, of the seede of the Medes.'"
+        }
+      ]
+    },
+    {
+      "id": "gabriel_geneva",
+      "name": "Gabriel",
+      "role": "manager",
+      "scribeTier": "The Ram and the He-Goat",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An angelic messenger, not a human genealogical figure. Named directly, 'Gabriel' (8:16) and 'the man Gabriel' (9:21). Deliberately NOT identified with the separate, unnamed 'man clothed in linnen' of chapters 10 and 12 — the text itself never states these are the same figure."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Named directly when a voice commands, 'Gabriel, make this man to vnderstand the vision' (8:16).",
+        "His approach was overwhelming enough that Daniel fell on his face and was left 'sicke certeine dayes' afterward (8:17-18, 27).",
+        "Sent specifically to interpret the vision of the ram and the he-goat (8:16-26).",
+        "Called 'the man Gabriel' on his return in chapter 9, 'caused to fly swiftly' to touch Daniel about the time of the evening offering (9:21).",
+        "Delivers the seventy weeks prophecy in the same appearance (9:24-27)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 8:16",
+          "note": "Named directly: a voice calls, 'Gabriel, make this man to vnderstand the vision.'"
+        },
+        {
+          "ref": "Daniel 8:17-18",
+          "note": "Daniel falls on his face afraid; the figure touches him and sets him upright."
+        },
+        {
+          "ref": "Daniel 9:21",
+          "note": "Identified as 'the man Gabriel,' comes flying to touch Daniel at the time of the evening oblation."
+        },
+        {
+          "ref": "Daniel 9:22-23",
+          "note": "Comes to give Daniel 'knowledge and vnderstanding,' calls him 'greatly beloued.'"
+        },
+        {
+          "ref": "Daniel 9:24-27",
+          "note": "Delivers the seventy weeks prophecy."
+        }
+      ]
+    },
+    {
+      "id": "seventy_weeks_geneva",
+      "name": "The Seventy Weeks",
+      "role": "law",
+      "scribeTier": "The Seventy Weeks",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Lays out a specific prophetic timetable — seventy weeks 'determined vpon thy people and vpon thine holy citie' — to finish wickedness, seal up sins, reconcile iniquity, bring in everlasting righteousness, and anoint the most Holy (9:24-27). (Attribution: Delivered to Daniel by the man Gabriel while Daniel prayed (Daniel 9:20-23))",
+      "ageEvents": [],
+      "funFacts": [
+        "Given as a direct answer to Daniel's prayer of confession for his people, 'while I was speaking in prayer' (9:20-23).",
+        "Specifies seventy weeks 'determined vpon thy people and vpon thine holy citie' (9:24).",
+        "Breaks the seventy weeks into sub-periods — seven weeks, threescore and two weeks, and a final week — each tied to specific events (9:25-27).",
+        "Renders the Messiah's fate distinctively: 'after threescore and two weekes, shall Messiah be slaine, and shall haue nothing' (9:26) — a notable 1560 phrasing worth preserving as-is."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 9:21-23",
+          "note": "Given by Gabriel while Daniel is still speaking in prayer."
+        },
+        {
+          "ref": "Daniel 9:24",
+          "note": "Seventy weeks determined to finish wickedness, seal up sins, and anoint the most Holy."
+        },
+        {
+          "ref": "Daniel 9:25",
+          "note": "From the commandment to rebuild Jerusalem to Messiah the prince: seven weeks and threescore and two weeks."
+        },
+        {
+          "ref": "Daniel 9:26-27",
+          "note": "Messiah slain; the city and sanctuary destroyed; the covenant confirmed for one week."
+        }
+      ]
+    },
+    {
+      "id": "ashpenaz_geneva",
+      "name": "Ashpenaz",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "daniel_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated; identified only by office, 'the master of his Eunuches' (1:3)."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Commanded by Nebuchadnezzar to bring in select Israelite royal and noble youths for the king's service (1:3-4).",
+        "Personally gives Daniel and his three companions their Babylonian names (1:7).",
+        "God specifically 'brought Daniel into fauour, and tender loue' in his sight (1:9).",
+        "Worries aloud that if the youths look worse than their peers, the king will have his head for it (1:10)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:3",
+          "note": "Commanded by Nebuchadnezzar to bring in the royal-seed and noble youths of Israel."
+        },
+        {
+          "ref": "Daniel 1:7",
+          "note": "Gives Daniel and his three companions their Babylonian names."
+        },
+        {
+          "ref": "Daniel 1:9",
+          "note": "God brings Daniel into 'fauour, and tender loue' with him."
+        },
+        {
+          "ref": "Daniel 1:10",
+          "note": "Fears the king will see the youths looking worse and have him beheaded."
+        }
+      ]
+    },
+    {
+      "id": "melzar_geneva",
+      "name": "Melzar",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "daniel_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated. Real translation-specific detail: this Geneva text renders him as a plain proper name with no definite article ('to Melzar,' 1:11), distinct from readings elsewhere that render it as a title ('the Melzar') — flagged, not silently normalized."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Set by Ashpenaz over Daniel, Hananiah, Mishael, and Azariah (1:11).",
+        "Consents to Daniel's proposed ten-day pulse-and-water trial (1:12-14).",
+        "Continues giving them pulse instead of the royal diet once the trial proves successful (1:16)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 1:11",
+          "note": "Set by Ashpenaz over Daniel and his three companions."
+        },
+        {
+          "ref": "Daniel 1:14",
+          "note": "Consents to Daniel's proposal and proves them ten days."
+        },
+        {
+          "ref": "Daniel 1:16",
+          "note": "Takes away their portion of the king's meat and gives them pulse."
+        }
+      ]
+    },
+    {
+      "id": "arioch_geneva",
+      "name": "Arioch",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "nebuchadnezzar_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated. Real translation-specific detail: called 'the Kings chiefe stewarde' in 2:14 but 'the kings captaine' in 2:15 — two different office titles for the same man across consecutive verses, kept as-is rather than normalized to one term."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Titled 'the Kings chiefe stewarde,' sent out to execute Babylon's wise men after they failed to tell Nebuchadnezzar his dream (2:14).",
+        "Called 'the kings captaine' just one verse later, when Daniel questions him directly about the sentence's haste (2:14-15).",
+        "Brings Daniel before the king 'in all haste,' presenting himself as the one who 'found' the answer, though the discovery was Daniel's alone (2:25)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 2:14",
+          "note": "'The Kings chiefe stewarde,' gone forth to slay the wise men of Babel."
+        },
+        {
+          "ref": "Daniel 2:15",
+          "note": "Called 'the kings captaine'; Daniel asks him why the sentence is so hasty."
+        },
+        {
+          "ref": "Daniel 2:25",
+          "note": "Brings Daniel before the king in haste, claiming credit for finding him."
+        }
+      ]
+    },
+    {
+      "id": "michael_geneva",
+      "name": "Michael",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An angelic figure, not a human genealogical one. Called 'one of the chiefe princes' (10:13) and 'ye great prince' (12:1)."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'Michael one of the chiefe princes,' comes to help the speaker of chapter 10 against 'the prince of the kingdome of Persia' (10:13).",
+        "Referred to as 'Michael your prince' (10:21).",
+        "In the final chapter, called 'the great prince, which standeth for ye children of thy people,' whose standing up marks 'a time of trouble, such as neuer was' (12:1)."
+      ],
+      "verses": [
+        {
+          "ref": "Daniel 10:13",
+          "note": "Comes to help against the prince of the kingdom of Persia."
+        },
+        {
+          "ref": "Daniel 10:21",
+          "note": "Called 'Michael your prince.'"
+        },
+        {
+          "ref": "Daniel 12:1",
+          "note": "'Michael' the great prince stands up at the time of the end."
+        }
+      ]
+    }
+  ]
+}

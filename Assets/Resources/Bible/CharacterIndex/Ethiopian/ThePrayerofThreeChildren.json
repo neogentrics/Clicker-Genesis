@@ -1,0 +1,289 @@
+{
+  "book": "The Prayer of Three Children",
+  "translation": "Ethiopian",
+  "canonicalOrder": 44,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This is a single-chapter, 41-verse liturgical canticle (no book-external narrative content at all beyond its own framing verse) - the hymn traditionally known in other canons as the \"Song of the Three Holy Children\" / \"Benedicite,\" here presented as its own standalone book in the Ethiopian collection rather than as an insertion into Daniel 3. Verse 1 frames it: the three youths, \"as out of one mouth,\" praise God together while in the furnace - the text never differentiates their individual voices (per Rule 5, they are indexed as one collective entry, not three separate managers). The body of the hymn (vv2-38) is a repeating call-and-response pattern (\"bless ye the Lord: praise and exalt him above all for ever\") addressed in turn to God's own attributes/dwelling, then the celestial/atmospheric order, then the earth and its creatures, then humanity - pure doxological content with no additional characters or events, so it is indexed as four Law/theme tiers (PURE TRANSMISSION test: nothing here is personally embodied narrative, it is corporate liturgical address) rather than forced into person tiers. The three youths return by name only once, at the hymn's climax (v39: \"O Ananias, Azarias, and Misael... he hath delivered us from hell... out of the midst of the fire\"), which is also the book's one genuine narrative beat (their own testimony of deliverance) - captured on their own manager entry alongside the frame verse. NAMING-COLLISION/EQUIVALENCE NOTE: \"Ananias, Azarias, and Misael\" are the Hebrew names of the three youths elsewhere known by their Babylonian court names Shadrach, Meshach, and Abednego (Daniel 1:6-7 explicitly establishes this equivalence in the text itself, so this is scripturally grounded, not an external tradition being asserted) - not indexed as a separate/duplicate character, same person under this book's own naming choice. DATA-QUALITY FLAG (source file, not a content decision): the raw extracted JSON stores verse 19 with verseNumber \"190\" instead of \"19\" (a stray digit, consistent with this project's known superscript-OCR artifact class) - the surrounding sequence (18, 190, 20, 21...) makes clear this is verse 19 (\"ye dews and storms of snow\"), not a 190th verse; treated here as verse 19 and flagged rather than silently reinterpreted. Also note: \"O ye mountains\" is addressed twice, at v26 (\"mountains and little hills\") and again at v28 (\"O ye mountains\" alone) - a real repetition in the source text's own formulaic litany style, not an extraction duplication error, both verses are distinct and kept.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Furnace Flame",
+      "managerId": "the_three_youths_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "God's Dwelling",
+      "managerId": "gods_dwelling_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Heaven's Chorus",
+      "managerId": "heavens_chorus_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Earth's Chorus",
+      "managerId": "earths_chorus_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Mankind's Chorus & Doxology",
+      "managerId": "mankinds_chorus_law_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "the_three_youths_ethiopian",
+      "name": "Ananias, Azarias, and Misael (the Three Youths)",
+      "role": "manager",
+      "scribeTier": "Furnace Flame",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "The Prayer of Three Children 1:1",
+          "note": "The three, as out of one mouth, praise, glorify, and bless God together while in the furnace - the hymn's narrative frame, spoken as one undifferentiated voice."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:39",
+          "note": "Named directly - Ananias, Azarias, and Misael are called to bless the Lord themselves, for he delivered them from hell, saved them from death, and brought them out of the midst of the furnace and burning flame."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "These are the Hebrew names of the three youths elsewhere called by their Babylonian court names Shadrach, Meshach, and Abednego - an equivalence the Bible itself states (Daniel 1:6-7), not a later tradition.",
+        "This canticle is known in other Christian traditions as the 'Song of the Three Holy Children' or the 'Benedicite,' usually inserted into Daniel chapter 3 - here it stands as its own independent book."
+      ]
+    },
+    {
+      "id": "gods_dwelling_law_ethiopian",
+      "name": "God's Dwelling",
+      "role": "law",
+      "scribeTier": "God's Dwelling",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": null,
+      "deliveredBy": "the_three_youths_ethiopian",
+      "purpose": "Opens the hymn by praising God himself directly before turning to creation - his title as 'Lord God of our fathers,' his glorious and holy name, the temple of his holy glory, his beholding the depths while seated upon the cherubim, his throne, and the firmament of heaven - establishing the repeating refrain ('praised and exalted above all for ever') that every later verse of the hymn echoes.",
+      "verses": [
+        {
+          "ref": "The Prayer of Three Children 1:2",
+          "note": "Blessed art thou, O Lord God of our fathers, to be praised and exalted above all for ever."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:3",
+          "note": "Blessed is God's glorious and holy name."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:4",
+          "note": "Blessed art thou in the temple of thine holy glory."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:5",
+          "note": "Blessed art thou that beholdest the depths, and sittest upon the cherubims."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:6",
+          "note": "Blessed art thou on the glorious throne of thy kingdom."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:7",
+          "note": "Blessed art thou in the firmament of heaven."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "heavens_chorus_law_ethiopian",
+      "name": "Heaven's Chorus",
+      "role": "law",
+      "scribeTier": "Heaven's Chorus",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": null,
+      "deliveredBy": "the_three_youths_ethiopian",
+      "purpose": "Summons the whole celestial and atmospheric order - all the works of the Lord, the heavens, the angels, the waters above the heaven, the powers of the Lord, sun and moon, the stars of heaven, every shower and dew, the winds, fire and heat, winter and summer, dews and storms of snow, nights and days, light and darkness, ice and cold, frost and snow, and lightnings and clouds - each called in turn to bless and exalt the Lord for ever.",
+      "verses": [
+        {
+          "ref": "The Prayer of Three Children 1:8",
+          "note": "O all ye works of the Lord, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:9",
+          "note": "O ye heavens, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:10",
+          "note": "O ye angels of the Lord, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:11",
+          "note": "O all ye waters that be above the heaven, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:12",
+          "note": "O all ye powers of the Lord, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:13",
+          "note": "O ye sun and moon, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:14",
+          "note": "O ye stars of heaven, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:15",
+          "note": "O every shower and dew, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:16",
+          "note": "O all ye winds, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:17",
+          "note": "O ye fire and heat, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:18",
+          "note": "O ye winter and summer, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:19",
+          "note": "O ye dews and storms of snow, bless ye the Lord (source file stores this verse's number as '190' - a stray-digit artifact; sequence context confirms it is verse 19)."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:20",
+          "note": "O ye nights and days, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:21",
+          "note": "O ye light and darkness, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:22",
+          "note": "O ye ice and cold, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:23",
+          "note": "O ye frost and snow, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:24",
+          "note": "O ye lightnings and clouds, bless ye the Lord."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "earths_chorus_law_ethiopian",
+      "name": "Earth's Chorus",
+      "role": "law",
+      "scribeTier": "Earth's Chorus",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": null,
+      "deliveredBy": "the_three_youths_ethiopian",
+      "purpose": "Turns the summons to the earth itself and its creatures - the earth, the mountains and little hills, everything that grows in the earth, the mountains again, the seas and rivers, the whales and everything that moves in the waters, the fowls of the air, and the beasts and cattle - each called to bless and exalt the Lord for ever.",
+      "verses": [
+        {
+          "ref": "The Prayer of Three Children 1:25",
+          "note": "O let the earth bless the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:26",
+          "note": "O ye mountains and little hills, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:27",
+          "note": "O all ye things that grow in the earth, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:28",
+          "note": "O ye mountains, bless ye the Lord (a second, distinct address to the mountains - a real repetition in the hymn's own litany style, not a duplication error)."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:29",
+          "note": "O ye seas and rivers, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:30",
+          "note": "O ye whales, and all that move in the waters, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:31",
+          "note": "O all ye fowls of the air, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:32",
+          "note": "O all ye beasts and cattle, bless ye the Lord."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mankinds_chorus_law_ethiopian",
+      "name": "Mankind's Chorus & Doxology",
+      "role": "law",
+      "scribeTier": "Mankind's Chorus & Doxology",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": null,
+      "deliveredBy": "the_three_youths_ethiopian",
+      "purpose": "Closes the hymn by summoning humanity itself - the children of men, Israel, the priests of the Lord, the servants of the Lord, the spirits and souls of the righteous, and the holy and humble men of heart - before the three youths speak in their own voice of their deliverance (v39) and the hymn ends in a closing refrain of thanksgiving for the Lord's enduring mercy.",
+      "verses": [
+        {
+          "ref": "The Prayer of Three Children 1:33",
+          "note": "O ye children of men, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:34",
+          "note": "O Israel, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:35",
+          "note": "O ye priests of the Lord, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:36",
+          "note": "O ye servants of the Lord, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:37",
+          "note": "O ye spirits and souls of the righteous, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:38",
+          "note": "O ye holy and humble men of heart, bless ye the Lord."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:40",
+          "note": "O give thanks unto the Lord, because he is gracious: for his mercy endureth for ever."
+        },
+        {
+          "ref": "The Prayer of Three Children 1:41",
+          "note": "O all ye that worship the Lord, bless the God of gods, praise him, and give him thanks: for his mercy endureth for ever - the hymn's closing verse."
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "danielConnection": {
+      "ref": "cf. Daniel 1:6-7, Daniel 3 (separate book)",
+      "note": "This book's own text gives no genealogy or backstory for the three youths beyond their names and the fact of their deliverance from the furnace - their fuller identification (as young Judean nobles renamed Shadrach, Meshach, and Abednego in Babylon) and the furnace narrative itself belong to the separate book of Daniel, not indexed here since this book contains only the hymn."
+    }
+  }
+}

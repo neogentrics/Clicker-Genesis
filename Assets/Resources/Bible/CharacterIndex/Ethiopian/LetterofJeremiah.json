@@ -1,0 +1,356 @@
+{
+  "book": "Letter of Jeremiah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 38,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This book does not exist in the KJV canon at all — it is an apocryphal/deuterocanonical epistle unique to broader traditions (including the Ethiopian Orthodox canon, and appended as Baruch chapter 6 in some other traditions). Read against the real extracted text, it is a single, unbroken 72-verse letter in one continuous voice (Jeremiah, per the 1:1 superscription) addressed directly to the Judean captives being marched to Babylon, warning them not to be seduced into worshipping Babylonian idols. There is no narrative scene, no second speaking character, and no cast of named supporting figures — the entire book is one sustained satirical argument against idolatry, arranged in the text itself around a repeating \"therefore fear them not\" / \"they are no gods\" refrain. Per the same law/theme-tier principle already applied to Leviticus and most of Deuteronomy (PURE TRANSMISSION content, not personally-embodied scenes), this book is built as one Person tier for Jeremiah himself (he is the letter's real author and, within it, personally relays God's own reassurance to the exiles) plus eight Law/theme tiers covering the letter's successive arguments, all attributed to him via deliveredBy. The unnamed \"priests\" of the idols and the \"Chaldeans\" (1:39-41) are described only as collectives illustrating Jeremiah's argument — never differentiated as individuals and never personally embodied as actors in a scene of their own — so per the collective-entry rule they are folded into the relevant law tiers' verse notes rather than invented as submanagers. Naming-collision flag: this book's Jeremiah is deliberately id'd as jeremiah_letter_ethiopian, distinct from any \"jeremiah\" character indexed for the actual Book of Jeremiah (KJV or otherwise) — this letter states no genealogy or age details of its own, and none are imported from elsewhere. Extraction-quirk flag (same class already logged for this translation's QA): the source verse-text JSON prints \"verseNumber\": 1 twice near the very start — once for the 1:1 epistle superscription (\"A copy of an epistle...\") and again for what is actually the letter's true opening line (\"Because of the sins...\") — and a third stray \"1\" appears mid-sentence just after verse 71. These are extraction/superscript-numbering artifacts, not real duplicate or extra verses; verse references below cite the printed chapter:verse numbering as-is rather than silently renumbering, consistent with the project's rule against altering scripture text or its apparatus.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Captive's Letter",
+      "managerId": "jeremiah_letter_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Gilded and Silent",
+      "managerId": "law_gilded_and_silent_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Barred Temple Doors",
+      "managerId": "law_barred_temple_doors_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Rust Beneath the Gold",
+      "managerId": "law_rust_beneath_gold_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "No King's Sceptre",
+      "managerId": "law_no_kings_sceptre_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Carpenter's Handiwork",
+      "managerId": "law_carpenters_handiwork_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Crows Between Heaven and Earth",
+      "managerId": "law_crows_between_heaven_earth_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Obedient Sun and Storm",
+      "managerId": "law_obedient_sun_storm_ltrjer",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Scarecrow in the Garden",
+      "managerId": "law_scarecrow_in_garden_ltrjer",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jeremiah_letter_ethiopian",
+      "name": "Jeremiah",
+      "role": "manager",
+      "scribeTier": "The Captive's Letter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Not stated within this letter itself; see the Book of Jeremiah's own record (unindexed reference for this translation)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:1",
+          "note": "Epistle superscription: identifies this as a copy of a letter Jeremiah sent to those about to be led captive to Babylon by the king of the Babylonians, 'as it was commanded him of God.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:1",
+          "note": "The letter's true opening line (printed as a second verse 1 in the source text - see book notes): explains the captivity is happening 'because of the sins which ye have committed before God.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:2",
+          "note": "Promises the exiles they will remain in Babylon a long season, 'namely, seven generations,' and afterward be brought home peaceably."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:4",
+          "note": "Directly warns the captives not to become like the Babylonians or fear the idols they will see carried in procession before and behind the crowds."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:6",
+          "note": "Relays God's own reassurance within the letter: 'mine angel is with you, and I myself caring for your souls.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The entire 72-verse book is a single continuous letter addressed directly to 'ye' - it never shifts into third-person narration the way most other books do.",
+        "Its 'seven generations' promise of return (1:2) is a detail specific to this letter and doesn't match the standard 70-years-of-exile figure given elsewhere in the wider Jeremiah/Daniel tradition."
+      ]
+    },
+    {
+      "id": "law_gilded_and_silent_ltrjer",
+      "name": "Gilded and Silent",
+      "role": "law",
+      "scribeTier": "Gilded and Silent",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Explains that the Babylonian idols are man-made objects - carved, gilded, and dressed by craftsmen - that cannot speak, cannot save themselves from rust or moth, and cannot even wipe the dust from their own faces, though they carry a sceptre and weapons like a judge or warrior.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:7",
+          "note": "The idols' tongues are polished by workmen and their bodies gilded and silvered over, 'yet are they but false, and cannot speak.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:8-9",
+          "note": "Gold is worked into crowns for the idols' heads 'as it were for a virgin that loveth to go gay' - while their own priests secretly take gold and silver from them for themselves."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:11",
+          "note": "The idols cannot save themselves from rust and moth, even when covered in purple raiment."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:13-14",
+          "note": "An idol holds a sceptre, dagger, and axe like a country's judge, yet cannot put to death anyone who offends it, nor deliver itself from war or thieves."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_barred_temple_doors_ltrjer",
+      "name": "Barred Temple Doors",
+      "role": "law",
+      "scribeTier": "Barred Temple Doors",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Describes how the idols' own priests must lock, bolt, and bar the temples to keep the idols from being carried off by robbers - proof the idols cannot protect even themselves - while vermin and grime quietly overtake them inside.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:17",
+          "note": "Priests bar their temple doors with locks and bolts, just as a condemned man is shut in to await death, 'lest their gods be spoiled with robbers.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:18",
+          "note": "Priests light more candles for the idols than the idols could ever see even one of."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:19-20",
+          "note": "Temple beams are gnawed by creeping things without the idols feeling it, and their faces are blackened by the smoke of their own temples."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:21",
+          "note": "Bats, swallows, birds, and cats sit and roost on the idols' bodies and heads."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_rust_beneath_gold_ltrjer",
+      "name": "Rust Beneath the Gold",
+      "role": "law",
+      "scribeTier": "Rust Beneath the Gold",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Catalogs how little the idols' gold plating is truly worth - they will not even shine unless wiped - and exposes their priests' corrupt handling of the sacrifices offered, including practices the letter cites directly as disqualifying them from godhood.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:23-24",
+          "note": "The idols' gold will not shine unless the rust is wiped away; even freshly molten, they felt nothing, being things 'wherein there is no breath.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:25-26",
+          "note": "Carried on men's shoulders, footless, the idols cannot rise if they fall or straighten if bowed down - offerings are set before them 'as unto dead men.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:27",
+          "note": "The priests sell and misuse the sacrifices, their wives salt away a portion for themselves, and nothing at all is given to the poor or the crippled."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:28",
+          "note": "Menstruous women and women in childbed are permitted to eat the sacrifices - cited as further proof 'that they are no gods.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:30-32",
+          "note": "The priests sit in mourning with torn clothes, shaven heads and beards, and bare heads, roaring and weeping as at a funeral feast, then strip their own garments to clothe their wives and children."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_no_kings_sceptre_ltrjer",
+      "name": "No King's Sceptre",
+      "role": "law",
+      "scribeTier": "No King's Sceptre",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Argues from political and moral powerlessness: the idols can neither reward nor punish, cannot install or remove a king, grant wealth, or enforce a vow, and cannot rescue the weak, the blind, the widow, or the fatherless - and even the Chaldeans' own priests privately hold their gods in contempt.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:33-34",
+          "note": "The idols can repay neither good nor evil done to them, can neither crown nor depose a king, and ignore even an unpaid vow made to them."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:35-37",
+          "note": "They cannot save anyone from death, deliver the weak from the strong, restore sight to the blind, or show mercy to the widow and fatherless."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:38",
+          "note": "Idols overlaid with gold and silver are compared to stones hewn from a mountain - 'they that worship them shall be confounded.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:39",
+          "note": "Even the Chaldeans themselves privately dishonor their own idols."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:40-41",
+          "note": "When the Chaldeans find a mute man, they bring him before the idol Bel and beg it to grant him speech 'as though he were able to understand' - yet even they don't truly believe it, 'for they have no knowledge.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_carpenters_handiwork_ltrjer",
+      "name": "Carpenter's Handiwork",
+      "role": "law",
+      "scribeTier": "Carpenter's Handiwork",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Traces the idols back to their true origin - shaped by carpenters and goldsmiths who cannot make them anything other than what the workman intends, and who themselves die like anyone else - concluding that lifeless objects cannot outrank or outlast their own makers.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:42",
+          "note": "Temple-women sit roadside with cords about them, burning bran for perfume, and shame one another over whose cord is broken first."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:44",
+          "note": "The idols 'are made of carpenters and goldsmiths: they can be nothing else than the workmen will have them to be.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:45-46",
+          "note": "Since even the craftsmen who make the idols cannot live forever, the objects they make cannot possibly be gods - they leave behind only 'lies and reproaches to them that come after.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:47",
+          "note": "When war or plague threatens, the priests privately discuss among themselves where they can hide, taking their gods with them."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:50",
+          "note": "It will become plain to every nation and king that the idols are only the work of men's hands, 'and that there is no work of God in them.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_crows_between_heaven_earth_ltrjer",
+      "name": "Crows Between Heaven and Earth",
+      "role": "law",
+      "scribeTier": "Crows Between Heaven and Earth",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Presses the argument to its practical conclusion: the idols cannot bring rain, judge a dispute, right a wrong, or survive fire, war, or thieves - and are worth less than an ordinary useful household object, a door, or even a plain wooden post.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:52-53",
+          "note": "The idols can neither install a king nor send rain, and cannot even judge their own cause - 'for they are as crows between heaven and earth.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:54",
+          "note": "If fire falls on their temple, the priests flee to save themselves while the idols burn to nothing 'like beams.'"
+        },
+        {
+          "ref": "Letter of Jeremiah 1:56-57",
+          "note": "Idols covered in silver or gold cannot escape thieves or robbers, who simply strip off their gold, silver, and clothing and walk away."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:58",
+          "note": "Concludes it is better to be a useful vessel, a door, or a plain wooden pillar in a house than a false god such as these."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_obedient_sun_storm_ltrjer",
+      "name": "Obedient Sun and Storm",
+      "role": "law",
+      "scribeTier": "Obedient Sun and Storm",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Contrasts the powerless idols with the sun, moon, stars, lightning, wind, clouds, and fire - ordinary parts of creation that visibly obey God's command every day - to show the idols share neither their appearance nor their power.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:59",
+          "note": "Sun, moon, and stars are bright and 'sent to do their offices' obediently."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:60",
+          "note": "Lightning is plainly seen when it breaks forth, and the wind blows the same way over every land."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:61",
+          "note": "The clouds pass over the whole world exactly as God commands them."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:62-63",
+          "note": "Fire sent from above to consume hills and forests does as it is commanded, unlike the idols, which resemble it 'neither in shew nor power' and so cannot rightly be called gods."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_scarecrow_in_garden_ltrjer",
+      "name": "Scarecrow in the Garden",
+      "role": "law",
+      "scribeTier": "Scarecrow in the Garden",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_letter_ethiopian",
+      "purpose": "Delivers the letter's closing verdict: the idols can neither curse nor bless a king, show no sign in the sky, and are worth less than an ordinary beast that can at least shelter itself - as useless as a scarecrow in a cucumber garden or a corpse left in the dark - so the letter ends by declaring the just man who owns no idols the better and less shameful of the two.",
+      "verses": [
+        {
+          "ref": "Letter of Jeremiah 1:65-66",
+          "note": "The idols can neither curse nor bless kings, show no sign in the heavens, and give no light like the sun or moon."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:67",
+          "note": "Even ordinary beasts are better off than the idols, since a beast can at least find cover and help itself."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:69-70",
+          "note": "The idols are compared to a scarecrow standing uselessly in a garden of cucumbers, to a white-thorn bush any bird lands on, and to a dead body cast into darkness."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:71",
+          "note": "The idols are known to be false by the very purple cloth rotting and being eaten away on them, becoming 'a reproach in the country' - the source text repeats its verse numbering here (see book-level extraction-quirk note) rather than marking a genuine additional verse."
+        },
+        {
+          "ref": "Letter of Jeremiah 1:72",
+          "note": "The letter's closing line: 'Better therefore is the just man that hath none idols: for he shall be far from reproach.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "This short single-chapter letter names only Jeremiah individually. The Babylonian idol-priests and the Chaldeans (1:39-41) are referenced throughout only as unnamed collectives illustrating Jeremiah's argument - never differentiated as individuals - per the no-individual-invention rule, so no additional characters or bulk-list entries are warranted here."
+  }
+}

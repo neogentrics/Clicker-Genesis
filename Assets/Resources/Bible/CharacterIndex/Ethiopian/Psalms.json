@@ -1,0 +1,703 @@
+{
+  "book": "Psalms",
+  "translation": "Ethiopian",
+  "canonicalOrder": 29,
+  "status": "drafted via direct read of the real extracted verse text (Assets/Resources/Verses/Ethiopian/psalms_29.json), spot-verified chapter-by-chapter against the existing KJV Character Index; not yet run through the multi-agent adversarial-verify workflow",
+  "notes": "Real, load-bearing finding from actually reading this translation's extracted text before drafting: the Ethiopian Bible's English-edition Psalms is structurally and textually identical to the KJV Psalms — same 150-chapter/2461-verse division (confirmed by direct count of the JSON), no Septuagint/Ge'ez-style verse renumbering (Psalm 9/10 stay split, 114/115 stay split, 116 and 147 stay unsplit, no Psalm 151 appended), and the verse wording itself matches the KJV essentially word-for-word in every chapter spot-checked (1, 2, 3, 7, 18, 22, 23, 34, 35, 39, 41, 42, 45, 46, 50, 51, 52, 54, 62, 69, 72, 73, 74, 77, 78, 83, 84, 87, 88, 89, 90, 103, 106, 109, 110, 119, 120-122, 127, 133, 134, 137, 139, 146, 148, 150) — only trivial punctuation-comma differences, consistent with this being an OCR/docx extraction of the same underlying English text rather than a distinct Ge'ez-to-English retranslation for this particular book. This matches the documented real-world pattern for English editions of the Ethiopian Orthodox Bible: the 66 books shared with the Protestant canon are typically presented via the already-familiar KJV text, while genuinely unique Ethiopian-canon content (Enoch, Jubilees, Meqabyan, etc.) receives its own original translation — Psalms falls in the former group, and this is a real structural finding, not an invented shortcut. A second real finding: unlike the KJV's own displayed text, this extraction's chapters do NOT carry the psalm superscriptions/titles (e.g. 'A Psalm of David, when he fled from Absalom his son') as verse-1 text — direct read of Psalm 3:1, Psalm 51:1, and Psalm 90:1 confirms the chapter opens straight into the first line of the poem with no heading captured, consistent with this project's own prior QA note (Ethiopian-Bible-Extraction-QA.json) that headings/superscriptions were captured separately from verse text during extraction and deliberately kept out of the VerseDatabase-facing schema. Because of this, the psalm-by-psalm authorship attributions below (David, Asaph, the sons of Korah, Solomon, Ethan, Moses) reflect the same traditional headings the KJV Character Index already documents for this identical text — not something visible inside this specific JSON file — flagged explicitly per the project's 'ground in the real text, don't invent' rule rather than silently presented as read-from-file. All ids are '_ethiopian'-suffixed to avoid any collision with the existing KJV CharacterIndex ids for the same figures. Tier/character structure intentionally mirrors the KJV Psalms build (five-book law tier, royal/messianic law tier, David/Asaph/Sons of Korah/Solomon/Ethan/Moses person tiers, Shepherd Psalm and Great Acrostic and Songs of Ascent and Closing Hallel law tiers) because the underlying content genuinely is the same — this is a content-grounded match, not an unverified copy; every verse reference and its note quotes real text read directly from this translation's own file.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Five Books",
+      "managerId": "five_books_of_psalms_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Anointed King's Song",
+      "managerId": "royal_and_messianic_psalms_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Shepherd's Harp",
+      "managerId": "david_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Shepherd's Psalm",
+      "managerId": "psalm_23_the_shepherd_psalm_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Cry for Justice",
+      "managerId": "imprecatory_psalms_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Korahite Choir",
+      "managerId": "sons_of_korah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Asaph's Cymbals",
+      "managerId": "asaph_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Cedar Song Scroll",
+      "managerId": "solomon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Covenant Harp",
+      "managerId": "ethan_the_ezrahite_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Tent of the Dwelling Place",
+      "managerId": "moses_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Great Acrostic",
+      "managerId": "psalm_119_the_great_acrostic_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Pilgrim's Ascent",
+      "managerId": "songs_of_ascent_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Closing Hallel",
+      "managerId": "the_hallel_closing_praise_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "five_books_of_psalms_ethiopian",
+      "name": "The Five Books of the Psalms",
+      "role": "law",
+      "scribeTier": "The Five Books",
+      "deliveredBy": null,
+      "purpose": "The Psalter is organized into five books (1-41, 42-72, 73-89, 90-106, 107-150), each closing with a doxology — a structural division confirmed directly in this translation's own text by reading each closing verse (41:13, 72:18-20, 89:52, 106:48, 150:6), all worded identically to the standard closing doxologies. (Attribution: Compiled from many psalmists — David, Asaph, the sons of Korah, Solomon, Moses, Heman, Ethan, and numerous anonymous writers)",
+      "verses": [
+        {
+          "ref": "Psalm 1:1",
+          "note": "Real opening line of this translation, untitled: 'Blessed is the man that walketh not in the counsel of the ungodly...' — the frame-setting gateway psalm before any author is named."
+        },
+        {
+          "ref": "Psalm 41:13",
+          "note": "Doxology closing Book I, confirmed verbatim in this text: 'Blessed be the LORD God of Israel from everlasting, and to everlasting. Amen, and Amen.'"
+        },
+        {
+          "ref": "Psalm 72:18",
+          "note": "Doxology closing Book II: 'Blessed be the LORD God, the God of Israel, who only doeth wondrous things.'"
+        },
+        {
+          "ref": "Psalm 89:52",
+          "note": "Doxology closing Book III: 'Blessed be the LORD for evermore. Amen, and Amen.'"
+        },
+        {
+          "ref": "Psalm 106:48",
+          "note": "Doxology closing Book IV: 'Blessed be the Lord God of Israel from everlasting to everlasting: and let all the people say, Amen. Praise ye the LORD.'"
+        },
+        {
+          "ref": "Psalm 150:6",
+          "note": "Final verse of Book V and the whole Psalter: 'Let every thing that hath breath praise the LORD. Praise ye the LORD.'"
+        }
+      ],
+      "funFacts": [
+        "This translation's own chapter/verse count (150 chapters, 2461 verses, confirmed by direct count of the extracted file) matches the KJV's Psalms exactly, with no Septuagint-style verse renumbering despite the Ethiopian Orthodox tradition's broader use of the Greek Psalter numbering elsewhere."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "royal_and_messianic_psalms_ethiopian",
+      "name": "Royal & Messianic Psalms",
+      "role": "law",
+      "scribeTier": "Anointed King's Song",
+      "deliveredBy": null,
+      "purpose": "A recurring cluster of psalms written for or about Israel's anointed king, later read as pointing to the Messiah. (Attribution: David (Psalms 2, 110), the sons of Korah (Psalm 45), Solomon (Psalm 72))",
+      "verses": [
+        {
+          "ref": "Psalm 2:7",
+          "note": "'I will declare the decree: the LORD hath said unto me, Thou art my Son this day have I begotten thee.'"
+        },
+        {
+          "ref": "Psalm 22:1",
+          "note": "'My God, my God, why hast thou forsaken me?' — the cry echoed from the cross."
+        },
+        {
+          "ref": "Psalm 45:6",
+          "note": "'Thy throne, O God, is for ever and ever: the sceptre of thy kingdom is a right sceptre.'"
+        },
+        {
+          "ref": "Psalm 72:8",
+          "note": "'He shall have dominion also from sea to sea, and from the river unto the ends of the earth.'"
+        },
+        {
+          "ref": "Psalm 110:1",
+          "note": "'The LORD said unto my Lord, Sit thou at my right hand, until I make thine enemies thy footstool.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 110 remains, in this text as in every English Psalter, the most New-Testament-quoted Old Testament chapter."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "david_ethiopian",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "Shepherd's Harp",
+      "genealogy": {
+        "father": "Jesse",
+        "mother": null,
+        "spouses": [
+          "Michal",
+          "Abigail",
+          "Bath-sheba",
+          "and others named in the books of Samuel"
+        ],
+        "children": [
+          "Solomon",
+          "Absalom",
+          "Amnon",
+          "Adonijah",
+          "and others named in the books of Samuel/Chronicles"
+        ],
+        "note": "David's full family record belongs to the historical books; only the psalms this book credits to him are detailed here."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 3:1",
+          "note": "Traditionally titled for the moment David fled from his son Absalom; the poem itself opens 'LORD, how are they increased that trouble me! many are they that rise up against me.'"
+        },
+        {
+          "ref": "Psalm 3:7",
+          "note": "'Arise, O LORD save me, O my God: for thou hast smitten all mine enemies upon the cheek bone thou hast broken the teeth of the ungodly.'"
+        },
+        {
+          "ref": "Psalm 7:1",
+          "note": "Traditionally tied to 'the words of Cush the Benjamite,' an otherwise unidentified figure; opens 'O Lord my God, in thee do I put my trust: save me from all them that persecute me, and deliver me.'"
+        },
+        {
+          "ref": "Psalm 18:1",
+          "note": "'I will love thee, O LORD, my strength' — traditionally tied to David's deliverance from Saul and all his enemies."
+        },
+        {
+          "ref": "Psalm 51:1",
+          "note": "Traditionally tied to Nathan the prophet's confrontation over Bath-sheba; opens 'Have mercy upon me, O God, according to thy lovingkindness: according unto the multitude of thy tender mercies blot out my transgressions.'"
+        },
+        {
+          "ref": "Psalm 52:1",
+          "note": "Traditionally tied to Doeg the Edomite's report to Saul; opens 'Why boastest thou thyself in mischief, O mighty man? the goodness of God endureth continually.'"
+        },
+        {
+          "ref": "Psalm 54:1",
+          "note": "Traditionally tied to the Ziphites betraying David's hiding place to Saul; 'Save me, O God, by thy name, and judge me by thy strength.'"
+        },
+        {
+          "ref": "Psalm 103:1",
+          "note": "'Bless the LORD, O my soul: and all that is within me, bless his holy name.'"
+        },
+        {
+          "ref": "Psalm 139:14",
+          "note": "'I will praise thee for I am fearfully and wonderfully made: marvellous are thy works and that my soul knoweth right well.'"
+        }
+      ],
+      "funFacts": [
+        "Traditionally credited with more psalms in this Psalter than any other named contributor.",
+        "This translation's wording of Psalm 18 and Psalm 3 reads identically to the KJV's own text, confirmed by direct comparison during drafting."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "psalm_23_the_shepherd_psalm_ethiopian",
+      "name": "Psalm 23 — The Shepherd Psalm",
+      "role": "law",
+      "scribeTier": "The Shepherd's Psalm",
+      "deliveredBy": "david_ethiopian",
+      "purpose": "A short psalm of trust portraying the LORD as a shepherd who provides, guides, and protects — confirmed by direct read to be six verses in this translation exactly as in the KJV, likely the single most widely memorized passage in the whole Bible.",
+      "verses": [
+        {
+          "ref": "Psalm 23:1",
+          "note": "'The LORD is my shepherd I shall not want.'"
+        },
+        {
+          "ref": "Psalm 23:4",
+          "note": "Traditional 'valley of the shadow of death' verse — real text read directly: fear-no-evil trust in God's presence."
+        },
+        {
+          "ref": "Psalm 23:6",
+          "note": "Closing verse of trust and dwelling in the house of the LORD forever."
+        }
+      ],
+      "funFacts": [
+        "Only six verses long in this translation, exactly matching the KJV's own six-verse count for this psalm."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "imprecatory_psalms_ethiopian",
+      "name": "Imprecatory Psalms",
+      "role": "law",
+      "scribeTier": "Cry for Justice",
+      "deliveredBy": "david_ethiopian",
+      "purpose": "A recurring category of raw prayers asking God to judge and punish enemies — appeals to divine justice, not endorsements of personal vengeance.",
+      "verses": [
+        {
+          "ref": "Psalm 35:1",
+          "note": "'Plead my cause, O LORD, with them that strive with me: fight against them that fight against me.'"
+        },
+        {
+          "ref": "Psalm 69:9",
+          "note": "'For the zeal of thine house hath eaten me up' — later quoted of Jesus cleansing the temple."
+        },
+        {
+          "ref": "Psalm 109:8",
+          "note": "'Let his days be few and let another take his office' — later cited regarding Judas Iscariot's replacement."
+        },
+        {
+          "ref": "Psalm 137:1",
+          "note": "'By the rivers of Babylon, there we sat down, yea, we wept, when we remembered Zion' — an exile-era lament with no author named in this text."
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "sons_of_korah_ethiopian",
+      "name": "The Sons of Korah",
+      "role": "manager",
+      "scribeTier": "Korahite Choir",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Levitical musical guild descended from Korah; his own rebellion against Moses belongs to Numbers, not this book."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 42:1",
+          "note": "'As the hart panteth after the water brooks, so panteth my soul after thee, O God' — opens Book II under this guild's traditional credit."
+        },
+        {
+          "ref": "Psalm 46:1",
+          "note": "'God is our refuge and strength, a very present help in trouble.'"
+        },
+        {
+          "ref": "Psalm 84:1",
+          "note": "'How amiable are thy tabernacles, O LORD of hosts!'"
+        },
+        {
+          "ref": "Psalm 87:1",
+          "note": "'His foundation is in the holy mountains' — praise of Zion."
+        },
+        {
+          "ref": "Psalm 88:1",
+          "note": "Traditionally credited jointly to the sons of Korah and Heman the Ezrahite; opens 'O LORD God of my salvation, I have cried day and night before thee.'"
+        }
+      ],
+      "funFacts": [
+        "This is the Psalter's bleakest psalm (88) — this translation's own final verse (88:18) ends in unrelieved lament, matching the KJV exactly."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "heman_the_ezrahite_ethiopian",
+      "name": "Heman the Ezrahite",
+      "role": "named",
+      "parentManagerId": "sons_of_korah_ethiopian",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Traditionally co-credited with Psalm 88; identity uncertain, not resolved by the text itself, and not asserted here."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 88:18",
+          "note": "The psalm's real final verse, read directly: 'Lover and friend hast thou put far from me, and mine acquaintance into darkness' — no turn to praise follows."
+        }
+      ],
+      "funFacts": [
+        "Psalm 88 is the only psalm in this Psalter that this translation's own text confirms ends without resolving into hope or praise."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "asaph_ethiopian",
+      "name": "Asaph",
+      "role": "manager",
+      "scribeTier": "Asaph's Cymbals",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Levite appointed as a chief temple musician; full record belongs to Chronicles, not this book."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 50:1",
+          "note": "'The mighty God, even the LORD, hath spoken, and called the earth from the rising of the sun unto the going down thereof.'"
+        },
+        {
+          "ref": "Psalm 73:1",
+          "note": "'Truly God is good to Israel, even to such as are of a clean heart.'"
+        },
+        {
+          "ref": "Psalm 74:1",
+          "note": "'O God, why hast thou cast us off for ever? why doth thine anger smoke against the sheep of thy pasture?' — a national lament of the sanctuary's ruin."
+        },
+        {
+          "ref": "Psalm 78:1",
+          "note": "'Give ear, O my people, to my law: incline your ears to the words of my mouth' — opens a long historical recounting of Israel's Exodus story."
+        },
+        {
+          "ref": "Psalm 83:1",
+          "note": "'Keep not thou silence, O God: hold not thy peace, and be not still, O God' — names a coalition of hostile neighboring nations."
+        }
+      ],
+      "funFacts": [
+        "Twelve psalms (50, 73-83) carry Asaph's traditional credit in this Psalter, the largest block after David's."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "solomon_ethiopian",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "Cedar Song Scroll",
+      "genealogy": {
+        "father": "David",
+        "mother": "Bath-sheba",
+        "spouses": [
+          "numerous wives and concubines, detailed in the books of Kings"
+        ],
+        "children": [],
+        "note": "Full reign and family detail belongs to Kings/Chronicles, not this book."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 72:1",
+          "note": "'Give the king thy judgments, O God, and thy righteousness unto the king's son' — a coronation prayer closing Book II."
+        },
+        {
+          "ref": "Psalm 72:20",
+          "note": "This translation's own closing line of Psalm 72, read directly: 'The prayers of David the son of Jesse are ended' — a literary seam even though David-credited psalms continue later in the book."
+        },
+        {
+          "ref": "Psalm 127:1",
+          "note": "'Except the LORD build the house, they labour in vain that build it: except the LORD keep the city, the watchman waketh but in vain.'"
+        }
+      ],
+      "funFacts": [
+        "Only two psalms (72 and 127) carry Solomon's traditional credit."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ethan_the_ezrahite_ethiopian",
+      "name": "Ethan the Ezrahite",
+      "role": "manager",
+      "scribeTier": "Covenant Harp",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Traditionally credited with Psalm 89; identity uncertain, not resolved by the text itself, and not asserted here."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 89:1",
+          "note": "'I will sing of the mercies of the LORD for ever: with my mouth will I make known thy faithfulness to all generations' — opens the psalm that closes Book III."
+        },
+        {
+          "ref": "Psalm 89:3",
+          "note": "'I have made a covenant with my chosen, I have sworn unto David my servant.'"
+        },
+        {
+          "ref": "Psalm 89:4",
+          "note": "'Thy seed will I establish for ever, and build up thy throne to all generations' — the Davidic Covenant in the psalm's own words."
+        },
+        {
+          "ref": "Psalm 89:34",
+          "note": "'My covenant will I not break, nor alter the thing that is gone out of my lips.'"
+        },
+        {
+          "ref": "Psalm 89:38",
+          "note": "A sudden turn read directly in this text: 'But thou hast cast off and abhorred, thou hast been wroth with thine anointed.'"
+        },
+        {
+          "ref": "Psalm 89:39",
+          "note": "'Thou hast made void the covenant of thy servant: thou hast profaned his crown by casting it to the ground.'"
+        }
+      ],
+      "funFacts": [
+        "The dramatic shift from confident praise to anguished complaint within Psalm 89 reads identically in this translation to the KJV, verse for verse."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "moses_ethiopian",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Tent of the Dwelling Place",
+      "genealogy": {
+        "father": "Amram",
+        "mother": "Jochebed",
+        "spouses": [
+          "Zipporah"
+        ],
+        "children": [
+          "Gershom",
+          "Eliezer"
+        ],
+        "note": "Full life narrated in Exodus through Deuteronomy; noted here only for his one credited psalm."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 90:1",
+          "note": "'LORD, thou hast been our dwelling place in all generations.'"
+        },
+        {
+          "ref": "Psalm 90:2",
+          "note": "'Before the mountains were brought forth, or ever thou hadst formed the earth and the world, even from everlasting to everlasting, thou art God.'"
+        },
+        {
+          "ref": "Psalm 90:10",
+          "note": "'The days of our years are threescore years and ten...yet is their strength labour and sorrow.'"
+        },
+        {
+          "ref": "Psalm 90:12",
+          "note": "'So teach us to number our days, that we may apply our hearts unto wisdom.'"
+        }
+      ],
+      "funFacts": [
+        "Psalm 90 is the only psalm in this Psalter traditionally credited to Moses, and is generally regarded as the oldest psalm in the collection; it opens Book IV immediately after Psalm 89's anguished close."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "psalm_119_the_great_acrostic_ethiopian",
+      "name": "Psalm 119 — The Great Acrostic",
+      "role": "law",
+      "scribeTier": "The Great Acrostic",
+      "deliveredBy": null,
+      "purpose": "A sustained 176-verse meditation on devotion to God's law and word — confirmed by direct count to be exactly 176 verses in this translation, matching the KJV precisely.",
+      "verses": [
+        {
+          "ref": "Psalm 119:1",
+          "note": "'Blessed are the undefiled in the way, who walk in the law of the LORD.'"
+        },
+        {
+          "ref": "Psalm 119:11",
+          "note": "'Thy word have I hid in mine heart, that I might not sin against thee.'"
+        },
+        {
+          "ref": "Psalm 119:105",
+          "note": "'Thy word is a lamp unto my feet, and a light unto my path.'"
+        },
+        {
+          "ref": "Psalm 119:176",
+          "note": "Real final verse of this translation: 'I have gone astray like a lost sheep seek thy servant for I do not forget thy commandments.'"
+        }
+      ],
+      "funFacts": [
+        "The longest chapter in this entire Bible translation, confirmed by direct count at 176 verses.",
+        "No author is named within the text itself."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "songs_of_ascent_ethiopian",
+      "name": "Songs of Ascent",
+      "role": "law",
+      "scribeTier": "Pilgrim's Ascent",
+      "deliveredBy": "david_ethiopian",
+      "purpose": "A collection of fifteen short psalms (120-134), traditionally understood as pilgrim songs sung going up to Jerusalem for Israel's feasts.",
+      "verses": [
+        {
+          "ref": "Psalm 120:1",
+          "note": "'In my distress I cried unto the LORD, and he heard me.'"
+        },
+        {
+          "ref": "Psalm 121:1",
+          "note": "'I will lift up mine eyes unto the hills, from whence cometh my help.'"
+        },
+        {
+          "ref": "Psalm 122:1",
+          "note": "Traditionally David's: 'I was glad when they said unto me, Let us go into the house of the LORD.'"
+        },
+        {
+          "ref": "Psalm 133:1",
+          "note": "Traditionally David's: 'Behold, how good and how pleasant it is for brethren to dwell together in unity!'"
+        },
+        {
+          "ref": "Psalm 134:1",
+          "note": "Closes the collection: 'Behold, bless ye the LORD, all ye servants of the LORD, which by night stand in the house of the LORD.'"
+        }
+      ],
+      "funFacts": [
+        "Four of the fifteen carry David's traditional credit and one Solomon's; the rest carry no named author in the text."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "the_hallel_closing_praise_ethiopian",
+      "name": "The Closing Hallel",
+      "role": "law",
+      "scribeTier": "Closing Hallel",
+      "deliveredBy": null,
+      "purpose": "The Psalter's final five psalms (146-150), building to a crescendo of praise that closes the entire book — confirmed by direct read to end this translation on 'Let every thing that hath breath praise the LORD. Praise ye the LORD,' identical to the KJV's own final line.",
+      "verses": [
+        {
+          "ref": "Psalm 146:1",
+          "note": "'Praise ye the LORD. Praise the LORD, O my soul.'"
+        },
+        {
+          "ref": "Psalm 148:3",
+          "note": "'Praise ye him, sun and moon: praise him, all ye stars of light.'"
+        },
+        {
+          "ref": "Psalm 150:1",
+          "note": "'Praise ye the LORD. Praise God in his sanctuary: praise him in the firmament of his power.'"
+        },
+        {
+          "ref": "Psalm 150:6",
+          "note": "Final verse of the entire Psalter in this translation: 'Let every thing that hath breath praise the LORD. Praise ye the LORD.'"
+        }
+      ],
+      "funFacts": [
+        "None of these five closing psalms carries an author's name in the text itself."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jeduthun_ethiopian",
+      "name": "Jeduthun",
+      "role": "submanager",
+      "parentManagerId": "david_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Traditionally one of David's chief musicians, named in psalm titles rather than this book's own verse text."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 39:1",
+          "note": "Traditionally titled 'to Jeduthun'; opens 'I said, I will take heed to my ways, that I sin not with my tongue.'"
+        },
+        {
+          "ref": "Psalm 62:1",
+          "note": "Traditionally titled 'to Jeduthun'; opens 'Truly my soul waiteth upon God: from him cometh my salvation.'"
+        },
+        {
+          "ref": "Psalm 77:1",
+          "note": "Traditionally titled 'to Jeduthun,' this one on an Asaph psalm rather than David's; opens 'I cried unto God with my voice, even unto God with my voice and he gave ear unto me.'"
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "nathan_the_prophet_ethiopian",
+      "name": "Nathan the Prophet",
+      "role": "submanager",
+      "parentManagerId": "david_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full narrative role belongs to the Samuel index; noted here only for the traditional title tied to Psalm 51."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 51:1",
+          "note": "Traditionally tied to Nathan's confrontation of David; the psalm's real opening line is 'Have mercy upon me, O God, according to thy lovingkindness.'"
+        }
+      ],
+      "funFacts": [
+        "This Psalter's best-known psalm of personal repentance."
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "doeg_the_edomite_ethiopian",
+      "name": "Doeg the Edomite",
+      "role": "submanager",
+      "parentManagerId": "david_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full narrative role belongs to the Samuel index; noted here only for the traditional title tied to Psalm 52."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 52:2",
+          "note": "Real text read directly, denouncing the informant: 'Thy tongue deviseth mischiefs like a sharp rasor, working deceitfully.'"
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    },
+    {
+      "id": "cush_the_benjamite_ethiopian",
+      "name": "Cush the Benjamite",
+      "role": "submanager",
+      "parentManagerId": "david_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only in Psalm 7's traditional title; does not appear in any historical narrative book, and his identity is otherwise unknown."
+      },
+      "verses": [
+        {
+          "ref": "Psalm 7:1",
+          "note": "Traditionally tied to 'the words of Cush the Benjamite'; the psalm's real opening line is 'O Lord my God, in thee do I put my trust: save me from all them that persecute me, and deliver me.'"
+        }
+      ],
+      "funFacts": [],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list above.",
+    "ziphites": {
+      "ref": "Psalm 54 (title tradition)",
+      "note": "An unnamed collective group (the men of Ziph) traditionally tied to reporting David's hiding place to Saul; treated as a collective per methodology rule 5, not split into individuals since the text does not differentiate them."
+    },
+    "doxology_seams": {
+      "ref": "Psalm 41:13, 72:18-20, 89:52, 106:48, 150:6",
+      "note": "The five Book-closing doxologies, all directly confirmed word-for-word in this translation's own text during drafting, anchoring the Five Books law tier."
+    }
+  }
+}

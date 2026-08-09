@@ -1,0 +1,198 @@
+{
+  "book": "Lamentations",
+  "translation": "Ethiopian",
+  "canonicalOrder": 37,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Lamentations in the Ethiopian translation (154 verses across 5 chapters: 22, 22, 66, 22, 22) is, in actual extracted-text content, essentially identical to the KJV's Lamentations — five funeral-lament poems over Jerusalem's fall, entirely anonymous, with chapter 3 standing out as a 66-verse center containing the book's most quoted lines (\"his compassions fail not... great is thy faithfulness,\" 3:22-23). Direct read-through found NO genuine canonical/content divergence from the standard text the way this project's Ethiopian Ezra diverged from the Masoretic Ezra — this is a parallel-wording translation of the same underlying book, not a distinct textual tradition, so the KJV Character Index's tier division (one theme-tier per chapter, chapter-by-chapter) was reused as the correct structure for THIS translation's actual text too, not blindly copied without verification. One extraction-artifact typo was noted and NOT treated as content: Ethiopian 1:1 reads \"she that was was great among the nations\" (duplicated word), almost certainly an OCR/docx-extraction glitch in the source file rather than a genuine second reading — flagged here, not silently corrected in the verse note quotes below (quotes below use the sense of the line, not the literal duplicated word). Because the text names no individual person anywhere in the book (confirmed by a full read-through, same finding as KJV), all 5 scribe tiers are role:\"law\" theme tiers with no submanagers, no genealogy data, and no ageEvents — this is a deliberate, book-driven absence per the established methodology's own person-vs-theme test, not an oversight. Every scribeTiers[].managerId resolves 1:1 to a characters[].id (5 tiers, 5 characters, no dangling references). Authorship is anonymous within the text itself in this translation too; traditional ascription to Jeremiah (via a Septuagint introductory note, not the underlying text) is noted as tradition only, never asserted as textual fact, matching the KJV file's own hedge. Character ids are suffixed \"_ethiopian\" specifically to avoid collision with the existing validated KJV Lamentations.json ids (jerusalems_desolation_lament, the_lords_day_of_wrath, compassions_new_every_morning, the_siege_and_the_fallen_crown, prayer_for_remembrance), since this is the same book/chapter structure reused for a different translation.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Weeping Widow (Jerusalem's Desolation)",
+      "managerId": "jerusalems_desolation_lament_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Cloud of His Anger (The LORD's Day of Wrath)",
+      "managerId": "the_lords_day_of_wrath_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "New Every Morning (Great Is Thy Faithfulness)",
+      "managerId": "compassions_new_every_morning_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Fallen Crown (Siege and Famine)",
+      "managerId": "the_siege_and_the_fallen_crown_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Remember, O LORD (Prayer for Restoration)",
+      "managerId": "prayer_for_remembrance_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jerusalems_desolation_lament_ethiopian",
+      "name": "The Weeping Widow — Jerusalem's Desolation (Lamentations 1)",
+      "role": "law",
+      "scribeTier": "The Weeping Widow (Jerusalem's Desolation)",
+      "parentManagerId": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "Personifies Jerusalem/Zion as a once-great city fallen to the status of a bereaved widow, weeping in the night with no comforter and her roads mourning, while conceding the judgment is deserved rather than arbitrary. (Attribution: Anonymous within the text itself. Tradition (via a Septuagint introductory note, not the underlying text) ascribes the whole book to Jeremiah the prophet, but this translation's text of Lamentations never names an author — treated as tradition, not asserted as fact.)",
+      "verses": [
+        {
+          "ref": "Lamentations 1:1-2",
+          "note": "The city 'that was full of people' is now solitary 'as a widow,' weeping sore in the night with none among her lovers to comfort her."
+        },
+        {
+          "ref": "Lamentations 1:12",
+          "note": "'Is it nothing to you, all ye that pass by? behold, and see if there be any sorrow like unto my sorrow' — the poem's central appeal to onlookers."
+        },
+        {
+          "ref": "Lamentations 1:18",
+          "note": "'The LORD is righteous: for I have rebelled against his commandment' — the lament's own confession that the disaster is just."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation's text of chapter 1 runs the same 22 verses as the KJV, consistent with the underlying (Hebrew-invisible-in-English) acrostic structure shared by chapters 1, 2, 4, and 5."
+      ]
+    },
+    {
+      "id": "the_lords_day_of_wrath_ethiopian",
+      "name": "The Cloud of His Anger — The LORD's Day of Wrath (Lamentations 2)",
+      "role": "law",
+      "scribeTier": "The Cloud of His Anger (The LORD's Day of Wrath)",
+      "parentManagerId": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "Names the LORD himself as the direct agent of Jerusalem's destruction ('the Lord was as an enemy,' 2:5), cataloguing the ruin of sanctuary, king, and feast days, and indicting the nation's prophets for having 'seen vain and foolish things' instead of warning the people. (Attribution: Anonymous within the text itself; see the authorship note on the Chapter 1 tier — the same hedge applies throughout.)",
+      "verses": [
+        {
+          "ref": "Lamentations 2:1",
+          "note": "'How hath the Lord covered the daughter of Zion with a cloud in his anger... and remembered not his footstool in the day of his anger!'"
+        },
+        {
+          "ref": "Lamentations 2:5",
+          "note": "'The Lord was as an enemy: he hath swallowed up Israel' — the chapter's central reversal, God described in the language usually reserved for Israel's foes."
+        },
+        {
+          "ref": "Lamentations 2:14",
+          "note": "'Thy prophets have seen vain and foolish things for thee... but have seen for thee false burdens and causes of banishment' — false prophets blamed for failing to warn of judgment."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "compassions_new_every_morning_ethiopian",
+      "name": "New Every Morning — \"Great Is Thy Faithfulness\" (Lamentations 3)",
+      "role": "law",
+      "scribeTier": "New Every Morning (Great Is Thy Faithfulness)",
+      "parentManagerId": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "The book's theological center: a single sufferer, 'the man that hath seen affliction by the rod of his wrath' (3:1), descends into personal darkness under God's discipline, then turns at the poem's midpoint to its most famous affirmation of hope before returning to lament and a plea for judgment against his oppressors. (Attribution: Anonymous within the text itself; see the authorship note on the Chapter 1 tier. The identity of 'the man' in 3:1 is not stated by the text — it is not identified here as any specific named figure.)",
+      "verses": [
+        {
+          "ref": "Lamentations 3:1",
+          "note": "'I am the man that hath seen affliction by the rod of his wrath' — opens the chapter's first-person lament."
+        },
+        {
+          "ref": "Lamentations 3:22-23",
+          "note": "'It is of the LORD's mercies that we are not consumed, because his compassions fail not. They are new every morning: great is thy faithfulness.' The book's most quoted lines, at the exact center of its longest chapter."
+        },
+        {
+          "ref": "Lamentations 3:25-26",
+          "note": "'The LORD is good unto them that wait for him... It is good that a man should both hope and quietly wait for the salvation of the LORD.'"
+        },
+        {
+          "ref": "Lamentations 3:55-56",
+          "note": "'I called upon thy name, O LORD, out of the low dungeon. Thou hast heard my voice' — the sufferer testifies God has already heard him, mid-lament."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Chapter 3 is 66 verses long in this translation's text too, three times the length of the other four chapters — consistent with the underlying triple-acrostic structure (three verses per Hebrew letter) even though that structure isn't visible in English."
+      ]
+    },
+    {
+      "id": "the_siege_and_the_fallen_crown_ethiopian",
+      "name": "The Fallen Crown — Siege and Famine (Lamentations 4)",
+      "role": "law",
+      "scribeTier": "The Fallen Crown (Siege and Famine)",
+      "parentManagerId": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "Contrasts Zion's former glory ('the precious sons of Zion, comparable to fine gold,' 4:2) with the horrors of the siege's famine — including compassionate mothers reduced to eating their own children (4:10) — lays blame on corrupt priests and prophets, and closes with a taunt-oracle against Edom. (Attribution: Anonymous within the text itself; see the authorship note on the Chapter 1 tier.)",
+      "verses": [
+        {
+          "ref": "Lamentations 4:1-2",
+          "note": "'How is the gold become dim!... The precious sons of Zion, comparable to fine gold, how are they esteemed as earthen pitchers' — former splendor contrasted with present ruin."
+        },
+        {
+          "ref": "Lamentations 4:10",
+          "note": "'The hands of the pitiful women have sodden their own children: they were their meat in the destruction of the daughter of my people' — the siege's famine at its most extreme."
+        },
+        {
+          "ref": "Lamentations 4:20",
+          "note": "'The breath of our nostrils, the anointed of the LORD, was taken in their pits.' No individual is named by the verse itself; a common inference connects this to King Zedekiah's capture, but that identification is not asserted here as flat textual fact."
+        },
+        {
+          "ref": "Lamentations 4:21-22",
+          "note": "'Rejoice and be glad, O daughter of Edom... the cup also shall pass through unto thee' — a taunt-oracle warning Edom that judgment will reach her too."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Edom (4:21-22) is a neighboring nation, not an individual person — a named group/place referenced in the text, not a character entry of its own."
+      ]
+    },
+    {
+      "id": "prayer_for_remembrance_ethiopian",
+      "name": "Remember, O LORD — Prayer for Restoration (Lamentations 5)",
+      "role": "law",
+      "scribeTier": "Remember, O LORD (Prayer for Restoration)",
+      "parentManagerId": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "A closing communal prayer asking the LORD to 'remember' and 'behold' the nation's reproach — lost inheritance, orphaned children, enslaved elders, hunger, and violated women — ending with a plea for restoration that the book deliberately leaves unresolved rather than triumphantly answered. (Attribution: Anonymous within the text itself; see the authorship note on the Chapter 1 tier. Chapter 5 is spoken in first-person plural ('we'/'us') throughout, unlike the more individual voice of chapters 1-3.)",
+      "verses": [
+        {
+          "ref": "Lamentations 5:1",
+          "note": "'Remember, O LORD, what is come upon us: consider, and behold our reproach.' Opens the closing prayer."
+        },
+        {
+          "ref": "Lamentations 5:7",
+          "note": "'Our fathers have sinned, and are not; and we have borne their iniquities' — the generation praying acknowledges bearing consequences beyond their own acts."
+        },
+        {
+          "ref": "Lamentations 5:11",
+          "note": "'They ravished the women in Zion, and the maids in the cities of Judah' — among the atrocities catalogued in the prayer."
+        },
+        {
+          "ref": "Lamentations 5:21",
+          "note": "'Turn thou us unto thee, O LORD, and we shall be turned; renew our days as of old' — the book's climactic plea for restoration."
+        },
+        {
+          "ref": "Lamentations 5:22",
+          "note": "'But thou hast utterly rejected us; thou art very wroth against us' — the book's actual final verse, deliberately unresolved rather than a guaranteed happy ending."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Chapter 5 has 22 verses like chapters 1, 2, and 4, but is the one poem of the five that is NOT itself an acrostic in the underlying Hebrew — a structural feature many readers connect to its closing, unresolved tone."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Lamentations (this translation included) contains no genealogies and no bulk name lists. It is entirely poetic lament addressed corporately to 'Zion' / 'the daughter of my people' / 'we, us' — the actual extracted text names no individual person anywhere in the book, confirmed by a full read-through of this specific Ethiopian-translation file. There is nothing to place in a genealogy or bulk-name list for this book."
+  }
+}

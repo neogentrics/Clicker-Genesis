@@ -1,0 +1,576 @@
+{
+  "book": "1 Peter",
+  "translation": "Geneva",
+  "canonicalOrder": 72,
+  "status": "drafted via direct reading of the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/1_peter_72.json), cross-checked against the existing validated KJV 1Peter.json for tier-naming-style precedent only",
+  "notes": "Structurally this Geneva 1560 rendering of 1 Peter matches the standard-canon KJV text exactly - same 5 chapters, same 25/25/22/19/14 verse-per-chapter split (105 verses total), same doctrinal content and argument flow, no deuterocanonical or apocryphal material and no missing/added passages. This is NOT a case like the Ethiopian Bible's differently-structured Ezra - it is the same underlying epistle in an earlier (1560) English idiom. Real, worth-flagging wording differences found by reading the actual Geneva text (not assumed from memory of KJV): (1) Geneva spells Noah's name \"Noe\" throughout 3:20 ('the dayes of Noe, while the Arke was preparing') rather than 'Noah' - flagged on the Noah/Noe entry rather than silently normalized to the KJV spelling. (2) Geneva 3:22 lists the powers made subject to the risen Christ as 'the Angels, and Powers, and might' - a different triad, in a different order, than the KJV's 'angels and authorities and powers' - a genuine translation-level wording variance, not an extraction error, kept verbatim in the Jesus entry's verse note. (3) Geneva opens 1:1 with 'PETER an Apostle of IESVS CHRIST' in period display capitalization (V/U interchangeable in 1560 typesetting) - a typesetting convention, not a content difference. (4) Geneva 4:11's closing doxology reads 'to whome is prayse and dominion for euer, and euer, Amen' - same content as KJV's doxology, archaic spelling only. Following the validated KJV precedent for this same book: only two figures carry enough personally-embodied narrative weight for a full person-tier (Peter, the letter's author/elder, speaking throughout in his own voice; and Jesus Christ, whose real completed suffering/death/resurrection/exaltation are described as actual past events, especially 2:21-25 and 3:18-22, even though he does not act within this text's own narrative frame the way Gospel-Jesus does). Every other major content block is a law/theme tier (deliveredBy peter_geneva_1peter), named to reflect Geneva's own distinctive phrasing where a good match exists ('liuely stones'/'liuely hope', 'the firie triall', 'good disposers of the manifolde grace of God') rather than defaulting to the KJV tier names. Minor named figures cited but not acting within this book (Abraham, Sara, Noe, and 'the Prophets' as one undifferentiated collective per rule 5) are logged as role:'named', cross-referenced to their Genesis KJV entries by concept, not re-indexed with full genealogy. Two tradition-vs-text flags carried over and re-verified against this Geneva text directly: Marcus (5:13) is traditionally identified with John Mark, and 'the Church that is at Babylon' (5:13) is widely read as a cipher for Rome by many scholars - Geneva's own text asserts neither identification, so both stay flagged as tradition, not fact. All character/tier ids are suffixed '_geneva_1peter' (or '_geneva' for the three cross-referenced named figures) to avoid colliding with the existing validated KJV 1Peter.json ids (e.g. 'peter_1peter') or with any other translation's future 1 Peter file.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Peter, Apostle and Elder",
+      "managerId": "peter_geneva_1peter",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Christ, the Suffering and Risen Shepherd",
+      "managerId": "jesus_geneva_1peter",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "A Liuely Hope and the Triall of Faith",
+      "managerId": "living_hope_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Be Yee Holie: The New Birth",
+      "managerId": "call_to_holiness_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Liuely Stones, A Royall Priesthoode",
+      "managerId": "royal_priesthood_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Submit Your Selues to Euery Ordinance of Man",
+      "managerId": "civil_submission_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Household Order: Seruants, Wiues, and Husbands",
+      "managerId": "household_order_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Suffering for Well Doing",
+      "managerId": "suffering_welldoing_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Good Disposers of the Manifolde Grace of God",
+      "managerId": "stewards_grace_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Firie Triall",
+      "managerId": "fiery_trial_geneva_1peter",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Humilitie and Resisting the Aduersarie",
+      "managerId": "humility_adversary_geneva_1peter",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "peter_geneva_1peter",
+      "name": "Peter",
+      "role": "manager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:1",
+          "note": "Introduces himself as 'PETER an Apostle of IESVS CHRIST,' writing to the strangers scattered throughout Pontus, Galatia, Cappadocia, Asia and Bithynia."
+        },
+        {
+          "ref": "1 Peter 5:1",
+          "note": "Identifies himself as also an elder, a witness of the sufferings of Christ, and a partaker of the glory that shall be revealed."
+        },
+        {
+          "ref": "1 Peter 5:2-4",
+          "note": "Exhorts fellow elders to feed the flock of God willingly and not for filthy lucre, being ensamples to the flock, promising an incorruptible crown of glory when the chief Shepherd appears."
+        },
+        {
+          "ref": "1 Peter 5:12",
+          "note": "States he has written this brief letter 'by Syluanus a faithfull brother,' exhorting and testifying that this is the true grace of God wherein they stand."
+        },
+        {
+          "ref": "1 Peter 5:13-14",
+          "note": "Sends greeting from the Church at Babylon, elected together with them, and from 'Marcus my sonne'; closes with a call to greet one another with the kiss of love."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's own display typesetting for 1:1 renders Christ's name 'IESVS CHRIST' in period capitals with V for U, a printing convention of the 1560 edition, not a content difference.",
+        "This id is scoped to this book and translation and is distinct from any KJV or future-translation Peter entry — same historical person, tracked separately per this text."
+      ]
+    },
+    {
+      "id": "jesus_geneva_1peter",
+      "name": "Jesus Christ",
+      "role": "manager",
+      "scribeTier": "Christ, the Suffering and Risen Shepherd",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:11",
+          "note": "The Spirit of Christ working in the prophets testified beforehand of the sufferings that should come unto Christ, and the glory that should follow."
+        },
+        {
+          "ref": "1 Peter 1:18-19",
+          "note": "Believers were not redeemed with corruptible things like silver and gold, but 'with the precious blood of Christ, as of a Lambe vndefiled, and without spot.'"
+        },
+        {
+          "ref": "1 Peter 1:20-21",
+          "note": "Ordained before the foundation of the world but declared in these last times, raised from the dead by God, who gave him glory."
+        },
+        {
+          "ref": "1 Peter 2:4",
+          "note": "Described as 'a liuing stone disallowed of men, but chosen of God and precious,' the one believers come to."
+        },
+        {
+          "ref": "1 Peter 2:6-8",
+          "note": "Identified with the prophesied chief corner stone laid in Sion — precious to believers, but a stone of stumbling and a rock of offence to the disobedient."
+        },
+        {
+          "ref": "1 Peter 2:21-24",
+          "note": "Suffered for believers, leaving an example that they should follow his steps; did no sin, no guile found in his mouth; when reviled, reviled not again; bore their sins in his own body on the tree, 'by whose stripes ye were healed.'"
+        },
+        {
+          "ref": "1 Peter 2:25",
+          "note": "Called 'the shepheard and Bishop of your soules,' to whom the once-straying sheep are now returned."
+        },
+        {
+          "ref": "1 Peter 3:18",
+          "note": "Suffered once for sins, the just for the unjust, to bring believers to God — put to death concerning the flesh, but quickened by the spirit."
+        },
+        {
+          "ref": "1 Peter 3:19-20",
+          "note": "By the same Spirit went and preached unto the spirits in prison, who were disobedient in the days of Noe while the Ark was preparing, wherein eight souls were saved by water."
+        },
+        {
+          "ref": "1 Peter 3:21-22",
+          "note": "His resurrection is what baptism's figure answers to; he is gone into heaven, at the right hand of God, to whom 'the Angels, and Powers, and might are subiect' — a distinct triad and order from the more familiar 'angels and authorities and powers' phrasing, a real Geneva-specific wording choice, not an extraction error."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 1 Peter never addresses Christ's earthly parentage or genealogy at all, consistent with the rest of the epistle's focus on his redemptive death and exaltation rather than his birth — genealogy fields are left null rather than imported from Gospel material this book doesn't itself state."
+      ]
+    },
+    {
+      "id": "silvanus_geneva_1peter",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": "peter_geneva_1peter",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 5:12",
+          "note": "Called 'a faithfull brother' by Peter, the one Peter states he has written this brief letter by, exhorting and testifying to the true grace of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Plausibly the same Silvanus/Silas who travelled with Paul (Acts 15:40, 2 Corinthians 1:19) — a reasonable cross-reference, but Geneva's own 1 Peter text does not itself make this identification, so it is noted as likely, not certain."
+      ]
+    },
+    {
+      "id": "marcus_geneva_1peter",
+      "name": "Marcus",
+      "role": "submanager",
+      "scribeTier": "Peter, Apostle and Elder",
+      "parentManagerId": "peter_geneva_1peter",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 5:13",
+          "note": "Called 'Marcus my sonne' by Peter, sending greeting alongside the Church that is at Babylon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified with John Mark, companion of Paul and Barnabas and traditional author of the Gospel of Mark — common tradition, not something Geneva's 1 Peter text itself states or confirms."
+      ]
+    },
+    {
+      "id": "abraham_geneva",
+      "name": "Abraham",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:6",
+          "note": "Cited as the one Sara obeyed, 'calling him Sir,' held up within the instruction to wives as the example whose daughters they are while they do well."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Cited only in passing as an example within Peter's household instruction — not re-indexed with his own full genealogy/verse set, which belongs to Genesis."
+      ]
+    },
+    {
+      "id": "sara_geneva",
+      "name": "Sara",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:5-6",
+          "note": "Named among 'the holy women' of time past who trusted in God and were subject to their husbands, specifically noted for obeying Abraham and calling him Sir."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells her name 'Sara' here, matching the spelling already used at this same reference in the KJV text — not a spelling variance worth flagging, unlike Noe below."
+      ]
+    },
+    {
+      "id": "noe_geneva",
+      "name": "Noe",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 3:20",
+          "note": "Referenced via 'the dayes of Noe, while the Arke was preparing, wherein fewe, that is, eight soules were saued in the water' — the type Peter uses to explain baptism."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 1560 spells the name 'Noe' rather than 'Noah' throughout this verse — a real, verified spelling variant from the actual text read, kept as this entry's own name rather than silently normalized to the modern/KJV spelling."
+      ]
+    },
+    {
+      "id": "prophets_geneva_1peter",
+      "name": "The Prophets",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Peter 1:10-12",
+          "note": "Described as having 'inquired and searched' after the salvation and grace that should come, the Spirit of Christ in them testifying beforehand of his sufferings and the glory to follow — reported to believers by those who preached the Gospel by the Holy Ghost sent down from heaven, things the Angels desire to behold."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Treated as one undifferentiated collective per the standing rule — Geneva's text, like KJV's, does not name or individuate which prophets are meant."
+      ]
+    },
+    {
+      "id": "living_hope_geneva_1peter",
+      "name": "A Liuely Hope and the Triall of Faith",
+      "role": "law",
+      "scribeTier": "A Liuely Hope and the Triall of Faith",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Assures scattered, suffering believers of an inheritance immortal and undefiled reserved for them in heaven, and explains that present manifold temptations test and refine genuine faith the way fire refines gold — a salvation so significant even the prophets searched to understand it and the angels desire to behold it.",
+      "verses": [
+        {
+          "ref": "1 Peter 1:3-5",
+          "note": "Believers are begotten again 'vnto a liuely hope' by Christ's resurrection, to an inheritance immortal, undefiled, and that withereth not, reserved in heaven for them."
+        },
+        {
+          "ref": "1 Peter 1:6-7",
+          "note": "Manifold temptations are described as the trial of faith, much more precious than gold that perishes, though it be tried with fire."
+        },
+        {
+          "ref": "1 Peter 1:8-9",
+          "note": "Believers who love Christ though unseen rejoice with joy unspeakable and glorious, receiving the end of their faith, the salvation of their souls."
+        },
+        {
+          "ref": "1 Peter 1:10-12",
+          "note": "The prophets inquired and searched after this salvation, and the Angels desire to behold these things."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "call_to_holiness_geneva_1peter",
+      "name": "Be Yee Holie: The New Birth",
+      "role": "law",
+      "scribeTier": "Be Yee Holie: The New Birth",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Calls believers to personal holiness matching God's own holiness, grounded in the fact that they were redeemed not with corruptible silver or gold but with the precious blood of Christ, and that they have been born again by the incorruptible word of God rather than by perishable means.",
+      "verses": [
+        {
+          "ref": "1 Peter 1:13-16",
+          "note": "Exhortation to gird up the loins of the mind, be sober, and 'be yee holie in all maner of conuersation,' because it is written, 'Be yee holie, for I am holie.'"
+        },
+        {
+          "ref": "1 Peter 1:17-19",
+          "note": "Instructs passing the time of their dwelling here in fear, since they were not redeemed with corruptible things such as silver and gold, but with the precious blood of Christ, as of a lamb undefiled and without spot."
+        },
+        {
+          "ref": "1 Peter 1:22-25",
+          "note": "Purified souls should love one another fervently with a pure heart, being born anew not of mortal seed but of immortal, by the word of God which liveth and endureth for ever — 'all flesh is as grasse... the grasse withereth, and the flower falleth away.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "royal_priesthood_geneva_1peter",
+      "name": "Liuely Stones, A Royall Priesthoode",
+      "role": "law",
+      "scribeTier": "Liuely Stones, A Royall Priesthoode",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Defines the corporate identity of believers as a spiritual house and royal priesthood built upon Christ the living/chief corner stone, called out of darkness into God's marvellous light to show forth his virtues.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:1-3",
+          "note": "Instructs laying aside all malice, guile, dissimulation, envy, and evil speaking, desiring the sincere milk of the word as newborn babes, having tasted that the Lord is bountiful."
+        },
+        {
+          "ref": "1 Peter 2:4-5",
+          "note": "Coming to Christ 'a liuing stone disallowed of men,' believers themselves as 'liuely stones' are built up a spiritual house, an holy priesthood offering spiritual sacrifices acceptable to God."
+        },
+        {
+          "ref": "1 Peter 2:9-10",
+          "note": "Describes believers as 'a chosen generation, a royall Priesthoode, an holy nation, a people set at libertie,' once not a people but now the people of God, once not under mercy but now having obtained mercy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "civil_submission_geneva_1peter",
+      "name": "Submit Your Selues to Euery Ordinance of Man",
+      "role": "law",
+      "scribeTier": "Submit Your Selues to Euery Ordinance of Man",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Instructs believers to submit to civil authority and honor the king for the Lord's sake, so that well-doing puts to silence the ignorance of foolish men, treating their Christian liberty as service to God rather than a cloak for maliciousness.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:11-12",
+          "note": "Urges abstaining from fleshly lusts as strangers and pilgrims, and keeping honest conversation among the Gentiles."
+        },
+        {
+          "ref": "1 Peter 2:13-15",
+          "note": "Submit to every ordinance of man for the Lord's sake, whether to the King as superior or to governors, that by well-doing they put to silence the ignorance of foolish men."
+        },
+        {
+          "ref": "1 Peter 2:16-17",
+          "note": "As free, yet not using liberty as a cloak of maliciousness but as the servants of God — 'Honour all men: loue brotherly fellowship: feare God: honour the King.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "household_order_geneva_1peter",
+      "name": "Household Order: Seruants, Wiues, and Husbands",
+      "role": "law",
+      "scribeTier": "Household Order: Seruants, Wiues, and Husbands",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Gives household-specific instruction: servants are to be subject to masters even the froward, and wives and husbands are to honor one another within marriage, with Sara's obedience to Abraham cited as an example of godly submission and husbands told to give honor to wives as fellow heirs of the grace of life.",
+      "verses": [
+        {
+          "ref": "1 Peter 2:18-20",
+          "note": "Servants are told to be subject to their masters with all fear, not only the good and courteous but also the froward, since it is thankworthy to endure grief suffering wrongfully."
+        },
+        {
+          "ref": "1 Peter 3:1-2",
+          "note": "Wives are to be subject to their husbands, so that even husbands who obey not the word may without the word be won by their conversation."
+        },
+        {
+          "ref": "1 Peter 3:3-4",
+          "note": "Apparelling should not be merely outward — broidered hair, gold, apparel — but 'the hidde man of the heart,' a meek and quiet spirit, precious before God."
+        },
+        {
+          "ref": "1 Peter 3:5-6",
+          "note": "Cites the holy women of time past, including Sara who obeyed Abraham and called him Sir."
+        },
+        {
+          "ref": "1 Peter 3:7",
+          "note": "Husbands are told to dwell with their wives as men of knowledge, giving honor unto the woman as unto the weaker vessel and as heirs together of the grace of life, so their prayers not be interrupted."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "suffering_welldoing_geneva_1peter",
+      "name": "Suffering for Well Doing",
+      "role": "law",
+      "scribeTier": "Suffering for Well Doing",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Calls believers to unity and compassion rather than rendering evil for evil, to sanctify the Lord God in their hearts and be ready to give a meek and reverent answer for their hope, since it is better to suffer for well-doing than for evil-doing.",
+      "verses": [
+        {
+          "ref": "1 Peter 3:8-9",
+          "note": "Be all of one mind, suffer with one another, love as brethren, be pitiful and courteous, not rendering evil for evil nor rebuke for rebuke but contrariwise blessing."
+        },
+        {
+          "ref": "1 Peter 3:10-12",
+          "note": "He that would love life and see good days must refrain his tongue from evil, since the eyes of the Lord are over the righteous and his ears open unto their prayers."
+        },
+        {
+          "ref": "1 Peter 3:13-14",
+          "note": "Asks who will harm those who follow that which is good, and pronounces them blessed if they suffer for righteousness' sake, told not to fear their fear nor be troubled."
+        },
+        {
+          "ref": "1 Peter 3:15-16",
+          "note": "Sanctify the Lord God in your hearts, and be ready always to give an answer to every man that asks a reason of the hope that is in you, with meekness and reverence."
+        },
+        {
+          "ref": "1 Peter 3:17",
+          "note": "It is better, if the will of God be so, to suffer for well-doing than for evil-doing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "stewards_grace_geneva_1peter",
+      "name": "Good Disposers of the Manifolde Grace of God",
+      "role": "law",
+      "scribeTier": "Good Disposers of the Manifolde Grace of God",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Exhorts believers to arm themselves with the same mind as Christ's suffering to cease from sin, live the rest of their time for God's will rather than the lusts of men, and use whatever gift each has received to minister to one another as good disposers of the manifold grace of God.",
+      "verses": [
+        {
+          "ref": "1 Peter 4:1-3",
+          "note": "Arm yourselves likewise with the same mind, since he that has suffered in the flesh has ceased from sin and should no longer live after the lusts of men but the will of God; enough time past was spent 'walking in wantonnes, lustes, drunkennes... and abominable idolatries.'"
+        },
+        {
+          "ref": "1 Peter 4:7-8",
+          "note": "The end of all things is at hand — be sober and watch in prayer; above all things have fervent love, 'for loue shall couer the multitude of sinnes.'"
+        },
+        {
+          "ref": "1 Peter 4:9-11",
+          "note": "Be hospitable without grudging; minister whatever gift received to one another as 'good disposers of the manifolde grace of God,' speaking as the words of God, so that God be glorified through Jesus Christ."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "fiery_trial_geneva_1peter",
+      "name": "The Firie Triall",
+      "role": "law",
+      "scribeTier": "The Firie Triall",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Reassures believers not to think it strange concerning the fiery trial among them, but to rejoice as partakers of Christ's sufferings, and explains that judgment beginning at the house of God means sufferers should commit their souls to God in well-doing as unto a faithful Creator.",
+      "verses": [
+        {
+          "ref": "1 Peter 4:12-13",
+          "note": "Believers should not think it strange concerning 'the firie triall, which is among you to proue you,' but rejoice as partakers of Christ's sufferings."
+        },
+        {
+          "ref": "1 Peter 4:14",
+          "note": "Being railed upon for the name of Christ is called blessed, since the spirit of glory and of God rests upon them."
+        },
+        {
+          "ref": "1 Peter 4:15-16",
+          "note": "Warns against suffering as a murderer, thief, evildoer, or busybody in other men's matters, but not being ashamed to suffer as a Christian, glorifying God in that name."
+        },
+        {
+          "ref": "1 Peter 4:17-19",
+          "note": "Judgment must begin at the house of God; if the righteous scarcely be saved, where shall the ungodly appear? Sufferers according to God's will should commit their souls to him in well-doing, as unto a faithful Creator."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "humility_adversary_geneva_1peter",
+      "name": "Humilitie and Resisting the Aduersarie",
+      "role": "law",
+      "scribeTier": "Humilitie and Resisting the Aduersarie",
+      "parentManagerId": null,
+      "deliveredBy": "peter_geneva_1peter",
+      "purpose": "Instructs younger believers to submit to elders and all to decke themselves inwardly in lowliness of mind, since God resists the proud but gives grace to the humble; calls believers to cast their care upon God and stay sober and vigilant, since their adversary the devil seeks to devour them, and to resist him steadfast in the faith.",
+      "verses": [
+        {
+          "ref": "1 Peter 5:5",
+          "note": "Younger believers are told to submit to the elders, and all to submit to one another, 'decke your selues inwardly in lowlinesse of minde: for God resisteth the proude, and giueth grace to the humble.'"
+        },
+        {
+          "ref": "1 Peter 5:6-7",
+          "note": "Humble yourselves under the mighty hand of God, that he may exalt you in due time; 'Cast all your care on him: for he careth for you.'"
+        },
+        {
+          "ref": "1 Peter 5:8-9",
+          "note": "Be sober and watch, since 'your aduersarie the deuil as a roaring lyon walketh about, seeking whom he may deuoure'; resist him steadfast in the faith."
+        },
+        {
+          "ref": "1 Peter 5:10-11",
+          "note": "The God of all grace, who called believers to his eternal glory by Christ Jesus, after they have suffered a little, will 'make you perfite, confirme, strengthen and stablish you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "babylonChurch": {
+      "ref": "1 Peter 5:13",
+      "note": "'The Church that is at Babylon elected together with you, saluteth you' — many scholars read this as a symbolic cipher for Rome, but Geneva's own text (like KJV's) does not itself state this identification, so it is left as an unresolved location/community reference rather than asserted as Rome."
+    },
+    "angels": {
+      "ref": "1 Peter 1:12",
+      "note": "The Angels are noted as desiring to behold the things of this salvation — a brief mention, not indexed as a tracked character."
+    }
+  }
+}

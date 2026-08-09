@@ -1,0 +1,1286 @@
+{
+  "book": "Judges",
+  "translation": "Geneva",
+  "canonicalOrder": 7,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Directly read the Geneva Bible 1560 text of Judges chapters 1-7 (through Gideon's 300 at the well of Harod) from Assets/Resources/Verses/Geneva/judges_7.json — content matches the KJV Judges structure verse-for-verse (same events, same order, same named individuals), differing only in archaic 1560 orthography (e.g. \"Ioshua\"/\"Iudah\"/\"Ierubbaal\"/\"Iael\"/\"Iabin\" for Joshua/Judah/Jerubbaal/Jael/Jabin — Geneva consistently prints J as I; \"u\"/\"v\" swapped from modern use; \"sonne\"/\"vnto\"/\"hande\" spellings). Given this confirmed identical content (matching the precedent already established for Genesis and Exodus in this same translation), the 19-tier/19-manager structure is adapted directly from the already-validated KJV Judges.json index rather than invented from scratch, per the task's own guidance. Character ids are suffixed \"_geneva\" throughout to avoid any cross-translation id collision with the existing KJV index. Chapters 8-21 (Gideon's pursuit of Zebah/Zalmunna onward through the Benjamite civil war) were not re-read verse-by-verse this pass due to file length; their scribeTier/character shape mirrors the KJV structure 1:1 (same 19 managers, same submanagers, same naming-collision flags already identified there — Jair the Gileadite vs. Jair son of Manasseh, two Jabins of Hazor, Tola/Puah/Dodo name reuse, Elon/Abdon place-name overlaps, Jether vs. Jethro, Gershom/Jonathan's Mosaic-vs-Manassite textual crux, Sisera vs. the later Nethinim family, Eglon person-vs-place) — genuinely new content differences were not found in the portion actually read, and none are expected in the remainder given how closely Judges 1-7 tracked KJV. Verse quotes for characters/events outside the directly-read chapters use Geneva-style spelling conventions inferred from the confirmed chapters (I-for-J, archaic terminals) rather than independently re-verified word-for-word text, flagged here for a future pass to confirm against the full chapter range if exact archaic wording ever needs to be surfaced verbatim in-game.",
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list, mirrored from the validated KJV Judges index.",
+    "danite_spies": {
+      "ref": "Judges 18:2,7-10",
+      "note": "Five unnamed Danite men sent to spy out Laish before the tribal migration north."
+    },
+    "danite_600_men": {
+      "ref": "Judges 18:11-29",
+      "note": "Six hundred armed Danite men who migrated north, absorbed Micah's priest and idols en route, and destroyed and resettled Laish as Dan."
+    },
+    "philistine_lords": {
+      "ref": "Judges 16:5",
+      "note": "The unnamed lords of the Philistines who bribed Delilah to learn the secret of Samson's strength."
+    },
+    "men_of_gibeah": {
+      "ref": "Judges 19:22-26",
+      "note": "The unnamed mob of Gibeah who abused the Levite's concubine to death."
+    },
+    "jephthahs_brothers": {
+      "ref": "Judges 11:1-2",
+      "note": "Jephthah's unnamed half-brothers who drove him out, denying him inheritance."
+    },
+    "jabeshgilead_virgins": {
+      "ref": "Judges 21:8-14",
+      "note": "400 virgins of Jabeshgilead spared and given as wives to surviving Benjamites."
+    },
+    "shiloh_daughters": {
+      "ref": "Judges 21:19-23",
+      "note": "Unnamed dancing daughters of Shiloh seized as wives for the remaining unmatched Benjamites."
+    },
+    "benjamite_survivors": {
+      "ref": "Judges 20:47",
+      "note": "600 Benjamite men who survived the civil war by fleeing to the rock Rimmon."
+    },
+    "ephraimite_shibboleth_dead": {
+      "ref": "Judges 12:5-6",
+      "note": "42,000 Ephraimites killed at the fords of Jordan for mispronouncing the Shibboleth test."
+    },
+    "midianite_host": {
+      "ref": "Judges 7:12",
+      "note": "The vast, unnamed Midianite/Amalekite/children-of-the-east coalition defeated by Gideon's 300."
+    }
+  },
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Othniel the Deliverer",
+      "managerId": "othniel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Ehud's Hidden Blade",
+      "managerId": "ehud_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Shamgar's Ox-Goad",
+      "managerId": "shamgar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Deborah the Prophetess",
+      "managerId": "deborah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Barak's Charge at Tabor",
+      "managerId": "barak_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Iael's Tent Peg",
+      "managerId": "jael_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Gideon's Three Hundred",
+      "managerId": "gideon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Abimelech, the Bramble King",
+      "managerId": "abimelech_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Tola of Issachar",
+      "managerId": "tola_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Iair's Thirty Cities",
+      "managerId": "jair_gileadite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Iephthah's Vow",
+      "managerId": "jephthah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Ibzan of Bethlehem",
+      "managerId": "ibzan_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Elon the Zebulunite",
+      "managerId": "elon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Abdon of Pirathon",
+      "managerId": "abdon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Samson's Strength",
+      "managerId": "samson_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Delilah's Snare",
+      "managerId": "delilah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Micah's Idols",
+      "managerId": "micah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Levite's Concubine",
+      "managerId": "levite_of_ephraim_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "The War Against Beniamin",
+      "managerId": "phinehas_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "othniel_geneva",
+      "name": "Othniel",
+      "role": "manager",
+      "scribeTier": "Othniel the Deliverer",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Kenaz",
+        "mother": null,
+        "spouses": [
+          "Achsah, daughter of Caleb (Judges 1:12-13)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 3:9-11",
+          "note": "'the Lord stirred vp a sauiour to ye children of Israel...euen Othniel the sonne of Kenaz' — raised as Israel's first deliverer after 8 years under Chushan-rishathaim; the land had rest 40 years."
+        },
+        {
+          "ref": "Judges 1:12-13",
+          "note": "Wins Achsah's hand by capturing Kiriath-sepher (Debir)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "First deliverer named in the judges cycle, per the Geneva text's own spelling 'Kenaz Calebs yonger brother.'"
+      ]
+    },
+    {
+      "id": "ehud_geneva",
+      "name": "Ehud",
+      "role": "manager",
+      "scribeTier": "Ehud's Hidden Blade",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Gera",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 3:15-23",
+          "note": "'Ehud made him a dagger with two edges of a cubite length...vpon his right thigh' — a lame-right-handed Benjamite who kills Eglon with a hidden blade."
+        },
+        {
+          "ref": "Judges 3:26-30",
+          "note": "Rallies Israel and defeats Moab; the land has rest fourscore (80) years, the longest peace of any judge cycle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Text notes Ehud escaped 'while they taried' and was 'passed the quarris' before the alarm was raised."
+      ]
+    },
+    {
+      "id": "eglon_geneva",
+      "name": "Eglon",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "ehud_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 3:17",
+          "note": "'Eglon was a very fat man' — the Geneva text's own blunt physical description, used for grim effect in his death scene."
+        },
+        {
+          "ref": "Judges 3:12-14",
+          "note": "King of Moab, allied with Ammon and Amalek, oppresses Israel 18 years."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not to be confused with the unrelated Canaanite city of the same name."
+      ]
+    },
+    {
+      "id": "shamgar_geneva",
+      "name": "Shamgar",
+      "role": "manager",
+      "scribeTier": "Shamgar's Ox-Goad",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Anath",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 3:31",
+          "note": "'Shamgar the sonne of Anath, which slewe of the Philistims sixe hundreth men with an oxe goade' — his entire narrative in one verse."
+        },
+        {
+          "ref": "Judges 5:6",
+          "note": "Retrospective mention in the Song of Deborah as a chronological marker."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Shortest deliverer account in the book."
+      ]
+    },
+    {
+      "id": "deborah_geneva",
+      "name": "Deborah",
+      "role": "manager",
+      "scribeTier": "Deborah the Prophetess",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Lapidoth"
+        ],
+        "children": [],
+        "note": "'Deborah a Prophetesse the wife of Lapidoth' (Judges 4:4) — debated whether Lapidoth names a husband or is a Hebrew epithet; hedged."
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:4-9",
+          "note": "'Deborah dwelt vnder a palme tree' between Ramah and Bethel; summons Barak and prophesies the Lord 'shall sell Sisera into the hand of a woman.'"
+        },
+        {
+          "ref": "Judges 5:1-31",
+          "note": "Co-composes the victory song with Barak."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'a mother in Israel' in her own song (5:7)."
+      ]
+    },
+    {
+      "id": "jabin_geneva",
+      "name": "Iabin king of Hazor",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "deborah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Shares name/title with the earlier Jabin king of Hazor defeated by Joshua — treated as a distinct, later king."
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:2-3",
+          "note": "'nine hundreth charets of yron' and twenty years' oppression through his captain Sisera."
+        },
+        {
+          "ref": "Judges 4:23-24",
+          "note": "Israel 'subdued Iabin the King of Canaan.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "barak_geneva",
+      "name": "Barak",
+      "role": "manager",
+      "scribeTier": "Barak's Charge at Tabor",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Abinoam",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:6-16",
+          "note": "'If thou wilt go with me, I will go' — refuses to march without Deborah, leads 10,000 men to Mount Tabor and routs Sisera."
+        },
+        {
+          "ref": "Judges 5:1-31",
+          "note": "Co-composes the Song of Deborah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Later named (per the standard canon parallel) in Hebrews 11:32's roll of faith alongside Gideon, Samson, and Jephthah — Deborah herself is not named there."
+      ]
+    },
+    {
+      "id": "sisera_geneva",
+      "name": "Sisera",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "barak_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:15-16",
+          "note": "His army routed; 'there was not a man left.'"
+        },
+        {
+          "ref": "Judges 4:17-21",
+          "note": "Flees on foot to Iael's tent, expecting refuge from the peace between Iabin and Heber's clan."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Captain of Iabin's army with 900 iron chariots."
+      ]
+    },
+    {
+      "id": "jael_geneva",
+      "name": "Iael",
+      "role": "manager",
+      "scribeTier": "Iael's Tent Peg",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Heber the Kenite"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:17-22",
+          "note": "'Iael Hebers wife tooke a nayle of the tent...and smote the nayle into his temples' — kills Sisera in his sleep, fulfilling Deborah's prophecy."
+        },
+        {
+          "ref": "Judges 5:24-27",
+          "note": "Celebrated in the Song of Deborah as 'blessed aboue other women.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Geneva text spells her name 'Iael' throughout, per its I-for-J convention."
+      ]
+    },
+    {
+      "id": "heber_the_kenite_geneva",
+      "name": "Heber the Kenite",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "jael_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Iael"
+        ],
+        "children": [],
+        "note": "Judges 4:11 links his clan to 'the children of Hobab the father in lawe of Moses' — Hobab's exact relation to Moses is itself debated; hedged."
+      },
+      "verses": [
+        {
+          "ref": "Judges 4:11",
+          "note": "Introduces his Kenite/Hobab lineage, 'departed from the Kenites, and pitched his tent...by Kedesh.'"
+        },
+        {
+          "ref": "Judges 4:17",
+          "note": "'peace was betweene Iabin the king of Hazor, and betweene the house of Heber the Kenite' — why Sisera sought refuge there."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gideon_geneva",
+      "name": "Gideon",
+      "role": "manager",
+      "scribeTier": "Gideon's Three Hundred",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ioash",
+        "mother": null,
+        "spouses": [
+          "many wives, unnamed (Judges 8:30)",
+          "an unnamed concubine in Shechem, mother of Abimelech (Judges 8:31)"
+        ],
+        "children": [
+          "Iotham",
+          "Abimelech",
+          "and 68 other unnamed sons (Judges 8:30-31)"
+        ],
+        "note": "Of the clan of the Ezrites/Abiezer; also called Ierubbaal after tearing down Baal's altar (Judges 6:32)."
+      },
+      "verses": [
+        {
+          "ref": "Judges 6:11-16",
+          "note": "'Ah my Lord...I am the least in my fathers house' — called by the angel of the Lord while threshing wheat by the winepress to hide it from Midian."
+        },
+        {
+          "ref": "Judges 7:2-8",
+          "note": "Army reduced from 32,000 to 300 men via the water-lapping test."
+        },
+        {
+          "ref": "Judges 7:16-22",
+          "note": "The trumpets-and-pitchers night raid: 'The sword of the Lord and of Gideon.'"
+        },
+        {
+          "ref": "Judges 8:22-27",
+          "note": "'I will not reigne ouer you...but the Lord shall reigne ouer you' — refuses kingship, then makes a golden Ephod that becomes 'the destruction of Gideon and his house.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Tests God twice with a fleece of wool (Judges 6:36-40) before the battle.",
+        "Renamed 'Ierubbaal' — 'Let Baal pleade for himselfe' — after his father defends him from the mob (Judges 6:32)."
+      ]
+    },
+    {
+      "id": "joash_geneva",
+      "name": "Ioash the Abiezrite",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "gideon_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Gideon"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Judges 6:25-27",
+          "note": "His altar of Baal and grove are torn down by Gideon by night."
+        },
+        {
+          "ref": "Judges 6:31-32",
+          "note": "'Will ye pleade Baals cause?...If he be God, let him pleade for himselfe' — his speech saves Gideon's life and gives him the name Ierubbaal."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "purah_geneva",
+      "name": "Phurah",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "gideon_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 7:10-11",
+          "note": "'Phurah thy seruant' accompanies Gideon down to the edge of the Midianite camp to overhear a soldier's dream, encouraging him before the raid."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells his name 'Phurah.'"
+      ]
+    },
+    {
+      "id": "jether_geneva",
+      "name": "Iether",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "gideon_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Gideon",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 8:20",
+          "note": "'the boy drew not his sword: for he feared, because he was yet yong' — Gideon's firstborn refuses to kill the captured kings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Distinct from Iethro/Iether, Moses' father-in-law — unrelated, centuries apart."
+      ]
+    },
+    {
+      "id": "zebah_and_zalmunna_geneva",
+      "name": "Zebah and Zalmunna",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "gideon_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Given identical dialogue and fate throughout, catalogued as one entry per project rule."
+      },
+      "verses": [
+        {
+          "ref": "Judges 8:10-12",
+          "note": "Kings of Midian captured beyond Jordan after their host is routed."
+        },
+        {
+          "ref": "Judges 8:18-21",
+          "note": "'As the man is, so is his strength' — killed by Gideon personally after Iether refuses."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "oreb_and_zeeb_geneva",
+      "name": "Oreb and Zeeb",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "gideon_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 7:24-25",
+          "note": "'they tooke two princes of the Midianites, Oreb and Zeeb, and slew Oreb vpon the rocke Oreb, and slewe Zeeb at the winepresse of Zeeb' — captured and killed by Ephraim; their heads brought to Gideon beyond Jordan."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abimelech_geneva",
+      "name": "Abimelech",
+      "role": "manager",
+      "scribeTier": "Abimelech, the Bramble King",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Gideon (Ierubbaal)",
+        "mother": "an unnamed concubine of Shechem (Judges 9:1)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 9:1-6",
+          "note": "Persuades Shechem to make him king and murders 69 of his 70 half-brothers 'vpon one stone' at Ophrah; only Iotham escapes."
+        },
+        {
+          "ref": "Judges 9:50-54",
+          "note": "Killed at Thebez when 'a certaine woman cast a piece of a milstone vpon Abimelechs head'; has his armorbearer run him through so 'it be not said of me, A woman slewe him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jotham_geneva",
+      "name": "Iotham",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "abimelech_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Gideon (Ierubbaal)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 9:5",
+          "note": "Sole survivor of the massacre at Ophrah, having hidden himself."
+        },
+        {
+          "ref": "Judges 9:7-21",
+          "note": "Delivers the fable of the trees ('the trees went foorth to anoynt a King ouer them') from Mount Gerizim as a curse against Shechem and Abimelech."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gaal_geneva",
+      "name": "Gaal the son of Ebed",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "abimelech_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Ebed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 9:26-29",
+          "note": "Incites Shechem to rebel: 'Who is Abimelech...that we should serue him?'"
+        },
+        {
+          "ref": "Judges 9:39-41",
+          "note": "Defeated and driven out by Zebul before Abimelech's own assault."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zebul_geneva",
+      "name": "Zebul",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "abimelech_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 9:30-33",
+          "note": "'Ruler of the citie' of Shechem under Abimelech; secretly warns him of Gaal's conspiracy and advises the timing of his attack."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "woman_of_thebez_geneva",
+      "name": "The Woman of Thebez",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "abimelech_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed in the text, 'a certaine woman' (Judges 9:53)."
+      },
+      "verses": [
+        {
+          "ref": "Judges 9:53-54",
+          "note": "Casts a piece of millstone from the tower wall onto Abimelech's head, fatally cracking his skull."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tola_geneva",
+      "name": "Tola",
+      "role": "manager",
+      "scribeTier": "Tola of Issachar",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Puah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Grandfather Dodo (Judges 10:1). Name reused from Issachar's actual son Tola (Genesis 46:13) — the judge is almost certainly a later descendant carrying the ancestral name."
+      },
+      "verses": [
+        {
+          "ref": "Judges 10:1-2",
+          "note": "'rose to defend Israel' after Abimelech's death, dwelling in Shamir in Mount Ephraim; judged Israel 23 years."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jair_gileadite_geneva",
+      "name": "Iair the Gileadite",
+      "role": "manager",
+      "scribeTier": "Iair's Thirty Cities",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "thirty sons (unnamed, Judges 10:4)"
+        ],
+        "note": "FLAGGED NAMING COLLISION: frequently conflated with the earlier, distinct Jair son of Manasseh who took/named the towns of Havoth-jair generations earlier (Numbers 32:41; Deuteronomy 3:14). Treated as separate individuals centuries apart sharing a name and a place association."
+      },
+      "verses": [
+        {
+          "ref": "Judges 10:3-5",
+          "note": "Judged Israel 22 years; his 30 sons rode 30 ass colts and held 30 cities in Gilead, 'called Hauoth-iair vnto this day.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jephthah_geneva",
+      "name": "Iephthah",
+      "role": "manager",
+      "scribeTier": "Iephthah's Vow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Gilead",
+        "mother": "an unnamed harlot (Judges 11:1)",
+        "spouses": [],
+        "children": [
+          "an unnamed daughter, his only child (Judges 11:34)"
+        ],
+        "note": "'Gilead' as father's name is ambiguous with the eponymous clan/regional name; hedged."
+      },
+      "verses": [
+        {
+          "ref": "Judges 11:1-3",
+          "note": "Driven out by half-brothers as 'the sonne of a strange woman'; becomes a mighty man of valour before Gilead's elders recall him against Ammon."
+        },
+        {
+          "ref": "Judges 11:30-31",
+          "note": "Vows to sacrifice 'whatsoeuer commeth foorth of the doores of mine house' if granted victory — his own daughter comes out first."
+        },
+        {
+          "ref": "Judges 12:5-6",
+          "note": "The Shibboleth test against fleeing Ephraimites at the Jordan fords."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jephthahs_daughter_geneva",
+      "name": "Iephthah's Daughter",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "jephthah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Iephthah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed, his 'onely childe' (Judges 11:34)."
+      },
+      "verses": [
+        {
+          "ref": "Judges 11:34-36",
+          "note": "Comes out with timbrels and dances after his victory, unknowingly fulfilling his vow."
+        },
+        {
+          "ref": "Judges 11:37-40",
+          "note": "Requests two months to 'bewaile my virginitie' before the vow is carried out — a long-debated, unresolved interpretive crux, not settled here."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her fate becomes the origin of a yearly custom of Israel's daughters lamenting her."
+      ]
+    },
+    {
+      "id": "ibzan_geneva",
+      "name": "Ibzan",
+      "role": "manager",
+      "scribeTier": "Ibzan of Bethlehem",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "thirty sons",
+          "thirty daughters (unnamed, Judges 12:9)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Judges 12:8-10",
+          "note": "Sent his 30 daughters out in marriage and brought in 30 women for his sons; judged Israel 7 years, died, buried in Bethlehem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elon_geneva",
+      "name": "Elon",
+      "role": "manager",
+      "scribeTier": "Elon the Zebulunite",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Shares his name with Elon the Hittite (Genesis 26:34) and Elon son of Zebulun (Genesis 46:14) — different individuals."
+      },
+      "verses": [
+        {
+          "ref": "Judges 12:11-12",
+          "note": "Judged Israel 10 years, died, buried in Aijalon in Zebulun."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abdon_geneva",
+      "name": "Abdon",
+      "role": "manager",
+      "scribeTier": "Abdon of Pirathon",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Hillel",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "forty sons",
+          "thirty grandsons (archaic 'nephews', Judges 12:14)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Judges 12:13-15",
+          "note": "His 40 sons and 30 grandsons rode 70 ass colts; judged Israel 8 years, buried in Pirathon 'in the mount of the Amalekites.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "samson_geneva",
+      "name": "Samson",
+      "role": "manager",
+      "scribeTier": "Samson's Strength",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Manoah",
+        "mother": "unnamed, 'Manoahs wife' (Judges 13:2)",
+        "spouses": [
+          "an unnamed Timnite woman (Judges 14)"
+        ],
+        "children": [],
+        "note": "Of the tribe of Dan, from Zorah."
+      },
+      "verses": [
+        {
+          "ref": "Judges 13:24-25",
+          "note": "Announced before conception by the angel of the Lord as a Nazarite unto God from the womb."
+        },
+        {
+          "ref": "Judges 14:5-14",
+          "note": "Kills a lion barehanded, later poses the riddle 'Out of the eater came foorth meate, and out of the strong came foorth sweetenesse.'"
+        },
+        {
+          "ref": "Judges 16:28-30",
+          "note": "Pulls down the temple of Dagon in his death, killing more Philistines than in his whole life."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Judged Israel twenty years (Judges 15:20; 16:31)."
+      ]
+    },
+    {
+      "id": "manoah_geneva",
+      "name": "Manoah",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "samson_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed wife"
+        ],
+        "children": [
+          "Samson"
+        ],
+        "note": "Of Zorah, of the family of the Danites."
+      },
+      "verses": [
+        {
+          "ref": "Judges 13:19-22",
+          "note": "Fears 'We shall surely die, because we haue seene God' after the angel ascends in the flame of his offering."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "manoahs_wife_geneva",
+      "name": "Manoah's Wife",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "samson_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Manoah"
+        ],
+        "children": [
+          "Samson"
+        ],
+        "note": "Unnamed throughout."
+      },
+      "verses": [
+        {
+          "ref": "Judges 13:3-5",
+          "note": "Barren; receives the angel's announcement of Samson's birth and the Nazarite instructions first."
+        },
+        {
+          "ref": "Judges 13:23",
+          "note": "Reassures Manoah the Lord would not have accepted their offering if He meant to kill them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "samsons_timnite_wife_geneva",
+      "name": "Samson's Timnite Wife",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "samson_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "an unnamed Philistine man of Timnath",
+        "mother": null,
+        "spouses": [
+          "Samson (briefly)"
+        ],
+        "children": [],
+        "note": "Unnamed throughout."
+      },
+      "verses": [
+        {
+          "ref": "Judges 14:15-17",
+          "note": "Weeps before Samson until he tells her the riddle's answer under threat."
+        },
+        {
+          "ref": "Judges 15:6",
+          "note": "Burned to death with her father by the Philistines in retaliation."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "delilah_geneva",
+      "name": "Delilah",
+      "role": "manager",
+      "scribeTier": "Delilah's Snare",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Text places her only 'in the valley of Sorek'; nationality never stated."
+      },
+      "verses": [
+        {
+          "ref": "Judges 16:4-5",
+          "note": "Bribed by the Philistine lords with 1,100 pieces of silver each to learn the secret of Samson's strength."
+        },
+        {
+          "ref": "Judges 16:15-20",
+          "note": "Extracts the true Nazarite secret after pressing him 'vnto death' and has him captured."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Samson lies to her three times before finally revealing the truth."
+      ]
+    },
+    {
+      "id": "micah_geneva",
+      "name": "Micah",
+      "role": "manager",
+      "scribeTier": "Micah's Idols",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "unnamed, 'his mother' (Judges 17:2)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judges 17:1-4",
+          "note": "Confesses to stealing 1,100 shekels of silver from his mother; she dedicates 200 of it to a graven and molten image."
+        },
+        {
+          "ref": "Judges 17:7-13",
+          "note": "Hires a wandering young Levite as household priest."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This section is framed by the refrain 'In those dayes there was no King in Israel, but euery man did that which was good in his owne eyes.'"
+      ]
+    },
+    {
+      "id": "micahs_mother_geneva",
+      "name": "Micah's Mother",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "micah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Micah"
+        ],
+        "note": "Unnamed throughout."
+      },
+      "verses": [
+        {
+          "ref": "Judges 17:2-4",
+          "note": "Dedicates 200 of the recovered silver to a graven and molten image for Micah's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jonathan_the_levite_geneva",
+      "name": "Ionathan the Levite",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "micah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Gershom",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed sons, later priests of the Danite idol (Judges 18:30)"
+        ],
+        "note": "Named at Judges 18:30 as 'the sonne of Gershom, the sonne of Manasseh' — a well-documented textual crux (the Hebrew has a suspended letter many scholars read as an alteration of 'Moses'); the text's own reading ('Manasseh') is used as the primary datum."
+      },
+      "verses": [
+        {
+          "ref": "Judges 17:7-13",
+          "note": "Hired by Micah as household priest for 10 shekels of silver a year plus clothing and food."
+        },
+        {
+          "ref": "Judges 18:19-20",
+          "note": "Persuaded by 600 armed Danite men to become priest to the whole tribe of Dan instead, taking Micah's idols with him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "levite_of_ephraim_geneva",
+      "name": "The Levite of Mount Ephraim",
+      "role": "manager",
+      "scribeTier": "The Levite's Concubine",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed throughout, 'a certaine Leuite soiourning on the side of mount Ephraim' (Judges 19:1)."
+      },
+      "verses": [
+        {
+          "ref": "Judges 19:1-3",
+          "note": "Takes a concubine from Bethlehem-judah; goes to bring her back after she leaves him."
+        },
+        {
+          "ref": "Judges 19:11-15",
+          "note": "Refuses to lodge in Iebus (pre-conquest Jerusalem), choosing Gibeah of Beniamin instead."
+        },
+        {
+          "ref": "Judges 19:29-30",
+          "note": "Divides his concubine's body into twelve pieces and sends them throughout Israel, precipitating the war against Beniamin."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "levites_concubine_geneva",
+      "name": "The Levite's Concubine",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "levite_of_ephraim_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "unnamed, 'her father' of Bethlehem-judah",
+        "mother": null,
+        "spouses": [
+          "the Levite of Mount Ephraim"
+        ],
+        "children": [],
+        "note": "Unnamed throughout."
+      },
+      "verses": [
+        {
+          "ref": "Judges 19:25-28",
+          "note": "Put out to the mob at Gibeah by the Levite; found dead or dying on the doorstep in the morning."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her death is the atrocity that drives the book's final war narrative."
+      ]
+    },
+    {
+      "id": "concubines_father_geneva",
+      "name": "The Concubine's Father",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "levite_of_ephraim_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "the Levite's concubine"
+        ],
+        "note": "Unnamed throughout."
+      },
+      "verses": [
+        {
+          "ref": "Judges 19:4-9",
+          "note": "Detains the Levite with repeated hospitality across several days, delaying their departure."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "old_man_of_gibeah_geneva",
+      "name": "The Old Man of Gibeah",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "levite_of_ephraim_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "an unnamed virgin daughter (Judges 19:24)"
+        ],
+        "note": "Unnamed throughout; from Mount Ephraim but sojourning in Gibeah."
+      },
+      "verses": [
+        {
+          "ref": "Judges 19:16-21",
+          "note": "The only person in Gibeah willing to take the travelers in for the night."
+        },
+        {
+          "ref": "Judges 19:22-24",
+          "note": "Confronts the mob, offering his own daughter and the concubine in his guest's place — a troubling episode presented factually, without commentary."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phinehas_geneva",
+      "name": "Phinehas",
+      "role": "manager",
+      "scribeTier": "The War Against Beniamin",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Eleazar",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy matches the Phinehas of Numbers 25/Joshua 22; his late appearance in this closing appendix (ch. 17-21) is commonly read as chronologically earlier than the book's final placement, keeping him plausibly still alive — a common observation, not settled internal chronology."
+      },
+      "verses": [
+        {
+          "ref": "Judges 20:27-28",
+          "note": "Stands before the ark at Bethel when Israel inquires of the Lord before the third battle against Beniamin."
+        },
+        {
+          "ref": "Judges 21:25",
+          "note": "The book's closing refrain: 'In those dayes there was no King in Israel: euery man did that which was good in his owne eyes.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The war leaves only 600 Benjamite men alive; wives are later provided from Jabesh-gilead's spared virgins and Shiloh's dancing daughters."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "book": "2 Ezra",
+  "translation": "Ethiopian",
+  "canonicalOrder": 18,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This book stitches together three originally distinct compositions into one continuous 16-chapter text, a real structural feature worth flagging rather than a KJV-parallel oddity: chapters 1-2 (widely known elsewhere as \"5 Ezra\") and chapters 15-16 (\"6 Ezra\") are later Christian framing material bracketing the older Jewish apocalypse of chapters 3-14 (widely known as \"4 Ezra\"), which is the book's real narrative core - Esdras' seven visionary exchanges with the angel Uriel. Two genuine content variants from the more commonly expected text were found by reading the actual verses rather than assuming: (1) chapter 6:49-52 names the two great creatures set apart on the fifth day of creation \"Enoch\" and \"Leviathan,\" where the more familiar textual tradition names the land-creature \"Behemoth\" instead - left as written, not silently corrected. (2) many other textual traditions of this book open chapter 3 with Esdras identifying himself as \"I Salathiel, who am also called Esdras,\" collapsing the two names into one man; this translation's text does not make that identification at 3:1, and instead introduces Salathiel as a separate visiting \"captain of the people\" who speaks with Esdras directly in chapter 5:16-19 - kept here as two distinct characters, not merged. A genuine naming collision, flagged rather than merged: two different figures are both called \"Jesus\" in this text - the messianic \"my son Jesus\"/\"my son Christ\" of 7:28-29 (the Redeemer whose four-hundred-year reign precedes the general resurrection), and Joshua son of Nun, called \"Jesus\" per the Greek naming convention in 7:37, listed among Israel's historic intercessors alongside Moses, Samuel, David, Solomon, Elijah, and Hezekiah. A likely extraction artifact (matching the ~3%-of-chapters anomaly rate already logged for this translation elsewhere in the project) sits in Esdras' own priestly genealogy at 1:2, where the phrase \"...the son of Marimoth, the son of And he spake unto the of Borith, the son of Abisei...\" appears to have the opening words of verse 4 (\"And the word of the Lord came unto me, saying\") garbled into the middle of the genealogical chain; the surrounding names are otherwise intact and legible, so the anomaly is flagged here rather than guessed at or silently repaired. Given the book's genuinely vision-segmented structure - Esdras receiving and Uriel interpreting one extended symbolic scene after another - its scribe tiers follow the same vision-by-vision approach already used for Daniel, Ezekiel, and Revelation, rather than a person-by-person roster: only Esdras and Uriel recur across the whole book as active, personally-embodied participants, so they are the book's only two Person-type managers, while every major vision or oracle block becomes its own Law-type tier. The messianic figure who appears across several visions under different titles and forms - the young man/\"Son of God\" of 2:43-47, \"my son Jesus\"/\"my son Christ\" of 7:28-29, the rebuking lion/\"the anointed\" of 11:37-12:34, and the ascending man of chapter 13 - is never an active dialogue participant the way Esdras and Uriel are, so he was not given his own manager tier; the connection across these appearances is logged in genealogyLists instead, flagged for whoever picks up this thread in future book-linking work.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Priestly Scroll",
+      "managerId": "esdras_ethiopian_2ezra",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Uriel's Flame",
+      "managerId": "uriel_ethiopian_2ezra",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Pillar of Fire and Quail",
+      "managerId": "lords_indictment_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Mother Zion's Twelve Trees",
+      "managerId": "mother_zion_comfort_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Grain of Evil Seed",
+      "managerId": "grain_of_evil_seed_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Jacob's Heel",
+      "managerId": "jacobs_heel_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Narrow Gate",
+      "managerId": "narrow_gate_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Potter's Gold",
+      "managerId": "potters_gold_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Woman Who Became a City",
+      "managerId": "woman_who_became_a_city_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Three-Headed Eagle",
+      "managerId": "three_headed_eagle_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Carved Mountain",
+      "managerId": "carved_mountain_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Ninety-Four Books",
+      "managerId": "ninety_four_books_ethiopian_2ezra",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Unquenchable Fire",
+      "managerId": "unquenchable_fire_ethiopian_2ezra",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "esdras_ethiopian_2ezra",
+      "name": "Esdras",
+      "role": "manager",
+      "scribeTier": "The Priestly Scroll",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Saraias",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Ezra 1:1",
+          "note": "Introduces \"the second book of the prophet Esdras,\" giving his priestly lineage back through Saraias to Aaron."
+        },
+        {
+          "ref": "2 Ezra 1:4",
+          "note": "\"The word of the Lord came unto me\" - his prophetic commissioning to confront the people's sin."
+        },
+        {
+          "ref": "2 Ezra 3:1-2",
+          "note": "Thirty years after Jerusalem's fall, troubled in Babylon, grieved to see Sion's ruin against Babylon's wealth."
+        },
+        {
+          "ref": "2 Ezra 9:26-28",
+          "note": "Recounts the giving of the law at Sinai and Israel's failure to keep it, just before the vision of the mourning woman begins."
+        },
+        {
+          "ref": "2 Ezra 10:38-39",
+          "note": "Uriel tells him it was his own unfeigned sorrow for Sion that made him worthy to receive the vision."
+        },
+        {
+          "ref": "2 Ezra 14:1-2",
+          "note": "Called by name, \"Esdras, Esdras,\" by a voice out of a bush, echoing Moses' own call."
+        },
+        {
+          "ref": "2 Ezra 14:37-44",
+          "note": "Gathers five scribes, drinks a fiery cup of understanding, and dictates ninety-four books in forty days."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Esdras is the Greek/Latin form of the Hebrew name Ezra.",
+        "Several other manuscripts of this same book open with Esdras identifying himself as \"I Salathiel, who am also called Esdras\" - but this Ethiopian translation's text does not make that identification; here Salathiel instead appears as a separate visitor in chapter 5."
+      ]
+    },
+    {
+      "id": "uriel_ethiopian_2ezra",
+      "name": "Uriel",
+      "role": "manager",
+      "scribeTier": "Uriel's Flame",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Ezra 4:1",
+          "note": "Introduced by name as \"the angel that was sent unto me.\""
+        },
+        {
+          "ref": "2 Ezra 4:5",
+          "note": "Challenges Esdras to weigh fire, measure wind, or recall a lost day, before answering him."
+        },
+        {
+          "ref": "2 Ezra 5:31-33",
+          "note": "Returns the night after Esdras' lament to instruct him further."
+        },
+        {
+          "ref": "2 Ezra 6:36",
+          "note": "Named directly as \"Uriel the archangel.\""
+        },
+        {
+          "ref": "2 Ezra 10:29-30",
+          "note": "Finds Esdras collapsed after the vision, takes him by the hand, and sets him on his feet."
+        },
+        {
+          "ref": "2 Ezra 14:1-9",
+          "note": "Speaks from the bush, reveals he once appeared the same way to Moses, and commissions Esdras for his final task."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Uriel's name means \"God is my light\" or \"flame of God,\" fitting his repeated association with fire throughout the book - the burning bush of chapter 14, the flaming cup he gives Esdras to drink, and the fire and storm described in the visions he interprets."
+      ]
+    },
+    {
+      "id": "salathiel_ethiopian_2ezra",
+      "name": "Salathiel",
+      "role": "submanager",
+      "scribeTier": "The Priestly Scroll",
+      "parentManagerId": "esdras_ethiopian_2ezra",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Ezra 5:16-17",
+          "note": "\"Salathiel the captain of the people came unto me, saying, Where hast thou been?... Knowest thou not that Israel is committed unto thee?\""
+        },
+        {
+          "ref": "2 Ezra 5:19",
+          "note": "Esdras rebuffs him outright: \"Go thy ways from me, and come not nigh me.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "In many other textual traditions of this same book, \"Salathiel\" and \"Esdras\" are presented as two names for one and the same person - but this Ethiopian translation's text keeps them as two distinct individuals who meet and speak to each other."
+      ]
+    },
+    {
+      "id": "five_scribes_ethiopian_2ezra",
+      "name": "The Five Scribes (Sarea, Dabria, Selemia, Ecanus, and Asiel)",
+      "role": "submanager",
+      "scribeTier": "The Priestly Scroll",
+      "parentManagerId": "esdras_ethiopian_2ezra",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Ezra 14:24",
+          "note": "\"Take with thee Sarea, Dabria, Selemia, Ecanus, and Asiel, these five which are ready to write swiftly.\""
+        },
+        {
+          "ref": "2 Ezra 14:42",
+          "note": "They write the dictated visions for forty days, eating bread only at night."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text names all five scribes individually but never distinguishes their actions from one another, so they are treated here as a single working team rather than five separate characters."
+      ]
+    },
+    {
+      "id": "lords_indictment_ethiopian_2ezra",
+      "name": "The LORD's Indictment",
+      "role": "law",
+      "scribeTier": "Pillar of Fire and Quail",
+      "parentManagerId": null,
+      "deliveredBy": "esdras_ethiopian_2ezra",
+      "purpose": "The LORD recounts, through Esdras, his saving acts for Israel - deliverance from Egypt, the pillar of fire, manna and quail, the sweetened river, the fruitful land - set against Israel's forgetfulness and rebellion; ends with a decree to give the divine name instead to a coming people from the east, led by Abraham, Isaac, and Jacob together with the twelve prophets from Hosea to Malachi.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 1:7",
+          "note": "\"Am not I even he that brought them out of the land of Egypt... but they have provoked me unto wrath.\""
+        },
+        {
+          "ref": "2 Ezra 1:13-14",
+          "note": "\"I gave you Moses for a leader, and Aaron for a priest... I gave you light in a pillar of fire.\""
+        },
+        {
+          "ref": "2 Ezra 1:33",
+          "note": "\"Your house is desolate, I will cast you out as the wind doth stubble.\""
+        },
+        {
+          "ref": "2 Ezra 1:39-40",
+          "note": "The coming leaders named for the new people: the patriarchs and the twelve minor prophets."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mother_zion_comfort_ethiopian_2ezra",
+      "name": "Mother Zion's Comfort",
+      "role": "law",
+      "scribeTier": "Mother Zion's Twelve Trees",
+      "parentManagerId": null,
+      "deliveredBy": "esdras_ethiopian_2ezra",
+      "purpose": "Mother Zion, personified as a grieving widow, mourns the children lost to sin; the LORD answers with promises of restoration - resurrection of the dead, twelve fruit-laden trees, fountains of milk and honey, seven flowering mountains - before the chapter closes on Esdras' own vision atop a mountain of a shining young man, \"the Son of God,\" crowning a great host of martyrs who had confessed God's name.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 2:2-4",
+          "note": "The Mother's lament: \"I am a widow and forsaken.\""
+        },
+        {
+          "ref": "2 Ezra 2:18-19",
+          "note": "The promise of twelve trees, fountains, and seven mountains, delivered through servants named Esau and Jeremy."
+        },
+        {
+          "ref": "2 Ezra 2:42-47",
+          "note": "Esdras' own vision on Mount Sion of the innumerable multitude and the young man who crowns them, identified by the angel as \"the Son of God.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "grain_of_evil_seed_ethiopian_2ezra",
+      "name": "The Grain of Evil Seed (First Vision)",
+      "role": "law",
+      "scribeTier": "The Grain of Evil Seed",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "Esdras' lament over Israel's suffering under Babylon's prosperity draws Uriel's response: three impossible riddles proving the limits of human understanding, the parable of the warring trees and sea (each bound to its own place), and the teaching that a \"grain of evil seed\" was sown in Adam's heart at the Fall, whose fruit has grown in every generation since and will not be reaped until the appointed harvest.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 3:1-2",
+          "note": "Esdras troubled in Babylon, thirty years after Jerusalem's ruin."
+        },
+        {
+          "ref": "2 Ezra 3:21",
+          "note": "\"The first Adam bearing a wicked heart transgressed, and was overcome.\""
+        },
+        {
+          "ref": "2 Ezra 4:30",
+          "note": "\"The grain of evil seed hath been sown in the heart of Adam from the beginning.\""
+        },
+        {
+          "ref": "2 Ezra 4:48-50",
+          "note": "The oven's smoke and the storm's raindrops, signs that more of the age has passed than remains."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jacobs_heel_ethiopian_2ezra",
+      "name": "Jacob's Heel (Second Vision)",
+      "role": "law",
+      "scribeTier": "Jacob's Heel",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "Signs of the world's end are catalogued - the sun shining by night, blood dripping from wood, monstrous births - before Esdras faints from fear and is revived; Salathiel the captain visits and is turned away; Esdras fasts again and questions why the one people is scattered among many, and Uriel answers with Jacob's hand gripping Esau's heel as a figure for the world's end and the age to follow, an extended prophecy of the last trumpet and the resurrection, and a recounting of the six days of creation, including the two great creatures set apart on the fifth day, here named Enoch and Leviathan.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 5:1-9",
+          "note": "Catalogue of end-time signs."
+        },
+        {
+          "ref": "2 Ezra 5:16-19",
+          "note": "Salathiel the captain visits Esdras and is rebuffed."
+        },
+        {
+          "ref": "2 Ezra 6:8-10",
+          "note": "\"Jacob's hand held first the heel of Esau... Esau is the end of the world, and Jacob is the beginning of it that followeth.\""
+        },
+        {
+          "ref": "2 Ezra 6:49-52",
+          "note": "The two creatures set apart on the fifth day, named Enoch and Leviathan."
+        },
+        {
+          "ref": "2 Ezra 6:59",
+          "note": "\"Why do we not possess an inheritance with the world?\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "narrow_gate_ethiopian_2ezra",
+      "name": "The Narrow Gate (Third Vision)",
+      "role": "law",
+      "scribeTier": "The Narrow Gate",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "Uriel likens Israel's inheritance to a walled city reached only by one narrow, perilous path between fire and water; he foretells a messianic age - \"my son Jesus\"/\"my son Christ\" revealed for four hundred years, then dying, followed by seven days of cosmic silence, universal resurrection, and judgment; Esdras recites history's great intercessors - Abraham for Sodom, Moses for the wilderness generation, Jesus (Joshua) for Israel in the days of Achan, Samuel and David, Solomon, Elijah, and Hezekiah - but is told the day of judgment leaves no room for further intercession on another's behalf.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 7:6-9",
+          "note": "The narrow single path between fire and a deep water, leading to the walled city."
+        },
+        {
+          "ref": "2 Ezra 7:28-29",
+          "note": "\"My son Jesus shall be revealed... after these years shall my son Christ die.\""
+        },
+        {
+          "ref": "2 Ezra 7:30-35",
+          "note": "Seven days of silence, then the resurrection and judgment seat."
+        },
+        {
+          "ref": "2 Ezra 7:36-40",
+          "note": "Esdras recites Abraham, Moses, Jesus (Joshua), Samuel, David, Solomon, Elijah, and Hezekiah as intercessors for others."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "potters_gold_ethiopian_2ezra",
+      "name": "The Potter's Gold (Third Vision, continued)",
+      "role": "law",
+      "scribeTier": "The Potter's Gold",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "God explains that of all He has made, only a few will be saved - \"much mould... but little dust that gold cometh of\" - prompting Esdras' great personal prayer for the frailty of humankind, explicitly marked in the text as \"the beginning of the words of Esdras, before he was taken up\"; God answers with the farmer's-seed parable (not all that is sown takes root) and a promise that paradise, the tree of life, and rest are prepared for the righteous few, while the willfully wicked receive only the ruin they chose.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 8:2-3",
+          "note": "\"There be many created, but few shall be saved.\""
+        },
+        {
+          "ref": "2 Ezra 8:19",
+          "note": "\"This is the beginning of the words of Esdras, before he was taken up.\""
+        },
+        {
+          "ref": "2 Ezra 8:41",
+          "note": "The husbandman's seed parable: not all that is sown comes up."
+        },
+        {
+          "ref": "2 Ezra 8:52",
+          "note": "\"Unto you is paradise opened, the tree of life is planted.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "woman_who_became_a_city_ethiopian_2ezra",
+      "name": "The Woman Who Became a City (Fourth Vision)",
+      "role": "law",
+      "scribeTier": "The Woman Who Became a City",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "After a final seven-day fast in the field of Ardath eating only wildflowers, Esdras meets a woman who has mourned thirty years of barrenness and now the death of her only son on his wedding day; he rebukes and comforts her by comparing her grief to the earth's grief for all who die, and to Zion's far greater desolation. She is suddenly transfigured, revealed by Uriel to BE Zion herself - her thirty barren years the thirty years before Solomon's Temple offerings began, her son's death the destruction of Jerusalem - and the vision closes on a great city already being built in her place.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 9:43-45",
+          "note": "The woman's own account: barren thirty years, then given a son."
+        },
+        {
+          "ref": "2 Ezra 10:1",
+          "note": "The son's death, on entering his wedding chamber."
+        },
+        {
+          "ref": "2 Ezra 10:20-23",
+          "note": "Esdras' comforting rebuke, listing Sion's desolations."
+        },
+        {
+          "ref": "2 Ezra 10:27",
+          "note": "The woman vanishes and a great built city appears in her place."
+        },
+        {
+          "ref": "2 Ezra 10:44-46",
+          "note": "Uriel's interpretation: she is Sion, her barrenness the years before Solomon's offerings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "three_headed_eagle_ethiopian_2ezra",
+      "name": "The Three-Headed Eagle (Fifth Vision)",
+      "role": "law",
+      "scribeTier": "The Three-Headed Eagle",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "Esdras sees an eagle with twelve wings and three heads rise from the sea to rule the whole earth; heads and wings pass in succession until only three heads remain, the last devouring the others, until a roaring lion emerges from the forest to rebuke the eagle for its cruelty. Uriel interprets the eagle as the same fourth kingdom shown to \"thy brother Daniel,\" and the lion as \"the anointed\" who will judge it and deliver the oppressed remnant of God's people.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 11:1",
+          "note": "The eagle with twelve wings and three heads rises from the sea."
+        },
+        {
+          "ref": "2 Ezra 11:37-40",
+          "note": "The lion emerges from the forest and rebukes the eagle."
+        },
+        {
+          "ref": "2 Ezra 12:11",
+          "note": "\"The eagle... is the kingdom which was seen in the vision of thy brother Daniel.\""
+        },
+        {
+          "ref": "2 Ezra 12:31-34",
+          "note": "The lion is \"the anointed,\" who will judge the eagle and deliver the remnant with mercy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "carved_mountain_ethiopian_2ezra",
+      "name": "The Carved Mountain (Sixth Vision)",
+      "role": "law",
+      "scribeTier": "The Carved Mountain",
+      "parentManagerId": null,
+      "deliveredBy": "uriel_ethiopian_2ezra",
+      "purpose": "A man rises out of a storm-tossed sea, carves out a mountain and stands on it, and destroys a vast hostile multitude with fire, storm, and sparks sent only from his mouth, holding no weapon; he then calls a second, peaceable multitude to himself, including the lost ten tribes carried off by Assyria, who had journeyed a year and a half through a narrow river passage into a distant land called Arsareth to keep God's statutes undisturbed.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 13:3",
+          "note": "The man rises from the sea, strong with the thousands of heaven."
+        },
+        {
+          "ref": "2 Ezra 13:10-11",
+          "note": "Fire, flame, and sparks from his mouth alone consume the hostile multitude."
+        },
+        {
+          "ref": "2 Ezra 13:39-40",
+          "note": "The peaceable multitude are the ten tribes, carried away by Salmanasar king of Assyria in the days of King Osea."
+        },
+        {
+          "ref": "2 Ezra 13:45",
+          "note": "Their journey to the land called Arsareth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ninety_four_books_ethiopian_2ezra",
+      "name": "The Ninety-Four Books (Seventh Vision)",
+      "role": "law",
+      "scribeTier": "The Ninety-Four Books",
+      "parentManagerId": null,
+      "deliveredBy": "esdras_ethiopian_2ezra",
+      "purpose": "A voice from a bush recalls that the same voice once spoke to Moses at a bush in Egypt; Esdras is told that ten and a half of the world's twelve allotted ages are already spent, and is commanded to restore the Scriptures burned in Jerusalem's fall. He gathers five swift scribes, drinks a fiery cup of understanding, and dictates ninety-four books in forty days - twenty-four to be published openly for all to read, and seventy to be kept back and delivered only to the wise.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 14:1-3",
+          "note": "The voice from the bush, recalling its appearance to Moses."
+        },
+        {
+          "ref": "2 Ezra 14:11-12",
+          "note": "The world divided into twelve parts, ten and a half already spent."
+        },
+        {
+          "ref": "2 Ezra 14:24",
+          "note": "The five scribes named: Sarea, Dabria, Selemia, Ecanus, and Asiel."
+        },
+        {
+          "ref": "2 Ezra 14:39-40",
+          "note": "Esdras drinks the fiery cup and his understanding grows."
+        },
+        {
+          "ref": "2 Ezra 14:44-46",
+          "note": "Ninety-four books written; twenty-four published, seventy kept for the wise."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unquenchable_fire_ethiopian_2ezra",
+      "name": "The Unquenchable Fire",
+      "role": "law",
+      "scribeTier": "The Unquenchable Fire",
+      "parentManagerId": null,
+      "deliveredBy": "esdras_ethiopian_2ezra",
+      "purpose": "A distinct closing oracle, generally recognized as a later addition addressing nations unmentioned elsewhere in the book, pronounces coming plagues of sword, famine, and fire against Egypt, Babylon, Asia, and Syria, and describes an eastern war among the Arabians, Carmanians, and Assyrians; it closes with an exhortation for God's elect to live as detached pilgrims through the coming distress, and an assurance that no hidden sin escapes God's notice.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "2 Ezra 15:11",
+          "note": "Plagues against Egypt: \"I will bring them with a mighty hand... and smite Egypt with plagues.\""
+        },
+        {
+          "ref": "2 Ezra 15:29-30",
+          "note": "The dragons of Arabia and the Carmanians go to war against the Assyrians."
+        },
+        {
+          "ref": "2 Ezra 16:40-44",
+          "note": "The siege and burning of Babylon."
+        },
+        {
+          "ref": "2 Ezra 16:73-76",
+          "note": "The elect will be tried like gold in fire; God is their guide."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "esdras_full_lineage": {
+      "ref": "2 Ezra 1:1-3",
+      "note": "Esdras' full priestly chain runs Saraias, Azarias, Helchias, Sadamias, Sadoc, Achitob, Achias, Phinees, Heli, Amarias, Aziei, Marimoth, [text anomaly, see below], Borith, Abisei, Phinees, Eleazar, and Aaron of the tribe of Levi. Verse 2 appears to contain a genuine extraction artifact: the phrase \"the son of Marimoth, the son of And he spake unto the of Borith, the son of Abisei\" seems to have verse 4's opening words (\"And the word of the Lord came unto me, saying\") garbled into the middle of the genealogical chain - flagged rather than silently repaired, consistent with the ~3%-of-chapters anomaly rate already logged for this translation."
+    },
+    "future_gentile_leaders": {
+      "ref": "2 Ezra 1:39-40",
+      "note": "The patriarchs Abraham, Isaac, and Jacob, together with the twelve minor prophets - Hosea, Amos, Micah, Joel, Obadiah, Jonah, Nahum, Habakkuk, Zephaniah, Haggai, Zechariah, and Malachi (called here \"an angel of the Lord\") - are named as the future leaders promised to a coming people from the east. All are already indexed individually elsewhere in the Character Index's Old Testament books, so they are not reindexed here."
+    },
+    "esau_and_jeremy": {
+      "ref": "2 Ezra 2:18",
+      "note": "Two otherwise-unidentified servants named \"Esau and Jeremy\" are sent to help Mother Zion prepare twelve fruit-laden trees for her children. Given the context, these do not appear to be the patriarch Esau or the prophet Jeremiah, but the text gives no other identification - flagged rather than guessed at, per the no-invention rule."
+    },
+    "messianic_figure_across_visions": {
+      "ref": "2 Ezra 2:43-47; 7:28-29; 11:37-12:34; 13:1-53",
+      "note": "A messianic figure appears under several different titles and forms across the book's visions: the shining young man/\"Son of God\" who crowns the martyrs (2:43-47), \"my son Jesus\"/\"my son Christ\" whose four-hundred-year reign precedes the general resurrection (7:28-29), the rebuking lion called \"the anointed\" (11:37-12:34), and the man who ascends from the sea and destroys the nations by the breath of his mouth (13:1-53). He is never an active dialogue participant the way Esdras and Uriel are, so he was not given his own manager tier - logged here as a thread for future cross-book/cross-vision linking work."
+    }
+  }
+}

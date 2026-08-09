@@ -1,0 +1,320 @@
+{
+  "book": "Susannah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 43,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Susannah is a single-chapter (64-verse), non-KJV apocryphal narrative unique to this Ethiopian translation's expanded canon (it corresponds to the Greek \"History of Susanna,\" traditionally attached to the Book of Daniel in LXX/Ethiopian Orthodox tradition, but is indexed here as its own standalone book per this translation's own chapter numbering, matching how the source file itself is structured). Structurally it is almost entirely narrative (role:person tiers only - no law/theme content, unlike Leviticus/Deuteronomy-style books), built around three real dramatic beats read directly from the text: Susanna's temptation and false accusation by two corrupt appointed judges (v.5-24), the assembly's wrongful condemnation of her on their uncorroborated testimony (v.28-41), and her vindication through Daniel's separated cross-examination, which catches the two elders contradicting each other over which tree they claim to have witnessed her sin under - mastick (v.54) vs. holm (v.58) - a real, specific textual detail, not invented, and the actual mechanism by which their perjury is exposed. NAMING-COLLISION FLAG: the two accusing judges are never named individually anywhere in the text - even when Daniel has them questioned \"put... aside one far from another\" (v.51-59), the text still only ever calls them \"the one\"/\"the other,\" never assigning distinct names. Per the collective-entry rule (don't invent individuals the text doesn't differentiate), they are indexed as a single \"Two Elders\" manager tier rather than two invented named individuals. The Daniel of this book is very likely meant to be understood as the same Daniel as the Book of Daniel (this Susanna narrative is traditionally read as a youthful prologue episode to that prophet's story, per LXX/Ethiopian canon ordering, and the text explicitly calls him a \"young youth\" whom \"the Lord raised up\" with prophetic insight, v.45) - but since the text itself never states this identity beyond that description, and this file is scoped to this specific book/translation, he is given his own book-and-translation-scoped id (daniel_ethiopian_susannah) rather than silently merged with any KJV Book-of-Daniel entry - matching this project's existing precedent (Jesus getting an independent id per Gospel) of never asserting a cross-book identity the text doesn't itself state. No real content/structural divergence from the familiar Greek/LXX Susanna narrative was found in this translation - it matches the well-known plot beats (walled garden, two lustful elders, false witness, Daniel's tree cross-examination, the elders receiving the same death penalty they sought for her \"according to the law of Moses\" in v.62, a real lex talionis application stated directly in the text).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Garden Doors",
+      "managerId": "susanna_ethiopian_susannah",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Sundered Trees",
+      "managerId": "two_elders_ethiopian_susannah",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Angel's Sword",
+      "managerId": "daniel_ethiopian_susannah",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "susanna_ethiopian_susannah",
+      "name": "Susanna",
+      "role": "manager",
+      "scribeTier": "The Garden Doors",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "chelcias_ethiopian_susannah",
+        "mother": null,
+        "spouses": [
+          "joacim_ethiopian_susannah"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:2",
+          "note": "Introduced as wife of Joacim, daughter of Chelcias, a very fair woman who feared the Lord."
+        },
+        {
+          "ref": "Susannah 1:3",
+          "note": "Her parents were righteous and taught her according to the law of Moses."
+        },
+        {
+          "ref": "Susannah 1:7",
+          "note": "Walks daily in her husband's garden at noon, which is where the two elders first notice and lust after her."
+        },
+        {
+          "ref": "Susannah 1:17-18",
+          "note": "Orders her two maids to bring oil and washing balls and shut the garden doors so she may bathe - the doors being shut is the detail the elders later twist into a lie."
+        },
+        {
+          "ref": "Susannah 1:19-21",
+          "note": "The two elders confront her once alone, demanding she lie with them and threatening to falsely accuse her of adultery with a young man if she refuses."
+        },
+        {
+          "ref": "Susannah 1:22-23",
+          "note": "Weighs her choice and declares it better to fall into their hands innocent than to sin in the sight of the Lord."
+        },
+        {
+          "ref": "Susannah 1:24",
+          "note": "Cries out with a loud voice; the elders cry out against her in turn, beginning their counter-accusation."
+        },
+        {
+          "ref": "Susannah 1:28-30",
+          "note": "Brought the next day before the assembled people at her husband Joacim's house, along with her father, mother, children, and kindred."
+        },
+        {
+          "ref": "Susannah 1:34-35",
+          "note": "The two elders lay their hands on her head (the accuser's gesture); she weeps and looks toward heaven, trusting in the Lord."
+        },
+        {
+          "ref": "Susannah 1:41",
+          "note": "The assembly believes the elders' false testimony and condemns her to death."
+        },
+        {
+          "ref": "Susannah 1:42-43",
+          "note": "Cries out to the everlasting God who knows all secrets, protesting that false witness has been borne against her."
+        },
+        {
+          "ref": "Susannah 1:63",
+          "note": "Vindicated - Chelcias, his wife, Joacim, and all her kindred praise God, since no dishonesty was found in her."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joacim_ethiopian_susannah",
+      "name": "Joacim",
+      "role": "submanager",
+      "scribeTier": "The Garden Doors",
+      "parentManagerId": "susanna_ethiopian_susannah",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "susanna_ethiopian_susannah"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:1",
+          "note": "A man dwelling in Babylon."
+        },
+        {
+          "ref": "Susannah 1:4",
+          "note": "A great rich man with a fair garden by his house; Jews resort to him because he is more honourable than others."
+        },
+        {
+          "ref": "Susannah 1:6",
+          "note": "The two corrupt judges keep much at his house, where all who had suits in law came to them."
+        },
+        {
+          "ref": "Susannah 1:28",
+          "note": "The people assemble at his house when the elders bring their accusation against Susanna."
+        },
+        {
+          "ref": "Susannah 1:63",
+          "note": "Praises God alongside Chelcias and the whole kindred once Susanna's innocence is proven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "chelcias_ethiopian_susannah",
+      "name": "Chelcias",
+      "role": "submanager",
+      "scribeTier": "The Garden Doors",
+      "parentManagerId": "susanna_ethiopian_susannah",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "susanna_ethiopian_susannah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:2",
+          "note": "Susanna is identified as his daughter; he and his unnamed wife are described as righteous."
+        },
+        {
+          "ref": "Susannah 1:29",
+          "note": "The elders have the people send for \"Susanna, the daughter of Chelcias.\""
+        },
+        {
+          "ref": "Susannah 1:30",
+          "note": "Susanna comes to the trial accompanied by her father and mother."
+        },
+        {
+          "ref": "Susannah 1:63",
+          "note": "Chelcias and his wife praise God for their daughter once she is cleared."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "two_elders_ethiopian_susannah",
+      "name": "The Two Elders",
+      "role": "manager",
+      "scribeTier": "The Sundered Trees",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:5",
+          "note": "Appointed that year as two of the ancients of the people to serve as judges - the text notes wickedness came from Babylon \"from ancient judges, who seemed to govern the people.\""
+        },
+        {
+          "ref": "Susannah 1:8-14",
+          "note": "Both become inflamed with lust watching Susanna walk in the garden; each hides his feelings from the other until they finally confess their shared desire and conspire to find her alone."
+        },
+        {
+          "ref": "Susannah 1:19-21",
+          "note": "Confront Susanna once her maids leave, demanding she lie with them and threatening to falsely accuse her of meeting a young man if she refuses."
+        },
+        {
+          "ref": "Susannah 1:24",
+          "note": "Cry out against her the moment she cries out, launching their counter-accusation."
+        },
+        {
+          "ref": "Susannah 1:28",
+          "note": "Come to the assembly the next day \"full of mischievous imagination against Susanna to put her to death.\""
+        },
+        {
+          "ref": "Susannah 1:34-40",
+          "note": "Stand before the people, lay hands on her head, and give detailed false testimony that they caught her with a young man in the garden."
+        },
+        {
+          "ref": "Susannah 1:41",
+          "note": "Believed by the assembly as elders and judges of the people; Susanna is condemned to death on their word alone."
+        },
+        {
+          "ref": "Susannah 1:52-59",
+          "note": "Questioned separately by Daniel - the first names a mastick tree, the second a holm tree, as the site of the supposed sin, exposing their perjury by contradiction."
+        },
+        {
+          "ref": "Susannah 1:61-62",
+          "note": "The assembly turns against them; per the law of Moses they receive the same penalty they had maliciously intended for their neighbour, and are put to death."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Neither elder is ever given a personal name anywhere in the text - even Daniel's separate questioning of \"one\" and \"the other\" never assigns them names, which is why they are indexed as a single collective tier rather than two invented individuals."
+      ]
+    },
+    {
+      "id": "susannas_maids_ethiopian_susannah",
+      "name": "Susanna's Two Maids",
+      "role": "submanager",
+      "scribeTier": "The Garden Doors",
+      "parentManagerId": "susanna_ethiopian_susannah",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:15",
+          "note": "Accompany Susanna into the garden when she wishes to bathe because of the heat."
+        },
+        {
+          "ref": "Susannah 1:17-18",
+          "note": "Bring her oil and washing balls, shut the garden doors as commanded, then leave by the privy doors to fetch further items - unknowingly leaving her alone with the hidden elders."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "daniel_ethiopian_susannah",
+      "name": "Daniel",
+      "role": "manager",
+      "scribeTier": "The Angel's Sword",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Susannah 1:45",
+          "note": "As Susanna is led to be put to death, the Lord raises up the holy spirit of a young youth named Daniel."
+        },
+        {
+          "ref": "Susannah 1:46-48",
+          "note": "Cries out that he is clear of her blood, and rebukes the assembly for condemning a daughter of Israel without examination or knowledge of the truth."
+        },
+        {
+          "ref": "Susannah 1:49-51",
+          "note": "Instructs the people to return to the place of judgment, is seated among the elders, and asks that the two accusers be put apart from one another so he can examine them."
+        },
+        {
+          "ref": "Susannah 1:52-55",
+          "note": "Questions the first elder, catches him naming a mastick tree, and pronounces that the angel of God has received sentence to cut him in two for the false judgment."
+        },
+        {
+          "ref": "Susannah 1:56-59",
+          "note": "Questions the second elder, catches him naming a holm tree - contradicting the first - and pronounces the same sentence against him."
+        },
+        {
+          "ref": "Susannah 1:60-61",
+          "note": "The whole assembly cries out praising God and rises against the two elders, now convicted of false witness out of their own mouths."
+        },
+        {
+          "ref": "Susannah 1:64",
+          "note": "From that day forward, Daniel is held in great reputation in the sight of the people."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His cross-examination method - separating the two witnesses and comparing their independent testimony for contradictions - is widely regarded as one of the earliest detective/forensic-interrogation scenes in Western literature.",
+        "This narrative is traditionally understood (outside the text itself) as depicting Daniel as a youth, chronologically before his more famous exploits in the Book of Daniel - the text supports this only insofar as it explicitly calls him a \"young youth\" (v.45), not by stating the identity outright."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above per the collective-entry and no-invented-individuals rules.",
+    "susannasChildren": {
+      "ref": "Susannah 1:30",
+      "note": "Susanna's children accompany her to the judgment but are never named or individually described; not indexed as separate characters."
+    },
+    "chelciasWife": {
+      "ref": "Susannah 1:63",
+      "note": "Susanna's mother is referred to only as \"his wife\" (Chelcias' wife) and \"her mother\" (1:30); never given a name in the text."
+    },
+    "theAssembly": {
+      "ref": "Susannah 1:28-41",
+      "note": "The gathered people/assembly who witness and vote on the trial act collectively throughout; not indexed as individual characters."
+    },
+    "theServants": {
+      "ref": "Susannah 1:26-27",
+      "note": "Household servants rush in at Susanna's outcry in the garden and are \"greatly ashamed\" at the elders' report, but are not narratively differentiated individuals and are not indexed separately."
+    }
+  }
+}

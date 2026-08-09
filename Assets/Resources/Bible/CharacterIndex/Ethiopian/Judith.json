@@ -1,0 +1,487 @@
+{
+  "book": "Judith",
+  "translation": "Ethiopian",
+  "canonicalOrder": 20,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Judith does not exist in the KJV Character Index at all — it is a deuterocanonical war-narrative unique to the Ethiopian canon, read fresh from the real extracted text (16 chapters, 339 verses). Structurally the book is entirely person-driven narrative with no didactic/legal sections, so all six major tiers are role:\"person\" — no law/theme tiers were needed, unlike Leviticus-style books. A real, deliberate textual feature (not an extraction error) worth flagging for any future translation comparison: the book names its imperial antagonist \"Nabuchodonosor... king of the Assyrians, [who] reigned in Nineve\" (1:1) — conflating the historically Neo-Babylonian king's name with the Assyrian throne and capital city, genuinely different from how \"Nebuchadnezzar\" is depicted (king of Babylon) in Kings/Daniel/Jeremiah. Naming-collision flag: this book's Ozias (Judith 6:15, \"the son of Micha, of the tribe of Simeon,\" governor of Bethulia) is a wholly different person from King Uzziah/Ozias of Judah found elsewhere in Scripture — do not conflate. Judith's own genealogy (8:1) is a real sixteen-generation patrilineal chain back to Israel (Jacob), but since none of those named ancestors act anywhere else in the book, it is logged in genealogyLists as a bulk reference rather than individually indexed as characters, consistent with how Matthew's Jesus genealogy was handled. Her prayer in chapter 9 explicitly invokes \"my father Simeon\" and the Genesis 34 (Dinah/Shechem) vengeance narrative, textually grounding her tribal identity as of Simeon rather than asserted from outside the text. Judith's maid/waitingwoman is never named anywhere in the 16 chapters despite carrying real narrative weight (she accompanies Judith throughout, carries the head in the bag, is freed at Judith's death, 16:23) — per the later-name rule, she stays unnamed rather than importing an extra-biblical tradition. Chabris and Charmis are always named as an undifferentiated pair alongside Ozias and never given individually distinct actions, so they are one collective submanager rather than two invented individual arcs.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Widow's Fauchion",
+      "managerId": "judith_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "General's Canopy",
+      "managerId": "holofernes_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Nineveh's Throne",
+      "managerId": "nabuchodonosor_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Captive's Cords",
+      "managerId": "achior_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Bethulia's Gate",
+      "managerId": "ozias_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Ashen Mitre",
+      "managerId": "joacim_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "judith_ethiopian",
+      "name": "Judith",
+      "role": "manager",
+      "scribeTier": "Widow's Fauchion",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Merari",
+        "mother": null,
+        "spouses": [
+          "Manasses (deceased before the story begins; died of heatstroke in the barley harvest, 8:2-3; buried between Dothaim and Balamo)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 8:1",
+          "note": "Introduced via a long patrilineal genealogy: daughter of Merari, traced sixteen generations back to Israel."
+        },
+        {
+          "ref": "Judith 8:4-8",
+          "note": "A wealthy, devout widow of three years and four months, fasting and wearing sackcloth except on holy days."
+        },
+        {
+          "ref": "Judith 8:9-27",
+          "note": "Summons Ozias and the elders and rebukes them for setting God a five-day ultimatum before He must send help."
+        },
+        {
+          "ref": "Judith 8:32-34",
+          "note": "Tells the elders she will act that very night but refuses to reveal her plan in advance."
+        },
+        {
+          "ref": "Judith 9:1-14",
+          "note": "Prays at length, invoking 'the God of my father Simeon' and Simeon's vengeance in Genesis 34, before setting out."
+        },
+        {
+          "ref": "Judith 10:3-10",
+          "note": "Bathes, dresses in her finest garments and jewelry, and departs Bethulia with her maid and provisions."
+        },
+        {
+          "ref": "Judith 10:11-23",
+          "note": "Captured by an Assyrian patrol, brought before Holofernes, and admired by all for her beauty."
+        },
+        {
+          "ref": "Judith 11:5-23",
+          "note": "Flatters and deceives Holofernes with false promises of victory, winning his full trust."
+        },
+        {
+          "ref": "Judith 12:1-9",
+          "note": "Refuses Holofernes' food and wine, keeping only the provisions she brought, to avoid religious offense."
+        },
+        {
+          "ref": "Judith 12:10-20",
+          "note": "Attends Holofernes' private feast at Bagoas' urging; he grows drunk with wine and desire for her."
+        },
+        {
+          "ref": "Judith 13:6-9",
+          "note": "Alone with the sleeping, drunken Holofernes, takes his own fauchion from the bedpost and beheads him with two strokes."
+        },
+        {
+          "ref": "Judith 13:10-16",
+          "note": "Returns to Bethulia with the head hidden in her food bag and proclaims God's deliverance to the watchmen."
+        },
+        {
+          "ref": "Judith 14:1-8",
+          "note": "Instructs the Israelites to feign an attack so the fleeing Assyrians will discover Holofernes' death themselves; Achior is shown the head and converts."
+        },
+        {
+          "ref": "Judith 16:1-17",
+          "note": "Leads all Israel in a great song of thanksgiving celebrating God's deliverance 'by the hand of a woman.'"
+        },
+        {
+          "ref": "Judith 16:21-25",
+          "note": "Never remarries, lives to 105 honored by all, frees her maid, distributes her goods to kin before dying and being buried beside Manasses."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 105,
+          "ref": "Judith 16:23"
+        }
+      ],
+      "funFacts": [
+        "Lived to be 105 years old and remained honored throughout her life (16:23).",
+        "Never remarried after Manasses' death, though many desired her (16:22).",
+        "Freed her own maid as her final act before dying (16:23)."
+      ]
+    },
+    {
+      "id": "holofernes_ethiopian",
+      "name": "Holofernes",
+      "role": "manager",
+      "scribeTier": "General's Canopy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 2:4-13",
+          "note": "Chief captain of Nabuchodonosor's army, commissioned to conquer and subjugate the entire western world."
+        },
+        {
+          "ref": "Judith 2:14-20",
+          "note": "Musters 120,000 footmen and 12,000 horsemen and marches out from Nineveh."
+        },
+        {
+          "ref": "Judith 5:1-4",
+          "note": "Learns Israel has fortified the hill country and summons the local Moabite and Ammonite leaders for counsel."
+        },
+        {
+          "ref": "Judith 6:1-9",
+          "note": "Rejects Achior's warning about Israel's God, threatens him, and orders him delivered to Bethulia to die with the Israelites."
+        },
+        {
+          "ref": "Judith 7:1-13",
+          "note": "Besieges Bethulia and, on his allies' advice, cuts off the city's water supply rather than risk open battle."
+        },
+        {
+          "ref": "Judith 10:18-23",
+          "note": "Receives Judith into his tent and is immediately struck by her beauty."
+        },
+        {
+          "ref": "Judith 11:1-23",
+          "note": "Is persuaded and flattered by Judith's deceptive promises of victory."
+        },
+        {
+          "ref": "Judith 12:10-20",
+          "note": "Hosts Judith at a private feast and drinks more wine than ever before in his life."
+        },
+        {
+          "ref": "Judith 13:6-9",
+          "note": "Beheaded by Judith with his own fauchion while lying in a drunken stupor."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His ornate, jewel-woven bed-canopy was later dedicated by Judith as an offering to God (16:19).",
+        "His headless body was discovered by his own chamberlain Bagoas the next morning (14:15)."
+      ]
+    },
+    {
+      "id": "nabuchodonosor_ethiopian",
+      "name": "Nabuchodonosor",
+      "role": "manager",
+      "scribeTier": "Nineveh's Throne",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 1:1",
+          "note": "Introduced as 'king of the Assyrians,' who reigned in the great city of Nineveh."
+        },
+        {
+          "ref": "Judith 1:5-16",
+          "note": "Makes war on Arphaxad king of the Medes, ultimately defeating and killing him, then feasts 120 days in Nineveh."
+        },
+        {
+          "ref": "Judith 1:11-12",
+          "note": "Swears by his throne and kingdom to be avenged on every western nation that refused to aid his war."
+        },
+        {
+          "ref": "Judith 2:4-13",
+          "note": "Commissions Holofernes to conquer 'the whole earth' and compel every nation to worship Nabuchodonosor as a god."
+        },
+        {
+          "ref": "Judith 3:8",
+          "note": "Decrees that every nation and tongue must worship him alone as god."
+        },
+        {
+          "ref": "Judith 6:4",
+          "note": "Quoted by Holofernes as having declared none of his words shall ever be in vain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "achior_ethiopian",
+      "name": "Achior",
+      "role": "manager",
+      "scribeTier": "Captive's Cords",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 5:5-21",
+          "note": "As captain of the Ammonites, tells Holofernes the true history of Israel and warns that their God defends them so long as they remain faithful."
+        },
+        {
+          "ref": "Judith 6:1-9",
+          "note": "Holofernes rejects his counsel, threatens him, and orders him bound and delivered to Israel to perish with them."
+        },
+        {
+          "ref": "Judith 6:10-13",
+          "note": "Bound and left at the foot of the hill below Bethulia by Holofernes' men."
+        },
+        {
+          "ref": "Judith 6:14-21",
+          "note": "Rescued and untied by the men of Bethulia, brought before Ozias, and retells the council of Holofernes; the people comfort and praise him."
+        },
+        {
+          "ref": "Judith 14:5-10",
+          "note": "Shown Holofernes' severed head, faints from shock, and upon recovering believes in the God of Israel, is circumcised, and is joined to the house of Israel permanently."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only Gentile character in the book to convert and be permanently joined to Israel (14:10)."
+      ]
+    },
+    {
+      "id": "ozias_ethiopian",
+      "name": "Ozias",
+      "role": "manager",
+      "scribeTier": "Bethulia's Gate",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Micha",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 6:15-21",
+          "note": "One of the three governors of Bethulia (with Chabris and Charmis), of the tribe of Simeon; receives and questions the freed Achior."
+        },
+        {
+          "ref": "Judith 7:23-32",
+          "note": "Under pressure from the thirsting, despairing people, swears to surrender the city to the Assyrians if God sends no help within five days."
+        },
+        {
+          "ref": "Judith 8:9-35",
+          "note": "Is confronted and rebuked by Judith for putting a deadline on God, and grants her leave to act as she sees fit."
+        },
+        {
+          "ref": "Judith 10:6-9",
+          "note": "Commands the city gate opened so Judith and her maid may depart on her mission."
+        },
+        {
+          "ref": "Judith 13:18-20",
+          "note": "Blesses Judith above all women on earth when she returns with Holofernes' head."
+        },
+        {
+          "ref": "Judith 15:4",
+          "note": "Sends word throughout Israel's territory to pursue and destroy the fleeing Assyrian army."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joacim_ethiopian",
+      "name": "Joacim",
+      "role": "manager",
+      "scribeTier": "Ashen Mitre",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 4:6-8",
+          "note": "As high priest in Jerusalem, writes to Bethulia and Betomestham ordering the mountain passages held against the Assyrian advance."
+        },
+        {
+          "ref": "Judith 4:14-15",
+          "note": "Leads the priests in sackcloth and ashes upon their mitres, offering continual burnt offerings and crying to God for Israel."
+        },
+        {
+          "ref": "Judith 15:8-10",
+          "note": "Comes with the elders of Jerusalem after the victory to see and bless Judith in person."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "bagoas_ethiopian",
+      "name": "Bagoas",
+      "role": "submanager",
+      "scribeTier": "General's Canopy",
+      "parentManagerId": "holofernes_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 12:11-13",
+          "note": "The eunuch who had charge of all Holofernes' household; sent to persuade Judith to attend his private feast."
+        },
+        {
+          "ref": "Judith 13:1-3",
+          "note": "Dismisses the tent's attendants for the night, unwittingly leaving Judith alone with Holofernes."
+        },
+        {
+          "ref": "Judith 14:14-18",
+          "note": "Discovers Holofernes' headless body the next morning and raises the alarm through the camp."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "arphaxad_ethiopian",
+      "name": "Arphaxad",
+      "role": "submanager",
+      "scribeTier": "Nineveh's Throne",
+      "parentManagerId": "nabuchodonosor_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 1:1-4",
+          "note": "King of the Medes at Ecbatane, builder of its massive fortified walls, towers, and gates."
+        },
+        {
+          "ref": "Judith 1:5-6",
+          "note": "Makes war against Nabuchodonosor in the plain near Ragau."
+        },
+        {
+          "ref": "Judith 1:13-15",
+          "note": "Defeated and killed by Nabuchodonosor in the mountains of Ragau; Ecbatane is captured and despoiled."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "chabris_charmis_ethiopian",
+      "name": "Chabris and Charmis",
+      "role": "submanager",
+      "scribeTier": "Bethulia's Gate",
+      "parentManagerId": "ozias_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 6:15",
+          "note": "Named as fellow governors of Bethulia alongside Ozias: Chabris the son of Gothoniel, and Charmis the son of Melchiel."
+        },
+        {
+          "ref": "Judith 8:10",
+          "note": "Summoned by Judith together with Ozias to hear her rebuke of the city's oath."
+        },
+        {
+          "ref": "Judith 10:6",
+          "note": "Stand with Ozias at the city gate as Judith and her maid depart on their mission."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text never differentiates their individual actions from one another, so they are treated as a single paired entry."
+      ]
+    },
+    {
+      "id": "judiths_maid_ethiopian",
+      "name": "Judith's Maid",
+      "role": "submanager",
+      "scribeTier": "Widow's Fauchion",
+      "parentManagerId": "judith_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Judith 8:10",
+          "note": "Described as Judith's waitingwoman, who 'had the government of all things that she had.'"
+        },
+        {
+          "ref": "Judith 10:5-10",
+          "note": "Accompanies Judith out of Bethulia, carrying the food and provisions Judith prepared."
+        },
+        {
+          "ref": "Judith 13:9-10",
+          "note": "Carries the bag holding Holofernes' severed head back to Bethulia."
+        },
+        {
+          "ref": "Judith 16:23",
+          "note": "Granted her freedom by Judith shortly before Judith's death."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never named anywhere in the book's 16 chapters, despite being present at nearly every stage of Judith's mission."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "judiths_full_lineage": {
+      "ref": "Judith 8:1",
+      "note": "Judith's complete patrilineal chain as given in the text: daughter of Merari, son of Ox, son of Joseph, son of Ozel, son of Elcia, son of Ananias, son of Gedeon, son of Raphaim, son of Acitho, son of Eliu, son of Eliab, son of Nathanael, son of Salasadal, son of Israel. None of these named ancestors appear or act elsewhere in the book, so they are not individually indexed as characters."
+    },
+    "simeon_tribal_reference": {
+      "ref": "Judith 9:2",
+      "note": "Judith's prayer invokes 'O Lord God of my father Simeon,' explicitly referencing Simeon's vengeance for Dinah in Genesis 34:25-26 and grounding Judith's tribal identity as of Simeon, distinct from the KJV Genesis Character Index's own Simeon entry (a separate translation's indexing scope)."
+    }
+  }
+}

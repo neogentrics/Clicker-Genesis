@@ -1,0 +1,218 @@
+{
+  "book": "Prayer of Azariah",
+  "translation": "Geneva",
+  "canonicalOrder": 48,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This is the deuterocanonical \"Prayer of Azariah and Song of the Three Holy Children,\" a short single-chapter insertion into the Daniel 3 fiery-furnace narrative (confirmed directly from the source file's own editorial headers, which sit at old Daniel-numbering verses 1/24/28 before the internal prayer/song renumbers from 1 - this is the real Daniel 3:23-to-24 insertion seam, not a coincidence or extraction artifact). Real structural finding: the book has almost no differentiated cast - only Azarias is personally embodied as a speaker/actor (he alone \"stood vp and prayed... opening his mouth\"); Ananias and Misael are named only collectively, together with Azarias, never with independent action of their own, so per the collective-entry rule they are one combined submanager rather than two separate tiers. The \"vnjust King\" (v8) and \"the kings seruants\" who stoke the furnace (v22) are never named in this specific text - deliberately NOT identified as Nebuchadnezzar here, since that identification belongs to the surrounding Daniel 3 narrative this book is spliced into, not to this text itself; logged as an unresolved reference in genealogyLists instead of asserted. The Angel of the Lord is a real, distinct, outcome-changing actor (descends into the furnace, \"smote the flame... out of the ouen,\" turns the heat into \"a moist whistling wind\") and earns its own manager tier under rule 3, since removing it would change the scene's outcome from deliverance to death. The book's back two-thirds (vv27-67) is the Benedicite, a communal hymn calling all creation - heavens, angels, waters, sun/moon, weather, earth, plants, seas, creatures, mankind, Israel, priests, the spirits of the righteous, and finally Ananias/Azarias/Misael themselves - to bless God; this is modeled as a single law/theme tier rather than forced into a person-tier, since the text frames it as sung by \"the three, as out of one mouth\" collectively rather than by Azarias alone (its \"deliveredBy\" points to Azarias only as the book's framing/named figure, with this collective-authorship caveat noted explicitly rather than silently attributed). No genealogy, age, or family data appears anywhere in this text for any figure, so those fields are correctly left null/empty rather than imported from outside knowledge of the wider Daniel narrative (e.g. the common Shadrach/Meshach/Abednego identification is noted only as an external funFact, clearly separated from what this text itself states). Naming-collision note: \"Azarias/Azariah\" is a common Hebrew name reused by other unrelated Biblical figures elsewhere in scripture - this id is deliberately scoped as azarias_geneva to avoid any cross-book/cross-translation merge.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Furnace Flame",
+      "managerId": "azarias_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Cooling Wind",
+      "managerId": "angel_of_the_lord_geneva_azariah",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Song of Creation",
+      "managerId": "song_of_creation_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "azarias_geneva",
+      "name": "Azarias",
+      "role": "manager",
+      "scribeTier": "Furnace Flame",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:1",
+          "note": "Azarias stands up and prays, opening his mouth in the midst of the fire - the text's only personally-embodied speaking figure."
+        },
+        {
+          "ref": "Prayer of Azariah 1:2",
+          "note": "Opens the prayer: 'Blessed art thou, O Lord God of our fathers: thy Name is worthy to be praised.'"
+        },
+        {
+          "ref": "Prayer of Azariah 1:4",
+          "note": "Confesses that God's judgment against Jerusalem and their fathers was true, executed 'because of our sinnes.'"
+        },
+        {
+          "ref": "Prayer of Azariah 1:8",
+          "note": "Recounts being delivered into the hands of 'lawlesse enemies' and 'an vniust King' - the king is never named in this text."
+        },
+        {
+          "ref": "Prayer of Azariah 1:10",
+          "note": "Pleads that God not utterly forsake them nor disannul His covenant, for His Name's sake."
+        },
+        {
+          "ref": "Prayer of Azariah 1:11",
+          "note": "Invokes the covenant for Abraham's, Isaac's, and Israel's sakes specifically."
+        },
+        {
+          "ref": "Prayer of Azariah 1:14",
+          "note": "Laments that there is 'neither Prince, nor Prophet, nor leader' nor any sacrifice or place to offer one."
+        },
+        {
+          "ref": "Prayer of Azariah 1:15",
+          "note": "Offers 'a contrite heart, and an humble spirit' as an acceptable substitute for sacrifice."
+        },
+        {
+          "ref": "Prayer of Azariah 1:19",
+          "note": "Asks God to deliver them according to His marvelous works and give glory to His Name."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text never uses Azariah's Babylonian name; elsewhere in the wider Daniel narrative he is identified as Shadrach, Meshach, or Abednego's companion - a fact from outside this specific book, kept separate from what this text itself states.",
+        "The prayer is a national confession of Israel's sin, spoken even though Azarias himself is being persecuted unjustly for his faithfulness - he intercedes for the nation's guilt, not his own innocence."
+      ]
+    },
+    {
+      "id": "ananias_and_misael_geneva",
+      "name": "Ananias and Misael",
+      "role": "submanager",
+      "scribeTier": "Furnace Flame",
+      "parentManagerId": "azarias_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:27",
+          "note": "'Then the three, as out of one mouth, praised, glorified, and blessed God in the fornace' - named only as a collective with Azarias, never individually."
+        },
+        {
+          "ref": "Prayer of Azariah 1:65",
+          "note": "Named directly alongside Azarias in the hymn's climax: 'O Ananias, Azarias, and Misael, blesse ye the Lord... for hee hath deliuered vs from hell.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "kings_servants_geneva",
+      "name": "The King's Servants (Chaldeans)",
+      "role": "submanager",
+      "scribeTier": "Furnace Flame",
+      "parentManagerId": "azarias_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:22",
+          "note": "'The kings seruants that put them in, ceased not to make the ouen hote with rosin, pitch, towe, and small wood' - unnamed collective, opposing the three."
+        },
+        {
+          "ref": "Prayer of Azariah 1:23",
+          "note": "Their stoking makes the flame stream '49 cubites' above the furnace."
+        },
+        {
+          "ref": "Prayer of Azariah 1:24",
+          "note": "The very flame they built 'burnt those Caldeans it found about the fornace' - killed by the danger they created, while the three inside are unhurt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "angel_of_the_lord_geneva_azariah",
+      "name": "Angel of the Lord",
+      "role": "manager",
+      "scribeTier": "Cooling Wind",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:25",
+          "note": "'The Angel of the Lord came downe into the ouen, together with Azarias and his fellowes, and smote the flame of the fire out of the ouen' - the direct, outcome-changing intervention."
+        },
+        {
+          "ref": "Prayer of Azariah 1:26",
+          "note": "Turns the middle of the furnace into 'a moist whistling wind, so that the fire touched them not at all, neither hurt nor troubled them.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "song_of_creation_geneva",
+      "name": "Song of Creation",
+      "role": "law",
+      "scribeTier": "Song of Creation",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": "azarias_geneva",
+      "purpose": "The Benedicite: a sweeping communal hymn summoning every part of creation in turn - the heavens, angels, waters above the heavens, sun and moon, stars, showers and dew, winds, fire and heat, seasons, frost and snow, lightnings, the earth, mountains, plants, fountains, seas and rivers, sea creatures, birds, beasts, 'children of men,' Israel, priests, servants of the Lord, and the spirits of the righteous - to bless and praise God, closing by naming Ananias, Azarias, and Misael themselves as having been delivered 'from hell... and from the hand of death.' Framed in the text as sung by the three together, 'as out of one mouth,' rather than by any one speaker alone; attributed here to Azarias only as the book's named framing figure, not as its sole author.",
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:28",
+          "note": "Opens the hymn proper: 'Blessed art thou, O Lord God of our fathers: and to be praised and exalted aboue all for euer.'"
+        },
+        {
+          "ref": "Prayer of Azariah 1:34",
+          "note": "'O all yee workes of the Lorde, blesse ye the Lord' - the hymn's general call to all creation."
+        },
+        {
+          "ref": "Prayer of Azariah 1:51",
+          "note": "'O let the earth blesse the Lord: praise and exalt him aboue all for euer.'"
+        },
+        {
+          "ref": "Prayer of Azariah 1:59",
+          "note": "'O ye children of men, blesse yee the Lord' - the hymn turns from nature to humanity."
+        },
+        {
+          "ref": "Prayer of Azariah 1:60",
+          "note": "'O Israel blesse ye the Lord' - narrows the call to God's covenant people specifically."
+        },
+        {
+          "ref": "Prayer of Azariah 1:65",
+          "note": "Closes by naming the three themselves, crediting God with delivering them 'out of the mids of the fire.'"
+        },
+        {
+          "ref": "Prayer of Azariah 1:67",
+          "note": "Final doxology: 'O all ye that worship the Lord, blesse the God of gods, praise him, and giue him thankes: for his mercie endureth for euer.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "unjust_king": {
+      "ref": "Prayer of Azariah 1:8",
+      "note": "Referred to only as 'an vniust King, and the most wicked in all the world' - never named in this text. Widely identified with Nebuchadnezzar in the surrounding Daniel 3 narrative this book is inserted into, but that identification is not made by this text itself, so it is deliberately not asserted as a character here."
+    }
+  }
+}

@@ -1,0 +1,508 @@
+{
+  "book": "2 Corinthians",
+  "translation": "Geneva",
+  "canonicalOrder": 59,
+  "status": "drafted grounded in the real extracted Geneva Bible (1560) verse text at Assets/Resources/Verses/Geneva/2_corinthians_59.json, cross-checked against the existing KJV 2Corinthians.json Character Index for structural precedent only",
+  "notes": "Read directly against the real Geneva text (13 chapters, 257 verses — matches the given canonical count exactly, chapter-by-chapter verse counts 24/17/18/18/21/18/16/24/15/18/33/21/14). This translation's 2 Corinthians is structurally and narratively identical to the standard KJV version of this book — same 13 chapters, same verse divisions, no missing or added material, no deuterocanonical variance (this is an NT epistle, not one of the books where Geneva/Ethiopian canon differences apply). The differences are purely of the archaic 1560 English itself: \"Pavl\" (typesetting v/u substitution, not a different name), \"Iesus\"/\"Iesu\" for Jesus, \"Corinthus\" for Corinth, \"haue\"/\"vs\"/\"selues\" spelling throughout, \"sinne\" for sin, \"beleeue\" for believe, and a handful of word choices that differ meaningfully from KJV's phrasing without changing content — e.g. Geneva 5:16 \"wherefore, henceforth know we no man after the flesh\" vs KJV's \"know we no man after the flesh\" (near-identical), Geneva 12:9 \"my power is made perfect through weakenesse\" vs KJV \"my strength is made perfect in weakness,\" Geneva 4:1 \"we faint not\" vs KJV \"we faint not\" (same). None of these rise to a structural or doctrinal difference worth flagging beyond noting the spelling. Given the content is functionally the same letter, the tier structure mirrors the established KJV precedent's judgment calls, re-verified line-by-line against this translation's own wording rather than copied blind: Paul himself carries the book's one dominant person tier (\"The Earthen Vessel,\" Geneva 4:7 \"we haue this treasure in earthen vessels\") for every personally-embodied autobiographical beat — the near-fatal affliction in Asia (1:8-10), his oath-bound defense of changed travel plans (1:23-2:1), the catalogue of sufferings (6:4-10, 11:23-29), the basket-escape from Damascus under \"the gouernour of the people vnder King Aretas\" (11:32-33), the vision of the \"thirde heauen\"/Paradise (12:1-4), and the \"pricke in the flesh, the messenger of Satan\" episode (12:7-9). Titus keeps his own manager tier for his real, separate narrative arc — Paul's anxiety at not finding him at Troas (2:12-13), the comfort of his arrival (7:6-7), his own affection for the Corinthians (7:13-15), and his role driving the Jerusalem collection (8:6, 8:16-17, 8:23, 12:18). Everything else is content-heavy teaching rather than character-driven scene, modeled as seven law/theme tiers, each deliveredBy Paul as the letter's author: comfort in affliction (1:3-7), the call to come out and be separate from unbelievers (\"Touch Not the Unclean Thing,\" 6:14-7:1), the offender's discipline-and-restoration (2:5-11, 7:8-11), the new covenant's unveiled glory contrasted with Moses' vailed face (3:6-18, 4:6), the ministry of reconciliation and the \"newe creature\" declaration (5:1-21), the Jerusalem collection appeal built on the Macedonian churches' example and Christ's own voluntary poverty (8:1-9:15), and the \"false apostles\"/\"Angels of light\" polemic, which in this translation too runs as one continuous argument from chapter 10's \"weapons of our warrefare are not carnall\" through chapter 11's naming of \"false apostles, deceitfull workers\" transforming themselves \"into the Apostles of Christ\" (10:3-5, 10:10, 10:17-18, 11:4, 11:13-15, 11:22-23) — kept as a single tier rather than split, matching the KJV precedent's reasoning that Geneva's own text likewise treats it as unbroken. Two figures are again deliberately not given person tiers: the unnamed offender (2:5-11, 7:8-12) is personally embodied but never named, and Paul's point is the church's collective response, not his individual story, so he stays inside the discipline law tier; the unnamed rival teachers of 11:13 are a collective group the text never individually differentiates, so they remain one law tier per the collective-entry rule rather than invented individual profiles. The two unnamed \"brethren\" sent with Titus (8:18, 8:22) ARE individually distinguished by the Geneva text itself — one \"whose praise is in the Gospel throughout al the Churches\" and chosen by the churches for the journey (8:18-19), the other independently \"prooued to be diligent in many thinges\" and now \"much more diligent\" (8:22) — so, matching the corrected KJV precedent, they are kept as two separate submanagers rather than merged into one collective entry; no identity (e.g. the common Luke tradition) is asserted since Geneva's own text never names either man. Timotheus (co-sender, 1:1, 1:19) and Siluanus (1:19) remain minor loyalty-boost submanagers under Paul with zero independent action in this book. Naming-variant flag, not a collision: Siluanus here is the same man Acts calls \"Silas,\" just a different form of the same name — carried over unchanged from the KJV precedent since Geneva's own text uses the identical \"Siluanus\" spelling. All character ids are suffixed \"_geneva_2cor\" to avoid collision with the existing KJV 2Corinthians.json ids and any future Ethiopian-translation ids for the same book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Earthen Vessel",
+      "managerId": "paul_geneva_2cor",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Comfort of His Coming",
+      "managerId": "titus_geneva_2cor",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The God of All Comfort",
+      "managerId": "comfort_in_affliction_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Touch Not the Unclean Thing",
+      "managerId": "unequally_yoked_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Lest He Be Swallowed Up",
+      "managerId": "offender_discipline_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Vaile Taken Away",
+      "managerId": "veil_taken_away_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Ambassadours for Christ",
+      "managerId": "ministry_of_reconciliation_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Cheerefull Giuer",
+      "managerId": "jerusalem_collection_geneva_law",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Angels of Light",
+      "managerId": "false_apostles_geneva_law",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_2cor",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:1",
+          "note": "Opens the letter, styled in this translation \"Pavl an Apostle of JESVS Christ, by the will of God, and our brother Timotheus, to the Church of God, which is at Corinthus with all the Saints.\""
+        },
+        {
+          "ref": "2 Corinthians 1:8-9",
+          "note": "Describes affliction in Asia so severe \"we altogether doubted, euen of life\" and \"we receiued the sentence of death in our selues.\""
+        },
+        {
+          "ref": "2 Corinthians 1:23-2:1",
+          "note": "Calls God \"for a recorde vnto my soule\" to explain why, to spare the Corinthians, he had not yet come again to Corinthus."
+        },
+        {
+          "ref": "2 Corinthians 4:7-9",
+          "note": "\"We haue this treasure in earthen vessels, that the excellencie of that power might be of God, and not of vs\" — afflicted, in doubt, persecuted, cast down, yet not destroyed; the book's defining image."
+        },
+        {
+          "ref": "2 Corinthians 6:4-10",
+          "note": "Catalogues the ministry's hardships: \"in stripes, in prisons, in tumults, in labours... as dying, and beholde, we liue.\""
+        },
+        {
+          "ref": "2 Corinthians 11:23-28",
+          "note": "The great autobiographical catalogue: \"Of the Iewes fiue times receiued I fourtie stripes saue one... I was thrise beaten with roddes: I was once stoned: I suffered thrise shipwracke: night and day haue I bene in the deepe sea,\" plus daily \"the care of all the Churches.\""
+        },
+        {
+          "ref": "2 Corinthians 11:32-33",
+          "note": "Escapes Damascus: \"the gouernour of the people vnder King Aretas, layde watch in the citie... at a window was I let downe in a basket through the wall, and escaped his handes.\""
+        },
+        {
+          "ref": "2 Corinthians 12:1-4",
+          "note": "Recounts a man \"taken vp into the thirde heauen\" and into \"Paradise,\" hearing \"wordes which cannot be spoken.\""
+        },
+        {
+          "ref": "2 Corinthians 12:7-9",
+          "note": "The \"pricke in the flesh, the messenger of Satan to buffet mee\" — besought the Lord thrice, answered \"My grace is sufficient for thee: for my power is made perfect through weakenesse.\""
+        },
+        {
+          "ref": "2 Corinthians 12:11-13",
+          "note": "Claims \"the signes of an Apostle were wrought among you... with signes, and wonders, and great workes,\" and asks forgiveness, half-ironically, for the one wrong done: refusing to be a burden to the Corinthians."
+        },
+        {
+          "ref": "2 Corinthians 13:1",
+          "note": "\"Lo this is the thirde time that I come vnto you\" — warns he will \"not spare\" offenders on this visit."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation never states what the \"pricke in the flesh\" (12:7) actually was — same open textual question as every other translation, no invented specifics added here.",
+        "Geneva's own typesetting renders his name \"Pavl\" (v/u substitution, standard for the period) — not a different name, just Elizabethan orthography, kept as \"Paul\" for the character's display name."
+      ]
+    },
+    {
+      "id": "titus_geneva_2cor",
+      "name": "Titus",
+      "role": "manager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 2:12-13",
+          "note": "At Troas, though \"a doore was opened vnto me of the Lord,\" Paul \"had no rest in my spirit, because I founde not Titus my brother,\" and departs for Macedonia."
+        },
+        {
+          "ref": "2 Corinthians 7:6-7",
+          "note": "\"God, that comforteth the abiect, comforted vs at the comming of Titus\" — his report brings real relief."
+        },
+        {
+          "ref": "2 Corinthians 7:13-15",
+          "note": "\"His spirit was refreshed by you all\" and \"his inwarde affection is more aboundant toward you,\" remembering the Corinthians' obedience and their fear and trembling in receiving him."
+        },
+        {
+          "ref": "2 Corinthians 8:6",
+          "note": "Had already begun organizing the collection among the Corinthians and is urged to \"accomplish the same grace among you also.\""
+        },
+        {
+          "ref": "2 Corinthians 8:16-17",
+          "note": "Accepts Paul's exhortation and \"of his owne accorde\" goes to Corinth."
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Called \"my fellowe and helper to you ward.\""
+        },
+        {
+          "ref": "2 Corinthians 12:18",
+          "note": "Paul recalls sending Titus with a brother, defending that neither \"pilled\" (took advantage of) the church."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Titus's report from Corinth is the direct hinge point where the letter's tone shifts from anguish (chapters 1-2) into relief and reconciliation (chapter 7)."
+      ]
+    },
+    {
+      "id": "timothy_geneva_2cor",
+      "name": "Timothy",
+      "role": "submanager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": "paul_geneva_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:1",
+          "note": "Named co-sender: \"Pavl... and our brother Timotheus,\" this translation's spelling of his name."
+        },
+        {
+          "ref": "2 Corinthians 1:19",
+          "note": "Named with Paul and Siluanus as one \"who was preached among you by vs\" — no independent action of his own in this book."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells his name \"Timotheus\" throughout this book — the same person as the standard \"Timothy,\" not a naming variant worth flagging as a collision."
+      ]
+    },
+    {
+      "id": "silvanus_geneva_2cor",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": "paul_geneva_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:19",
+          "note": "\"By me, and Siluanus, and Timotheus\" — named as a co-preacher of Christ among the Corinthians."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-variant flag, not a collision: this is the same man Acts calls \"Silas\" — a different form of the same name, not a second person."
+      ]
+    },
+    {
+      "id": "brother_renowned_geneva_2cor",
+      "name": "The Brother Renowned in the Gospel",
+      "role": "submanager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": "titus_geneva_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:18-19",
+          "note": "\"The brother, whose praise is in the Gospel throughout al the Churches\" and \"also chosen of the Churches to be a fellowe in our iourney.\""
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Called, with the second brother, \"messengers of the Churches, and the glorie of Christ.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in Geneva's own text, same as every other translation of this book — traditional guesses (e.g. Luke) are not asserted here as fact."
+      ]
+    },
+    {
+      "id": "brother_diligent_geneva_2cor",
+      "name": "The Brother Often Proved Diligent",
+      "role": "submanager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": "titus_geneva_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:22",
+          "note": "\"Our brother, whom we haue oft times prooued to be diligent in many thinges, but nowe much more diligent, for the great confidence, which I haue in you.\""
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Called, with the first brother, \"messengers of the Churches, and the glorie of Christ.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "comfort_in_affliction_geneva_law",
+      "name": "The God of All Comfort",
+      "role": "law",
+      "scribeTier": "The God of All Comfort",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Names God \"the Father of mercies, and the God of all comfort\" who comforts believers in tribulation specifically so they can pass that comfort on, framing suffering as purposeful rather than meaningless.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:3-4",
+          "note": "\"Blessed be God, euen the Father of our Lord Iesus Christ, the Father of mercies, and the God of all comfort, Which comforteth vs in all our tribulation, that we may be able to comfort them which are in any affliction.\""
+        },
+        {
+          "ref": "2 Corinthians 1:5-7",
+          "note": "\"As the sufferings of Christ abounde in vs, so our consolation aboundeth through Christ.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unequally_yoked_geneva_law",
+      "name": "Touch Not the Unclean Thing",
+      "role": "law",
+      "scribeTier": "Touch Not the Unclean Thing",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Instructs believers to not be \"vnequally yoked with the infidels,\" since righteousness and unrighteousness cannot genuinely partner, and calls the church to \"come out from among them\" so God will receive them as sons and daughters, and to finish sanctifying themselves in the fear of God.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 6:14",
+          "note": "\"Be not vnequally yoked with the infidels: for what fellowship hath righteousnesse with vnrighteousnesse? and what communion hath light with darkenesse?\""
+        },
+        {
+          "ref": "2 Corinthians 6:17-18",
+          "note": "\"Wherefore come out from among them, and separate your selues, saith the Lord, and touch none vncleane thing, and I wil receiue you... ye shalbe my sonnes and daughters, saith the Lord almightie.\""
+        },
+        {
+          "ref": "2 Corinthians 7:1",
+          "note": "\"Let vs clense our selues from all filthinesse of the flesh and spirit, and finish our sanctification in the feare of God.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "offender_discipline_geneva_law",
+      "name": "The Offender's Sorrow and Restoration",
+      "role": "law",
+      "scribeTier": "Lest He Be Swallowed Up",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Teaches the church to balance discipline with restoration for the man who \"caused sorowe\" — the punishment already given \"of many\" is called sufficient, and the church is urged to forgive and comfort him \"lest the same shoulde bee swalowed vp with ouermuch heauinesse,\" modeling godly sorrow that leads to repentance rather than despair.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 2:5-8",
+          "note": "\"It is sufficient vnto the same man, that hee was rebuked of many... yee ought rather to forgiue him, and comfort him, lest the same shoulde bee swalowed vp with ouermuch heauinesse.\""
+        },
+        {
+          "ref": "2 Corinthians 7:8-11",
+          "note": "Paul does not regret the earlier sorrow he caused, since \"godly sorowe causeth repentance vnto saluation, not to be repented of: but the worldly sorowe causeth death.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The offender is never named in this translation, same as every other version of this book — a traditional link to the man disciplined in 1 Corinthians 5 is not asserted here as textual fact."
+      ]
+    },
+    {
+      "id": "veil_taken_away_geneva_law",
+      "name": "The Vaile Taken Away",
+      "role": "law",
+      "scribeTier": "The Vaile Taken Away",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Contrasts the old covenant's fading, veiled glory (given through Moses) with the new covenant of the Spirit, whose glory is unveiled and increasing — explaining why afflicted ministers can still carry surpassing power that is \"of God, and not of vs.\"",
+      "verses": [
+        {
+          "ref": "2 Corinthians 3:6",
+          "note": "God \"hath made vs able ministers of the Newe testament, not of the letter, but of the Spirite: for the letter killeth, but the Spirite giueth life.\""
+        },
+        {
+          "ref": "2 Corinthians 3:13-16",
+          "note": "Recalls Moses, who \"put a vaile vpon his face\" — but \"when their heart shall be turned to the Lord, the vaile shalbe taken away.\""
+        },
+        {
+          "ref": "2 Corinthians 3:18",
+          "note": "\"We al behold as in a mirrour the glory of the Lord with open face, and are changed into the same image, from glorie to glorie.\""
+        },
+        {
+          "ref": "2 Corinthians 4:6",
+          "note": "\"God that commanded the light to shine out of darknesse, is he which hath shined in our hearts, to giue the light of the knowledge of the glory of God in the face of Iesus Christ.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ministry_of_reconciliation_geneva_law",
+      "name": "Ambassadours for Christ",
+      "role": "law",
+      "scribeTier": "Ambassadours for Christ",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Teaches the apostolic calling to carry God's message of reconciliation — grounded in hope of an eternal \"house not made with handes,\" the reality of the judgement seat of Christ, and the declaration that anyone in Christ is \"a newe creature.\"",
+      "verses": [
+        {
+          "ref": "2 Corinthians 5:1",
+          "note": "\"If our earthly house of this tabernacle be destroyed, we haue a building giuen of God... an house not made with handes, but eternall in the heauens.\""
+        },
+        {
+          "ref": "2 Corinthians 5:8",
+          "note": "\"We are bolde, and loue rather to remoue out of the body, and to dwell with the Lord.\""
+        },
+        {
+          "ref": "2 Corinthians 5:10",
+          "note": "\"We must all appeare before the iudgement seate of Christ.\""
+        },
+        {
+          "ref": "2 Corinthians 5:17",
+          "note": "\"If any man be in Christ, let him be a newe creature. Olde things are passed away: beholde, all things are become newe.\""
+        },
+        {
+          "ref": "2 Corinthians 5:18-20",
+          "note": "God has given \"the ministerie of reconciliation,\" and believers are \"ambassadours for Christ.\""
+        },
+        {
+          "ref": "2 Corinthians 5:21",
+          "note": "\"He hath made him to be sinne for vs, which knewe no sinne, that we should be made the righteousnesse of God in him.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jerusalem_collection_geneva_law",
+      "name": "The Cheerefull Giuer",
+      "role": "law",
+      "scribeTier": "The Cheerefull Giuer",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Appeals for the Corinthians to finish their promised gift for the Jerusalem church, using the Churches of Macedonia's generosity out of \"extreme pouertie\" as the model, and Christ's own voluntary poverty as the ultimate example — insisting giving must come from a willing mind, since \"God loueth a cheerefull giuer.\"",
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:1-3",
+          "note": "The Churches of Macedonia, in \"great triall of affliction,\" had their \"most extreme pouertie\" abound \"vnto their rich liberalitie.\""
+        },
+        {
+          "ref": "2 Corinthians 8:9",
+          "note": "\"Yee knowe the grace of our Lord Iesus Christ, that hee being rich, for your sakes became poore, that yee through his pouertie might be made rich.\""
+        },
+        {
+          "ref": "2 Corinthians 8:12",
+          "note": "\"If there be first a willing minde, it is accepted according to that a man hath, and not according to that he hath not.\""
+        },
+        {
+          "ref": "2 Corinthians 9:6-7",
+          "note": "\"Hee which soweth sparingly, shall reape also sparingly... God loueth a cheerefull giuer.\""
+        },
+        {
+          "ref": "2 Corinthians 9:15",
+          "note": "\"Thankes therefore bee vnto God for his vnspeakeable gift.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "false_apostles_geneva_law",
+      "name": "Angels of Light",
+      "role": "law",
+      "scribeTier": "Angels of Light",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2cor",
+      "purpose": "Warns the church against rival teachers who preach \"another Iesus\" and commend themselves, beginning in chapter 10 with Paul's claim that his \"weapons of our warrefare are not carnall, but mightie through God, to cast downe holdes\" and his reply to the charge that his letters are \"sore and strong\" while \"his bodily presence is weake\" — insisting only the Lord's commendation counts — through to naming the rivals outright as \"false apostles, deceitfull workers,\" since even Satan is \"transformed into an Angel of light,\" so true apostleship is marked by suffering, not self-promotion.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 10:4-5",
+          "note": "\"The weapons of our warrefare are not carnall, but mightie through God, to cast downe holdes... and bringing into captiuitie euery thought to the obedience of Christ.\""
+        },
+        {
+          "ref": "2 Corinthians 10:10",
+          "note": "Quotes the criticism: \"The letters, sayeth hee, are sore and strong, but his bodily presence is weake, and his speache is of no value.\""
+        },
+        {
+          "ref": "2 Corinthians 10:17-18",
+          "note": "\"Let him that reioyceth, reioyce in the Lord. For hee that praiseth himselfe, is not alowed, but he whome the Lord praiseth.\""
+        },
+        {
+          "ref": "2 Corinthians 11:4",
+          "note": "Warns against tolerating one who \"preacheth another Iesus whome we haue not preached.\""
+        },
+        {
+          "ref": "2 Corinthians 11:13",
+          "note": "\"Such false apostles are deceitfull workers, and transforme themselues into the Apostles of Christ.\""
+        },
+        {
+          "ref": "2 Corinthians 11:14-15",
+          "note": "\"Satan himselfe is transformed into an Angel of light... it is no great thing, though his ministers transforme themselues, as though they were the ministers of righteousnes.\""
+        },
+        {
+          "ref": "2 Corinthians 11:22-23",
+          "note": "Paul's rhetorical self-comparison: \"They are Hebrues, so am I: they are Israelites, so am I... they are the ministers of Christ, I speake as a foole, I am more.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is a collective, unnamed group in Geneva's own text too — no individual profiles are invented for them, per the collective-entry rule."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "churchOfCorinthus": {
+      "ref": "2 Corinthians 1:1",
+      "note": "The letter's addressee: \"the Church of God, which is at Corinthus with all the Saints, which are in all Achaia\" — the recipient body, not an individual character."
+    },
+    "churchesOfMacedonia": {
+      "ref": "2 Corinthians 8:1-3",
+      "note": "Referenced collectively as the model of generosity opening the giving appeal; not individually named or differentiated by congregation."
+    },
+    "unnamedOffenderTradition": {
+      "ref": "2 Corinthians 2:5-8; compare 1 Corinthians 5:1-5",
+      "note": "A traditional (not textually confirmed) link between the offender disciplined here and the man disciplined in 1 Corinthians 5 — this translation's text never makes that connection explicit, so it stays unresolved rather than merged into the offender's entry as fact."
+    }
+  }
+}

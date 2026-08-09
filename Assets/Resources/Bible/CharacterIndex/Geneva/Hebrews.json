@@ -1,0 +1,883 @@
+{
+  "book": "Hebrews",
+  "translation": "Geneva",
+  "canonicalOrder": 70,
+  "status": "drafted via careful manual Geneva-text read-through (single-book manual draft, same process as the KJV Hebrews baseline), grounded directly in Assets/Resources/Verses/Geneva/hebrews_70.json, not yet run through the multi-agent adversarial-verify workflow",
+  "notes": "The Geneva Bible's Hebrews is content-identical to the KJV's version of this book — same 13 chapters, same argument structure, same events and quoted OT citations, no deuterocanonical or structural divergence of the kind found elsewhere in this project (e.g. the Ethiopian Ezra). This entry therefore mirrors the already-validated KJV Hebrews tier structure closely by design (10 tiers: 4 person + 6 law/theme, since Hebrews is sustained theological argument rather than narrative), but every verse note below is quoted from the actual Geneva 1560 text I read, not copied from KJV phrasing, and several real translation-specific spelling/naming differences are logged rather than silently normalized to KJV forms: Geneva spells the Son's name \"Iesus\" (not \"Jesus\"), Melchizedek as \"Melchi-sedec\" (hyphenated, every occurrence), Isaac's son as \"Iacob\" and Joseph as \"Ioseph\" (I/J interchangeable in 1560 orthography — this is NOT a different name, just period spelling, kept as-is per the never-alter-the-text rule), and Timothy as \"Timotheus\" (13:23) rather than \"Timothy\". Sarah is spelled \"Sara\" here too, same as KJV. The one real in-book naming collision carries over identically into this translation: Hebrews 4:8 reads \"For if Iesus had giuen them rest, then would he not after this haue spoke of an other day\" — this \"Iesus\" is Joshua son of Nun (leader of the Canaan conquest), not Iesus Christ, since Geneva (like KJV) transliterates the Greek \"Iesous\" identically for both men. It is logged only under the wilderness_rest_geneva_hebrews law tier and explicitly flagged, never folded into jesus_geneva_hebrews's own verse list. The author is never named in the text itself (13:22-25 speaks in first person but gives no name); logged only as a placeholder id so deliveredBy references resolve, same as the KJV entry, with Pauline authorship treated as traditional-but-disputed, never asserted as textual fact. Melchi-sedec is again a \"promoted supporting figure\" case: a three-verse cameo in Genesis, but Hebrews ch.7's own argument makes his priesthood load-bearing for Christ's, earning him a full independent manager tier here exactly as in the KJV entry — his 7:3 description (\"without father, without mother, without kinred... neither beginning of his dayes, neither ende of life\") is the text's own rhetorical point about Genesis's silence on his ancestry, not a literal biological claim. Hebrews 11 (the faith chapter) again stays a single law/theme tier rather than being split into individual entries for every name in its catalogue — verses 32-38 explicitly shift to an undifferentiated collective description (\"what shall I more say? for the time would be too short for me to tell of Gedeon, of Barac, and of Sampson, and of Iephte, also of Dauid, and Samuel, and of the Prophets\") with no acts assigned to specific names, so this index does not invent that assignment. All other named figures (Aaron, Leui, Esau, Timotheus, Iesus Christ, Melchi-sedec, Moses, Abraham) refer to a single unambiguous person throughout this book, apart from the one flagged Iesus/Joshua transliteration collision.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Iesus Christ, the Great High Priest",
+      "managerId": "jesus_geneva_hebrews",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Moses, the Faithfull Seruant",
+      "managerId": "moses_geneva_hebrews",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Rest That Remaineth",
+      "managerId": "wilderness_rest_geneva_hebrews",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Melchi-sedec, Priest of the Most High God",
+      "managerId": "melchisedec_geneva_hebrews",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Leuiticall Priesthood",
+      "managerId": "levitical_priesthood_geneva_hebrews",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Abraham, Father of Faith",
+      "managerId": "abraham_geneva_hebrews",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Greater Tabernacle",
+      "managerId": "greater_tabernacle_geneva_hebrews",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Great Cloude of Witnesses",
+      "managerId": "cloud_of_witnesses_geneva_hebrews",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Mount Sinai and Mount Sion",
+      "managerId": "mount_sion_geneva_hebrews",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Let Brotherly Loue Continue",
+      "managerId": "brotherly_love_geneva_hebrews",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_geneva_hebrews",
+      "name": "Iesus Christ",
+      "role": "manager",
+      "scribeTier": "Iesus Christ, the Great High Priest",
+      "parentManagerId": null,
+      "perkNote": "Own book-and-translation-scoped id, same convention as every Gospel getting an independent Jesus tier. NOTE: Hebrews 4:8's 'Iesus' is a separate, unrelated transliteration of Joshua's name and is deliberately NOT included in this entry's verse list — see wilderness_rest_geneva_hebrews and genealogyLists.",
+      "genealogy": {
+        "father": "God the Father — affirmed as divine Sonship (Hebrews 1:5, quoting Psalm 2:7: 'Thou art my Sonne, this day begate I thee'), not narrated as a birth event",
+        "mother": "not mentioned in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 1:1-4",
+          "note": "introduced as God's Son, 'heire of al things', 'the ingraued forme of his person', sitting 'at the right hand of the Maiestie in the highest places'."
+        },
+        {
+          "ref": "Hebrews 1:5-14",
+          "note": "a chain of OT quotations proclaiming the Son 'made so much more excellent then the Angels'."
+        },
+        {
+          "ref": "Hebrews 2:9",
+          "note": "'made litle inferiour to the Angels, through the suffering of death, that by Gods grace he might taste death for all men'."
+        },
+        {
+          "ref": "Hebrews 2:14-18",
+          "note": "took part in flesh and blood 'that hee might destroye through death, him that had the power of death, that is the deuil', becoming 'a faithfull hie Priest'."
+        },
+        {
+          "ref": "Hebrews 3:1",
+          "note": "called 'the Apostle and high Priest of our profession'."
+        },
+        {
+          "ref": "Hebrews 4:14-16",
+          "note": "'a great hie Priest, which is entred into heauen'; readers may 'goe boldly vnto ye throne of grace'."
+        },
+        {
+          "ref": "Hebrews 5:5-10",
+          "note": "'called of God an hie Priest after the order of Melchi-sedec'; 'though he were ye Sonne, yet learned he obedience, by the things which he suffered'."
+        },
+        {
+          "ref": "Hebrews 7:24-25",
+          "note": "'he is able also perfectly to saue them that come vnto God by him, seeing he euer liueth, to make intercession for them'."
+        },
+        {
+          "ref": "Hebrews 7:26-28",
+          "note": "described as 'holy, harmelesse, vndefiled, separate from sinners, and made hier then the heauens'."
+        },
+        {
+          "ref": "Hebrews 9:11-14",
+          "note": "entered 'by his owne blood... once vnto the holy place, and obteined eternall redemption for vs'."
+        },
+        {
+          "ref": "Hebrews 9:24-28",
+          "note": "appears 'in ye sight of God for vs'; 'once offered to take away the sinnes of many'; will 'appeare the second time without sinne vnto saluation'."
+        },
+        {
+          "ref": "Hebrews 10:10-14",
+          "note": "'the offring of the body of Iesus Christ once made', then 'sitteth for euer at the right hand of God'."
+        },
+        {
+          "ref": "Hebrews 12:2",
+          "note": "'the authour and finisher of our faith, who for the ioy that was set before him, endured the crosse, and despised the shame'."
+        },
+        {
+          "ref": "Hebrews 12:24",
+          "note": "'the Mediatour of the new Testament', whose sprinkled blood 'speaketh better things then that of Abel'."
+        },
+        {
+          "ref": "Hebrews 13:8",
+          "note": "'Iesus Christ yesterday, and to day, the same also is for euer'."
+        },
+        {
+          "ref": "Hebrews 13:20",
+          "note": "'the great shepheard of the sheepe', raised again through 'the blood of the euerlasting Couenant'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book never narrates a single earthly-ministry episode the way a Gospel does — Iesus is argued about almost entirely as heavenly High Priest, which is why this tier's verse list is doctrine-dense rather than scene-by-scene.",
+        "NOT the same 'Iesus' referenced in Hebrews 4:8 (that instance is Joshua son of Nun, a transliteration quirk carried over from the same Greek word as in KJV) — see wilderness_rest_geneva_hebrews."
+      ]
+    },
+    {
+      "id": "moses_geneva_hebrews",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Moses, the Faithfull Seruant",
+      "parentManagerId": null,
+      "perkNote": "Own translation-and-book-scoped id since this document must validate standalone and only carries what this Geneva text of Hebrews itself states about him.",
+      "genealogy": {
+        "father": "not stated in this book's text",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 3:2-6",
+          "note": "'Moses verely was faithfull in all his house, as a seruant', contrasted with Christ as 'the Sonne, ouer his owne house'."
+        },
+        {
+          "ref": "Hebrews 7:14",
+          "note": "noted that 'our Lord sprung out of Iuda, concerning the which tribe Moses spake nothing, touching the Priesthood'."
+        },
+        {
+          "ref": "Hebrews 9:19",
+          "note": "'when Moses had spoken euery precept to the people, according to the Law, he tooke the blood of calues and of goates... and sprinckled both the booke, and all the people'."
+        },
+        {
+          "ref": "Hebrews 11:23",
+          "note": "'By faith Moses when he was borne, was hid three moneths of his parents, because they sawe he was a proper childe'."
+        },
+        {
+          "ref": "Hebrews 11:24-26",
+          "note": "'refused to be called the sonne of Pharaohs daughter', choosing 'to suffer aduersitie with the people of God', 'esteeming the rebuke of Christ greater riches then the treasures of Egypt'."
+        },
+        {
+          "ref": "Hebrews 11:27",
+          "note": "'he forsooke Egypt, and feared not the fiercenes of the king: for he endured, as he that sawe him which is inuisible'."
+        },
+        {
+          "ref": "Hebrews 11:28",
+          "note": "'he ordeined the Passeouer and the effusion of blood, least he that destroyed the first borne, should touche them'."
+        },
+        {
+          "ref": "Hebrews 12:21",
+          "note": "at the mount, 'so terrible was the sight which appeared, that Moses said, I feare and quake'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Moses is again this book's primary point of comparison for Christ (ch.3, faithful seruant vs. Sonne) and, with Abraham, one of only two ch.11 faith-catalogue figures given a multi-verse account rather than a single line."
+      ]
+    },
+    {
+      "id": "wilderness_rest_geneva_hebrews",
+      "name": "The Rest That Remaineth",
+      "role": "law",
+      "scribeTier": "The Rest That Remaineth",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Warns readers, using the wilderness generation's failure as a cautionary example, not to let vnbeliefe keep them from entering the 'rest' God promised, the way hardened hearts kept that generation out of it — and holds out a rest that still remains open to be entred by faith.",
+      "verses": [
+        {
+          "ref": "Hebrews 3:7-11",
+          "note": "quotes: 'To day if ye shall heare his voyce, Harden not your hearts, as in the prouocation... I sware in my wrath, If they shall enter into my rest.'"
+        },
+        {
+          "ref": "Hebrews 3:12-15",
+          "note": "warns against 'an euill heart, and vnfaithfull', urging to 'exhort one another dayly... lest any of you be hardened through the deceitfulnes of sinne'."
+        },
+        {
+          "ref": "Hebrews 3:16-19",
+          "note": "concludes 'they could not enter in, because of vnbeliefe'."
+        },
+        {
+          "ref": "Hebrews 4:1-2",
+          "note": "the promise still stands, but 'the worde that they heard, profited not them, because it was not mixed with faith'."
+        },
+        {
+          "ref": "Hebrews 4:3-5",
+          "note": "'we which haue beleeued, doe enter into rest', tied to God resting 'the seuenth day from all his workes'."
+        },
+        {
+          "ref": "Hebrews 4:6-8",
+          "note": "God 'appointed in Dauid a certaine day, by To day'. Verse 8 reads 'For if Iesus had giuen them rest, then would he not after this haue spoke of an other day' — this 'Iesus' is Joshua son of Nun (who led Israel into the land), NOT Iesus Christ; Geneva, like KJV, transliterates the Greek 'Iesous' identically for both names. See genealogyLists for the cross-reference."
+        },
+        {
+          "ref": "Hebrews 4:9-11",
+          "note": "'there remaineth therefore a rest to the people of God'; believers are urged to 'studie therefore to enter into that rest'."
+        },
+        {
+          "ref": "Hebrews 4:12-13",
+          "note": "the word of God as 'liuely, and mightie in operation, and sharper then any two edged sword', a 'discerner of the thoughtes, and the intents of the heart'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hebrews 4:8 is a real in-book naming collision in this translation too: 'Iesus' here is Joshua, not Iesus Christ, due to identical Greek transliteration (Iesous) for both names — flagged explicitly rather than silently merged."
+      ]
+    },
+    {
+      "id": "melchisedec_geneva_hebrews",
+      "name": "Melchi-sedec",
+      "role": "manager",
+      "scribeTier": "Melchi-sedec, Priest of the Most High God",
+      "parentManagerId": null,
+      "perkNote": "Same figure as Genesis's brief cameo, promoted to a full independent manager tier here since Hebrews ch.7's own argument makes his priesthood load-bearing for Christ's. Geneva spells his name hyphenated ('Melchi-sedec') in every occurrence — kept as the text renders it, not normalized to 'Melchizedek'.",
+      "genealogy": {
+        "father": "not stated in the text — Hebrews 7:3 explicitly describes him as 'without father, without mother, without kinred', a rhetorical point about the SILENCE of Genesis on his ancestry, not a literal biological claim",
+        "mother": "see father field — same textual device, Hebrews 7:3",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 5:6",
+          "note": "quoted (Psalm 110): 'Thou art a Priest for euer, after ye order of Melchi-sedec.'"
+        },
+        {
+          "ref": "Hebrews 6:20",
+          "note": "Iesus entered as forerunner, 'made an hie Priest for euer after the order of Melchi-sedec'."
+        },
+        {
+          "ref": "Hebrews 7:1-3",
+          "note": "'King of Salem, the Priest of the most high God, who met Abraham, as he returned from the slaughter of the Kings, and blessed him'; interpreted 'King of righteousnes... King of Salem, that is, King of peace'; 'Without father, without mother, without kinred, and hath neither beginning of his dayes, neither ende of life'."
+        },
+        {
+          "ref": "Hebrews 7:4-10",
+          "note": "Abraham 'gaue the tithe of all things' to him; argued greater than the Leuitical line since Leui, 'yet in the loynes of his father Abraham', effectively paid tithes to him."
+        },
+        {
+          "ref": "Hebrews 7:11,15,17",
+          "note": "'after the order of Melchi-sedec' repeated to argue for a Priesthood superseding Aaron's."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Appears in Genesis for only a handful of verses; this book devotes most of ch.7 to arguing from the text's SILENCE about his ancestry — a rhetorical technique specific to this argument, not a claim he had no real parents."
+      ]
+    },
+    {
+      "id": "levitical_priesthood_geneva_hebrews",
+      "name": "The Leuiticall Priesthood",
+      "role": "law",
+      "scribeTier": "The Leuiticall Priesthood",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Argues that the Leuiticall/Aaronicke priestly system, however duely ordeined, could not itself bring perfection — its priestes died and had to be replaced, it required repeated sacrifices, and the law had to change once the Priesthood changed — so it always pointed beyond itself to a permanent Priest 'after the order of Melchi-sedec'.",
+      "verses": [
+        {
+          "ref": "Hebrews 5:1-4",
+          "note": "'euery hie Priest is taken from among men, and is ordeined for men'; must be 'called of God, as was Aaron'."
+        },
+        {
+          "ref": "Hebrews 7:5",
+          "note": "'the childre of Leui, which receiue the office of the Priesthode, haue a commandement to take, according to the Law, tithes of the people'."
+        },
+        {
+          "ref": "Hebrews 7:11",
+          "note": "'If therefore perfection had bene by the Priesthoode of the Leuites... what needed it furthermore, that another Priest should rise after the order of Melchi-sedec, and not to be called after the order of Aaron?'"
+        },
+        {
+          "ref": "Hebrews 7:23",
+          "note": "'among them many were made Priests, because they were not suffered to endure, by the reason of death'."
+        },
+        {
+          "ref": "Hebrews 9:1-5",
+          "note": "describes the Tabernacle's furnishings under the first Testament, including 'Aarons rod that had budded' kept in the Arke — cited here for what the Arke's own contents witness about the Leuitical priesthood's limits. NOTE: this same range is also cited under The Greater Tabernacle tier, there for the Sanctuarie's structural layout — an intentional cross-reference, not a duplication error."
+        },
+        {
+          "ref": "Hebrews 9:6-10",
+          "note": "'the Priestes went alwayes into the first Tabernacle'; only the hie Priest entered 'the second', once a yere, 'not without blood'."
+        },
+        {
+          "ref": "Hebrews 10:1,11",
+          "note": "the Law is 'the shadowe of good things to come'; every Priest 'standeth dayly ministring, and oft times offreth one maner of offring, which can neuer take away sinnes'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abraham_geneva_hebrews",
+      "name": "Abraham",
+      "role": "manager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": null,
+      "perkNote": "Own translation-and-book-scoped id since this document must validate standalone and only carries what this book's text itself states about him.",
+      "genealogy": {
+        "father": "not named in this book's text",
+        "mother": "not mentioned in this book's text",
+        "spouses": [
+          "sara_geneva_hebrews"
+        ],
+        "children": [
+          "isaac_geneva_hebrews"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 6:13-15",
+          "note": "'when God made the promise to Abraham... he sware by himselfe'; 'after that he had taried patiently, he enioyed the promise'."
+        },
+        {
+          "ref": "Hebrews 7:1-2",
+          "note": "met by Melchi-sedec 'as he returned from the slaughter of the Kings'; 'Abraham gaue the tithe of all things' to him."
+        },
+        {
+          "ref": "Hebrews 7:4",
+          "note": "called 'the Patriarke' who gaue Melchi-sedec 'the tithe of the spoyles'."
+        },
+        {
+          "ref": "Hebrews 7:9-10",
+          "note": "'Leui also which receiueth tithes, payed tithes in Abraham. For hee was yet in the loynes of his father Abraham, when Melchi-sedec met him.'"
+        },
+        {
+          "ref": "Hebrews 11:8",
+          "note": "'By faith Abraham, when he was called, obeyed God, to goe out into a place, which hee should afterward receiue for inheritance... not knowing whither he went.'"
+        },
+        {
+          "ref": "Hebrews 11:9",
+          "note": "'he abode in the land of promise, as in a strange countrey, as one that dwelt in tents with Isaac and Iacob heires with him of the same promise'."
+        },
+        {
+          "ref": "Hebrews 11:10",
+          "note": "'he looked for a citie hauing a foundation, whose builder and maker is God'."
+        },
+        {
+          "ref": "Hebrews 11:12",
+          "note": "'of one, euen of one which was dead, so many as the starres of the skie in multitude'."
+        },
+        {
+          "ref": "Hebrews 11:17-19",
+          "note": "'By faith Abraham offered vp Isaac, when he was tryed... he considered that God was able to raise him vp euen from the dead: from whence he receiued him also after a sort.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Alongside Moses, the only OT figure given multi-episode treatment in this book (tithing to Melchi-sedec in ch.7, the promise/othe in ch.6, offering Isaac in ch.11) rather than a single-line mention."
+      ]
+    },
+    {
+      "id": "sara_geneva_hebrews",
+      "name": "Sara",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_geneva_hebrews",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Geneva renders her name 'Sara' in this verse, matching KJV's spelling here.",
+      "genealogy": {
+        "father": "not stated in this book's text",
+        "mother": "not stated in this book's text",
+        "spouses": [
+          "abraham_geneva_hebrews"
+        ],
+        "children": [
+          "isaac_geneva_hebrews"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:11",
+          "note": "'Through faith Sara also receiued strength to conceiue seede, and was deliuered of a childe when she was past age, because she iudged him faithfull which had promised.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "isaac_geneva_hebrews",
+      "name": "Isaac",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_geneva_hebrews",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "abraham_geneva_hebrews",
+        "mother": "sara_geneva_hebrews",
+        "spouses": [],
+        "children": [
+          "iacob_geneva_hebrews",
+          "esau_geneva_hebrews"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:9",
+          "note": "dwelt in tents alongside Abraham and Iacob as fellow heirs of the same promise."
+        },
+        {
+          "ref": "Hebrews 11:17-19",
+          "note": "offered vp by Abraham, referenced as the ultimate test of Abraham's faith."
+        },
+        {
+          "ref": "Hebrews 11:20",
+          "note": "'By faith Isaac blessed Iacob and Esau, concerning things to come.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iacob_geneva_hebrews",
+      "name": "Iacob",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_geneva_hebrews",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Geneva's 1560 orthography spells this name 'Iacob' (I/J interchangeable) — same person as 'Jacob', kept as the text renders it.",
+      "genealogy": {
+        "father": "isaac_geneva_hebrews",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": [
+          "ioseph_geneva_hebrews"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:9",
+          "note": "dwelt in tents alongside Abraham and Isaac as fellow heirs of the same promise."
+        },
+        {
+          "ref": "Hebrews 11:21",
+          "note": "'By faith Iacob when he was a dying, blessed both the sonnes of Ioseph, and leaning on the ende of his staffe, worshipped God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ioseph_geneva_hebrews",
+      "name": "Ioseph",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_geneva_hebrews",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Geneva's 1560 orthography spells this name 'Ioseph' (I/J interchangeable) — same person as 'Joseph', kept as the text renders it.",
+      "genealogy": {
+        "father": "iacob_geneva_hebrews",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:22",
+          "note": "'By faith Ioseph when he died, made mention of the departing of the children of Israel, and gaue commandement of his bones.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "greater_tabernacle_geneva_hebrews",
+      "name": "The Greater Tabernacle",
+      "role": "law",
+      "scribeTier": "The Greater Tabernacle",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Contrasts the earthly Tabernacle's repeated sacrifices, which could purge only the flesh, with Christ's single sacrifice in the true heauenly Sanctuarie, and grounds the new Testament in the prophecy of a Testament written 'in their heart' rather than on tables.",
+      "verses": [
+        {
+          "ref": "Hebrews 8:6-7",
+          "note": "Christ 'hath obteined a more excellent office', Mediatour of a Testament 'established vpon better promises'; the first was not 'vnblameable'."
+        },
+        {
+          "ref": "Hebrews 8:8-12",
+          "note": "quotes the promise: 'I shall make with the house of Israel, and with the house of Iuda a newe Testament... I will put my Lawes in their minde, and in their heart I will write them.'"
+        },
+        {
+          "ref": "Hebrews 9:1-5",
+          "note": "describes the Tabernacle's two compartments and furnishings — 'the candlesticke, and the table, and the shewbread'; the Arke, 'the golden pot, which had Manna', 'Aarons rod that had budded', the tables of the Testament — cited here for the Sanctuarie's own structural layout. NOTE: this same range is also cited under The Leuiticall Priesthood tier, there for Aaron's rod as evidence about the Priesthood — an intentional cross-reference, not a duplication error."
+        },
+        {
+          "ref": "Hebrews 9:11-12",
+          "note": "Christ, hie Priest 'by a greater and a more perfect Tabernacle', entred 'once vnto the holy place... and obteined eternall redemption for vs'."
+        },
+        {
+          "ref": "Hebrews 9:22",
+          "note": "'without sheading of blood is no remission'."
+        },
+        {
+          "ref": "Hebrews 9:27-28",
+          "note": "'as it is appointed vnto men that they shall once die, and after that commeth the iudgement: So Christ was once offered to take away the sinnes of many.'"
+        },
+        {
+          "ref": "Hebrews 10:1-4",
+          "note": "the Law has 'the shadowe of good things to come', never able to make sacrifice-offerers perfect."
+        },
+        {
+          "ref": "Hebrews 10:19-22",
+          "note": "believers now 'may be bolde to enter into the Holy place' 'by the blood of Iesus'."
+        },
+        {
+          "ref": "Hebrews 10:25",
+          "note": "exhorts 'Not forsaking the fellowship that we haue among our selues'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cloud_of_witnesses_geneva_hebrews",
+      "name": "The Great Cloude of Witnesses",
+      "role": "law",
+      "scribeTier": "The Great Cloude of Witnesses",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Catalogues OT figures whose faith held onto God's promises without seeing them fulfilled, encouraging a persecuted audience to keep faith and patience despite their own unfulfilled hope.",
+      "verses": [
+        {
+          "ref": "Hebrews 11:1-3",
+          "note": "defines faith as 'the grounds of things, which are hoped for, and the euidence of things which are not seene'."
+        },
+        {
+          "ref": "Hebrews 11:4",
+          "note": "Abel 'offered vnto God a greater sacrifice then Cain'... 'he being dead, yet speaketh' (Abel and Cain cross-referenced to their Genesis entries, not re-indexed here — see genealogyLists)."
+        },
+        {
+          "ref": "Hebrews 11:5-6",
+          "note": "Enoch 'was translated, that he should not see death... he had pleased God' (cross-referenced to the existing Genesis entry)."
+        },
+        {
+          "ref": "Hebrews 11:7",
+          "note": "Noe, 'warned of God of the things which were as yet not seene', 'prepared the Arke to the sauing of his housholde' (cross-referenced; Geneva spells the name 'Noe')."
+        },
+        {
+          "ref": "Hebrews 11:29",
+          "note": "'they passed through the red sea as by drie land, which when the Egyptians had assayed to doe, they were swallowed vp'."
+        },
+        {
+          "ref": "Hebrews 11:30",
+          "note": "'the walles of Iericho fell downe after they were copassed about seue dayes'."
+        },
+        {
+          "ref": "Hebrews 11:31",
+          "note": "'the harlot Rahab perished not with them which obeyed not, when she had receiued the spies peaceably' (cross-referenced, likely already indexed under Joshua)."
+        },
+        {
+          "ref": "Hebrews 11:32",
+          "note": "names, with no individual acts distinguished: 'Gedeon, and Barac, and Sampson, and Iephte, also of Dauid, and Samuel, and of the Prophets.'"
+        },
+        {
+          "ref": "Hebrews 11:33-38",
+          "note": "collective description of feats and sufferings — 'stopped the mouthes of lions', 'they were stoned, they were hewen asunder... they wandred vp and downe in sheepes skinnes, and in goates skinnes' — without attributing specific acts to specific names."
+        },
+        {
+          "ref": "Hebrews 11:39-40",
+          "note": "closes: these all 'obteined good report, and receiued not the promise, God prouiding a better thing for vs'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verses 32-38 deliberately stop naming names and shift to unattributed collective description — this index does not guess which act belongs to which name."
+      ]
+    },
+    {
+      "id": "mount_sion_geneva_hebrews",
+      "name": "Mount Sinai and Mount Sion",
+      "role": "law",
+      "scribeTier": "Mount Sinai and Mount Sion",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Contrasts the terrible, untouchable mountain where the Law was given (Sinai) with the ioyful, accessible mount Sion of the new Testament, reinforcing a warning against turning back with a real cautionary example (Esau) and the theme of divine chastening as evidence of true sonship.",
+      "verses": [
+        {
+          "ref": "Hebrews 12:1",
+          "note": "introduces 'so great a cloude of witnesses' as reason to 'runne with patience the race that is set before vs'."
+        },
+        {
+          "ref": "Hebrews 12:4-11",
+          "note": "chastening: 'whom the Lord loueth, he chasteneth'; discipline as evidence of true sonship, yielding 'the quiet fruite of righteousnesse'."
+        },
+        {
+          "ref": "Hebrews 12:14-17",
+          "note": "warns against 'any roote of bitternes', and against being 'a fornicator, or prophane person as Esau, which for one portion of meate solde his birthright', who 'founde no place to repentance, though he sought that blessing with teares'."
+        },
+        {
+          "ref": "Hebrews 12:18-21",
+          "note": "the mount 'that might be touched', 'blacknes and darkenes, and tempest', so terrible that 'Moses said, I feare and quake'."
+        },
+        {
+          "ref": "Hebrews 12:22-24",
+          "note": "believers instead 'are come vnto the mount Sion, and to the citie of the liuing God, the celestiall Hierusalem... and to Iesus the Mediatour of the new Testament, and to the blood of sprinkling that speaketh better things then that of Abel'."
+        },
+        {
+          "ref": "Hebrews 12:25-29",
+          "note": "warns not to 'despise... him that speaketh', since 'euen our God is a consuming fire'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "brotherly_love_geneva_hebrews",
+      "name": "Let Brotherly Loue Continue",
+      "role": "law",
+      "scribeTier": "Let Brotherly Loue Continue",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_geneva_hebrews",
+      "purpose": "Closes the epistle with practical instructions for common life — hospitalitie, care for prisoners, mariage, freedom from couetousnesse, submission to church leaders — and a final benediction and greeting, grounding the letter's high doctrinal argument in ordinary conduct.",
+      "verses": [
+        {
+          "ref": "Hebrews 13:1-2",
+          "note": "'Let brotherly loue continue. Be not forgetfull to intertaine strangers: for thereby some haue receiued Angels into their houses vnwares.'"
+        },
+        {
+          "ref": "Hebrews 13:3",
+          "note": "'Remember them that are in bondes, as though ye were bounde with them'."
+        },
+        {
+          "ref": "Hebrews 13:4",
+          "note": "'Mariage is honorable among all, and the bed vndefiled'."
+        },
+        {
+          "ref": "Hebrews 13:5-6",
+          "note": "'Let your conuersation be without couetousnesse... I will not faile thee, neither forsake thee'."
+        },
+        {
+          "ref": "Hebrews 13:7",
+          "note": "'Remember them which haue the ouersight of you, which haue declared vnto you the word of God: whose faith follow'."
+        },
+        {
+          "ref": "Hebrews 13:8",
+          "note": "'Iesus Christ yesterday, and to day, the same also is for euer.'"
+        },
+        {
+          "ref": "Hebrews 13:9-16",
+          "note": "warns against being 'caried about with diuers and strange doctrines', and describes going 'foorth to him therefore out of the campe, bearing his reproch', offering 'the sacrifice of prayse'."
+        },
+        {
+          "ref": "Hebrews 13:17",
+          "note": "'Obey them that haue the ouersight of you, and submit your selues'."
+        },
+        {
+          "ref": "Hebrews 13:18-19",
+          "note": "a request for prayer, 'that I may be restored to you more quickly'."
+        },
+        {
+          "ref": "Hebrews 13:20-21",
+          "note": "closing benediction: 'The God of peace that brought againe from the dead our Lord Iesus, the great shepheard of the sheepe, through the blood of the euerlasting Couenant.'"
+        },
+        {
+          "ref": "Hebrews 13:22-25",
+          "note": "final greetings, noting brother 'Timotheus is deliuered', and 'They of Italie salute you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "aaron_geneva_hebrews",
+      "name": "Aaron",
+      "role": "named",
+      "parentManagerId": null,
+      "perkNote": "Named directly but always as an office-holder/type rather than an acting character within this book's own text — kept as a named reference under The Leuiticall Priesthood law tier rather than promoted to a person-tier manager, since the events referenced belong to Exodus/Leviticus/Numbers, not to Hebrews itself.",
+      "genealogy": {
+        "father": "not stated in this book's text",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 5:4",
+          "note": "cited as the model for lawful priestly calling: 'no man taketh this honor vnto him selfe, but he that is called of God, as was Aaron'."
+        },
+        {
+          "ref": "Hebrews 7:11",
+          "note": "the priesthood 'after the order of Aaron' named as the standard Christ's priesthood supersedes."
+        },
+        {
+          "ref": "Hebrews 9:4",
+          "note": "'Aarons rod that had budded' listed among the Arke's contents."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "levi_geneva_hebrews",
+      "name": "Leui",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "not stated in this book's text",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 7:5",
+          "note": "'the childre of Leui, which receiue the office of the Priesthode, haue a commandement to take, according to the Law, tithes of the people'."
+        },
+        {
+          "ref": "Hebrews 7:9-10",
+          "note": "'Leui also which receiueth tithes, payed tithes in Abraham. For hee was yet in the loynes of his father Abraham, when Melchi-sedec met him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book's argument is explicitly typological — Leui is treated as present 'in the loynes' of his ancestor Abraham, a rhetorical device for the argument, not a claim of literal memory or agency."
+      ]
+    },
+    {
+      "id": "esau_geneva_hebrews",
+      "name": "Esau",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "isaac_geneva_hebrews",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 12:16",
+          "note": "'Let there be no fornicator, or prophane person as Esau, which for one portion of meate solde his birthright.'"
+        },
+        {
+          "ref": "Hebrews 12:17",
+          "note": "'when he woulde haue inherited the blessing, he was reiected: for he founde no place to repentance, though he sought that blessing with teares'."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "timotheus_geneva_hebrews",
+      "name": "Timotheus",
+      "role": "named",
+      "parentManagerId": null,
+      "perkNote": "Geneva spells this name 'Timotheus' rather than 'Timothy' — kept as the text renders it, same person as the Timothy of Acts/the Pastoral Epistles by widespread assumption, though this book itself gives no identifying detail beyond his name and recent release.",
+      "genealogy": {
+        "father": "not stated in this book's text",
+        "mother": "not stated in this book's text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 13:23",
+          "note": "'Knowe that our brother Timotheus is deliuered, with whome (if hee come shortly) I will see you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unknown_author_geneva_hebrews",
+      "name": "Unknown Author",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 13:22-25",
+          "note": "the author speaks in first person ('I beseeche you... I haue written... I will see you') but never states his own name anywhere in the text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This entry exists only so deliveredBy references resolve to a real id, not as a claim about who actually wrote this book. Pauline authorship should be treated as traditional-but-disputed, never asserted as settled fact."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above — mostly ch.11's collective catalogue, other un-named allusions, and one flagged same-name transliteration collision.",
+    "joshua_cross_reference_naming_collision": {
+      "ref": "Hebrews 4:8",
+      "note": "NAMING-COLLISION FLAG: the Geneva text reads 'For if Iesus had giuen them rest, then would he not after this haue spoke of an other day' — this 'Iesus' is Joshua son of Nun, who led Israel into the land, NOT Iesus Christ (jesus_geneva_hebrews). Both names transliterate the same Greek word 'Iesous', which this translation (like KJV) renders identically. Explicitly flagged per the naming-collision rule rather than silently merged with, or omitted from, the jesus_geneva_hebrews entry."
+    },
+    "cain_cross_reference": {
+      "ref": "Hebrews 11:4",
+      "note": "Named as the one whose sacrifice was excelled by Abel's ('by the which he obtained witnes that he was righteous'); same Cain indexed in Genesis — cross-referenced only, not re-indexed here."
+    },
+    "abel_cross_reference": {
+      "ref": "Hebrews 11:4",
+      "note": "Same Abel indexed in Genesis — cross-referenced only, not re-indexed here."
+    },
+    "enoch_cross_reference": {
+      "ref": "Hebrews 11:5-6",
+      "note": "Same Enoch indexed in Genesis — cross-referenced only."
+    },
+    "noe_cross_reference": {
+      "ref": "Hebrews 11:7",
+      "note": "Same Noah/Noe indexed in Genesis — cross-referenced only. Geneva spells his name 'Noe' in this verse."
+    },
+    "rahab_cross_reference": {
+      "ref": "Hebrews 11:31",
+      "note": "The Rahab of Iericho, likely already indexed under Joshua — cross-referenced only."
+    },
+    "gedeon_barac_sampson_iephte": {
+      "ref": "Hebrews 11:32",
+      "note": "Named together in one verse with no individual acts distinguished; likely already indexed under Judges — not split into separate entries here per the collective-mention rule. Geneva spells these 'Gedeon, Barac, Sampson, Iephte' (Gideon, Barak, Samson, Jephthah)."
+    },
+    "dauid_samuel_prophets": {
+      "ref": "Hebrews 11:32",
+      "note": "Named together in one verse; Dauid and Samuel likely already indexed under 1-2 Samuel/1-2 Kings, 'the Prophets' left as an unresolved collective — cross-referenced only."
+    },
+    "women_who_received_their_dead": {
+      "ref": "Hebrews 11:35",
+      "note": "'The women receiued their dead raised to life' plausibly alludes to the widow of Zarephath and the Shunammite woman, but the text names neither and makes no explicit cross-reference, so per the naming rule they are left unnamed here."
+    },
+    "hewen_asunder_tradition": {
+      "ref": "Hebrews 11:37",
+      "note": "'They were hewen asunder' is traditionally associated with the martyrdom of Isaiah (via the non-canonical Ascension of Isaiah), but this book does not name him and makes no such link — noted as tradition only, not textual fact."
+    },
+    "moses_parents": {
+      "ref": "Hebrews 11:23",
+      "note": "'Hid three moneths of his parents' — unnamed in this book's own text."
+    },
+    "entertained_angels_unawares": {
+      "ref": "Hebrews 13:2",
+      "note": "A general exhortation likely alluding to Abraham (Genesis 18) and/or Lot (Genesis 19), but the text names neither — left as a general instruction, not attributed to a specific character."
+    },
+    "italy_greeting": {
+      "ref": "Hebrews 13:24",
+      "note": "'They of Italie salute you' — an unnamed collective sending greetings, not individually identifiable from the text."
+    }
+  }
+}

@@ -1,0 +1,823 @@
+{
+  "book": "Wisdom of Solomon",
+  "translation": "Ethiopian",
+  "canonicalOrder": 33,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Wisdom of Solomon is not narrative but sustained wisdom discourse — closer in shape to Leviticus's law-tier-heavy structure (or a NT epistle) than to a story book, so 12 of its 14 tiers are Law/theme type built around the book's own content movements rather than around distinct acting characters. Read against the actual extracted text (not assumed from general familiarity with \"the Apocrypha\"), this Ethiopian-translation text tracks the well-established, widely-known Wisdom of Solomon content and structure closely (three natural movements: eschatology/justice for rulers in ch.1-6, Solomon's personal pursuit of and prayer for Wisdom in ch.6:22-9, then Wisdom's actions through history from Adam to the Exodus in ch.10-19) — no Ezra-style canonical surprise was found here. The one genuinely notable textual feature, confirmed by reading straight through: the book's own text NEVER once uses the name \"Solomon\" — the royal narrator of ch.6-9 is identified only through internal clues (built a temple, inherited \"my father's seat,\" was chosen \"a king of thy people,\" 9:7-12) plus the book's own title. Likewise, every historical figure recalled in ch.10 (the first man, the fratricide, the ark's pilot, the chosen man of the confounded nations, the fugitive from the fire, the wronged brother, the sold servant, the prophet's servant) and the high priest of ch.18:20-25 are described only periphrastically, never named — per this project's naming-collision/later-name rule, each is captured under a text-descriptive name with a flagged, NOT-asserted traditional correspondence (Adam, Cain, Noah, Abraham, Lot, Jacob, Joseph, Moses, and Aaron respectively) noted only in funFacts. The one group the text DOES name outright is \"the Sodomites\" (19:14), used as a real point of contrast against Egypt's treatment of guests. Two tiers were promoted to Person type against the book's overall discourse pattern: Solomon himself (his ch.6-9 account is intensely personal — his own conception, birth, and prayer — genuinely personally embodied, not just transmitted teaching), and the unnamed high priest of ch.18:20-25, whose incense-and-prayer intervention \"stood between\" the living and the dead in real time, a directly embodied act rather than a remembered example, unlike the other ch.10 figures who stay folded into a single collective Law tier.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Ivory Throne",
+      "managerId": "solomon_wisdom_eth",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Charge to the Judges",
+      "managerId": "charge_judges_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Serpent's Envy",
+      "managerId": "serpents_envy_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Barren Boughs",
+      "managerId": "barren_boughs_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Breastplate of Righteousness",
+      "managerId": "breastplate_righteousness_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Call to the Kings",
+      "managerId": "call_to_kings_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Wisdom's Long Memory",
+      "managerId": "wisdoms_long_memory_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Waters Turned",
+      "managerId": "waters_turned_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Wasps of Mercy",
+      "managerId": "wasps_of_mercy_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Potter's Vanity",
+      "managerId": "potters_vanity_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Serpents and Sustenance",
+      "managerId": "serpents_sustenance_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Long Night",
+      "managerId": "long_night_wisd_eth",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Blameless Man",
+      "managerId": "blameless_man_wisd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Elements Transformed",
+      "managerId": "elements_transformed_wisd_eth",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "solomon_wisdom_eth",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "The Ivory Throne",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Not named in this text; referenced only as 'my father's seat' (9:12) — per the book's own title and traditional Solomonic authorship this is understood as David, but this book's actual text never states it.",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 6:22",
+          "note": "Promises to reveal what Wisdom is and how she came to be, 'from the beginning of her nativity,' without hiding mysteries."
+        },
+        {
+          "ref": "Wisdom of Solomon 7:1-6",
+          "note": "Describes his own conception, birth, and infancy in unusually intimate detail — 'like to all,' with 'no other beginning of birth' than any other man."
+        },
+        {
+          "ref": "Wisdom of Solomon 7:7-9",
+          "note": "Prayed and received the spirit of wisdom; preferred her before sceptres and thrones and counted all gold as sand beside her."
+        },
+        {
+          "ref": "Wisdom of Solomon 8:2",
+          "note": "'I loved her, and sought her out from my youth... I desired to make her my spouse.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 9:4-8",
+          "note": "His prayer: asks for wisdom 'that sitteth by thy throne,' recalling that God chose him 'to be a king of thy people' and commanded him to 'build a temple upon thy holy mount.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 9:12",
+          "note": "Prays that his works be acceptable so he may be 'worthy to sit in my father's seat.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book's actual text never once uses the name 'Solomon' — his identity here rests entirely on the book's title plus internal clues: building a temple 'upon thy holy mount,' inheriting 'my father's seat,' and being chosen 'a king of thy people' (9:7-12).",
+        "His account of his own birth (7:1-6) is a deliberate rhetorical move — arguing that even a king enters the world exactly like any other mortal, with 'no other beginning of birth.'"
+      ]
+    },
+    {
+      "id": "charge_judges_wisd_eth",
+      "name": "Charge to the Judges",
+      "role": "law",
+      "scribeTier": "Charge to the Judges",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Opens the book by instructing earthly rulers how to seek God rightly, and establishes its central claim that God did not create death — death entered the world only through the choices of the ungodly, not God's design.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 1:1",
+          "note": "Opening charge: 'Love righteousness, ye that be judges of the earth... in simplicity of heart seek him.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 1:13-14",
+          "note": "'God made not death: neither hath he pleasure in the destruction of the living... the generations of the world were healthful.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "serpents_envy_wisd_eth",
+      "name": "Serpent's Envy",
+      "role": "law",
+      "scribeTier": "Serpent's Envy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Illustrates through the ungodly's own reasoning how despair over mortality curdles into selfish indulgence and a plot against the righteous, closing with the book's central verdict on the origin of death.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 2:1",
+          "note": "'The ungodly said, reasoning with themselves, but not aright, Our life is short and tedious.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 2:24",
+          "note": "Closing judgment: 'Through envy of the devil came death into the world.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ungodly_counsel_wisd_eth",
+      "name": "The Ungodly Counsel",
+      "role": "named",
+      "scribeTier": "Serpent's Envy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 2:1-20",
+          "note": "A collective first-person speech: the ungodly reason life is short and meaningless, resolve to oppress the poor and indulge themselves, then specifically plot to test and condemn 'the righteous man' who reproves them, with a shameful death."
+        },
+        {
+          "ref": "Wisdom of Solomon 2:21-22",
+          "note": "The narrator's verdict on them: 'their own wickedness hath blinded them... they knew not' the mysteries of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A collective voice, not an individual — the text gives them a genuine 20-verse speech in their own words, unusually extended compared to how briefly other groups are handled elsewhere in the book."
+      ]
+    },
+    {
+      "id": "barren_boughs_wisd_eth",
+      "name": "Barren Boughs",
+      "role": "law",
+      "scribeTier": "Barren Boughs",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Contrasts the lasting reward of the righteous — even if childless or cut off early — against the cursed, unfruitful legacy left by the ungodly and their offspring.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 3:1",
+          "note": "'The souls of the righteous are in the hand of God, and there shall no torment touch them.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 4:1",
+          "note": "'Better it is to have no children, and to have virtue: for the memorial thereof is immortal.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "beloved_taken_early_wisd_eth",
+      "name": "The Beloved Taken Early",
+      "role": "named",
+      "scribeTier": "Barren Boughs",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 4:10-11",
+          "note": "'He pleased God, and was beloved of him: so that living among sinners he was translated. Yea speedily was he taken away, lest that wickedness should alter his understanding.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 4:14",
+          "note": "'His soul pleased the Lord: therefore hasted he to take him away from among the wicked.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text; being 'translated' while 'living among sinners' closely echoes Enoch's account (Genesis 5:24; cited again in Hebrews 11:5), but this book never gives a name here — flagged rather than asserted, since the surrounding argument reads as a general principle about the righteous dying young, not necessarily one identified individual."
+      ]
+    },
+    {
+      "id": "breastplate_righteousness_wisd_eth",
+      "name": "Breastplate of Righteousness",
+      "role": "law",
+      "scribeTier": "Breastplate of Righteousness",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Depicts the wicked's terrified confession at the final judgment, then describes God arming creation itself for the righteous — righteousness as breastplate, holiness as shield, wrath as sword.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 5:3-5",
+          "note": "The wicked, repenting too late, recognize the righteous man they once mocked is now 'numbered among the children of God.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 5:18-20",
+          "note": "'He shall put on righteousness as a breastplate... holiness for an invincible shield... his severe wrath shall he sharpen for a sword.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "call_to_kings_wisd_eth",
+      "name": "Call to the Kings",
+      "role": "law",
+      "scribeTier": "Call to the Kings",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "A renewed, direct address to kings and rulers urging them to honor and seek Wisdom, who freely reveals herself to those who desire her — the hinge into Solomon's own extended personal account of pursuing her.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 6:1",
+          "note": "'Hear therefore, O ye kings, and understand: learn, ye that be judges of the ends of the earth.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 6:12",
+          "note": "'Wisdom is glorious, and never fadeth away... found of such as seek her.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wisdoms_long_memory_wisd_eth",
+      "name": "Wisdom's Long Memory",
+      "role": "law",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "A survey of how Wisdom personally guided a chain of righteous figures through history, one after another, from the world's first man down to the deliverance from Egypt — building the case that wisdom, not status or strength, has always been what saves.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:1",
+          "note": "Opens the historical survey with the preservation of 'the first formed father of the world, that was created alone.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 10:15",
+          "note": "Transitions toward the Exodus: wisdom 'delivered the righteous people and blameless seed from the nation that oppressed them.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Every figure recalled in this chapter is described only periphrastically — none is named outright, a consistent stylistic choice carried through the whole survey."
+      ]
+    },
+    {
+      "id": "first_formed_father_wisd_eth",
+      "name": "The First-Formed Father",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:1-2",
+          "note": "Preserved by wisdom after his fall — 'created alone' — and given power to rule all things."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text; 'the first formed father of the world, that was created alone' is virtually universally read as Adam, though the book itself never uses that name — flagged, not asserted."
+      ]
+    },
+    {
+      "id": "the_fratricide_wisd_eth",
+      "name": "The Fratricide",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:3",
+          "note": "Described only as 'the unrighteous' who 'went away from her in his anger' and 'perished also in the fury wherewith he murdered his brother.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; the 'murdered his brother' detail set in the world's early history corresponds to Cain (Genesis 4), though not named here."
+      ]
+    },
+    {
+      "id": "the_arks_pilot_wisd_eth",
+      "name": "The Ark's Pilot",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:4",
+          "note": "'The earth being drowned with the flood, wisdom again preserved it, and directed the course of the righteous in a piece of wood of small value.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; 'a piece of wood of small value' guiding a survivor through a flood corresponds to Noah's ark (Genesis 6-9), though not named here."
+      ]
+    },
+    {
+      "id": "chosen_of_confounded_nations_wisd_eth",
+      "name": "The Chosen of the Confounded Nations",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:5",
+          "note": "Found righteous and 'preserved... blameless unto God' amid 'the nations in their wicked conspiracy being confounded,' and 'kept him strong against his tender compassion toward his son.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; the confounding of nations (echoing Babel, Genesis 11) followed by a father's tested compassion for his own son (echoing the binding of Isaac, Genesis 22) both point to Abraham, though not named here."
+      ]
+    },
+    {
+      "id": "fugitive_from_the_fire_wisd_eth",
+      "name": "The Fugitive from the Fire",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:6",
+          "note": "Delivered 'from the fire which fell down upon the five cities' while 'the ungodly perished.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; fire falling on 'the five cities' is the Sodom and Gomorrah account (Genesis 19), and the fleeing righteous man corresponds to Lot, though not named here."
+      ]
+    },
+    {
+      "id": "wronged_brother_wisd_eth",
+      "name": "The Wronged Brother",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:10-12",
+          "note": "Fled 'from his brother's wrath,' guided in right paths, shown 'the kingdom of God,' made rich in his travels, and given victory over those who lay in wait for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; fleeing a brother's wrath and prospering through hardship corresponds to Jacob's flight from Esau (Genesis 27-32), though not named here."
+      ]
+    },
+    {
+      "id": "sold_servant_wisd_eth",
+      "name": "The Sold Servant",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:13-14",
+          "note": "Sold, not forsaken by wisdom, 'delivered from sin,' brought down into 'the pit,' then given 'the sceptre of the kingdom' and shown his accusers to be liars."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; being sold, cast into a pit, and later given royal authority after false accusation corresponds to Joseph's story (Genesis 37-41), though not named here."
+      ]
+    },
+    {
+      "id": "prophets_servant_wisd_eth",
+      "name": "The Prophet's Servant",
+      "role": "named",
+      "scribeTier": "Wisdom's Long Memory",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 10:15-21",
+          "note": "Wisdom 'entered into the soul of the servant of the Lord, and withstood dreadful kings in wonders and signs,' opened the mouth of the dumb, and 'delivered the righteous people... from the nation that oppressed them.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed; 'the servant of the Lord' who withstands kings with wonders and signs to deliver an oppressed people corresponds to Moses, though not named here — this figure bridges directly into the extended Exodus retelling of chapters 11-19."
+      ]
+    },
+    {
+      "id": "waters_turned_wisd_eth",
+      "name": "Waters Turned",
+      "role": "law",
+      "scribeTier": "Waters Turned",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "The first of the extended Egypt-versus-Israel contrasts: Israel given water from the rock in their thirst, set against Egypt's own river turned against them, establishing the book's recurring principle that the enemies' punishment became Israel's benefit.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 11:4",
+          "note": "Israel's thirst quenched from 'the flinty rock... out of the hard stone.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 11:5",
+          "note": "States the principle directly: 'by what things their enemies were punished, by the same they in their need were benefited.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wasps_of_mercy_wisd_eth",
+      "name": "Wasps of Mercy",
+      "role": "law",
+      "scribeTier": "Wasps of Mercy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Explains why God judged Canaan's inhabitants gradually — sending 'wasps' ahead of them — rather than destroying them outright, arguing for divine patience and 'place of repentance,' extending to God's mercy toward all nations.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 12:8-10",
+          "note": "'Thou sparedst as men, and didst send wasps... to destroy them by little and little... thou gavest them place of repentance.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 12:16",
+          "note": "'Thy power is the beginning of righteousness... it maketh thee to be gracious unto all.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "potters_vanity_wisd_eth",
+      "name": "The Potter's Vanity",
+      "role": "law",
+      "scribeTier": "The Potter's Vanity",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "A sustained polemic against idolatry — first against worshipping nature itself (fire, wind, stars, sun), then against man-made idols, using the potter shaping clay and the carpenter carving an idol as extended images, and cataloguing the moral corruption idol-worship produces.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 13:1-2",
+          "note": "'Vain are all men by nature, who are ignorant of God... deemed either fire, or wind... or the lights of heaven, to be the gods.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 15:7",
+          "note": "The potter image: 'of the same clay he maketh both the vessels that serve for clean uses, and likewise also all such as serve to the contrary.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "serpents_sustenance_wisd_eth",
+      "name": "Serpents and Sustenance",
+      "role": "law",
+      "scribeTier": "Serpents and Sustenance",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Contrasts Egypt's plagues of frogs and flies with Israel's quails and manna, and recalls a 'sign of salvation' set up to heal a wilderness punishment — teaching that healing came not from the sign itself but from God, 'the Saviour of all.'",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 16:2-3",
+          "note": "Israel given quails 'of a strange taste' in place of the plague sent on Egypt."
+        },
+        {
+          "ref": "Wisdom of Solomon 16:6-7",
+          "note": "'A sign of salvation... he that turned himself toward it was not saved by the thing that he saw, but by thee, that art the Saviour of all.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "long_night_wisd_eth",
+      "name": "The Long Night",
+      "role": "law",
+      "scribeTier": "The Long Night",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Describes the plague of darkness upon Egypt as a self-inflicted spiritual imprisonment — terror without a visible cause — set against the 'great light' enjoyed by Israel during the same night.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 17:2-3",
+          "note": "The Egyptians 'fettered with the bonds of a long night,' scattered under 'a dark veil of forgetfulness.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 18:1",
+          "note": "'Thy saints had a very great light' during that same night."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "blameless_man_wisd_eth",
+      "name": "The Blameless Man",
+      "role": "manager",
+      "scribeTier": "The Blameless Man",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Not named in this text; the priestly 'long garment' and engraved breastplate stones (18:24) are the vestments of the high priest per Exodus 28 — traditionally identified as Aaron, though this book never gives his name.",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 18:20-21",
+          "note": "During a plague striking even the righteous, 'the blameless man made haste, and stood forth to defend them... bringing the shield of his proper ministry, even prayer, and the propitiation of incense, set himself against the wrath.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 18:22",
+          "note": "'He overcame the destroyer, not with strength of body, nor force of arms, but with a word subdued him that punished, alleging the oaths and covenants made with the fathers.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 18:23",
+          "note": "'When the dead were now fallen down by heaps one upon another, standing between, he stayed the wrath, and parted the way to the living.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 18:24",
+          "note": "'In the long garment was the whole world, and in the four rows of the stones was the glory of the fathers graven, and thy Majesty upon the diadem of his head.'"
+        },
+        {
+          "ref": "Wisdom of Solomon 18:25",
+          "note": "'Unto these the destroyer gave place, and was afraid of them: for it was enough that they only tasted of the wrath.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is the one figure in the whole book whose action is physically, immediately decisive — he 'stood between' the living and the dead and 'stayed the wrath' in real time — which is why he was promoted to his own Person tier instead of folding into the historical-survey Law tier (ch.10) alongside the other unnamed patriarchs."
+      ]
+    },
+    {
+      "id": "elements_transformed_wisd_eth",
+      "name": "Elements Transformed",
+      "role": "law",
+      "scribeTier": "Elements Transformed",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "solomon_wisdom_eth",
+      "purpose": "Closes the book's Exodus retelling — the pursuing Egyptians drowned in the Red Sea, an extended contrast between Egypt's mistreatment of Israel and the Sodomites' mistreatment of strangers, and a closing meditation on how creation's elements were reordered to serve God's people.",
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 19:1-9",
+          "note": "Egypt pursues the departing Israelites and is destroyed; the sea becomes dry land for Israel and a 'strange death' for their pursuers."
+        },
+        {
+          "ref": "Wisdom of Solomon 19:22",
+          "note": "Closing line: God 'didst magnify thy people, and glorify them... didst assist them in every time and place.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sodomites_wisd_eth",
+      "name": "The Sodomites",
+      "role": "named",
+      "scribeTier": "Elements Transformed",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Wisdom of Solomon 19:14-16",
+          "note": "Held up by name as a point of contrast: 'the Sodomites did not receive those, whom they knew not when they came' — judged less culpable than the Egyptians, who enslaved guests they already knew and had feasted with."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The one figure or group given an explicit proper name anywhere in this book's actual text — every other historical figure recalled (Adam, Cain, Noah, Abraham, Lot, Jacob, Joseph, Moses, Aaron) is referred to only by description, never by name."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved cross-references kept out of the character list above.",
+    "wisdomsLongMemoryTraditionalCorrespondences": {
+      "ref": "Wisdom of Solomon 10:1-21",
+      "note": "This single chapter's eight unnamed figures traditionally correspond, in order, to Adam, Cain, Noah, Abraham, Lot, Jacob, Joseph, and Moses — a chain the book itself never names, treated in this index as flagged tradition rather than asserted textual fact, consistent with the project's later/traditional-name rule."
+    }
+  }
+}

@@ -1,0 +1,468 @@
+{
+  "book": "Jude",
+  "translation": "Ethiopian",
+  "canonicalOrder": 85,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the real Ethiopian translation text at Assets/Resources/Verses/Ethiopian/jude_85.json (1 chapter, 25 verses) and compared verse-by-verse against the already-completed KJV Jude.json. The English text is verbatim identical to KJV across all 25 verses (word-for-word, including archaic KJV phrasing like \"Core\" for Korah and \"railing accusation\") - no real content, verse-count, or structural differences were found for this book in this translation, unlike Ethiopian's Ezra (1 Esdras tradition) or other genuinely divergent OT books. Therefore this draft adapts the KJV structure's tier shape/count (7 tiers: 1 person tier for Jude himself, 1 person tier for the collective false-teacher antagonists, and 5 law/theme tiers grouping Jude's rapid-fire OT/tradition allusions by rhetorical function) rather than inventing an unrelated structure, per the task's explicit guidance for content-identical shared-canon books. All ids re-scoped with an _ethiopian suffix to avoid any cross-translation collision (e.g. jude_ethiopian, cain_jude_ethiopian) even though numeric verse indices and content are unchanged from KJV. Naming-collision flags preserved from the KJV draft: this Jude is distinct from Judas Iscariot and from Judas/Thaddaeus the apostle (Matthew 10:3); Cain's son Enoch (Genesis 4:17) is a different man from the Sethite Enoch quoted in v.14 (Genesis 5). Two real scholarly-tradition flags carried forward: v.9's dispute over Moses's body draws on a tradition not in the OT canon (widely associated with the largely-lost Assumption/Testament of Moses), and vv.14-15 directly quote material paralleling the non-canonical Book of Enoch (1 Enoch 1:9) - both described neutrally, no position taken on canonicity. Jude's traditional identification as a half-brother of Jesus (via the \"Judas\" of Matthew 13:55/Mark 6:3) is flagged as traditional inference, not stated outright in v.1 (\"brother of James\" only). Only genuinely unnamed collectives (the Exodus wilderness generation, the fallen angels, Sodom and Gomorrha) are kept in genealogyLists rather than individuated as characters.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Jude, Servant of Christ",
+      "managerId": "jude_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Wandering Stars",
+      "managerId": "ungodly_intruders_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Chains of Darkness",
+      "managerId": "law_ot_judgment_precedents_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Archangel's Rebuke",
+      "managerId": "law_michael_moses_body_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Way of Cain, the Error of Balaam, the Gainsaying of Core",
+      "managerId": "law_apostasy_examples_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Enoch's Prophecy of the Ten Thousands",
+      "managerId": "law_enochs_prophecy_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Mockers in the Last Time",
+      "managerId": "law_apostles_prophecy_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jude_ethiopian",
+      "name": "Jude",
+      "role": "manager",
+      "scribeTier": "Jude, Servant of Christ",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Unstated in Jude's own text (v.1 says only 'brother of James'); traditionally Joseph the carpenter -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "mother": "Unstated in Jude's own text; traditionally Mary, mother of Jesus -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:1",
+          "note": "Identifies himself as 'the servant of Jesus Christ, and brother of James,' addressing those 'sanctified by God the Father, and preserved in Jesus Christ, and called.'"
+        },
+        {
+          "ref": "Jude 1:2",
+          "note": "Opens with a greeting: 'Mercy unto you, and peace, and love, be multiplied.'"
+        },
+        {
+          "ref": "Jude 1:3",
+          "note": "Explains he meant to write of 'the common salvation' but felt compelled to exhort readers to 'earnestly contend for the faith which was once delivered unto the saints.'"
+        },
+        {
+          "ref": "Jude 1:17",
+          "note": "Tells readers to 'remember ye the words which were spoken before of the apostles' -- referring to the apostles in the third person."
+        },
+        {
+          "ref": "Jude 1:20-23",
+          "note": "Closing exhortation: build up on 'most holy faith,' pray in the Holy Ghost, keep in God's love, look for mercy unto eternal life; have compassion on some, save others 'with fear, pulling them out of the fire,' hating 'the garment spotted by the flesh.'"
+        },
+        {
+          "ref": "Jude 1:24-25",
+          "note": "Closing doxology: 'unto him that is able to keep you from falling... to the only wise God our Saviour, be glory and majesty, dominion and power, both now and ever. Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Judas Iscariot (the betrayer) and from Judas/Thaddaeus/Lebbaeus, one of the twelve apostles (Matthew 10:3, Luke 6:16). Jude 1:17's third-person 'the apostles' textually distinguishes this Jude from that group.",
+        "Traditionally identified with the 'Judas' listed among Jesus's brothers in Matthew 13:55/Mark 6:3 -- but Jude's own text (v.1) states only 'brother of James'; flagged as traditional, not textually certain within this epistle."
+      ]
+    },
+    {
+      "id": "ungodly_intruders_ethiopian",
+      "name": "The Ungodly Intruders",
+      "role": "manager",
+      "scribeTier": "The Wandering Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:4",
+          "note": "'Certain men crept in unawares, who were before of old ordained to this condemnation, ungodly men, turning the grace of our God into lasciviousness, and denying the only Lord God, and our Lord Jesus Christ.'"
+        },
+        {
+          "ref": "Jude 1:8",
+          "note": "'These filthy dreamers defile the flesh, despise dominion, and speak evil of dignities.'"
+        },
+        {
+          "ref": "Jude 1:10",
+          "note": "'These speak evil of those things which they know not: but what they know naturally, as brute beasts, in those things they corrupt themselves.'"
+        },
+        {
+          "ref": "Jude 1:12",
+          "note": "'Spots in your feasts of charity... clouds they are without water, carried about of winds; trees whose fruit withereth, without fruit, twice dead, plucked up by the roots.'"
+        },
+        {
+          "ref": "Jude 1:13",
+          "note": "'Raging waves of the sea, foaming out their own shame; wandering stars, to whom is reserved the blackness of darkness for ever.'"
+        },
+        {
+          "ref": "Jude 1:16",
+          "note": "'Murmurers, complainers, walking after their own lusts; and their mouth speaketh great swelling words, having men's persons in admiration because of advantage.'"
+        },
+        {
+          "ref": "Jude 1:18-19",
+          "note": "Identified as the 'mockers' foretold by the apostles, who 'walk after their own ungodly lusts... separate themselves, sensual, having not the Spirit.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as a single collective entry -- the text never names or differentiates individuals within this group."
+      ]
+    },
+    {
+      "id": "law_ot_judgment_precedents_ethiopian",
+      "name": "OT Judgment Precedents",
+      "role": "law",
+      "scribeTier": "Chains of Darkness",
+      "parentManagerId": null,
+      "deliveredBy": "jude_ethiopian",
+      "purpose": "Three precedents of certain judgment despite prior favor or status: the LORD's own delivered people perished in unbelief after the Exodus (v.5), the angels who abandoned their proper estate are held in chains awaiting judgment (v.6), and Sodom and Gomorrha suffer as a public example of eternal fire's vengeance (v.7).",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jude 1:5",
+          "note": "'The Lord, having saved the people out of the land of Egypt, afterward destroyed them that believed not.'"
+        },
+        {
+          "ref": "Jude 1:6",
+          "note": "'The angels which kept not their first estate, but left their own habitation, he hath reserved in everlasting chains under darkness unto the judgment of the great day.'"
+        },
+        {
+          "ref": "Jude 1:7",
+          "note": "'Sodom and Gomorrha... giving themselves over to fornication, and going after strange flesh, are set forth for an example, suffering the vengeance of eternal fire.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_michael_moses_body_ethiopian",
+      "name": "Michael and the Body of Moses",
+      "role": "law",
+      "scribeTier": "The Archangel's Rebuke",
+      "parentManagerId": null,
+      "deliveredBy": "jude_ethiopian",
+      "purpose": "Contrasts the false teachers' brazen 'railing accusation' with Michael the archangel's restraint -- even disputing directly with the devil over the body of Moses, he did not presume to rail against him but deferred to the Lord ('The Lord rebuke thee').",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jude 1:8",
+          "note": "'Likewise also these filthy dreamers defile the flesh, despise dominion, and speak evil of dignities.'"
+        },
+        {
+          "ref": "Jude 1:9",
+          "note": "'Yet Michael the archangel, when contending with the devil he disputed about the body of Moses, durst not bring against him a railing accusation, but said, The Lord rebuke thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verse 9 references a dispute over Moses's body not recorded in the OT canon; widely associated by scholars with a now-largely-lost Jewish work sometimes called the Assumption/Testament of Moses. Described only as it appears in this translation's own text, no canonicity claim made.",
+        "Tier-type judgment call carried over from the KJV draft: Michael is narratively active here (disputes, restrains himself, speaks) rather than purely transmitting teaching, closer to a 'personally embodied' test than the pure-transmission law tiers elsewhere in this book -- kept as law given the single-verse scope, flagged for the user to confirm."
+      ]
+    },
+    {
+      "id": "law_apostasy_examples_ethiopian",
+      "name": "The Apostasy Examples",
+      "role": "law",
+      "scribeTier": "The Way of Cain, the Error of Balaam, the Gainsaying of Core",
+      "parentManagerId": null,
+      "deliveredBy": "jude_ethiopian",
+      "purpose": "A pronounced 'Woe' listing three OT figures whose sins model three failures Jude sees repeated in the false teachers: Cain's murderous hatred of a righteous brother, Balaam's greed that led him to sell his gift for reward, and Core's (Korah's) rebellion against divinely ordained authority.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "'Woe unto them! for they have gone in the way of Cain, and ran greedily after the error of Balaam for reward, and perished in the gainsaying of Core.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_enochs_prophecy_ethiopian",
+      "name": "Enoch's Prophecy",
+      "role": "law",
+      "scribeTier": "Enoch's Prophecy of the Ten Thousands",
+      "parentManagerId": null,
+      "deliveredBy": "enoch_jude_ethiopian",
+      "purpose": "Jude directly quotes a prophecy attributed to Enoch, 'the seventh from Adam' (Genesis 5), foretelling the Lord's coming with 'ten thousands of his saints' to execute judgment -- a final, ancient witness confirming certain judgment for the very men Jude describes.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jude 1:14",
+          "note": "'And Enoch also, the seventh from Adam, prophesied of these, saying, Behold, the Lord cometh with ten thousands of his saints.'"
+        },
+        {
+          "ref": "Jude 1:15",
+          "note": "'To execute judgment upon all, and to convince all that are ungodly among them of all their ungodly deeds which they have ungodly committed, and of all their hard speeches which ungodly sinners have spoken against him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only place in this translation's NT text that directly quotes material corresponding to a passage from the non-canonical Book of Enoch (paralleling 1 Enoch 1:9) as an authoritative prophecy -- noted descriptively, no canonicity position taken."
+      ]
+    },
+    {
+      "id": "law_apostles_prophecy_ethiopian",
+      "name": "The Apostles' Prophecy of Mockers",
+      "role": "law",
+      "scribeTier": "Mockers in the Last Time",
+      "parentManagerId": null,
+      "deliveredBy": "the_apostles_jude_ethiopian",
+      "purpose": "Jude reminds readers of a prediction already made by 'the apostles of our Lord Jesus Christ' -- that mockers walking after their own ungodly lusts would arise in the last time -- and identifies the false teachers currently troubling the readers as its fulfillment.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Jude 1:17",
+          "note": "'But, beloved, remember ye the words which were spoken before of the apostles of our Lord Jesus Christ.'"
+        },
+        {
+          "ref": "Jude 1:18",
+          "note": "'How that they told you there should be mockers in the last time, who should walk after their own ungodly lusts.'"
+        },
+        {
+          "ref": "Jude 1:19",
+          "note": "'These be they who separate themselves, sensual, having not the Spirit.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jude's third-person 'the apostles' is a textual clue supporting the traditional view that Jude was not himself one of the twelve."
+      ]
+    },
+    {
+      "id": "michael_archangel_jude_ethiopian",
+      "name": "Michael the Archangel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:9",
+          "note": "Contends with the devil in a dispute over the body of Moses; refuses to bring a railing accusation, saying only 'The Lord rebuke thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named elsewhere in scripture as 'the archangel' (Daniel 10:13, 21; 12:1) and as the one who fights the dragon in Revelation 12:7 -- this entry covers only his Jude 1:9 appearance.",
+        "The dispute over Moses's body is not itself narrated in the OT text (Deuteronomy 34:5-6 says only that the LORD buried Moses, his sepulchre unknown) -- see the law tier's funFacts."
+      ]
+    },
+    {
+      "id": "devil_jude_ethiopian",
+      "name": "The Devil",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:9",
+          "note": "Disputes with Michael the archangel over the body of Moses; Michael declines to rail against him directly."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'the devil' here without further identification; the Revelation 12:9 identification with the Genesis 3 tempter is not made explicitly within Jude itself -- flagged rather than assumed."
+      ]
+    },
+    {
+      "id": "cain_jude_ethiopian",
+      "name": "Cain",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Adam -- Genesis 4:1",
+        "mother": "Eve -- Genesis 4:1",
+        "spouses": [
+          "unnamed wife -- Genesis 4:17, not individually indexed here"
+        ],
+        "children": [
+          "Enoch (Cain's son -- Genesis 4:17; a different man from the Enoch quoted in Jude 1:14, see funFacts)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of 'the way of' murderous hatred toward a righteous brother; full narrative indexed in Genesis."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: not to be confused with Enoch 'the seventh from Adam' quoted three verses later in Jude 1:14 -- that Enoch descends through Seth's line (Genesis 5); a different, unrelated man also named Enoch appears here as Cain's own son (Genesis 4:17)."
+      ]
+    },
+    {
+      "id": "balaam_jude_ethiopian",
+      "name": "Balaam",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Beor -- Numbers 22:5",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of 'the error of' greed -- running 'greedily after... reward'; full narrative indexed in Numbers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "core_jude_ethiopian",
+      "name": "Core (Korah)",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Izhar -- Numbers 16:1",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of 'the gainsaying of' -- rebellion against Moses and Aaron's divinely ordained authority; full narrative (and his destruction) indexed in Numbers 16."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Core' is the KJV/Ethiopian-translation Greek-influenced transliteration of the Hebrew name rendered 'Korah' in the Old Testament -- same person, spelling difference only."
+      ]
+    },
+    {
+      "id": "enoch_jude_ethiopian",
+      "name": "Enoch",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jared -- Genesis 5:18",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Methuselah -- Genesis 5:21"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:14",
+          "note": "Identified as 'the seventh from Adam' (Adam-Seth-Enos-Cainan-Mahalaleel-Jared-Enoch, per Genesis 5) and credited with prophesying the Lord's coming in judgment."
+        },
+        {
+          "ref": "Jude 1:15",
+          "note": "Content of the quoted prophecy: judgment upon the ungodly for their deeds and hard speeches against the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: this is the Sethite Enoch of Genesis 5 (father of Methuselah, who 'walked with God: and he was not; for God took him,' Genesis 5:24) -- a different man from Cain's son Enoch in Genesis 4:17.",
+        "The quoted prophecy does not appear in the OT text itself; it closely parallels a passage from the non-canonical Book of Enoch (1 Enoch 1:9)."
+      ]
+    },
+    {
+      "id": "the_apostles_jude_ethiopian",
+      "name": "The Apostles",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:17-18",
+          "note": "Referenced collectively as having foretold that mockers walking after their own ungodly lusts would arise in the last time."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as a single collective reference -- Jude does not name or differentiate any specific apostle here."
+      ]
+    },
+    {
+      "id": "james_brother_of_jude_ethiopian",
+      "name": "James",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Unstated in Jude's own text; traditionally Joseph the carpenter -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "mother": "Unstated in Jude's own text; traditionally Mary, mother of Jesus -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:1",
+          "note": "Named only for Jude's self-identification -- 'Jude... the servant of Jesus Christ, and brother of James.' James takes no action in this text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given a standalone lightweight entry for consistency with how this file treats other single-mention named figures who take no action.",
+        "Naming-collision flag: the NT has multiple men named James -- James son of Zebedee (Matthew 4:21), James son of Alphaeus (Matthew 10:3), and this James. This entry makes no claim about which James Jude means beyond what Jude 1:1 itself states.",
+        "Traditionally identified with James the author of the Epistle of James, traditionally 'the Lord's brother' (Galatians 1:19), and traditionally with the 'James' listed among Jesus's brothers in Matthew 13:55/Mark 6:3 -- traditional linkages, not stated outright in Jude's own text."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above -- reserved for genuinely unnamed/anonymous collectives only.",
+    "israel_wilderness_generation": {
+      "ref": "Jude 1:5",
+      "note": "'The people' the Lord saved out of Egypt and later destroyed for unbelief -- a collective reference to the Exodus generation, not individuated by name; full narrative indexed under Exodus/Numbers."
+    },
+    "fallen_angels": {
+      "ref": "Jude 1:6",
+      "note": "'The angels which kept not their first estate' -- an unnamed collective, reserved in chains under darkness until judgment."
+    },
+    "sodom_and_gomorrha": {
+      "ref": "Jude 1:7",
+      "note": "Cited as a public example of judgment by 'eternal fire' for sexual sin -- collective city-names, not individuated; full narrative indexed under Genesis 19."
+    }
+  }
+}

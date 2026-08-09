@@ -1,0 +1,775 @@
+{
+  "book": "Nehemiah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 17,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This Ethiopian translation's Nehemiah was read in full (13 chapters, 406 verses) directly from Assets/Resources/Verses/Ethiopian/nehemiah_17.json before drafting. Unlike this project's own Ethiopian Ezra (a genuinely different 9-chapter/1-Esdras-tradition text), this Ethiopian Nehemiah is textually and structurally identical in content to the standard KJV Nehemiah already indexed in this project's CharacterIndex/Nehemiah.json: the same 13 chapters, the same sequence of episodes (Nehemiah's commissioning and wall survey, the Sanballat/Tobiah/Geshem opposition campaign, the chapter-3 wall-repair roster, the armed building effort, the usury reform, Nehemiah's refusal of the governor's allowance, the Sanballat plots including the hired false prophet Shemaiah and the prophetess Noadiah, Ezra's public reading and teaching of the Law at the Water Gate, the Feast of Tabernacles, the corporate fast/confession/history-recital and sealed covenant of ch. 9-10, the census/settlement lists of ch. 7 and 11, the priestly/Levitical genealogy and wall-dedication procession of ch. 12, and Nehemiah's second-term reforms in ch. 13 (evicting Tobiah from the temple chamber, restoring Levite tithes, enforcing the Sabbath, and confronting mixed marriages including Eliashib's grandson's marriage to Sanballat's daughter). No verse-numbering, chapter-count, or narrative-content divergence was found anywhere in this book between the two translations. Because the underlying narrative is identical, this draft mirrors the already-validated KJV Nehemiah tier/character structure (7 tiers: five person-type managers plus two law/theme tiers for the corporate-covenant and dedication-ceremony material), but every id, genealogy note, and verse citation below was independently re-derived from a fresh read of THIS translation's own text (which matches the KJV wording essentially verbatim throughout this book), not copied from the KJV file. All ids are suffixed '_ethiopian' to avoid any collision with the existing KJV CharacterIndex ids or a future Geneva-translation Nehemiah file. Naming collisions carried over from the real text (present in both translations identically): 'Nehemiah' is not unique to the author-governor in this book (a different Nehemiah son of Azbuk repairs a separate wall section in 3:16, and yet another Nehemiah appears among the earlier Zerubbabel-era return leaders in 7:7); at least four distinct men named Hananiah appear (3:8, 3:30, 7:2, 12:41); at least two distinct men named Zadok appear as wall-builders (3:4, 3:29) besides Zadok the scribe/treasurer of 13:13; 'Shemaiah' recurs for several unrelated men; Noadiah the prophetess (6:14) shares her name with an unrelated male Levite (Noadiah son of Binnui, named only in Ezra, not in this book). No age-at-event data appears anywhere in this book, so every ageEvents array is empty. Ezra's and Zerubbabel's fuller genealogies are treated as established elsewhere (the book of Ezra) and are not re-derived here, since this book's own text never restates them.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Nehemiah",
+      "managerId": "nehemiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Sanballat",
+      "managerId": "sanballat_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Tobiah",
+      "managerId": "tobiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Eliashib the High Priest",
+      "managerId": "eliashib_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Ezra",
+      "managerId": "ezra_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Covenant Renewed",
+      "managerId": "covenant_renewed_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Wall Dedication",
+      "managerId": "wall_dedication_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "nehemiah_ethiopian",
+      "name": "Nehemiah",
+      "role": "manager",
+      "scribeTier": "Nehemiah",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hachaliah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No wife or children are mentioned anywhere in the book. His brother Hanani (1:2, 7:2) is a submanager here. NAMING COLLISION: not unique to him in this book -- distinct from Nehemiah son of Azbuk, ruler of half of Beth-zur, who repairs a separate wall portion (3:16), and from an earlier, different Nehemiah listed among the leaders of the first return (7:7)."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 1:1-4",
+          "note": "Hears his brother Hanani's report that Jerusalem's wall is broken down and its gates burned with fire; sits down and weeps, mourns, fasts, and prays before the God of heaven."
+        },
+        {
+          "ref": "Nehemiah 1:11",
+          "note": "Identifies himself as 'the king's cupbearer' immediately before his petition to Artaxerxes."
+        },
+        {
+          "ref": "Nehemiah 2:1-8",
+          "note": "Petitions King Artaxerxes in person; granted letters of safe passage to the governors beyond the river and a letter to Asaph, keeper of the king's forest, for timber for the gates, the wall, and his own house."
+        },
+        {
+          "ref": "Nehemiah 2:12-16",
+          "note": "Arises by night with only a few men, tells no one his plan, and views the broken walls and burned gates of Jerusalem alone on his beast."
+        },
+        {
+          "ref": "Nehemiah 2:17-18",
+          "note": "Rallies the priests, nobles, rulers, and people: 'Let us rise up and build.' They strengthen their hands for the good work."
+        },
+        {
+          "ref": "Nehemiah 2:19-20",
+          "note": "Answers Sanballat, Tobiah, and Geshem's scornful mockery directly: 'ye have no portion, nor right, nor memorial, in Jerusalem.'"
+        },
+        {
+          "ref": "Nehemiah 4:9,13-14",
+          "note": "Sets a watch against the enemies' conspiracy day and night, and arms the people by families with swords, spears, and bows."
+        },
+        {
+          "ref": "Nehemiah 4:16-23",
+          "note": "Sets half his servants to build and half to hold weapons; keeps a trumpeter by him and has the men lodge inside Jerusalem for security until the wall is finished."
+        },
+        {
+          "ref": "Nehemiah 5:6-13",
+          "note": "Grows very angry hearing the people's cry against usury; rebukes the nobles and rulers in a great assembly, and makes them swear an oath to restore lands, vineyards, and interest exacted."
+        },
+        {
+          "ref": "Nehemiah 5:14-19",
+          "note": "As governor for twelve years (the twentieth to the thirty-second year of Artaxerxes), refuses the customary governor's food allowance -- though a hundred fifty Jews and rulers ate at his own table daily -- 'because of the fear of God.'"
+        },
+        {
+          "ref": "Nehemiah 6:2-4",
+          "note": "Refuses Sanballat and Geshem's four repeated invitations to meet on the plain of Ono, recognizing the plot to harm him."
+        },
+        {
+          "ref": "Nehemiah 6:5-9",
+          "note": "Answers Sanballat's open letter -- which accuses him of plotting rebellion and kingship via a report from 'Gashmu' -- by denying the charge as invented, and prays, 'O God, strengthen my hands.'"
+        },
+        {
+          "ref": "Nehemiah 6:10-13",
+          "note": "Refuses Shemaiah's counsel to hide in the temple for fear of assassins, perceiving God had not sent him and that Tobiah and Sanballat had hired him to make him sin."
+        },
+        {
+          "ref": "Nehemiah 6:15",
+          "note": "The wall is finished in the twenty-fifth day of the month Elul, in fifty-two days."
+        },
+        {
+          "ref": "Nehemiah 7:1-3",
+          "note": "Appoints porters, singers, and Levites, then charges his brother Hanani together with Hananiah, ruler of the palace, with Jerusalem's gates and watches."
+        },
+        {
+          "ref": "Nehemiah 8:9-10",
+          "note": "As 'the Tirshatha,' together with Ezra the priest/scribe and the Levites, tells the weeping people the day is holy and to instead eat the fat, drink the sweet, and send portions to those with nothing prepared."
+        },
+        {
+          "ref": "Nehemiah 9:38-10:1",
+          "note": "The people, moved by the recited history and confession, make a sure covenant in writing, sealed first by Nehemiah the Tirshatha, son of Hachaliah."
+        },
+        {
+          "ref": "Nehemiah 12:31,38,40",
+          "note": "Personally brings the princes of Judah up onto the wall, appoints two great thanksgiving companies, walks with the second company along the wall, and stands with them together in the house of God."
+        },
+        {
+          "ref": "Nehemiah 13:4-9",
+          "note": "On returning from Persia in Artaxerxes' thirty-second year, learns Eliashib had prepared Tobiah a chamber in the temple courts and personally casts out all of Tobiah's household stuff, then has the chambers cleansed and the vessels of the house of God restored."
+        },
+        {
+          "ref": "Nehemiah 13:10-13",
+          "note": "Finding the Levites' portions unpaid and fled to their fields, contends with the rulers, gathers the Levites back, and personally appoints Shelemiah, Zadok, Pedaiah, and Hanan as trustworthy treasurers over the storehouses."
+        },
+        {
+          "ref": "Nehemiah 13:15-22",
+          "note": "Testifies against Sabbath-breaking wine-treaders and Tyrian fish-sellers, commands the gates shut before every Sabbath, and sets his own servants to keep out burdens on the Sabbath day."
+        },
+        {
+          "ref": "Nehemiah 13:23-27",
+          "note": "Contends with, curses, and strikes certain men who had married wives of Ashdod, Ammon, and Moab -- whose children could no longer speak the Jews' language -- and makes them swear an oath not to intermarry again."
+        },
+        {
+          "ref": "Nehemiah 13:28",
+          "note": "Drives away a son of Joiada (grandson of Eliashib the high priest) who had become son-in-law to Sanballat the Horonite."
+        },
+        {
+          "ref": "Nehemiah 13:14,22,29,31",
+          "note": "Closes the book with repeated personal prayers: 'Remember me, O my God, concerning this, and wipe not out my good deeds... Remember me, O my God, for good.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Held one of the most sensitive posts in the Persian court -- cupbearer, tasting the king's wine as a poison safeguard -- before ever becoming governor of Judah.",
+        "Surveyed Jerusalem's ruined walls alone by night on a single beast before telling any official in the city why he had come.",
+        "Deliberately declined the standard governor's food allowance for twelve straight years, feeding up to 150 people at his own table daily instead."
+      ]
+    },
+    {
+      "id": "hanani_ethiopian",
+      "name": "Hanani",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hachaliah (implied, not textually restated at 1:2/7:2)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'one of my brethren' (1:2) and 'my brother' (7:2); traditionally read as Nehemiah's literal brother sharing father Hachaliah, though the text does not explicitly restate Hachaliah's name in connection with Hanani."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 1:2",
+          "note": "Comes from Judah with other men and reports to Nehemiah the affliction of the remnant and Jerusalem's broken wall and burned gates -- the report that opens the whole book."
+        },
+        {
+          "ref": "Nehemiah 7:2",
+          "note": "Given joint charge over Jerusalem together with Hananiah, ruler of the palace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hananiah_ruler_of_palace_ethiopian",
+      "name": "Hananiah, ruler of the palace",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION: distinct from at least three other men named Hananiah in this book -- the wall-builder 'son of one of the apothecaries' (3:8), the wall-builder 'son of Shelemiah' (3:30), and one of the priests with trumpets at the wall dedication (12:41)."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 7:2",
+          "note": "Appointed ruler of the palace and given joint charge over Jerusalem with Hanani; described as 'a faithful man, and feared God above many.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "treasurer_shelemiah_ethiopian",
+      "name": "Shelemiah the priest",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Possibly, but not confirmably, the same Shelemiah who fathered the wall-builder Hananiah (3:30) -- the text does not link the two mentions."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 13:13",
+          "note": "Appointed by Nehemiah as one of the treasurers over the storehouses, 'for they were counted faithful.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "treasurer_zadok_ethiopian",
+      "name": "Zadok the scribe",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION: at least two other, distinct men named Zadok appear earlier in the book as wall-builders -- Zadok son of Baana (3:4) and Zadok son of Immer (3:29). The text does not identify this treasurer as either of them."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 13:13",
+          "note": "Appointed by Nehemiah as one of the treasurers over the storehouses."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "treasurer_pedaiah_ethiopian",
+      "name": "Pedaiah of the Levites",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Distinct from Pedaiah the son of Parosh, a lay wall-builder (3:25) -- no textual link between them."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 13:13",
+          "note": "Appointed by Nehemiah as one of the treasurers over the storehouses."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "treasurer_hanan_ethiopian",
+      "name": "Hanan, son of Zaccur, son of Mattaniah",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "nehemiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Zaccur",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION: 'Hanan' recurs for several other, apparently distinct men in this book (e.g. among the Levites who helped teach the Law in 8:7, and among covenant-sealers in 10:10,22,26) -- none confirmed as this treasurer."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 13:13",
+          "note": "Appointed 'next to them' as an assistant among the treasurers Nehemiah set over the storehouses."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sanballat_ethiopian",
+      "name": "Sanballat the Horonite",
+      "role": "manager",
+      "scribeTier": "Sanballat",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "an unnamed daughter, married to a grandson of Eliashib the high priest (13:28)"
+        ],
+        "note": "Only ever called 'Sanballat the Horonite' in this book; no title or office for him is stated directly in the text, though he clearly wields real regional political influence."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 2:10",
+          "note": "Grieved, with Tobiah, that a man had come to seek the welfare of the children of Israel."
+        },
+        {
+          "ref": "Nehemiah 2:19-20",
+          "note": "Laughs Nehemiah and the people to scorn, accusing them of rebelling against the king."
+        },
+        {
+          "ref": "Nehemiah 4:1-3",
+          "note": "Mocks the rebuilding before his brethren and the army of Samaria: 'What do these feeble Jews?'"
+        },
+        {
+          "ref": "Nehemiah 4:7-8",
+          "note": "Conspires with Tobiah, the Arabians, Ammonites, and Ashdodites to fight against Jerusalem and hinder the work."
+        },
+        {
+          "ref": "Nehemiah 6:1-4",
+          "note": "Repeatedly (with Geshem) invites Nehemiah to meet in the plain of Ono -- a plot Nehemiah refuses four times."
+        },
+        {
+          "ref": "Nehemiah 6:5-9",
+          "note": "Sends a fifth approach, an open letter accusing Nehemiah of plotting rebellion and kingship, citing a report attributed to 'Gashmu.'"
+        },
+        {
+          "ref": "Nehemiah 6:12-13",
+          "note": "Together with Tobiah, hires Shemaiah to try to frighten Nehemiah into a temple offense."
+        },
+        {
+          "ref": "Nehemiah 6:14",
+          "note": "Named in Nehemiah's prayer asking God to remember his and Tobiah's works against him."
+        },
+        {
+          "ref": "Nehemiah 13:28",
+          "note": "His daughter's marriage to a grandson of Eliashib the high priest is discovered, and the grandson is driven away by Nehemiah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His mocking question, 'will they revive the stones out of the heaps of the rubbish which are burned?', turned out to be exactly what happened."
+      ]
+    },
+    {
+      "id": "geshem_ethiopian",
+      "name": "Geshem the Arabian",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "sanballat_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Given no further identifying detail beyond 'the Arabian' in this book's own text."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 2:19",
+          "note": "Joins Sanballat and Tobiah in laughing the rebuilders to scorn and accusing them of rebellion."
+        },
+        {
+          "ref": "Nehemiah 6:1-2",
+          "note": "Joins Sanballat in the plot to lure Nehemiah to the plain of Ono."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tobiah_ethiopian",
+      "name": "Tobiah the Ammonite",
+      "role": "manager",
+      "scribeTier": "Tobiah",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "an unnamed daughter of Shechaniah the son of Arah (6:18)"
+        ],
+        "children": [
+          "Jehohanan, who married a daughter of Meshullam the son of Berechiah (6:18)"
+        ],
+        "note": "Called 'the servant, the Ammonite' (2:10, 2:19). Later 'allied unto' Eliashib the high priest by an unspecified family tie (13:4)."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 2:10",
+          "note": "Grieved, with Sanballat, that someone had come to seek the welfare of Israel."
+        },
+        {
+          "ref": "Nehemiah 2:19",
+          "note": "Joins Sanballat and Geshem in mocking and accusing the rebuilders."
+        },
+        {
+          "ref": "Nehemiah 4:3",
+          "note": "Mocks the wall's strength: 'if a fox go up, he shall even break down their stone wall.'"
+        },
+        {
+          "ref": "Nehemiah 4:7-8",
+          "note": "Joins the conspiracy to fight against Jerusalem."
+        },
+        {
+          "ref": "Nehemiah 6:1-4",
+          "note": "Joins Sanballat's repeated invitations to Ono."
+        },
+        {
+          "ref": "Nehemiah 6:12-13",
+          "note": "Together with Sanballat, hires Shemaiah to try to frighten Nehemiah into a temple offense."
+        },
+        {
+          "ref": "Nehemiah 6:17-19",
+          "note": "Maintains active correspondence with many Judean nobles, who report his good deeds to Nehemiah and carry his letters back, owing to his marriage ties to Shechaniah's family and his son's marriage to Meshullam's daughter."
+        },
+        {
+          "ref": "Nehemiah 13:4-9",
+          "note": "Given a great chamber in the temple courts by Eliashib the high priest, to whom he was allied; Nehemiah, on discovering this, casts out all his household stuff."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Despite being one of the wall's chief opponents, he had enough standing among Jerusalem's own nobles that many of them wrote letters praising him to Nehemiah."
+      ]
+    },
+    {
+      "id": "shemaiah_false_prophet_ethiopian",
+      "name": "Shemaiah the son of Delaiah",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "tobiah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Delaiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full patronymic given as 'Shemaiah the son of Delaiah the son of Mehetabeel' (6:10). NAMING COLLISION: 'Shemaiah' recurs for several other, distinct men elsewhere in this book. Hired jointly 'by Tobiah and Sanballat' (6:12-13); attached here to Tobiah since named first in that verse, but the hiring is explicitly shared."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 6:10-13",
+          "note": "Shut up in his own house, urges Nehemiah to hide in the temple, claiming assassins are coming by night; Nehemiah discerns Tobiah and Sanballat had hired him to make him sin and be discredited."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "noadiah_ethiopian",
+      "name": "Noadiah the prophetess",
+      "role": "named",
+      "scribeTier": "",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Grouped by Nehemiah with 'the rest of the prophets' who tried to put him in fear. Unlike Shemaiah, the text does not state she was hired by Tobiah or Sanballat, so no submanager relationship is asserted. NAMING COLLISION: shares her name with an unrelated Levite, Noadiah son of Binnui, named only in the book of Ezra, not in this book."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 6:14",
+          "note": "Named in Nehemiah's prayer among those, with 'the rest of the prophets,' who tried to put him in fear."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eliashib_ethiopian",
+      "name": "Eliashib the High Priest",
+      "role": "manager",
+      "scribeTier": "Eliashib the High Priest",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Joiakim",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Joiada (12:10; one of Joiada's own sons is the grandson identified in 13:28 as Sanballat's son-in-law)"
+        ],
+        "note": "High priest; grandson of Jeshua, the high priest who returned earlier with Zerubbabel (12:10) -- this Jeshua is distinct from the Levite named Jeshua active later in chapters 8-9, a NAMING COLLISION worth flagging. 'Was allied unto Tobiah' by an unspecified relational tie (13:4) before giving him a temple chamber."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 3:1",
+          "note": "Rises up with his fellow priests and builds/sanctifies the Sheep Gate, setting up its doors, unto the tower of Meah and the tower of Hananeel."
+        },
+        {
+          "ref": "Nehemiah 12:10,22",
+          "note": "Named in the high-priestly succession line: son of Joiakim, father of Joiada."
+        },
+        {
+          "ref": "Nehemiah 13:4-9",
+          "note": "Having oversight of the temple chamber and being allied unto Tobiah, prepares him a great chamber there; Nehemiah later casts out all Tobiah's household stuff from it."
+        },
+        {
+          "ref": "Nehemiah 13:28",
+          "note": "One of his grandsons (a son of Joiada) is found married to Sanballat's daughter and is driven away by Nehemiah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "As high priest he personally helped rebuild and sanctify the Sheep Gate -- and decades later personally furnished a temple chamber for one of the wall project's fiercest opponents."
+      ]
+    },
+    {
+      "id": "ezra_ethiopian",
+      "name": "Ezra the Scribe",
+      "role": "manager",
+      "scribeTier": "Ezra",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogy is already established in the book of Ezra; not re-derived here since this book's own text does not restate it -- he simply reappears as 'Ezra the scribe' / 'Ezra the priest.'"
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 8:1-8",
+          "note": "Brought the book of the Law before the congregation at the Water Gate; reads it aloud from morning to midday from a wooden pulpit, flanked by named men on his right and left hand, while Levites help the people understand the reading distinctly."
+        },
+        {
+          "ref": "Nehemiah 8:9-10",
+          "note": "Together with Nehemiah the Tirshatha and the Levites, tells the weeping people the day is holy and to instead rejoice and share portions."
+        },
+        {
+          "ref": "Nehemiah 8:13-15",
+          "note": "Heads of the fathers' houses gather to him the next day to study the Law further and discover the instruction to dwell in booths for the feast of the seventh month."
+        },
+        {
+          "ref": "Nehemiah 12:36",
+          "note": "Leads one of the two processional companies at the wall dedication: 'and Ezra the scribe before them.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Read the Law aloud from morning until midday to a mixed crowd of men, women, and 'all that could hear with understanding,' from a specially built wooden pulpit."
+      ]
+    },
+    {
+      "id": "covenant_renewed_ethiopian",
+      "name": "The Covenant Renewed",
+      "role": "law",
+      "scribeTier": "The Covenant Renewed",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "purpose": "A corporate fast and confession reciting Israel's history of God's faithfulness against the nation's repeated unfaithfulness (creation, Abram's call, the exodus, Sinai, the wilderness, the conquest, the cycle of rebellion and deliverance, and the exile), leading the restored community to bind itself in a written, sealed document to specific renewed Torah obligations -- no intermarriage with the peoples of the land, Sabbath and sabbatical-year observance, a yearly temple tax of a third of a shekel, a wood offering by lot, and firstfruits/firstborn/tithes for the priests and Levites (10:28-39). It exists to turn the public reading of the Law in chapter 8 into a formal, communal, signed commitment.",
+      "deliveredBy": "nehemiah_ethiopian",
+      "verses": [
+        {
+          "ref": "Nehemiah 9:1-3",
+          "note": "The children of Israel assemble with fasting, sackcloth, and earth upon them; the seed of Israel separates from all strangers and confesses their sins and their fathers' iniquities."
+        },
+        {
+          "ref": "Nehemiah 9:4-5",
+          "note": "Named Levites stand upon the stairs and cry with a loud voice unto the LORD, then call the people to stand and bless the LORD their God for ever and ever."
+        },
+        {
+          "ref": "Nehemiah 9:6-31",
+          "note": "A long recital of Israel's history -- creation, Abram's call out of Ur, the exodus and Red Sea crossing, Sinai, manna and water in the wilderness, the conquest, and repeated cycles of rebellion, deliverance by saviours, and mercy -- as the basis for the nation's present distress."
+        },
+        {
+          "ref": "Nehemiah 9:32-37",
+          "note": "A closing plea that the trouble that has come upon kings, princes, priests, prophets, and fathers since the kings of Assyria not seem little before God, acknowledging 'thou art just... but we have done wickedly.'"
+        },
+        {
+          "ref": "Nehemiah 9:38",
+          "note": "Because of all this, the people make a sure covenant in writing, sealed by their princes, Levites, and priests."
+        },
+        {
+          "ref": "Nehemiah 10:1-27",
+          "note": "The sealed covenant document's signatories, headed by Nehemiah the Tirshatha, son of Hachaliah, then the priests, Levites, and chiefs of the people."
+        },
+        {
+          "ref": "Nehemiah 10:28-39",
+          "note": "The specific terms sworn to: separation from foreign peoples, Sabbath and sabbatical-year observance, the temple tax, the wood offering, and firstfruits and tithes for the Levites and priests, with the sons of Aaron alongside the Levites when tithes are taken."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wall_dedication_ethiopian",
+      "name": "The Wall Dedication",
+      "role": "law",
+      "scribeTier": "The Wall Dedication",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "purpose": "A public, citywide thanksgiving and purification ceremony marking the wall's completion, reuniting priests, Levites, singers, and musicians gathered from throughout the surrounding villages into two great processional companies that walk the wall in opposite directions before meeting together in the house of God -- reaffirming the restored city's identity as a worship community, with the resulting joy 'heard even afar off,' not merely marking the completion of a fortified perimeter.",
+      "deliveredBy": "nehemiah_ethiopian",
+      "verses": [
+        {
+          "ref": "Nehemiah 12:27-29",
+          "note": "The Levites are sought out of all their places -- the plain country round Jerusalem, the villages of Netophathi, Gilgal, Geba, and Azmaveth -- to keep the dedication with gladness, thanksgiving, singing, cymbals, psalteries, and harps."
+        },
+        {
+          "ref": "Nehemiah 12:30",
+          "note": "The priests and Levites purify themselves, then purify the people, the gates, and the wall."
+        },
+        {
+          "ref": "Nehemiah 12:31-36",
+          "note": "Nehemiah brings the princes of Judah upon the wall and appoints two great companies giving thanks; the first, led with Ezra the scribe before it, goes toward the dung gate."
+        },
+        {
+          "ref": "Nehemiah 12:37-39",
+          "note": "The first company continues past the fountain gate, the stairs of the city of David, and around to the water gate eastward."
+        },
+        {
+          "ref": "Nehemiah 12:40-42",
+          "note": "The second company, with Nehemiah and half the rulers, meets the first in the house of God; named priests with trumpets and Levite singers, overseen by Jezrahiah, take part."
+        },
+        {
+          "ref": "Nehemiah 12:43",
+          "note": "Great sacrifices are offered and the people rejoice, 'for God had made them rejoice with great joy... so that the joy of Jerusalem was heard even afar off.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jezrahiah_ethiopian",
+      "name": "Jezrahiah",
+      "role": "submanager",
+      "scribeTier": "",
+      "parentManagerId": "wall_dedication_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only once, as overseer of the singers at the wall dedication (12:42); no further identifying or family detail given in the text."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 12:42",
+          "note": "Oversees the singers, who 'sang loud' at the dedication."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "artaxerxes_ethiopian",
+      "name": "Artaxerxes",
+      "role": "named",
+      "scribeTier": "",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Persian king; his own dynastic genealogy is outside the scope of this book, which only records his direct exchanges with Nehemiah."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 2:1-8",
+          "note": "Notices Nehemiah's sad countenance and grants his request for leave, letters of safe passage, and timber for the building project; the queen sits by him."
+        },
+        {
+          "ref": "Nehemiah 5:14",
+          "note": "Referenced as the king in whose twentieth through thirty-second year Nehemiah served as governor of Judah without taking the governor's food allowance."
+        },
+        {
+          "ref": "Nehemiah 13:6",
+          "note": "In his thirty-second year, Nehemiah requests and receives leave to return to Jerusalem a second time."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zerubbabel_ethiopian",
+      "name": "Zerubbabel",
+      "role": "named",
+      "scribeTier": "",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogy already established in the book of Ezra; referenced in this book only twice, both as an era/chronology marker rather than as an active participant in this book's own events."
+      },
+      "verses": [
+        {
+          "ref": "Nehemiah 12:1",
+          "note": "Used to date the list of priests and Levites who came up with him and Jeshua at the earlier return."
+        },
+        {
+          "ref": "Nehemiah 12:47",
+          "note": "Used again to date when the people gave the daily portions for singers and gatekeepers, 'in the days of Zerubbabel, and in the days of Nehemiah.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above, all confirmed present in this Ethiopian translation's own text.",
+    "wall_builders_ch3": {
+      "ref": "Nehemiah 3:1-32",
+      "note": "A roster of roughly 40+ named individuals and families who each repaired a specific section of the wall, most with no further individual action beyond their assigned portion. Standout already promoted to a full entry: Eliashib the high priest (3:1). Notable but not promoted: Shallum the son of Halohesh repaired his section 'he, and his daughters' (3:12); Baruch the son of Zabbai 'earnestly repaired' his section (3:20); the nobles of Tekoa 'put not their necks to the work of their Lord' (3:5). NAMING COLLISIONS within this chapter alone: at least two distinct men named Zadok (3:4, 3:29) and at least two distinct men named Hananiah (3:8, 3:30) -- neither conflated with the separately-indexed Hananiah, ruler of the palace (7:2), or the priestly trumpeter Hananiah (12:41)."
+    },
+    "law_teaching_levites_ch8_7": {
+      "ref": "Nehemiah 8:7",
+      "note": "Thirteen Levites named as helping the people understand the Law as Ezra read it: Jeshua, Bani, Sherebiah, Jamin, Akkub, Shabbethai, Hodijah, Maaseiah, Kelita, Azariah, Jozabad, Hanan, and Pelaiah. The text does not differentiate any individual's specific role within this group, so none is promoted to a full character entry."
+    },
+    "confession_prayer_levites_ch9": {
+      "ref": "Nehemiah 9:4-5",
+      "note": "The Levites named leading the corporate confession from the stairs: Jeshua, Bani, Kadmiel, Shebaniah, Bunni, Sherebiah, Bani, and Chenani (9:4), with an adjacent, partly overlapping list in 9:5 -- Jeshua, Kadmiel, Bani, Hashabniah, Sherebiah, Hodijah, Shebaniah, and Pethahiah. Attributed collectively as the delivering group on the Covenant Renewed law tier rather than individually indexed."
+    },
+    "covenant_sealers_ch10": {
+      "ref": "Nehemiah 10:1-27",
+      "note": "Approximately 84 names sealing the covenant document, beginning with Nehemiah himself, then priests, Levites, and lay chiefs of the people. Bulk list, not individually indexed beyond Nehemiah, whose heading role is captured on his own character entry."
+    },
+    "returnees_census_ch7": {
+      "ref": "Nehemiah 7:6-73",
+      "note": "Repeats the census of the first return under Zerubbabel, with the same recognized numeric variation from the parallel list in Ezra 2 for a few individual clans found in the KJV textual tradition -- not resolved here. Not re-indexed individually in this book's roster."
+    },
+    "jerusalem_residents_ch11": {
+      "ref": "Nehemiah 11:1-36",
+      "note": "Lists of families who settled in Jerusalem by a one-in-ten lot, plus the towns of Judah and Benjamin resettled by the rest. Heads of families are named but without individual narrative action beyond the settlement list itself."
+    },
+    "priestly_trumpeters_dedication_12_41": {
+      "ref": "Nehemiah 12:41",
+      "note": "Seven priests with trumpets at the wall dedication: Eliakim, Maaseiah, Miniamin, Michaiah, Elioenai, Zechariah, and Hananiah -- an undifferentiated group, attributed collectively under the Wall Dedication law tier. This Hananiah is distinct from the other Hananiahs flagged elsewhere in this book."
+    },
+    "priests_levites_lineage_12_1_26": {
+      "ref": "Nehemiah 12:1-26",
+      "note": "A genealogical list of priests and Levites 'in the days of Zerubbabel,' including the high-priestly succession from Jeshua through Joiakim, Eliashib, Joiada, Jonathan/Johanan, to Jaddua. Establishes the high-priestly lineage Eliashib belongs to but is not individually indexed here beyond Eliashib himself."
+    }
+  }
+}

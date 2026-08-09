@@ -1,0 +1,249 @@
+{
+  "book": "Habakkuk",
+  "translation": "Geneva",
+  "canonicalOrder": 35,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "This 1560 Geneva translation of Habakkuk is 3 chapters/56 verses (17+20+19), matching the KJV's chapter/verse structure exactly - unlike some other books in this project (e.g. the Ethiopian Ezra), there is no real structural/canonical difference here, only wording. Given the book's small scope and its dialogue-then-prayer shape, this index uses the same five-tier pattern as the existing KJV Habakkuk index: one person-tier for the prophet himself, and four law/theme-tiers for the book's major oracular content (all ids suffixed _geneva to avoid collision with the existing KJV CharacterIndex ids for this book).\n\nReal, verified wording differences from the KJV (all confirmed by directly reading this translation's own extracted text, not assumed from memory):\n1. Habakkuk 1:6 calls the invading power \"that bitter and furious nation\" - Geneva's \"furious\" where the KJV has \"hasty.\" This translation also spells the nation \"Caldeans\" (one syllable dropped) rather than \"Chaldeans.\"\n2. Habakkuk 3:1's heading is rendered \"A prayer of Habakkuk the Prophet for the ignorances\" - this Geneva text translates the obscure Hebrew musical/liturgical term as \"the ignorances\" rather than transliterating it as \"Shigionoth\" (the KJV's choice). Strikingly, this translation does the *opposite* at the book's closing heading (3:19): it leaves \"Neginothai\" untranslated, where the KJV instead translates it as \"my stringed instruments.\" Two adjacent musical headings, two different translation strategies, within the same short book.\n3. The five \"woe\" oracles of chapter 2 are not uniform in this translation: the first two open with \"Ho\" (2:6, 2:9) and the remaining three with \"Wo\" (2:12, 2:15, 2:19) - inconsistent phrasing within the same passage, unlike the KJV's uniform \"Woe\" across all five.\n4. Habakkuk 3:3 renders the LORD's approach in the present tense (\"God commeth from Teman\") where the KJV uses the past tense (\"God came from Teman\").\n\nNo naming collisions were found in this book. As in the KJV version, the book never names the nation whose sin prompts Habakkuk's complaint, nor the nation victimized by the Caldeans, nor does it ever use the word \"Babylon\" - only \"the Caldeans\" (1:6). No entry in this index asserts an unstated victim nation. No submanagers were used: Cushan and Midian (3:7) are place-names that tremble at the LORD's approach but take no independent narrative action, so they are handled as citations within the closing-prayer entry and in genealogyLists rather than as standalone submanager entries - matching the KJV index's own treatment of this book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Towre of Watch",
+      "managerId": "habakkuk_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Bitter and Furious Nation",
+      "managerId": "caldean_instrument_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Table of Vision",
+      "managerId": "just_shall_live_by_faith_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Five-Fold Wo",
+      "managerId": "five_fold_wo_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Neginothai's Prayer",
+      "managerId": "prayer_ignorances_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "habakkuk_geneva",
+      "name": "Habakkuk",
+      "role": "manager",
+      "scribeTier": "The Towre of Watch",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Habakkuk 1:1 and 3:1 name him only as 'Habakkuk the Prophet'; this Geneva text, like the KJV, supplies no father, tribe, or hometown."
+      },
+      "verses": [
+        {
+          "ref": "Habakkuk 1:1",
+          "note": "Superscription: 'The burden, which Habakkuk the Prophet did see.'"
+        },
+        {
+          "ref": "Habakkuk 1:2-3",
+          "note": "'O Lord, howe long shall I crye, and thou wilt not heare!... Why doest thou shewe mee iniquitie, and cause me to beholde sorowe? for spoyling, and violence are before me.'"
+        },
+        {
+          "ref": "Habakkuk 1:12-13",
+          "note": "'Art thou not of olde, O Lord my God, mine holy one? we shall not die...' 'Thou art of pure eyes, and canst not see euill: thou canst not behold wickednesse: wherefore doest thou looke vpon the transgressors, and holdest thy tongue when the wicked deuoureth the man, that is more righteous then he?'"
+        },
+        {
+          "ref": "Habakkuk 2:1",
+          "note": "'I will stand vpon my watch, and set me vpon the towre, and wil looke and see what he would say vnto mee, and what I shall answere to him that rebuketh me.'"
+        },
+        {
+          "ref": "Habakkuk 2:2-3",
+          "note": "'And the Lord answered me, and sayde, Write the vision, and make it plaine vpon tables, that he may runne that readeth it.' 'For the vision is yet for an appointed time... though it tarie, waite: for it shall surely come, and shall not stay.'"
+        },
+        {
+          "ref": "Habakkuk 3:1",
+          "note": "Superscription of his closing prayer: 'A prayer of Habakkuk the Prophet for the ignorances.'"
+        },
+        {
+          "ref": "Habakkuk 3:16",
+          "note": "'When I heard, my bellie trembled: my lippes shooke at the voyce: rottennesse entred into my bones, and I trembled in my selfe.'"
+        },
+        {
+          "ref": "Habakkuk 3:18-19",
+          "note": "'But I will reioyce in the Lord: I will ioy in the God of my saluation. The Lord God is my strength: hee will make my feete like hindes feete, and he will make me to walke vpon mine hie places. To the chiefe singer on Neginothai.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named only 'Habakkuk the Prophet' (1:1, 3:1) - this Geneva text, like the KJV, supplies no father, tribe, or hometown.",
+        "This translation renders 3:1's obscure heading as 'for the ignorances' rather than transliterating it as 'Shigionoth' (the KJV's choice) - yet at 3:19 it does the opposite, keeping the closing term 'Neginothai' untranslated where the KJV renders it 'my stringed instruments.' Two different translation strategies for two similar musical headings in the same short book.",
+        "Spells the invading power 'Caldeans' (1:6) rather than the more familiar 'Chaldeans.'"
+      ]
+    },
+    {
+      "id": "caldean_instrument_geneva",
+      "name": "The Caldeans - Raised Vp for Iudgement",
+      "role": "law",
+      "scribeTier": "The Bitter and Furious Nation",
+      "parentManagerId": null,
+      "deliveredBy": "habakkuk_geneva",
+      "purpose": "Answers Habakkuk's first complaint that 'wrong iudgement proceedeth' (1:4) with the LORD's declaration: 'Beholde among the heathen, and regarde, and wonder, and maruaile: for I will worke a worke in your dayes: yee will not beleeue it, though it be tolde you' (1:5). The LORD is raising vp 'the Caldeans, that bitter and furious nation' (1:6) to march the breadth of the land and possess dwelling places not theirs - swift as leopards and eagles, gathering captives as sand, mocking kings, deriding every stronghold, and finally 'imputing this their power vnto their god' (1:11). The text never names the land or people they overrun, referring to them only as 'the land,' 'they,' 'the righteous,' and 'the man that is more righteous then he' (1:4,1:6,1:13).",
+      "verses": [
+        {
+          "ref": "Habakkuk 1:5",
+          "note": "'Beholde among the heathen, and regarde, and wonder, and maruaile: for I will worke a worke in your dayes: yee will not beleeue it, though it be tolde you.'"
+        },
+        {
+          "ref": "Habakkuk 1:6",
+          "note": "'For lo, I raise vp the Caldeans, that bitter and furious nation, which shall goe vpon the breadth of the lande to possesse the dwelling places, that are not theirs.'"
+        },
+        {
+          "ref": "Habakkuk 1:8",
+          "note": "'Their horses also are swifter then the leopards, and are more fierce then the wolues in the euening... they shall flie as the eagle hasting to meate.'"
+        },
+        {
+          "ref": "Habakkuk 1:10",
+          "note": "'And they shall mocke the Kings, and the princes shalbe a skorne vnto them: they shall deride euery strong holde: for they shall gather dust, and take it.'"
+        },
+        {
+          "ref": "Habakkuk 1:11",
+          "note": "'Then shall they take a courage, and transgresse and doe wickedly, imputing this their power vnto their god.'"
+        },
+        {
+          "ref": "Habakkuk 1:15-17",
+          "note": "'They take vp all with the angle: they catch it in their net, and gather it in their yarne, whereof they reioyce and are glad. Therefore they sacrifice vnto their net...' ending 'Shall they therefore stretch out their net and not spare continually to slay the nations?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'bitter and furious nation' (1:6) differs from the KJV's 'bitter and hasty nation' - a real wording difference between the two translations of the same passage.",
+        "As in every other English translation of this book, 'Babylon' is never named - only 'the Caldeans' (1:6, the tier's sole naming of this power)."
+      ]
+    },
+    {
+      "id": "just_shall_live_by_faith_geneva",
+      "name": "The Iust Shall Liue by Fayth",
+      "role": "law",
+      "scribeTier": "The Table of Vision",
+      "parentManagerId": null,
+      "deliveredBy": "habakkuk_geneva",
+      "purpose": "Immediately follows the command to 'Write the vision, and make it plaine vpon tables, that he may runne that readeth it' (2:2) and the assurance that though the vision tarry, 'it shall surely come, and shall not stay' (2:3): sets the proud man whose 'minde is not vpright in him' against 'the iust,' who 'shall liue by his fayth' (2:4) - the pivot on which Habakkuk's own movement from complaint to trust turns.",
+      "verses": [
+        {
+          "ref": "Habakkuk 2:2",
+          "note": "'And the Lord answered me, and sayde, Write the vision, and make it plaine vpon tables, that he may runne that readeth it.'"
+        },
+        {
+          "ref": "Habakkuk 2:3",
+          "note": "'For the vision is yet for an appointed time, but at the last it shall speake, and not lie: though it tarie, waite: for it shall surely come, and shall not stay.'"
+        },
+        {
+          "ref": "Habakkuk 2:4",
+          "note": "'Beholde, he that lifteth vp himselfe, his minde is not vpright in him, but the iust shall liue by his fayth,'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva rendering ('the iust shall liue by his fayth') carries the same core promise the KJV renders 'the just shall live by his faith,' later quoted repeatedly in the New Testament (Romans, Galatians, Hebrews) - one of this short book's most consequential single lines."
+      ]
+    },
+    {
+      "id": "five_fold_wo_geneva",
+      "name": "The Fiue Woes Against the Proude",
+      "role": "law",
+      "scribeTier": "The Five-Fold Wo",
+      "parentManagerId": null,
+      "deliveredBy": "habakkuk_geneva",
+      "purpose": "A cycle of five funeral-style 'Ho'/'Wo' oracles (2:6-20) against the same proud, insatiable power introduced in 2:5, voiced as 'a parable' and 'a tanting prouerbe' (2:6) placed in the mouths of the plundered peoples: unjust gain (2:6-8), covetous house-building (2:9-11), founding a town with blood (2:12-14), giving a neighbour drink to gaze on his shame (2:15-17), and trusting dumb, breathless idols (2:18-20). The oracle closes 'But the Lord is in his holy Temple: let all the earth keepe silence before him' (2:20). As with the tier before it, the text never names a specific victim nation - only 'many nations' and 'all that dwell therein' (2:8, 2:17).",
+      "verses": [
+        {
+          "ref": "Habakkuk 2:6-8",
+          "note": "Wo/Ho 1: 'Ho, he that increaseth that which is not his? howe long?... because thou hast spoyled many nations, all the remnant of the people shall spoyle thee.'"
+        },
+        {
+          "ref": "Habakkuk 2:9-11",
+          "note": "Wo/Ho 2: 'Ho, he that coueteth an euil couetousnesse to his house, that he may set his nest on hie...' 'For the stone shall crie out of the wall, and the beame out of the timber shall answere it.'"
+        },
+        {
+          "ref": "Habakkuk 2:12-14",
+          "note": "Wo 3: 'Wo vnto him that buildeth a towne with blood, and erecteth a citie by iniquitie.' Answered by: 'the earth shall be filled with the knowledge of the glory of the Lord, as the waters couer the sea.'"
+        },
+        {
+          "ref": "Habakkuk 2:15-17",
+          "note": "Wo 4: 'Wo vnto him that giueth his neighbour drinke: thou ioynest thine heate, and makest him drunken also, that thou mayest see their priuities.'"
+        },
+        {
+          "ref": "Habakkuk 2:18-20",
+          "note": "Wo 5: 'Wo vnto him that sayth to the wood, Awake, and to the dumme stone, Rise vp, it shall teach thee... there is no breath in it. But the Lord is in his holy Temple: let all the earth keepe silence before him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation opens the first two woes with 'Ho' (2:6, 2:9) and the remaining three with 'Wo' (2:12, 2:15, 2:19) - inconsistent within the same passage, unlike the KJV's uniform 'Woe' across all five.",
+        "2:14's promise ('the earth shall be filled with the knowledge of the glory of the Lord, as the waters couer the sea') sits embedded inside the third wo rather than standing alone."
+      ]
+    },
+    {
+      "id": "prayer_ignorances_geneva",
+      "name": "Habakkuk's Prayer for the Ignorances",
+      "role": "law",
+      "scribeTier": "Neginothai's Prayer",
+      "parentManagerId": null,
+      "deliveredBy": "habakkuk_geneva",
+      "purpose": "Habakkuk's closing prayer, headed 'for the ignorances' (3:1), recalling the LORD's dramatic coming - 'God commeth from Teman, and the holy one from mount Paran' (3:3) - amid trembling mountains, a standing sun and moon, and a subdued sea, going forth 'for the saluation of thy people, euen for saluation with thine Anointed' (3:13). Moves from Habakkuk's own trembling fear at the vision (3:16) to his closing resolve to rejoice in the LORD regardless of circumstance (3:18-19), dedicated at the close 'To the chiefe singer on Neginothai' (3:19).",
+      "verses": [
+        {
+          "ref": "Habakkuk 3:2",
+          "note": "'O Lord, I haue heard thy voyce, and was afraide: O Lord, reuiue thy worke in the mids of the people, in the mids of the yeeres make it knowen: in wrath remember mercy.'"
+        },
+        {
+          "ref": "Habakkuk 3:3",
+          "note": "'God commeth from Teman, and the holy one from mount Paran, Selah. His glory couereth the heauens, and the earth is full of his prayse,'"
+        },
+        {
+          "ref": "Habakkuk 3:7",
+          "note": "'For his iniquitie I sawe the tentes of Cushan, and the curtaines of the land of Midian did tremble.' Cushan and Midian are named only as trembling witnesses, given no further role anywhere in the book."
+        },
+        {
+          "ref": "Habakkuk 3:10-11",
+          "note": "'The mountaines sawe thee, and they trembled... The sunne and moone stood still in their habitation: at the light of thine arrowes they went.'"
+        },
+        {
+          "ref": "Habakkuk 3:13",
+          "note": "'Thou wentest foorth for the saluation of thy people, euen for saluation with thine Anointed: thou hast wounded the head of the house of the wicked.'"
+        },
+        {
+          "ref": "Habakkuk 3:18-19",
+          "note": "'But I will reioyce in the Lord: I will ioy in the God of my saluation...' closing 'To the chiefe singer on Neginothai.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Renders the LORD's approach in the present tense ('God commeth from Teman,' 3:3) where the KJV uses the past tense ('God came from Teman').",
+        "Retains 'Neginothai' untranslated at 3:19, in contrast to its own choice to translate 3:1's heading as 'for the ignorances' rather than transliterate it.",
+        "Contains three 'Selah' markers (3:3, 3:9, 3:13), a musical/liturgical pause notation shared with many Psalms."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "theophany_places_and_peoples_named_without_narrative_action": [
+      "Teman (Habakkuk 3:3)",
+      "mount Paran (Habakkuk 3:3)",
+      "the tentes of Cushan (Habakkuk 3:7)",
+      "the land of Midian (Habakkuk 3:7)"
+    ]
+  },
+  "scribeTiers2": []
+}

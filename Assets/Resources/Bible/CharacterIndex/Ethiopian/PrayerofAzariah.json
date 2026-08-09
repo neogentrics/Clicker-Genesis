@@ -1,0 +1,140 @@
+{
+  "book": "Prayer of Azariah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 46,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Extremely short single-chapter text (27 verses) — the mid-fragment of the larger \"Song of the Three Holy Children\" insertion into Daniel 3, extracted here as its own standalone book per this translation's file layout. Structure: vv.1-22 are Azarias's prayer of confession/covenant-appeal spoken while walking in the fire; vv.23-25 narrate the king's servants stoking the furnace and Chaldeans being burned by the overflow; vv.26-27 narrate the angel of the Lord's deliverance. Two person tiers cover the whole book cleanly — there is no law/ritual teaching content of the kind that would warrant a role:\"law\" tier (the prayer itself is confession/petition, not instruction). NAMING-COLLISION / IDENTIFICATION NOTE (rule 8 applied): Azarias is traditionally understood as the Hebrew name of Abednego, one of Daniel's three companions in Daniel 3 — but THIS text never says so; it never mentions Daniel, Shadrach, Meshach, or Abednego by name, and never states Azarias is the same figure. Per the explicit rule against asserting a link the text itself doesn't make, genealogy/identity here is drawn ONLY from what's on the page: an unnamed man named Azarias, praying in an unnamed furnace, with unnamed \"fellows.\" No father/mother/spouse/children are stated. \"Fellows\" (v.1, v.26) are never individually named in this excerpt, so per the undifferentiated-group rule they are one collective submanager, not invented individuals. The king's servants and the Chaldeans burned by the flame (vv.23-25) are likewise undifferentiated groups, logged only in genealogyLists, not promoted to characters. Abraham, Isaac, and \"Israel\" (Jacob) are invoked by name in the prayer's covenant appeal (v.12-13) but are not acting characters in this scene — already indexed elsewhere as Genesis figures — so logged as a bulk reference only, not re-indexed.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Azarias's Supplication",
+      "managerId": "azarias_prayer_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Angel in the Furnace",
+      "managerId": "angel_of_the_lord_azariah_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "azarias_prayer_ethiopian",
+      "name": "Azarias",
+      "role": "manager",
+      "scribeTier": "Azarias's Supplication",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:2",
+          "note": "Azarias stands up in the midst of the fire and opens his mouth to pray."
+        },
+        {
+          "ref": "Prayer of Azariah 1:3-4",
+          "note": "Blesses God's name and declares all His judgments true and righteous."
+        },
+        {
+          "ref": "Prayer of Azariah 1:5-10",
+          "note": "Confesses that Jerusalem's fall and the people's disgrace came justly, because of real sin and disobedience."
+        },
+        {
+          "ref": "Prayer of Azariah 1:11-13",
+          "note": "Pleads that God not abandon them or break the covenant, appealing to His promises to Abraham, Isaac, and Israel."
+        },
+        {
+          "ref": "Prayer of Azariah 1:14-15",
+          "note": "Laments that the nation now has no prince, prophet, leader, or place to sacrifice."
+        },
+        {
+          "ref": "Prayer of Azariah 1:16-18",
+          "note": "Offers a contrite heart and humble spirit in place of burnt offerings, vowing to follow God wholly."
+        },
+        {
+          "ref": "Prayer of Azariah 1:19-22",
+          "note": "Asks God to act for His own name's sake, put their enemies to shame, and prove Himself the only God before the whole world."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Prays this entire supplication while physically standing inside the burning furnace, per v.2."
+      ]
+    },
+    {
+      "id": "azarias_fellows_ethiopian",
+      "name": "Azarias's Fellows",
+      "role": "submanager",
+      "scribeTier": "Azarias's Supplication",
+      "parentManagerId": "azarias_prayer_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:1",
+          "note": "Walk in the midst of the fire together, praising and blessing God alongside Azarias."
+        },
+        {
+          "ref": "Prayer of Azariah 1:26",
+          "note": "Present with Azarias when the angel of the Lord comes down into the oven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "angel_of_the_lord_azariah_ethiopian",
+      "name": "The Angel of the Lord",
+      "role": "manager",
+      "scribeTier": "The Angel in the Furnace",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Prayer of Azariah 1:26",
+          "note": "Comes down into the oven together with Azarias and his fellows and smites out the flame of the fire."
+        },
+        {
+          "ref": "Prayer of Azariah 1:27",
+          "note": "Turns the furnace's midst into a moist, whistling wind so the fire does not touch, hurt, or trouble them at all."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The furnace flame is said to have streamed 49 cubits above the furnace (v.24) before the angel's intervention brought total protection."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "kings_servants": {
+      "ref": "Prayer of Azariah 1:23",
+      "note": "Unnamed servants of the king who keep the furnace stoked hot with rosin, pitch, tow, and small wood."
+    },
+    "chaldeans_burned": {
+      "ref": "Prayer of Azariah 1:25",
+      "note": "Unnamed Chaldeans standing about the furnace, burned by the flame that streamed out through it."
+    },
+    "abraham_isaac_israel_covenant": {
+      "ref": "Prayer of Azariah 1:12-13",
+      "note": "Invoked by name in Azarias's covenant appeal as the fathers to whom God promised to multiply their seed like the stars of heaven; already indexed as their own characters in the Genesis roster, not re-indexed here."
+    }
+  }
+}

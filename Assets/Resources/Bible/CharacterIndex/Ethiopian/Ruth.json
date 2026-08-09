@@ -1,0 +1,470 @@
+{
+  "book": "Ruth",
+  "translation": "Ethiopian",
+  "canonicalOrder": 8,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Ethiopian/ruth_8.json (4 chapters, 22+23+18+22 = 85 verses, matching the stated scope exactly). Real finding, not assumed: this Ethiopian-source text of Ruth is verbatim identical in wording and structure to the standard KJV rendering of Ruth — same 4-chapter/85-verse layout, same episode order (famine/exile, Naomi's return, Ruth's vow, gleaning in Boaz's field, the threshing-floor night, the gate/sandal-redemption scene, the marriage, Obed's birth, the closing Pharez-to-David genealogy). Unlike the Ethiopian translation's genuinely divergent 9-chapter Ezra (1 Esdras tradition), Ruth shows NO structural or content divergence from KJV in this source — this is logged as a real comparison finding, not an assumption carried over from the KJV file. Because of that identity, this book's cast, tier shape, and narrative beats are necessarily the same five persons + one closing genealogy the KJV Character Index already uses (Elimelech, Naomi, Ruth, Boaz, the deliberately unnamed nearer kinsman, plus the Pharez-to-David law/theme tier) — this draft was built independently from the actual Ethiopian text (not copied from the KJV file, which was consulted only afterward for naming-style calibration per the task instructions), and every character id is suffixed \"_ethiopian\" so nothing collides with the existing KJV Ruth.json ids. Naming-collision flags carried forward because they are real textual facts, not translation-specific: Boaz shares his name with one of Solomon's temple's two bronze pillars (1 Kings 7:21); Obed is a name reused by at least two unrelated later biblical figures. Unresolved-by-design ambiguities preserved rather than invented away: Ruth 1:4 alone does not say which brother married which Moabite wife (only Ruth 4:10 disambiguates Ruth as Mahlon's), leaving Chilion/Orpah as inference by elimination only; Boaz's mother is never named in this text itself. The nearer kinsman is deliberately left unnamed by the text (\"Ho, such a one!\", Ruth 4:1) and kept as his own manager tier rather than folded into Boaz's, since his on-page refusal to redeem is the exact hinge that clears the way for Boaz and Ruth's marriage. Obed is attached as a submanager under Naomi rather than under his biological parents Boaz/Ruth because the text itself frames his birth and naming almost entirely around her restoration (\"There is a son born to Naomi,\" Ruth 4:17) even while stating his biological parentage plainly in 4:13/4:21 (captured in his genealogy field). Six scribe tiers total (five person, one law/theme) — small and unpadded, matching Ruth's genuinely intimate four-chapter cast rather than being inflated to match larger books.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Bread of Bethlehem",
+      "managerId": "elimelech_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Mara's Return",
+      "managerId": "naomi_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Barley Gleanings",
+      "managerId": "ruth_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Threshing-Floor Corner",
+      "managerId": "boaz_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Drawn-Off Shoe",
+      "managerId": "nearer_kinsman_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Pharez to David",
+      "managerId": "line_to_david_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "elimelech_ethiopian",
+      "name": "Elimelech",
+      "role": "manager",
+      "scribeTier": "Tier 1 — Bread of Bethlehem",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "naomi_ethiopian"
+        ],
+        "children": [
+          "mahlon_ethiopian",
+          "chilion_ethiopian"
+        ],
+        "note": "An Ephrathite of Bethlehemjudah (Ruth 1:2). No ancestry for Elimelech himself is given anywhere in this text."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:1-2",
+          "note": "An Ephrathite of Bethlehemjudah who takes his wife and two sons to sojourn in Moab because of famine."
+        },
+        {
+          "ref": "Ruth 1:3",
+          "note": "\"And Elimelech Naomi's husband died; and she was left, and her two sons\" — dies before the book's main action begins."
+        },
+        {
+          "ref": "Ruth 4:3",
+          "note": "Naomi is described as selling \"a parcel of land, which was our brother Elimelech's\" — establishes the estate later redeemed by Boaz."
+        },
+        {
+          "ref": "Ruth 4:9-10",
+          "note": "Boaz's public declaration covers land bought as jointly \"Elimelech's, and...Chilion's and Mahlon's\" (v.9), while the separate name-raising clause in v.10 is tied specifically to Mahlon as Ruth's husband — the text does not fully separate whose inheritance v.10 means, so no single flat resolution is asserted here."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Dies off-page in Moab before any of the book's central scenes take place; every later event unfolds around the women and the land he left behind."
+      ]
+    },
+    {
+      "id": "naomi_ethiopian",
+      "name": "Naomi",
+      "role": "manager",
+      "scribeTier": "Tier 2 — Mara's Return",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "elimelech_ethiopian"
+        ],
+        "children": [
+          "mahlon_ethiopian",
+          "chilion_ethiopian"
+        ],
+        "note": "Wife of Elimelech, mother of Mahlon and Chilion (Ruth 1:2-5). Renames herself \"Mara\" on returning to Bethlehem (Ruth 1:20-21)."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:3-5",
+          "note": "Widowed, then loses both sons Mahlon and Chilion, left with her two daughters-in-law."
+        },
+        {
+          "ref": "Ruth 1:8-13",
+          "note": "Urges Orpah and Ruth to return to their mothers' houses in Moab rather than follow her."
+        },
+        {
+          "ref": "Ruth 1:19-21",
+          "note": "Returns to Bethlehem: \"call me not Naomi, call me Mara: for the Almighty hath dealt very bitterly with me.\""
+        },
+        {
+          "ref": "Ruth 2:1, 2:20",
+          "note": "Identifies Boaz as her husband's kinsman, then \"one of our next kinsmen.\""
+        },
+        {
+          "ref": "Ruth 3:1-4",
+          "note": "Instructs Ruth to go to the threshing floor and approach Boaz."
+        },
+        {
+          "ref": "Ruth 4:14-17",
+          "note": "Blessed by the neighbor women at Obed's birth; takes the child and \"became nurse unto it.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her chosen name \"Mara\" (bitter) is an explicit self-drawn contrast to \"Naomi\" (pleasant), stated in her own words in Ruth 1:20."
+      ]
+    },
+    {
+      "id": "ruth_ethiopian",
+      "name": "Ruth",
+      "role": "manager",
+      "scribeTier": "Tier 3 — Barley Gleanings",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "mahlon_ethiopian",
+          "boaz_ethiopian"
+        ],
+        "children": [
+          "obed_ethiopian"
+        ],
+        "note": "A Moabitess (Ruth 1:4); no parents named. Married first to Mahlon (confirmed by name only at Ruth 4:10), then, after his death, to Boaz (Ruth 4:13) — sequential marriages, not simultaneous."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:4",
+          "note": "Named as one of the two Moabite women Naomi's sons marry; the verse itself does not say which son married which wife."
+        },
+        {
+          "ref": "Ruth 1:16-17",
+          "note": "Her vow of loyalty to Naomi: \"whither thou goest, I will go... thy people shall be my people, and thy God my God.\""
+        },
+        {
+          "ref": "Ruth 2:2-3",
+          "note": "Goes to glean; \"her hap was to light on a part of the field belonging unto Boaz.\""
+        },
+        {
+          "ref": "Ruth 2:11-12",
+          "note": "Boaz commends her loyalty to Naomi and her leaving her own land to come to Israel."
+        },
+        {
+          "ref": "Ruth 3:7-9",
+          "note": "At the threshing floor, uncovers Boaz's feet and asks him to spread his skirt over her as a near kinsman."
+        },
+        {
+          "ref": "Ruth 4:10, 4:13",
+          "note": "Boaz publicly takes her as wife (v.10); she conceives and bears a son (v.13)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Ruth 4:10 is the only verse that specifies Mahlon, not Chilion, as her first husband — nothing earlier states it directly."
+      ]
+    },
+    {
+      "id": "boaz_ethiopian",
+      "name": "Boaz",
+      "role": "manager",
+      "scribeTier": "Tier 4 — Threshing-Floor Corner",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Salmon",
+        "mother": null,
+        "spouses": [
+          "ruth_ethiopian"
+        ],
+        "children": [
+          "obed_ethiopian"
+        ],
+        "note": "\"Salmon begat Boaz\" (Ruth 4:21), stated directly in this text. No mother is ever named for him here. Described as \"a mighty man of wealth, of the family of Elimelech\" (Ruth 2:1) — exact degree of kinship not specified beyond that."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 2:1",
+          "note": "Introduced as \"a mighty man of wealth, of the family of Elimelech.\""
+        },
+        {
+          "ref": "Ruth 2:8-16",
+          "note": "Instructs his reapers to let Ruth glean freely among the sheaves and shows her deliberate kindness."
+        },
+        {
+          "ref": "Ruth 3:9-13",
+          "note": "At the threshing floor, agrees in principle to act as kinsman but discloses a kinsman nearer than himself."
+        },
+        {
+          "ref": "Ruth 4:1-2",
+          "note": "Goes to the city gate, calls the nearer kinsman aside, and gathers ten elders as witnesses."
+        },
+        {
+          "ref": "Ruth 4:9-10",
+          "note": "Publicly declares the land purchase and his marriage to Ruth before the witnesses."
+        },
+        {
+          "ref": "Ruth 4:13, 4:21",
+          "note": "Takes Ruth as wife; she bears Obed. \"Salmon begat Boaz.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: \"Boaz\" is also the name of one of the two bronze pillars at the entrance of Solomon's temple (1 Kings 7:21; 2 Chronicles 3:17) — an object, not a person, but the identical name."
+      ]
+    },
+    {
+      "id": "nearer_kinsman_ethiopian",
+      "name": "The Nearer Kinsman (unnamed)",
+      "role": "manager",
+      "scribeTier": "Tier 5 — The Drawn-Off Shoe",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Deliberately left unnamed by the text — Boaz addresses him only as \"Ho, such a one!\" (Ruth 4:1). Described only as a kinsman closer than Boaz (Ruth 3:12, 4:3-4); the exact relation is not specified."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 3:12",
+          "note": "Boaz tells Ruth, \"it is true that I am thy near kinsman: howbeit there is a kinsman nearer than I.\""
+        },
+        {
+          "ref": "Ruth 4:1",
+          "note": "Boaz calls him to the gate: \"Ho, such a one! turn aside, sit down here.\""
+        },
+        {
+          "ref": "Ruth 4:3-4",
+          "note": "Boaz offers him the first right to redeem the parcel of land that was Elimelech's."
+        },
+        {
+          "ref": "Ruth 4:6",
+          "note": "He declines: \"I cannot redeem it for myself, lest I mar mine own inheritance... redeem thou my right to thyself.\""
+        },
+        {
+          "ref": "Ruth 4:7-8",
+          "note": "The shoe-removal custom is performed to confirm the transfer of the redemption right to Boaz."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His refusal (Ruth 4:6) is the exact hinge that clears the way for Boaz to redeem the land and marry Ruth — removing him would change the outcome entirely, which is why he holds his own tier rather than being folded into Boaz's."
+      ]
+    },
+    {
+      "id": "line_to_david_ethiopian",
+      "name": "Pharez to David",
+      "role": "law",
+      "scribeTier": "Tier 6 — Pharez to David",
+      "deliveredBy": "nearer_kinsman_ethiopian",
+      "purpose": "An unattributed narrator's closing genealogical appendix (Ruth 4:18-22), not spoken by any character in the story, tracing descent from Judah's son Pharez through Boaz and Obed down to Jesse and David — reframing the entire preceding story, and Ruth's Moabite origin within it, as directly ancestral to Israel's monarchy.",
+      "verses": [
+        {
+          "ref": "Ruth 4:18-22",
+          "note": "\"Now these are the generations of Pharez: Pharez begat Hezron... and Jesse begat David.\" Ten links: Pharez, Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz, Obed, Jesse, David."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is the only place in the book that names David outright, tying the whole narrative to him as its endpoint.",
+        "deliveredBy is set here only as a required schema attribution placeholder — the text itself explicitly frames this genealogy as unattributed narration, not spoken by the nearer kinsman or any other character; see the notes field for this same caveat."
+      ]
+    },
+    {
+      "id": "mahlon_ethiopian",
+      "name": "Mahlon",
+      "role": "submanager",
+      "parentManagerId": "elimelech_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "elimelech_ethiopian",
+        "mother": "naomi_ethiopian",
+        "spouses": [
+          "ruth_ethiopian"
+        ],
+        "children": [],
+        "note": "One of Naomi and Elimelech's two sons (Ruth 1:2). Identified specifically as Ruth's husband only at Ruth 4:10 — nothing earlier names which brother married which wife."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:2",
+          "note": "Named as one of Elimelech and Naomi's two sons, Ephrathites of Bethlehemjudah."
+        },
+        {
+          "ref": "Ruth 1:5",
+          "note": "\"Mahlon and Chilion died also both of them\" in Moab."
+        },
+        {
+          "ref": "Ruth 4:9-10",
+          "note": "Boaz's declaration names him specifically as Ruth's dead husband whose name is to be raised up on his inheritance — see the elimelech_ethiopian entry for the parallel hedge on how this overlaps the joint-estate language of v.9."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Has no quoted line and no individually differentiated action beyond marrying and dying (Ruth 1:4-5) — everything else about him comes from the chapter 4 legal declaration after his death."
+      ]
+    },
+    {
+      "id": "chilion_ethiopian",
+      "name": "Chilion",
+      "role": "submanager",
+      "parentManagerId": "elimelech_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "elimelech_ethiopian",
+        "mother": "naomi_ethiopian",
+        "spouses": [
+          "orpah_ethiopian"
+        ],
+        "children": [],
+        "note": "One of Naomi and Elimelech's two sons (Ruth 1:2). HEDGE: the text never directly states Chilion married Orpah — Ruth 1:4 pairs neither wife to a specific son; Orpah is inferred as his wife only by elimination once Ruth 4:10 names Ruth specifically as Mahlon's wife."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:2",
+          "note": "Named as Elimelech and Naomi's other son."
+        },
+        {
+          "ref": "Ruth 1:5",
+          "note": "Died in Moab along with Mahlon."
+        },
+        {
+          "ref": "Ruth 4:9",
+          "note": "The land Boaz purchases is described as including \"all that was...Chilion's,\" alongside Elimelech's and Mahlon's."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unlike Mahlon, never individually distinguished after Ruth 1:5 — no verse quotes him or singles out an action apart from his brother's."
+      ]
+    },
+    {
+      "id": "orpah_ethiopian",
+      "name": "Orpah",
+      "role": "submanager",
+      "parentManagerId": "naomi_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "chilion_ethiopian"
+        ],
+        "children": [],
+        "note": "A Moabitess, daughter-in-law of Naomi (Ruth 1:4). HEDGE: her marriage to Chilion specifically is inferred only by elimination from Ruth 4:10, not stated directly anywhere in the text."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 1:4",
+          "note": "Named as one of the two Moabite women who married Naomi's sons."
+        },
+        {
+          "ref": "Ruth 1:14",
+          "note": "\"And Orpah kissed her mother in law; but Ruth clave unto her\" — she returns toward Moab after Naomi's urging."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her decision to return to Moab carries no textual condemnation — Naomi explicitly urges both daughters-in-law to go back (Ruth 1:8-13); she simply takes the path Naomi herself offered.",
+        "Never reappears after Ruth 1:14."
+      ]
+    },
+    {
+      "id": "boaz_servant_ethiopian",
+      "name": "Boaz's Servant (unnamed overseer of the reapers)",
+      "role": "submanager",
+      "parentManagerId": "boaz_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed; described only as \"his servant that was set over the reapers\" (Ruth 2:5-6)."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 2:5-6",
+          "note": "Boaz asks whose damsel Ruth is; he answers, identifying her as \"the Moabitish damsel that came back with Naomi out of the country of Moab.\""
+        },
+        {
+          "ref": "Ruth 2:7",
+          "note": "Reports her diligence: she asked to glean and has continued from morning with only a little rest."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The first person in the book to describe Ruth's diligence to a third party, directly prompting Boaz's attention to her."
+      ]
+    },
+    {
+      "id": "obed_ethiopian",
+      "name": "Obed",
+      "role": "submanager",
+      "parentManagerId": "naomi_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "boaz_ethiopian",
+        "mother": "ruth_ethiopian",
+        "spouses": [],
+        "children": [
+          "Jesse"
+        ],
+        "note": "Biological son of Boaz and Ruth (Ruth 4:13, 4:21). HEDGE: the text nonetheless frames his birth around Naomi — \"There is a son born to Naomi\" (Ruth 4:17) — and around raising the name of Ruth's late husband (Ruth 4:10). Naomi nurses him (Ruth 4:16). Grandfather of David through Jesse (Ruth 4:17, 22)."
+      },
+      "verses": [
+        {
+          "ref": "Ruth 4:13",
+          "note": "Ruth conceives and bears a son, with Boaz as father."
+        },
+        {
+          "ref": "Ruth 4:14-15",
+          "note": "The neighbor women bless Naomi, saying the child \"shall be unto thee a restorer of thy life, and a nourisher of thine old age.\""
+        },
+        {
+          "ref": "Ruth 4:16",
+          "note": "\"And Naomi took the child, and laid it in her bosom, and became nurse unto it.\""
+        },
+        {
+          "ref": "Ruth 4:17",
+          "note": "The neighbor women name him: \"There is a son born to Naomi; and they called his name Obed: he is the father of Jesse, the father of David.\""
+        },
+        {
+          "ref": "Ruth 4:21-22",
+          "note": "\"Obed begat Jesse, and Jesse begat David.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name is given by the neighbor women (Ruth 4:17), not by Boaz or Ruth directly.",
+        "NAMING COLLISION FLAG: \"Obed\" is a repeated Old Testament name for several distinct people elsewhere (e.g. 1 Chronicles 2:37-38, 11:47; 2 Chronicles 23:1) — none of these are this Obed."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "davidic_lineage_link_names_ruth_4_18-21": "Pharez, Hezron, Ram, Amminadab, and Nahshon (Ruth 4:18-21) are named only within the closing genealogy, with no individual narrative action inside this book. Pharez is elsewhere identified (Genesis 38) as the son of Judah and Tamar, but this text does not restate that background. Salmon (4:20-21) is likewise named only in the genealogy.",
+    "elders_and_witnesses_ruth_4_2_4_9-11": "Ten elders of the city (Ruth 4:2) plus \"all the people that were in the gate\" (Ruth 4:11) serve as witnesses to Boaz's redemption of the land and marriage to Ruth, and jointly bless the marriage. None are individually named or differentiated.",
+    "women_neighbours_ruth_4_14-17": "Unnamed women, described as Naomi's neighbours, bless her at Obed's birth (Ruth 4:14-15) and collectively give the child his name, \"Obed\" (Ruth 4:17). A single undifferentiated collective act; no individuals named.",
+    "jesse_and_david_ruth_4_17_22": "Jesse and David are named only as the final two links of the closing genealogy (Ruth 4:17, 22) — Obed's son and grandson respectively — with no narrative action of their own inside this book; the text ends at the moment their names appear.",
+    "naming_collision_flags_hezron_ram_amminadab": "HEZRON: a second, unrelated Hezron (son of Reuben, Genesis 46:9; Exodus 6:14) is distinct from the Hezron of Ruth 4:18-19 (son of Pharez, tribe of Judah). RAM: 1 Chronicles 2:25,27 names a different Ram as firstborn of Jerahmeel — distinct from the Ram of Ruth 4:19 (ancestor of Boaz via the Pharez line). AMMINADAB: a separate Levite/Kohathite Amminadab appears in 1 Chronicles 6:22 and 15:10-11, distinct from the Judahite Amminadab of Ruth 4:19-20 (father of Nahshon)."
+  }
+}

@@ -21,6 +21,13 @@ namespace ClickerGenesis.Progression
         private readonly PrestigeSkillTreeConfig config;
         private readonly Dictionary<string, int> ranks = new Dictionary<string, int>();
 
+        /// <summary>Which book a generic "Unlock New Book" node actually unlocked, keyed by node id
+        /// (2026-08-09, player-choice book unlocking redesign - see BookProgressionTreeBuilder's
+        /// doc comment for why the Book Progression chain no longer earmarks a specific book per
+        /// node). Only populated for BookUnlock nodes whose unlockBookResourceId is empty (the New
+        /// Testament gate nodes still unlock a fixed, static group of books and never appear here).</summary>
+        private readonly Dictionary<string, string> bookChoices = new Dictionary<string, string>();
+
         public PrestigeSkillSystem(PrestigeSkillTreeConfig config)
         {
             this.config = config;
@@ -37,6 +44,7 @@ namespace ClickerGenesis.Progression
         public bool IsUnlocked(PrestigeSkillNode node, bool hasResetPrestiged)
         {
             if (node.requiresResetPrestige && !hasResetPrestiged) return false;
+            if (!string.IsNullOrEmpty(node.requiresBookResourceId) && !IsBookUnlocked(node.requiresBookResourceId)) return false;
             return PrerequisiteSatisfied(node);
         }
 
@@ -49,8 +57,10 @@ namespace ClickerGenesis.Progression
         /// right to even SEE this node" check.</summary>
         public bool PrerequisiteSatisfied(PrestigeSkillNode node)
         {
-            if (string.IsNullOrEmpty(node.prerequisiteId)) return true;
-            return GetRank(node.prerequisiteId) >= node.prerequisiteRankRequired;
+            if (node.prerequisites == null || node.prerequisites.Count == 0) return true;
+            foreach (var prereq in node.prerequisites)
+                if (GetRank(prereq.nodeId) < prereq.rankRequired) return false;
+            return true;
         }
 
         public double GetNextCost(PrestigeSkillNode node)
@@ -76,15 +86,22 @@ namespace ClickerGenesis.Progression
         }
 
         /// <summary>True once the skill node granting access to this book resource has been
-        /// bought - the Books tab (not yet built) reads this to decide what's selectable. Genesis
-        /// itself is always available (the free starting-book personalization hook) and never has
-        /// a tree node, so it's not covered by this check.</summary>
+        /// bought - the Books tab reads this to decide what's selectable. Genesis itself is always
+        /// available (the free starting-book personalization hook) and never has a tree node, so
+        /// it's not covered by this check.</summary>
         public bool IsBookUnlocked(string bookResourceId)
         {
             if (config == null || string.IsNullOrEmpty(bookResourceId)) return false;
+
+            // Player-chosen generic "Unlock New Book" nodes (2026-08-09) - checked first since
+            // this is now the common case for the OT chain; NT gate nodes below stay static.
+            foreach (var kvp in bookChoices)
+                if (kvp.Value == bookResourceId) return true;
+
             foreach (var node in config.nodes)
             {
                 if (node.effectType != SkillEffectType.BookUnlock || GetRank(node.id) <= 0) continue;
+                if (string.IsNullOrEmpty(node.unlockBookResourceId)) continue; // generic - handled above
                 // unlockBookResourceId may hold a single id or a comma-separated group (the New
                 // Testament "gate" nodes unlock several books at once rather than one node per book).
                 var ids = node.unlockBookResourceId.Split(',');
@@ -93,6 +110,38 @@ namespace ClickerGenesis.Progression
                         return true;
             }
             return false;
+        }
+
+        /// <summary>Records which book a generic "Unlock New Book" node's rank actually unlocked
+        /// (2026-08-09, player-choice redesign). Must only be called once the node itself has been
+        /// bought (i.e. paired with Buy(node) in the same purchase action) - a bought-but-unchosen
+        /// node grants access to nothing until this is called, which is why the confirm/purchase UI
+        /// picks the book BEFORE spending Grace rather than after.</summary>
+        public void ChooseBook(string nodeId, string bookResourceId)
+        {
+            if (string.IsNullOrEmpty(nodeId) || string.IsNullOrEmpty(bookResourceId)) return;
+            bookChoices[nodeId] = bookResourceId;
+        }
+
+        /// <summary>The book a generic node's rank was spent on, or null if not yet chosen (should
+        /// only be transiently true mid-purchase, never after - see ChooseBook's doc comment) or if
+        /// this isn't a generic book-unlock node at all. Feeds the tree tooltip's "Unlocked: X" line
+        /// once a slot has been spent.</summary>
+        public string GetChosenBook(string nodeId) =>
+            bookChoices.TryGetValue(nodeId, out var id) ? id : null;
+
+        /// <summary>Every node id -> chosen book resource id pair (2026-08-09, save system).</summary>
+        public IEnumerable<KeyValuePair<string, string>> ExportBookChoices() => bookChoices;
+
+        /// <summary>Restores book-choice state from a save file (2026-08-09) - counterpart to
+        /// LoadState's rank restoration below, called alongside it.</summary>
+        public void LoadBookChoices(IEnumerable<KeyValuePair<string, string>> savedChoices)
+        {
+            bookChoices.Clear();
+            if (savedChoices == null) return;
+            foreach (var kvp in savedChoices)
+                if (!string.IsNullOrEmpty(kvp.Key) && !string.IsNullOrEmpty(kvp.Value))
+                    bookChoices[kvp.Key] = kvp.Value;
         }
 
         /// <summary>Sum of (rank * effectPerRank) across every node of the given effect type -

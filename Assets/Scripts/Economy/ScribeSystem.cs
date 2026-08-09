@@ -140,6 +140,28 @@ namespace ClickerGenesis.Economy
             return count;
         }
 
+        /// <summary>Sum of owned counts across every tier in this book's roster - for the
+        /// Achievement System's ScribesOwned stat (2026-08-08), which tracks total scribes owned
+        /// account-wide, not per-tier.</summary>
+        public int TotalOwned()
+        {
+            int total = 0;
+            for (int i = 0; i < owned.Length; i++) total += owned[i];
+            return total;
+        }
+
+        /// <summary>How many submanagers have been hired across every tier - for the Achievement
+        /// System's SubmanagersUnlocked stat (2026-08-08), same role UnlockedManagerCount plays
+        /// for managers.</summary>
+        public int OwnedSubmanagerCount()
+        {
+            int count = 0;
+            for (int i = 0; i < submanagerOwned.Length; i++)
+                for (int j = 0; j < submanagerOwned[i].Length; j++)
+                    if (submanagerOwned[i][j]) count++;
+            return count;
+        }
+
         /// <summary>Whether the level threshold has been reached, independent of whether the
         /// manager has actually been bought yet - REVISED 2026-08-04, managers require both the
         /// level AND an Ink purchase, not level alone.</summary>

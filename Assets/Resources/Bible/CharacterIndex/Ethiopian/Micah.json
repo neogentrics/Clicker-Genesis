@@ -1,0 +1,393 @@
+{
+  "book": "Micah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 50,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian translation text (7 chapters, 105 verses) directly from micah_50.json. Content is word-for-word identical (or near-identical, same KJV-style archaic English) to the standard KJV Micah already indexed in Assets/Resources/Bible/CharacterIndex/Micah.json — no Ethiopian-canon-specific additions, no missing material, same chapter/verse structure (1:1-16, 2:1-13, 3:1-12, 4:1-13, 5:1-15, 6:1-16, 7:1-20). Adapted the already-validated KJV structure (6 scribe tiers: 1 person tier for Micah himself + 5 law/theme tiers) rather than inventing a new shape, since the underlying text is the same book. All ids suffixed '_ethiopian' to avoid collision with the KJV/Geneva versions of this book. Re-verified every verse reference and quoted text directly against this translation's own file, not copied blind from the KJV draft. Naming collision flagged (same as KJV note): this Micah (1:1) is not the same person as the Micah of Judges 17-18, despite identical spelling. Balaam is 'the son of Beor' (6:5) - same continuity figure as Numbers 22-24 etc. Micah 6:16 names 'the statutes of Omri... and the house of Ahab' as the source of the nation's corruption, included in the covenant_lawsuit tier's verses. Micah 7:18-20 (the closing 'who is a God like unto thee' pardon hymn) kept as its own law tier per the KJV draft's corrected structure.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Morasthite's Scroll",
+      "managerId": "micah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Broken Scale",
+      "managerId": "judgment_against_leaders_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Plowshare's Forge",
+      "managerId": "mountain_of_the_lords_house_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Ephratah's Seal",
+      "managerId": "bethlehem_ruler_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Mountains' Witness",
+      "managerId": "covenant_lawsuit_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Sea's Depths",
+      "managerId": "divine_mercy_pardon_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "micah_ethiopian",
+      "name": "Micah",
+      "role": "manager",
+      "scribeTier": "Morasthite's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 1:1",
+          "note": "Superscription: the word of the LORD that came to Micah the Morasthite in the days of Jotham, Ahaz, and Hezekiah, kings of Judah, concerning Samaria and Jerusalem."
+        },
+        {
+          "ref": "Micah 1:8",
+          "note": "Micah's own response to the coming judgment: he will wail and howl, go stripped and naked, mourn like the dragons and owls."
+        },
+        {
+          "ref": "Micah 3:8",
+          "note": "Micah declares he is 'full of power by the spirit of the LORD, and of judgment, and of might, to declare unto Jacob his transgression, and to Israel his sin.'"
+        },
+        {
+          "ref": "Micah 7:7",
+          "note": "'Therefore I will look unto the LORD; I will wait for the God of my salvation: my God will hear me' - Micah's personal statement of hope before the closing hymn."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Prophesied in Judah during the reigns of Jotham, Ahaz, and Hezekiah (1:1), a contemporary of Isaiah.",
+        "NAMING COLLISION: this Micah is not the same person as the Micah of Judges 17-18 (the Ephraimite who made a household idol) - identical spelling, unrelated individual."
+      ]
+    },
+    {
+      "id": "judgment_against_leaders_ethiopian",
+      "name": "Judgment Against Corrupt Leaders",
+      "role": "law",
+      "scribeTier": "Broken Scale",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "micah_ethiopian",
+      "purpose": "Indicts Judah's leaders - rulers who abhor justice, prophets who divine for money yet claim the LORD's protection, priests who teach for hire - declaring Zion will be plowed as a field and Jerusalem will become heaps because of them.",
+      "verses": [
+        {
+          "ref": "Micah 3:1-3",
+          "note": "Condemns the 'heads of Jacob, and princes of the house of Israel' who 'hate the good, and love the evil,' figuratively devouring their people."
+        },
+        {
+          "ref": "Micah 3:5",
+          "note": "Condemns prophets who 'bite with their teeth, and cry, Peace' but prepare war against anyone who doesn't feed them."
+        },
+        {
+          "ref": "Micah 3:11",
+          "note": "'The heads thereof judge for reward, and the priests thereof teach for hire, and the prophets thereof divine for money: yet will they lean upon the LORD.'"
+        },
+        {
+          "ref": "Micah 3:12",
+          "note": "'Therefore shall Zion for your sake be plowed as a field, and Jerusalem shall become heaps.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mountain_of_the_lords_house_ethiopian",
+      "name": "The Mountain of the LORD's House",
+      "role": "law",
+      "scribeTier": "Plowshare's Forge",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "micah_ethiopian",
+      "purpose": "Envisions the LORD's house exalted above all mountains, nations streaming to it, weapons of war beaten into farming tools, and every man sitting secure under his own vine and fig tree.",
+      "verses": [
+        {
+          "ref": "Micah 4:1-2",
+          "note": "'The mountain of the house of the LORD shall be established in the top of the mountains... for the law shall go forth of Zion, and the word of the LORD from Jerusalem.'"
+        },
+        {
+          "ref": "Micah 4:3",
+          "note": "'They shall beat their swords into plowshares, and their spears into pruninghooks: nation shall not lift up a sword against nation, neither shall they learn war any more.'"
+        },
+        {
+          "ref": "Micah 4:4",
+          "note": "'They shall sit every man under his vine and under his fig tree; and none shall make them afraid.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "bethlehem_ruler_ethiopian",
+      "name": "Bethlehem's Promised Ruler",
+      "role": "law",
+      "scribeTier": "Ephratah's Seal",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "micah_ethiopian",
+      "purpose": "Names Bethlehem Ephratah, though little among Judah's clans, as the origin of a future ruler in Israel whose goings forth are 'from of old, from everlasting,' who will stand and feed his flock in the strength of the LORD and be Israel's peace.",
+      "verses": [
+        {
+          "ref": "Micah 5:2",
+          "note": "'Thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth unto me that is to be ruler in Israel; whose goings forth have been from of old, from everlasting.'"
+        },
+        {
+          "ref": "Micah 5:4",
+          "note": "'He shall stand and feed in the strength of the LORD... for now shall he be great unto the ends of the earth.'"
+        },
+        {
+          "ref": "Micah 5:5",
+          "note": "'And this man shall be the peace, when the Assyrian shall come into our land.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "covenant_lawsuit_ethiopian",
+      "name": "The LORD's Covenant Lawsuit",
+      "role": "law",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "micah_ethiopian",
+      "purpose": "A formal covenant lawsuit summoning the mountains and hills as witnesses, recounting the LORD's redemptive acts (Egypt, Moses, Aaron, Miriam, overturning Balak's plot with Balaam) as evidence of His righteousness, rejecting empty ritual sacrifice, and defining true faithfulness as doing justly, loving mercy, and walking humbly with God - followed by a sentence against violence, deceitful commerce, and adherence to the statutes of Omri and the house of Ahab.",
+      "verses": [
+        {
+          "ref": "Micah 6:1-2",
+          "note": "'Arise, contend thou before the mountains... for the LORD hath a controversy with his people, and he will plead with Israel.'"
+        },
+        {
+          "ref": "Micah 6:4-5",
+          "note": "'I brought thee up out of the land of Egypt... and I sent before thee Moses, Aaron, and Miriam. O my people, remember now what Balak king of Moab consulted, and what Balaam the son of Beor answered him from Shittim unto Gilgal.'"
+        },
+        {
+          "ref": "Micah 6:6-7",
+          "note": "Rhetorical rejection of empty ritual: 'Will the LORD be pleased with thousands of rams, or with ten thousands of rivers of oil?'"
+        },
+        {
+          "ref": "Micah 6:8",
+          "note": "'He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?'"
+        },
+        {
+          "ref": "Micah 6:11",
+          "note": "'Shall I count them pure with the wicked balances, and with the bag of deceitful weights?'"
+        },
+        {
+          "ref": "Micah 6:16",
+          "note": "'For the statutes of Omri are kept, and all the works of the house of Ahab, and ye walk in their counsels' - naming the source of the nation's corruption, resulting in desolation and reproach."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "divine_mercy_pardon_ethiopian",
+      "name": "Who Is A God Like Unto Thee",
+      "role": "law",
+      "scribeTier": "Sea's Depths",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "micah_ethiopian",
+      "purpose": "The book's closing hymn of praise, asking 'who is a God like unto thee' who pardons iniquity and delights in mercy rather than retaining anger forever, promising God will subdue Israel's iniquities and cast their sins into the depths of the sea, fulfilling the truth sworn to Jacob and the mercy sworn to Abraham.",
+      "verses": [
+        {
+          "ref": "Micah 7:18",
+          "note": "'Who is a God like unto thee, that pardoneth iniquity, and passeth by the transgression of the remnant of his heritage? he retaineth not his anger for ever, because he delighteth in mercy.'"
+        },
+        {
+          "ref": "Micah 7:19",
+          "note": "'He will turn again, he will have compassion upon us; he will subdue our iniquities; and thou wilt cast all their sins into the depths of the sea.'"
+        },
+        {
+          "ref": "Micah 7:20",
+          "note": "'Thou wilt perform the truth to Jacob, and the mercy to Abraham, which thou hast sworn unto our fathers from the days of old.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "moses_ethiopian",
+      "name": "Moses",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": "covenant_lawsuit_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "'I brought thee up out of the land of Egypt, and redeemed thee out of the house of servants; and I sent before thee Moses, Aaron, and Miriam.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named directly as one of three leaders 'sent before' Israel out of Egypt - cited as evidence in the LORD's covenant lawsuit, no new narrative detail given."
+      ]
+    },
+    {
+      "id": "aaron_ethiopian",
+      "name": "Aaron",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": "covenant_lawsuit_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "Named as the second of the three leaders God 'sent before' Israel out of Egypt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "miriam_ethiopian",
+      "name": "Miriam",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": "covenant_lawsuit_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 6:4",
+          "note": "Named as the third of the three leaders God 'sent before' Israel: 'Moses, Aaron, and Miriam.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only woman named in the book of Micah."
+      ]
+    },
+    {
+      "id": "balak_ethiopian",
+      "name": "Balak",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": "covenant_lawsuit_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 6:5",
+          "note": "'Remember now what Balak king of Moab consulted, and what Balaam the son of Beor answered him from Shittim unto Gilgal; that ye may know the righteousness of the LORD.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Identified only by title, 'Balak king of Moab' - no genealogy given in Micah itself."
+      ]
+    },
+    {
+      "id": "balaam_ethiopian",
+      "name": "Balaam",
+      "role": "submanager",
+      "scribeTier": "Mountains' Witness",
+      "parentManagerId": "covenant_lawsuit_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Beor",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Micah 6:5",
+          "note": "'What Balaam the son of Beor answered him from Shittim unto Gilgal; that ye may know the righteousness of the LORD.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Micah's own text names his father - 'Balaam the son of Beor' - the only patronymic given for any figure in this book besides Micah's own gentilic."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogy references needed for this book - every named figure (Micah, Moses, Aaron, Miriam, Balak, Balaam) is individually indexed above."
+  }
+}

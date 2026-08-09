@@ -51,6 +51,21 @@ namespace ClickerGenesis.Core
         public Button ConfirmNoButton;
         private PrestigeSkillNode pendingPurchaseNode;
 
+        /// <summary>Book-choice popup (2026-08-09, user's explicit ask - "when they unlock the next
+        /// book, the skill says unlock new book... it gives them the option for a pop up to pick
+        /// which book they unlock"). Shown instead of the normal Yes/No confirm popup when a
+        /// generic Book Progression node is clicked - lists every OT book not yet unlocked, Grace
+        /// is only spent once the player actually picks one (GameLoopController.BuySkillWithBookChoice),
+        /// so there's no "bought but no book chosen" state possible.</summary>
+        [Header("Book-choice popup (2026-08-09, generic 'Unlock New Book' nodes)")]
+        public GameObject BookChoicePanel;
+        public TMP_Text BookChoiceTitleLabel;
+        public Transform BookChoiceContent;
+        public GameObject BookChoiceRowTemplate;
+        public Button BookChoiceCancelButton;
+        private PrestigeSkillNode pendingBookChoiceNode;
+        private readonly List<GameObject> bookChoiceRows = new List<GameObject>();
+
         private GameLoopController Controller => GameLoopController.Instance;
 
         private class NodeVisual
@@ -62,15 +77,19 @@ namespace ClickerGenesis.Core
             public TMP_Text NameLabel;
             public TMP_Text RankLabel;
             public DescriptionBoxHover Hover;
-            /// <summary>The connecting line drawn from this node's prerequisite to this node (null
-            /// for nodes with no prerequisite, i.e. Core) - hidden/shown together with the node
-            /// itself for progressive visibility (2026-08-06).</summary>
-            public GameObject IncomingLine;
-            /// <summary>Persistent glow ring shown once the node is owned (rank &gt; 0), distinct
-            /// from the "affordable to buy" brightness step that already exists for unowned nodes
+            /// <summary>One connecting line per prerequisite (2026-08-08 - was a single line, now
+            /// a list since a node can require several prerequisites at once, e.g. Convergence's 8
+            /// capstone requirements) - empty for nodes with no prerequisite (i.e. Core). Hidden/
+            /// shown together with the node itself for progressive visibility (2026-08-06).</summary>
+            public List<GameObject> IncomingLines = new List<GameObject>();
+            /// <summary>Persistent glow shown once the node is owned (rank &gt; 0), distinct from
+            /// the "affordable to buy" brightness step that already exists for unowned nodes
             /// (2026-08-06, user's explicit ask: owned nodes need their own visual state, not just
-            /// "brighter than locked").</summary>
-            public Outline OwnedGlow;
+            /// "brighter than locked"). A same-shape Image sized up and tinted gold BEHIND the node
+            /// (2026-08-08 - replaced a UnityEngine.UI.Outline component, which duplicates the
+            /// graphic via offset copies; on the new non-circular shapes that read as a visibly
+            /// doubled/ghosted second star/diamond/hexagon rather than a glow).</summary>
+            public GameObject OwnedGlow;
         }
 
         /// <summary>One icon per branch (drawn white on top of the branch-colored circle) so nodes
@@ -135,6 +154,8 @@ namespace ClickerGenesis.Core
             if (ConfirmYesButton != null) ConfirmYesButton.onClick.AddListener(HandleConfirmYes);
             if (ConfirmNoButton != null) ConfirmNoButton.onClick.AddListener(HandleConfirmNo);
             if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
+            if (BookChoiceCancelButton != null) BookChoiceCancelButton.onClick.AddListener(HideBookChoicePopup);
+            if (BookChoicePanel != null) BookChoicePanel.SetActive(false);
             DescriptionBoxHover.IdleText = DescriptionIdleText;
             if (DescriptionLabel != null) DescriptionLabel.text = DescriptionIdleText;
             if (Controller != null) Controller.OnStateChanged += Refresh;
@@ -162,6 +183,24 @@ namespace ClickerGenesis.Core
         /// click, regardless of the raw per-platform scroll-delta units the new API reports.</summary>
         private void Update()
         {
+            // While a popup covers the tree (2026-08-09, real user report - "when you scroll
+            // through the list of books... it zooms in and out of the background tree"), scroll
+            // input must stay with the popup's own ScrollRect, not fall through to the tree's
+            // zoom - and Escape should close whichever popup is open, matching every other modal
+            // in this project (a second real gap the user found - Cancel/Escape weren't closing
+            // the book-choice popup at all).
+            bool bookPopupOpen = BookChoicePanel != null && BookChoicePanel.activeSelf;
+            bool confirmPopupOpen = ConfirmPanel != null && ConfirmPanel.activeSelf;
+
+            if ((bookPopupOpen || confirmPopupOpen) && Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                if (bookPopupOpen) HideBookChoicePopup();
+                if (confirmPopupOpen) HandleConfirmNo();
+                return;
+            }
+
+            if (bookPopupOpen || confirmPopupOpen) return;
+
             if (Mouse.current == null) return;
             float scroll = Mouse.current.scroll.ReadValue().y;
             if (scroll != 0f) Zoom(Mathf.Sign(scroll) * ZoomStep);
@@ -185,6 +224,18 @@ namespace ClickerGenesis.Core
             Controller.PerformPrestige(withReset);
         }
 
+        /// <summary>Deterministic per-node "random" value in [-1, 1], seeded on the node's own id
+        /// string (2026-08-09, overall tree shape redesign) - stable across every BuildTree() call
+        /// (no persisted state needed) but effectively arbitrary from node to node, which is exactly
+        /// what an organic-looking branch wobble needs. Not cryptographic, not meant to be - just
+        /// needs to not be a straight line.</summary>
+        private static float DeterministicJitter(string nodeId)
+        {
+            int hash = nodeId.GetHashCode();
+            var rng = new System.Random(hash);
+            return (float)(rng.NextDouble() * 2.0 - 1.0);
+        }
+
         private void BuildTree()
         {
             var config = Controller.SkillTreeConfig;
@@ -200,95 +251,123 @@ namespace ClickerGenesis.Core
 
             var positions = new Dictionary<string, Vector2>();
 
-            // Central Core node, dead center (2026-08-06 hub redesign) - every branch root now
-            // requires this at rank 1, replacing the old static "Grace" text box that used to just
-            // sit there doing nothing. Sized up a bit past a normal node so it reads as the true
-            // hub, not just another skill.
+            // Core sits on the LEFT edge, everything brackets out to the right (2026-08-09 full
+            // shape redesign - real user correction: "why are we still doing this six point star
+            // thing... it doesn't have to come out of every side of the star... you could put the
+            // star in the far left side and have it branch out into different brackets"). Every
+            // branch (all 8 economy branches AND Book Progression, uniformly - no more special
+            // casing) gets its own bounded slice of a rightward-facing arc instead of a full-circle
+            // spoke. Giving Book Progression a slice of its OWN, sized and clamped exactly like
+            // every other branch, is also what fixes the real overlap bug the user found (it used
+            // to compute a single fixed angle independently of the economy branches' slots, so nothing
+            // structurally prevented it drifting into a neighboring branch's lane) - every branch now
+            // provably cannot cross into its neighbor's slice, at any radius, because the drift clamp
+            // is a fraction of that branch's own angular width.
+            Vector2 coreOffset = new Vector2(-620f, 0f);
+
             var coreNode = config.nodes.Find(n => n.id == "Core");
             if (coreNode != null)
             {
-                positions["Core"] = Vector2.zero;
-                CreateNodeVisual(coreNode, Vector2.zero, CoreColor);
+                positions["Core"] = coreOffset;
+                CreateNodeVisual(coreNode, coreOffset, CoreColor);
                 var coreGo = Content.Find("Node_Core");
                 if (coreGo != null) coreGo.GetComponent<RectTransform>().sizeDelta = new Vector2(150f, 150f);
             }
             if (HubIcon != null) HubIcon.gameObject.SetActive(false);
 
-            // Economy branches: 8 straight spokes from the hub, evenly spaced. Radius widened
-            // (2026-08-05, user's explicit "spread this out, can't read the labels" correction)
-            // so the arc length between neighboring spokes clears the ~220-wide name label at
-            // every ring, not just the outer ones.
-            var economyBranches = config.branchOrder.FindAll(b => b != "Book Progression");
-            const float economyBaseRadius = 320f;
-            const float economyRadiusStep = 210f;
-            float economyMaxRadius = economyBaseRadius + 7 * economyRadiusStep;
+            var allBranches = config.branchOrder;
+            const float arcSpan = 150f; // total degrees of the rightward-facing bracket, centered on 0 (east)
+            const float baseRadius = 300f;
+            const float radiusStep = 195f;
+            const float driftPerStep = 3.2f;
+            float sliceWidth = allBranches.Count > 0 ? arcSpan / allBranches.Count : arcSpan;
+            float maxDrift = sliceWidth * 0.38f;
 
-            for (int b = 0; b < economyBranches.Count; b++)
+            var capstonePositions = new List<Vector2>();
+
+            for (int b = 0; b < allBranches.Count; b++)
             {
-                string branchName = economyBranches[b];
+                string branchName = allBranches[b];
                 if (!byBranch.TryGetValue(branchName, out var nodes)) continue;
 
-                float branchAngle = (360f / economyBranches.Count) * b;
-                Color color = BranchColors[b % BranchColors.Length];
+                float branchAngle = -arcSpan / 2f + sliceWidth * (b + 0.5f);
+                Color color = branchName == "Book Progression" ? BranchColors[BranchColors.Length - 1] : BranchColors[b % BranchColors.Length];
+                float drift = 0f;
 
                 for (int i = 0; i < nodes.Count; i++)
                 {
                     var node = nodes[i];
-                    float radius = economyBaseRadius + i * economyRadiusStep;
-                    Vector2 pos = new Vector2(Mathf.Cos(branchAngle * Mathf.Deg2Rad), Mathf.Sin(branchAngle * Mathf.Deg2Rad)) * radius;
+                    drift = Mathf.Clamp(drift + DeterministicJitter(node.id) * driftPerStep, -maxDrift, maxDrift);
+                    float angle = branchAngle + drift;
+                    float radius = baseRadius + i * radiusStep;
+                    Vector2 pos = coreOffset + new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * radius;
                     positions[node.id] = pos;
                     CreateNodeVisual(node, pos, color);
+                    if (node.isCapstone && branchName != "Book Progression") capstonePositions.Add(pos);
                 }
             }
 
-            // Book Progression: a full outer ring encircling the whole economy wheel instead of
-            // the old "angle += i*3f" spiral-drift hack, which read as an ugly curving branch and
-            // crammed 41 nodes' labels into overlapping space. One node per remaining OT book +
-            // 3 NT gate nodes, spread evenly across the full 360 degrees in canonical order and
-            // connected node-to-node (existing prerequisite-line code below draws the chain
-            // automatically) - the ring sits entirely outside the economy spokes' reach, framing
-            // them the way a wheel's rim frames its spokes. Gap tightened 380->120 (2026-08-06,
-            // real user report: "no one's gonna scroll around looking for those books" - the ring
-            // sat too far from everything else at the wide gap. Deliberately kept the ring shape
-            // rather than reverting to a literal spiral - that's the exact layout bug #47 replaced
-            // this with in the first place ("curves up to the right and then to the left... can't
-            // even read the descriptions"), and a spiral tight enough to sit close to center would
-            // reproduce that same overlap problem. A tighter ring solves the same "too far away"
-            // complaint without bringing back the one it fixed - flagged for the user to weigh in
-            // on if they specifically want the interleaved-spiral behavior instead.
-            if (byBranch.TryGetValue("Book Progression", out var bookNodes))
+            // Convergence (2026-08-09, "bracket" redesign - real user drawing: several branches
+            // merge into a single node, which then re-splits into a further set of nodes gated on
+            // having unlocked a book). Positioned at the average of every economy branch's capstone
+            // position - a real visual "these lines all meet here" point, not an arbitrary spot.
+            // Convergence itself sat completely unplaced before this (a real latent bug - its
+            // branch is "Core", which was never one of the arc-loop's branches above).
+            Vector2 convergencePos = coreOffset + Vector2.right * (baseRadius + 8 * radiusStep);
+            if (capstonePositions.Count > 0)
             {
-                float bookRingRadius = economyMaxRadius + 120f;
-                Color bookColor = BranchColors[BranchColors.Length - 1];
+                Vector2 sum = Vector2.zero;
+                foreach (var p in capstonePositions) sum += p;
+                convergencePos = sum / capstonePositions.Count;
+            }
+            var convergenceNode = config.nodes.Find(n => n.id == "Convergence");
+            if (convergenceNode != null)
+            {
+                positions["Convergence"] = convergencePos;
+                CreateNodeVisual(convergenceNode, convergencePos, CoreColor);
+            }
 
-                // Half-spoke phase offset (2026-08-06 fix) - without this, the ring's first node
-                // (Exodus) landed at angle 0, exactly along the Ink Flow spoke's own radial line,
-                // so the Core->Exodus connector visually overlapped Ink Flow's entire spoke and
-                // read as "Ink Flow unlocks Exodus" (real user report). Offsetting by half the
-                // spoke spacing (22.5 degrees for 8 economy branches) keeps every book node's
-                // radial line clear of every economy spoke's line.
-                float phaseOffset = economyBranches.Count > 0 ? (360f / economyBranches.Count) / 2f : 0f;
+            // Book Mastery: one node per OT book, all requiring Convergence - fanned out from
+            // Convergence's own position in a single ring (not a growing chain, since every Mastery
+            // node is an independent rank-1 leaf with the same prerequisite) rather than from Core.
+            // This is the literal "re-split after the merge point" half of the bracket.
+            if (byBranch.TryGetValue("Book Mastery", out var masteryNodes))
+            {
+                const float masteryArcSpan = 130f;
+                const float masteryRadius = 260f;
+                float masterySlice = masteryNodes.Count > 0 ? masteryArcSpan / masteryNodes.Count : masteryArcSpan;
+                float masteryMaxDrift = masterySlice * 0.4f;
+                Color masteryColor = new Color(0.6f, 0.35f, 0.65f);
 
-                for (int i = 0; i < bookNodes.Count; i++)
+                for (int i = 0; i < masteryNodes.Count; i++)
                 {
-                    var node = bookNodes[i];
-                    float angle = (360f / bookNodes.Count) * i + phaseOffset;
-                    Vector2 pos = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * bookRingRadius;
+                    var node = masteryNodes[i];
+                    float baseAngle = -masteryArcSpan / 2f + masterySlice * (i + 0.5f);
+                    float angle = baseAngle + DeterministicJitter(node.id) * masteryMaxDrift;
+                    Vector2 pos = convergencePos + new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad)) * masteryRadius;
                     positions[node.id] = pos;
-                    CreateNodeVisual(node, pos, bookColor);
+                    CreateNodeVisual(node, pos, masteryColor);
                 }
             }
 
             // Connecting lines, drawn after every node has a known position (a node's prerequisite
             // may be defined earlier or later in config.nodes than the node itself, in theory).
+            // One line per prerequisite (2026-08-08) - a multi-prerequisite node like Convergence
+            // draws a line from every one of its required nodes, visualizing the full dependency
+            // set rather than just a single chain step.
             foreach (var node in config.nodes)
             {
-                if (string.IsNullOrEmpty(node.prerequisiteId)) continue;
+                if (node.prerequisites == null || node.prerequisites.Count == 0) continue;
                 if (!positions.TryGetValue(node.id, out var to)) continue;
-                if (!positions.TryGetValue(node.prerequisiteId, out var from)) continue;
-                var line = CreateLine(from, to);
                 var nv = nodeVisuals.Find(x => x.Node.id == node.id);
-                if (nv != null) nv.IncomingLine = line;
+                if (nv == null) continue;
+
+                foreach (var prereq in node.prerequisites)
+                {
+                    if (!positions.TryGetValue(prereq.nodeId, out var from)) continue;
+                    var line = CreateLine(from, to);
+                    if (line != null) nv.IncomingLines.Add(line);
+                }
             }
 
             // Progressive visibility (2026-08-06, user's explicit design ask): hide every node
@@ -310,7 +389,8 @@ namespace ClickerGenesis.Core
             {
                 bool revealed = Controller.Skills.PrerequisiteSatisfied(v.Node);
                 if (v.Button.gameObject.activeSelf != revealed) v.Button.gameObject.SetActive(revealed);
-                if (v.IncomingLine != null && v.IncomingLine.activeSelf != revealed) v.IncomingLine.SetActive(revealed);
+                foreach (var line in v.IncomingLines)
+                    if (line != null && line.activeSelf != revealed) line.SetActive(revealed);
             }
         }
 
@@ -327,18 +407,36 @@ namespace ClickerGenesis.Core
 
             var circle = go.GetComponent<Image>();
             circle.color = color;
+            // Distinct shape per node category (2026-08-08 redesign) - Circle for a normal chain
+            // step, Hexagon for branch capstones, Star for Core, Diamond for Book Progression,
+            // Triangle for Convergence. Procedurally generated, no new art assets needed.
+            circle.sprite = NodeShapeSprites.Get(node.shape);
+            circle.type = Image.Type.Simple;
 
-            // Owned-glow ring (2026-08-06) - a real Outline component instead of a new sprite
-            // asset, so "this is active" is visible at a glance regardless of how the background
-            // renders. Starts disabled; Refresh() turns it on once rank > 0.
-            var glow = go.AddComponent<Outline>();
-            glow.effectColor = new Color(1f, 0.95f, 0.55f, 0.95f);
-            glow.effectDistance = new Vector2(5f, 5f);
-            glow.useGraphicAlpha = false;
-            glow.enabled = false;
+            // Owned-glow (2026-08-06, reworked 2026-08-08) - a same-shape Image sized up and
+            // tinted gold, sitting BEHIND the node circle, toggled on once rank > 0. Replaced the
+            // old UnityEngine.UI.Outline approach, which duplicates the graphic via offset copies -
+            // on the new non-circular node shapes that read as a visibly doubled/ghosted second
+            // star/diamond/hexagon rather than a clean glow.
+            var glowGo = new GameObject("OwnedGlow", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+            glowGo.transform.SetParent(go.transform, false);
+            var glowRt = glowGo.GetComponent<RectTransform>();
+            glowRt.anchorMin = new Vector2(0.5f, 0.5f);
+            glowRt.anchorMax = new Vector2(0.5f, 0.5f);
+            glowRt.sizeDelta = new Vector2(size + 22f, size + 22f);
+            glowRt.anchoredPosition = Vector2.zero;
+            var glowImg = glowGo.GetComponent<Image>();
+            glowImg.sprite = NodeShapeSprites.Get(node.shape);
+            glowImg.type = Image.Type.Simple;
+            glowImg.color = new Color(1f, 0.92f, 0.5f, 0.85f);
+            glowGo.transform.SetAsFirstSibling(); // behind the node's own circle
+            glowGo.SetActive(false);
 
             Image iconImgRef = null;
-            var icon = LookupIcon(node.branch);
+            // Core's shape IS a star now (2026-08-08) - a separate star icon on top of it just
+            // doubles up visually ("overlaid with multiple stars", real user report). Skip the
+            // icon overlay entirely for Core; every other branch still gets its icon as before.
+            var icon = node.id == "Core" ? null : LookupIcon(node.branch);
             if (icon != null)
             {
                 var iconGo = new GameObject("Icon", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
@@ -359,8 +457,12 @@ namespace ClickerGenesis.Core
                 iconImgRef = iconImg;
             }
 
+            // No floating name/status text under nodes anymore (2026-08-08, user's explicit ask -
+            // "any text we originally had underneath each of the icons, we don't even have to do
+            // that anymore because we have the description box on the top... we can get rid of the
+            // floating text"). The DescriptionBox hover already shows the full name/status/cost.
             var nameLabel = go.transform.Find("NameLabel")?.GetComponent<TMP_Text>();
-            if (nameLabel != null) nameLabel.text = node.displayName;
+            if (nameLabel != null) nameLabel.gameObject.SetActive(false);
 
             var rankLabel = go.transform.Find("RankLabel")?.GetComponent<TMP_Text>();
             if (rankLabel != null) rankLabel.gameObject.SetActive(node.maxRank > 1);
@@ -379,7 +481,7 @@ namespace ClickerGenesis.Core
                 NameLabel = nameLabel,
                 RankLabel = rankLabel,
                 Hover = hover,
-                OwnedGlow = glow,
+                OwnedGlow = glowGo,
             });
         }
 
@@ -397,21 +499,61 @@ namespace ClickerGenesis.Core
             return hover;
         }
 
+        /// <summary>A generic "Unlock New Book" Book Progression slot (2026-08-09) - true when the
+        /// node's effect is BookUnlock but it has no static book baked in, meaning the player picks
+        /// which book it grants at purchase time via the book-choice popup rather than the normal
+        /// Yes/No confirm. The 3-node New Testament gate cluster stays a static group-unlock and is
+        /// NOT generic, even though it shares the same effect type.</summary>
+        private static bool IsGenericBookSlot(PrestigeSkillNode node) =>
+            node.effectType == SkillEffectType.BookUnlock && string.IsNullOrEmpty(node.unlockBookResourceId);
+
         /// <summary>Description text PLUS its live Grace cost (2026-08-05, real bug fix - hovering
         /// a node used to only say what it does, never what it costs). Shows "MAXED" once every
         /// rank is bought instead of a cost that can never be paid again.</summary>
         private string DescribeNode(PrestigeSkillNode node)
         {
-            if (Controller?.Skills == null) return node.description;
-            if (Controller.Skills.IsMaxed(node)) return $"{node.description}\nMAXED";
+            if (Controller?.Skills == null) return $"{node.displayName}\n{node.description}";
+
+            // Node name leads every description now that there's no floating label under the icon
+            // (2026-08-08) - the hover box is the only place a node's name/status appears at all.
+            string header = node.displayName;
+
+            // A spent generic slot shows what the player actually chose (2026-08-09) instead of
+            // "MAXED" alone, which would otherwise say nothing about the real outcome of the
+            // purchase - the whole point of the choice was picking a specific book.
+            if (IsGenericBookSlot(node) && Controller.Skills.GetRank(node.id) > 0)
+            {
+                string chosenId = Controller.Skills.GetChosenBook(node.id);
+                string chosenName = string.IsNullOrEmpty(chosenId) ? "(unknown)" : ClickerGenesis.Data.CanonicalBookOrder.DisplayNameOf(chosenId);
+                return $"{header}\nUnlocked: {chosenName}";
+            }
+
+            if (Controller.Skills.IsMaxed(node)) return $"{header}\n{node.description}\nMAXED";
+
+            bool hasReset = Controller.Prestige != null && Controller.Prestige.ResetPrestigeCount > 0;
+            if (node.requiresResetPrestige && !hasReset)
+                return $"{header}\n{node.description}\n(Requires Reset)";
+
+            // Book Mastery nodes (2026-08-09) - show which book is still needed, same "tell the
+            // player what's blocking them" spirit as the Reset gate above.
+            if (!string.IsNullOrEmpty(node.requiresBookResourceId) && !Controller.Skills.IsBookUnlocked(node.requiresBookResourceId))
+            {
+                string neededName = ClickerGenesis.Data.CanonicalBookOrder.DisplayNameOf(node.requiresBookResourceId);
+                return $"{header}\n{node.description}\n(Requires {neededName} unlocked)";
+            }
+
             double cost = Controller.Skills.GetNextCost(node);
-            return $"{node.description}\nCost: {NumberFormatter.FormatWhole(cost)} Grace";
+            return $"{header}\n{node.description}\nCost: {NumberFormatter.FormatWhole(cost)} Grace";
         }
 
         /// <summary>Buying is no longer instant-on-click (2026-08-05, user's explicit ask) - shows
-        /// the cost and waits for Yes/No instead of spending Grace the moment a node is tapped.</summary>
+        /// the cost and waits for Yes/No instead of spending Grace the moment a node is tapped. A
+        /// generic Book Progression slot (2026-08-09) routes to the book-choice popup instead of
+        /// the normal Yes/No confirm - picking a book there both confirms AND spends Grace in one
+        /// step (BuySkillWithBookChoice), so there's no separate confirm step for these.</summary>
         private void ShowConfirmPurchase(PrestigeSkillNode node)
         {
+            if (IsGenericBookSlot(node)) { ShowBookChoicePopup(node); return; }
             if (ConfirmPanel == null) { Controller.BuySkill(node.id); return; }
 
             pendingPurchaseNode = node;
@@ -433,6 +575,66 @@ namespace ClickerGenesis.Core
         {
             pendingPurchaseNode = null;
             if (ConfirmPanel != null) ConfirmPanel.SetActive(false);
+        }
+
+        /// <summary>Lists every OT book the player hasn't unlocked yet (excluding their own starting
+        /// book) as a clickable row - clicking one immediately buys the slot AND assigns that book
+        /// in one action (2026-08-09). Rows are rebuilt fresh each time the popup opens rather than
+        /// built once and toggled, since which books are still locked changes as the player buys
+        /// more slots - this list is small (at most 38 rows) and only rebuilds on a deliberate user
+        /// action (opening the popup), not every frame, so it doesn't risk the bug #22 class of
+        /// per-frame-rebuild lag.</summary>
+        private void ShowBookChoicePopup(PrestigeSkillNode node)
+        {
+            if (BookChoicePanel == null || BookChoiceContent == null || BookChoiceRowTemplate == null)
+            {
+                // No popup UI wired (shouldn't happen once the scene is built) - fall back to
+                // failing closed rather than silently buying an unassigned slot.
+                return;
+            }
+
+            pendingBookChoiceNode = node;
+
+            foreach (var row in bookChoiceRows) Destroy(row);
+            bookChoiceRows.Clear();
+
+            double cost = Controller.Skills.GetNextCost(node);
+            if (BookChoiceTitleLabel != null)
+                BookChoiceTitleLabel.text = $"Unlock New Book - choose one ({NumberFormatter.FormatWhole(cost)} Grace):";
+
+            foreach (var (resourceId, displayName) in Controller.AllBooksInOrder)
+            {
+                if (resourceId == Controller.StartingBookResourceId) continue;
+                if (Controller.Skills.IsBookUnlocked(resourceId)) continue;
+
+                var rowGo = Instantiate(BookChoiceRowTemplate, BookChoiceContent);
+                rowGo.SetActive(true);
+                rowGo.name = "BookChoiceRow_" + resourceId;
+
+                var label = rowGo.GetComponentInChildren<TMP_Text>();
+                if (label != null) label.text = displayName;
+
+                var button = rowGo.GetComponent<Button>();
+                string capturedId = resourceId;
+                if (button != null) button.onClick.AddListener(() => HandleBookChosen(capturedId));
+
+                bookChoiceRows.Add(rowGo);
+            }
+
+            BookChoicePanel.SetActive(true);
+        }
+
+        private void HandleBookChosen(string bookResourceId)
+        {
+            if (pendingBookChoiceNode != null)
+                Controller.BuySkillWithBookChoice(pendingBookChoiceNode.id, bookResourceId);
+            HideBookChoicePopup();
+        }
+
+        private void HideBookChoicePopup()
+        {
+            pendingBookChoiceNode = null;
+            if (BookChoicePanel != null) BookChoicePanel.SetActive(false);
         }
 
         private GameObject CreateLine(Vector2 from, Vector2 to)
@@ -528,21 +730,10 @@ namespace ClickerGenesis.Core
                 // Owned glow is its own distinct signal from the brightness step above - "lit up"
                 // alone already meant "affordable or owned" before this, which didn't distinguish
                 // "you could buy this" from "you already did" (2026-08-06 user ask).
-                if (v.OwnedGlow != null) v.OwnedGlow.enabled = rank > 0;
+                if (v.OwnedGlow != null && v.OwnedGlow.activeSelf != rank > 0) v.OwnedGlow.SetActive(rank > 0);
 
                 if (v.RankLabel != null && node.maxRank > 1)
                     v.RankLabel.text = $"{rank}/{node.maxRank}";
-
-                if (v.NameLabel != null)
-                {
-                    // Reset-gated nodes get their own label (2026-08-06) instead of a generic
-                    // "(Locked)" - a player who's already maxed the prerequisite chain needs to
-                    // know THIS is why they still can't buy it, not just that something's missing.
-                    string suffix = maxed ? " (Max)"
-                        : (node.requiresResetPrestige && !hasReset) ? " (Requires Reset)"
-                        : !unlocked ? " (Locked)" : "";
-                    v.NameLabel.text = node.displayName + suffix;
-                }
 
                 if (v.Hover != null) v.Hover.Text = DescribeNode(node);
             }

@@ -1,0 +1,53 @@
+{
+  "book": "Prayer of Manasseh",
+  "translation": "Ethiopian",
+  "canonicalOrder": 15,
+  "status": "Drafted by direct reading of the real extracted Ethiopian-translation verse text (single chapter, single verse) — no multi-agent workflow was needed given the book's length; content and structure verified directly against the source JSON before drafting.",
+  "notes": "This is the shortest book indexed so far: one chapter, one verse, the entire text being a first-person penitential prayer with no narrative action, no other speaking characters, and no genealogical or chronological content of its own. The prayer's title (per the source file's bookName) attributes it to Manasseh, but the prayer's own words never state a name, royal title, or historical situation — it is pure address-and-confession (\"O Lord, Almighty God of our fathers, Abraham, Isaac, and Jacob... I have sinned above the number of the sands of the sea... I am bowed down with many iron bands\"). The traditional identification of the speaker as King Manasseh of Judah rests on 2 Chronicles 33:11-13,18-19 (KJV/Ethiopian OT, already indexed separately), which describes Manasseh being carried captive to Babylon, praying there, being restored, and that record of \"his prayer\" existing in a now-lost source — this book presents itself as that prayer. Per the naming/attribution discipline used elsewhere in this index, that external identification is noted as tradition/title-based, not asserted as something the prayer text itself states. Real content/canon note: this book does not appear in the standard 66-book KJV canon at all — it is unique to the Ethiopian translation's (and some other traditions') broader canon, consistent with this book's deuterocanonical status. No naming collisions apply (only one Manasseh referenced). Abraham, Isaac, and Jacob are invoked once, collectively, purely as a form of address and as a point of moral contrast (\"the just,\" who unlike Manasseh have not sinned) — they take no action in this text, so per the \"don't invent individuals for undifferentiated groups\" rule they are logged in genealogyLists as a bulk reference rather than given submanager entries; they are already fully indexed elsewhere in the Genesis Character Index. Structure: one Person-type scribe tier only, since the entire book is a single unbroken confession by one voice.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Iron Bands",
+      "managerId": "manasseh_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "manasseh_ethiopian",
+      "name": "Manasseh",
+      "role": "manager",
+      "scribeTier": "Iron Bands",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Hezekiah, King of Judah (per 2 Kings 21:1 / 2 Chronicles 33:1, KJV/Ethiopian Character Index — not named within this prayer text itself)",
+        "mother": "Hephzibah (per 2 Kings 21:1, KJV Character Index — not named within this prayer text itself)",
+        "spouses": [],
+        "children": [
+          "Amon, King of Judah (per 2 Kings 21:18, KJV Character Index — not named within this prayer text itself)"
+        ]
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Prayer of Manasseh 1:1",
+          "note": "The entire text of the book: a single unbroken penitential prayer addressed to 'the Almighty God of our fathers, Abraham, Isaac, and Jacob,' praising God as maker of heaven and earth who bound the sea and sealed the deep by His name; confessing sins 'above the number of the sands of the sea,' describing the speaker as 'bowed down with many iron bands' and unable to lift his head; contrasting himself with the righteous patriarchs who never needed repentance; pleading 'I have sinned, O Lord, I have sinned' and begging not to be destroyed or condemned; and closing with a vow to praise God forever if shown mercy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This prayer does not appear in the standard 66-book KJV canon — it is included in the Ethiopian Orthodox Tewahedo Bible (and as an appendix/apocryphal text in some other traditions) as a prayer traditionally associated with King Manasseh of Judah's repentance.",
+        "2 Chronicles 33:11-13 (already indexed in the KJV/Ethiopian Old Testament Character Index) describes Manasseh being carried captive to Babylon in fetters, praying to God there, and being restored to his kingdom afterward — this short book presents itself as the text of that prayer, though the prayer's own words never state the speaker's name, royal identity, or circumstances directly; that connection comes from the book's title/traditional placement, not from anything stated in the verse itself."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "patriarchs_invoked": {
+      "ref": "Prayer of Manasseh 1:1",
+      "note": "Abraham, Isaac, and Jacob are invoked once by name, collectively, as 'the God of our fathers' and again as righteous men who — unlike the speaker — never needed repentance. They take no action in this text and are already fully indexed in the Genesis Character Index (KJV and other translations); not re-indexed here since the group is undifferentiated in this text and no individual scene is given to any one of them."
+    }
+  }
+}

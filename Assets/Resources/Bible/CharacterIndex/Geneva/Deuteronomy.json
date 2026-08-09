@@ -1,0 +1,323 @@
+{
+  "book": "Deuteronomy",
+  "translation": "Geneva",
+  "canonicalOrder": 5,
+  "status": "drafted via multi-agent workflow grounded in the real extracted Geneva (1560) verse text, adversarially fact-checked and corrected",
+  "notes": "Read in full from Assets/Resources/Verses/Geneva/deuteronomy_5.json (all 34 chapters). Structurally and narratively this book matches the already-indexed KJV Deuteronomy almost exactly - no content/canon divergence of the kind found in the Ethiopian Ezra (this translation's Deuteronomy is the same 34-chapter Masoretic text KJV uses, same law/discourse content, same closing sequence of the Song of Moses, the Blessing of the Tribes, and Moses' death on Nebo). The tier structure below is therefore deliberately close to the KJV file's shape, since the book's own actual purpose (Moses' farewell restatement of the covenant to the generation that will cross into Canaan) hasn't changed - only the translation's wording has. Differences worth flagging are textual/orthographic, not structural: Geneva's distinctive 1560 spelling throughout ('Iorden' for Jordan, 'Iaakob'/'Iaacob' for Jacob, 'Izhak' for Isaac, 'Ioseph' for Joseph, 'Ebrewe'/'Ebrewesse' for Hebrew/Hebrewess in the ch.15 bondservant law, 'naule' for the awl used to pierce a servant's ear in 15:17). One real feature of this translation's own text worth noting: at 32:44, in the very verse introducing the Song of Moses being spoken aloud, the text itself reads 'Moses came and spake all ye words of this song... he and Hoshea the sonne of Nun' - using Joshua's earlier birth-name 'Hoshea' (cf. Numbers 13:16) rather than 'Ioshua' as everywhere else in this book. This is the same person (not a naming collision) but is flagged per the project's naming-discipline rule since it's a genuine textual variant within this translation's own wording, not an invented cross-reference. Genealogy fields for figures whose full ancestry isn't tracked within this Deuteronomy-only file (Amram, Jochebed, Zipporah, Aaron, etc.) are given as unindexed-reference strings rather than ids, since this file doesn't itself carry Exodus/Numbers character data. Simeon is again the one tribe left out of Moses' closing blessing in ch.33, matching KJV - a real textual gap the Geneva text does not explain, likely echoing Jacob's own rebuke of Simeon and Levi in Genesis 49:5-7.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Unworn Sandal",
+      "managerId": "wilderness_lessons_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Two Tables of Stone",
+      "managerId": "ten_commandements_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Doorpost Scroll",
+      "managerId": "the_shema_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Boundary Stone",
+      "managerId": "laws_for_the_land_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Twin Mountains",
+      "managerId": "covenant_ceremony_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Witness Song",
+      "managerId": "song_of_moses_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Tribal Blessing Scroll",
+      "managerId": "blessing_of_tribes_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Mount Nebo",
+      "managerId": "moses_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "wilderness_lessons_geneva",
+      "name": "Lessons from the Wilderness",
+      "role": "law",
+      "scribeTier": "Unworn Sandal",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Moses' historical recap of the forty wilderness years, given so the new generation learns from their parents' failures rather than repeating them - the refusal to enter at Kadesh-barnea, the defeats of Sihon and Og, and the golden-calf rebellion at Horeb are all retold directly to the people who did not personally live through most of them.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 1:19-46",
+          "note": "Retells the twelve spies and Israel's refusal, at Kadesh-barnea, to go up and possess the land; only Caleb is spared the generation's judgment"
+        },
+        {
+          "ref": "Deuteronomy 2:1-3:11",
+          "note": "Retells the journey around Edom, Moab and Ammon, and the defeats of Sihon king of Heshbon and Og king of Bashan, 'the remnant of the gyants'"
+        },
+        {
+          "ref": "Deuteronomy 8:2-5",
+          "note": "'Thy raiment waxed not olde vpon thee, neither did thy foote swell those fourtie yeeres'"
+        },
+        {
+          "ref": "Deuteronomy 9:7-21",
+          "note": "Retells the golden calf at Horeb, Moses' forty-day fast, and his intercession for Aaron - 'ye haue bene rebellious vnto the Lord, since the day that I knewe you'"
+        },
+        {
+          "ref": "Deuteronomy 4:41-43",
+          "note": "Moses sets apart the first three cities of refuge east of Jordan - Bezer, Ramoth in Gilead, and Golan in Bashan"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ten_commandements_geneva",
+      "name": "The Ten Commandements Restated",
+      "role": "law",
+      "scribeTier": "Two Tables of Stone",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Re-given in full to the generation that was not present at Sinai/Horeb, explicitly framed by Moses as their own covenant, not merely an inherited one: 'The Lord made not this couenant with our fathers onely, but with vs, euen with vs all here aliue this day' (5:3).",
+      "verses": [
+        {
+          "ref": "Deuteronomy 5:6-21",
+          "note": "The Ten Commandements restated word for word to the new generation"
+        },
+        {
+          "ref": "Deuteronomy 5:22-27",
+          "note": "The people, having heard the voice from the fire, ask Moses to stand between them and the Lord from then on, fearing they will die if they hear God's voice again"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells the commandments' heading 'the ten commandements' with an extra 'e' - one of many spelling quirks distinguishing this 1560 translation's typesetting from later KJV printings."
+      ]
+    },
+    {
+      "id": "the_shema_geneva",
+      "name": "The Shema",
+      "role": "law",
+      "scribeTier": "Doorpost Scroll",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "'Heare, O Israel, The Lord our God is Lord onely' - the single confession underlying every other law in the book, meant to be bound into daily life (taught to children, spoken at home and on the road, tied to hand and forehead, written on doorposts) rather than heard once and forgotten.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 6:4-9",
+          "note": "The Shema itself, and the command to teach it diligently to one's children continually"
+        },
+        {
+          "ref": "Deuteronomy 11:18-21",
+          "note": "The same command repeated - bind these words as a sign on the hand and a frontlet between the eyes"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "laws_for_the_land_geneva",
+      "name": "Laws for the Land",
+      "role": "law",
+      "scribeTier": "Boundary Stone",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "The bulk of the book (chapters 12-26) - law reworked specifically for settled national life in Canaan rather than the wilderness camp: one chosen place of worship, rules anticipating a future king, courts and judges, the seven-year release of debts and Hebrew bondservants, dietary law, cities of refuge, warfare conduct, and property/landmark law.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 12:5-14",
+          "note": "Worship centralized at 'the place which the Lord your God shall chose' rather than every high place"
+        },
+        {
+          "ref": "Deuteronomy 15:1-18",
+          "note": "The seventh-year release of debts, and the freeing of an Hebrew bondman or bondwoman after six years' service, with a liberal parting reward"
+        },
+        {
+          "ref": "Deuteronomy 17:14-20",
+          "note": "Laws anticipating a future king from among the people's own brethren, who must write out and read his own copy of the Law"
+        },
+        {
+          "ref": "Deuteronomy 19:1-13",
+          "note": "Establishes three more cities of refuge once the Lord enlarges Israel's borders, six total"
+        },
+        {
+          "ref": "Deuteronomy 19:14",
+          "note": "'Thou shalt not remooue thy neighbours marke, which they of olde time haue set in thine inheritance'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "covenant_ceremony_geneva",
+      "name": "The Covenant Ceremony",
+      "role": "law",
+      "scribeTier": "Twin Mountains",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "A staged ceremony planned for the moment of entering the land - half the tribes standing on Mount Gerizim to bless, half on Mount Ebal to curse - turning the choice between obedience and disobedience into a literal, communal, physical event rather than an abstract idea, followed by an extensive list of blessings for obedience and much longer curses for disobedience.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 27:11-13",
+          "note": "Simeon, Levi, Judah, Issachar, Joseph and Benjamin to stand on Gerizim to bless; Reuben, Gad, Asher, Zebulun, Dan and Naphtali on Ebal to curse"
+        },
+        {
+          "ref": "Deuteronomy 28:1-14",
+          "note": "The blessings for obedience"
+        },
+        {
+          "ref": "Deuteronomy 28:15-68",
+          "note": "The far longer curses for disobedience, including siege, exile, and being sold again into bondage 'into Egypt againe with shippes'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "song_of_moses_geneva",
+      "name": "The Song of Moses",
+      "role": "law",
+      "scribeTier": "Witness Song",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Commanded by God to be written down and taught precisely because it will outlast Moses - 'this song shall answere them to their face as a witnesse' (31:21) after the people inevitably drift, once there is no living leader left to confront them directly.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 31:19-22",
+          "note": "God commands Moses to write the song as a witness against the people's future rebellion"
+        },
+        {
+          "ref": "Deuteronomy 32:1-43",
+          "note": "The song itself - God's faithfulness as an eagle over Jacob, Israel's coming apostasy, and God's eventual vengeance and mercy"
+        },
+        {
+          "ref": "Deuteronomy 32:44",
+          "note": "Moses speaks the song aloud to the people together with 'Hoshea the sonne of Nun' - Joshua's earlier name, used here in this one verse instead of 'Ioshua'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blessing_of_tribes_geneva",
+      "name": "The Blessing of the Tribes",
+      "role": "law",
+      "scribeTier": "Tribal Blessing Scroll",
+      "parentManagerId": null,
+      "deliveredBy": "moses_geneva",
+      "purpose": "Moses' final act before going up the mountain to die - a personal blessing for each tribe, echoing Jacob's blessing of his twelve sons back in Genesis 49 and closing the loop from the family that went down into Egypt to the nation about to enter the land.",
+      "verses": [
+        {
+          "ref": "Deuteronomy 33:6-25",
+          "note": "Blesses Reuben, Judah, Levi, Benjamin, Joseph (as Ephraim and Manasseh together), Zebulun and Issachar together, Gad, Dan, Naphtali, and Asher"
+        },
+        {
+          "ref": "Deuteronomy 33:26-29",
+          "note": "Closing praise: 'there is none like God, O righteous people... the eternall God is thy refuge'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Simeon is the one tribe left entirely out of this blessing in the Geneva text, matching every other translation of this passage - the text itself never explains the omission."
+      ]
+    },
+    {
+      "id": "moses_geneva",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Mount Nebo",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Amram (unindexed - see Exodus)",
+        "mother": "Jochebed (unindexed - see Exodus)",
+        "spouses": [
+          "Zipporah (unindexed - see Exodus)"
+        ],
+        "children": [
+          "Gershom (unindexed - see Exodus)",
+          "Eliezer (unindexed - see Exodus)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Deuteronomy 1:1-5",
+          "note": "'These bee the wordes which Moses spake vnto all Israel' - the book opens as his own personal farewell address, not third-person narration"
+        },
+        {
+          "ref": "Deuteronomy 31:1-8",
+          "note": "At 120 years old, publicly commissions Joshua as his successor before all Israel: 'I can no more goe out and in'"
+        },
+        {
+          "ref": "Deuteronomy 31:9, 24-26",
+          "note": "Writes the Law in a book and delivers it to the Levitical priests, to be placed beside the Ark of the Covenant as a witness"
+        },
+        {
+          "ref": "Deuteronomy 34:1-4",
+          "note": "Views the whole land from Mount Nebo/Pisgah but is told by the Lord he will not cross over"
+        },
+        {
+          "ref": "Deuteronomy 34:5-8",
+          "note": "Dies at 120 in the land of Moab; buried by the Lord himself in a valley 'no man knoweth of his sepulchre vnto this day'; Israel mourns him thirty days"
+        },
+        {
+          "ref": "Deuteronomy 34:10-12",
+          "note": "'There arose not a Prophet since in Israel like vnto Moses (whome the Lord knew face to face)'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Died",
+          "age": 120,
+          "ref": "Deuteronomy 34:7"
+        }
+      ],
+      "funFacts": [
+        "'His eye was not dimme, nor his naturall force abated' (34:7) - the Geneva text is explicit his death is not decline; he is simply not permitted to cross, the one lasting personal cost of striking the rock at Meribah (referenced again at 32:51)."
+      ]
+    },
+    {
+      "id": "joshua_geneva",
+      "name": "Joshua",
+      "role": "submanager",
+      "scribeTier": "Mount Nebo",
+      "parentManagerId": "moses_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Nun (unindexed - see Numbers)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Deuteronomy 31:3, 7-8, 23",
+          "note": "Publicly and privately charged by Moses (and directly by God) to lead Israel into the land: 'Be of a good courage and strong'"
+        },
+        {
+          "ref": "Deuteronomy 34:9",
+          "note": "'Full of ye spirit of wisedome: for Moses had put his hands vpon him. And the children of Israel were obedient vnto him'"
+        },
+        {
+          "ref": "Deuteronomy 32:44",
+          "note": "Named 'Hoshea the sonne of Nun' - his earlier birth-name - in the one verse recording him speaking the Song of Moses alongside Moses"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Nothing bulk/unresolved to list separately for this book - every named figure above is either fully captured or explicitly marked as an unindexed cross-reference to another book's data."
+  }
+}

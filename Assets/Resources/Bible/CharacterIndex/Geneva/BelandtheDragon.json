@@ -1,0 +1,388 @@
+{
+  "book": "Bel and the Dragon",
+  "translation": "Geneva",
+  "canonicalOrder": 49,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Bel and the Dragon is a single 42-verse chapter told as one continuous royal-court narrative with three linked episodes, not three separate stories: the exposure of the idol Bel (vv1-22), the slaying of the Babylonian dragon (vv23-32), and Daniel's six days in the lions' den with Habakkuk's miraculous delivery of food (vv33-42). Daniel and \"the king\" run through all three episodes as the two constant embodied figures, so they anchor tiers 1-2 while the three antagonist/rescuer figures each anchor their own episode-specific tier. NAMING NOTE (not a collision, a direct-antecedent identification): the text names the king \"Cyrus the Persian\" only once, in v1, immediately before Daniel is introduced living at his court in v2; every subsequent reference is simply \"the king\" with no narrative break or successor introduced in between, so this draft treats \"the king\" as Cyrus throughout on unbroken textual continuity, not on outside tradition. Astyages (v1) is mentioned only as having died (\"gathered to his fathers\") immediately before Cyrus receives the kingdom - he never appears as an active figure in this text, so he is logged only in genealogyLists, not given a character entry; the text states succession, not a stated kinship, so no father/grandfather relationship between Astyages and Cyrus is asserted here. NAMING-COLLISION FLAG (real, cross-text): \"the prophet Habakkuk\" in vv33-39 shares his name and title with the canonical prophet Habakkuk already indexed from the KJV book of Habakkuk; this Geneva apocryphal text offers no internal proof the two are the same historical figure beyond the shared name/title, and the episode (carrying pottage to reapers, lifted by his hair by an angel) is not narrated anywhere in the canonical book bearing his name - flagged rather than silently merged. Bel and the Dragon themselves are treated as full \"person\"-type manager tiers (not law/theme tiers) despite being an idol and a creature rather than humans, because both are personally embodied within the narrative - they are worshipped, \"eat,\" are examined, and are physically destroyed on-screen - matching this project's PERSONALLY EMBODIED vs PURE TRANSMISSION test for tier classification. This book has no legal/ritual instruction content at all, so no law-type tiers were used.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Ashen Footprints",
+      "managerId": "daniel_geneva_bel",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Sealed Signet",
+      "managerId": "cyrus_geneva_bel",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Idol of Clay and Brass",
+      "managerId": "bel_geneva_bel",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Pitch and Hair Lump",
+      "managerId": "dragon_geneva_bel",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Prophet's Pottage Bowl",
+      "managerId": "habakkuk_geneva_bel",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "daniel_geneva_bel",
+      "name": "Daniel",
+      "role": "manager",
+      "scribeTier": "Ashen Footprints",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:2",
+          "note": "Daniel lived with the king, and was honoured above all his friends."
+        },
+        {
+          "ref": "Bel 1:4-5",
+          "note": "Refuses to worship Bel; tells the king he honours only the living God who made heaven and earth."
+        },
+        {
+          "ref": "Bel 1:7",
+          "note": "Laughs and tells the king Bel is only clay within and brass without, and never ate or drank anything."
+        },
+        {
+          "ref": "Bel 1:9",
+          "note": "Wagers his own life against the priests' claim that Bel really devours the offerings."
+        },
+        {
+          "ref": "Bel 1:14",
+          "note": "Secretly has his servants strew ashes over the temple floor before it is sealed, to catch the priests' footprints."
+        },
+        {
+          "ref": "Bel 1:19",
+          "note": "Stops the king from entering and points out the footprints on the pavement the next morning."
+        },
+        {
+          "ref": "Bel 1:22",
+          "note": "Given power over Bel by the king; overthrows both the idol and its temple."
+        },
+        {
+          "ref": "Bel 1:25-26",
+          "note": "Declares he worships the living Lord and asks leave to kill the dragon without sword or staff."
+        },
+        {
+          "ref": "Bel 1:27",
+          "note": "Makes lumps of pitch, fat, and hair and feeds them to the dragon, which bursts apart."
+        },
+        {
+          "ref": "Bel 1:30-31",
+          "note": "Handed over by the pressured king to the mob and cast into the lions' den for six days."
+        },
+        {
+          "ref": "Bel 1:38-39",
+          "note": "Thanks God for remembering him and eats the meal miraculously delivered by Habakkuk."
+        },
+        {
+          "ref": "Bel 1:40",
+          "note": "Found alive and sitting in the den when the king comes to mourn him on the seventh day."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Survived six days in a den of seven lions unharmed, fed only by a meal miraculously delivered by the prophet Habakkuk.",
+        "Personally exposes and destroys both a false idol and a living dragon within the same single chapter."
+      ]
+    },
+    {
+      "id": "cyrus_geneva_bel",
+      "name": "Cyrus the Persian (\"the king\")",
+      "role": "manager",
+      "scribeTier": "Sealed Signet",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:1",
+          "note": "Receives the kingdom after Astyages is gathered to his fathers."
+        },
+        {
+          "ref": "Bel 1:4",
+          "note": "Honours and worships Bel daily; asks Daniel why he will not do the same."
+        },
+        {
+          "ref": "Bel 1:6",
+          "note": "Points to Bel's daily consumption of food and wine as proof he is a living god."
+        },
+        {
+          "ref": "Bel 1:8-9",
+          "note": "Grows wroth and threatens his priests with death if they cannot prove Bel eats the offerings."
+        },
+        {
+          "ref": "Bel 1:14",
+          "note": "Sets the meat before Bel himself and seals the temple door with his own signet."
+        },
+        {
+          "ref": "Bel 1:17-18",
+          "note": "Confirms the seals are whole, then cries out in false praise of Bel before the ash-trick is revealed."
+        },
+        {
+          "ref": "Bel 1:20-22",
+          "note": "Grows angry on seeing the footprints, slays the priests and their families, and delivers Bel into Daniel's power."
+        },
+        {
+          "ref": "Bel 1:24",
+          "note": "Points to the living, eating dragon and orders Daniel to worship it as a god."
+        },
+        {
+          "ref": "Bel 1:29-30",
+          "note": "Pressured by an angry mob demanding Daniel, reluctantly hands Daniel over to be cast into the lions' den."
+        },
+        {
+          "ref": "Bel 1:40-41",
+          "note": "Comes to mourn Daniel on the seventh day, finds him alive, and cries out that the Lord God of Daniel alone is great."
+        },
+        {
+          "ref": "Bel 1:42",
+          "note": "Draws Daniel out and casts those responsible for his destruction into the den in his place."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named as Cyrus the Persian only once, in the opening verse - every later reference calls him simply \"the king.\""
+      ]
+    },
+    {
+      "id": "bel_geneva_bel",
+      "name": "Bel",
+      "role": "manager",
+      "scribeTier": "Idol of Clay and Brass",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:3",
+          "note": "The Babylonians' idol; fed twelve measures of fine flour, forty sheep, and six firkins of wine daily."
+        },
+        {
+          "ref": "Bel 1:6-7",
+          "note": "The king cites Bel's apparent daily eating and drinking as proof of life; Daniel calls him clay within and brass without."
+        },
+        {
+          "ref": "Bel 1:18",
+          "note": "The king falsely praises Bel as great and deceit-free upon finding the offerings gone."
+        },
+        {
+          "ref": "Bel 1:22",
+          "note": "Exposed as a lifeless idol and overthrown along with his temple by Daniel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The idol's daily \"feast\" was secretly eaten by its own priests, who entered through a hidden door hidden under the offering table."
+      ]
+    },
+    {
+      "id": "dragon_geneva_bel",
+      "name": "The Dragon",
+      "role": "manager",
+      "scribeTier": "Pitch and Hair Lump",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:23",
+          "note": "A great dragon in the same place, worshipped by the people of Babylon."
+        },
+        {
+          "ref": "Bel 1:24",
+          "note": "The king points to it as a visibly living god, since it eats and drinks."
+        },
+        {
+          "ref": "Bel 1:26-27",
+          "note": "Daniel feeds it lumps of boiled pitch, fat, and hair; the dragon eats them and bursts apart."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Killed without sword or staff - by lumps of pitch, fat, and hair that caused it to burst asunder."
+      ]
+    },
+    {
+      "id": "habakkuk_geneva_bel",
+      "name": "Habakkuk",
+      "role": "manager",
+      "scribeTier": "Prophet's Pottage Bowl",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:33",
+          "note": "A prophet in Jewry who has made pottage and broken bread into a bowl, on his way to bring it to the reapers."
+        },
+        {
+          "ref": "Bel 1:34-35",
+          "note": "Told by the angel of the Lord to carry the dinner to Daniel in Babylon; protests he has never seen Babylon and does not know where the den is."
+        },
+        {
+          "ref": "Bel 1:36",
+          "note": "Lifted by the crown and the hair of his head by the angel and set down in Babylon over the den."
+        },
+        {
+          "ref": "Bel 1:37",
+          "note": "Calls out to Daniel to take the dinner God has sent him."
+        },
+        {
+          "ref": "Bel 1:39",
+          "note": "Set back in his own place immediately by the angel once Daniel has eaten."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Carried from Judea to Babylon and back again in a single miraculous round trip, lifted by his own hair.",
+        "Shares his name/title with the canonical prophet Habakkuk, though this episode is not narrated in the KJV book of Habakkuk - see naming-collision note above."
+      ]
+    },
+    {
+      "id": "angel_of_the_lord_geneva_bel",
+      "name": "The Angel of the Lord",
+      "role": "submanager",
+      "scribeTier": "Prophet's Pottage Bowl",
+      "parentManagerId": "habakkuk_geneva_bel",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:34",
+          "note": "Instructs Habakkuk to carry his dinner to Daniel in the lions' den at Babylon."
+        },
+        {
+          "ref": "Bel 1:36",
+          "note": "Takes Habakkuk by the crown, lifts him by the hair of his head, and sets him in Babylon over the den by the blast of his breath."
+        },
+        {
+          "ref": "Bel 1:39",
+          "note": "Returns Habakkuk to his own place immediately after Daniel eats."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "priests_of_bel_geneva_bel",
+      "name": "The Priests of Bel",
+      "role": "submanager",
+      "scribeTier": "Idol of Clay and Brass",
+      "parentManagerId": "bel_geneva_bel",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:10",
+          "note": "Numbered as seventy, beside their wives and children; accompany the king into Bel's temple."
+        },
+        {
+          "ref": "Bel 1:11-13",
+          "note": "Propose sealing the temple, then secretly enter nightly through a hidden door under the table to eat the offerings themselves."
+        },
+        {
+          "ref": "Bel 1:15",
+          "note": "Come by night with their wives and children as usual and eat and drink up everything set before Bel."
+        },
+        {
+          "ref": "Bel 1:21-22",
+          "note": "Caught by their own footprints in the ash, they reveal the secret doors and are put to death by the king along with their families."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "babylonians_geneva_bel",
+      "name": "The People of Babylon",
+      "role": "submanager",
+      "scribeTier": "Ashen Footprints",
+      "parentManagerId": "daniel_geneva_bel",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel 1:28",
+          "note": "Take great indignation on hearing Bel is pulled down, the dragon slain, and the priests killed, and conspire against the king, accusing him of \"becoming a Jew.\""
+        },
+        {
+          "ref": "Bel 1:29",
+          "note": "Demand the king deliver Daniel to them or they will destroy him and his house."
+        },
+        {
+          "ref": "Bel 1:30",
+          "note": "Press the king so hard he is constrained to hand Daniel over to them."
+        },
+        {
+          "ref": "Bel 1:42",
+          "note": "Those responsible for Daniel's intended destruction are cast into the den in his place once he is drawn out alive."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "astyages": {
+      "ref": "Bel 1:1",
+      "note": "The prior king, already \"gathered to his fathers\" before the narrative begins - never appears as an active figure. Cyrus is stated only to have received his kingdom afterward, not to be his son or kin by any relationship the text itself states, so no genealogical link is asserted here."
+    }
+  }
+}

@@ -1,0 +1,1543 @@
+{
+  "book": "1 Samuel",
+  "translation": "Geneva",
+  "canonicalOrder": 9,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read in full from Assets/Resources/Verses/Geneva/1_samuel_9.json (all 31 chapters). Structurally this Geneva 1 Samuel matches the familiar narrative arc exactly — Hannah's vow, Eli's fall, the Ark's capture/exile/return, the demand for a king, Saul's rise and rejection, David's anointing/Goliath/exile, and Saul's death at Gilboa — with no 1 Esdras-style structural surprise. Real findings from the actual text worth flagging: (1) TRIPLE naming collision on \"Abinadab\" — Abinadab of Kirjath-jearim who houses the Ark (7:1), Abinadab David's second-eldest brother (16:8, 17:13), and Abinadab a son of Saul who dies at Gilboa (31:2) — kept as three distinct ids, never merged. (2) Naming collision on \"Ahinoam\" — Ahinoam daughter of Ahimaaz, Saul's wife (14:50), vs. Ahinoam the Jezreelitess, David's wife (25:43) — two different women, kept distinct. (3) Naming collision on \"Ahimelech\" — Ahimelech the priest of Nob (ch21-22) vs. \"Ahimelech the Hittite\" (26:6), one of David's raiding companions, explicitly distinguished in-text by ethnicity, kept as separate ids. (4) Internal inconsistency, flagged rather than silently resolved: Saul's sons are named \"Jonathan, and Ishui, and Malchishua\" at 14:49 but \"Jonathan, and Abinadab, and Malchishua\" at 31:2 when they die at Gilboa — the text itself does not equate Ishui and Abinadab as the same son, so both names are preserved on Saul's genealogy with the discrepancy noted rather than guessed at. (5) Possible identity overlap not resolved by the text: Ahiah \"the son of Ahitub\" (14:3,18) and Ahimelech \"the son of Ahitub\" (22:9) share a father's name and priestly office; the text never states whether they are the same man or brothers, so both are indexed separately with the ambiguity flagged on Ahiah's entry rather than merged. (6) DATA GAP found in this specific extraction file: chapter 8 stops at verse 12 in this JSON (standard 1 Samuel 8 runs to verse 22, covering additional detail on daughters taken as cooks/bakers, tithes of fields/flocks/servants, and the people's final insistence). The \"Manner of the King\" law tier below only reflects what is actually present (vv1-12); the missing vv13-22 content is not represented and should not be assumed. (7) Apparent OCR/extraction corruption localized to chapter 22: a recurring garbled token (\"safeguard\"/\"safegua\"/\"safegu\") stands in for what context makes clearly several different original words (e.g. \"asked counsel of the Lord,\" \"set over the servants of Saul,\" \"captains over hundreds\") across vv6-15. Meaning was inferred from the well-established Doeg/Ahimelech narrative context, not invented; flagging for the verse-extraction pipeline to review upstream. (8) Consistent Geneva-specific spelling: Jesse is rendered \"Ishai\" throughout this translation (never \"Jesse\"), reflected in the character id/name below as \"Ishai (Jesse)\" for cross-translation clarity. Two full tiers not present in the existing KJV 1Samuel.json roster were added on independent judgment: Doeg the Edomite (his personal act of killing 85 priests is a real narrative turning point, not incidental to Ahimelech's story) and Nabal (removing him removes the entire reason for Abigail's intervention — the scene's outcome depends on him personally, not just as backdrop).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Hannah's Vow",
+      "managerId": "hannah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Eli's Falling Seat",
+      "managerId": "eli_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Ark's Long Exile",
+      "managerId": "abinadab_of_kirjathjearim_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Manner of the King",
+      "managerId": "manner_of_the_king_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Samuel's Horn of Oil",
+      "managerId": "samuel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Saul's Spear",
+      "managerId": "saul_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Jonathan's Bow",
+      "managerId": "jonathan_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Goliath's Brazen Helmet",
+      "managerId": "goliath_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Shepherd's Sling",
+      "managerId": "david_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Michal's Window",
+      "managerId": "michal_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Shewbread of Nob",
+      "managerId": "ahimelech_priest_of_nob_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Doeg's Reckoning",
+      "managerId": "doeg_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Ephod of Keilah",
+      "managerId": "abiathar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Nabal's Feast",
+      "managerId": "nabal_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Abigail's Provision",
+      "managerId": "abigail_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "hannah_geneva",
+      "name": "Hannah",
+      "role": "manager",
+      "scribeTier": "Hannah's Vow",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Elkanah"
+        ],
+        "children": [
+          "Samuel",
+          "three unnamed sons and two unnamed daughters born after Samuel (2:21)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:1-2",
+          "note": "Introduced as Elkanah's wife who had no children, contrasted with the fertile Peninnah."
+        },
+        {
+          "ref": "1 Samuel 1:9-11",
+          "note": "Rises after eating at Shiloh, prays in bitterness, vows: if given a son she will give him to the Lord all his days and no razor shall come on his head."
+        },
+        {
+          "ref": "1 Samuel 1:12-16",
+          "note": "Eli, seeing her lips move without sound, thinks she is drunk; she explains she is a woman troubled in spirit, pouring out her soul before the Lord."
+        },
+        {
+          "ref": "1 Samuel 1:19-20",
+          "note": "The Lord remembers her; she conceives and bears Samuel, 'because I have asked him of the Lord.'"
+        },
+        {
+          "ref": "1 Samuel 1:24-28",
+          "note": "Weans Samuel, brings him with offerings to Eli at Shiloh, and lends him to the Lord 'as long as he liveth.'"
+        },
+        {
+          "ref": "1 Samuel 2:1-10",
+          "note": "Her prayer/song exalting the Lord who kills and makes alive, brings low and exalts, and raises the poor from the dust."
+        },
+        {
+          "ref": "1 Samuel 2:19-21",
+          "note": "Brings Samuel a little coat yearly; Eli blesses Elkanah and her, and the Lord visits her with three more sons and two daughters."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her prayer in 2:1-10 is widely noted by later readers as a structural template echoed by Mary's Magnificat in Luke — a connection outside 1 Samuel itself, not asserted here as textual."
+      ]
+    },
+    {
+      "id": "elkanah_geneva",
+      "name": "Elkanah",
+      "role": "submanager",
+      "scribeTier": "Hannah's Vow",
+      "parentManagerId": "hannah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jeroham",
+        "mother": null,
+        "spouses": [
+          "Hannah",
+          "Peninnah"
+        ],
+        "children": [
+          "Samuel",
+          "three unnamed sons and two unnamed daughters (via Hannah, 2:21)",
+          "unnamed sons and daughters (via Peninnah, 1:4)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:1",
+          "note": "Genealogy given: son of Jeroham, son of Elihu, son of Tohu, son of Zuph, an Ephrathite."
+        },
+        {
+          "ref": "1 Samuel 1:4-5",
+          "note": "Gives Peninnah and her children portions but gives Hannah 'a worthy portion,' for he loved her though the Lord had made her barren."
+        },
+        {
+          "ref": "1 Samuel 1:8",
+          "note": "Comforts weeping Hannah: 'am not I better to thee than ten sons?'"
+        },
+        {
+          "ref": "1 Samuel 1:21-23",
+          "note": "Agrees to let Hannah stay home from the yearly sacrifice until Samuel is weaned: 'only the Lord accomplish his word.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "peninnah_geneva",
+      "name": "Peninnah",
+      "role": "submanager",
+      "scribeTier": "Hannah's Vow",
+      "parentManagerId": "hannah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Elkanah"
+        ],
+        "children": [
+          "unnamed sons and daughters (1:4)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:2",
+          "note": "Elkanah's other wife; had children while Hannah had none."
+        },
+        {
+          "ref": "1 Samuel 1:6-7",
+          "note": "Called Hannah's 'adversary'; provokes her sore, year by year, over her barrenness, until she weeps and will not eat."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eli_geneva",
+      "name": "Eli",
+      "role": "manager",
+      "scribeTier": "Eli's Falling Seat",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Hophni",
+          "Phinehas"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:3,9",
+          "note": "Priest of the Lord at Shiloh, alongside his two sons Hophni and Phinehas; sits on a stool by the temple post."
+        },
+        {
+          "ref": "1 Samuel 1:12-17",
+          "note": "Mistakes praying Hannah for drunk, then blesses her petition once she explains herself."
+        },
+        {
+          "ref": "1 Samuel 2:22-25",
+          "note": "Hears reports of his sons' wickedness and rebukes them mildly; 'they hearkened not... because the Lord would slay them.'"
+        },
+        {
+          "ref": "1 Samuel 2:27-36",
+          "note": "An unnamed man of God warns him that his house will be judged, gives a sign that Hophni and Phinehas will die the same day, and promises a faithful priest raised up in their place."
+        },
+        {
+          "ref": "1 Samuel 3:2,3:15-18",
+          "note": "His eyes grow dim; presses young Samuel to reveal a fearful night vision and responds, 'It is the Lord: let him do what seemeth him good.'"
+        },
+        {
+          "ref": "1 Samuel 4:13-18",
+          "note": "Waits by the wayside for news of the Ark; falls backward from his seat and breaks his neck on hearing it is taken, dying at 98 after judging Israel 40 years."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "1 Samuel 4:15,18",
+          "note": "Ninety-eight years old and dim-sighted at his death; had judged Israel forty years."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "hophni_and_phinehas_geneva",
+      "name": "Hophni and Phinehas",
+      "role": "submanager",
+      "scribeTier": "Eli's Falling Seat",
+      "parentManagerId": "eli_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Eli",
+        "mother": null,
+        "spouses": [
+          "unnamed wife of Phinehas (4:19)"
+        ],
+        "children": [
+          "Ichabod (son of Phinehas, 4:21)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:3",
+          "note": "Sons of Eli, priests of the Lord at Shiloh — always named and acting together in the text, never differentiated individually."
+        },
+        {
+          "ref": "1 Samuel 2:12-17",
+          "note": "'Wicked men' who abuse the priest's portion by force, taking raw flesh before the fat is burnt; 'the sin of the young men was very great before the Lord.'"
+        },
+        {
+          "ref": "1 Samuel 2:22",
+          "note": "Lie with the women that assemble at the door of the tabernacle."
+        },
+        {
+          "ref": "1 Samuel 4:4,4:11",
+          "note": "Carry the Ark of the covenant into battle at Aphek; both die the same day, fulfilling the sign given to Eli."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Note: this Phinehas, son of Eli, is a different person from Phinehas son of Eleazar (Aaron's grandson) elsewhere in the Old Testament — flagged for cross-book clarity, not a collision within this book."
+      ]
+    },
+    {
+      "id": "phinehass_wife_geneva",
+      "name": "Phinehas's Wife",
+      "role": "submanager",
+      "scribeTier": "Eli's Falling Seat",
+      "parentManagerId": "eli_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Phinehas"
+        ],
+        "children": [
+          "Ichabod"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 4:19-22",
+          "note": "Near her delivery, hears that the Ark is taken and that her father-in-law Eli and husband Phinehas are both dead; travails and dies, naming her son Ichabod ('the glory is departed from Israel') before her death."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text; identified only by relation, per the project's rule against inventing names the text does not give."
+      ]
+    },
+    {
+      "id": "abinadab_of_kirjathjearim_geneva",
+      "name": "Abinadab of Kirjath-jearim",
+      "role": "manager",
+      "scribeTier": "The Ark's Long Exile",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Eleazar"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 7:1-2",
+          "note": "Men of Kirjath-jearim bring the recovered Ark into his house on the hill, where it remains twenty years while all Israel laments after the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION flagged: this is a different Abinadab from David's brother (16:8) and from Saul's son who dies at Gilboa (31:2) — three distinct men sharing this name in the same book."
+      ]
+    },
+    {
+      "id": "eleazar_son_of_abinadab_geneva",
+      "name": "Eleazar son of Abinadab",
+      "role": "submanager",
+      "scribeTier": "The Ark's Long Exile",
+      "parentManagerId": "abinadab_of_kirjathjearim_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Abinadab of Kirjath-jearim",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 7:1",
+          "note": "Sanctified by his father's household to keep the Ark of the Lord through its twenty years at Kirjath-jearim."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lords_of_the_philistines_geneva",
+      "name": "The Lords of the Philistines",
+      "role": "submanager",
+      "scribeTier": "The Ark's Long Exile",
+      "parentManagerId": "abinadab_of_kirjathjearim_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 5:1-5",
+          "note": "Set the captured Ark in Dagon's house at Ashdod; Dagon falls before it twice, the second time decapitated with both hands cut off on the threshold."
+        },
+        {
+          "ref": "1 Samuel 5:6-12",
+          "note": "The Lord's hand smites Ashdod, then Gath, then Ekron with emerods as the Ark is carried among them; the princes confer repeatedly on what to do with it."
+        },
+        {
+          "ref": "1 Samuel 6:1-12",
+          "note": "After seven months, priests and diviners counsel a trespass offering of five golden emerods and five golden mice, sent home on a new cart drawn by two milch kine with no yoke, as a test of whether the plague truly came from the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Collective entry per the text's own undifferentiated treatment of 'the princes of the Philistines' across Ashdod, Gath, and Ekron."
+      ]
+    },
+    {
+      "id": "men_of_bethshemesh_geneva",
+      "name": "Men of Beth-shemesh",
+      "role": "submanager",
+      "scribeTier": "The Ark's Long Exile",
+      "parentManagerId": "abinadab_of_kirjathjearim_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 6:13-15",
+          "note": "Reaping their wheat harvest, rejoice to see the returning Ark; the Levites take it down and the men offer the cart's kine as a burnt offering on a great stone."
+        },
+        {
+          "ref": "1 Samuel 6:19-20",
+          "note": "The Lord smites a great number of the men of Beth-shemesh for looking into the Ark; they lament and send for the men of Kirjath-jearim to come take it away."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "manner_of_the_king_geneva",
+      "name": "The Manner of the King",
+      "role": "law",
+      "scribeTier": "The Manner of the King",
+      "parentManagerId": null,
+      "deliveredBy": "samuel_geneva",
+      "purpose": "Samuel's God-commanded warning to Israel of what a king will take from them, delivered in response to the elders' demand for a king 'to judge us like all nations' — a caution against trading the Lord's own kingship for a human one.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 8:4-5",
+          "note": "The elders of Israel come to Samuel at Ramah and ask him to appoint a king to judge them like all the nations."
+        },
+        {
+          "ref": "1 Samuel 8:6-9",
+          "note": "It displeases Samuel; the Lord tells him the people have not rejected Samuel but the Lord himself, as they have done since Egypt, and instructs him to solemnly protest and show them the manner of the king that shall reign over them."
+        },
+        {
+          "ref": "1 Samuel 8:10-12",
+          "note": "Samuel tells the people: the king will take their sons for his chariots and horsemen and to run before his chariot, make them captains over thousands and over fifties, and set them to plow his ground, reap his harvest, and make his instruments of war."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This extraction file's chapter 8 stops at verse 12 — the fuller 'manner of the king' material found in standard editions (vv13-22: daughters taken as confectionaries/cooks/bakers, tithes of fields and flocks, and the people's insistence despite the warning) is not present in this specific source file and is not represented here."
+      ]
+    },
+    {
+      "id": "samuel_geneva",
+      "name": "Samuel",
+      "role": "manager",
+      "scribeTier": "Samuel's Horn of Oil",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Elkanah",
+        "mother": "Hannah",
+        "spouses": [],
+        "children": [
+          "Joel",
+          "Abiah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 1:20,1:24-28",
+          "note": "Born to Hannah in answer to her vow; given/lent to the Lord at Shiloh as a young child."
+        },
+        {
+          "ref": "1 Samuel 3:1-10",
+          "note": "The Lord calls him three times in the night; Eli finally instructs him to answer, 'Speak, Lord, for thy servant heareth.'"
+        },
+        {
+          "ref": "1 Samuel 3:19-21",
+          "note": "Grows, and all Israel from Dan to Beer-sheba knows him as the Lord's faithful prophet."
+        },
+        {
+          "ref": "1 Samuel 7:3-6,7:9-13",
+          "note": "Calls Israel to put away foreign gods, gathers them at Mizpeh, offers a sucking lamb, and cries to the Lord — who thunders on the Philistines and routs them; sets up the stone Eben-ezer, 'Hitherto hath the Lord holpen us.'"
+        },
+        {
+          "ref": "1 Samuel 8:1-3,8:6-22",
+          "note": "Makes his sons judges; displeased by the people's demand for a king; delivers the manner of the king and eventually grants the request."
+        },
+        {
+          "ref": "1 Samuel 9:15-17,10:1",
+          "note": "Secretly told by the Lord to anoint the man he will send; anoints Saul with a vial of oil and kisses him."
+        },
+        {
+          "ref": "1 Samuel 10:17-25",
+          "note": "Assembles Israel at Mizpeh, casts lots that fall on Saul, and presents him to the people as king."
+        },
+        {
+          "ref": "1 Samuel 12:1-25",
+          "note": "Delivers his farewell address as judge, recounting the Lord's faithfulness and warning Israel and their king to fear and obey the Lord or perish."
+        },
+        {
+          "ref": "1 Samuel 13:8-14",
+          "note": "Rebukes Saul for offering the burnt sacrifice himself at Gilgal without waiting for him; tells him his kingdom will not continue."
+        },
+        {
+          "ref": "1 Samuel 15:1-23,15:32-35",
+          "note": "Commands Saul to destroy Amalek utterly; confronts him for sparing Agag and the best spoil; declares 'to obey is better than sacrifice'; personally hews Agag in pieces at Gilgal; never sees Saul again but mourns for him."
+        },
+        {
+          "ref": "1 Samuel 16:1-13",
+          "note": "Sent to Bethlehem to anoint one of Ishai's sons; anoints David, the youngest, and the Spirit of the Lord comes upon him from that day forward."
+        },
+        {
+          "ref": "1 Samuel 19:18-24",
+          "note": "David flees to him at Ramah; Saul's messengers, and then Saul himself, prophesy under the Spirit of God on approaching Naioth."
+        },
+        {
+          "ref": "1 Samuel 25:1",
+          "note": "Dies; all Israel assembles and mourns for him and buries him in his own house at Ramah."
+        },
+        {
+          "ref": "1 Samuel 28:11-20",
+          "note": "Though dead, is brought up by the woman of Endor at Saul's desperate request; pronounces the kingdom given to David and Saul's own death on the morrow."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joel_and_abiah_geneva",
+      "name": "Joel and Abiah",
+      "role": "submanager",
+      "scribeTier": "Samuel's Horn of Oil",
+      "parentManagerId": "samuel_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Samuel",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 8:1-3",
+          "note": "Samuel's sons, made judges over Israel at Beer-sheba; 'walked not in his ways,' turned aside after bribes and perverted judgment — the direct trigger for the elders' demand for a king."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "saul_geneva",
+      "name": "Saul",
+      "role": "manager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Kish",
+        "mother": null,
+        "spouses": [
+          "Ahinoam daughter of Ahimaaz"
+        ],
+        "children": [
+          "Jonathan",
+          "Ishui (14:49) / Abinadab (31:2) — see note",
+          "Malchishua",
+          "Merab",
+          "Michal"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 9:1-2",
+          "note": "Son of Kish, a Benjamite; 'from the shoulders upward he was higher than any of the people.'"
+        },
+        {
+          "ref": "1 Samuel 9:15-21",
+          "note": "The Lord reveals him to Samuel beforehand; Saul protests he is of the smallest family of the smallest tribe of Israel."
+        },
+        {
+          "ref": "1 Samuel 10:1,10:9-13",
+          "note": "Anointed with oil by Samuel and given 'another heart'; prophesies among a company of prophets, giving rise to the proverb 'Is Saul also among the prophets?'"
+        },
+        {
+          "ref": "1 Samuel 10:20-24",
+          "note": "Chosen by lot at Mizpeh, found hiding among the baggage, and presented to the people, who shout 'God save the King.'"
+        },
+        {
+          "ref": "1 Samuel 11:1-11",
+          "note": "Musters Israel after Nahash the Ammonite threatens Jabesh-gilead; the Spirit of God comes upon him; defeats the Ammonites."
+        },
+        {
+          "ref": "1 Samuel 13:8-14",
+          "note": "Offers the burnt offering himself at Gilgal without waiting for Samuel; told by Samuel his kingdom will not continue."
+        },
+        {
+          "ref": "1 Samuel 14:24,14:36-45",
+          "note": "Binds the army under an oath not to eat until evening; nearly has Jonathan put to death for unknowingly breaking it, until the people ransom him."
+        },
+        {
+          "ref": "1 Samuel 14:47-52",
+          "note": "Fights on every side — Moab, Ammon, Edom, Zobah, the Philistines; smites Amalek; family summarized (sons Jonathan, Ishui, Malchishua; daughters Merab, Michal; wife Ahinoam; captain Abner)."
+        },
+        {
+          "ref": "1 Samuel 15:1-9,15:17-23",
+          "note": "Commanded to destroy Amalek utterly; spares Agag and the best of the spoil; told by Samuel that rebellion is 'as the sin of witchcraft' and that the Lord has rejected him from being king."
+        },
+        {
+          "ref": "1 Samuel 16:14-23",
+          "note": "The Spirit of the Lord departs from him; an evil spirit troubles him; David is brought to play the harp and ease him."
+        },
+        {
+          "ref": "1 Samuel 18:8-12,18:20-29",
+          "note": "Grows jealous of David after the women's song; twice casts a spear at him; offers his daughters Merab then Michal as snares, setting a bride-price of a hundred Philistine foreskins."
+        },
+        {
+          "ref": "1 Samuel 19:1,19:9-24",
+          "note": "Orders Jonathan and his servants to kill David; hunts him at his house and then at Naioth in Ramah, where Saul himself is overcome and prophesies before Samuel."
+        },
+        {
+          "ref": "1 Samuel 22:6-19",
+          "note": "Orders the massacre of the priests of Nob after Doeg's report; only Doeg carries it out, killing eighty-five priests and putting the city to the sword."
+        },
+        {
+          "ref": "1 Samuel 23:7-8,24:1-22,26:1-25",
+          "note": "Repeatedly pursues David through the wilderness (Keilah, Ziph, Maon, En-gedi, Hachilah); twice spared by David and twice weeps and confesses his wrong."
+        },
+        {
+          "ref": "1 Samuel 28:3-25",
+          "note": "Denied any answer from the Lord by dream, Urim, or prophet; disguises himself and consults the woman of Endor, who brings up Samuel, who pronounces his death and the kingdom's loss to David."
+        },
+        {
+          "ref": "1 Samuel 31:1-6",
+          "note": "Mortally wounded by Philistine archers on Mount Gilboa; falls on his own sword rather than be captured after his armor-bearer refuses to kill him; dies with three sons and his armor-bearer the same day."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Internal text discrepancy flagged, not resolved: Saul's sons are named 'Jonathan, and Ishui, and Malchishua' at 14:49 but 'Jonathan, and Abinadab, and Malchishua' at 31:2 when the three die together — the text never states whether Ishui and Abinadab are the same son under two names or two different sons."
+      ]
+    },
+    {
+      "id": "kish_geneva",
+      "name": "Kish",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Abiel",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Saul"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 9:1,9:3",
+          "note": "Saul's father, 'mighty in power,' of Benjamin; sends Saul to seek his lost asses, the errand that leads him to Samuel."
+        },
+        {
+          "ref": "1 Samuel 14:51",
+          "note": "'Kish was Saul's father: and Ner the father of Abner was the son of Abiel' — establishing Kish and Ner as brothers, sons of Abiel, making Abner Saul's first cousin."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nahash_the_ammonite_geneva",
+      "name": "Nahash the Ammonite",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 11:1-2",
+          "note": "Besieges Jabesh-gilead and demands the right eye of every inhabitant as the price of a covenant, 'to bring shame upon all Israel' — the provocation that launches Saul's first act as king."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abner_geneva",
+      "name": "Abner",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Ner",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 14:50-51",
+          "note": "Named captain of Saul's host; son of Ner, son of Abiel — Saul's first cousin through their shared grandfather."
+        },
+        {
+          "ref": "1 Samuel 17:55-57",
+          "note": "Questioned by Saul about David's parentage after the Goliath fight; presents David to the king."
+        },
+        {
+          "ref": "1 Samuel 20:25",
+          "note": "Sits at Saul's side at the new-moon feast where David's empty seat provokes the king's rage."
+        },
+        {
+          "ref": "1 Samuel 26:5,26:14-16",
+          "note": "Sleeps through David's night raid on Saul's camp; rebuked by David for failing to guard 'the Lord's anointed.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "agag_geneva",
+      "name": "Agag",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 15:8-9",
+          "note": "King of the Amalekites, taken alive and spared by Saul along with the best of the spoil, against the command to destroy them utterly."
+        },
+        {
+          "ref": "1 Samuel 15:32-33",
+          "note": "Brought before Samuel 'pleasantly,' saying 'the bitterness of death is passed'; Samuel personally hews him in pieces before the Lord at Gilgal."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_ziphites_geneva",
+      "name": "The Ziphites",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 23:19-23",
+          "note": "Come to Saul at Gibeah, offering to betray David's location in the wilderness of Ziph, on the hill of Hachilah."
+        },
+        {
+          "ref": "1 Samuel 26:1",
+          "note": "Come again with the same report, prompting Saul's second pursuit into the same hill country."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "woman_of_endor_geneva",
+      "name": "The Woman of Endor",
+      "role": "submanager",
+      "scribeTier": "Saul's Spear",
+      "parentManagerId": "saul_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 28:7-14",
+          "note": "The medium 'that hath a familiar spirit' at Endor whom Saul, disguised by night, seeks out after the Lord gives him no answer; brings up Samuel at his request."
+        },
+        {
+          "ref": "1 Samuel 28:21-25",
+          "note": "Urges the shaken Saul to eat, kills a fat calf and bakes unleavened bread for him and his servants before they depart by night."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jonathan_geneva",
+      "name": "Jonathan",
+      "role": "manager",
+      "scribeTier": "Jonathan's Bow",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Saul",
+        "mother": "Ahinoam daughter of Ahimaaz",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 13:2-3",
+          "note": "Commands a thousand men at Gibeah; smites the Philistine garrison at Geba, sparking the war."
+        },
+        {
+          "ref": "1 Samuel 14:1-14",
+          "note": "With only his armor-bearer, climbs the rocks Bozez and Seneh to attack the Philistine garrison, trusting 'it is not hard to the Lord to save with many or with few'; kills about twenty men, throwing the whole camp into panic."
+        },
+        {
+          "ref": "1 Samuel 14:24-30,14:36-45",
+          "note": "Unknowingly eats wild honey during Saul's fasting oath; nearly put to death by his own father's vow, but the people ransom him: 'shall Jonathan die, who hath so mightily delivered Israel? God forbid.'"
+        },
+        {
+          "ref": "1 Samuel 18:1-4",
+          "note": "His soul 'knit with the soul of David'; makes a covenant with him and gives him his robe, garments, sword, bow, and girdle."
+        },
+        {
+          "ref": "1 Samuel 19:1-7",
+          "note": "Warns David that Saul seeks his life; speaks well of David to Saul and secures a temporary reconciliation."
+        },
+        {
+          "ref": "1 Samuel 20:1-42",
+          "note": "Devises the arrow-signal to warn David of Saul's intent; the two part in tears, renewing their covenant 'between me and thee, and between my seed and thy seed, for ever.'"
+        },
+        {
+          "ref": "1 Samuel 23:16-18",
+          "note": "Comes to David in the wood, strengthens his hand in God, and foretells his kingship: 'thou shalt be king over Israel, and I shall be next unto thee.'"
+        },
+        {
+          "ref": "1 Samuel 31:2",
+          "note": "Slain alongside his father and brothers by the Philistines at Mount Gilboa."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "An unnamed young man who bears his armour appears throughout chapter 14 as his sole companion in the Michmash raid; not indexed separately, as the text never names him."
+      ]
+    },
+    {
+      "id": "goliath_geneva",
+      "name": "Goliath",
+      "role": "manager",
+      "scribeTier": "Goliath's Brazen Helmet",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 17:4-7",
+          "note": "The Philistine champion of Gath, six cubits and a span tall, armored head to foot in brass, his spear-head alone weighing six hundred shekels of iron."
+        },
+        {
+          "ref": "1 Samuel 17:8-10",
+          "note": "Challenges Israel to send a champion, offering the outcome of the whole war to single combat; defies the armies of Israel daily for forty days."
+        },
+        {
+          "ref": "1 Samuel 17:41-44",
+          "note": "Disdains David as a boy and curses him by his gods, promising his flesh to the birds and beasts of the field."
+        },
+        {
+          "ref": "1 Samuel 17:48-51",
+          "note": "Struck in the forehead by David's sling-stone, falls, and is beheaded with his own sword, since Israel had no sword to give David."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "An unnamed man bearing his shield walks before him (17:7,41) — not indexed separately, as the text never names him."
+      ]
+    },
+    {
+      "id": "david_geneva",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Ishai (Jesse)",
+        "mother": null,
+        "spouses": [
+          "Michal",
+          "Ahinoam of Jezreel",
+          "Abigail"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 16:6-13",
+          "note": "The youngest son of Ishai of Bethlehem, tending sheep; anointed by Samuel though his brothers are passed over — 'the Lord looketh on the heart'; the Spirit of the Lord comes upon him from that day forward."
+        },
+        {
+          "ref": "1 Samuel 16:14-23",
+          "note": "Brought to Saul as a skilled harpist to ease his evil-spirit torment; becomes his armor-bearer and is greatly loved by him."
+        },
+        {
+          "ref": "1 Samuel 17:12-51",
+          "note": "As a shepherd boy bringing provisions to his brothers at the battle line, volunteers to fight Goliath, recalling how he killed a lion and a bear defending his flock; slays Goliath with a sling and stone, then beheads him with the Philistine's own sword."
+        },
+        {
+          "ref": "1 Samuel 18:20-27",
+          "note": "Marries Michal after paying a bride-price of two hundred Philistine foreskins."
+        },
+        {
+          "ref": "1 Samuel 19:9-17",
+          "note": "Saul again casts a spear at him; escapes through a window with Michal's help while she disguises an idol in his bed."
+        },
+        {
+          "ref": "1 Samuel 21:1-9",
+          "note": "At Nob, receives holy bread and Goliath's own sword from Ahimelech the priest."
+        },
+        {
+          "ref": "1 Samuel 21:10-15",
+          "note": "Feigns madness before Achish, king of Gath, to escape suspicion."
+        },
+        {
+          "ref": "1 Samuel 22:1-2",
+          "note": "Gathers about four hundred men, 'in debt and discontented,' at the cave of Adullam, becoming their captain."
+        },
+        {
+          "ref": "1 Samuel 22:20-23",
+          "note": "Receives Abiathar, sole survivor of the massacre at Nob, and takes responsibility: 'I have occasioned the death of all the persons of thy father's house.'"
+        },
+        {
+          "ref": "1 Samuel 23:1-13",
+          "note": "Delivers Keilah from the Philistines by the Lord's direction, then learns via the ephod that its men would betray him to Saul, and flees."
+        },
+        {
+          "ref": "1 Samuel 24:1-22",
+          "note": "Spares Saul's life in the cave at En-gedi, cutting only the skirt of his robe; Saul weeps and acknowledges 'thou art more righteous than I.'"
+        },
+        {
+          "ref": "1 Samuel 25:2-42",
+          "note": "Sends men to Nabal at Carmel for provision, is rebuffed, and is prevented from bloody vengeance by Abigail; takes Abigail to wife after Nabal's death."
+        },
+        {
+          "ref": "1 Samuel 26:1-25",
+          "note": "Again spares Saul's life by night in his camp, taking only his spear and water jug; Saul again confesses his wrong."
+        },
+        {
+          "ref": "1 Samuel 27:1-12,29:1-11",
+          "note": "Takes refuge with Achish of Gath, is given Ziklag, raids Israel's enemies while deceiving Achish about his targets; dismissed from the Philistine muster against Israel at the princes' insistence."
+        },
+        {
+          "ref": "1 Samuel 30:1-31",
+          "note": "Pursues and utterly defeats the Amalekite raiders who burned Ziklag and took the women captive, recovering everyone and everything; establishes that those who guard the baggage share equally with those who fight."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation consistently spells his father's name 'Ishai' rather than 'Jesse.'"
+      ]
+    },
+    {
+      "id": "ishai_jesse_geneva",
+      "name": "Ishai (Jesse)",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Eliab",
+          "Abinadab (brother, distinct from the Ark-keeper and from Saul's son of the same name)",
+          "Shammah",
+          "David",
+          "four unnamed sons (16:10, plus daughters implied but unnamed)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 16:1,16:10-11",
+          "note": "The Bethlehemite whose sons Samuel is sent to; presents seven sons before Samuel finds none chosen, then sends for the youngest, David, tending the sheep."
+        },
+        {
+          "ref": "1 Samuel 17:12-20",
+          "note": "Father of eight sons, called 'an old man' in Saul's day; sends David with provisions for his brothers and a pledge-token for their captain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Rendered 'Ishai' throughout this Geneva translation rather than the more familiar 'Jesse.'"
+      ]
+    },
+    {
+      "id": "eliab_geneva",
+      "name": "Eliab",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Ishai (Jesse)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 16:6-7",
+          "note": "Ishai's eldest son; Samuel initially assumes he is the Lord's anointed by his stature, but is told 'man looketh on the outward appearance, but the Lord beholdeth the heart.'"
+        },
+        {
+          "ref": "1 Samuel 17:13,17:28",
+          "note": "One of the three eldest sons who followed Saul to battle; grows 'very angry' with David at the battle line, accusing him of pride and 'the malice of thine heart.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "achish_king_of_gath_geneva",
+      "name": "Achish, King of Gath",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Maoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 21:10-15",
+          "note": "David flees to him at Gath; David feigns madness to escape his suspicion."
+        },
+        {
+          "ref": "1 Samuel 27:2-12",
+          "note": "David and his six hundred men dwell with him; grants David Ziklag; believes David's raids have made him 'utterly abhorred' by Israel, 'therefore he shall be my servant for ever.'"
+        },
+        {
+          "ref": "1 Samuel 28:1-2,29:1-11",
+          "note": "Summons David to fight alongside him against Israel; the other Philistine princes distrust David and insist Achish send him back before the battle at Gilboa."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abishai_geneva",
+      "name": "Abishai",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 26:6",
+          "note": "Named 'brother to Joab' and son of Zeruiah; volunteers to go down with David into Saul's sleeping camp."
+        },
+        {
+          "ref": "1 Samuel 26:8-9",
+          "note": "Urges David to let him kill Saul with a single thrust of the spear; David refuses, forbidding harm to 'the Lord's anointed.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_egyptian_servant_geneva",
+      "name": "The Egyptian Servant",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 30:11-15",
+          "note": "An abandoned Egyptian servant of an Amalekite, found starving in the field by David's men, revived with food and water; guides David to the raiding party after being sworn not to be killed or returned to his master."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text; labeled by his described role rather than an invented name."
+      ]
+    },
+    {
+      "id": "ahinoam_of_jezreel_geneva",
+      "name": "Ahinoam of Jezreel",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "David"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 25:43,27:3",
+          "note": "Taken by David to wife; accompanies him to Gath."
+        },
+        {
+          "ref": "1 Samuel 30:5,30:18",
+          "note": "Captured with Abigail when the Amalekites burn Ziklag; recovered by David along with all the other captives."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION flagged: a different woman from Ahinoam daughter of Ahimaaz, Saul's own wife (14:50) — two distinct Ahinoams in this book, kept as separate entries."
+      ]
+    },
+    {
+      "id": "ahimelech_the_hittite_geneva",
+      "name": "Ahimelech the Hittite",
+      "role": "submanager",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": "david_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 26:6",
+          "note": "Named alongside Abishai as one David asks, 'who will go down with me to Saul to the host?' — the text explicitly distinguishes him as 'the Hittite,' a different man from Ahimelech the priest of Nob."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION flagged and resolved in-text by the translation itself: kept fully separate from the priest of Nob."
+      ]
+    },
+    {
+      "id": "michal_geneva",
+      "name": "Michal",
+      "role": "manager",
+      "scribeTier": "Michal's Window",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Saul",
+        "mother": "Ahinoam daughter of Ahimaaz",
+        "spouses": [
+          "David",
+          "Phalti son of Laish"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 14:49,18:20",
+          "note": "Saul's younger daughter; loves David."
+        },
+        {
+          "ref": "1 Samuel 18:20-27",
+          "note": "Given to David to wife after he pays a bride-price of two hundred Philistine foreskins — double what Saul demanded."
+        },
+        {
+          "ref": "1 Samuel 19:11-17",
+          "note": "Warns David that Saul's men are watching the house to kill him in the morning; lets him down through a window and disguises an idol in his bed to buy him time, then tells Saul, 'He said unto me, Let me go, or else I will kill thee.'"
+        },
+        {
+          "ref": "1 Samuel 25:44",
+          "note": "Given by Saul to Phalti son of Laish while David is a fugitive."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "merab_geneva",
+      "name": "Merab",
+      "role": "submanager",
+      "scribeTier": "Michal's Window",
+      "parentManagerId": "michal_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Saul",
+        "mother": "Ahinoam daughter of Ahimaaz",
+        "spouses": [
+          "Adriel the Meholathite"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 18:17-19",
+          "note": "Saul's elder daughter, offered to David as a reward for fighting the Lord's battles, but given instead to Adriel the Meholathite when the time comes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phalti_geneva",
+      "name": "Phalti son of Laish",
+      "role": "submanager",
+      "scribeTier": "Michal's Window",
+      "parentManagerId": "michal_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Laish",
+        "mother": null,
+        "spouses": [
+          "Michal"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 25:44",
+          "note": "Given Michal to wife by Saul while David is in exile — of Gallim."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahimelech_priest_of_nob_geneva",
+      "name": "Ahimelech, Priest of Nob",
+      "role": "manager",
+      "scribeTier": "The Shewbread of Nob",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Ahitub",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Abiathar"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 21:1-6",
+          "note": "Astonished to meet David alone at Nob; gives him the holy shewbread after confirming his young men are ritually clean."
+        },
+        {
+          "ref": "1 Samuel 21:8-9",
+          "note": "Gives David the sword of Goliath, 'wrapped in a cloth behind the ephod.'"
+        },
+        {
+          "ref": "1 Samuel 22:11-16",
+          "note": "Summoned by Saul; defends David as 'the most faithful' of Saul's servants and his son-in-law, and denies knowledge of treachery: 'thy servant knew nothing of all this, less or more.'"
+        },
+        {
+          "ref": "1 Samuel 22:16,22:19",
+          "note": "Condemned to death by Saul along with his entire father's house; the priestly city of Nob itself is put to the sword."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION flagged: a different man from 'Ahimelech the Hittite,' one of David's companions in chapter 26."
+      ]
+    },
+    {
+      "id": "ahitub_geneva",
+      "name": "Ahitub",
+      "role": "submanager",
+      "scribeTier": "The Shewbread of Nob",
+      "parentManagerId": "ahimelech_priest_of_nob_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Phinehas (son of Eli)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Ahimelech",
+          "Ahiah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 14:3",
+          "note": "Named as the father of Ahiah, and grandson of Eli through Phinehas — the priestly lineage of Shiloh/Nob."
+        },
+        {
+          "ref": "1 Samuel 22:9,22:11,22:20",
+          "note": "Repeatedly identified as Ahimelech's father when the priests of Nob are summoned and slain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahiah_geneva",
+      "name": "Ahiah",
+      "role": "submanager",
+      "scribeTier": "The Shewbread of Nob",
+      "parentManagerId": "ahimelech_priest_of_nob_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Ahitub",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 14:3,14:18",
+          "note": "'Ahiah the son of Ahitub, Ichabod's brother, the son of Phinehas, the son of Eli,' the Lord's priest at Shiloh who wears the ephod and is consulted by Saul at Michmash."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Identity ambiguity flagged, not resolved: both Ahiah (14:3) and Ahimelech of Nob (22:9) are called 'the son of Ahitub.' The text never states whether they are the same priest under two names, or brothers — indexed here as a distinct entry rather than silently merged with Ahimelech."
+      ]
+    },
+    {
+      "id": "doeg_geneva",
+      "name": "Doeg the Edomite",
+      "role": "manager",
+      "scribeTier": "Doeg's Reckoning",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 21:7",
+          "note": "Present at Nob 'the same day,' the chiefest of Saul's herdmen, an Edomite."
+        },
+        {
+          "ref": "1 Samuel 22:9-10",
+          "note": "Reports to Saul that Ahimelech gave David bread, a sword, and inquired of the Lord for him."
+        },
+        {
+          "ref": "1 Samuel 22:18-19",
+          "note": "Alone among Saul's servants willing to fall upon the priests; kills eighty-five men who wore the linen ephod that day, then puts the entire city of Nob to the sword — man, woman, child, and beast."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book's extraction text has a localized run of apparent OCR corruption around this exact episode (ch22 vv6-15, a garbled repeated token in place of several distinct original words) — sense was reconstructed from the well-established narrative context, flagged in the book-level notes for the extraction pipeline."
+      ]
+    },
+    {
+      "id": "abiathar_geneva",
+      "name": "Abiathar",
+      "role": "manager",
+      "scribeTier": "The Ephod of Keilah",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Ahimelech, Priest of Nob",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 22:20-23",
+          "note": "Sole surviving son of Ahimelech; flees to David and reports Saul's slaughter of the priests; David takes responsibility and promises him safety."
+        },
+        {
+          "ref": "1 Samuel 23:6,23:9",
+          "note": "Brings the ephod with him to David at Keilah; David uses it to inquire of the Lord about the men of Keilah's loyalty."
+        },
+        {
+          "ref": "1 Samuel 30:7-8",
+          "note": "Brings the ephod again so David can inquire whether to pursue the Amalekite raiders who burned Ziklag."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nabal_geneva",
+      "name": "Nabal",
+      "role": "manager",
+      "scribeTier": "Nabal's Feast",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Abigail"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 25:2-3",
+          "note": "A very wealthy Carmelite of the house of Caleb, 'churlish and evil in his doings'; husband of Abigail."
+        },
+        {
+          "ref": "1 Samuel 25:10-11",
+          "note": "Rebuffs David's request for provision with contempt: 'who is David? ...there be many servants now-a-days that break away every man from his master.'"
+        },
+        {
+          "ref": "1 Samuel 25:36-37",
+          "note": "Holds a king-like feast while very drunk; his heart 'died within him, and he became as a stone' on learning what Abigail had done, once sober."
+        },
+        {
+          "ref": "1 Samuel 25:38",
+          "note": "Struck by the Lord about ten days later and dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The narrator's own aside plays on his name's meaning: 'Nabal is his name, and folly is with him' (25:25)."
+      ]
+    },
+    {
+      "id": "abigail_geneva",
+      "name": "Abigail",
+      "role": "manager",
+      "scribeTier": "Abigail's Provision",
+      "parentManagerId": null,
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Nabal",
+          "David"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Samuel 25:3",
+          "note": "'A woman of singular wisdom and beautiful,' married to the churlish Nabal."
+        },
+        {
+          "ref": "1 Samuel 25:14-19",
+          "note": "Warned by one of Nabal's servants of his insult to David's men; quickly gathers bread, wine, dressed sheep, parched corn, raisins, and figs without telling her husband."
+        },
+        {
+          "ref": "1 Samuel 25:23-31",
+          "note": "Intercepts David, falls before him, and pleads for her household, foreseeing his kingship and urging him not to bear the guilt of needless bloodshed."
+        },
+        {
+          "ref": "1 Samuel 25:32-35",
+          "note": "David blesses her counsel and accepts her gift, calling off his revenge."
+        },
+        {
+          "ref": "1 Samuel 25:39-42",
+          "note": "After Nabal's death, David sends for her and she becomes his wife."
+        },
+        {
+          "ref": "1 Samuel 30:5,30:18",
+          "note": "Taken captive with Ahinoam when the Amalekites burn Ziklag; recovered by David along with everyone else."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "No children of hers are recorded within 1 Samuel; a son by David is recorded later in 2 Samuel 3:3, outside this book's scope."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved ancestor references, kept out of the main character list above since they carry no independent narrative action in this book.",
+    "elkanahAncestors": {
+      "ref": "1 Samuel 1:1",
+      "note": "Elkanah's ancestral chain given but not indexed individually: son of Jeroham, son of Elihu, son of Tohu, son of Zuph, an Ephrathite."
+    },
+    "kishAncestors": {
+      "ref": "1 Samuel 9:1",
+      "note": "Kish's ancestral chain given but not indexed individually: son of Abiel, son of Zeror, son of Bechorath, son of Aphiah, 'a man of Jemini' (Benjamin)."
+    },
+    "jonathansArmourBearer": {
+      "ref": "1 Samuel 14:1-14",
+      "note": "Unnamed young man who accompanies Jonathan into the Philistine garrison at Michmash; the text never gives him a name, so he is referenced only within Jonathan's own entry."
+    },
+    "davidsShieldbearerAndGoliathsShieldbearer": {
+      "ref": "1 Samuel 17:7,17:41",
+      "note": "Unnamed man who bears Goliath's shield before him; not indexed separately."
+    }
+  }
+}

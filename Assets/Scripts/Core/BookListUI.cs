@@ -149,20 +149,16 @@ namespace ClickerGenesis.Core
                     row.Button.interactable = true;
                     row.Tooltip.enabled = false;
                 }
-                else if (row.ResourceId != "genesis_1" && !Controller.Skills.IsBookUnlocked(row.ResourceId))
+                else
                 {
+                    // Every non-active, non-complete book is either unlocked (caught by canSwitch
+                    // above) or not - there's no more "Finish X first" neighbor state (2026-08-09,
+                    // player-choice book unlocking redesign removed the canonical-neighbor gate,
+                    // see GameLoopController.CanSwitchToBook's doc comment).
                     row.CostText.text = "Locked";
                     row.Button.interactable = false;
                     row.Tooltip.enabled = true;
                     row.Tooltip.Text = "Can be unlocked in the Skill Tree after a prestige is done.";
-                }
-                else
-                {
-                    string previousId = CanonicalBookOrder.PreviousResourceId(row.ResourceId);
-                    string previousName = previousId != null ? CanonicalBookOrder.DisplayNameOf(previousId) : null;
-                    row.CostText.text = previousName != null ? $"Finish {previousName} first" : "Locked";
-                    row.Button.interactable = false;
-                    row.Tooltip.enabled = false;
                 }
             }
 

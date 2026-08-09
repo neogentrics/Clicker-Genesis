@@ -1,0 +1,345 @@
+{
+  "book": "Malachi",
+  "translation": "Ethiopian",
+  "canonicalOrder": 59,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Verified against Assets/Resources/Verses/Ethiopian/malachi_59.json (4 chapters, 55 verses: 14+17+18+6). This Ethiopian-translation Malachi is textually identical in content/structure to the already-completed KJV Malachi index. Same structural fact: exactly one named human individual (Malachi himself), zero minor supporting characters requiring submanagers; Jacob/Esau/Levi/Moses/Elijah are all cross-references to figures indexed in earlier books, never used as managerId/parentManagerId here. Adapted the KJV 8-tier shape (1 person tier + 7 law/disputation-oracle tiers), re-verifying every verse reference against this translation's own text - all matched exactly. All ids suffixed _ethiopian per translation-scoping. Naming-collision check performed: no collisions found.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Closing Scroll",
+      "managerId": "malachi_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Love Oracle",
+      "managerId": "jacob_have_i_loved_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Priest's Portion",
+      "managerId": "covenant_of_levi_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Marriage Covenant",
+      "managerId": "treachery_against_wives_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Refiner's Fire",
+      "managerId": "messenger_of_the_covenant_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Storehouse",
+      "managerId": "rob_god_tithe_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Book of Remembrance",
+      "managerId": "book_of_remembrance_day_of_the_lord_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Prophet's Promise",
+      "managerId": "promise_of_elijah_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "malachi_ethiopian",
+      "name": "Malachi",
+      "role": "manager",
+      "scribeTier": "The Closing Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Malachi 1:1",
+          "note": "Superscription: The burden of the word of the LORD to Israel by Malachi."
+        },
+        {
+          "ref": "Malachi 4:4-6",
+          "note": "Closing charge to remember the law of Moses and the promise of Elijah before the great and dreadful day of the LORD."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book gives no genealogical information for Malachi at all - no father's name, no hometown, no tribal line - unlike most other prophetic superscriptions.",
+        "Malachi contains no vision, no narrated call, and almost no first-person biographical material - built entirely as question-and-answer disputations."
+      ]
+    },
+    {
+      "id": "jacob_have_i_loved_ethiopian",
+      "name": "Jacob Have I Loved",
+      "role": "law",
+      "scribeTier": "The Love Oracle",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Answers Israel's doubt of God's love by contrasting the LORD's covenant choice of Jacob against Esau, whose land was laid waste - reassures a discouraged community of God's continued covenant love toward the nation, not a relitigation of Jacob and Esau as individuals.",
+      "verses": [
+        {
+          "ref": "Malachi 1:2-3",
+          "note": "Was not Esau Jacob's brother? Yet I loved Jacob, and I hated Esau, and laid his mountains and heritage waste."
+        },
+        {
+          "ref": "Malachi 1:4-5",
+          "note": "Edom's proposed rebuilding will be thrown down again; Israel will say the LORD will be magnified from the border of Israel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jacob and Esau here stand for their descendant nations, Israel and Edom - their individual narratives belong to Genesis, not this book."
+      ]
+    },
+    {
+      "id": "covenant_of_levi_ethiopian",
+      "name": "The Covenant of Levi",
+      "role": "law",
+      "scribeTier": "The Priest's Portion",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Rebukes the priests for offering polluted bread and blind, lame, sick animals in sacrifice, then holds up a described covenant with Levi as the standard the corrupt priesthood has abandoned.",
+      "verses": [
+        {
+          "ref": "Malachi 1:6-8",
+          "note": "Priests offer polluted bread and blind, lame, sick animals on the altar."
+        },
+        {
+          "ref": "Malachi 1:10-11",
+          "note": "God has no pleasure in empty offerings."
+        },
+        {
+          "ref": "Malachi 2:1-3",
+          "note": "Judgment pronounced on the priests if they will not lay it to heart."
+        },
+        {
+          "ref": "Malachi 2:4-7",
+          "note": "Describes the LORD's covenant with Levi as the ideal priestly standard."
+        },
+        {
+          "ref": "Malachi 2:8-9",
+          "note": "The priests have corrupted the covenant of Levi."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Levi is referenced only as the model covenant partner contrasted with the failing priesthood - his narrative belongs to Genesis and Exodus.",
+        "No individual priest of Malachi's time is named; the rebuke addresses the priesthood collectively."
+      ]
+    },
+    {
+      "id": "treachery_against_wives_ethiopian",
+      "name": "Treachery Against Wives",
+      "role": "law",
+      "scribeTier": "The Marriage Covenant",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Rebukes the men of Judah for dealing treacherously - marrying women devoted to a foreign god and divorcing the wives of their youth - grounding the charge in a shared covenant and stating the LORD hates putting away.",
+      "verses": [
+        {
+          "ref": "Malachi 2:10-12",
+          "note": "Rebuke for dealing treacherously against the wife of thy covenant and marrying the daughter of a strange god."
+        },
+        {
+          "ref": "Malachi 2:13-14",
+          "note": "The LORD no longer regards their offerings because He is witness between a man and the wife of his youth."
+        },
+        {
+          "ref": "Malachi 2:15-16",
+          "note": "The LORD hates putting away; take heed to your spirit, that ye deal not treacherously. The underlying text of 2:15-16 is among the most disputed in the Old Testament; the translation is given as-is."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "messenger_of_the_covenant_ethiopian",
+      "name": "The Messenger of the Covenant",
+      "role": "law",
+      "scribeTier": "The Refiner's Fire",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Answers the people's weary complaint with the announcement that the LORD will send a messenger to prepare the way, followed by the sudden coming of the messenger of the covenant to His temple, whose purifying work is likened to a refiner's fire, purging the sons of Levi. States only what the book itself says, asserting no later identification of either messenger figure.",
+      "verses": [
+        {
+          "ref": "Malachi 2:17",
+          "note": "The people weary the LORD, asking Where is the God of judgment?"
+        },
+        {
+          "ref": "Malachi 3:1",
+          "note": "Behold, I will send my messenger to prepare the way before me, and the messenger of the covenant shall suddenly come to his temple."
+        },
+        {
+          "ref": "Malachi 3:2-3",
+          "note": "He is like a refiner's fire and fullers' soap, and shall purify the sons of Levi."
+        },
+        {
+          "ref": "Malachi 3:4-5",
+          "note": "Offerings of Judah and Jerusalem will again be pleasant; the LORD will judge sorcerers, adulterers, false swearers, and oppressors."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Malachi 3:1's messenger and chapter 4's Elijah are popularly connected to each other and, in later tradition, to John the Baptist - but the text itself does not make either identification explicit."
+      ]
+    },
+    {
+      "id": "rob_god_tithe_ethiopian",
+      "name": "Will a Man Rob God?",
+      "role": "law",
+      "scribeTier": "The Storehouse",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Charges Israel with robbing God through withheld tithes and offerings, and issues a direct challenge to bring the whole tithe into the storehouse and test whether the LORD will not open the windows of heaven in blessing.",
+      "verses": [
+        {
+          "ref": "Malachi 3:6-7",
+          "note": "I am the LORD, I change not; return unto me, and I will return unto you."
+        },
+        {
+          "ref": "Malachi 3:8-9",
+          "note": "Will a man rob God? Ye have robbed me in tithes and offerings; ye are cursed with a curse."
+        },
+        {
+          "ref": "Malachi 3:10",
+          "note": "Bring all the tithes into the storehouse, and prove me now herewith."
+        },
+        {
+          "ref": "Malachi 3:11-12",
+          "note": "Promise to rebuke the devourer for their sakes; all nations shall call them blessed."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "book_of_remembrance_day_of_the_lord_ethiopian",
+      "name": "The Book of Remembrance and the Day of the LORD",
+      "role": "law",
+      "scribeTier": "The Book of Remembrance",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Addresses the complaint that serving God seems futile while the proud prosper, answered by a book of remembrance written before the LORD, and the promise of a coming day that shall burn as an oven consuming the wicked, while the Sun of righteousness arises with healing in his wings for those who fear the LORD's name.",
+      "verses": [
+        {
+          "ref": "Malachi 3:13-15",
+          "note": "The people's complaint: It is vain to serve God, and now we call the proud happy."
+        },
+        {
+          "ref": "Malachi 3:16",
+          "note": "Those that feared the LORD spake often one to another, and a book of remembrance was written before him."
+        },
+        {
+          "ref": "Malachi 3:17-18",
+          "note": "Promise that the LORD will spare them as a man spares his own son."
+        },
+        {
+          "ref": "Malachi 4:1",
+          "note": "The day cometh that shall burn as an oven, and all the proud shall be stubble."
+        },
+        {
+          "ref": "Malachi 4:2-3",
+          "note": "The Sun of righteousness shall arise with healing in his wings for those that fear the LORD's name."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "promise_of_elijah_ethiopian",
+      "name": "The Promise of Elijah",
+      "role": "law",
+      "scribeTier": "The Prophet's Promise",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "malachi_ethiopian",
+      "purpose": "Closes the book with a charge to remember the law of Moses and a promise that the LORD will send Elijah the prophet before the great and dreadful day of the LORD, who will turn the heart of the fathers to the children so the land is not struck with a curse. Recorded only as Malachi's own closing promise, asserting no later identification of its fulfillment.",
+      "verses": [
+        {
+          "ref": "Malachi 4:4",
+          "note": "Remember the law of Moses my servant, commanded unto him in Horeb for all Israel."
+        },
+        {
+          "ref": "Malachi 4:5",
+          "note": "I will send you Elijah the prophet before the coming of the great and dreadful day of the LORD."
+        },
+        {
+          "ref": "Malachi 4:6",
+          "note": "He shall turn the heart of the fathers to the children, and the children to the fathers, lest I come and smite the earth with a curse."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Elijah named here is given no further description in this book; the only prophet of that name elsewhere in this canon is Elijah the Tishbite, but the text does not narrate or re-describe his life here.",
+        "Moses is referenced only by title and the law given at Horeb; his own narrative belongs to Exodus through Deuteronomy, not this book."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references in this book - the only named figures (Jacob, Esau, Levi, Moses, Elijah) are all cross-references to fully-indexed figures from earlier books, and none required a bulk-list entry here."
+  }
+}

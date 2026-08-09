@@ -1,0 +1,625 @@
+{
+  "book": "Zechariah",
+  "translation": "Geneva",
+  "canonicalOrder": 38,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Geneva's Zechariah is content-identical to KJV's — same eight night visions (1-6), same fasting inquiry (7-8), same two undated 'burden' oracles (9-14) — so the KJV Character Index's 9-tier structure (3 named-manager persons, 1 spirit/angelic manager, 5 law/theme tiers) was reused as the structural starting point, per instructions, then every detail re-verified against this translation's own archaic spelling and phrasing. Real Geneva-specific differences found: (1) 'Joshua the high priest' is spelled 'Iehoshua' throughout (3:1-9, 6:11), and his father's name in 6:11 is spelled 'Iehozadak' — distinct from KJV's Haggai-matching 'Josedech'/Ezra-Nehemiah's 'Jozadak.' Geneva chapter 3 itself never states his patronymic at all (unlike some editions), so the genealogy note here is built from 6:11 only. (2) The crown-funders' name-variant pair in 6:10 vs 6:14 is preserved as 'Heldai'/'Helem' and 'Ioshiah the sonne of Zephaniah'/'Hen the sonne of Zephaniah' — same real within-chapter spelling variance as KJV, same individuals. (3) The 7:2 delegation is spelled 'Sharezer, and Regem-melech' in Geneva (vs. KJV's 'Sherezer'/'Regemmelech') — logged in genealogyLists, not promoted to characters, since Geneva gives them zero individual action beyond being named senders of the fasting inquiry, matching the KJV draft's own reasoning. (4) Geneva 1:1/1:7 gives Zechariah's genealogy as 'the sonne of Berechiah, the sonne of Iddo, the Prophet' — same grandson-as-son shorthand as KJV. (5) Geneva 11:13 reads 'Cast it vnto the potter' (matching KJV's own reading, not the 'treasury' alternative some later scholarship proposes). NAMING-COLLISION FLAGS carried over and re-verified against this translation's own text: Iddo the prophet (Zechariah's grandfather, 1:1/1:7) is a different person from the earlier 'Iddo the seer' of the Solomon/Rehoboam/Abijah era (2 Chronicles, not read this pass — flagged on the strength of the same collision already confirmed in the KJV draft, since Zechariah's own text gives no info to re-derive it from); Ioshiah/Hen's father 'Zephaniah' (6:10/6:14) is not the prophet Zephaniah. All ids suffixed '_geneva' to avoid collision with the existing KJV character-index ids for the same figures.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Zechariah",
+      "managerId": "zechariah_prophet_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Zerubbabel",
+      "managerId": "zerubbabel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Iehoshua the High Priest",
+      "managerId": "iehoshua_high_priest_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Angel of the Lord",
+      "managerId": "angel_of_the_lord_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Man with the Measuring Line",
+      "managerId": "measuring_line_vision_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Flying Book and the Woman in the Ephah",
+      "managerId": "flying_book_and_ephah_visions_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Vision of the Four Charets",
+      "managerId": "four_charets_vision_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Two Staves and the Thirty Pieces of Silver",
+      "managerId": "staves_and_thirty_pieces_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Day of the Lord",
+      "managerId": "day_of_the_lord_oracle_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "zechariah_prophet_geneva",
+      "name": "Zechariah",
+      "role": "manager",
+      "scribeTier": "The Zechariah",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Berechiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'the sonne of Berechiah, the sonne of Iddo, the Prophet' (1:1, repeated 1:7) — grandson of Iddo, 'son' used loosely for grandson, same standard Hebrew shorthand as elsewhere in the canon."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "opening dating formula: eighth month, second year of Darius; Zechariah's genealogy given"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "second dating formula (eleventh month, Shebat), opening the night visions"
+        },
+        {
+          "ref": "Zechariah 4:1",
+          "note": "woken by the Angel 'as a man that is raysed out of his sleepe' to see the golden candlestick vision"
+        },
+        {
+          "ref": "Zechariah 6:9-11",
+          "note": "commanded to take silver and gold from the returned captivity and make crowns for Iehoshua the high priest"
+        },
+        {
+          "ref": "Zechariah 11:7-13",
+          "note": "personally acts out the sign of the two staves, Beautie and Bandes, and receives thirty pieces of silver he is told to cast to the potter"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Chapters 1-6 record eight night visions; chapters 9-14 shift to two undated oracles ('burdens') on the future Day of the Lord.",
+        "Unlike a prophet who only watches and speaks, Zechariah is personally directed to physically break two named staves and handle the thirty pieces of silver himself (11:7-13)."
+      ]
+    },
+    {
+      "id": "zerubbabel_geneva",
+      "name": "Zerubbabel",
+      "role": "manager",
+      "scribeTier": "Zerubbabel",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Geneva's Zechariah never gives Zerubbabel's genealogy within the book — introduced simply overseeing the temple's rebuilding (4:6-10). Noted for identification only, not asserted as this book's own claim."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 4:6-7",
+          "note": "'Neither by an armie nor strength, but by my Spirit, saith the Lord of hostes' — the great mountaine becomes a plaine before him"
+        },
+        {
+          "ref": "Zechariah 4:9",
+          "note": "his hands laid the foundation of the house and his hands shall also finish it"
+        },
+        {
+          "ref": "Zechariah 4:10",
+          "note": "rebuke against despising 'the day of the small thinges'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Governor of Judah paired throughout with Iehoshua the high priest as civil and religious co-leaders.",
+        "4:6 supplies the book's most quoted line: 'Neither by an armie nor strength, but by my Spirit, saith the Lord of hostes.'"
+      ]
+    },
+    {
+      "id": "iehoshua_high_priest_geneva",
+      "name": "Iehoshua the High Priest",
+      "role": "manager",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Iehozadak (Zechariah 6:11, Geneva spelling) — Geneva chapter 3 does not itself state his patronymic; this note is built from 6:11 alone. Distinct spelling from other translations' 'Josedech'/'Jozadak.'",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "See father field for Geneva's own spelling."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 3:1-5",
+          "note": "stands in filthie garments before the Angel of the Lord, Satan standing at his right hand to resist him; garments removed and a faire diademe set on his head"
+        },
+        {
+          "ref": "Zechariah 3:8-9",
+          "note": "told he and his fellowes are monstruous persons wondered at, a sign of the coming Branche; a stone with seven eyes set before him"
+        },
+        {
+          "ref": "Zechariah 6:9-11",
+          "note": "crowned with siluer and golde crownes funded by Heldai, Tobijah, Iedaiah, and Ioshiah the sonne of Zephaniah"
+        },
+        {
+          "ref": "Zechariah 6:12-13",
+          "note": "named 'the Branche,' who shall build the Temple of the Lord and sit and rule vpon his throne, a Priest beside his throne"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "the crownes memorialized in the Temple to Helem, Tobijah, Iedaiah, and Hen the sonne of Zephaniah — same four men as v.10 under variant names"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Chapter 3 is the book's only courtroom-style scene: Satan resists, the Lord rebukes him, and Iehoshua's filthie garments are publicly exchanged for a change of raiment.",
+        "Actually crowned with a real siluer-and-golde crown in a prophetic sign-act (6:11), funded by four named returned captives."
+      ]
+    },
+    {
+      "id": "angel_of_the_lord_geneva",
+      "name": "The Angel of the Lord",
+      "role": "manager",
+      "scribeTier": "The Angel of the Lord",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Angelic being; no human genealogy applies. Geneva uses 'the Angel of the Lord' (1:11-12; 3:1-6) and 'the Angel that talked with me' (1:9,13-14; 2:3; 4:1,4-5; 5:5,10; 6:4-5) — the text never explicitly equates the two titles, a standard inference rather than a stated identity."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:11-13",
+          "note": "the horsemen report to the Angel of the Lord; the Angel that talked with Zechariah answers his question with good and comfortable words"
+        },
+        {
+          "ref": "Zechariah 2:3-4",
+          "note": "instructs a yong man about Ierusalem being inhabited without walles"
+        },
+        {
+          "ref": "Zechariah 3:1-6",
+          "note": "the Angel of the Lord, before whom Iehoshua stands, rebukes Satan and testifies to Iehoshua"
+        },
+        {
+          "ref": "Zechariah 4:1-6",
+          "note": "wakes Zechariah 'as a man that is raysed out of his sleepe' and interprets the golden candlesticke and two oliue trees"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Functions as the recurring guide interpreting all eight night visions of chapters 1-6.",
+        "In 3:2 speaks the words later echoed almost verbatim in Jude: 'The Lord reprooue thee, O Satan.'"
+      ]
+    },
+    {
+      "id": "measuring_line_vision_geneva",
+      "name": "The Man with the Measuring Line",
+      "role": "law",
+      "scribeTier": "The Man with the Measuring Line",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": "angel_of_the_lord_geneva",
+      "purpose": "Promises Ierusalem will be so abundantly inhabited it must stand 'without walles, for the multitude of men and cattell' (2:4), with the Lord himself as 'a wall of fire round about, and the glory in the middes of her' (2:5) — reassurance for the modest, wall-less early rebuilding effort.",
+      "verses": [
+        {
+          "ref": "Zechariah 2:1-2",
+          "note": "a man with a measuring line goes to measure Ierusalem's breadth and length"
+        },
+        {
+          "ref": "Zechariah 2:4-5",
+          "note": "Ierusalem to be inhabited without walles; the Lord a wall of fire round about and the glory in her middes"
+        },
+        {
+          "ref": "Zechariah 2:8",
+          "note": "'he that toucheth you, toucheth the apple of his eye'"
+        },
+        {
+          "ref": "Zechariah 2:10",
+          "note": "call to rejoice: 'loe, I come, and will dwell in the middes of thee'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Source of the widely-quoted phrase 'the apple of his eye' (2:8).",
+        "Promises growth so great that walls become obsolete."
+      ]
+    },
+    {
+      "id": "flying_book_and_ephah_visions_geneva",
+      "name": "The Flying Book and the Woman in the Ephah",
+      "role": "law",
+      "scribeTier": "The Flying Book and the Woman in the Ephah",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": "angel_of_the_lord_geneva",
+      "purpose": "Two paired visions of purging: a flying booke (5:1-4), twenty cubits by ten, pronounces a curse entering the house of every thief and every false swearer; a woman named 'wickednes' is thrust into an Ephah under a talent of lead and carried by two winged women to a house built for her in the land of Shinar (5:5-11) — sin and its personification physically removed from the restored land.",
+      "verses": [
+        {
+          "ref": "Zechariah 5:1-2",
+          "note": "the flying booke, twentie cubites by tenne cubites"
+        },
+        {
+          "ref": "Zechariah 5:3-4",
+          "note": "the curse against every thiefe and every false swearer, entering their houses and consuming them, timber and stones"
+        },
+        {
+          "ref": "Zechariah 5:6-8",
+          "note": "'this is the sight of them through all the earth... this is wickednes,' cast into the Ephah under the weight of lead"
+        },
+        {
+          "ref": "Zechariah 5:9-11",
+          "note": "two women with wings like a storke carry the Ephah away to build it an house in the land of Shinar"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of the only visions in the book to personify an abstract concept ('wickednes') as a character."
+      ]
+    },
+    {
+      "id": "four_charets_vision_geneva",
+      "name": "The Vision of the Four Charets",
+      "role": "law",
+      "scribeTier": "The Vision of the Four Charets",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": "angel_of_the_lord_geneva",
+      "purpose": "Foure charets, drawn by differently-colored horses, go forth from between two mountaines of brasse as 'the foure spirites of the heauen'; those going toward the North countrey specifically 'pacified my spirit in the North countrey' — closing the eight-vision cycle with God's sovereignty over the nations that had scattered Judah.",
+      "verses": [
+        {
+          "ref": "Zechariah 6:1-3",
+          "note": "foure charets with red, blacke, white, and diuers-coloured-and-reddish horses come from betweene two mountaines of brasse"
+        },
+        {
+          "ref": "Zechariah 6:5",
+          "note": "'these are the foure spirites of the heauen, which goe foorth from standing with the Lord of all the earth'"
+        },
+        {
+          "ref": "Zechariah 6:6-8",
+          "note": "the blacke and white horses go toward the North countrey; the Lord's spirit is pacified there"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Closes the sequence of eight night visions that opened with a similarly colored set of horses among the mirre trees in 1:8."
+      ]
+    },
+    {
+      "id": "staves_and_thirty_pieces_geneva",
+      "name": "The Two Staves and the Thirty Pieces of Silver",
+      "role": "law",
+      "scribeTier": "The Two Staves and the Thirty Pieces of Silver",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": "zechariah_prophet_geneva",
+      "purpose": "Zechariah plays a shepheard over 'the sheepe of the slaughter,' taking two staues named Beautie (the couenant made with all people) and Bandes (the brotherhood between Iudah and Israel). He breaks Beautie to show the couenant disanulled, is weighed thirtie pieces of siluer for his wages and told to cast it to the potter in the house of the Lord, then breaks Bandes to dissolue the brotherhood — followed by denunciation of the idole shepheard who abandons the flocke (11:15-17).",
+      "verses": [
+        {
+          "ref": "Zechariah 11:7",
+          "note": "takes two staues, calling one Beautie and the other Bandes"
+        },
+        {
+          "ref": "Zechariah 11:10",
+          "note": "breaks Beautie, to disanull the couenant made with all people"
+        },
+        {
+          "ref": "Zechariah 11:12-13",
+          "note": "weighed thirtie pieces of siluer for his wages; told by the Lord to cast it vnto the potter, a goodly price he was valued at"
+        },
+        {
+          "ref": "Zechariah 11:14",
+          "note": "breaks Bandes, to dissolue the brotherhood betweene Iudah and Israel"
+        },
+        {
+          "ref": "Zechariah 11:15-17",
+          "note": "commanded to take the instruments of a foolish shepheard who does not care for the flocke"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Cast it vnto the potter' (11:13) matches the KJV's own reading, not the alternative 'treasury' reading some later scholarship proposes — Geneva's text itself does not comment on this."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_oracle_geneva",
+      "name": "The Day of the Lord (Ierusalem's Siege, the Pierced One, and the Final Kingship)",
+      "role": "law",
+      "scribeTier": "The Day of the Lord",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": null,
+      "deliveredBy": null,
+      "purpose": "The second, undated 'burden' oracle (12:1-14:21): the nations besiege Ierusalem and are destroyed (12:1-9); the house of Dauid mourns 'him whom they haue pearced' as for an onely sonne (12:10-14); a fountaine is opened for sinne and vncleannesse (13:1); a shepheard is smitten and the sheepe scattered, two partes cut off and the third fined as siluer is fined (13:7-9); the Lord's feete stand vpon the mount of Oliues, which cleaues in the middes (14:4); waters of life go out from Ierusalem (14:8); euen the bridles of the horses are inscribed 'Holinesse vnto the Lord' (14:20-21).",
+      "verses": [
+        {
+          "ref": "Zechariah 12:10",
+          "note": "'they shall looke vpon me, whom they haue pearced, and they shall lament for him' — widely read messianically"
+        },
+        {
+          "ref": "Zechariah 13:1",
+          "note": "'a fountaine opened... for sinne and for vncleannesse'"
+        },
+        {
+          "ref": "Zechariah 13:7",
+          "note": "'Arise, O sword, vpon my shepheard... smite the shepheard, and the sheepe shall be scattered'"
+        },
+        {
+          "ref": "Zechariah 13:8-9",
+          "note": "two partes cut off and die, the third brought through the fire and fined as siluer, tryed as golde"
+        },
+        {
+          "ref": "Zechariah 14:4",
+          "note": "the Lord's feete stand vpon the mount of oliues, which cleaues in the middes toward East and West"
+        },
+        {
+          "ref": "Zechariah 14:8",
+          "note": "waters of life go out from Ierusalem, halfe toward the East sea and halfe toward the vttermost sea"
+        },
+        {
+          "ref": "Zechariah 14:9",
+          "note": "'the Lord shalbe King ouer all the earth: in that day shall there bee one Lord, and his Name shalbe one'"
+        },
+        {
+          "ref": "Zechariah 14:20",
+          "note": "'Holinesse vnto the Lord' written vpon the bridles of the horses"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "13:7 is quoted by Jesus of himself and his disciples in the Gospels.",
+        "Chapters 12-14 contain no dated formula and no named interpreting angel — a distinct literary section from the night visions of chapters 1-6."
+      ]
+    },
+    {
+      "id": "satan_the_accuser_geneva",
+      "name": "Satan",
+      "role": "named",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": "iehoshua_high_priest_geneva",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Spiritual adversary, not a human genealogical figure. Appears in Zechariah only within the single courtroom-vision of 3:1-2."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 3:1",
+          "note": "stoode at Iehoshua's right hand to resist him"
+        },
+        {
+          "ref": "Zechariah 3:2",
+          "note": "rebuked: 'The Lord reprooue thee, O Satan... is not this a brand taken out of the fire?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Appears by name only twice in the entire book, both in the same verse-pair (3:1-2)."
+      ]
+    },
+    {
+      "id": "darius_king_geneva",
+      "name": "Darius",
+      "role": "named",
+      "scribeTier": "Zechariah",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Persian king; genealogy not given in Zechariah. Used only in dating formulas — Darius I of Persia."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "second yeere of Darius, eight moneth — first dating formula"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "second yeere of Darius, eleuenth moneth (Shebat) — second dating formula"
+        },
+        {
+          "ref": "Zechariah 7:1",
+          "note": "fourth yeere of King Darius, fourth day of the ninth moneth (Chisleu) — third dating formula, opens the fasting inquiry"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never an active character in the book — used purely to date each section to specific days in his reign."
+      ]
+    },
+    {
+      "id": "iddo_priestly_returnee_geneva",
+      "name": "Iddo (Zechariah's grandfather)",
+      "role": "named",
+      "scribeTier": "Zechariah",
+      "parentManagerId": "zechariah_prophet_geneva",
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Berechiah"
+        ],
+        "note": "Zechariah's grandfather, called 'Iddo, the Prophet' in Zechariah 1:1 and 1:7. NAMING COLLISION (carried over from the KJV draft, since Geneva's own text gives no additional info to re-derive it from): a different person from the earlier 'Iddo the seer' active generations earlier under Solomon, Rehoboam, and Abijah — same name and title, not the same man. Do not conflate."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 1:1",
+          "note": "Zechariah identified as 'the sonne of Berechiah, the sonne of Iddo, the Prophet'"
+        },
+        {
+          "ref": "Zechariah 1:7",
+          "note": "same genealogical formula repeated"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never an active character in Zechariah — known only through the book's opening genealogical formula, repeated twice."
+      ]
+    },
+    {
+      "id": "heldai_helem_geneva",
+      "name": "Heldai (also called Helem)",
+      "role": "submanager",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": "iehoshua_high_priest_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Heldai' in 6:10 and 'Helem' in 6:14 for the same crown-funding event — a real within-chapter name variant for one individual, not two people."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the captivity from whom Zechariah is sent to take siluer and golde"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named 'Helem' among those memorialized by the crownes"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Along with Tobijah, Iedaiah, and Ioshiah/Hen the sonne of Zephaniah, personally funded Iehoshua's coronation crowns."
+      ]
+    },
+    {
+      "id": "tobijah_geneva",
+      "name": "Tobijah",
+      "role": "submanager",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": "iehoshua_high_priest_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named identically as 'Tobijah' in both 6:10 and 6:14 — no spelling variance for this individual."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the captivity from whom Zechariah is sent to take siluer and golde"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named among those memorialized by the crownes"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Along with Heldai/Helem, Iedaiah, and Ioshiah/Hen, personally funded Iehoshua's coronation crowns."
+      ]
+    },
+    {
+      "id": "iedaiah_geneva",
+      "name": "Iedaiah",
+      "role": "submanager",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": "iehoshua_high_priest_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named identically as 'Iedaiah' in both 6:10 and 6:14 — no spelling variance. Only Iedaiah in this book, no in-book collision."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "one of the captivity from whom Zechariah is sent to take siluer and golde"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named among those memorialized by the crownes"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Along with Heldai/Helem, Tobijah, and Ioshiah/Hen, personally funded Iehoshua's coronation crowns."
+      ]
+    },
+    {
+      "id": "ioshiah_hen_ben_zephaniah_geneva",
+      "name": "Ioshiah (also called Hen), son of Zephaniah",
+      "role": "submanager",
+      "scribeTier": "Iehoshua the High Priest",
+      "parentManagerId": "iehoshua_high_priest_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Zephaniah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called 'Ioshiah, the sonne of Zephaniah' in 6:10 (whose house hosts the crown-making) and 'Hen the sonne of Zephaniah' in 6:14 (memorialized by the crowns) — real within-chapter name variance, same individual. NAMING COLLISION: his father 'Zephaniah' is not the prophet Zephaniah, a different, earlier man; do not conflate."
+      },
+      "verses": [
+        {
+          "ref": "Zechariah 6:10",
+          "note": "his house is where the crown-making takes place"
+        },
+        {
+          "ref": "Zechariah 6:14",
+          "note": "named 'Hen the sonne of Zephaniah' among those memorialized by the crownes"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Along with Heldai/Helem, Tobijah, and Iedaiah, personally funded Iehoshua's coronation crowns."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "fasting_inquiry_delegation_geneva": {
+      "names": [
+        "Sharezer",
+        "Regem-melech"
+      ],
+      "refs": [
+        "Zechariah 7:2"
+      ],
+      "note": "Sent, with their men, to the house of God to pray before the Lord and ask the Priests and Prophets whether the mourning fast should continue — the question opening the chapters 7-8 discourse on true fasting, justice, and mercy. No individual action beyond being named senders; Geneva spells the names 'Sharezer, and Regem-melech' (vs. other translations' 'Sherezer'/'Regemmelech')."
+    }
+  }
+}

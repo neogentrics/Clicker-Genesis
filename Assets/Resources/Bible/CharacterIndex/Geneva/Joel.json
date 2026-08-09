@@ -1,0 +1,284 @@
+{
+  "book": "Joel",
+  "translation": "Geneva",
+  "canonicalOrder": 29,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Joel in the Geneva 1560 translation is, like its KJV counterpart, short (3 chapters, 73 verses) and contains exactly one named human being in the entire book: the prophet himself, identified only as \"Ioel the sonne of Pethuel\" (1:1). Every other figure is either a generic, undifferentiated class (priests, elders, drunkards, virgins, husbandmen, vinedressers) or a nation/people-group named only in an accusatory or judicial context (Tyrus, Zidon, Palestina, the Grecians, the Sabeans, Egypt, Edom) with no individual personal action attached to any named member - per methodology rule 5/8, none of these rises to a scribe tier or submanager of its own; they are instead cited directly, by the Geneva text's own spelling, inside the law-tier entries whose verses they belong to. Six tiers total: one person-manager (Ioel) and five law/theme tiers, scaled to the book's five major content blocks, mirroring the KJV Character Index's structure at a high level since the underlying narrative shape of the book is identical - but this draft is grounded in the actual Geneva wording, which surfaced several REAL, book-specific translation differences not present in the KJV framing: (1) this Geneva text never once uses the word \"locust\" anywhere in Joel - it consistently names the second devastating wave \"the grashopper\" (1:4, restated 2:25), a genuine lexical choice distinct from the KJV's \"locust,\" reflected in this draft's tier 2 name \"Grashopper and Canker Worme\" rather than any locust-based naming; (2) Joel 3:14's climactic judgment-scene location is rendered \"the valley of threshing\" (stated twice in that verse) in this Geneva text, not the \"valley of decision\" phrasing familiar from the KJV - a genuine translation-choice difference at one of the book's best-known verses, reflected in this draft's tier 6 name; (3) 2:13 reads \"rent your heart, and not your clothes\" where later translations read \"garments\" - a minor but real wording difference, noted on that tier's verse entry rather than treated as a naming issue. A likely transcription/spelling quirk (not a translation choice) was also flagged rather than silently corrected: 2:32 spells the city \"Ierusale\" (missing the final -m) where every other occurrence of the name in this same book (3:1, 3:6, 3:16, 3:17, 3:20) is spelled \"Ierusalem\" in full. Two additional naming notes carried over from the same underlying text as the KJV entry: \"the valley of Iehoshaphat\" (3:2, 12) is almost certainly the symbolic name meaning \"the Lord judges,\" not a reference to the historical King Iehoshaphat of Iudah found elsewhere in scripture; and 3:9-11's \"breake your plowshares into swords\" is the deliberate mirror-image of Isaiah 2:4/Micah 4:3's opposite image, not a contradiction between books. All character/manager ids in this draft are suffixed \"_geneva\" to avoid collision with the existing KJV CharacterIndex's Joel.json ids (e.g. the KJV file's plain \"joel\" vs. this file's \"joel_geneva\").",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Word to Ioel",
+      "managerId": "joel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Grashopper and Canker Worme",
+      "managerId": "day_of_the_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Rent Hearts, Not Clothes",
+      "managerId": "call_to_repentance_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Corne, and Wine, and Oyle",
+      "managerId": "restored_years_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Powred Out Vpon All Flesh",
+      "managerId": "outpouring_of_spirit_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Valley of Threshing",
+      "managerId": "valley_of_threshing_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "joel_geneva",
+      "name": "Ioel",
+      "role": "manager",
+      "scribeTier": "The Word to Ioel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Pethuel",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Joel 1:1",
+          "note": "\"The worde of the Lord that came to Ioel the sonne of Pethuel.\" The Geneva text's entire biographical notice on its author - spelled 'Ioel' throughout this translation under 1560-era I/J-interchangeable orthography - no hometown, era, spouse, or children given, matching the KJV's equally sparse account."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells the prophet's name 'Ioel' and his father's 'Pethuel' - the same identification as the KJV's 'Joel...Pethuel', just under this translation's I/J-interchangeable 1560 spelling convention.",
+        "Joel 2:28-29's Spirit-outpouring oracle is the passage the apostle Peter quotes at length in Acts 2 as fulfilled at Pentecost."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_geneva",
+      "name": "The Grashopper Armie and the Day of the Lord",
+      "role": "law",
+      "scribeTier": "Grashopper and Canker Worme",
+      "parentManagerId": null,
+      "deliveredBy": "joel_geneva",
+      "purpose": "To shock the elders and inhabitants of the land, none of whom has ever seen its like, into recognizing an unprecedented four-stage insect devastation as 'the day of the Lord' - a day of darkenesse and blacknesse arriving as an invading army.",
+      "verses": [
+        {
+          "ref": "Joel 1:4",
+          "note": "\"That which is left of ye palmer worme, hath the grashopper eaten, and the residue of ye grashopper hath the canker worme eaten, and the residue of the canker worme hath the caterpiller eaten.\" REAL TRANSLATION DIFFERENCE: this Geneva 1560 text names the second devastating wave 'the grashopper' - it never once uses the word 'locust' anywhere in this book (also true at 2:25's restatement) - where later English Bibles including the KJV render this same insect as 'the locust.' The four-stage devastation (palmer worme / grashopper / canker worme / caterpiller) is otherwise identical in sequence."
+        },
+        {
+          "ref": "Joel 1:6-7",
+          "note": "\"a nation commeth vpon my lande, mightie, and without nomber, whose teeth are like the teeth of a lyon...he maketh my vine waste, and pilleth off the barke of my figge tree: he maketh it bare, and casteth it downe.\""
+        },
+        {
+          "ref": "Joel 1:15",
+          "note": "\"Alas: for the day, for the day of the Lord is at hand, and it commeth as a destruction from the Almightie.\""
+        },
+        {
+          "ref": "Joel 2:1-2",
+          "note": "Trumpet blown in Zion; \"a day of darkenesse, and of blacknesse, a day of cloudes, and obscuritie...there was none like it from the beginning, neither shalbe any more after it, vnto the yeeres of many generations.\""
+        },
+        {
+          "ref": "Joel 2:4-9",
+          "note": "The swarm pictured as cavalry and chariots - like horses, leaping on mountaintops with a noyse like chariots, running vpon the wall, climbing into houses like a thiefe - insect and army imagery interwoven throughout."
+        },
+        {
+          "ref": "Joel 2:10-11",
+          "note": "Earth trembles, heauens shake, sunne and moone darkened, starres withdraw their shining; \"the day of the Lord is great and very terrible, and who can abide it?\""
+        },
+        {
+          "ref": "Joel 2:20",
+          "note": "The Lord promises to remooue the Northren armie far off, into a land barren and desolate, toward the vtmost sea."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva 1560 text uses 'grashopper' - never 'locust' - throughout Joel's insect-plague passages, a real lexical choice distinct from later English translations."
+      ]
+    },
+    {
+      "id": "call_to_repentance_geneva",
+      "name": "Rent Your Heart",
+      "role": "law",
+      "scribeTier": "Rent Hearts, Not Clothes",
+      "parentManagerId": null,
+      "deliveredBy": "joel_geneva",
+      "purpose": "To call Judah to genuine inward repentance - fasting, weeping, and mourning of heart rather than mere outward garment-rending - grounded in an appeal to the Lord's own graciousness and mercy.",
+      "verses": [
+        {
+          "ref": "Joel 2:12-13",
+          "note": "\"Turne you vnto me with all your heart, and with fasting, and with weeping, and with mourning...And rent your heart, and not your clothes: and turne vnto the Lord your God, for he is gratious, and mercifull, slowe to anger, and of great kindnes, and repenteth him of the euill.\" (Geneva reads 'your clothes' where later translations read 'your garments'.)"
+        },
+        {
+          "ref": "Joel 2:14",
+          "note": "\"Who knoweth, is he wil returne and repent and leaue a blessing behinde him, euen a meate offring, and a drinke offring vnto ye Lord your God?\""
+        },
+        {
+          "ref": "Joel 2:15-16",
+          "note": "Blow the trumpet in Zion, sanctifie a fast, call a solemne assemblie; gather the elders, the children, those that sucke the breastes, and euen the bridegrome and bride out of their chambers."
+        },
+        {
+          "ref": "Joel 2:17",
+          "note": "The Priests, the Lords ministers, weepe betweene the porch and the altar and say: \"Spare thy people, O Lord, and giue not thine heritage into reproche that the heathen should rule ouer them. Wherefore should they say among the people, Where is their God?\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Garment-rending was the conventional ancient sign of grief and mourning (compare Genesis 37:34); Joel does not condemn the outward custom but demands the inward reality it was meant to signify."
+      ]
+    },
+    {
+      "id": "restored_years_geneva",
+      "name": "I Will Render You the Yeeres",
+      "role": "law",
+      "scribeTier": "Corne, and Wine, and Oyle",
+      "parentManagerId": null,
+      "deliveredBy": "joel_geneva",
+      "purpose": "To promise renewed material abundance - corne, wine, and oyle - and the removal of reproach among the nations, and to reassure Israel of the Lord's continuing presence, once genuine repentance has been made.",
+      "verses": [
+        {
+          "ref": "Joel 2:18-19",
+          "note": "The Lord, \"ielous ouer his land,\" spares his people and answers: \"Beholde, I will send you corne, and wine, and oyle, and you shalbe satisfied therewith: and I will no more make you a reproche among the heathen.\""
+        },
+        {
+          "ref": "Joel 2:21-24",
+          "note": "Land and beasts of the field told not to fear - pastures of the wildernesse are greene, the tree beareth her fruite, floores full of wheate, presses abound with wine and oyle."
+        },
+        {
+          "ref": "Joel 2:25",
+          "note": "\"And I will render you the yeeres that the grashopper hath eaten, the canker worme and the caterpiller and the palmer worme, my great hoste which I sent among you.\" The Lord explicitly names the grashopper-army of chapters 1-2 as 'my great hoste which I sent' - claiming direct authorship of the very plague this promise reverses."
+        },
+        {
+          "ref": "Joel 2:26-27",
+          "note": "The people shall eate and be satisfied and praise the Name of the Lord; \"my people shall neuer be ashamed\" (stated once at the close of each of verses 26 and 27) ...\"I am the Lord your God and none other.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verse 2:25 has the Lord directly call the grashopper-swarm 'my great hoste which I sent among you' - the same insect army of chapter 1 is claimed as divine judgment, not accident."
+      ]
+    },
+    {
+      "id": "outpouring_of_spirit_geneva",
+      "name": "Powred Out Vpon All Flesh",
+      "role": "law",
+      "scribeTier": "Powred Out Vpon All Flesh",
+      "parentManagerId": null,
+      "deliveredBy": "joel_geneva",
+      "purpose": "To promise a future outpouring of the Lord's Spirit vpon all flesh, producing prophecie, dreames, and visions across every class and both sexes, accompanied by cosmic signs, with deliverance promised to whosoeuer shall call on the Name of the Lord.",
+      "verses": [
+        {
+          "ref": "Joel 2:28",
+          "note": "\"And afterward will I powre out my Spirit vpon all flesh: and your sonnes and your daughters shall prophecie: your olde men shall dreame dreames, and your yong men shall see visions.\""
+        },
+        {
+          "ref": "Joel 2:29",
+          "note": "\"And also vpon the seruants, and vpon the maydes in those dayes wil I powre my Spirit.\""
+        },
+        {
+          "ref": "Joel 2:30-31",
+          "note": "\"I will shewe wonders in the heauens and in the earth: blood and fire, and pillars of smoke. The sunne shalbe turned into darkenesse, and the moone into blood, before the great and terrible day of the Lord come.\""
+        },
+        {
+          "ref": "Joel 2:32",
+          "note": "\"But whosoeuer shall call on the Name of the Lord, shalbe saued: for in mount Zion, and in Ierusale shalbe deliuerance, as the Lord hath said, and in the remnant, whom the Lord shall call.\" TEXT NOTE: this specific extracted source spells the city 'Ierusale' here (missing the final -m), while every other occurrence of the name in this same book (3:1, 3:6, 3:16, 3:17, 3:20) is spelled in full as 'Ierusalem' - flagged as a probable spelling/transcription quirk of this one verse in this specific extracted source, not corrected or altered, per the project's scripture-fidelity rule."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Quoted at length by the apostle Peter in Acts 2:17-21 as fulfilled at Pentecost - one of the most extensively cited Old Testament passages anywhere in the New Testament.",
+        "Paul quotes 2:32's 'whosoeuer shall call vpon the Name of the Lord shalbe saued' in Romans 10:13."
+      ]
+    },
+    {
+      "id": "valley_of_threshing_geneva",
+      "name": "The Valley of Threshing",
+      "role": "law",
+      "scribeTier": "The Valley of Threshing",
+      "parentManagerId": null,
+      "deliveredBy": "joel_geneva",
+      "purpose": "To pronounce iudgement on the surrounding nations for scattering Israel, dividing the Lord's land, and trafficking Iudah's children into slauerie, and to vindicate and restore Iudah and Ierusalem for euer.",
+      "verses": [
+        {
+          "ref": "Joel 3:1-2",
+          "note": "When the Lord brings againe the captiuitie of Iudah and Ierusalem, he will gather all nations into the valley of Iehoshaphat and \"pleade with them there for my people, and for mine heritage Israel, whom they haue scattered among the nations, and parted my land.\""
+        },
+        {
+          "ref": "Joel 3:3",
+          "note": "The nations \"haue cast lottes for my people, and haue giuen the childe for the harlot, and sold the girle for wine, that they might drinke.\""
+        },
+        {
+          "ref": "Joel 3:4-6",
+          "note": "Tyrus, Zidon, and \"all the costes of Palestina\" directly accused: they took the Lord's siluer and golde into their temples, and sold the children of Iudah and Ierusalem \"vnto the Grecians,\" to send them far from their border."
+        },
+        {
+          "ref": "Joel 3:7-8",
+          "note": "The Lord will raise Iudah's sold children out of the place they were sold, turning the deed onto the offenders' own heads: he will send the offending nations' \"sonnes and...daughters into the hande of the children of Iudah,\" and it is Iudah who \"shall sell them to the Sabeans, to a people farre off: for the Lord hath spoken it.\" Iudah resells the offending nations' children, not the Lord selling Iudah's own - matching the KJV Character Index's own corrected reading of the parallel verse."
+        },
+        {
+          "ref": "Joel 3:9-11",
+          "note": "\"Publish this among the Gentiles: prepare warre, wake vp the mightie men...Breake your plowshares into swords, and your sithes into speares: let the weake say, I am strong.\" A call to war among the assembled heathen - the deliberate mirror-image of Isaiah 2:4/Micah 4:3's opposite image of beating swords into plowshares."
+        },
+        {
+          "ref": "Joel 3:13-14",
+          "note": "\"Put in your sithes, for the haruest is ripe...the winepresses runne ouer, for their wickednesse is great. O multitude, O multitude, come into the valley of threshing: for the day of the Lord is neere in the valley of threshing.\" REAL TRANSLATION DIFFERENCE: this Geneva 1560 text names the judgement site 'the valley of threshing' (stated twice in this verse) - the KJV's well-known 'valley of decision' at this same verse is a later rendering choice; Geneva's own wording ties the scene directly to the harvest/winepress imagery of the surrounding verses instead."
+        },
+        {
+          "ref": "Joel 3:16",
+          "note": "\"The Lord also shall roare out of Zion, and vtter his voyce from Ierusalem, and the heauens and the earth shall shake, but the Lord wil be the hope of his people, and the strength of the children of Israel.\""
+        },
+        {
+          "ref": "Joel 3:17",
+          "note": "\"So shall ye know that I am the Lord your God dwelling in Zion, mine holy Mountaine: then shall Ierusalem bee holy, and there shall no strangers go thorowe her any more.\""
+        },
+        {
+          "ref": "Joel 3:18",
+          "note": "\"The mountaines drop downe newe wine, and the hilles shall flowe with milke, and al the riuers of Iudah shall runne with waters, and a fountaine shall come forth of the House of the Lord, and shall water the valley of Shittim.\""
+        },
+        {
+          "ref": "Joel 3:19",
+          "note": "\"Egypt shalbe waste, and Edom shall be a desolate wildernesse, for the iniuries of the childre of Iudah, because they haue shed innocent blood in their land.\""
+        },
+        {
+          "ref": "Joel 3:20-21",
+          "note": "\"But Iudah shall dwell for euer, and Ierusalem from generation to generation. For I will clense their blood, that I haue not clensed, and the Lord will dwell in Zion.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING NOTE: 'the valley of Iehoshaphat' (3:2, 12) is almost certainly the symbolic name meaning 'the Lord judges,' not a reference to the historical King Iehoshaphat of Iudah found elsewhere in scripture (1 Kings 22, 2 Chronicles 17-20); no king by that name is implied anywhere in this book.",
+        "This Geneva text names the same judgement location two ways across chapter 3 - 'the valley of Iehoshaphat' (v.2, 12) and 'the valley of threshing' (v.14, twice) - a real internal variation in this translation's own wording, not a scribal contradiction.",
+        "'the valley of Shittim' (3:18) is a separate place-name from the valley of Iehoshaphat/threshing earlier in the same chapter - Shittim elsewhere in scripture (Numbers 25:1, Joshua 3:1) is the plain east of Iordan where Israel camped before crossing into Canaan; whether Joel means that literal location or uses 'Shittim' (acacia trees) symbolically for sudden fertility is not settled by the text."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/undifferentiated collective references, kept out of the character list above per methodology rule 5 (no individuation of undifferentiated groups). Cited directly by the Geneva text's own spelling within the relevant law-tier verse entries instead.",
+    "elders_and_inhabitants": {
+      "ref": "Joel 1:2-3",
+      "note": "\"Heare ye this, O Elders, and hearken ye all inhabitantes of the land...Tell you your children of it, and let your children shew to their children, and their children to another generation.\" Addressed collectively, no individual named."
+    },
+    "priests_and_ministers": {
+      "ref": "Joel 1:9, 13; 2:17",
+      "note": "\"The Priests the Lords ministers mourne\" / \"Girde your selues and lament, ye Priests: howle ye ministers of the altar\" / weeping \"betweene the porch and the altar\" - an undifferentiated priestly class, never an individually named priest, distinct from Aaron/Eleazar-type named priests elsewhere in the KJV canon."
+    },
+    "accused_nations": {
+      "ref": "Joel 3:4-6, 19",
+      "note": "Tyrus, Zidon, Palestina, the Grecians, Egypt, and Edom are named nations/peoples accused collectively of wrongdoing against Iudah - no individual ruler or person from any of these nations is named or given personal action in this book."
+    }
+  }
+}

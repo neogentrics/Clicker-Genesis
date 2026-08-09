@@ -1,0 +1,197 @@
+{
+  "book": "2 John",
+  "translation": "Geneva",
+  "canonicalOrder": 75,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "2 John in the Geneva Bible (1560) is textually and structurally the same short pastoral letter as the KJV's 2 John (13 verses, 1 chapter, no narrative action) - the same author/addressee correspondence with the same two doctrinal cores (the old commandment to love one another, and the warning against deceivers who deny Christ came in the flesh). Read against the KJV directly rather than assumed identical: the Geneva text carries real, if minor, wording differences worth preserving as this translation's own voice rather than silently harmonized to KJV phrasing. Verse 12 reads \"I trust to come vnto you, and speake mouth to mouth, that our ioy may be full\" - Geneva's own idiom \"mouth to mouth\" where KJV has \"face to face\" (both idioms ultimately echo the same Hebrew phrase pattern used of God speaking to Moses, but Geneva's translators chose the more literal-bodily rendering). Verse 13 reads \"The sonnes of thine elect sister greete thee\" - Geneva specifically says \"sonnes\" (sons), a gendered word choice, where KJV has the gender-neutral \"children\"; flagged rather than smoothed over, since the underlying Greek collective is genuinely ambiguous and the two translations made different English choices. Applying the same personally-embodied-vs-pure-transmission test used elsewhere in this project: the elder is kept as a full person-tier manager (not a mere \"deliveredBy\" tag) because he writes in first person with real personal stakes - joy at the children's faithfulness, a stated hope to visit and speak \"mouth to mouth,\" a closing greeting relayed on behalf of others. Two ambiguities are flagged, not resolved, exactly as the KJV draft flagged them: (1) whether \"the elect Lady\" (and her \"elect sister\") names a literal woman and household or is a figurative address to a church and a sister congregation - the Geneva text gives no more resolution than the KJV does; (2) the letter never names its author - he calls himself only \"THE ELDER\" - so the traditional identification with the Apostle John is logged as church tradition, not textual fact, per the later/traditional-name rule. The \"many deceiuers\" of verse 7 remain a single collective warning (no individuals are named or distinguished in the text), folded into the law tier rather than invented as individual antagonists. No naming collisions arise in this book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paper and Ynke",
+      "managerId": "elder_geneva_2john",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Walking in Trueth",
+      "managerId": "elect_lady_geneva_2john",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Olde Commandement",
+      "managerId": "old_commandment_geneva_2john",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Speede Not the Deceiuer",
+      "managerId": "warning_against_deceivers_geneva_2john",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "elder_geneva_2john",
+      "name": "The Elder",
+      "role": "manager",
+      "scribeTier": "Paper and Ynke",
+      "parentManagerId": null,
+      "perkNote": "Never named in the Geneva text either - self-identified only as 'THE ELDER.' Traditionally identified with the Apostle John on grounds of shared language/theme with the Gospel and First Epistle of John, but this is church tradition, not a textual assertion; flagged rather than settled, per the later-name rule.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 John 1:1",
+          "note": "Identifies himself only as 'THE ELDER,' writing to 'the elect Lady, and her children, whom I loue in the trueth: and not I onely, but also all that haue knowen the trueth.'"
+        },
+        {
+          "ref": "2 John 1:4",
+          "note": "'I reioyced greatly, that I founde of thy children walking in trueth, as we haue receiued a commandement of the Father.'"
+        },
+        {
+          "ref": "2 John 1:5",
+          "note": "Beseeches the Lady - not writing a new commandment, but 'that same which we had from the beginning' - that they love one another."
+        },
+        {
+          "ref": "2 John 1:12",
+          "note": "Says he had many things to write but would not do it 'with paper and ynke'; trusts instead 'to come vnto you, and speake mouth to mouth, that our ioy may be full' - Geneva's own idiom, distinct from KJV's 'face to face.'"
+        },
+        {
+          "ref": "2 John 1:13",
+          "note": "Closes the letter: 'The sonnes of thine elect sister greete thee, Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The phrase 'I woulde not write with paper and ynke' (v.12) is the only place in the letter where writing materials are named - the basis for this tier's motif.",
+        "Geneva's 'speake mouth to mouth' (v.12) is a distinctive idiom choice not shared with the more familiar 'face to face' wording most readers know."
+      ]
+    },
+    {
+      "id": "elect_lady_geneva_2john",
+      "name": "The Elect Lady and Her Children",
+      "role": "manager",
+      "scribeTier": "Walking in Trueth",
+      "parentManagerId": null,
+      "perkNote": "Her household's two unnamed family collectives - her own children (v.1, 4) and her sister's 'sonnes' (v.13) - are deliberately kept off the character roster as their own entries, since neither is individually named or textually distinguished from the household group they belong to; both are noted here and in genealogyLists rather than invented as separate tracked entities.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed children - 2 John 1:1, 4, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 John 1:1",
+          "note": "Addressed by the elder as 'the elect Lady, and her children,' loved in the trueth by him and by all who have known the trueth."
+        },
+        {
+          "ref": "2 John 1:4",
+          "note": "The elder reports rejoicing to have found some of her children 'walking in trueth,' as commanded by the Father."
+        },
+        {
+          "ref": "2 John 1:5",
+          "note": "Beseeched by the elder ('And nowe beseeche I thee, Lady') to walk in love, keeping the commandment held from the beginning."
+        },
+        {
+          "ref": "2 John 1:8",
+          "note": "The elder joins himself with the household in this warning - 'Looke to your selues, that we lose not the things which we haue done, but that we may receiue full reward' - framing loss and reward as shared between him and them."
+        },
+        {
+          "ref": "2 John 1:10-11",
+          "note": "Instructed that if anyone comes not bringing 'this doctrine' (of Christ), they are 'not to house' nor bidden 'God speede,' since doing so makes one 'partaker of his euill deedes.'"
+        },
+        {
+          "ref": "2 John 1:13",
+          "note": "Greeted at the letter's close by 'the sonnes of thine elect sister' - an unnamed sister and her equally unnamed sons, mentioned only here and not individually indexed (see genealogyLists)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Whether 'the elect Lady' names a real individual woman and household, or is a figurative address to a local church (with her 'elect sister' then a sister congregation), is a genuine open question the Geneva text does not resolve any more than KJV does - see genealogyLists.",
+        "Geneva's verse 13 specifically names 'sonnes' rather than a gender-neutral term for the sister's children - a real, if small, wording divergence from the more familiar phrasing."
+      ]
+    },
+    {
+      "id": "old_commandment_geneva_2john",
+      "name": "The Olde Commandement",
+      "role": "law",
+      "scribeTier": "The Olde Commandement",
+      "parentManagerId": null,
+      "deliveredBy": "elder_geneva_2john",
+      "purpose": "Reaffirms mutual love as the church's defining, original commandment - 'not as writing a newe commandement vnto thee, but that same which we had from the beginning' - framing obedient love for one another as inseparable from walking in trueth, not a fresh demand.",
+      "verses": [
+        {
+          "ref": "2 John 1:5",
+          "note": "The elder beseeches the Lady - not a new commandment, but that same held from the beginning - that we love one another."
+        },
+        {
+          "ref": "2 John 1:6",
+          "note": "'And this is that loue, that we should walke after his commandements. This commandement is, that as ye haue heard from the beginning, ye should walke in it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Echoes near-identical 'olde commandement... from the beginning' wording found in 1 John 2:7-8 - a recurring phrase across the Johannine epistles in this translation too, not unique to this letter."
+      ]
+    },
+    {
+      "id": "warning_against_deceivers_geneva_2john",
+      "name": "The Warning Against Deceiuers",
+      "role": "law",
+      "scribeTier": "Speede Not the Deceiuer",
+      "parentManagerId": null,
+      "deliveredBy": "elder_geneva_2john",
+      "purpose": "Sets a doctrinal test - confessing that Iesus Christ is come in the flesh - for identifying false teachers ('deceiuers,' 'Antichrist'), paired with a concrete behavioral instruction (withhold house and greeting, 'God speede') so the church does not materially support the spread of that denial.",
+      "verses": [
+        {
+          "ref": "2 John 1:7",
+          "note": "'For many deceiuers are entred into this worlde, which confesse not that Iesus Christ is come in the flesh. He that is such one, is a deceiuer and an Antichrist.'"
+        },
+        {
+          "ref": "2 John 1:8",
+          "note": "Warns - inclusively, of the elder and the household together - 'Looke to your selues, that we lose not the things which we haue done, but that we may receiue full reward.'"
+        },
+        {
+          "ref": "2 John 1:9",
+          "note": "'Whosoeuer transgresseth, and abideth not in the doctrine of Christ, hath not God. He that continueth in the doctrine of Christ, he hath both the Father and the Sonne.'"
+        },
+        {
+          "ref": "2 John 1:10-11",
+          "note": "'If there come any vnto you, and bring not this doctrine, receiue him not to house, neither bid him, God speede: For he that biddeth him, God speede, is partaker of his euill deedes.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'many deceiuers' and 'he that is such one, is a deceiuer' language is deliberately collective in the Geneva text too - no individual false teacher is named - so this tier stays a single warning rather than split into invented individual antagonists, per the collective-entry rule."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "elect_lady_identity": {
+      "ref": "2 John 1:1",
+      "note": "The address to 'the elect Lady' (Greek kyria) is read two ways by scholars: a literal individual woman and her literal children, or a figurative/metonymic address to a local church and its members - with 'thine elect sister' (v.13) then read as a sister congregation rather than a literal sibling. The Geneva text itself does not resolve which reading is correct, same as KJV; both are noted here rather than asserting one as fact, per the honest-ambiguity rule.",
+      "note2": "Whichever reading is correct, 'the elect sister' and her sons (v.13) are, by the same logic, either a literal aunt/cousins of the elect lady's children or a second, sister congregation and its members - kept out of the character roster as their own entry for the same reason the elect lady's own children are: neither collective is individually named or textually distinguished from the household/congregation it belongs to."
+    },
+    "unnamed_household": {
+      "ref": "2 John 1:1, 4, 13",
+      "note": "None of the elect lady's children, her sister, nor her sister's sons are individually named anywhere in the Geneva text."
+    },
+    "author_identity": {
+      "ref": "2 John 1:1",
+      "note": "The author identifies himself only as 'THE ELDER.' Tradition (based on stylistic and thematic overlap with the Gospel of John and 1 John) identifies him with the Apostle John, but this is not stated in the text itself and is flagged as tradition, not fact."
+    },
+    "translation_wording_notes": {
+      "ref": "2 John 1:12-13",
+      "note": "Two real wording divergences from the KJV rendering of this same book were found by direct comparison of the two texts: v.12 has 'speake mouth to mouth' where KJV has 'speak face to face'; v.13 has 'The sonnes of thine elect sister' where KJV has 'The children of thy elect sister.' Both are genuine translator word choices in this 1560 text, not extraction errors, and are preserved rather than normalized to KJV's wording."
+    }
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "book": "2 Corinthians",
+  "translation": "Ethiopian",
+  "canonicalOrder": 67,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian translation text (13 chapters, 257 verses) directly and compared verse-by-verse against the completed KJV 2Corinthians.json structural draft. Content is textually identical to KJV across every chapter checked (1:1 through 13:14) - same episodes, same argument structure, same wording differences only at the level of expected translation-house phrasing (e.g. minor punctuation/clause-break variations), no additional or missing verses, no Ethiopian-canon-specific expansions of the kind found in this translation's Ezra. This is a standard NT epistle shared across both canons, so the KJV tier structure/shape was adapted directly (re-verified against this translation's own text line-by-line, not assumed) rather than invented from scratch, per the task's own guidance for content-identical shared-canon books. All character ids suffixed '_ethiopian' to avoid cross-translation collision with the existing KJV ids (e.g. 'paul_2cor' -> 'paul_ethiopian_2cor'). Same structural logic as the KJV draft: Paul ('The Earthen Vessel,' full person tier carrying his autobiographical suffering catalogue, Damascus basket-escape, paradise vision, and thorn in the flesh) and Titus ('The Comfort of His Coming,' his search at Troas, arrival/comfort, and role in the Jerusalem collection) are the two person-type manager tiers; seven law/theme tiers cover comfort-in-affliction, the unequally-yoked/separation call, the offender's discipline-and-restoration, the veiled-vs-unveiled covenant glory, the ministry of reconciliation, the Jerusalem collection appeal, and the false-apostles/'angels of light' polemic (folding in chapter 10's warfare imagery and 'weighty letters, weak presence' criticism as the same continuous argument, matching the KJV draft's reasoning). Timothy and Silvanus remain minor loyalty-boost submanagers under Paul with no independent action in this book; same Silvanus/Silas naming-variant flag applies (same man, different name form, not a collision). The two unnamed 'brethren' sent with Titus (8:18, 8:22) are each individually described by the text with distinct qualities (renown 'in the gospel throughout all the churches' vs. 'oftentimes proved diligent'), so both are kept as separate submanagers rather than merged into one collective entry, matching the corrected KJV draft. The unnamed offender (2:5-11, 7:8-12) and the unnamed group of 'false apostles' (11:13) remain law tiers rather than invented individual profiles, since the text never names or individually differentiates them - same collective-entry rule as KJV. No real content differences from KJV were found in this book; this notes section exists specifically to document that a genuine line-by-line comparison was done, not skipped because 'it's probably the same.'",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Earthen Vessel",
+      "managerId": "paul_ethiopian_2cor",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Comfort of His Coming",
+      "managerId": "titus_ethiopian_2cor",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The God of All Comfort",
+      "managerId": "comfort_in_affliction_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Touch Not the Unclean Thing",
+      "managerId": "unequally_yoked_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Lest He Be Swallowed Up",
+      "managerId": "offender_discipline_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Veil Taken Away",
+      "managerId": "new_covenant_unveiled_glory_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Ambassadors for Christ",
+      "managerId": "ministry_of_reconciliation_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Cheerful Giver",
+      "managerId": "jerusalem_collection_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Angels of Light",
+      "managerId": "false_apostles_law_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_ethiopian_2cor",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:1",
+          "note": "Opens the letter as 'an apostle of Jesus Christ by the will of God,' with Timothy, to the church at Corinth and all the saints in Achaia."
+        },
+        {
+          "ref": "2 Corinthians 1:8-9",
+          "note": "Describes trouble in Asia so severe he 'despaired even of life' and 'had the sentence of death' in himself."
+        },
+        {
+          "ref": "2 Corinthians 1:23",
+          "note": "Calls God for a record upon his soul that it was to spare the Corinthians he did not yet return to Corinth."
+        },
+        {
+          "ref": "2 Corinthians 4:7-9",
+          "note": "'We have this treasure in earthen vessels' - troubled, perplexed, persecuted, cast down, but not destroyed; the book's central image for his own weakness carrying God's power."
+        },
+        {
+          "ref": "2 Corinthians 6:4-10",
+          "note": "Catalogues his ministry's hardships - stripes, imprisonments, tumults, labours, watchings, fastings."
+        },
+        {
+          "ref": "2 Corinthians 11:23-28",
+          "note": "The great autobiographical catalogue: five times forty stripes save one, thrice beaten with rods, once stoned, thrice shipwrecked, a night and a day in the deep, plus daily 'the care of all the churches.'"
+        },
+        {
+          "ref": "2 Corinthians 11:32-33",
+          "note": "Escapes Damascus, let down through a window in a basket, and so escapes the governor under Aretas the king."
+        },
+        {
+          "ref": "2 Corinthians 12:1-4",
+          "note": "Recounts a man in Christ (himself) caught up to the third heaven into paradise, hearing 'unspeakable words.'"
+        },
+        {
+          "ref": "2 Corinthians 12:7-9",
+          "note": "The thorn in the flesh, 'the messenger of Satan to buffet me' - three prayers for its removal answered with 'My grace is sufficient for thee: for my strength is made perfect in weakness.'"
+        },
+        {
+          "ref": "2 Corinthians 12:11-13",
+          "note": "Claims 'the signs of an apostle were wrought among you... in signs, and wonders, and mighty deeds,' and asks forgiveness, half-ironically, for refusing to be a financial burden to the Corinthians."
+        },
+        {
+          "ref": "2 Corinthians 13:1",
+          "note": "Announces this will be his third visit to Corinth, warning he will not spare offenders this time."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Scripture never states what the 'thorn in the flesh' actually was (12:7) - proposals are extra-biblical speculation, not textual fact.",
+        "'The very chiefest apostles' (11:5; 12:11) is genuinely ambiguous in the text - it may be sarcastic shorthand for the rival false apostles at Corinth, or the original Twelve; the text does not clarify which."
+      ]
+    },
+    {
+      "id": "titus_ethiopian_2cor",
+      "name": "Titus",
+      "role": "manager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 2:12-13",
+          "note": "Paul, given an open door at Troas, has 'no rest in my spirit' because he could not find Titus there, and departs for Macedonia."
+        },
+        {
+          "ref": "2 Corinthians 7:6-7",
+          "note": "'God, that comforteth those that are cast down, comforted us by the coming of Titus' - his arrival and report bring Paul relief."
+        },
+        {
+          "ref": "2 Corinthians 7:13-15",
+          "note": "Titus's own spirit was refreshed by the Corinthians, and his affection toward them is more abundant remembering their obedience, received 'with fear and trembling.'"
+        },
+        {
+          "ref": "2 Corinthians 8:6",
+          "note": "Titus had already begun organizing the Jerusalem collection among the Corinthians and is urged to finish it."
+        },
+        {
+          "ref": "2 Corinthians 8:16-17",
+          "note": "Titus accepts Paul's exhortation and, 'being more forward, of his own accord,' goes to Corinth himself."
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Paul calls him 'my partner and fellowhelper concerning you.'"
+        },
+        {
+          "ref": "2 Corinthians 12:18",
+          "note": "Paul recalls sending Titus (with 'a brother') to Corinth and defends that neither of them took advantage of the church."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Titus's report from Corinth is the direct occasion for most of chapters 1-7's tone of relief and reconciliation."
+      ]
+    },
+    {
+      "id": "timothy_ethiopian_2cor",
+      "name": "Timothy",
+      "role": "submanager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": "paul_ethiopian_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:1",
+          "note": "Named alongside Paul as co-sender: 'Paul... and Timothy our brother.'"
+        },
+        {
+          "ref": "2 Corinthians 1:19",
+          "note": "Named as one who, with Paul and Silvanus, preached Christ among the Corinthians."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "silvanus_ethiopian_2cor",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "The Earthen Vessel",
+      "parentManagerId": "paul_ethiopian_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:19",
+          "note": "Named with Paul and Timothy as one who preached the Son of God, Jesus Christ, among the Corinthians."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-variant flag, not a collision: this is the same man called 'Silas' in the book of Acts, a different form of the same name, not a second person."
+      ]
+    },
+    {
+      "id": "brother_renowned_in_gospel_ethiopian",
+      "name": "The Brother Renowned in the Gospel",
+      "role": "submanager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": "titus_ethiopian_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:18-19",
+          "note": "Described as the brother 'whose praise is in the gospel throughout all the churches,' and also chosen by the churches to travel with Paul administering the collection."
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Called, together with the second brother, 'the messengers of the churches, and the glory of Christ.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text. Some traditions guess his identity (e.g. Luke), but 2 Corinthians itself never names him, so no identity is asserted here."
+      ]
+    },
+    {
+      "id": "brother_often_proved_diligent_ethiopian",
+      "name": "The Brother Often Proved Diligent",
+      "role": "submanager",
+      "scribeTier": "The Comfort of His Coming",
+      "parentManagerId": "titus_ethiopian_2cor",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:22",
+          "note": "Described as 'our brother, whom we have oftentimes proved diligent in many things,' sent along with even greater confidence in the Corinthians."
+        },
+        {
+          "ref": "2 Corinthians 8:23",
+          "note": "Called, together with the first brother, 'the messengers of the churches, and the glory of Christ.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unnamed in the text; individually distinguished from the first brother by his own description, so kept as his own submanager rather than merged."
+      ]
+    },
+    {
+      "id": "comfort_in_affliction_law_ethiopian",
+      "name": "The God of All Comfort",
+      "role": "law",
+      "scribeTier": "The God of All Comfort",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Opens the letter by naming God as 'the Father of mercies, and the God of all comfort' who comforts believers in tribulation specifically so they can pass that comfort on to others in trouble - framing affliction as purposeful rather than meaningless.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 1:3-4",
+          "note": "'Blessed be God... the God of all comfort; Who comforteth us in all our tribulation, that we may be able to comfort them which are in any trouble.'"
+        },
+        {
+          "ref": "2 Corinthians 1:5-7",
+          "note": "'As the sufferings of Christ abound in us, so our consolation also aboundeth by Christ.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unequally_yoked_law_ethiopian",
+      "name": "Touch Not the Unclean Thing",
+      "role": "law",
+      "scribeTier": "Touch Not the Unclean Thing",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Instructs believers not to be 'unequally yoked together with unbelievers,' arguing righteousness and unrighteousness cannot genuinely partner - and calls the church to come out and be separate, on the promise God will receive them as sons and daughters, and to perfect holiness in the fear of God.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 6:14",
+          "note": "'Be ye not unequally yoked together with unbelievers: for what fellowship hath righteousness with unrighteousness? and what communion hath light with darkness?'"
+        },
+        {
+          "ref": "2 Corinthians 6:17",
+          "note": "'Come out from among them, and be ye separate, saith the Lord, and touch not the unclean thing; and I will receive you.'"
+        },
+        {
+          "ref": "2 Corinthians 7:1",
+          "note": "'Having therefore these promises, dearly beloved, let us cleanse ourselves from all filthiness of the flesh and spirit, perfecting holiness in the fear of God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "offender_discipline_law_ethiopian",
+      "name": "The Offender's Sorrow and Restoration",
+      "role": "law",
+      "scribeTier": "Lest He Be Swallowed Up",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Instructs the church on balancing discipline with restoration for a member who caused grief - the punishment already inflicted 'by many' is called sufficient, and the church is urged to forgive and comfort him so he isn't 'swallowed up with overmuch sorrow,' modeling godly sorrow that leads to repentance rather than despair.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 2:5-8",
+          "note": "'Sufficient to such a man is this punishment... forgive him, and comfort him, lest perhaps such a one should be swallowed up with overmuch sorrow... confirm your love toward him.'"
+        },
+        {
+          "ref": "2 Corinthians 7:8-11",
+          "note": "Paul does not regret the sorrow his earlier letter caused, since 'godly sorrow worketh repentance to salvation not to be repented of.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The offender is never named. Sometimes traditionally linked to the man disciplined in 1 Corinthians 5, but the text of 2 Corinthians itself never makes that connection explicit."
+      ]
+    },
+    {
+      "id": "new_covenant_unveiled_glory_law_ethiopian",
+      "name": "The Veil Taken Away",
+      "role": "law",
+      "scribeTier": "The Veil Taken Away",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Contrasts the old covenant (the letter, given through Moses with a fading, veiled glory) with the new covenant of the Spirit, whose glory is unveiled and increasing - explaining why suffering apostles can still carry surpassing, unfading power that is 'of God, and not of us.'",
+      "verses": [
+        {
+          "ref": "2 Corinthians 3:6",
+          "note": "God 'hath made us able ministers of the new testament; not of the letter, but of the spirit: for the letter killeth, but the spirit giveth life.'"
+        },
+        {
+          "ref": "2 Corinthians 3:13-16",
+          "note": "Recalls Moses putting a veil over his face, and states the veil 'is done away in Christ' - 'when it shall turn to the Lord, the veil shall be taken away.'"
+        },
+        {
+          "ref": "2 Corinthians 3:18",
+          "note": "'We all, with open face beholding as in a glass the glory of the Lord, are changed into the same image from glory to glory.'"
+        },
+        {
+          "ref": "2 Corinthians 4:6",
+          "note": "'God, who commanded the light to shine out of darkness, hath shined in our hearts, to give the light of the knowledge of the glory of God in the face of Jesus Christ.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ministry_of_reconciliation_law_ethiopian",
+      "name": "Ambassadors for Christ",
+      "role": "law",
+      "scribeTier": "Ambassadors for Christ",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Teaches the apostolic calling to carry God's message of reconciliation to the world - grounded in the hope of an eternal 'building of God' beyond the earthly body, the reality of standing before Christ's judgment seat, and the declaration that anyone in Christ is a new creature.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 5:1-4",
+          "note": "Contrasts the earthly 'tabernacle' of the body with 'a building of God, an house not made with hands, eternal in the heavens.'"
+        },
+        {
+          "ref": "2 Corinthians 5:8",
+          "note": "'Willing rather to be absent from the body, and to be present with the Lord.'"
+        },
+        {
+          "ref": "2 Corinthians 5:10",
+          "note": "'We must all appear before the judgment seat of Christ.'"
+        },
+        {
+          "ref": "2 Corinthians 5:17",
+          "note": "'If any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.'"
+        },
+        {
+          "ref": "2 Corinthians 5:18-20",
+          "note": "God has given 'the ministry of reconciliation,' and believers are declared 'ambassadors for Christ.'"
+        },
+        {
+          "ref": "2 Corinthians 5:21",
+          "note": "'He hath made him to be sin for us, who knew no sin; that we might be made the righteousness of God in him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jerusalem_collection_law_ethiopian",
+      "name": "The Cheerful Giver",
+      "role": "law",
+      "scribeTier": "The Cheerful Giver",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Appeals for the Corinthians to complete their promised gift for the saints, using the Macedonian churches' generosity despite deep poverty as an example and Christ's own voluntary poverty as the ultimate model - insisting giving must come from a willing mind, not compulsion, since 'God loveth a cheerful giver.'",
+      "verses": [
+        {
+          "ref": "2 Corinthians 8:1-5",
+          "note": "The churches of Macedonia, out of 'deep poverty,' gave beyond their power, first giving 'their own selves to the Lord.'"
+        },
+        {
+          "ref": "2 Corinthians 8:9",
+          "note": "'Though he was rich, yet for your sakes he became poor, that ye through his poverty might be rich' - Christ as the model for the appeal."
+        },
+        {
+          "ref": "2 Corinthians 8:12",
+          "note": "'If there be first a willing mind, it is accepted according to that a man hath, and not according to that he hath not.'"
+        },
+        {
+          "ref": "2 Corinthians 9:6-7",
+          "note": "'He which soweth sparingly shall reap also sparingly... God loveth a cheerful giver.'"
+        },
+        {
+          "ref": "2 Corinthians 9:15",
+          "note": "'Thanks be unto God for his unspeakable gift.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "false_apostles_law_ethiopian",
+      "name": "Angels of Light",
+      "role": "law",
+      "scribeTier": "Angels of Light",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2cor",
+      "purpose": "Warns the Corinthian church against rival teachers preaching 'another Jesus' and commending themselves, exposing their self-commendation as counterfeit ministry - beginning in chapter 10 with Paul's declaration that the weapons of his warfare are 'mighty through God' for pulling down strongholds, and his answer to the charge that his letters are 'weighty and powerful' while his 'bodily presence is weak': only the Lord's commendation counts. Since even Satan can appear as 'an angel of light,' true apostleship is marked by suffering and weakness, not polished self-promotion.",
+      "verses": [
+        {
+          "ref": "2 Corinthians 10:3-5",
+          "note": "'Though we walk in the flesh, we do not war after the flesh... casting down imaginations, and every high thing that exalteth itself against the knowledge of God, and bringing into captivity every thought to the obedience of Christ.'"
+        },
+        {
+          "ref": "2 Corinthians 10:10",
+          "note": "Quotes the criticism against him: 'His letters, say they, are weighty and powerful; but his bodily presence is weak, and his speech contemptible.'"
+        },
+        {
+          "ref": "2 Corinthians 10:17-18",
+          "note": "'He that glorieth, let him glory in the Lord. For not he that commendeth himself is approved, but whom the Lord commendeth.'"
+        },
+        {
+          "ref": "2 Corinthians 11:4",
+          "note": "Warns against bearing with one who 'preacheth another Jesus, whom we have not preached.'"
+        },
+        {
+          "ref": "2 Corinthians 11:13",
+          "note": "'Such are false apostles, deceitful workers, transforming themselves into the apostles of Christ.'"
+        },
+        {
+          "ref": "2 Corinthians 11:14-15",
+          "note": "'Satan himself is transformed into an angel of light. Therefore it is no great thing if his ministers also be transformed as the ministers of righteousness.'"
+        },
+        {
+          "ref": "2 Corinthians 11:22-23",
+          "note": "Paul's rhetorical self-comparison against them - 'Are they Hebrews? so am I... Are they ministers of Christ?... I am more.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A collective, unnamed group in the text - never individually differentiated by name, so no invented individual profiles are created, per the collective-entry rule.",
+        "Chapter 10's warfare imagery and the 'weighty letters, weak presence' criticism are Paul's opening move in the same polemic that chapters 11-13 name explicitly as 'false apostles' - kept in one tier since the text treats it as a single continuous argument."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "churchOfCorinth": {
+      "ref": "2 Corinthians 1:1",
+      "note": "The letter's addressee, 'the church of God which is at Corinth, with all the saints which are in all Achaia' - the recipient body, not an individual character."
+    },
+    "churchesOfMacedonia": {
+      "ref": "2 Corinthians 8:1-5",
+      "note": "Referenced collectively as the example of generosity that opens the giving appeal; not individually named or differentiated by congregation."
+    },
+    "unnamedOffenderTradition": {
+      "ref": "2 Corinthians 2:5-8; compare 1 Corinthians 5:1-5",
+      "note": "A traditional (not textually confirmed) link between the offender disciplined here and the man disciplined in 1 Corinthians 5 - 2 Corinthians itself never makes this connection explicit, so it is logged here as unresolved rather than merged into the offender's entry as fact."
+    }
+  }
+}

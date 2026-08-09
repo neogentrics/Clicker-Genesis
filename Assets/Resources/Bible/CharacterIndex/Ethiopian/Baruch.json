@@ -1,0 +1,280 @@
+{
+  "book": "Baruch",
+  "translation": "Ethiopian",
+  "canonicalOrder": 39,
+  "status": "drafted via direct reading of the real extracted verse text (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Ethiopian/baruch_39.json), not yet adversarially fact-checked or corrected",
+  "notes": "This book does not exist in the KJV canon at all - it's a deuterocanonical text unique to this translation's broader canon (matching the standard Greek/LXX \"Book of Baruch\" tradition, associated with Jeremiah's scribe). Verse count confirmed by direct chapter tally (22+35+37+37+9=140), matching the given canonicalOrder metadata. Structurally the book is almost entirely non-narrative after its opening frame: only chapter 1 has real embodied action (Baruch writing/reading/organizing the collection, Jechonias as audience, Joachim the high priest receiving the offering at Jerusalem) - chapters 1:15 through the end of chapter 5 are a continuous confession-prayer/wisdom-hymn/personified-lament composition, which is why this book uses one Person tier (Baruch) plus four Law/theme tiers rather than trying to force additional named \"characters\" out of a poetic composition. All four law tiers are attributed (deliveredBy) to Baruch himself, since the text explicitly frames the ENTIRE book, including the sections where personified Jerusalem is the speaking voice, as \"the words of the book which Baruch...wrote\" (1:1) and later instructs the community to read this same book at Jerusalem (1:14) - the personified-Zion sections are a literary device within Baruch's own composition, not a separate author, so no name was invented for a second \"speaker.\" Two real naming collisions found and kept explicitly separate, not merged: (1) \"Joachim\" appears twice in chapter 1 as two different men - Joachim king of Juda (Jechonias's father, i.e. Jehoiakim, mentioned only in passing at 1:3) versus Joachim the high priest, son of Chelcias, son of Salom (1:7-8, who actually receives Baruch's letter and the temple vessels at Jerusalem and is the one indexed here as a submanager); (2) \"Sedecias\" also appears twice - once as an ancestor in Baruch's own five-generation lineage (1:1, no other role in the book) and once as Sedecias son of Josias, king of Juda, who made the silver vessels later recovered and sent back (1:8, i.e. King Zedekiah) - kept as a background genealogyLists reference only, not indexed as a character since he takes no action in this book. Nebuchadnezzar and his son Balthasar (Belshazzar) are named only as figures the exiles are told to pray for (1:11-12) and are not developed as acting characters here, so they are logged in genealogyLists rather than given their own tier.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Exile's Scroll",
+      "managerId": "baruch_ethiopian_baruch",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Confession of Exile",
+      "managerId": "confession_of_exile_ethiopian_baruch",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Hymn of Wisdom",
+      "managerId": "wisdom_hymn_ethiopian_baruch",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Zion's Lament",
+      "managerId": "zions_lament_ethiopian_baruch",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Robe of Righteousness",
+      "managerId": "robe_of_righteousness_ethiopian_baruch",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "baruch_ethiopian_baruch",
+      "name": "Baruch",
+      "role": "manager",
+      "scribeTier": "The Exile's Scroll",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Nerias (Neriah) - the text also gives a fuller four-generation lineage back through Nerias's own father Maasias, then Sedecias, Asadias, and Chelcias, per Baruch 1:1",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:1",
+          "note": "Named as the author, son of Nerias, writing this book in Babylon; his full five-generation lineage is given."
+        },
+        {
+          "ref": "Baruch 1:2",
+          "note": "Dates the writing to the fifth year, seventh day of the month - the time the Chaldeans took and burned Jerusalem."
+        },
+        {
+          "ref": "Baruch 1:3-4",
+          "note": "Reads the book aloud in the hearing of Jechonias (the exiled king), the nobles, the king's sons, the elders, and all the people at Babylon by the river Sud."
+        },
+        {
+          "ref": "Baruch 1:6-7",
+          "note": "Organizes a collection of money from the exiled community and sends it to Jerusalem to Joachim the high priest and the priests and people there."
+        },
+        {
+          "ref": "Baruch 1:8",
+          "note": "Sends back with the collection the silver vessels of the Lord's house that had been carried out of the temple, to be restored to the land of Juda."
+        },
+        {
+          "ref": "Baruch 1:14",
+          "note": "Instructs that this same book be read in the house of the Lord at Jerusalem on feast and solemn days, to make confession."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified with the same Baruch son of Neriah who served as the prophet Jeremiah's personal scribe (Jeremiah 36) - though this book itself does not mention Jeremiah.",
+        "Baruch 3:37, part of the Wisdom Hymn attributed to his book, reads 'afterward did he shew himself upon earth, and conversed with men' - a line later Christian readers took special interest in, though the text itself does not name who is meant."
+      ]
+    },
+    {
+      "id": "jechonias_ethiopian_baruch",
+      "name": "Jechonias",
+      "role": "submanager",
+      "scribeTier": "The Exile's Scroll",
+      "parentManagerId": "baruch_ethiopian_baruch",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Joachim, king of Juda (named in Baruch 1:3 - not to be confused with Joachim the high priest of 1:7, a different man - unindexed reference beyond this book)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:3",
+          "note": "Named as the exiled king of Judah in whose hearing Baruch first reads the book at Babylon."
+        },
+        {
+          "ref": "Baruch 1:9",
+          "note": "Identified as among those Nebuchadnezzar carried away captive from Jerusalem to Babylon, along with the princes and mighty men."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Historically known outside this book as Jehoiachin (also called Coniah), the deposed king of Judah exiled to Babylon in his youth."
+      ]
+    },
+    {
+      "id": "joachim_highpriest_ethiopian_baruch",
+      "name": "Joachim the High Priest",
+      "role": "submanager",
+      "scribeTier": "The Exile's Scroll",
+      "parentManagerId": "baruch_ethiopian_baruch",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Chelcias, son of Salom (Baruch 1:7)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:7",
+          "note": "Receives Baruch's letter and the collected money at Jerusalem, alongside the priests and the people found with him."
+        },
+        {
+          "ref": "Baruch 1:8",
+          "note": "Receives back the silver vessels of the Lord's house - which Sedecias son of Josias, king of Juda, had made - to be returned to the land of Juda."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A different man from the other Joachim named earlier in the same chapter (1:3) - that one is Jechonias's father, a king, not a priest; the text genuinely uses the name Joachim for two distinct people within eight verses of each other."
+      ]
+    },
+    {
+      "id": "confession_of_exile_ethiopian_baruch",
+      "name": "The Confession of Exile",
+      "role": "law",
+      "scribeTier": "The Confession of Exile",
+      "parentManagerId": null,
+      "deliveredBy": "baruch_ethiopian_baruch",
+      "purpose": "A scripted communal confession, instructing the exiles to publicly acknowledge before God that Israel's captivity is deserved punishment for disobeying the law given through Moses at the Exodus - invoking the covenant curses, admitting the horror of the siege-famine (children eaten, per Moses' own warning), and appealing to God's mercy through his everlasting covenant with Abraham, Isaac, and Jacob.",
+      "verses": [
+        {
+          "ref": "Baruch 1:15-18",
+          "note": "Confession opens: 'to the Lord our God belongeth righteousness, but unto us the confusion of faces' - acknowledging disobedience going back to the Exodus from Egypt."
+        },
+        {
+          "ref": "Baruch 2:2-3",
+          "note": "States that God brought plagues never before seen, including that a man would 'eat the flesh of his own son, and...daughter' - referencing the siege-famine curse from the law of Moses."
+        },
+        {
+          "ref": "Baruch 2:11-19",
+          "note": "Appeals to God who brought Israel out of Egypt with signs and wonders, arguing that only the living, penitent soul - not the dead - can truly praise him."
+        },
+        {
+          "ref": "Baruch 2:27-35",
+          "note": "Recalls the words God spoke through Moses when the law was written - that Israel would be scattered for disobedience but ultimately remembered and restored under an everlasting covenant."
+        },
+        {
+          "ref": "Baruch 3:1-8",
+          "note": "Closing plea, comparing Israel's suffering among the nations to that of the dead, asking God to remember his own name and mercy rather than the people's guilt."
+        }
+      ]
+    },
+    {
+      "id": "wisdom_hymn_ethiopian_baruch",
+      "name": "The Hymn of Wisdom",
+      "role": "law",
+      "scribeTier": "The Hymn of Wisdom",
+      "parentManagerId": null,
+      "deliveredBy": "baruch_ethiopian_baruch",
+      "purpose": "A hymn teaching that true wisdom - called 'the commandments of life' - was never found by the great, wealthy, or powerful nations, nor even by the legendary giants of old, because none of them were chosen by God; wisdom was instead given uniquely to Israel/Jacob through the law, which this hymn identifies as the same book of God's commandments Baruch has written.",
+      "verses": [
+        {
+          "ref": "Baruch 3:9-11",
+          "note": "Opening call: 'Hear, Israel, the commandments of life: give ear to understand wisdom.'"
+        },
+        {
+          "ref": "Baruch 3:16-19",
+          "note": "The mighty rulers of the earth who hoarded silver and gold and had 'their pastime with the fowls of the air' have vanished and gone down to the grave, forgotten."
+        },
+        {
+          "ref": "Baruch 3:26-28",
+          "note": "Describes 'giants famous from the beginning...so expert in war' who were destroyed because they had no wisdom and were not chosen by God."
+        },
+        {
+          "ref": "Baruch 3:29-32",
+          "note": "No one has gone up to heaven or crossed the sea to bring wisdom back; only God himself, who prepared the earth, truly knows her."
+        },
+        {
+          "ref": "Baruch 3:36-37",
+          "note": "God gives the way of knowledge to 'Jacob his servant, and to Israel his beloved,' and 'afterward did he shew himself upon earth, and conversed with men.'"
+        },
+        {
+          "ref": "Baruch 4:1",
+          "note": "Identifies 'the book of the commandments of God, and the law that endureth for ever' as this very wisdom - life for those who keep it, death for those who forsake it."
+        }
+      ]
+    },
+    {
+      "id": "zions_lament_ethiopian_baruch",
+      "name": "Zion's Lament",
+      "role": "law",
+      "scribeTier": "Zion's Lament",
+      "parentManagerId": null,
+      "deliveredBy": "baruch_ethiopian_baruch",
+      "purpose": "Jerusalem is personified as a grieving widow and mother, speaking directly to her exiled children (Israel) - mourning their captivity as just punishment for departing from God's law, yet urging them not to lose hope, since the same God who sent the plague upon them will also send their salvation.",
+      "verses": [
+        {
+          "ref": "Baruch 4:9-16",
+          "note": "The personified Jerusalem describes watching God's wrath fall on her sons and daughters, who were carried off by a 'shameless nation' that had no pity on old man or child."
+        },
+        {
+          "ref": "Baruch 4:19-20",
+          "note": "'Go your way, O my children, go your way: for I am left desolate' - Jerusalem laments being left alone, having put on sackcloth in mourning."
+        },
+        {
+          "ref": "Baruch 4:21-23",
+          "note": "Jerusalem urges her children to cry out to the Lord, promising that he will deliver them from their enemies and restore them to her with joy."
+        },
+        {
+          "ref": "Baruch 4:30-32",
+          "note": "Direct comfort addressed to 'Jerusalem' by name; those who afflicted her are declared miserable, and the city that received her exiled children will itself be desolated in turn."
+        },
+        {
+          "ref": "Baruch 4:36-37",
+          "note": "Closes looking toward the children's return, gathered 'from the east to the west' by the word of the Holy One, rejoicing."
+        }
+      ]
+    },
+    {
+      "id": "robe_of_righteousness_ethiopian_baruch",
+      "name": "The Robe of Righteousness",
+      "role": "law",
+      "scribeTier": "The Robe of Righteousness",
+      "parentManagerId": null,
+      "deliveredBy": "baruch_ethiopian_baruch",
+      "purpose": "A closing vision of Jerusalem's restoration: she is told to exchange her mourning garments for God's own glory, and the exiles' road home is pictured as a great leveled highway - high hills brought low, valleys filled, shaded by trees - as God personally leads Israel back in triumph.",
+      "verses": [
+        {
+          "ref": "Baruch 5:1-2",
+          "note": "Jerusalem told to 'put off the garment of mourning and affliction' and put on 'the comeliness of the glory that cometh from God for ever.'"
+        },
+        {
+          "ref": "Baruch 5:5-6",
+          "note": "Jerusalem told to stand on high and watch her children gathered 'from the west unto the east,' returning exalted as 'children of the kingdom.'"
+        },
+        {
+          "ref": "Baruch 5:7",
+          "note": "God levels every high hill and fills every valley so the ground is made even, letting Israel travel safely in his glory."
+        },
+        {
+          "ref": "Baruch 5:9",
+          "note": "Closing line: God will lead Israel with joy, in the light of his glory, with the mercy and righteousness that comes from him."
+        }
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved background references, kept out of the main character list above since these figures take no action of their own in this book.",
+    "baruchsForefathers": {
+      "ref": "Baruch 1:1",
+      "note": "Baruch's own four-generation ancestral chain given in full - son of Nerias, son of Maasias, son of Sedecias, son of Asadias, son of Chelcias. None of these ancestors appear elsewhere in the book, and this Sedecias is a different man from the King Sedecias named in 1:8."
+    },
+    "recoveredVesselMaker": {
+      "ref": "Baruch 1:8",
+      "note": "Sedecias son of Josias, king of Juda (i.e. King Zedekiah), is named only as the one who had made the silver vessels later recovered from the temple and sent back to Jerusalem - not developed as an acting character in this book, and a different man from the Sedecias in Baruch's own lineage above."
+    },
+    "babylonianRoyalty": {
+      "ref": "Baruch 1:9, 1:11-12",
+      "note": "Nabuchodonosor (Nebuchadnezzar) king of Babylon is named as the one who carried Jechonias and the exiles away, and the exiles are instructed to pray for his life and that of his son Balthasar (Belshazzar) - both named only as figures prayed for/about, not as characters who act within this book's narrative."
+    }
+  }
+}

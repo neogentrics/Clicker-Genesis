@@ -1,0 +1,280 @@
+{
+  "book": "Haggai",
+  "translation": "Geneva",
+  "canonicalOrder": 37,
+  "status": "drafted directly from the real extracted Geneva Bible (1560) verse text at Assets/Resources/Verses/Geneva/haggai_37.json, cross-checked against the completed KJV Character Index entry for tier-naming-style inspiration only",
+  "notes": "Geneva's Haggai (2 chapters, 14+23=37 verses) matches the standard canon's content and structure exactly - same four dated oracles, same two named human addressees, same two law/theme passages. No real structural or content divergence from the familiar canon was found (unlike this project's confirmed Ethiopian-Ezra case) - the differences here are purely orthographic/translational: this 1560 text spells the high priest's father \"Iehozadak\" (not KJV's \"Josedech\") and the high priest himself \"Iehoshua\" (not \"Joshua\"), and uses archaic spellings throughout (\"sonne,\" \"hie Priest,\" \"moneth,\" \"sieled houses,\" \"vpon,\" \"wil\"). Character ids are suffixed \"_geneva\" specifically to avoid colliding with the already-built KJV CharacterIndex ids (which use \"joshua_son_of_josedech\" for the same figure under KJV's spelling). A real text-quality artifact was found in the extracted 2:23 verse text: a stray, out-of-place editorial-looking fragment \"(Haggai : )\" sits mid-sentence between \"sword of his brother.\" and \"In that day,\" and the verse's closing \"sayth the Lord of hoste\" is missing its final \"s\" (should read \"hostes,\" matching the phrase's use everywhere else in the book) - both read as extraction/OCR artifacts from the source file rather than genuine 1560 printed text, flagged here per the project's rule against silently altering or guessing at scripture; the verse's substantive content is otherwise intact and unaltered. As in the KJV version, no submanagers were warranted - the \"remnant of the people\" acts only as an undifferentiated group, cited within the entries whose actions they join rather than given a separate entry. Naming-collision flag carried over: this book's Iehoshua (son of Iehozadak, the high priest returned from Babylon) is a different person from Iehoshua/Joshua the son of Nun, Moses' successor - name only, no relation.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Prophet's Scroll",
+      "managerId": "haggai_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Governor's Signet",
+      "managerId": "zerubbabel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "High Priest's Mitre",
+      "managerId": "iehoshua_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Temple Cornerstone",
+      "managerId": "temple_rebuilding_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Priestly Ruling",
+      "managerId": "priestly_ruling_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "haggai_geneva",
+      "name": "Haggai the Prophet",
+      "role": "manager",
+      "scribeTier": "Prophet's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy or tribal background is given for Haggai anywhere in this text - he is introduced in 1:1 simply as \"the Prophet Haggai,\" through whose \"ministery\" the word of the Lord comes."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "\"In the second yeere of King Darius... came ye worde of the Lord (by the ministery of the Prophet Haggai) vnto Zerubbabel... and to Iehoshua...\""
+        },
+        {
+          "ref": "Haggai 1:2-4",
+          "note": "Speaks the Lord's rebuke: the people say \"the time is not yet come\" to build the Lord's House, while dwelling in their own \"sieled houses.\""
+        },
+        {
+          "ref": "Haggai 1:5-11",
+          "note": "Delivers the charge to \"consider your owne wayes\" (repeated twice) and ties the people's poor harvests, hunger, and drought directly to the Temple lying waste."
+        },
+        {
+          "ref": "Haggai 1:12-13",
+          "note": "The people fear before the Lord on hearing \"the wordes of the Prophet Haggai\"; he is called \"the Lords messenger,\" delivering \"I am with you, sayth the Lord.\""
+        },
+        {
+          "ref": "Haggai 2:1-9",
+          "note": "Second message: encourages the discouraged builders who remember the first Temple's glory, promising \"the glory of this last House shall be greater then the first.\""
+        },
+        {
+          "ref": "Haggai 2:10-14",
+          "note": "At the Lord's instruction, poses the two ceremonial-law questions to the priests and applies their answers to the nation's uncleanness."
+        },
+        {
+          "ref": "Haggai 2:15-19",
+          "note": "Recalls the recent blasting, mildew, and hail, then marks the day of the Temple's (re-)founding as the turning point: \"from this day will I blesse you.\""
+        },
+        {
+          "ref": "Haggai 2:20-23",
+          "note": "Receives the final oracle concerning Zerubbabel alone, delivered \"the second time\" in the same day."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book is precisely dated across all four of his messages (1:1; implied again 1:15; 2:1; 2:10; 2:20), covering only a few months within Darius's second year.",
+        "Uniquely titled \"the Lords messenger\" in 1:13, rather than only the standard \"thus sayth the Lord\" formula."
+      ]
+    },
+    {
+      "id": "zerubbabel_geneva",
+      "name": "Zerubbabel the sonne of Shealtiel",
+      "role": "manager",
+      "scribeTier": "Governor's Signet",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Shealtiel",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called \"the sonne of Shealtiel\" throughout this text (1:1, 1:12, 1:14, 2:2, 2:23) - the Geneva spelling \"Shealtiel\" matches the KJV form exactly here, unlike the Iehoshua/Joshua spelling divergence elsewhere in this same book."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "Addressed alongside Iehoshua as \"a prince of Iudah\" - the book's civil-authority addressee."
+        },
+        {
+          "ref": "Haggai 1:12",
+          "note": "Heard \"the voyce of the Lord their God, and the wordes of the Prophet Haggai\" along with Iehoshua and the remnant of the people, and feared before the Lord."
+        },
+        {
+          "ref": "Haggai 1:14",
+          "note": "\"The Lord stirred vp the spirite of Zerubbabel... and they came, and did the worke in the House of the Lord.\""
+        },
+        {
+          "ref": "Haggai 2:4",
+          "note": "Told directly, \"be of good courage, O Zerubbabel, sayth the Lord... for I am with you.\""
+        },
+        {
+          "ref": "Haggai 2:21-23",
+          "note": "Final oracle addressed to him alone: the Lord will \"shake the heauens and the earth,\" overthrow the thrones and strength of kingdoms, and make Zerubbabel \"as a signet\": \"for I haue chosen thee, sayth the Lord of hoste[s].\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called \"a prince of Iudah\" in this text (1:1), a Persian-appointed provincial office, not a throne - Judah had no king at this time.",
+        "The signet imagery of 2:23 directly answers the earlier prophetic image (elsewhere in scripture) of a signet being plucked off - this text restates it as being given back to Shealtiel's line."
+      ]
+    },
+    {
+      "id": "iehoshua_geneva",
+      "name": "Iehoshua the sonne of Iehozadak, the hie Priest",
+      "role": "manager",
+      "scribeTier": "High Priest's Mitre",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Iehozadak",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "This Geneva text spells his name \"Iehoshua\" and his father's \"Iehozadak\" (1:1, 1:12, 1:14, 2:2, 2:4) - both distinct from the KJV spellings \"Joshua\"/\"Josedech\" used for the same figure. Naming collision flag: this Iehoshua is a different person from Iehoshua/Joshua the sonne of Nun, Moses' successor who led Israel into Canaan generations earlier - name only, no relation."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "Addressed alongside Zerubbabel as \"the hie Priest\" - the book's religious-authority addressee."
+        },
+        {
+          "ref": "Haggai 1:12",
+          "note": "Heard the voice of the Lord and Haggai's words along with Zerubbabel and the remnant of the people, and feared before the Lord."
+        },
+        {
+          "ref": "Haggai 1:14",
+          "note": "\"The Lord stirred vp... the spirit of Iehoshua the sonne of Iehozadak the hie Priest\" to begin the Temple work."
+        },
+        {
+          "ref": "Haggai 2:4",
+          "note": "Told directly, \"be of good comfort, O Iehoshua, sonne of Iehozadak the hie Priest... for I am with you.\""
+        },
+        {
+          "ref": "Haggai 2:10-14",
+          "note": "Present as the priestly-office holder when Haggai poses the Lord's ceremonial-law question to \"the Priests.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Paired with Zerubbabel as joint addressee of every message in the book - civil and religious leadership approached together throughout."
+      ]
+    },
+    {
+      "id": "temple_rebuilding_geneva",
+      "name": "The Building of the Lords House",
+      "role": "law",
+      "scribeTier": "Temple Cornerstone",
+      "parentManagerId": null,
+      "deliveredBy": "haggai_geneva",
+      "purpose": "To reorder the returned exiles' priorities after they had let the Temple's rebuilding stall while finishing their own paneled (\"sieled\") houses (1:2-4, 1:9). Recent crop failure, hunger, and drought are tied directly to this neglect (1:6, 1:10-11), and once work resumes, the rebuilt \"last House\" is promised to exceed the former Temple's glory (2:9), with blessing dated from the very day the foundation work resumes (2:18-19).",
+      "verses": [
+        {
+          "ref": "Haggai 1:2-4",
+          "note": "The people say \"the time is not yet come\" to build, while living in their own \"sieled houses\" - the charge that opens the book."
+        },
+        {
+          "ref": "Haggai 1:6-11",
+          "note": "Poor harvests, hunger, thirst, and drought \"vpon the corne, and vpon the wine, and vpon the oyle\" explained as consequence of the House lying waste."
+        },
+        {
+          "ref": "Haggai 1:14-15",
+          "note": "The people \"came, and did the worke in the House of the Lord of hostes their God.\""
+        },
+        {
+          "ref": "Haggai 2:3-9",
+          "note": "Compares the new, modest-looking foundation to the House's \"first glory,\" but promises \"the glory of this last House shall be greater then the first... in this place will I giue peace.\""
+        },
+        {
+          "ref": "Haggai 2:18-19",
+          "note": "Marks \"the day that the foundation of the Lords Temple was laide\" as the turning point: \"from this day will I blesse you.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text's language of the Temple lying waste while foundation-work has already begun implies rebuilding resumed rather than started from nothing - consistent with a foundation laid years earlier that had since stalled."
+      ]
+    },
+    {
+      "id": "priestly_ruling_geneva",
+      "name": "The Priests' Ruling Concerning the Law",
+      "role": "law",
+      "scribeTier": "Priestly Ruling",
+      "parentManagerId": null,
+      "deliveredBy": "haggai_geneva",
+      "purpose": "At the Lord's own instruction (2:12), Haggai asks the Priests two hypothetical questions: whether holy flesh carried in a garment's skirt sanctifies bread, pottage, wine, oil, or meat it touches (answered No), and whether a person made unclean by contact defiles those same things by touching them (answered \"it shalbe vncleane\"). The lesson applied in 2:14-15: \"so is this people, and so is this nation before me... and that which they offer here, is vncleane\" - uncleanness spreads by contact where holiness does not, explaining the nation's fruitless labor before the Temple work resumed.",
+      "verses": [
+        {
+          "ref": "Haggai 2:12-13",
+          "note": "The Lord instructs Haggai to \"aske nowe the Priests concerning the Law\"; the two hypothetical questions and the Priests' answers (\"No\" / \"It shalbe vncleane\")."
+        },
+        {
+          "ref": "Haggai 2:14-15",
+          "note": "Haggai's application: \"So is this people, and so is this nation before me, saith the Lord: and so are all the workes of their hands, and that which they offer here, is vncleane.\""
+        },
+        {
+          "ref": "Haggai 2:16-18",
+          "note": "Recalls the earlier shortfall (heaps of twenty measures yielding but ten) and \"I smote you with blasting, and with mildewe, and with haile,\" as consequence before the work resumed."
+        },
+        {
+          "ref": "Haggai 2:19",
+          "note": "Marks the same day as the turning point: seed not yet in the barn, vine/fig/pomegranate/olive not yet fruited - \"from this day will I blesse you.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A rare case of a prophet formally consulting priests for a technical ceremonial-law ruling before delivering his own application of it."
+      ]
+    },
+    {
+      "id": "darius_geneva",
+      "name": "King Darius",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy given - Darius functions purely as a dating anchor in this text, never appearing as an active participant."
+      },
+      "verses": [
+        {
+          "ref": "Haggai 1:1",
+          "note": "\"In the second yeere of King Darius, in the sixt moneth, the first day of the moneth\" - opens the book's dating formula."
+        },
+        {
+          "ref": "Haggai 2:1",
+          "note": "\"In the foure and twentieth day of the sixt moneth, in the second yeere of King Darius\" - dates the second message."
+        },
+        {
+          "ref": "Haggai 2:11",
+          "note": "\"In the second yeere of Darius\" - dates the priests'-ruling message."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text gives no identifying detail beyond \"King Darius\" - conventionally read as Darius I of Persia based on the book's historical setting, not stated in the text itself.",
+        "Naming collision flag (carried over from the wider canon): other kings named Darius appear elsewhere in scripture (\"Darius the Mede,\" \"Darius the Persian\") and are conventionally treated as different rulers, though this book itself draws no such distinction since it never needs to."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references in this book - every named figure (Haggai, Zerubbabel, Iehoshua, Darius) is already captured as an individual character entry above."
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "book": "Bel and the Dragon",
+  "translation": "Ethiopian",
+  "canonicalOrder": 45,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Short 1-chapter/42-verse apocryphal tale in three linked episodes (Bel, the Dragon, the lions' den), all narrative rather than legal/ritual instruction, so every tier is person-type — no law tiers were needed here, unlike Leviticus/Deuteronomy-shaped books. Daniel is the through-line and is given TWO scribe tiers (Bel's Table for the flour-idol exposure, Lions' Den for his own ordeal) rather than one, matching the established precedent of a single figure carrying multiple tiers when they are personally, distinctly embodied in more than one major scene (same logic as Aaron across Exodus/Leviticus). The 70 priests of Bel (v.10) are an undifferentiated named group per rule 5 and were NOT individuated — kept as one collective submanager under Cyrus, since it's the king's own priesthood/court that Daniel exposes. Likewise \"they of Babylon\" (v.28-29) who conspire and force the king's hand are a genuine plot-driving collective (their pressure directly causes Daniel's condemnation, satisfying rule 3's \"changes the scene's outcome\" test) and were promoted to their own full tier/manager rather than folded silently into Cyrus's row. The dragon/serpent (v.23-27) is treated as its own manager tier — it is a worshipped, described-as-living antagonist whose destruction is a distinct major beat, not mere scenery. Habbacuc (Ethiopian-translation spelling of Habakkuk) is given his own tier for the miraculous meal-delivery episode; the angel of the Lord who carries him by the hair (v.36) is a real actor who changes the outcome but is not itself a self-sufficient scene (it exists only to serve Habbacuc's mission), so it was kept as a submanager under Habbacuc rather than promoted to a full tier. NAMING/CONTINUITY NOTE: this \"Habbacuc\" is NOT asserted to be the same historical figure as the canonical prophet Habakkuk of the OT book bearing that name — the apocryphal text itself gives no genealogy or explicit identifying link beyond the shared name and prophetic title (\"a prophet in Jewry\"), and the story's placement under Cyrus of Persia (v.1) is chronologically difficult to reconcile with the canonical Habakkuk's usual dating; flagged rather than merged. King Astyages (v.1) is mentioned only as having just died before the story begins — no action, no dialogue, not indexed as a character, logged only in genealogyLists. The seven lions (v.32) and Bel's priests' unnamed wives/children are not individuated, per rule 5. VERIFICATION PASS (this correction round): re-checked every verse note against the real extracted text at Assets/Resources/Verses/Ethiopian/bel_and_the_dragon_45.json — the flagged v.24 (Cyrus pressing Daniel to worship the dragon) and v.22 (Bel/temple destroyed and delivered to Daniel's power) notes are accurate paraphrases, not errors. No invented characters, no wrong verse references, no missed naming collisions, no wording mismatches were found; all referenced managerId/parentManagerId values resolve to real characters and no dangling references or empty required arrays exist. Draft required no structural or factual corrections and is returned as-is.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Bel's Table",
+      "managerId": "daniel_bel_dragon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "King's Signet",
+      "managerId": "cyrus_bel_dragon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Dragon of Babylon",
+      "managerId": "dragon_of_babylon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Mob at the Gate",
+      "managerId": "people_of_babylon_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Habbacuc's Pottage",
+      "managerId": "habbacuc_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Lions' Den",
+      "managerId": "daniel_bel_dragon_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "daniel_bel_dragon_ethiopian",
+      "name": "Daniel",
+      "role": "manager",
+      "scribeTier": "Bel's Table",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:2",
+          "note": "Conversed with the king and was honoured above all his friends."
+        },
+        {
+          "ref": "Bel and the Dragon 1:4-5",
+          "note": "Refuses to worship Bel, worships only the living God who created heaven and earth."
+        },
+        {
+          "ref": "Bel and the Dragon 1:7",
+          "note": "Tells the king Bel is only clay and brass, never eating or drinking."
+        },
+        {
+          "ref": "Bel and the Dragon 1:9",
+          "note": "Agrees to the wager: if Bel truly eats the offerings, Daniel will die."
+        },
+        {
+          "ref": "Bel and the Dragon 1:14",
+          "note": "Secretly has ashes strewn across the temple floor before it is sealed."
+        },
+        {
+          "ref": "Bel and the Dragon 1:19-21",
+          "note": "Stops the king from entering rashly, then shows him the footprints of the priests and their families in the ashes, proving the fraud."
+        },
+        {
+          "ref": "Bel and the Dragon 1:22",
+          "note": "Bel and his temple are destroyed and delivered into Daniel's power."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His trap for exposing Bel's priests is ashes on a floor, not a confrontation with weapons."
+      ]
+    },
+    {
+      "id": "cyrus_bel_dragon_ethiopian",
+      "name": "Cyrus of Persia",
+      "role": "manager",
+      "scribeTier": "King's Signet",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:1",
+          "note": "Receives the kingdom after Astyages is gathered to his fathers."
+        },
+        {
+          "ref": "Bel and the Dragon 1:4",
+          "note": "Worships Bel daily and presses Daniel to explain why he will not."
+        },
+        {
+          "ref": "Bel and the Dragon 1:8-9",
+          "note": "Threatens the priests of Bel with death if they cannot prove Bel eats the offerings, and threatens Daniel if they can."
+        },
+        {
+          "ref": "Bel and the Dragon 1:11,14",
+          "note": "Seals the temple door with his own signet after the meal is set out."
+        },
+        {
+          "ref": "Bel and the Dragon 1:18",
+          "note": "Initially cries out in praise of Bel upon finding the food gone."
+        },
+        {
+          "ref": "Bel and the Dragon 1:20-22",
+          "note": "Sees the footprints, grows angry, slays the priests, and delivers Bel and his temple to Daniel to destroy."
+        },
+        {
+          "ref": "Bel and the Dragon 1:24",
+          "note": "Presses Daniel to worship the living dragon instead."
+        },
+        {
+          "ref": "Bel and the Dragon 1:30",
+          "note": "Under pressure from the people, reluctantly delivers Daniel to be cast into the lions' den."
+        },
+        {
+          "ref": "Bel and the Dragon 1:40-42",
+          "note": "Comes to mourn Daniel on the seventh day, finds him alive, cries out that the Lord God of Daniel is great, and casts Daniel's accusers into the den in his place."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "dragon_of_babylon_ethiopian",
+      "name": "The Dragon of Babylon",
+      "role": "manager",
+      "scribeTier": "The Dragon of Babylon",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:23",
+          "note": "A great dragon worshipped by the people of Babylon, kept in the same place as Bel's ruined temple."
+        },
+        {
+          "ref": "Bel and the Dragon 1:24",
+          "note": "The king points to it as proof of a living god, since it visibly eats and drinks."
+        },
+        {
+          "ref": "Bel and the Dragon 1:26-27",
+          "note": "Daniel is given leave to slay it without sword or staff; he feeds it lumps of pitch, fat, and hair boiled together, and it bursts apart."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Killed with a home-made mixture of pitch, fat, and hair rather than any weapon."
+      ]
+    },
+    {
+      "id": "people_of_babylon_ethiopian",
+      "name": "The People of Babylon",
+      "role": "manager",
+      "scribeTier": "Mob at the Gate",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:28",
+          "note": "Take great indignation on hearing Bel destroyed, the dragon slain, and the priests killed; conspire against the king, accusing him of having 'become a Jew.'"
+        },
+        {
+          "ref": "Bel and the Dragon 1:29",
+          "note": "Come to the king demanding Daniel be delivered to them, or they will destroy him and his house."
+        },
+        {
+          "ref": "Bel and the Dragon 1:30",
+          "note": "Press the king so hard that he is constrained to hand Daniel over to them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "habbacuc_ethiopian",
+      "name": "Habbacuc",
+      "role": "manager",
+      "scribeTier": "Habbacuc's Pottage",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:33",
+          "note": "A prophet in Jewry, making pottage and breaking bread into a bowl to carry to reapers in the field."
+        },
+        {
+          "ref": "Bel and the Dragon 1:34-35",
+          "note": "Told by the angel of the Lord to carry the meal to Daniel in the lions' den in Babylon; protests he has never seen Babylon and does not know where the den is."
+        },
+        {
+          "ref": "Bel and the Dragon 1:37",
+          "note": "Cries out to Daniel to take the dinner God has sent him."
+        },
+        {
+          "ref": "Bel and the Dragon 1:39",
+          "note": "Is set back in his own place immediately by the angel of the Lord once Daniel has eaten."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Its Ethiopian-translation spelling here is 'Habbacuc'; the text does not itself claim he is the same man as the canonical prophet Habakkuk."
+      ]
+    },
+    {
+      "id": "angel_of_the_lord_bel_dragon_ethiopian",
+      "name": "The Angel of the Lord",
+      "role": "submanager",
+      "scribeTier": "Habbacuc's Pottage",
+      "parentManagerId": "habbacuc_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:34",
+          "note": "Commands Habbacuc to carry his dinner to Daniel in Babylon."
+        },
+        {
+          "ref": "Bel and the Dragon 1:36",
+          "note": "Takes Habbacuc by the crown of the head and carries him by his own hair through the air to set him over the den in Babylon."
+        },
+        {
+          "ref": "Bel and the Dragon 1:39",
+          "note": "Sets Habbacuc back in his own place immediately after Daniel eats."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "priests_of_bel_ethiopian",
+      "name": "The Priests of Bel (Seventy, with their wives and children)",
+      "role": "submanager",
+      "scribeTier": "King's Signet",
+      "parentManagerId": "cyrus_bel_dragon_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Bel and the Dragon 1:10",
+          "note": "Seventy priests of Bel, beside their wives and children, are named as the temple's priesthood."
+        },
+        {
+          "ref": "Bel and the Dragon 1:11-13",
+          "note": "Propose the sealed-room test to the king, secretly relying on a hidden entrance under the table to eat the offerings themselves each night."
+        },
+        {
+          "ref": "Bel and the Dragon 1:15",
+          "note": "Enter by night with their families as usual and eat and drink up everything set before Bel."
+        },
+        {
+          "ref": "Bel and the Dragon 1:20-21",
+          "note": "Are caught by their own footprints in the ashes and confess by showing the king the privy doors."
+        },
+        {
+          "ref": "Bel and the Dragon 1:22",
+          "note": "Put to death by the king."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "astyages": {
+      "ref": "Bel and the Dragon 1:1",
+      "note": "The previous king, said to have been 'gathered to his fathers' immediately before Cyrus took the kingdom; given no action or dialogue in this text and not indexed as a character."
+    },
+    "sevenLions": {
+      "ref": "Bel and the Dragon 1:31-32",
+      "note": "Seven unnamed lions kept in the den, ordinarily fed two carcasses and two sheep daily, deliberately withheld while Daniel was inside."
+    }
+  }
+}

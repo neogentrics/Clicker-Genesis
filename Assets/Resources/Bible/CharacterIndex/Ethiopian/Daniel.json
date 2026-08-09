@@ -1,0 +1,612 @@
+{
+  "book": "Daniel",
+  "translation": "Ethiopian",
+  "canonicalOrder": 42,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full 12-chapter, 357-verse Ethiopian-translation text directly (Assets/Resources/Verses/Ethiopian/daniel_42.json) end to end. Content, chapter/verse structure, and wording are effectively identical to the standard KJV Daniel already indexed in this project (Assets/Resources/Bible/CharacterIndex/Daniel.json) — no Ge'ez-canon-specific additions (no inserted Susanna, Song of the Three, or Bel and the Dragon material) appear in this extracted text, unlike this same translation's own Ezra, which really does diverge into the 1 Esdras tradition. Because the underlying content matches, this draft reuses the KJV Daniel structure (10 scribe tiers: 6 person + 4 law, plus 3 submanagers and one standalone named angelic figure) rather than inventing an unrelated shape, with every character/verse re-verified line-by-line against this translation's own text rather than assumed. All ids suffixed '_ethiopian' to avoid collision with the KJV draft's unsuffixed ids. Preserved naming-collision flags from the KJV source: Belteshazzar (Daniel's Babylonian name, 1:7) vs. Belshazzar (the later king, ch. 5) are distinct people with similar-looking names; Gabriel (named explicitly, chs. 8-9) is deliberately NOT identified with the unnamed 'man clothed in linen' of chapter 10/12, since the text never equates them; Darius the Mede (5:31, 6:1, 9:1) is distinct from the later Persian King Darius of Ezra/Haggai/Zechariah, and his father 'Ahasuerus... of the seed of the Medes' (9:1) is a different Ahasuerus from the Persian king of Esther. No extended named genealogies appear in this book (unlike Genesis/Chronicles), so genealogyLists is empty.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Daniel's Window",
+      "managerId": "daniel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Fiery Furnace",
+      "managerId": "shadrach_meshach_abednego_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The King's Portion",
+      "managerId": "kings_portion_test_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Dream-Image of Gold and Clay",
+      "managerId": "nebuchadnezzar_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Golden Image of Dura",
+      "managerId": "golden_image_of_dura_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Temple Vessels",
+      "managerId": "belshazzar_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Handwriting on the Wall",
+      "managerId": "handwriting_on_the_wall_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Signet Ring",
+      "managerId": "darius_the_mede_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Ram and the He-Goat",
+      "managerId": "gabriel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Seventy Weeks",
+      "managerId": "seventy_weeks_prophecy_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "daniel_ethiopian",
+      "name": "Daniel",
+      "role": "manager",
+      "scribeTier": "Daniel's Window",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Not named in the book. Identified as one of 'the children of Judah' among the royal/noble youths taken captive to Babylon (1:3-6), and later called 'that Daniel, which art of the children of the captivity of Judah' (5:13)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 1:8",
+          "note": "Purposed in his heart not to defile himself with the king's meat and wine."
+        },
+        {
+          "ref": "Daniel 1:20",
+          "note": "Found ten times better than all the magicians and astrologers in the realm."
+        },
+        {
+          "ref": "Daniel 2:19",
+          "note": "The secret of Nebuchadnezzar's dream revealed to Daniel in a night vision."
+        },
+        {
+          "ref": "Daniel 2:48",
+          "note": "Made ruler over the whole province of Babylon and chief governor over all the wise men."
+        },
+        {
+          "ref": "Daniel 6:10",
+          "note": "Prayed toward Jerusalem three times a day with his windows open, despite the new decree."
+        },
+        {
+          "ref": "Daniel 6:22",
+          "note": "Testifies God sent his angel and shut the lions' mouths."
+        },
+        {
+          "ref": "Daniel 9:23",
+          "note": "Called 'greatly beloved' by the messenger sent at the beginning of his supplication."
+        },
+        {
+          "ref": "Daniel 10:11",
+          "note": "Called 'a man greatly beloved' by the figure by the great river Hiddekel."
+        },
+        {
+          "ref": "Daniel 12:13",
+          "note": "Told to 'go thy way till the end be,' and that he will 'stand in thy lot at the end of the days.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Renamed Belteshazzar by the prince of the eunuchs (1:7) — not to be confused with King Belshazzar of chapter 5.",
+        "Proposed his own ten-day vegetable-and-water trial rather than being ordered into it (1:8-14).",
+        "Spent a night in the lions' den and came out with 'no manner of hurt' found upon him (6:23).",
+        "Called 'greatly beloved' three times by heavenly messengers across two visions (9:23, 10:11, 10:19)."
+      ]
+    },
+    {
+      "id": "shadrach_meshach_abednego_ethiopian",
+      "name": "Shadrach, Meshach, and Abednego",
+      "role": "manager",
+      "scribeTier": "The Fiery Furnace",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Parents not named. Identified with Daniel as 'children of Judah' (1:6); given Babylonian names in place of their Hebrew names Hananiah, Mishael, and Azariah (1:7). Always act as a single collective unit, never distinguished individually."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 1:7",
+          "note": "Given the names Shadrach, Meshach, and Abed-nego in place of Hananiah, Mishael, and Azariah."
+        },
+        {
+          "ref": "Daniel 2:49",
+          "note": "Set by Daniel's request over the affairs of the province of Babylon."
+        },
+        {
+          "ref": "Daniel 3:12",
+          "note": "Accused before Nebuchadnezzar of refusing to serve his gods or worship the golden image."
+        },
+        {
+          "ref": "Daniel 3:17-18",
+          "note": "Declare God is able to deliver them from the furnace, but they will not worship the image regardless."
+        },
+        {
+          "ref": "Daniel 3:25",
+          "note": "Nebuchadnezzar sees a fourth figure walking with them in the fire, 'like the Son of God.'"
+        },
+        {
+          "ref": "Daniel 3:27",
+          "note": "Come out of the furnace with no harm, not even the smell of fire upon them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Thrown into a furnace heated seven times hotter than usual, yet walked unbound and unharmed (3:19-25)."
+      ]
+    },
+    {
+      "id": "kings_portion_test_ethiopian",
+      "name": "The King's Portion (Ten-Day Test)",
+      "role": "law",
+      "scribeTier": "The King's Portion",
+      "parentManagerId": null,
+      "deliveredBy": "daniel_ethiopian",
+      "purpose": "Tests whether faithfulness to God's dietary conviction can be maintained under royal pressure to defile oneself with the king's rich food and wine; demonstrates trust in God's provision outperforming the king's own fare (1:15-16, 1:20).",
+      "verses": [
+        {
+          "ref": "Daniel 1:8",
+          "note": "Daniel purposes not to defile himself with the king's meat and wine."
+        },
+        {
+          "ref": "Daniel 1:11-13",
+          "note": "Proposes a ten-day trial of pulse and water to Melzar."
+        },
+        {
+          "ref": "Daniel 1:15-16",
+          "note": "At the end of ten days they appear fairer and fatter than the others."
+        },
+        {
+          "ref": "Daniel 1:20",
+          "note": "Found ten times better than all the magicians and astrologers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The whole test was Daniel's own proposal, not a command imposed on him (1:8, 1:11-13)."
+      ]
+    },
+    {
+      "id": "nebuchadnezzar_ethiopian",
+      "name": "Nebuchadnezzar",
+      "role": "manager",
+      "scribeTier": "The Dream-Image of Gold and Clay",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "belshazzar_ethiopian"
+        ],
+        "note": "Parents not named. The book repeatedly calls him Belshazzar's 'father' (5:2, 5:11, 5:13, 5:18)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 1:1-2",
+          "note": "Besieges Jerusalem and carries off vessels of the house of God to Babylon."
+        },
+        {
+          "ref": "Daniel 2:5-6",
+          "note": "Demands the wise men tell both his dream and its interpretation, on pain of death."
+        },
+        {
+          "ref": "Daniel 2:46-47",
+          "note": "Falls on his face before Daniel and acknowledges Daniel's God as 'a God of gods.'"
+        },
+        {
+          "ref": "Daniel 3:1",
+          "note": "Sets up the golden image in the plain of Dura."
+        },
+        {
+          "ref": "Daniel 4:30",
+          "note": "Boasts of 'great Babylon, that I have built... by the might of my power.'"
+        },
+        {
+          "ref": "Daniel 4:33",
+          "note": "Driven from men, eats grass like oxen, hair grown like eagles' feathers, nails like birds' claws."
+        },
+        {
+          "ref": "Daniel 4:37",
+          "note": "Reason restored; praises and honors the King of heaven, who is able to abase the proud."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Judged for boasting of 'great Babylon, that I have built,' driven to eat grass like oxen for 'seven times' (4:28-33)."
+      ]
+    },
+    {
+      "id": "golden_image_of_dura_ethiopian",
+      "name": "The Golden Image of Dura",
+      "role": "law",
+      "scribeTier": "The Golden Image of Dura",
+      "parentManagerId": null,
+      "deliveredBy": "nebuchadnezzar_ethiopian",
+      "purpose": "Demands universal worship of a ninety-foot golden image at the sound of royal music, on pain of death by fire; becomes the test of the three Hebrews' exclusive loyalty to God (3:12, 3:16-18).",
+      "verses": [
+        {
+          "ref": "Daniel 3:1",
+          "note": "Nebuchadnezzar sets up the image, threescore cubits high, in the plain of Dura."
+        },
+        {
+          "ref": "Daniel 3:5-6",
+          "note": "All peoples commanded to fall down and worship at the sound of the music, or be cast into the furnace."
+        },
+        {
+          "ref": "Daniel 3:19",
+          "note": "Furnace heated seven times hotter than usual."
+        },
+        {
+          "ref": "Daniel 3:28-29",
+          "note": "Nebuchadnezzar blesses their God and decrees against any who speak against Him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The image measured 'threescore cubits' high and 'six cubits' wide (3:1)."
+      ]
+    },
+    {
+      "id": "belshazzar_ethiopian",
+      "name": "Belshazzar",
+      "role": "manager",
+      "scribeTier": "The Temple Vessels",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "nebuchadnezzar_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Caution: 'Belshazzar' (king of chapter 5) is easily confused with 'Belteshazzar,' Daniel's separate Babylonian name (1:7) — two distinct people. The unnamed 'queen' who advises him in 5:10-12 is not identified further."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 5:1-2",
+          "note": "Makes a great feast and commands the temple vessels his father Nebuchadnezzar had taken be brought in for drinking."
+        },
+        {
+          "ref": "Daniel 5:5-6",
+          "note": "Sees fingers of a man's hand writing on the wall; his countenance changes and his knees smite together."
+        },
+        {
+          "ref": "Daniel 5:25-28",
+          "note": "Daniel reads and interprets MENE, MENE, TEKEL, UPHARSIN."
+        },
+        {
+          "ref": "Daniel 5:29",
+          "note": "Makes Daniel the third ruler in the kingdom despite the judgment just pronounced."
+        },
+        {
+          "ref": "Daniel 5:30",
+          "note": "Slain that same night; Babylon falls."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Praised the gods of gold, silver, brass, iron, wood, and stone at his own feast, moments before the judgment (5:4)."
+      ]
+    },
+    {
+      "id": "handwriting_on_the_wall_ethiopian",
+      "name": "The Handwriting on the Wall",
+      "role": "law",
+      "scribeTier": "The Handwriting on the Wall",
+      "parentManagerId": null,
+      "deliveredBy": "daniel_ethiopian",
+      "purpose": "Pronounces immediate divine judgment on Belshazzar for profaning the temple vessels and exalting himself against the God of heaven (5:22-23); announces the fall of Babylon that very night.",
+      "verses": [
+        {
+          "ref": "Daniel 5:5",
+          "note": "Fingers of a man's hand appear and write over against the candlestick."
+        },
+        {
+          "ref": "Daniel 5:25",
+          "note": "The writing: MENE, MENE, TEKEL, UPHARSIN."
+        },
+        {
+          "ref": "Daniel 5:26-28",
+          "note": "Daniel's interpretation of each word."
+        },
+        {
+          "ref": "Daniel 5:30",
+          "note": "Belshazzar slain that night."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The hand that writes is described only as 'fingers of a man's hand,' with no figure attached ever named (5:5)."
+      ]
+    },
+    {
+      "id": "darius_the_mede_ethiopian",
+      "name": "Darius the Mede",
+      "role": "manager",
+      "scribeTier": "The Signet Ring",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified as 'the son of Ahasuerus, of the seed of the Medes' (9:1) — a different Ahasuerus from the Persian king of Esther. Distinct from the later Persian King Darius named in Ezra/Haggai/Zechariah; this text specifically titles him 'Darius the Mede' (5:31, 6:1, 9:1)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 5:31",
+          "note": "Takes the kingdom at about sixty-two years old."
+        },
+        {
+          "ref": "Daniel 6:3",
+          "note": "Considers setting Daniel over the whole realm for his excellent spirit."
+        },
+        {
+          "ref": "Daniel 6:14",
+          "note": "Labors till sundown to try to deliver Daniel from the decree."
+        },
+        {
+          "ref": "Daniel 6:16",
+          "note": "Casts Daniel into the lions' den, telling him 'thy God... will deliver thee.'"
+        },
+        {
+          "ref": "Daniel 6:19-20",
+          "note": "Rises early and goes to the den 'with a lamentable voice.'"
+        },
+        {
+          "ref": "Daniel 6:26-27",
+          "note": "Decrees that all in his dominion tremble and fear before the God of Daniel."
+        },
+        {
+          "ref": "Daniel 9:1",
+          "note": "Identified as 'Darius the son of Ahasuerus, of the seed of the Medes.'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 62,
+          "event": "Took the kingdom of Babylon, being 'about threescore and two years old'",
+          "ref": "Daniel 5:31"
+        }
+      ],
+      "funFacts": [
+        "Fasted all night and could not sleep, then ran to the den at dawn to check on Daniel (6:18-19)."
+      ]
+    },
+    {
+      "id": "gabriel_ethiopian",
+      "name": "Gabriel",
+      "role": "manager",
+      "scribeTier": "The Ram and the He-Goat",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An angelic messenger, not a human genealogical figure. Explicitly named 'the man Gabriel' (8:16; 9:21). Not to be conflated with the unnamed 'man clothed in linen' of Daniel 10:5-6 and 12:6-7 — the text never states these are the same figure."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 8:16",
+          "note": "Named directly: a man's voice calls, 'Gabriel, make this man to understand the vision.'"
+        },
+        {
+          "ref": "Daniel 8:17-18",
+          "note": "Daniel falls on his face and faints at his approach; Gabriel touches him and sets him upright."
+        },
+        {
+          "ref": "Daniel 9:21",
+          "note": "Identified again as 'the man Gabriel,' caused to fly swiftly and touch Daniel at the time of evening oblation."
+        },
+        {
+          "ref": "Daniel 9:22-23",
+          "note": "Comes to give Daniel 'skill and understanding,' calling him 'greatly beloved.'"
+        },
+        {
+          "ref": "Daniel 9:24-27",
+          "note": "Delivers the seventy weeks prophecy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Daniel's response to his first appearance was strong enough that he 'fainted, and was sick certain days' (8:27)."
+      ]
+    },
+    {
+      "id": "seventy_weeks_prophecy_ethiopian",
+      "name": "The Seventy Weeks Prophecy",
+      "role": "law",
+      "scribeTier": "The Seventy Weeks",
+      "parentManagerId": null,
+      "deliveredBy": "gabriel_ethiopian",
+      "purpose": "Lays out a specific prophetic timetable — seventy weeks 'determined upon thy people and upon thy holy city' — to finish transgression, make an end of sins, bring in everlasting righteousness, and anoint the most holy (9:24-27).",
+      "verses": [
+        {
+          "ref": "Daniel 9:21-23",
+          "note": "Given by Gabriel while Daniel is still speaking in prayer."
+        },
+        {
+          "ref": "Daniel 9:24",
+          "note": "Seventy weeks determined to finish transgression, make an end of sins, and anoint the most holy."
+        },
+        {
+          "ref": "Daniel 9:25-27",
+          "note": "Lays out the sequence: rebuilding Jerusalem, the coming of Messiah the Prince, and events after."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given as a direct answer to Daniel's prayer of confession on behalf of his people, offered while he was still speaking (9:20-23)."
+      ]
+    },
+    {
+      "id": "ashpenaz_ethiopian",
+      "name": "Ashpenaz",
+      "role": "submanager",
+      "parentManagerId": "daniel_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated; identified only by his office, 'master of his eunuchs' (1:3)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 1:3",
+          "note": "Commanded by Nebuchadnezzar to bring in certain of the children of Israel of the royal seed and the princes."
+        },
+        {
+          "ref": "Daniel 1:7",
+          "note": "Gives Daniel and his three companions their Babylonian names."
+        },
+        {
+          "ref": "Daniel 1:9",
+          "note": "God brings Daniel into favour and tender love with him."
+        },
+        {
+          "ref": "Daniel 1:10",
+          "note": "Fears the king will see the youths' faces worse-favoured and have him beheaded."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Titled 'master of his eunuchs' and given the task of selecting royal and noble Israelite youths for the king's service (1:3-4)."
+      ]
+    },
+    {
+      "id": "melzar_ethiopian",
+      "name": "Melzar",
+      "role": "submanager",
+      "parentManagerId": "daniel_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated. Text renders 'Melzar' as 'Melzar' in this translation both times he appears (1:11, 1:16); the definite-article phrasing found in other translations may indicate a title/office rather than a proper personal name — flagged, not treated as certain."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 1:11",
+          "note": "Set by Ashpenaz over Daniel, Hananiah, Mishael, and Azariah."
+        },
+        {
+          "ref": "Daniel 1:14",
+          "note": "Consents to Daniel's proposal and proves them ten days."
+        },
+        {
+          "ref": "Daniel 1:16",
+          "note": "Takes away their portion of the king's meat and gives them pulse."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Agreed to Daniel's proposed ten-day test after Ashpenaz's own reluctance (1:11-14)."
+      ]
+    },
+    {
+      "id": "arioch_ethiopian",
+      "name": "Arioch",
+      "role": "submanager",
+      "parentManagerId": "nebuchadnezzar_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Genealogy not stated; identified only by his office, 'captain of the king's guard' (2:14)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 2:14",
+          "note": "Captain of the king's guard, gone forth to slay the wise men of Babylon."
+        },
+        {
+          "ref": "Daniel 2:15-16",
+          "note": "Daniel asks him for time before the king to show the interpretation."
+        },
+        {
+          "ref": "Daniel 2:25",
+          "note": "Brings Daniel in hastily before the king, claiming to have found a man of the captives of Judah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Presented himself to the king as the one who found the answer, though the discovery was Daniel's alone (2:25)."
+      ]
+    },
+    {
+      "id": "michael_the_archangel_ethiopian",
+      "name": "Michael the Archangel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An angelic figure, not a human genealogical one. Called 'one of the chief princes' (10:13) and 'the great prince which standeth for the children of thy people' (12:1)."
+      },
+      "verses": [
+        {
+          "ref": "Daniel 10:13",
+          "note": "Called 'one of the chief princes,' comes to help against the prince of the kingdom of Persia."
+        },
+        {
+          "ref": "Daniel 10:21",
+          "note": "Called 'Michael your prince.'"
+        },
+        {
+          "ref": "Daniel 12:1",
+          "note": "Called 'the great prince which standeth for the children of thy people,' who shall 'stand up' at the time of the end."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Comes to help tip a contested angelic conflict against 'the prince of the kingdom of Persia' (10:13)."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references in this book — no extended named genealogies appear in Daniel, matching the KJV source's own finding."
+  }
+}

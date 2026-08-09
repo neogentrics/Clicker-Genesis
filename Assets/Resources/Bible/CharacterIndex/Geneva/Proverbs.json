@@ -1,0 +1,404 @@
+{
+  "book": "Proverbs",
+  "translation": "Geneva",
+  "canonicalOrder": 20,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read in full from Assets/Resources/Verses/Geneva/proverbs_20.json (all 31 chapters, chapter 1 through 31:31). Structurally this Geneva (1560) Proverbs matches the standard KJV/Masoretic canon exactly — same three explicit Solomonic collection-headers (1:1 'The Parables of Salomon the sonne of Dauid King of Israel'; 10:1 'THE PARABLE OF SALOMON'; 25:1 'THESE ARE ALSO PARABLES of Salomon, which the men of Hezekiah King of Iudah copied out'), the same Agur oracle (ch.30), the same King Lemuel oracle plus closing acrostic praising a capable wife (ch.31), and the same Wisdom-personified / Strange-Woman-and-Folly discourses in chs.1-9. No content/structural divergence from KJV was found, unlike some other books in this project — this is straight Early Modern English wording of the identical underlying text, not a different canon. Real, worth-flagging textual/spelling variants specific to this 1560 translation: (1) Solomon is spelled 'Salomon' throughout; (2) Agur's father is spelled 'Iake' in this printing ('THE WORDS OF AGUR THE SONNE OF IAKE', 30:1) rather than the familiar 'Jakeh' — flagged as an observed orthographic variant, not treated as a different person; (3) the KJV's 'ant' (6:6) is this translation's 'pismire' ('Goe to the pismire, O sluggarde: beholde her waies, and be wise') — a genuine period word-choice difference reflected directly in this tier's name; (4) 'Ucal' (30:1) is printed 'Vcal', a routine V/U typographic substitution common to the era's printing, not a naming variant. The Geneva Bible's signature translator's-gloss parentheses (bracketed clarifying clauses inserted mid-verse, e.g. 1:23-25, 2:3-8, 7:11-12, 9:11-12) are visible throughout the source text and are a genuine stylistic hallmark of this specific translation, distinct from the KJV's plainer rendering of the same passages. Proverbs is non-narrative wisdom literature — no character here has a scripture-stated age, so every ageEvents array is empty by design. Two major personifications (Wisdome, chs.1/8/9:1-12; the Strange/stranger Woman and Folly, chs.2,5,6:20-35,7,9:13-18) and two authorial voices beyond Salomon (Agur, ch.30; King Lemuel, 31:1-9, whose entire oracle is explicitly his mother's own recorded teaching) round out the book's real content. All character/tier ids are suffixed '_geneva' to avoid collision with the existing KJV CharacterIndex ids for this same book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Proverbes Scroll",
+      "managerId": "solomon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wisdome's Pillars",
+      "managerId": "wisdom_personified_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Forbidden Doore",
+      "managerId": "strange_woman_and_folly_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Feare of the Lord",
+      "managerId": "fear_of_the_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Pismire's Storehouse",
+      "managerId": "the_sluggard_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Agur's Oracle",
+      "managerId": "agur_son_of_iake_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Lemuel's Crown",
+      "managerId": "king_lemuel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Vertuous Woman's Loome",
+      "managerId": "virtuous_woman_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "solomon_geneva",
+      "name": "Salomon",
+      "role": "manager",
+      "scribeTier": "The Proverbes Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Dauid (David) — 1:1 'the sonne of Dauid King of Israel', not otherwise detailed within Proverbs itself",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 1:1",
+          "note": "\"The Parables of Salomon the sonne of Dauid King of Israel\" — opens the book's main collection."
+        },
+        {
+          "ref": "Proverbs 10:1",
+          "note": "\"THE PARABLE OF SALOMON. A wise sonne maketh a glad father: but a foolish sonne is an heauines to his mother\" — heads the second collection (chs.10-24)."
+        },
+        {
+          "ref": "Proverbs 25:1",
+          "note": "\"THESE ARE ALSO PARABLES of Salomon, which the men of Hezekiah King of Iudah copied out\" — the book's only explicit mention of later scribal transmission, generations after Salomon's own writing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Three separately-headed collections in this translation carry his name (1:1, 10:1, 25:1) — the same three-part structure as every other English translation of Proverbs.",
+        "25:1 is the book's own built-in nod to scribal copying, generations later, by 'the men of Hezekiah King of Iudah' — a fitting real precedent for this game's whole Scribes system."
+      ]
+    },
+    {
+      "id": "wisdom_personified_geneva",
+      "name": "Wisdome",
+      "role": "law",
+      "scribeTier": "Wisdome's Pillars",
+      "parentManagerId": null,
+      "deliveredBy": "solomon_geneva",
+      "purpose": "Presented in the first person across chs.1, 8, and 9:1-12, Wisdome is personified as a woman publicly crying out in the streets and city gates, urging the simple to turn from folly, and describing her own presence beside God 'before his workes of olde' — establishing that wisdom is openly available and worth pursuing above silver or gold.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 1:20",
+          "note": "\"Wisdome cryeth without: she vttereth her voyce in the streetes.\""
+        },
+        {
+          "ref": "Proverbs 8:1-2",
+          "note": "\"Doth not wisedome crie?...She standeth in the top of the high places by the way in the place of the paths.\""
+        },
+        {
+          "ref": "Proverbs 8:22",
+          "note": "\"The Lord hath possessed me in the beginning of his way: I was before his workes of olde.\""
+        },
+        {
+          "ref": "Proverbs 9:1",
+          "note": "\"Wisedome hath built her house, and hewen out her seuen pillars.\" — the tier's namesake image."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her self-description at 8:22 as present with God 'in the beginning of his way, before his workes of olde' is rendered in this translation's own distinctive wording, still one of the most debated single verses in the book.",
+        "Her house-building and table-preparing at 9:1-2 is deliberately mirrored a few verses later when Folly 'sitteth at the doore of her house' (9:14)."
+      ]
+    },
+    {
+      "id": "strange_woman_and_folly_geneva",
+      "name": "The Strange Woman / Folly",
+      "role": "law",
+      "scribeTier": "The Forbidden Doore",
+      "parentManagerId": null,
+      "deliveredBy": "solomon_geneva",
+      "purpose": "A recurring warning across chs.2, 5, 6:20-35, and 7, personified again as 'a foolish woman' in 9:13-18, against adultery and moral folly — the negative counterpart standing opposite Wisdome's public call.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 2:16-18",
+          "note": "\"it shall deliuer thee from the strange woman...Surely her house tendeth to death, and her paths vnto the dead.\""
+        },
+        {
+          "ref": "Proverbs 5:3-5",
+          "note": "\"the lippes of a strange woman drop as an honie combe...But the end of her is bitter as wormewood...Her feete goe downe to death.\""
+        },
+        {
+          "ref": "Proverbs 6:26",
+          "note": "\"because of the whorish woman a man is brought to a morsell of brad\" (bread), and \"a woman wil hunt for the precious life of a man.\""
+        },
+        {
+          "ref": "Proverbs 7:6-27",
+          "note": "The book's longest single narrative scene — a first-person eyewitness account, watched 'through my windowe,' of a young man enticed by a woman 'with an harlots behauiour' and led 'as an oxe that goeth to the slaughter.'"
+        },
+        {
+          "ref": "Proverbs 9:13-18",
+          "note": "\"A foolish woman is troublesome...she sitteth at the doore of her house...he knoweth not, that ye dead are there.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Chapter 7's scene is told entirely from a watcher's viewpoint at 'the window of mine house' (7:6), a real narrative frame unique to this passage in the book.",
+        "Folly's invitation 'Stollen waters are sweete' (9:17) is a deliberate ironic echo of Wisdome's own invitation just a few verses earlier (9:1-5)."
+      ]
+    },
+    {
+      "id": "fear_of_the_lord_geneva",
+      "name": "The Feare of the LORD",
+      "role": "law",
+      "scribeTier": "The Feare of the Lord",
+      "parentManagerId": null,
+      "deliveredBy": "solomon_geneva",
+      "purpose": "The book's programmatic refrain — opens the main collection (1:7), repeated as its own summary statement (9:10; 15:33), and named again in the very last verse of the closing poem (31:30) — establishing that reverent submission to God, not raw cleverness, is the necessary foundation for all true wisdom.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 1:7",
+          "note": "\"The feare of the Lord is the beginning of knowledge: but fooles despise wisedome and instruction.\""
+        },
+        {
+          "ref": "Proverbs 9:10",
+          "note": "\"The beginning of wisedome is the feare of the Lord, and the knowledge of holy things, is vnderstanding.\""
+        },
+        {
+          "ref": "Proverbs 15:33",
+          "note": "\"The feare of the Lord is the instruction of wisdome: and before honour, goeth humilitie.\""
+        },
+        {
+          "ref": "Proverbs 31:30",
+          "note": "\"Fauour is deceitfull, and beautie is vanitie: but a woman that feareth the Lord, she shall be praysed.\" — closes the entire book on this same theme."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "It brackets the whole book almost exactly, from its opening at 1:7 to the last quality praised in the closing acrostic poem at 31:30.",
+        "It recurs across every major internal division of the book (opening discourse, 9:10 summary, ch.15 collection, and the closing poem) — the single most repeated line of theology in Proverbs."
+      ]
+    },
+    {
+      "id": "the_sluggard_geneva",
+      "name": "The Sluggarde",
+      "role": "law",
+      "scribeTier": "The Pismire's Storehouse",
+      "parentManagerId": null,
+      "deliveredBy": "solomon_geneva",
+      "purpose": "Uses vivid, at times comic imagery — the diligent pismire (ant), a field grown over with thorns, a door swinging idly on its hinges — to warn against laziness and the poverty that follows it.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 6:6-8",
+          "note": "\"Goe to the pismire, O sluggarde: beholde her waies, and be wise...Prepareth her meat in the sommer.\" — this translation's own word for 'ant', reflected in the tier's name."
+        },
+        {
+          "ref": "Proverbs 6:9-11",
+          "note": "\"Howe long wilt thou sleepe, O sluggarde?...Therefore thy pouertie commeth as one that trauaileth by the way.\""
+        },
+        {
+          "ref": "Proverbs 24:30-31",
+          "note": "\"I passed by the fielde of the slouthfull...it was al growen ouer with thornes.\""
+        },
+        {
+          "ref": "Proverbs 26:14-16",
+          "note": "\"As the doore turneth vpon his hinges, so doeth the slouthfull man vpon his bed...The sluggard is wiser in his owne conceite, then seuen men that can render a reason.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Goe to the pismire, O sluggarde' (6:6) is this translation's own well-known rendering of the line most English readers know as 'Go to the ant.'",
+        "26:13-16 strings together four separate sluggard sayings back to back, the densest cluster of the theme anywhere in the book."
+      ]
+    },
+    {
+      "id": "agur_son_of_iake_geneva",
+      "name": "Agur",
+      "role": "manager",
+      "scribeTier": "Agur's Oracle",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Iake (30:1 — this Geneva printing's spelling; rendered 'Jakeh' in other English translations, flagged here as an observed spelling variant, not a different person)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 30:1",
+          "note": "\"THE WORDS OF AGUR THE SONNE OF IAKE. The prophecie which ye man spake vnto Ithiel, euen to Ithiel, and Vcal.\" — 'Vcal' being this printing's V/U spelling of 'Ucal'."
+        },
+        {
+          "ref": "Proverbs 30:2-3",
+          "note": "\"Surely I am more foolish then any man...For I haue not learned wisedome, nor atteined to the knowledge of holy things.\""
+        },
+        {
+          "ref": "Proverbs 30:18-19",
+          "note": "\"There be three thinges hid from me: yea, foure that I knowe not, The way of an eagle in the aire...the way of a man with a maide.\""
+        },
+        {
+          "ref": "Proverbs 30:24-28",
+          "note": "\"These be foure small things in the earth, yet they are wise\" — names the pismires, the conies, the grasshopper, and the spider."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Agur opens with striking self-deprecating humility ('more foolish then any man,' 30:2) — a distinct authorial voice from Salomon's confident royal instruction elsewhere in the book.",
+        "His 'three things...yea, foure' numerical sayings (30:15-31) are a literary form found nowhere else in Proverbs.",
+        "He addresses his oracle to Ithiel and Vcal (30:1), two otherwise-unattested figures who take no action in the text — not given their own entries here for that reason."
+      ]
+    },
+    {
+      "id": "king_lemuel_geneva",
+      "name": "King Lemuel",
+      "role": "manager",
+      "scribeTier": "Lemuel's Crown",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": "Unnamed — see lemuel_mother_geneva; her instruction is what 31:1-9 records",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 31:1",
+          "note": "\"THE WORDS OF KING LEMUEL: The prophecie which his mother taught him.\""
+        },
+        {
+          "ref": "Proverbs 31:4-5",
+          "note": "\"It is not for Kings, O Lemuel, it is not for Kings to drink wine...Lest he drinke and forget the decree, and change the iudgement of all the children of affliction.\""
+        },
+        {
+          "ref": "Proverbs 31:8-9",
+          "note": "\"Open thy mouth for the domme in the cause of all the children of destruction...iudge the afflicted, and the poore.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Lemuel is otherwise unidentified anywhere else in scripture — no genealogy, kingdom, or other appearance beyond these nine verses.",
+        "His own recorded oracle (31:1-9) transitions directly into the acrostic poem of the vertuous woman (31:10-31); the text itself does not explicitly say the poem is still his mother's words, only that his oracle was."
+      ]
+    },
+    {
+      "id": "lemuel_mother_geneva",
+      "name": "Lemuel's Mother",
+      "role": "submanager",
+      "scribeTier": "Lemuel's Crown",
+      "parentManagerId": "king_lemuel_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "King Lemuel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 31:2",
+          "note": "\"What my sonne! and what ye sonne of my wombe! and what, O sonne of my desires!\""
+        },
+        {
+          "ref": "Proverbs 31:3",
+          "note": "\"Giue not thy strength vnto women, nor thy wayes, which is to destroy Kings.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "She is the only mother in the book explicitly credited as the direct source of an entire recorded section of instruction (31:1).",
+        "Unnamed throughout; this translation, like others, identifies her with no other named biblical woman — any such identification would be later tradition, not text."
+      ]
+    },
+    {
+      "id": "virtuous_woman_geneva",
+      "name": "The Vertuous Woman",
+      "role": "law",
+      "scribeTier": "The Vertuous Woman's Loome",
+      "parentManagerId": null,
+      "deliveredBy": "king_lemuel_geneva",
+      "purpose": "A closing acrostic poem (31:10-31) praising an ideal capable wife — her diligence, trade, generosity, and reverence for God — ending the entire book on fear of the LORD (31:30) rather than beauty or status.",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Proverbs 31:10",
+          "note": "\"Who shall finde a vertuous woman? for her price is farre aboue the pearles.\""
+        },
+        {
+          "ref": "Proverbs 31:13",
+          "note": "\"She seeketh wooll and flaxe, and laboureth cheerefully with her handes.\""
+        },
+        {
+          "ref": "Proverbs 31:16",
+          "note": "\"She considereth a field, and getteth it: and with the fruite of her handes she planteth a vineyarde.\""
+        },
+        {
+          "ref": "Proverbs 31:20",
+          "note": "\"She stretcheth out her hand to the poore, and putteth foorth her hands to the needie.\""
+        },
+        {
+          "ref": "Proverbs 31:25",
+          "note": "\"Strength and honour is her clothing, and in the latter day she shall reioyce.\""
+        },
+        {
+          "ref": "Proverbs 31:30",
+          "note": "\"Fauour is deceitfull, and beautie is vanitie: but a woman that feareth the Lord, she shall be praysed.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The poem is a Hebrew acrostic — 22 verses beginning with successive letters of the Hebrew alphabet, a structural feature invisible in this English translation just as it is in every other.",
+        "It closes the entire book on the same theme that opened it: the fear of the Lord (compare 1:7 and 31:30)."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references were needed for this book — Proverbs contains no extended genealogy passage."
+  }
+}

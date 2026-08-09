@@ -1,0 +1,880 @@
+{
+  "book": "Hebrews",
+  "translation": "Ethiopian",
+  "canonicalOrder": 78,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian-translation text of Hebrews (13 chapters, 303 verses) directly and confirmed it is word-for-word identical to the KJV text already indexed in Assets/Resources/Bible/CharacterIndex/Hebrews.json — every verse checked (ch.1-13, including the Melchizedek argument in ch.7, the tabernacle description in ch.8-9, the faith catalogue in ch.11, and the closing exhortations in ch.13) matches the KJV wording exactly, with no Ethiopian-canon-specific expansions, omissions, or reorderings (unlike this translation's own Ezra, which genuinely diverges from the Masoretic text). Structure, tier count, and content are therefore adapted directly from the validated KJV draft rather than built from scratch, with every character/tier id re-suffixed '_ethiopian' (not '_hebrews') per the schema's book+translation scoping instruction, so this document validates fully standalone. All notes below are carried over from the KJV draft's own findings, re-verified against this translation's actual text during this pass: Hebrews is sustained theological argument rather than narrative, so the index leans on law/theme tiers (6 of 10) alongside person tiers for figures with real cross-chapter weight (Jesus, Moses, Melchizedek, Abraham). The author is never named in the text; authorship (traditionally Paul) is genuinely disputed even in antiquity, so \"unknown_author_ethiopian\" is a placeholder id used only so deliveredBy references resolve, not a character with narrative agency. Melchizedek is a promoted supporting figure: a three-verse Genesis cameo (submanager under Abraham there), but Hebrews ch.7 makes his priesthood the load-bearing argument for Christ's own, earning a full independent manager tier here; his \"without father, without mother, without descent\" description (7:3) is confirmed as the text's own rhetorical point about Genesis's silence on his ancestry, not a literal biological claim. Abraham, Isaac, Jacob, Joseph, and Moses reuse fresh _ethiopian-suffixed ids per the disambiguation rule; each carries only what this book itself states about them. Hebrews 11 (the faith chapter) stays one law/theme tier (\"The Great Cloud of Witnesses\") rather than spinning up entries for every catalogued name — Abel, Cain, Enoch, Noah, Rahab, Gideon, Barak, Samson, Jephthah, David, Samuel, and \"the prophets\" are cross-referenced only (see genealogyLists), since 11:32-38 explicitly shifts to an undifferentiated collective description with no acts assigned to specific names. NAMING-COLLISION FLAG (re-verified against this translation's own text, present identically): Hebrews 4:8 reads \"For if Jesus had given them rest\" — this \"Jesus\" is Joshua the son of Nun, not Jesus Christ, since the underlying Greek \"Iesous\" is transliterated identically for both men in this English rendering; logged under wilderness_rest_ethiopian and cross-referenced in genealogyLists, deliberately excluded from jesus_ethiopian's own verse list. Outside that one transliteration quirk, Aaron, Levi, Esau, Timothy, Melchizedek, Moses, Abraham, and Jesus Christ each refer to a single unambiguous person throughout the book. This translation's Moses is the same Moses independently indexed elsewhere in this translation's Torah books, flagged as a cross-book note only, not a same-name collision within this book. Hebrews 9:1-5 (the tabernacle's furnishings) is intentionally cited as supporting verse evidence under both levitical_priesthood_ethiopian and greater_tabernacle_ethiopian, cross-referenced explicitly in both tiers' notes rather than silently duplicated. Unnamed figures stay unnamed per the later-name rule: the two women of 11:35 are not asserted to be the widow of Zarephath and the Shunammite woman, and 11:37's \"sawn asunder\" is not asserted to be Isaiah, since the text links neither explicitly.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Jesus Christ, the Great High Priest",
+      "managerId": "jesus_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Moses, the Faithful Servant",
+      "managerId": "moses_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Rest That Remaineth",
+      "managerId": "wilderness_rest_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Melchizedek, Priest of the Most High God",
+      "managerId": "melchizedek_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Levitical Priesthood",
+      "managerId": "levitical_priesthood_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Abraham, Father of Faith",
+      "managerId": "abraham_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Greater Tabernacle",
+      "managerId": "greater_tabernacle_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Great Cloud of Witnesses",
+      "managerId": "cloud_of_witnesses_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Mount Sinai and Mount Zion",
+      "managerId": "mount_zion_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Let Brotherly Love Continue",
+      "managerId": "brotherly_love_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_ethiopian",
+      "name": "Jesus Christ",
+      "role": "manager",
+      "scribeTier": "Jesus Christ, the Great High Priest",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "God the Father — affirmed as divine Sonship (Hebrews 1:5, quoting Psalm 2:7), not narrated as a birth event the way the Gospels do",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 1:1-4",
+          "note": "introduced as God's Son, 'heir of all things,' 'the express image of his person,' seated 'on the right hand of the Majesty on high.'"
+        },
+        {
+          "ref": "Hebrews 1:5-14",
+          "note": "a chain of OT quotations proclaiming the Son superior to angels."
+        },
+        {
+          "ref": "Hebrews 2:9",
+          "note": "'made a little lower than the angels for the suffering of death,' now 'crowned with glory and honour.'"
+        },
+        {
+          "ref": "Hebrews 2:14-18",
+          "note": "took on flesh and blood to destroy 'him that had the power of death,' becoming 'a merciful and faithful high priest.'"
+        },
+        {
+          "ref": "Hebrews 3:1",
+          "note": "called 'the Apostle and High Priest of our profession.'"
+        },
+        {
+          "ref": "Hebrews 4:14-16",
+          "note": "'a great high priest, that is passed into the heavens'; readers may 'come boldly unto the throne of grace.'"
+        },
+        {
+          "ref": "Hebrews 5:5-10",
+          "note": "'called of God an high priest after the order of Melchisedec'; 'learned he obedience by the things which he suffered.'"
+        },
+        {
+          "ref": "Hebrews 7:24-25",
+          "note": "holds an unchangeable priesthood, 'ever liveth to make intercession' for those who come to God through him."
+        },
+        {
+          "ref": "Hebrews 7:26-28",
+          "note": "described as 'holy, harmless, undefiled, separate from sinners.'"
+        },
+        {
+          "ref": "Hebrews 9:11-14",
+          "note": "entered 'by his own blood... once into the holy place, having obtained eternal redemption.'"
+        },
+        {
+          "ref": "Hebrews 9:24-28",
+          "note": "appears 'in the presence of God for us'; 'once offered to bear the sins of many'; will 'appear the second time... unto salvation.'"
+        },
+        {
+          "ref": "Hebrews 10:10-14",
+          "note": "'one sacrifice for sins for ever,' then 'sat down on the right hand of God.'"
+        },
+        {
+          "ref": "Hebrews 12:2",
+          "note": "'the author and finisher of our faith,' endured the cross 'for the joy that was set before him.'"
+        },
+        {
+          "ref": "Hebrews 12:24",
+          "note": "'the mediator of the new covenant,' his sprinkled blood 'speaketh better things than that of Abel.'"
+        },
+        {
+          "ref": "Hebrews 13:8",
+          "note": "'Jesus Christ the same yesterday, and to day, and for ever.'"
+        },
+        {
+          "ref": "Hebrews 13:20",
+          "note": "'that great shepherd of the sheep,' raised from the dead 'through the blood of the everlasting covenant.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hebrews never narrates a single episode of Jesus's earthly ministry the way the Gospels do — he is argued about as heavenly High Priest almost the entire book.",
+        "NOT the same 'Jesus' referenced in Hebrews 4:8 — that is Joshua son of Nun, a transliteration quirk; see wilderness_rest_ethiopian."
+      ]
+    },
+    {
+      "id": "moses_ethiopian",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Moses, the Faithful Servant",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 3:2-6",
+          "note": "'Moses verily was faithful in all his house, as a servant,' contrasted with Christ as a faithful Son 'over his own house.'"
+        },
+        {
+          "ref": "Hebrews 7:14",
+          "note": "noted that 'our Lord sprang out of Juda; of which tribe Moses spake nothing concerning priesthood.'"
+        },
+        {
+          "ref": "Hebrews 9:19",
+          "note": "sprinkled 'the book, and all the people' with blood after speaking every precept of the law to them."
+        },
+        {
+          "ref": "Hebrews 11:23",
+          "note": "'by faith Moses, when he was born, was hid three months of his parents.'"
+        },
+        {
+          "ref": "Hebrews 11:24-26",
+          "note": "'refused to be called the son of Pharaoh's daughter,' choosing to suffer with God's people over 'the pleasures of sin,' esteeming 'the reproach of Christ greater riches than the treasures in Egypt.'"
+        },
+        {
+          "ref": "Hebrews 11:27",
+          "note": "'forsook Egypt, not fearing the wrath of the king: for he endured, as seeing him who is invisible.'"
+        },
+        {
+          "ref": "Hebrews 11:28",
+          "note": "'kept the passover, and the sprinkling of blood.'"
+        },
+        {
+          "ref": "Hebrews 12:21",
+          "note": "at Sinai, 'so terrible was the sight, that Moses said, I exceedingly fear and quake.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Moses is Hebrews' primary point of comparison for Christ (ch.3) and one of only two ch.11 faith-catalogue figures (with Abraham) given a multi-verse account rather than a single line."
+      ]
+    },
+    {
+      "id": "wilderness_rest_ethiopian",
+      "name": "The Rest That Remaineth",
+      "role": "law",
+      "scribeTier": "The Rest That Remaineth",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Warns readers, using the wilderness generation's failure as a cautionary type, not to let unbelief keep them from entering God's promised 'rest' the way hardened hearts kept that generation out of Canaan — and holds out a rest that still remains open to be entered by faith.",
+      "verses": [
+        {
+          "ref": "Hebrews 3:7-11",
+          "note": "quotes Psalm 95: 'To day if ye will hear his voice, harden not your hearts... I sware in my wrath, they shall not enter into my rest.'"
+        },
+        {
+          "ref": "Hebrews 3:12-15",
+          "note": "warns against 'an evil heart of unbelief,' urging daily mutual exhortation 'lest any of you be hardened through the deceitfulness of sin.'"
+        },
+        {
+          "ref": "Hebrews 3:16-19",
+          "note": "concludes 'they could not enter in because of unbelief.'"
+        },
+        {
+          "ref": "Hebrews 4:1-2",
+          "note": "the promise of entering rest still stands but must be 'mixed with faith' to profit the hearer."
+        },
+        {
+          "ref": "Hebrews 4:3-5",
+          "note": "'we which have believed do enter into rest,' tied to God's own rest from his works after creation."
+        },
+        {
+          "ref": "Hebrews 4:6-8",
+          "note": "since some remain to enter and the earlier entry did not give true rest, God 'limiteth a certain day... To day.' Verse 8 reads 'For if Jesus had given them rest' — this 'Jesus' is Joshua son of Nun, NOT Jesus Christ; see genealogyLists."
+        },
+        {
+          "ref": "Hebrews 4:9-11",
+          "note": "'there remaineth therefore a rest to the people of God'; believers are urged to 'labour... to enter into that rest.'"
+        },
+        {
+          "ref": "Hebrews 4:12-13",
+          "note": "the word of God as 'quick, and powerful, and sharper than any twoedged sword,' discerning 'the thoughts and intents of the heart.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hebrews 4:8 is a real in-book naming collision: 'Jesus' here is Joshua, not Jesus Christ, due to identical transliteration of the underlying name for both men."
+      ]
+    },
+    {
+      "id": "melchizedek_ethiopian",
+      "name": "Melchizedek",
+      "role": "manager",
+      "scribeTier": "Melchizedek, Priest of the Most High God",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "not stated in the text — Hebrews 7:3 explicitly describes him as 'without father, without mother, without descent,' a rhetorical point about the SILENCE of Genesis on his ancestry, not a literal biological claim",
+        "mother": "see father field — same textual device, Hebrews 7:3",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 5:6",
+          "note": "quoted (Psalm 110) as 'a priest for ever after the order of Melchisedec.'"
+        },
+        {
+          "ref": "Hebrews 6:20",
+          "note": "Jesus entered heaven as forerunner, 'made an high priest for ever after the order of Melchisedec.'"
+        },
+        {
+          "ref": "Hebrews 7:1-3",
+          "note": "'king of Salem, priest of the most high God, who met Abraham returning from the slaughter of the kings, and blessed him'; name interpreted 'King of righteousness,' then 'King of Salem... King of peace'; described as 'without father, without mother, without descent, having neither beginning of days, nor end of life.'"
+        },
+        {
+          "ref": "Hebrews 7:4-10",
+          "note": "Abraham gave him a tenth of the spoils; argued to be greater than the Levitical priesthood since Levi, 'yet in the loins of his father,' effectively paid tithes to him through Abraham."
+        },
+        {
+          "ref": "Hebrews 7:11,15,17",
+          "note": "the phrase 'after the order of Melchisedec' used repeatedly to argue for a priesthood superseding the Levitical line."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Melchizedek appears in the actual Genesis narrative for only three verses; Hebrews devotes most of ch.7 to arguing from the text's SILENCE about his ancestry — a rhetorical/typological technique, not a claim he had no real parents."
+      ]
+    },
+    {
+      "id": "levitical_priesthood_ethiopian",
+      "name": "The Levitical Priesthood",
+      "role": "law",
+      "scribeTier": "The Levitical Priesthood",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Argues that the Levitical/Aaronic priestly system, however divinely instituted, could not itself bring perfection or a clear conscience — its priests died and had to be replaced, it required repeated sacrifices, and the law given under it required a change once the priesthood changed — so as a system it always pointed beyond itself to a permanent priest 'after the order of Melchisedec.'",
+      "verses": [
+        {
+          "ref": "Hebrews 5:1-4",
+          "note": "every high priest is 'taken from among men,' 'ordained for men,' and must be 'called of God, as was Aaron.'"
+        },
+        {
+          "ref": "Hebrews 7:5",
+          "note": "'they that are of the sons of Levi... have a commandment to take tithes of the people according to the law.'"
+        },
+        {
+          "ref": "Hebrews 7:11",
+          "note": "'if therefore perfection were by the Levitical priesthood... what further need was there that another priest should rise... and not be called after the order of Aaron?'"
+        },
+        {
+          "ref": "Hebrews 7:23",
+          "note": "'they truly were many priests, because they were not suffered to continue by reason of death.'"
+        },
+        {
+          "ref": "Hebrews 9:1-5",
+          "note": "describes the tabernacle's furnishings under the first covenant, including 'Aaron's rod that budded' kept in the ark — cited here for what the ark's own contents witness about the Levitical priesthood's limits. Cross-referenced with greater_tabernacle_ethiopian, which cites the same verses for the sanctuary's structural layout."
+        },
+        {
+          "ref": "Hebrews 9:6-10",
+          "note": "priests 'went always into the first tabernacle,' but only the high priest entered 'the second' once a year, 'not without blood.'"
+        },
+        {
+          "ref": "Hebrews 10:1,11",
+          "note": "'the law having a shadow of good things to come,' every priest 'standeth daily ministering, and offering oftentimes the same sacrifices, which can never take away sins.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abraham_ethiopian",
+      "name": "Abraham",
+      "role": "manager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "sarah_ethiopian"
+        ],
+        "children": [
+          "isaac_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 6:13-15",
+          "note": "'when God made promise to Abraham... he sware by himself... after he had patiently endured, he obtained the promise.'"
+        },
+        {
+          "ref": "Hebrews 7:1-2",
+          "note": "met by Melchizedek 'returning from the slaughter of the kings,' gave him 'a tenth part of all.'"
+        },
+        {
+          "ref": "Hebrews 7:4",
+          "note": "called 'the patriarch' who gave Melchizedek 'the tenth of the spoils.'"
+        },
+        {
+          "ref": "Hebrews 7:9-10",
+          "note": "argued that Levi, 'yet in the loins of his father' Abraham, effectively paid tithes to Melchizedek through him."
+        },
+        {
+          "ref": "Hebrews 11:8",
+          "note": "'by faith Abraham, when he was called to go out into a place which he should after receive for an inheritance, obeyed... not knowing whither he went.'"
+        },
+        {
+          "ref": "Hebrews 11:9",
+          "note": "'sojourned in the land of promise, as in a strange country, dwelling in tabernacles with Isaac and Jacob.'"
+        },
+        {
+          "ref": "Hebrews 11:10",
+          "note": "'he looked for a city which hath foundations, whose builder and maker is God.'"
+        },
+        {
+          "ref": "Hebrews 11:12",
+          "note": "'of one... sprang there... so many as the stars of the sky in multitude.'"
+        },
+        {
+          "ref": "Hebrews 11:17-19",
+          "note": "'by faith Abraham, when he was tried, offered up Isaac... accounting that God was able to raise him up, even from the dead; from whence also he received him in a figure.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Abraham is the only OT figure besides Moses given a multi-episode treatment rather than a single-line mention, which is why he gets his own tier instead of folding into the Cloud of Witnesses tier."
+      ]
+    },
+    {
+      "id": "sarah_ethiopian",
+      "name": "Sarah",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "abraham_ethiopian"
+        ],
+        "children": [
+          "isaac_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:11",
+          "note": "'through faith also Sara herself received strength to conceive seed, and was delivered of a child when she was past age, because she judged him faithful who had promised.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "isaac_ethiopian",
+      "name": "Isaac",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "abraham_ethiopian",
+        "mother": "sarah_ethiopian",
+        "spouses": [],
+        "children": [
+          "jacob_ethiopian",
+          "esau_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:9",
+          "note": "dwelt in tabernacles alongside Abraham and Jacob as fellow heirs of the same promise."
+        },
+        {
+          "ref": "Hebrews 11:17-19",
+          "note": "offered up by Abraham in the binding narrative referenced as the ultimate test of Abraham's faith."
+        },
+        {
+          "ref": "Hebrews 11:20",
+          "note": "'by faith Isaac blessed Jacob and Esau concerning things to come.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jacob_ethiopian",
+      "name": "Jacob",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "isaac_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "joseph_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:9",
+          "note": "dwelt in tabernacles alongside Abraham and Isaac as fellow heirs of the same promise."
+        },
+        {
+          "ref": "Hebrews 11:21",
+          "note": "'by faith Jacob, when he was a dying, blessed both the sons of Joseph; and worshipped, leaning upon the top of his staff.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joseph_ethiopian",
+      "name": "Joseph",
+      "role": "submanager",
+      "scribeTier": "Abraham, Father of Faith",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 11:22",
+          "note": "'by faith Joseph, when he died, made mention of the departing of the children of Israel; and gave commandment concerning his bones.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "greater_tabernacle_ethiopian",
+      "name": "The Greater Tabernacle",
+      "role": "law",
+      "scribeTier": "The Greater Tabernacle",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Contrasts the earthly tabernacle's repeated animal sacrifices, which could only cleanse the flesh, with Christ's single once-for-all self-offering in the heavenly sanctuary, and grounds the new covenant in Jeremiah's own prophecy of a covenant written on the heart rather than on tablets.",
+      "verses": [
+        {
+          "ref": "Hebrews 8:6-7",
+          "note": "Christ obtains 'a more excellent ministry,' mediator of 'a better covenant'; the first covenant was not 'faultless.'"
+        },
+        {
+          "ref": "Hebrews 8:8-12",
+          "note": "quotes Jeremiah's promise of a 'new covenant... not according to the covenant that I made with their fathers,' with God's laws written 'in their hearts,' and 'their sins and their iniquities will I remember no more.'"
+        },
+        {
+          "ref": "Hebrews 9:1-5",
+          "note": "describes the tabernacle's two compartments and furnishings — candlestick, table and shewbread; the ark, golden pot of manna, Aaron's rod, the tables of the covenant — cited here for the sanctuary's own structural layout. Cross-referenced with levitical_priesthood_ethiopian, which cites the same verses for Aaron's rod specifically."
+        },
+        {
+          "ref": "Hebrews 9:11-12",
+          "note": "Christ, high priest 'by a greater and more perfect tabernacle,' entered 'once into the holy place... having obtained eternal redemption.'"
+        },
+        {
+          "ref": "Hebrews 9:22",
+          "note": "'without shedding of blood is no remission.'"
+        },
+        {
+          "ref": "Hebrews 9:27-28",
+          "note": "'it is appointed unto men once to die, but after this the judgment: so Christ was once offered to bear the sins of many.'"
+        },
+        {
+          "ref": "Hebrews 10:1-4",
+          "note": "the law's sacrifices are 'a shadow of good things to come,' never able to 'take away sins.'"
+        },
+        {
+          "ref": "Hebrews 10:19-22",
+          "note": "believers now have 'boldness to enter into the holiest by the blood of Jesus.'"
+        },
+        {
+          "ref": "Hebrews 10:25",
+          "note": "exhorts 'not forsaking the assembling of ourselves together.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cloud_of_witnesses_ethiopian",
+      "name": "The Great Cloud of Witnesses",
+      "role": "law",
+      "scribeTier": "The Great Cloud of Witnesses",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Catalogues OT figures whose faith held onto God's promises without seeing them fulfilled, encouraging a persecuted audience to keep faith and endurance despite their own unfulfilled hope, closing on the point that these witnesses are, in a real sense, still waiting alongside the readers.",
+      "verses": [
+        {
+          "ref": "Hebrews 11:1-3",
+          "note": "defines faith as 'the substance of things hoped for, the evidence of things not seen.'"
+        },
+        {
+          "ref": "Hebrews 11:4",
+          "note": "Abel 'offered unto God a more excellent sacrifice than Cain,' and 'being dead yet speaketh' (cross-referenced to the existing Genesis entries, not re-indexed here)."
+        },
+        {
+          "ref": "Hebrews 11:5-6",
+          "note": "Enoch 'was translated that he should not see death... he had this testimony, that he pleased God' (cross-referenced to the existing Genesis entry)."
+        },
+        {
+          "ref": "Hebrews 11:7",
+          "note": "Noah, 'warned of God of things not seen as yet,' 'prepared an ark to the saving of his house' (cross-referenced to the existing Genesis entry)."
+        },
+        {
+          "ref": "Hebrews 11:29",
+          "note": "Israel 'passed through the Red sea as by dry land,' while the pursuing Egyptians 'were drowned.'"
+        },
+        {
+          "ref": "Hebrews 11:30",
+          "note": "'the walls of Jericho fell down, after they were compassed about seven days.'"
+        },
+        {
+          "ref": "Hebrews 11:31",
+          "note": "Rahab 'the harlot... perished not with them that believed not, when she had received the spies with peace' (cross-referenced, likely already indexed under Joshua)."
+        },
+        {
+          "ref": "Hebrews 11:32",
+          "note": "names, with no individual acts distinguished, 'Gedeon, and... Barak, and Samson, and Jephthae; of David also, and Samuel, and of the prophets.'"
+        },
+        {
+          "ref": "Hebrews 11:33-38",
+          "note": "collective description of feats and sufferings — 'stopped the mouths of lions,' 'were stoned... sawn asunder... slain with the sword... wandered about in sheepskins and goatskins' — without attributing specific acts to specific names."
+        },
+        {
+          "ref": "Hebrews 11:39-40",
+          "note": "closes: these all 'received not the promise,' since 'God having provided some better thing for us.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verses 32-38 deliberately stop naming names and shift to unattributed collective description — the text itself doesn't say which named figure did which listed feat, so this index does not guess which act belongs to which name."
+      ]
+    },
+    {
+      "id": "mount_zion_ethiopian",
+      "name": "Mount Sinai and Mount Zion",
+      "role": "law",
+      "scribeTier": "Mount Sinai and Mount Zion",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Contrasts the terrifying, untouchable mountain of the law's giving (Sinai) with the joyful, accessible 'mount Sion' of the new covenant, reinforcing a warning against turning back with a real cautionary example (Esau) and the theme of divine discipline as evidence of true sonship.",
+      "verses": [
+        {
+          "ref": "Hebrews 12:1",
+          "note": "introduces the 'great cloud of witnesses' as reason to 'run with patience the race that is set before us.'"
+        },
+        {
+          "ref": "Hebrews 12:4-11",
+          "note": "chastening: 'whom the Lord loveth he chasteneth'; discipline as evidence of true sonship, yielding 'the peaceable fruit of righteousness.'"
+        },
+        {
+          "ref": "Hebrews 12:14-17",
+          "note": "warns against 'any root of bitterness' and against being 'a fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright,' and 'found no place of repentance, though he sought it carefully with tears.'"
+        },
+        {
+          "ref": "Hebrews 12:18-21",
+          "note": "the mountain 'that might be touched,' 'blackness, and darkness, and tempest,' so terrible that 'Moses said, I exceedingly fear and quake.'"
+        },
+        {
+          "ref": "Hebrews 12:22-24",
+          "note": "believers instead 'are come unto mount Sion... the heavenly Jerusalem... to Jesus the mediator of the new covenant, and to the blood of sprinkling, that speaketh better things than that of Abel.'"
+        },
+        {
+          "ref": "Hebrews 12:25-29",
+          "note": "warns not to 'refuse him that speaketh,' since 'our God is a consuming fire.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "brotherly_love_ethiopian",
+      "name": "Let Brotherly Love Continue",
+      "role": "law",
+      "scribeTier": "Let Brotherly Love Continue",
+      "parentManagerId": null,
+      "deliveredBy": "unknown_author_ethiopian",
+      "purpose": "Closes the epistle with practical instructions for communal life — hospitality, care for prisoners, marriage, freedom from covetousness, submission to church leaders — and a final benediction and greeting, grounding the letter's high doctrinal argument in ordinary conduct.",
+      "verses": [
+        {
+          "ref": "Hebrews 13:1-2",
+          "note": "'Let brotherly love continue. Be not forgetful to entertain strangers: for thereby some have entertained angels unawares.'"
+        },
+        {
+          "ref": "Hebrews 13:3",
+          "note": "'Remember them that are in bonds, as bound with them.'"
+        },
+        {
+          "ref": "Hebrews 13:4",
+          "note": "'Marriage is honourable in all, and the bed undefiled.'"
+        },
+        {
+          "ref": "Hebrews 13:5-6",
+          "note": "'Let your conversation be without covetousness... I will never leave thee, nor forsake thee.'"
+        },
+        {
+          "ref": "Hebrews 13:7",
+          "note": "'Remember them which have the rule over you, who have spoken unto you the word of God: whose faith follow.'"
+        },
+        {
+          "ref": "Hebrews 13:8",
+          "note": "'Jesus Christ the same yesterday, and to day, and for ever.'"
+        },
+        {
+          "ref": "Hebrews 13:9-16",
+          "note": "warns against 'divers and strange doctrines,' describes going 'forth therefore unto him without the camp, bearing his reproach,' and offering 'the sacrifice of praise.'"
+        },
+        {
+          "ref": "Hebrews 13:17",
+          "note": "'Obey them that have the rule over you, and submit yourselves.'"
+        },
+        {
+          "ref": "Hebrews 13:18-19",
+          "note": "a request for prayer."
+        },
+        {
+          "ref": "Hebrews 13:20-21",
+          "note": "closing benediction: 'the God of peace, that brought again from the dead our Lord Jesus, that great shepherd of the sheep, through the blood of the everlasting covenant.'"
+        },
+        {
+          "ref": "Hebrews 13:22-25",
+          "note": "final greetings, mentioning Timothy's release and 'they of Italy salute you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "aaron_ethiopian",
+      "name": "Aaron",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 5:4",
+          "note": "cited as the model for lawful priestly calling: 'no man taketh this honour unto himself, but he that is called of God, as was Aaron.'"
+        },
+        {
+          "ref": "Hebrews 7:11",
+          "note": "the priesthood 'after the order of Aaron' named as the standard Christ's priesthood supersedes."
+        },
+        {
+          "ref": "Hebrews 9:4",
+          "note": "'Aaron's rod that budded' listed among the ark's contents."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "levi_ethiopian",
+      "name": "Levi",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 7:5",
+          "note": "'they that are of the sons of Levi... have a commandment to take tithes of the people according to the law.'"
+        },
+        {
+          "ref": "Hebrews 7:9-10",
+          "note": "'Levi also, who receiveth tithes, payed tithes in Abraham. For he was yet in the loins of his father, when Melchisedec met him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hebrews' argument here is explicitly typological — Levi is treated as present 'in the loins' of his ancestor Abraham, a rhetorical device for the argument, not a claim of literal memory or agency."
+      ]
+    },
+    {
+      "id": "esau_ethiopian",
+      "name": "Esau",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "isaac_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 12:16",
+          "note": "'lest there be any fornicator, or profane person, as Esau, who for one morsel of meat sold his birthright.'"
+        },
+        {
+          "ref": "Hebrews 12:17",
+          "note": "'when he would have inherited the blessing, he was rejected: for he found no place of repentance, though he sought it carefully with tears.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "timothy_ethiopian",
+      "name": "Timothy",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 13:23",
+          "note": "'Know ye that our brother Timothy is set at liberty; with whom, if he come shortly, I will see you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Widely assumed to be the same Timothy who traveled with Paul, but Hebrews itself gives no identifying detail beyond his name and recent release."
+      ]
+    },
+    {
+      "id": "unknown_author_ethiopian",
+      "name": "Unknown Author",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Hebrews 13:22-25",
+          "note": "the author speaks in first person ('I appeal... I have written... I will see you') but never states his own name anywhere in the text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Early church tradition already disputed Pauline authorship; this entry exists only so deliveredBy references resolve to a real id, not as a claim about who actually wrote Hebrews."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above — mostly ch.11's collective catalogue, other un-named allusions, and one flagged same-name transliteration collision.",
+    "joshua_cross_reference_naming_collision": {
+      "ref": "Hebrews 4:8",
+      "note": "NAMING-COLLISION FLAG: the text reads 'For if Jesus had given them rest' — this 'Jesus' is Joshua son of Nun, who led Israel into Canaan, NOT Jesus Christ (jesus_ethiopian). Both names transliterate the same underlying name, rendered identically here. Explicitly flagged rather than silently merged with, or omitted from, the jesus_ethiopian entry; same Joshua independently indexed under the book of Joshua."
+    },
+    "cain_cross_reference": {
+      "ref": "Hebrews 11:4",
+      "note": "Named as the one whose sacrifice was excelled by Abel's; same Cain indexed in Genesis — cross-referenced only, not re-indexed here."
+    },
+    "abel_cross_reference": {
+      "ref": "Hebrews 11:4",
+      "note": "Same Abel indexed in Genesis — cross-referenced only, not re-indexed here."
+    },
+    "enoch_cross_reference": {
+      "ref": "Hebrews 11:5-6",
+      "note": "Same Enoch indexed in Genesis ('walked with God... and he was not') — cross-referenced only."
+    },
+    "noah_cross_reference": {
+      "ref": "Hebrews 11:7",
+      "note": "Same Noah indexed in Genesis — cross-referenced only."
+    },
+    "rahab_cross_reference": {
+      "ref": "Hebrews 11:31",
+      "note": "The Rahab of Jericho, likely already indexed under Joshua — cross-referenced only."
+    },
+    "gideon_barak_samson_jephthah": {
+      "ref": "Hebrews 11:32",
+      "note": "Named together in one verse with no individual acts distinguished; likely already indexed under Judges — not split into separate entries here per the collective-mention rule."
+    },
+    "david_samuel_prophets": {
+      "ref": "Hebrews 11:32",
+      "note": "Named together in one verse; David and Samuel likely already indexed under Samuel/Kings, 'the prophets' left as an unresolved collective — cross-referenced only."
+    },
+    "women_who_received_their_dead": {
+      "ref": "Hebrews 11:35",
+      "note": "'Women received their dead raised to life again' plausibly alludes to the widow of Zarephath and the Shunammite woman, but the text names neither and makes no explicit cross-reference, so per the naming rule they are left unnamed here."
+    },
+    "sawn_asunder_tradition": {
+      "ref": "Hebrews 11:37",
+      "note": "'They were sawn asunder' is traditionally associated with the martyrdom of Isaiah via non-canonical tradition, but the text does not name him — noted as tradition only, not textual fact."
+    },
+    "moses_parents": {
+      "ref": "Hebrews 11:23",
+      "note": "'Hid three months of his parents' — unnamed in Hebrews itself; cf. Amram and Jochebed, not individually indexed here."
+    },
+    "entertained_angels_unawares": {
+      "ref": "Hebrews 13:2",
+      "note": "A general exhortation likely alluding to Abraham and/or Lot, but the text names neither — left as a general instruction, not attributed to a specific character."
+    },
+    "italy_greeting": {
+      "ref": "Hebrews 13:24",
+      "note": "'They of Italy salute you' — an unnamed collective sending greetings, not individually identifiable from the text."
+    }
+  }
+}

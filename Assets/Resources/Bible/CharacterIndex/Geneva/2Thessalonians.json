@@ -1,0 +1,281 @@
+{
+  "book": "2 Thessalonians",
+  "translation": "Geneva",
+  "canonicalOrder": 65,
+  "status": "drafted via single-pass manual indexing grounded in the real extracted Geneva 1560 verse text, following the established KJV/Matthew methodology",
+  "notes": "Read directly from Assets/Resources/Verses/Geneva/2_thessalonians_65.json before drafting. This Geneva rendering of 2 Thessalonians tells the exact same short 3-chapter, 47-verse letter as the KJV, with the same narrative cast, so the tier structure mirrors the already-validated KJV 2Thessalonians.json shape: Paul as sender/manager, the Thessalonian church as collective recipient/manager, and two law/theme tiers carrying the letter's doctrinal weight (the man of sin, and the command concerning the disorderly). Silvanus (spelled 'Siluanus' at 1:1, u/v interchangeable per Early Modern English orthography) and Timotheus remain submanagers under Paul — the text differentiates no individual action of theirs beyond joint authorship, same as KJV. The unreasonable and wicked men of 3:2 stay a minimal collective submanager rather than invented individuals. Most differences from the KJV text are purely orthographic (Geneva's consistent u/v and i/j swaps: 'Iesus' for Jesus, 'vnto' for unto, 'reioyce' for rejoice, 'vnrighteousnes' for unrighteousness, 'ye' for 'the' at 3:17 via the thorn abbreviation) and carry no content difference. One genuine word-choice difference worth flagging: at 2:3 Geneva reads 'except there come a departing first' where KJV reads 'except there come a falling away first' (both translating the same Greek 'apostasia') — a real, if minor, translation variance, not a structural difference, so it does not change the tier design. No other structural or content divergence from the KJV version of this book was found; per the naming-collision and accuracy-over-invention rules, the identities of 'that man of sinne'/'the sonne of perdition' and 'he which nowe withholdeth' (the restrainer) are left unresolved exactly as in the KJV index, since the Geneva text likewise never names either.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Own Hand",
+      "managerId": "paul_geneva_2thessalonians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Beloved Brethren",
+      "managerId": "thessalonian_church_geneva_2thessalonians",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Man of Sinne",
+      "managerId": "man_of_sin_geneva_2thessalonians",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Working with Quietnes",
+      "managerId": "disorderly_command_geneva_2thessalonians",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_2thessalonians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Opens the letter jointly with Siluanus and Timotheus, addressed 'vnto the Church of the Thessalonians, which is in God our Father, and in the Lord Iesus Christ.'"
+        },
+        {
+          "ref": "2 Thessalonians 1:3-4",
+          "note": "Gives thanks that their faith 'groweth exceedingly' and their love for one another abounds, and rejoices in their patience and faith through persecutions and tribulations."
+        },
+        {
+          "ref": "2 Thessalonians 1:11-12",
+          "note": "States he prays always that God would make them worthy of their calling and fulfil the work of faith with power, that the Name of the Lord Iesus Christ be glorified in them."
+        },
+        {
+          "ref": "2 Thessalonians 2:1-2",
+          "note": "Beseeches them, by Christ's coming, not to be 'suddenly mooued' from their mind nor troubled by spirit, word, or letter 'as it were from vs,' as though the day of Christ were at hand — the text states only that such a message falsely purported to be from him, not that it was forged."
+        },
+        {
+          "ref": "2 Thessalonians 2:5",
+          "note": "Reminds them he had personally told them these things about the man of sin while yet with them."
+        },
+        {
+          "ref": "2 Thessalonians 3:1-2",
+          "note": "Asks them to pray that the word of the Lord 'may haue free passage and be glorified,' and that he and his companions be delivered from 'vnreasonable and euill men: for all men haue not fayth.'"
+        },
+        {
+          "ref": "2 Thessalonians 3:3-5",
+          "note": "Expresses trust in the Lord's faithfulness to establish and keep them, confidence they will do as he commands, and prays the Lord guide their hearts to the love of God and the patient waiting for Christ."
+        },
+        {
+          "ref": "2 Thessalonians 3:7-9",
+          "note": "Cites his own conduct among them as the pattern to follow: he took no man's bread for nought but 'wrought with labour and trauaile night and day,' not because he lacked the right to be supported, but to make himself an example."
+        },
+        {
+          "ref": "2 Thessalonians 3:17-18",
+          "note": "Writes 'the salutation of me Paul, with mine owne hand, which is ye token in euery Epistle,' and pronounces the closing grace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "3:17 states Paul physically wrote the closing greeting with his own hand as the authenticating token in every one of his epistles, distinguishing genuine letters from any letter merely 'as from vs' (2:2) — the direct textual basis for this tier's scribe-name motif.",
+        "3:7-9 shows Paul personally living out the very command about labor and self-support that the 'Working with Quietnes' law tier teaches to the whole church."
+      ]
+    },
+    {
+      "id": "silvanus_geneva_2thessalonians",
+      "name": "Silvanus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_geneva_2thessalonians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Named 'Siluanus' alongside Paul and Timotheus as a co-sender of the letter; the Geneva text differentiates no individual action of his within this epistle, same as KJV's rendering."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Geneva spelling 'Siluanus' (v/u interchangeable) is the same figure as the KJV's 'Silvanus,' widely identified with the 'Silas' of Acts — a cross-book identification the letter itself does not make."
+      ]
+    },
+    {
+      "id": "timotheus_geneva_2thessalonians",
+      "name": "Timotheus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_geneva_2thessalonians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "unindexed reference — not stated in 2 Thessalonians itself",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1",
+          "note": "Named alongside Paul and Siluanus as a co-sender of the letter; no separate action of his is recorded in this epistle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unreasonable_wicked_men_geneva_2thessalonians",
+      "name": "Vnreasonable and Euill Men",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Own Hand",
+      "parentManagerId": "paul_geneva_2thessalonians",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 3:2",
+          "note": "Paul asks the church to pray that he 'may be deliuered from vnreasonable and euill men: for all men haue not fayth' — an unnamed, undifferentiated collective, indexed as a single group entry rather than invented individuals."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "thessalonian_church_geneva_2thessalonians",
+      "name": "The Church of the Thessalonians",
+      "role": "manager",
+      "scribeTier": "The Beloved Brethren",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Thessalonians 1:1-2",
+          "note": "Addressed as 'the Church of the Thessalonians, which is in God our Father, and in the Lord Iesus Christ,' greeted with grace and peace."
+        },
+        {
+          "ref": "2 Thessalonians 1:3-4",
+          "note": "Their faith is described as growing exceedingly and their love for one another abounding; Paul rejoices in the churches of God over their patience and faith through 'al your persecutions and tribulatios that ye suffer.'"
+        },
+        {
+          "ref": "2 Thessalonians 1:5-10",
+          "note": "Their suffering is called 'a manifest token of the righteous iudgement of God,' counting them worthy of the kingdom they suffer for; God will recompense their troublers and give them rest with Paul when the Lord Iesus is revealed from heaven 'in flaming fire,' to take vengeance on those who know not God and obey not the Gospel, and to be glorified in his Saints, including them, 'because our testimonie toward you was beleeued.'"
+        },
+        {
+          "ref": "2 Thessalonians 2:13-14",
+          "note": "Called 'brethren beloued of the Lord' — God is said to have chosen them 'from the beginning' to salvation through sanctification of the Spirit and 'the faith of trueth,' called by the Gospel to obtain the glory of the Lord Iesus Christ."
+        },
+        {
+          "ref": "2 Thessalonians 3:4",
+          "note": "Paul states he is 'perswaded of you through the Lord,' that they both do and will continue to do the things he warns them of."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Founded on the second missionary journey when Paul, with Silas/Siluanus, reasoned in the Thessalonian synagogue (cf. Acts 17:1-10) — Timothy's presence there specifically is a reasonable inference, not something that passage states outright. Paul, Siluanus, and Timotheus had already written to this same congregation once before, in 1 Thessalonians."
+      ]
+    },
+    {
+      "id": "man_of_sin_geneva_2thessalonians",
+      "name": "That Man of Sinne",
+      "role": "law",
+      "scribeTier": "The Man of Sinne",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2thessalonians",
+      "purpose": "Corrects a message circulating among the Thessalonians 'as it were from vs' (2:2), claiming the day of Christ were already at hand — the Geneva text states only that it falsely purported to carry Paul's authorship, not that it was forged. Paul teaches that day cannot come 'except there come a departing first' (Geneva's own word choice — KJV reads 'a falling away,' both rendering the same underlying Greek concept) and 'that man of sinne be disclosed, euen the sonne of perdition,' one who is 'an aduersarie' and exalts himself against all called God, sitting 'as God in the Temple of God' (2:3-4). A restraining power ('that which withholdeth') presently holds him back 'til he be taken out of the way,' after which 'that wicked man' will be revealed and the Lord will 'consume [him] with the Spirit of his mouth' and abolish him 'with the brightnes of his comming' (2:6-8). His own coming is 'by the effectuall working of Satan, with all power, and signes, and lying wonders,' deceiving those who perish 'because they receiued not the loue of the trueth,' so that God sends them 'strong delusion, that they should beleeue lies' and be damned (2:9-12). The passage turns to give thanks the Thessalonians themselves were chosen to salvation, and exhorts them to 'stand fast and keepe the instructions' taught by word or epistle, praying Christ and God the Father comfort and establish them in every good word and work (2:13-17).",
+      "verses": [
+        {
+          "ref": "2 Thessalonians 2:1-4",
+          "note": "Beseeches them not to be shaken by any claim the day of Christ has come; that day requires 'a departing' first and the disclosing of that man of sinne, the sonne of perdition, who exalts himself against all that is called God and sits as God in God's temple."
+        },
+        {
+          "ref": "2 Thessalonians 2:6-8",
+          "note": "Explains that which withholdeth presently keeps that man of sinne from being revealed 'in his time'; the mysterie of iniquitie already works; that wicked man, once revealed, will be consumed by the Lord's own breath and abolished at his coming."
+        },
+        {
+          "ref": "2 Thessalonians 2:9-12",
+          "note": "Describes his coming as by the effectual working of Satan with lying signs and wonders, deceiving those who perish for not receiving the love of the truth, to whom God sends strong delusion so they believe lies and are damned."
+        },
+        {
+          "ref": "2 Thessalonians 2:13-17",
+          "note": "Gives thanks the Thessalonians were chosen to salvation through sanctification of the Spirit and the faith of truth, exhorting them to stand fast and keep the instructions taught by word or Epistle, with a prayer that Christ and God the Father comfort and establish their hearts."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The identity of 'that man of sinne'/'the sonne of perdition' is not named anywhere in the Geneva text, same as KJV — this index describes only what the text states and asserts no specific identification.",
+        "'That which withholdeth' is likewise never identified by name — the passage assumes the Thessalonians already knew what Paul meant from his earlier in-person teaching (2:5), which is not recorded.",
+        "The Geneva Bible's own marginal notes (not part of the verse text itself, and therefore not indexed here) were historically read by some as pointing toward the Papacy — a real historical interpretive tradition attached to this specific translation, but outside the scope of what the verse text itself states."
+      ]
+    },
+    {
+      "id": "disorderly_command_geneva_2thessalonians",
+      "name": "The Commandment Concerning the Disorderly",
+      "role": "law",
+      "scribeTier": "Working with Quietnes",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2thessalonians",
+      "purpose": "Addresses a real behavioral problem in the church: some walked 'inordinately,' working 'not at all,' and were 'busie bodies' (3:6, 3:11) — plausibly tied to the end-times excitement corrected in chapter 2. Paul warns the church, 'in the Name of our Lord Iesus Christ,' to withdraw from every brother who walks inordinately and not after the instruction received of him (3:6), grounding the command in his own example of laboring 'night and day' among them rather than taking any man's bread 'for nought' (3:7-9), restates the rule already given in person — 'if there were any, which would not worke, that he should not eate' (3:10) — and commands the disorderly 'to worke with quietnes, and eate their owne bread' (3:12). The church is told not to be 'weary in well doing' (3:13), to 'note' and withhold company from anyone disobeying this instruction so 'he may be ashamed,' but explicitly not to count him as an enemy — rather to 'admonish him as a brother' (3:14-15).",
+      "verses": [
+        {
+          "ref": "2 Thessalonians 3:6",
+          "note": "Warns the brethren, in the Name of the Lord Iesus Christ, to withdraw from every brother that walks inordinately and not after the instruction received of Paul."
+        },
+        {
+          "ref": "2 Thessalonians 3:10",
+          "note": "Restates the rule already given in person: 'if there were any, which would not worke, that he should not eate.'"
+        },
+        {
+          "ref": "2 Thessalonians 3:11-12",
+          "note": "Notes reports of some walking inordinately, working not at all, but being busybodies, and warns and exhorts such by the Lord Iesus Christ to 'worke with quietnes, and eate their owne bread.'"
+        },
+        {
+          "ref": "2 Thessalonians 3:13-15",
+          "note": "Exhorts the church not to be weary in well doing, to note and withhold company from anyone disobeying this instruction so he may be ashamed, but not to count him as an enemy — to admonish him as a brother instead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "3:10's 'if there were any, which would not worke, that he should not eate' is the Geneva rendering of the verse most quoted elsewhere as 'if any would not work, neither should he eat.'"
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "manOfSinneInterpretation": {
+      "ref": "2 Thessalonians 2:3-4, 2:6-9",
+      "note": "That man of sinne/sonne of perdition and 'that which withholdeth' are never named by the Geneva text itself, same as every other translation in this index. No specific historical or future identity is asserted, per the accuracy-over-invention rule."
+    },
+    "departingVsFallingAway": {
+      "ref": "2 Thessalonians 2:3",
+      "note": "Geneva reads 'except there come a departing first'; KJV reads 'except there come a falling away first.' A genuine translation word-choice difference (both rendering the same Greek 'apostasia'), flagged rather than silently normalized to the more familiar KJV phrasing."
+    },
+    "silvanusSilasIdentification": {
+      "ref": "2 Thessalonians 1:1; cf. Acts 15:22-40, 17:1-10, 18:5; 2 Corinthians 1:19",
+      "note": "Siluanus is widely identified with the Silas of Acts, based on parallel roles alongside Paul and Timothy across these passages — a cross-book identification, not something 2 Thessalonians states on its own."
+    },
+    "unnamedOpposition": {
+      "ref": "2 Thessalonians 3:2",
+      "note": "The 'vnreasonable and euill men' Paul asks prayer for deliverance from are not otherwise identified in the text; likely contemporaries opposing his ministry at the time of writing, but this is inference, not stated fact."
+    }
+  }
+}

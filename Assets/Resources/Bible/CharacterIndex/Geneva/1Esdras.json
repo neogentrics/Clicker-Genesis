@@ -1,0 +1,974 @@
+{
+  "book": "1 Esdras",
+  "translation": "Geneva",
+  "canonicalOrder": 40,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "1 Esdras does not exist as a separate book in the KJV canon; its content substantially overlaps with the opening of 2 Chronicles, all of Ezra, and part of Nehemiah 8, retold as a single continuous narrative and expanded with the original episode of Darius's three bodyguards (chapters 3-4), which has no KJV parallel at all. The book opens with Josias's Passover and death (paralleling 2 Chronicles 35), moves through the rapid, telescoped succession of Judah's last four kings and the fall of Jerusalem (paralleling 2 Chronicles 36), then Cyrus's decree and the halting of the rebuilding under a hostile Persian officialdom (paralleling Ezra 1 and 4), the wholly distinctive court-contest that wins Zorobabel his commission (no scriptural parallel at all), the return and temple-building under Darius (paralleling Ezra 3, 5-6), and finally Esdras's own commissioning, return, the intermarriage crisis, and the public reading of the law (paralleling Ezra 7-10 and Nehemiah 8). Structurally the book is entirely narrative/person-driven - even its many quoted royal decrees are personally issued speech-acts by named kings advancing the plot, not standalone legal or ritual instruction - so no law/theme tiers were used; every tier is role:\"person\". Several real naming collisions surface in the text and are flagged rather than merged: three separate men named Joakim appear (Josias's son who succeeds his brother Joachaz; that Joakim's own son, carried to Babylon at eighteen; and a third Joakim who is Zorobabel's own son per the chapter 5 genealogy, 1 Esdras 5:5); two men named Mithradates (Cyrus's treasurer in 2:11, and one of Artaxerxes's accusing officials in 2:16); two men named Jesus (Jeshua son of Josedek the high priest, and a different Jesus listed among the teaching Levites in 9:48); and the single name Artaxerxes covers two very different royal acts (halting the temple's building in chapter 2, then fully funding Esdras's mission in chapter 8) that the text itself never distinguishes as one king or two of that name. The large family-head count lists in chapter 5 and the roll of men who put away foreign wives in chapter 9 are kept as bulk genealogyLists references rather than individuated characters, matching the text's own undifferentiated listing (per rule 5).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Passover Fire",
+      "managerId": "josias_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Exile's Chain",
+      "managerId": "sedekias_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Chaldean Yoke",
+      "managerId": "nabuchodonosor_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Cyrus's Proclamation",
+      "managerId": "cyrus_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "King's Decree",
+      "managerId": "artaxerxes_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "False Report",
+      "managerId": "rathumus_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Darius's Feast",
+      "managerId": "darius_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Truth's Victory",
+      "managerId": "zorobabel_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "High Priest's Vestments",
+      "managerId": "jeshua_josedek_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Honest Letter",
+      "managerId": "sisinnes_geneva_1esdras",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Scribe's Fast",
+      "managerId": "esdras_geneva_1esdras",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "josias_geneva_1esdras",
+      "name": "Josias",
+      "role": "manager",
+      "scribeTier": "Passover Fire",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "joachaz_geneva_1esdras"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:1",
+          "note": "Held the Passover in Jerusalem, offering it the fourteenth day of the first month."
+        },
+        {
+          "ref": "1 Esdras 1:6-7",
+          "note": "Commanded the priests and Levites to keep the Passover in order, giving 30,000 lambs and kids and 3,000 calves from his own substance."
+        },
+        {
+          "ref": "1 Esdras 1:20-23",
+          "note": "No such Passover had been kept in Israel since the days of the prophet Samuel; his works are called upright, full of godliness."
+        },
+        {
+          "ref": "1 Esdras 1:25-28",
+          "note": "Marched out against Pharaoh Necho at Carchemish, ignoring both Necho's warning and the words of the prophet Jeremy."
+        },
+        {
+          "ref": "1 Esdras 1:29-31",
+          "note": "Wounded in the battle of Megiddo, carried from the field on his second chariot, died at Jerusalem, buried in his fathers' sepulchre."
+        },
+        {
+          "ref": "1 Esdras 1:32",
+          "note": "All Jewry and Jeremy the prophet mourned for him; the lamentation was made a continual ordinance in Israel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His death-lament by Jeremy was kept afterward as a standing ordinance of mourning throughout Israel (1 Esdras 1:32)."
+      ]
+    },
+    {
+      "id": "necho_geneva_1esdras",
+      "name": "Necho, King of Egypt",
+      "role": "submanager",
+      "scribeTier": "Passover Fire",
+      "parentManagerId": "josias_geneva_1esdras",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:25",
+          "note": "Marched to raise war at Carchemish upon Euphrates; Josias went out against him."
+        },
+        {
+          "ref": "1 Esdras 1:26-27",
+          "note": "Sent word to Josias disclaiming any quarrel with Judah, saying his war lay elsewhere and urging Josias not to oppose God by opposing him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jeremy_geneva_1esdras",
+      "name": "Jeremy the Prophet",
+      "role": "submanager",
+      "scribeTier": "Passover Fire",
+      "parentManagerId": "josias_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:28",
+          "note": "His words, spoken from the mouth of the Lord, went unheeded when Josias chose to fight Necho."
+        },
+        {
+          "ref": "1 Esdras 1:32",
+          "note": "Lamented for Josias; his lament was made a continual ordinance in Israel."
+        },
+        {
+          "ref": "1 Esdras 1:47",
+          "note": "Sedekias likewise disregarded the words spoken by Jeremy from the Lord's mouth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His warnings frame both Josias's death and Sedekias's downfall across the whole first chapter."
+      ]
+    },
+    {
+      "id": "sedekias_geneva_1esdras",
+      "name": "Sedekias",
+      "role": "manager",
+      "scribeTier": "Exile's Chain",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:46-47",
+          "note": "Made king of Judaea and Jerusalem at 21, reigned 11 years, did evil in the Lord's sight, and disregarded Jeremy's words."
+        },
+        {
+          "ref": "1 Esdras 1:48",
+          "note": "Made to swear by the Lord's name by Nabuchodonosor, then forswore himself, rebelled, hardened his neck and heart, and transgressed the law."
+        },
+        {
+          "ref": "1 Esdras 1:49-58",
+          "note": "Under his reign the governors defiled the temple; the Chaldean kings were sent against the people, the temple was burned, the walls broken down, and the survivors carried to Babylon to serve until the land's sabbaths were fulfilled."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Made king of Judaea and Jerusalem",
+          "age": 21,
+          "ref": "1 Esdras 1:46"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "joachaz_geneva_1esdras",
+      "name": "Joachaz",
+      "role": "submanager",
+      "scribeTier": "Exile's Chain",
+      "parentManagerId": "sedekias_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "josias_geneva_1esdras",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:34",
+          "note": "Made king by the people in his father Josias's place, aged 23."
+        },
+        {
+          "ref": "1 Esdras 1:35",
+          "note": "Reigned 3 months in Judah and Jerusalem before the king of Egypt deposed him."
+        },
+        {
+          "ref": "1 Esdras 1:36",
+          "note": "Egypt set a tax of a hundred talents of silver and one talent of gold upon the people under him."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Made king",
+          "age": 23,
+          "ref": "1 Esdras 1:34"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "joakim_elder_geneva_1esdras",
+      "name": "Joakim (brother of Joachaz)",
+      "role": "submanager",
+      "scribeTier": "Exile's Chain",
+      "parentManagerId": "sedekias_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "joakim_younger_geneva_1esdras"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:37",
+          "note": "Made king of Judaea and Jerusalem by the king of Egypt in his brother Joachaz's place."
+        },
+        {
+          "ref": "1 Esdras 1:38",
+          "note": "Bound the nobles; apprehended his brother Zarakes and brought him up out of Egypt."
+        },
+        {
+          "ref": "1 Esdras 1:39-42",
+          "note": "Began his reign at 25, did evil, and was bound in a chain of brass and carried to Babylon by Nabuchodonosor, who also took the Lord's holy vessels to his own temple."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Began to reign",
+          "age": 25,
+          "ref": "1 Esdras 1:39"
+        }
+      ],
+      "funFacts": [
+        "Called Josias's other son only by implication, via his brotherhood with Joachaz (1:34,37) — the text never states this directly."
+      ]
+    },
+    {
+      "id": "joakim_younger_geneva_1esdras",
+      "name": "Joakim (son of Joakim)",
+      "role": "submanager",
+      "scribeTier": "Exile's Chain",
+      "parentManagerId": "sedekias_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "joakim_elder_geneva_1esdras",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:43",
+          "note": "Reigned in his father's stead at age 18."
+        },
+        {
+          "ref": "1 Esdras 1:44",
+          "note": "Reigned 3 months and 10 days in Jerusalem, doing evil before the Lord."
+        },
+        {
+          "ref": "1 Esdras 1:45",
+          "note": "After a year, sent for and carried to Babylon by Nabuchodonosor along with the Lord's holy vessels."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Began to reign",
+          "age": 18,
+          "ref": "1 Esdras 1:43"
+        }
+      ],
+      "funFacts": [
+        "Shares the name \"Joakim\" with his own father (1:37,43) — a genuine naming collision in the text, not a duplication error; flagged rather than merged."
+      ]
+    },
+    {
+      "id": "nabuchodonosor_geneva_1esdras",
+      "name": "Nabuchodonosor",
+      "role": "manager",
+      "scribeTier": "Chaldean Yoke",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 1:40-41",
+          "note": "Came up against Joakim (the elder), bound him with a chain of brass, carried him to Babylon, and took the Lord's holy vessels to his own temple."
+        },
+        {
+          "ref": "1 Esdras 1:45",
+          "note": "Sent for and brought the younger Joakim to Babylon with the holy vessels."
+        },
+        {
+          "ref": "1 Esdras 1:48",
+          "note": "Made Sedekias swear by the Lord's name; Sedekias later forswore himself."
+        },
+        {
+          "ref": "1 Esdras 1:52-57",
+          "note": "In wrath at Israel's ungodliness, brought up the Chaldean kings, who slew the young men, took the holy vessels and the king's treasures, burned the temple and Jerusalem's walls, and carried the survivors to Babylon as servants."
+        },
+        {
+          "ref": "1 Esdras 2:10",
+          "note": "Cyrus later brought forth the vessels Nabuchodonosor had carried away and set up in his temple of idols."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His temple-looting is referenced again in chapters 2, 4, and 6 as the wrong that both Cyrus and Darius work to undo."
+      ]
+    },
+    {
+      "id": "cyrus_geneva_1esdras",
+      "name": "Cyrus, King of Persia",
+      "role": "manager",
+      "scribeTier": "Cyrus's Proclamation",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:1-4",
+          "note": "In his first year, the Lord stirred his spirit to proclaim, by word and by writing, that he had been commanded to build the Lord's house at Jerusalem."
+        },
+        {
+          "ref": "1 Esdras 2:5-7",
+          "note": "Invited any of the Lord's people to go up to Jerusalem and build, aided with gold, silver, gifts, horses, and cattle from their neighbors."
+        },
+        {
+          "ref": "1 Esdras 2:10-12",
+          "note": "Brought forth the holy vessels Nabuchodonosor had taken, delivering them to Mithradates his treasurer, who delivered them to Sanabassar, governor of Judaea."
+        },
+        {
+          "ref": "1 Esdras 2:13-14",
+          "note": "The vessels numbered 5,469 pieces of gold and silver in all."
+        },
+        {
+          "ref": "1 Esdras 4:44,57",
+          "note": "Referenced later as the king who set the vessels apart and vowed to rebuild the temple after destroying Babylon."
+        },
+        {
+          "ref": "1 Esdras 6:17-18,24-25",
+          "note": "Darius's search of the royal archives confirms Cyrus's original decree and its building specifications."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mithradates_treasurer_geneva_1esdras",
+      "name": "Mithradates (Cyrus's Treasurer)",
+      "role": "submanager",
+      "scribeTier": "Cyrus's Proclamation",
+      "parentManagerId": "cyrus_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:11",
+          "note": "Received the holy vessels from Cyrus to deliver onward to Sanabassar."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Shares a name with a different Mithradates listed among Artaxerxes's accusing officials in 1 Esdras 2:16 — a naming collision, not the same man."
+      ]
+    },
+    {
+      "id": "sanabassar_geneva_1esdras",
+      "name": "Sanabassar",
+      "role": "submanager",
+      "scribeTier": "Cyrus's Proclamation",
+      "parentManagerId": "cyrus_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:12",
+          "note": "Received the holy vessels as governor of Judaea."
+        },
+        {
+          "ref": "1 Esdras 2:15",
+          "note": "Carried the vessels and the captivity back from Babylon to Jerusalem."
+        },
+        {
+          "ref": "1 Esdras 6:18,20",
+          "note": "The vessels were delivered to him and Zorobabel; he laid the foundations of the Lord's house at Jerusalem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "artaxerxes_geneva_1esdras",
+      "name": "Artaxerxes, King of Persia",
+      "role": "manager",
+      "scribeTier": "King's Decree",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:16-17,25",
+          "note": "Received the accusing letter from Rathumus's company and wrote back ordering the building of Jerusalem hindered."
+        },
+        {
+          "ref": "1 Esdras 2:30",
+          "note": "His reply was used by Rathumus's company to stop the temple work by force until Darius's second year."
+        },
+        {
+          "ref": "1 Esdras 8:1-24",
+          "note": "Later commissioned Esdras, a ready scribe in the law of Moses, to lead a return to Jerusalem, funded the temple's needs, and ordered judges appointed to teach and enforce the law of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The same royal name authorizes two very different outcomes in this book: halting the temple work in chapter 2, then fully funding Esdras's mission in chapter 8 — the text never says whether this is one king or two of that name."
+      ]
+    },
+    {
+      "id": "rathumus_geneva_1esdras",
+      "name": "Rathumus the Storywriter",
+      "role": "manager",
+      "scribeTier": "False Report",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:16-17",
+          "note": "One of the officials in Samaria who, with companions, wrote to Artaxerxes against the Jews rebuilding Jerusalem."
+        },
+        {
+          "ref": "1 Esdras 2:18-24",
+          "note": "Warned the king the rebuilt city would refuse tribute and stand against kings, urging him to search the records of its rebellious past."
+        },
+        {
+          "ref": "1 Esdras 2:30",
+          "note": "On the king's reply, removed to Jerusalem in haste with horsemen and an armed multitude to hinder the builders."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called \"the storywriter\" in the Geneva text, likely an official title (a royal chronicler or recorder), not a personal epithet."
+      ]
+    },
+    {
+      "id": "samellius_geneva_1esdras",
+      "name": "Samellius the Scribe",
+      "role": "submanager",
+      "scribeTier": "False Report",
+      "parentManagerId": "rathumus_geneva_1esdras",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:16-17,25,30",
+          "note": "Co-wrote and helped enforce the letter against Jerusalem's rebuilding, alongside Rathumus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "beeltethmus_geneva_1esdras",
+      "name": "Beeltethmus",
+      "role": "submanager",
+      "scribeTier": "False Report",
+      "parentManagerId": "rathumus_geneva_1esdras",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 2:16,25",
+          "note": "Co-signed the accusing letter to Artaxerxes and its royal reply."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "darius_geneva_1esdras",
+      "name": "Darius, King of Persia",
+      "role": "manager",
+      "scribeTier": "Darius's Feast",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 3:1-3",
+          "note": "Made a great feast for his household, the princes of Media and Persia, and all his officers from India to Ethiopia."
+        },
+        {
+          "ref": "1 Esdras 3:4-9",
+          "note": "His three bodyguards wrote sentences and laid them under his pillow to be judged after he woke."
+        },
+        {
+          "ref": "1 Esdras 4:13,33,42",
+          "note": "Presided over the contest as the third guard, Zorobabel, spoke of women and truth."
+        },
+        {
+          "ref": "1 Esdras 4:47-56",
+          "note": "Granted Zorobabel's request: wrote letters of safe passage, ordered cedar wood sent, freed Jewish returnees from tribute and forced entry, funded daily offerings and workers' wages, and sent back the vessels Cyrus had set apart."
+        },
+        {
+          "ref": "1 Esdras 6:23-34",
+          "note": "Ordered the archives searched, found Cyrus's decree at Ecbatana, reaffirmed the temple's building specifications, ordered Sisinnes's company not to hinder the work, funded ongoing sacrifices, and decreed death for anyone who obstructed the house of the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kissed the young Zorobabel after his truth-speech, before granting the whole request (1 Esdras 4:47)."
+      ]
+    },
+    {
+      "id": "zorobabel_geneva_1esdras",
+      "name": "Zorobabel",
+      "role": "manager",
+      "scribeTier": "Truth's Victory",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Salathiel, per 1 Esdras 5:5,48 — not otherwise indexed in this draft",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Joakim, per 1 Esdras 5:5 — a third figure sharing this name in the book, not otherwise indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 4:13",
+          "note": "Identified as the third of Darius's three bodyguards, who had written of women and truth."
+        },
+        {
+          "ref": "1 Esdras 4:33-41",
+          "note": "Argued that truth is the strongest of all things, since it endures, is unbribable, and belongs to God; the assembly shouted \"Great is truth, and strong above all things.\""
+        },
+        {
+          "ref": "1 Esdras 4:43-46",
+          "note": "Asked Darius to remember his vow to rebuild Jerusalem, send back the temple vessels, and rebuild the house the Edomites had burned."
+        },
+        {
+          "ref": "1 Esdras 5:5,8",
+          "note": "Led the returning exiles up from Babylon to Jerusalem, alongside Jesus (Jeshua)."
+        },
+        {
+          "ref": "1 Esdras 5:47-49,56-58",
+          "note": "Helped make ready the altar and, in the return's second year, laid the foundation of the temple."
+        },
+        {
+          "ref": "1 Esdras 5:68-71",
+          "note": "Refused the land's adversaries a part in building the temple, insisting Israel alone would build it as Cyrus had commanded."
+        },
+        {
+          "ref": "1 Esdras 6:2,27-29",
+          "note": "Resumed building under Darius's reign with the prophets' support and was named the Lord's servant and governor of Judaea in Darius's decree."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His truth-speech (\"Great is truth, and strong above all things,\" 1 Esdras 4:41) is the book's most quoted line.",
+        "A third figure named \"Joakim\" appears as Zorobabel's own son in the genealogy list (1 Esdras 5:5) — distinct from both exile-era kings of the same name."
+      ]
+    },
+    {
+      "id": "aggaeus_zacharias_prophets_geneva_1esdras",
+      "name": "Aggæus and Zacharias (the Prophets)",
+      "role": "submanager",
+      "scribeTier": "Truth's Victory",
+      "parentManagerId": "zorobabel_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 6:1",
+          "note": "Prophesied to the Jews in Jewry and Jerusalem in the name of the Lord, the God of Israel."
+        },
+        {
+          "ref": "1 Esdras 7:3",
+          "note": "Their continued prophesying is credited with the holy works prospering."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text never differentiates their individual words, so they are indexed here as one collective voice."
+      ]
+    },
+    {
+      "id": "jeshua_josedek_geneva_1esdras",
+      "name": "Jesus (Jeshua), son of Josedek",
+      "role": "manager",
+      "scribeTier": "High Priest's Vestments",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Josedek, son of Saraias, per 1 Esdras 5:5 — not otherwise indexed in this draft",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 5:5,8",
+          "note": "Named first among the priestly leaders returning from captivity, alongside Zorobabel."
+        },
+        {
+          "ref": "1 Esdras 5:48-49",
+          "note": "Stood with his brethren the priests and helped Zorobabel make ready the altar to offer burnt sacrifices as commanded in the book of Moses."
+        },
+        {
+          "ref": "1 Esdras 5:56,58",
+          "note": "In the return's second year, began the temple's foundation-laying alongside Zorobabel; his sons and brethren the Levites, including his brother Kadmiel, labored to advance the work."
+        },
+        {
+          "ref": "1 Esdras 5:68,70",
+          "note": "Joined Zorobabel in refusing the land's adversaries a part in building the Lord's house."
+        },
+        {
+          "ref": "1 Esdras 6:2",
+          "note": "Resumed the temple's building under Darius's reign, with Zorobabel and the prophets."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A different figure also named \"Jesus\" appears later among the Levites who help teach the law in 1 Esdras 9:48 — a naming collision, not the same man."
+      ]
+    },
+    {
+      "id": "kadmiel_geneva_1esdras",
+      "name": "Kadmiel",
+      "role": "submanager",
+      "scribeTier": "High Priest's Vestments",
+      "parentManagerId": "jeshua_josedek_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 5:26",
+          "note": "Listed among the Levites returning from captivity."
+        },
+        {
+          "ref": "1 Esdras 5:58",
+          "note": "Called Jesus's brother, one of the Levites who labored to advance the temple's construction."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sisinnes_geneva_1esdras",
+      "name": "Sisinnes",
+      "role": "manager",
+      "scribeTier": "Honest Letter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 6:3-4",
+          "note": "As governor of Syria and Phoenicia, came with companions to ask by whose authority the Jews were building the temple."
+        },
+        {
+          "ref": "1 Esdras 6:7-22",
+          "note": "Wrote a fair account to Darius describing the building's progress, recording the elders' own testimony that Cyrus had authorized the work, and asking Darius to search the royal archives to confirm it."
+        },
+        {
+          "ref": "1 Esdras 7:1-2",
+          "note": "After Darius's decree, carefully oversaw the holy works and assisted the elders and rulers of the temple rather than hindering them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unlike Rathumus's earlier letter, his report to Darius fairly relays the Jews' own account rather than accusing them."
+      ]
+    },
+    {
+      "id": "sathrabuzanes_geneva_1esdras",
+      "name": "Sathrabuzanes",
+      "role": "submanager",
+      "scribeTier": "Honest Letter",
+      "parentManagerId": "sisinnes_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 6:3,7,27",
+          "note": "Named alongside Sisinnes throughout the investigation, the letter to Darius, and the decree governing them both."
+        },
+        {
+          "ref": "1 Esdras 7:1",
+          "note": "Joined Sisinnes in assisting the temple's builders after Darius's decree."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "esdras_geneva_1esdras",
+      "name": "Esdras",
+      "role": "manager",
+      "scribeTier": "Scribe's Fast",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Azaraias, per the priestly lineage traced back to Aaron in 1 Esdras 8:1-2 — not otherwise indexed in this draft",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 8:1-3",
+          "note": "Came up from Babylon in Artaxerxes's reign, a ready scribe in the law of Moses, of the priestly line traced back to Aaron."
+        },
+        {
+          "ref": "1 Esdras 8:6-7",
+          "note": "Led a company up to Jerusalem in the king's seventh year, having great skill in the Lord's law and teaching it to all Israel."
+        },
+        {
+          "ref": "1 Esdras 8:25-27",
+          "note": "Blessed God for putting the mission into the king's heart, and gathered men from Israel to go with him."
+        },
+        {
+          "ref": "1 Esdras 8:41-49",
+          "note": "At the river Theras, found no priests or Levites among the company and sent for men of understanding to supply them."
+        },
+        {
+          "ref": "1 Esdras 8:50-53",
+          "note": "Proclaimed a fast to ask a prosperous journey, having been ashamed to ask the king for a military escort."
+        },
+        {
+          "ref": "1 Esdras 8:54-64",
+          "note": "Weighed and entrusted the silver, gold, and holy vessels to twelve chief priests, then delivered them intact to the temple in Jerusalem."
+        },
+        {
+          "ref": "1 Esdras 8:71-90",
+          "note": "On learning of the people's intermarriage with foreign nations, rent his clothes and hair, fasted, and prayed a long confession of Israel's sin before the temple."
+        },
+        {
+          "ref": "1 Esdras 8:91-96",
+          "note": "His weeping drew a great throng; took an oath from the priests and Levites to put away their foreign wives, per Jechonias's proposal."
+        },
+        {
+          "ref": "1 Esdras 9:1-6",
+          "note": "Fasted further, mourning in Jonas's chamber; summoned all the returned exiles to Jerusalem on pain of forfeiture and exclusion."
+        },
+        {
+          "ref": "1 Esdras 9:7-17",
+          "note": "Called the assembly to confess and separate from their foreign wives; appointed investigators to examine each case."
+        },
+        {
+          "ref": "1 Esdras 9:39-46",
+          "note": "Brought the law of Moses before the whole assembly, read it from morning to midday from a wooden pulpit, and blessed the Lord God before them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His public reading of the law (1 Esdras 9:39-55) so moved the assembly to weeping that the Levites had to announce, twice, that the day was holy and not for mourning."
+      ]
+    },
+    {
+      "id": "loddeus_geneva_1esdras",
+      "name": "Loddeus",
+      "role": "submanager",
+      "scribeTier": "Scribe's Fast",
+      "parentManagerId": "esdras_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 8:45-47",
+          "note": "Captain in charge of the treasury place Esdras sent to for priests and Levites; supplied eighteen men of understanding through the sons of Mooli."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jechonias_jeelus_geneva_1esdras",
+      "name": "Jechonias, son of Jeelus",
+      "role": "submanager",
+      "scribeTier": "Scribe's Fast",
+      "parentManagerId": "esdras_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 8:92-95",
+          "note": "Stood up and confessed the people's sin of intermarriage on their behalf, proposing an oath to put away the foreign wives and urging Esdras to act."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "attharates_geneva_1esdras",
+      "name": "Attharates",
+      "role": "submanager",
+      "scribeTier": "Scribe's Fast",
+      "parentManagerId": "esdras_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 9:49-53",
+          "note": "Told Esdras and the teaching Levites that the day of the law's reading was holy; instructed the weeping people to eat, drink, and send portions to those with nothing, rather than mourn."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "investigators_geneva_1esdras",
+      "name": "Jonathan, Ezekias, and the Assessors",
+      "role": "submanager",
+      "scribeTier": "Scribe's Fast",
+      "parentManagerId": "esdras_geneva_1esdras",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Esdras 9:14",
+          "note": "Jonathan son of Azael and Ezekias son of Thocanus took charge of examining the intermarriage cases, assisted by Mosollamus, Levis, and Sabbateus as assessors."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "returneesUnderZorobabel": {
+      "ref": "1 Esdras 5:9-46",
+      "note": "Extensive family-head counts of those who returned from Babylon with Zorobabel and Jesus - priests, Levites, singers, porters, temple-servants, and the sons of Solomon's servants - none individuated by action beyond their head-counts."
+    },
+    "priestsWithoutGenealogyRecord": {
+      "ref": "1 Esdras 5:38-40",
+      "note": "Priests (sons of Obdia, Akkos, and Jaddus) barred from the priesthood for lacking a genealogical record, pending a high priest wearing Urim and Thummim."
+    },
+    "menWhoPutAwayForeignWives": {
+      "ref": "1 Esdras 9:18-35",
+      "note": "A long roll-call of priests, Levites, singers, porters, and Israelites who had taken foreign wives and put them away with their children - names listed without individuated action."
+    }
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "book": "Romans",
+  "translation": "Ethiopian",
+  "canonicalOrder": 65,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian-translation text of Romans (16 chapters, 433 verses) directly from romans_65.json end to end. Content is textually identical to the KJV Romans already indexed in this project (Assets/Resources/Bible/CharacterIndex/Romans.json) — same argument structure, same named individuals, same chapter 16 greeting list, same closing doxology — so this draft adapts that book's proven 6-tier structure (1 person tier for Paul + 5 law/theme tiers walking his argument in canonical order) rather than inventing an unrelated shape. Every detail below was re-verified against this translation's own text, not copied blind. One real, if minor, textual variant found and preserved: this Ethiopian text spells the name in 16:1 as \"Phebe\" (not \"Phoebe\" as in KJV) — kept as written rather than silently normalized to the more familiar KJV spelling, flagged here per the naming-collision/no-silent-alteration discipline. Old Testament figures Paul cites as scriptural examples (Abraham, Sarah, Adam, Isaac, Ishmael, Jacob, Esau, Pharaoh, Elijah, David) are not given new character entries since they take no new action in Romans itself and are not yet indexed for this Ethiopian translation's own pipeline (only Genesis/Exodus have been done so far per the project's KJV-first, translation-by-translation approach) — logged in genealogyLists instead, without asserting a cross-translation id that doesn't yet exist. All ids suffixed _ethiopian to avoid collision with the KJV Romans ids and with a future Geneva-translation Romans draft. Ageevents empty throughout, typical for NT epistles, which almost never state ages.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Pen",
+      "managerId": "paul_romans_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Wrath Revealed",
+      "managerId": "the_wrath_revealed_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Ledger of Faith",
+      "managerId": "the_ledger_of_faith_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Newness of Life",
+      "managerId": "the_newness_of_life_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Wild Olive Branch",
+      "managerId": "the_wild_olive_branch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Living Sacrifice",
+      "managerId": "the_living_sacrifice_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_romans_ethiopian",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 1:1",
+          "note": "Introduces himself as \"a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God.\""
+        },
+        {
+          "ref": "Romans 1:8-15",
+          "note": "Thanks God for the Roman believers' faith spoken of throughout the world; states his long-hindered desire for a prosperous journey to visit them and preach the gospel at Rome also."
+        },
+        {
+          "ref": "Romans 1:16-17",
+          "note": "States he is not ashamed of the gospel, \"the power of God unto salvation to every one that believeth, to the Jew first, and also to the Greek\"; \"the just shall live by faith.\""
+        },
+        {
+          "ref": "Romans 9:1-5",
+          "note": "Personal anguish, sworn in Christ: \"I have great heaviness and continual sorrow in my heart... I could wish that myself were accursed from Christ for my brethren, my kinsmen according to the flesh,\" the Israelites."
+        },
+        {
+          "ref": "Romans 11:13-14",
+          "note": "Addresses Gentile readers directly, identifying himself as \"the apostle of the Gentiles\" and magnifying his office in hope of provoking his own kinsmen to jealousy and saving some of them."
+        },
+        {
+          "ref": "Romans 15:14-21",
+          "note": "Describes his own calling as minister of Jesus Christ to the Gentiles and his ambition to preach only where Christ had not already been named, so as not to build on another man's foundation."
+        },
+        {
+          "ref": "Romans 15:22-29",
+          "note": "Explains his travel plans: long hindered from visiting Rome, he now hopes to see them on the way to Spain, but must first carry a contribution for the poor saints at Jerusalem."
+        },
+        {
+          "ref": "Romans 15:30-33",
+          "note": "Asks the Roman believers to strive with him in prayer for deliverance from unbelievers in Judaea and that his service to Jerusalem be accepted."
+        },
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Commends Phebe, a servant of the church at Cenchrea, to the church at Rome."
+        },
+        {
+          "ref": "Romans 16:3-16",
+          "note": "Sends personal greetings to a long list of individuals and households at Rome, including Priscilla and Aquila, and Andronicus and Junia among his own kinsmen and fellow-prisoners."
+        },
+        {
+          "ref": "Romans 16:17-20",
+          "note": "Warns the Roman believers to mark and avoid those who cause divisions contrary to the doctrine they have learned, since such persons serve their own belly and deceive the simple by fair speeches; promises \"the God of peace shall bruise Satan under your feet shortly.\""
+        },
+        {
+          "ref": "Romans 16:21-24",
+          "note": "Relays greetings from his own companions — Timotheus (his workfellow), Lucius, Jason, and Sosipater (his kinsmen), Tertius (who wrote the epistle), Gaius (his host and host of the whole church), Erastus (the city's chamberlain), and Quartus."
+        },
+        {
+          "ref": "Romans 16:25-27",
+          "note": "Closes with a doxology: God is able to establish them according to Paul's gospel, the revelation of a mystery kept secret since the world began but now made known to all nations for the obedience of faith; \"to God only wise, be glory through Jesus Christ for ever. Amen.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans 16:22 records that Tertius, the scribe who physically wrote the letter at Paul's dictation, inserted his own personal greeting into the text.",
+        "Paul wrote Romans to a church he had not yet personally visited (Romans 1:13, 15:22-23), unlike most of his other epistles."
+      ]
+    },
+    {
+      "id": "phebe_ethiopian",
+      "name": "Phebe",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:1-2",
+          "note": "Paul commends her as \"our sister,\" a servant of the church at Cenchrea, asking the Roman believers to receive her and assist her, \"for she hath been a succourer of many, and of myself also.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Ethiopian-translation text spells her name \"Phebe,\" not the more familiar \"Phoebe\" spelling used in the KJV — kept as written in the source rather than silently normalized."
+      ]
+    },
+    {
+      "id": "priscilla_and_aquila_romans_ethiopian",
+      "name": "Priscilla and Aquila",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:3-5",
+          "note": "Paul greets them as \"my helpers in Christ Jesus: who have for my life laid down their own necks,\" thanked by Paul and by all the churches of the Gentiles; greets \"the church that is in their house.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Treated as one collective entry because the text always names and credits them together and never differentiates an individual action by either one."
+      ]
+    },
+    {
+      "id": "andronicus_and_junia_romans_ethiopian",
+      "name": "Andronicus and Junia",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Pen",
+      "parentManagerId": "paul_romans_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Romans 16:7",
+          "note": "Paul greets them as \"my kinsmen, and my fellowprisoners, who are of note among the apostles, who also were in Christ before me.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Promoted to a submanager rather than the bulk greeting note because the text singles them out by name as kinsmen and fellow-prisoners \"of note among the apostles,\" a mark of distinction comparable to Phebe's own commendation and Priscilla/Aquila's."
+      ]
+    },
+    {
+      "id": "the_wrath_revealed_ethiopian",
+      "name": "The Wrath Revealed",
+      "role": "law",
+      "scribeTier": "The Wrath Revealed",
+      "deliveredBy": "paul_romans_ethiopian",
+      "purpose": "Establishes that both Gentiles (who suppress the truth about God evident in creation) and Jews (who possess the law but do not keep it) stand equally guilty before God, so every mouth is stopped and the whole world held accountable before a righteousness apart from the law is introduced.",
+      "verses": [
+        {
+          "ref": "Romans 1:18-23",
+          "note": "God's wrath is revealed against ungodliness; Gentiles are without excuse, having suppressed the truth about God evident in creation, turning instead to idolatry."
+        },
+        {
+          "ref": "Romans 1:24-32",
+          "note": "God gives them over to uncleanness and a reprobate mind; a catalog of resulting sins follows, ending with those who approve of others who do them."
+        },
+        {
+          "ref": "Romans 2:1-16",
+          "note": "Jew and Gentile alike will be judged by God according to truth, not mere possession of the law; God will judge the secrets of men by Jesus Christ."
+        },
+        {
+          "ref": "Romans 2:17-29",
+          "note": "Warns those who boast in the law but break it; true circumcision is \"of the heart, in the spirit, and not in the letter.\""
+        },
+        {
+          "ref": "Romans 3:1-8",
+          "note": "Addresses the advantage of the Jew — chiefly, entrustment with the oracles of God — and defends God's faithfulness as unaffected by man's unfaithfulness."
+        },
+        {
+          "ref": "Romans 3:9-20",
+          "note": "Concludes Jews and Gentiles are all under sin, chaining Old Testament quotations (\"there is none righteous, no, not one\"); \"by the law is the knowledge of sin.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Romans 3:10-18 strings together quotations from several Psalms and Isaiah into one continuous indictment."
+      ]
+    },
+    {
+      "id": "the_ledger_of_faith_ethiopian",
+      "name": "The Ledger of Faith",
+      "role": "law",
+      "scribeTier": "The Ledger of Faith",
+      "deliveredBy": "paul_romans_ethiopian",
+      "purpose": "Introduces a righteousness apart from the law, received by faith and credited rather than earned by works, using Abraham's justification before his circumcision as scriptural proof, and contrasts Adam's one trespass with Christ's one act of righteousness.",
+      "verses": [
+        {
+          "ref": "Romans 3:21-26",
+          "note": "The righteousness of God apart from the law is manifested, witnessed by the law and the prophets; all are \"justified freely by his grace through the redemption that is in Christ Jesus.\""
+        },
+        {
+          "ref": "Romans 3:27-31",
+          "note": "Boasting is excluded; a man is justified by faith without the deeds of the law; the law is established, not made void, through faith."
+        },
+        {
+          "ref": "Romans 4:1-8",
+          "note": "Abraham was justified by faith, not works — \"it was counted unto him for righteousness\" — with David's words also cited on the blessedness of imputed righteousness apart from works."
+        },
+        {
+          "ref": "Romans 4:9-17",
+          "note": "The blessing is not confined to the circumcised, since Abraham was justified while still uncircumcised, making him father of all who believe."
+        },
+        {
+          "ref": "Romans 4:18-25",
+          "note": "Abraham's faith is described as strong though his and Sara's bodies were as good as dead, \"fully persuaded that, what he had promised, he was able also to perform.\""
+        },
+        {
+          "ref": "Romans 5:1-11",
+          "note": "Being justified by faith, believers have peace with God and access into grace; God's love is commended in that Christ died for the ungodly while they were yet sinners."
+        },
+        {
+          "ref": "Romans 5:12-21",
+          "note": "Through one man (Adam) sin and death entered the world; contrasted with the free gift through the one man Jesus Christ — \"where sin abounded, grace did much more abound.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text renders Abraham's wife's name \"Sara\" in Romans 4:19, matching the earlier-form spelling used before Genesis 17's renaming."
+      ]
+    },
+    {
+      "id": "the_newness_of_life_ethiopian",
+      "name": "The Newness of Life",
+      "role": "law",
+      "scribeTier": "The Newness of Life",
+      "deliveredBy": "paul_romans_ethiopian",
+      "purpose": "Answers the objection that grace excuses continued sin by explaining union with Christ's death and resurrection through baptism, describes the struggle against indwelling sin, and closes with assurance that life in the Spirit brings no condemnation and nothing can separate believers from the love of God.",
+      "verses": [
+        {
+          "ref": "Romans 6:1-14",
+          "note": "Shall we continue in sin that grace may abound? \"God forbid\"; baptized into Christ's death, believers are to \"walk in newness of life.\""
+        },
+        {
+          "ref": "Romans 6:15-23",
+          "note": "Believers become servants of righteousness rather than sin; \"the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.\""
+        },
+        {
+          "ref": "Romans 7:1-6",
+          "note": "Uses the law of marriage as illustration; believers are dead to the law through the body of Christ, freed to serve in newness of spirit."
+        },
+        {
+          "ref": "Romans 7:7-13",
+          "note": "The law itself is not sin, but sin used the commandment to produce wrong desire; \"the law is holy, and the commandment holy, and just, and good.\""
+        },
+        {
+          "ref": "Romans 7:14-25",
+          "note": "Describes the inward struggle: \"the good that I would I do not: but the evil which I would not, that I do\"; \"O wretched man that I am,\" then thanks God through Jesus Christ."
+        },
+        {
+          "ref": "Romans 8:1-11",
+          "note": "\"There is therefore now no condemnation to them which are in Christ Jesus\"; the law of the Spirit of life sets one free from the law of sin and death."
+        },
+        {
+          "ref": "Romans 8:12-17",
+          "note": "Those led by the Spirit are sons of God; \"the Spirit itself beareth witness with our spirit, that we are the children of God,\" joint-heirs with Christ."
+        },
+        {
+          "ref": "Romans 8:18-27",
+          "note": "Present sufferings are \"not worthy to be compared with the glory which shall be revealed\"; the whole creation groans, and the Spirit makes intercession \"with groanings which cannot be uttered.\""
+        },
+        {
+          "ref": "Romans 8:28-30",
+          "note": "\"All things work together for good to them that love God\"; those foreknown are also predestinated, called, justified, and glorified."
+        },
+        {
+          "ref": "Romans 8:31-39",
+          "note": "\"If God be for us, who can be against us?\"; nothing in creation \"shall be able to separate us from the love of God, which is in Christ Jesus our Lord.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_wild_olive_branch_ethiopian",
+      "name": "The Wild Olive Branch",
+      "role": "law",
+      "scribeTier": "The Wild Olive Branch",
+      "deliveredBy": "paul_romans_ethiopian",
+      "purpose": "Explains that God's word has not failed despite Israel's unbelief, because true Israel was always God's sovereign election (illustrated through Isaac/Ishmael and Jacob/Esau), pictures Gentile salvation as a wild olive branch grafted into the cultivated tree, and looks to a future restoration in which \"all Israel shall be saved.\"",
+      "verses": [
+        {
+          "ref": "Romans 9:6-13",
+          "note": "\"They are not all Israel, which are of Israel\"; God's purpose according to election illustrated through Isaac (not Ishmael) and Jacob (not Esau), chosen before either had done good or evil."
+        },
+        {
+          "ref": "Romans 9:14-24",
+          "note": "\"Is there unrighteousness with God? God forbid\"; discusses God's mercy and hardening (citing Pharaoh) and the potter's right over the clay."
+        },
+        {
+          "ref": "Romans 9:25-33",
+          "note": "Cites Osee and Esaias on calling a people \"not my people\" and a remnant being saved; Israel \"stumbled at that stumblingstone.\""
+        },
+        {
+          "ref": "Romans 10:1-13",
+          "note": "Paul's own heart's desire and prayer for Israel's salvation; describes their zeal without knowledge, seeking to establish their own righteousness; \"whosoever shall call upon the name of the Lord shall be saved.\""
+        },
+        {
+          "ref": "Romans 10:14-21",
+          "note": "\"How shall they hear without a preacher?\"; \"faith cometh by hearing\"; Israel has heard, yet not all have obeyed the gospel."
+        },
+        {
+          "ref": "Romans 11:1-10",
+          "note": "\"Hath God cast away his people? God forbid\"; a remnant according to the election of grace, as in the days of Elias when seven thousand had not bowed to Baal."
+        },
+        {
+          "ref": "Romans 11:11-24",
+          "note": "Through Israel's fall, salvation has come to the Gentiles; pictures an olive tree with natural branches broken off and a wild olive branch grafted in, warning the grafted branch not to boast."
+        },
+        {
+          "ref": "Romans 11:25-32",
+          "note": "Reveals the \"mystery\" that blindness in part has happened to Israel until the fullness of the Gentiles come in, \"and so all Israel shall be saved.\""
+        },
+        {
+          "ref": "Romans 11:33-36",
+          "note": "Closes with a doxology: \"O the depth of the riches both of the wisdom and knowledge of God!\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "the_living_sacrifice_ethiopian",
+      "name": "The Living Sacrifice",
+      "role": "law",
+      "scribeTier": "The Living Sacrifice",
+      "deliveredBy": "paul_romans_ethiopian",
+      "purpose": "Turns from doctrine to practice: presenting oneself as a living sacrifice, exercising differing spiritual gifts within one body, loving genuinely, submitting to governing authorities, fulfilling the law through love of neighbor, and bearing with one another's differing convictions without judging, following Christ's own example of not pleasing himself.",
+      "verses": [
+        {
+          "ref": "Romans 12:1-2",
+          "note": "\"Present your bodies a living sacrifice\"; \"be not conformed to this world: but be ye transformed by the renewing of your mind.\""
+        },
+        {
+          "ref": "Romans 12:3-8",
+          "note": "One body with many members; differing gifts — prophecy, ministry, teaching, exhortation, giving, ruling, mercy — exercised according to their proportion."
+        },
+        {
+          "ref": "Romans 12:9-21",
+          "note": "A run of practical exhortations: love without dissimulation, rejoice in hope, bless persecutors, recompense no man evil for evil, \"overcome evil with good.\""
+        },
+        {
+          "ref": "Romans 13:1-7",
+          "note": "Calls for subjection to governing authorities, \"ordained of God\"; render tribute, custom, fear, and honour to whom each is due."
+        },
+        {
+          "ref": "Romans 13:8-10",
+          "note": "\"Owe no man any thing, but to love one another: for he that loveth another hath fulfilled the law.\""
+        },
+        {
+          "ref": "Romans 13:11-14",
+          "note": "\"The night is far spent, the day is at hand\"; exhortation to cast off the works of darkness and \"put on the armour of light.\""
+        },
+        {
+          "ref": "Romans 14:1-12",
+          "note": "Receive the one weak in faith without disputing over opinions; some esteem one day above another, others every day alike; \"none of us liveth to himself.\""
+        },
+        {
+          "ref": "Romans 14:13-23",
+          "note": "\"Let us not therefore judge one another any more\"; the kingdom of God is not meat and drink, \"but righteousness, and peace, and joy in the Holy Ghost.\""
+        },
+        {
+          "ref": "Romans 15:1-13",
+          "note": "The strong ought to bear the infirmities of the weak and not please themselves, following Christ's own example, who \"pleased not himself\"; exhorts believers to \"receive ye one another, as Christ also received us.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references kept out of the character list above.",
+    "pauline_scriptural_examples": {
+      "ref": "Romans 4, 5:12-21, 9:6-13, 9:17, 11:2-4, 4:6-8",
+      "note": "Old Testament figures Paul cites as examples within his argument, not narratively present in Romans itself, and not yet indexed for this Ethiopian translation's own pipeline (only Genesis/Exodus have been indexed so far for Ethiopian): Abraham and Sara, Adam, Isaac and Ishmael, Jacob and Esau, Pharaoh, Elias (Elijah), and David."
+    },
+    "romans_16_greeting_list": {
+      "ref": "Romans 16:5-16, 16:21-23",
+      "note": "Remaining individuals and households Paul greets or who send greetings, kept as a collective bulk note since the text gives most only a name with no differentiated action: Epaenetus (\"the firstfruits of Achaia\"); Mary (\"who bestowed much labour on us\" — a different Mary from Mary the mother of Jesus; this text supplies no further identifying detail); Amplias, Urbane, Stachys, Apelles; the household of Aristobulus; Herodion (Paul's kinsman); the household of Narcissus; Tryphena and Tryphosa; Persis (\"which laboured much in the Lord\"); Rufus (\"chosen in the Lord\") and his mother; Asyncritus, Phlegon, Hermas, Patrobas, Hermes; Philologus, Julia, Nereus and his sister, Olympas; and among Paul's companions at the letter's close: Timotheus (his \"workfellow\"), Lucius, Jason, and Sosipater (his kinsmen), Tertius (who personally wrote the epistle), Gaius (his host, \"of the whole church\"), Erastus (\"the chamberlain of the city\"), and Quartus. Andronicus and Junia (16:7) are NOT included here — promoted to their own submanager entry ('andronicus_and_junia_romans_ethiopian')."
+    }
+  }
+}

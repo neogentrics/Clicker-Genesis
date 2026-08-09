@@ -1,0 +1,860 @@
+{
+  "book": "Jeremiah",
+  "translation": "Geneva",
+  "canonicalOrder": 24,
+  "status": "drafted via direct reading of the real Geneva 1560 extracted text (Assets/Resources/Verses/Geneva/jeremiah_24.json), cross-checked against the existing validated KJV Jeremiah.json for structural precedent only",
+  "notes": "Read directly across chapters 1-11, 16, 18-29, 32-33, 35-45, 46, 50-52 of the real Geneva text. Content and narrative structure match the standard Masoretic-based Jeremiah familiar from KJV almost exactly (same call narrative, temple sermon, potter's house/bottle sign-acts, Pashur's stocks, Jehoiakim's scroll-burning, Hananiah's yoke, the field of Anathoth, the siege and fall of Jerusalem, Gedaliah's assassination, the flight to Egypt, the oracles against the nations, and Jehoiachin's eventual release at the very end) - no deuterocanonical or structurally divergent content the way some other books in this project have shown. However, this translation has real, consistent surface-level differences worth preserving rather than silently normalizing to KJV spelling: (1) 'Babel' is used throughout in place of 'Babylon' (e.g. 'King of Babel', 'the land of Babel'). (2) The king's name is spelled 'Nebuchad-nezzar' (hyphenated, with 'nezzar') consistently throughout this book, differing from KJV's distinctive Jeremiah-only 'Nebuchadrezzar' spelling (with 'rezzar') - Geneva does not make that r/n distinction KJV Jeremiah does. (3) Jeremiah 38:7 and 39:16 render Ebedmelech's origin as 'Ebed-melech ye blacke More' rather than 'the Ethiopian' - a genuine period-English translation choice for the same word, not a different person or invented detail. (4) Several minor names are spelled differently: 'Iucal' (Jehucal/Jucal), 'Iriiah' (Irijah), 'Michaiah' (Micaiah), 'Sheraiah'/'Neriiah' (Seraiah/Neriah, at 51:59 and 52:24), 'Ieconiah'/'Coniah'/'Iehoiachin' (the same three-name pattern as KJV's Jeconiah/Coniah/Jehoiachin, confirmed present in this translation too at 24:1, 22:24, and 52:31 respectively). Naming-collision rule applied identically to the KJV index, since the underlying persons and relationships are unchanged: (1) 'Shallum' as King Jehoahaz's throne name (22:11) is a different man from Jeremiah's uncle Shallum, Hanameel's father (32:7). (2) 'Pashur' the son of Immer (ch. 20) is a different man from Pashur the son of Malchiah, one of the four princes (38:1). (3) That Pashur son of Malchiah is himself distinct from Malchiah the son of Hammelech, whose pit/dungeon Jeremiah is lowered into (38:6). (4) 'Zedekiah' the king is distinct from both Zedekiah the son of Hananiah (36:12) and the false prophet Zedekiah the son of Maaseiah condemned in the letter to the exiles (29:21). (5) 'Hananiah' the false prophet son of Azur (ch. 28) is distinct from the bare patronymic Hananiah at 36:12 (Zedekiah-the-prince's father). (6) 'Shemaiah' the father of Uriah (26:20) is distinct from Shemaiah the Nehelamite, the false prophet writing from Babel (ch. 29). One extraction data gap flagged, not a Geneva/KJV content difference: verse 29:18 in the source file reads only 'n/a', a placeholder for lost/unrecoverable text at that single verse - not treated as real scripture content here and not used to draw any conclusion.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Almond Rod",
+      "managerId": "jeremiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Temple Sermon",
+      "managerId": "temple_sermon_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Potter's House",
+      "managerId": "potters_house_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Stocks of Benjamin's Gate",
+      "managerId": "pashur_son_of_immer_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Penknife Brazier",
+      "managerId": "jehoiakim_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Scroll and Inkhorn",
+      "managerId": "baruch_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Broken Yoke",
+      "managerId": "hananiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Everlasting Covenant",
+      "managerId": "new_covenant_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Letter to the Captives",
+      "managerId": "letter_to_exiles_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Signet Ring",
+      "managerId": "jehoiachin_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Secret Chamber",
+      "managerId": "zedekiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Rotten Ragges and Worne Cloutes",
+      "managerId": "ebedmelech_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Cup of Indignation",
+      "managerId": "oracles_against_nations_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Buried Pavement Stones",
+      "managerId": "nebuchadnezzar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "The Governour's Table at Mizpah",
+      "managerId": "gedaliah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Cisterne of Mizpah",
+      "managerId": "ishmael_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Road to Egypt",
+      "managerId": "johanan_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Rechabites' Obedience",
+      "managerId": "rechabites_obedience_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jeremiah_geneva",
+      "name": "Ieremiah",
+      "role": "manager",
+      "scribeTier": "The Almond Rod",
+      "genealogy": {
+        "father": "Hilkiah, one of the Priests that were at Anathoth in the land of Beniamin (1:1)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 1:4-10",
+          "note": "His call and commission: ordained a prophet unto the nations before he was formed in the womb."
+        },
+        {
+          "ref": "Jeremiah 16:1-4",
+          "note": "Commanded not to take a wife or have sons or daughters in that place, as a sign of the coming disaster."
+        },
+        {
+          "ref": "Jeremiah 20:7-9",
+          "note": "His anguished complaint that the Lord's word is like a burning fire shut up in his bones."
+        },
+        {
+          "ref": "Jeremiah 32:6-12",
+          "note": "Buys his cousin Hanameel's field at Anathoth with silver during the siege, as a sign of future hope."
+        },
+        {
+          "ref": "Jeremiah 38:6",
+          "note": "Cast into the miry dungeon of Malchiah the son of Hammelech under Zedekiah."
+        }
+      ],
+      "funFacts": [
+        "Told he was sanctified and ordained a prophet to the nations before he came out of the womb (1:5).",
+        "Replied to his call, 'Oh, Lord God, behold, I can not speake, for I am a childe' (1:6)."
+      ]
+    },
+    {
+      "id": "temple_sermon_geneva",
+      "name": "The Temple Sermon",
+      "role": "law",
+      "deliveredBy": "jeremiah_geneva",
+      "purpose": "Warns Iudah that the Temple building itself guarantees nothing - obedience, not the sanctuary's mere presence, is what the Lord requires; delivered at the gate of the Lord's House and repeated at the cost of Ieremiah's own life.",
+      "verses": [
+        {
+          "ref": "Jeremiah 7:1-15",
+          "note": "The original sermon: 'Trust not in lying woordes, saying, The Temple of the Lord, the Temple of the Lord, the Temple of the Lord.'"
+        },
+        {
+          "ref": "Jeremiah 26:1-16",
+          "note": "The sermon repeated; Ieremiah is put on trial for his life over it, defended by the Elders citing Michah's earlier unpunished prophecy."
+        }
+      ],
+      "funFacts": [
+        "Cites Shilo, the Lord's earlier resting place, as proof he will abandon even his own sanctuary if sin persists (7:12)."
+      ]
+    },
+    {
+      "id": "potters_house_geneva",
+      "name": "The Potters House",
+      "role": "law",
+      "deliveredBy": "jeremiah_geneva",
+      "purpose": "Illustrates the Lord's sovereign right, as a potter over clay, to reshape or irrevocably break the nation according to its response - shown first as conditional at the wheel, then as final in the broken bottle.",
+      "verses": [
+        {
+          "ref": "Jeremiah 18:1-11",
+          "note": "At the potter's wheel, a marred vessel is reworked into another as the potter sees fit."
+        },
+        {
+          "ref": "Jeremiah 19:1-11",
+          "note": "Ieremiah buys and smashes an earthen bottle in the valley of Ben-hinnom, declaring the breaking cannot be made whole again."
+        }
+      ]
+    },
+    {
+      "id": "pashur_son_of_immer_geneva",
+      "name": "Pashur the sonne of Immer",
+      "role": "manager",
+      "scribeTier": "The Stocks of Benjamin's Gate",
+      "genealogy": {
+        "father": "Immer",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A Priest and governor in the house of the Lord (20:1); a different man from Pashur the sonne of Malchiah, one of the four princes who casts Ieremiah into a dungeon (38:1)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 20:1-6",
+          "note": "Smites Ieremiah and puts him in the stocks at the high gate of Beniamin; renamed 'Magor-missabib' and told he will die captive in Babel."
+        }
+      ]
+    },
+    {
+      "id": "jehoiakim_geneva",
+      "name": "Iehoiakim",
+      "role": "manager",
+      "scribeTier": "The Penknife Brazier",
+      "genealogy": {
+        "father": "Iosiah, King of Iudah",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Ieconiah, also called Coniah and Iehoiachin"
+        ],
+        "note": "Placed on the throne by Pharaoh in place of his brother Shallum (Iehoahaz, 22:11); a different Shallum from Ieremiah's own uncle at 32:7."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:21-23",
+          "note": "Cuts Ieremiah's dictated scroll into pieces with a penknife and burns it column by column in the winter-house brazier."
+        },
+        {
+          "ref": "Jeremiah 22:13-19",
+          "note": "Denounced for building his house by unrighteousness; given a donkey's-burial prophecy."
+        },
+        {
+          "ref": "Jeremiah 26:20-23",
+          "note": "Sends Elnathan the son of Achbor to fetch the prophet Vriiah back from Egypt and has him executed."
+        }
+      ]
+    },
+    {
+      "id": "baruch_geneva",
+      "name": "Baruch",
+      "role": "manager",
+      "scribeTier": "The Scroll and Inkhorn",
+      "genealogy": {
+        "father": "Neriah, the sonne of Maaseiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Sheraiah, covered as his own submanager below (51:59)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:4-8",
+          "note": "Writes Ieremiah's words at his dictation and reads the scroll aloud in the Temple, since Ieremiah himself was shut up."
+        },
+        {
+          "ref": "Jeremiah 36:32",
+          "note": "Rewrites a second, expanded scroll after Iehoiakim burns the first."
+        },
+        {
+          "ref": "Jeremiah 45:1-5",
+          "note": "Receives his own personal oracle promising his life will be spared 'for a pray' amid the coming disaster."
+        }
+      ],
+      "funFacts": [
+        "Told to Ieremiah, 'I fainted in my mourning, and I can finde no rest' (45:3) before the promise of his life spared."
+      ]
+    },
+    {
+      "id": "hananiah_geneva",
+      "name": "Hananiah",
+      "role": "manager",
+      "scribeTier": "The Broken Yoke",
+      "genealogy": {
+        "father": "Azur",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'The prophet, which was of Gibeon' (28:1); a different man from the bare patronymic Hananiah at 36:12 (Zedekiah-the-prince's father)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 28:10-11",
+          "note": "Breaks Ieremiah's wooden yoke, prophesying Babel's power will break within two years."
+        },
+        {
+          "ref": "Jeremiah 28:13-17",
+          "note": "Ieremiah answers that a yoke of iron will replace it, and Hananiah dies within the year, exactly as prophesied, in the seventh month."
+        }
+      ]
+    },
+    {
+      "id": "new_covenant_geneva",
+      "name": "The Everlasting Couenant",
+      "role": "law",
+      "deliveredBy": "jeremiah_geneva",
+      "purpose": "Promises the Lord will write his law in the hearts of Iudah and Israel and remember their sin no more, paired with the promise of an everlasting seed for David and the Leuites.",
+      "verses": [
+        {
+          "ref": "Jeremiah 31:31-34",
+          "note": "The new covenant, its law written in the heart rather than on tablets of stone."
+        },
+        {
+          "ref": "Jeremiah 33:14-26",
+          "note": "The branch of righteousness promised to grow up unto David, and the covenant compared to the fixed order of day and night."
+        }
+      ]
+    },
+    {
+      "id": "letter_to_exiles_geneva",
+      "name": "The Letter to the Captiues",
+      "role": "law",
+      "deliveredBy": "jeremiah_geneva",
+      "purpose": "Instructs the exiles already carried to Babel to build houses, plant gardens, and seek the peace of the city rather than trust false prophets promising a swift return, grounding hope in a dated seventy-year promise instead.",
+      "verses": [
+        {
+          "ref": "Jeremiah 29:4-7",
+          "note": "Build houses, plant gardens, and seek the city's peace, 'for in the peace thereof shall you haue peace.'"
+        },
+        {
+          "ref": "Jeremiah 29:10-11",
+          "note": "After seventy years at Babel are accomplished, the Lord will perform his good promise and bring them again to this place."
+        },
+        {
+          "ref": "Jeremiah 29:21-23",
+          "note": "Condemns the false prophets Ahab the sonne of Kolaiah and Zedekiah the sonne of Maaseiah, prophesying they will be slain before the exiles' eyes."
+        }
+      ],
+      "funFacts": [
+        "Carried to Babel by Elasah the sonne of Shaphan and Gemariah the sonne of Hilkiah, sent by Zedekiah on other royal business (29:3)."
+      ]
+    },
+    {
+      "id": "jehoiachin_geneva",
+      "name": "Iehoiachin (also called Coniah and Ieconiah)",
+      "role": "manager",
+      "scribeTier": "The Signet Ring",
+      "genealogy": {
+        "father": "Iehoiakim",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called by three names in this book, same pattern as KJV: Ieconiah (24:1), Coniah (22:24, 28), and Iehoiachin (52:31) - the same man throughout."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 22:24-30",
+          "note": "'Though Coniah... were the signet of my right hand, yet would I plucke thee thence' - pronounced destitute of children for throne purposes."
+        },
+        {
+          "ref": "Jeremiah 24:1-10",
+          "note": "The two baskets of figs vision, dated after his captivity - good figs mark the exiles for restoration, naughty figs mark those left under Zedekiah for further judgment."
+        },
+        {
+          "ref": "Jeremiah 52:31-34",
+          "note": "After thirty-seven years captive, Euil-merodach of Babel lifts up his head, frees him, and gives him a continual portion all his days."
+        }
+      ]
+    },
+    {
+      "id": "zedekiah_geneva",
+      "name": "Zedekiah",
+      "role": "manager",
+      "scribeTier": "The Secret Chamber",
+      "genealogy": {
+        "father": "Iosiah, King of Iudah",
+        "mother": "Hamutal, the daughter of Ieremiah of Libnah",
+        "spouses": [],
+        "children": [],
+        "note": "Iudah's last king, made king by Nebuchad-nezzar in Ieconiah's place (37:1); distinct from Zedekiah the sonne of Hananiah (36:12) and Zedekiah the sonne of Maaseiah, the false prophet (29:21)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 37:17",
+          "note": "Secretly asks the imprisoned Ieremiah, 'Is there any worde from the Lord?' and is told plainly he will be delivered to Babel."
+        },
+        {
+          "ref": "Jeremiah 38:14-16",
+          "note": "A second secret consultation, swearing an oath by the Lord that made their souls not to slay Ieremiah."
+        },
+        {
+          "ref": "Jeremiah 39:5-7 / 52:8-11",
+          "note": "Captured fleeing Ierusalem, watches his sons slain at Riblah, then is blinded and bound in chains for Babel."
+        }
+      ]
+    },
+    {
+      "id": "ebedmelech_geneva",
+      "name": "Ebed-melech the blacke More",
+      "role": "manager",
+      "scribeTier": "The Rotten Ragges and Worne Cloutes",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'One of ye Eunuches, which was in the kings house' (38:7); Geneva renders his origin as 'the blacke More' where later English translations say 'the Ethiopian' - a real translation-choice difference, same person."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:7-13",
+          "note": "Pleads with Zedekiah for Ieremiah's life, then draws him from the miry dungeon using old rotten rags and worn cords under his armholes."
+        },
+        {
+          "ref": "Jeremiah 39:15-18",
+          "note": "Receives his own promise of deliverance: 'thy life shalbe for a praye vnto thee, because thou hast put thy trust in me.'"
+        }
+      ]
+    },
+    {
+      "id": "oracles_against_nations_geneva",
+      "name": "The Cup of the Wine of Indignation",
+      "role": "law",
+      "deliveredBy": "jeremiah_geneva",
+      "purpose": "Extends judgment beyond Iudah to the Gentile nations - Egypt, the Philistims, Moab, the Ammonites, Edom, Tyrus and Zidon, and finally Babel itself - shown as one shared cup of the Lord's wrath passed from nation to nation.",
+      "verses": [
+        {
+          "ref": "Jeremiah 25:15-29",
+          "note": "Ieremiah takes the cup of wine of the Lord's indignation and makes all the named nations drink it, opening the oracle block."
+        },
+        {
+          "ref": "Jeremiah 46:1-2",
+          "note": "The oracle against Egypt, first of the nations named individually."
+        },
+        {
+          "ref": "Jeremiah 50:1-51:64",
+          "note": "The long closing oracle against Babel itself, prophesying its own eventual fall even as it stands as the Lord's instrument."
+        }
+      ]
+    },
+    {
+      "id": "nebuchadnezzar_geneva",
+      "name": "Nebuchad-nezzar",
+      "role": "manager",
+      "scribeTier": "The Buried Pavement Stones",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "King of Babel; this translation spells his name 'Nebuchad-nezzar' (hyphenated, with 'nezzar') consistently, unlike KJV's distinct Jeremiah-only 'Nebuchadrezzar' spelling."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 27:6",
+          "note": "Called the Lord's 'seruant,' given dominion over the lands and beasts of the field."
+        },
+        {
+          "ref": "Jeremiah 43:8-13",
+          "note": "Sign-act at Tahpanhes: great stones hidden in the brick-kiln clay, prophesying his throne set over that very spot."
+        },
+        {
+          "ref": "Jeremiah 52:12-23",
+          "note": "His captain Nebuzar-adan burns the Temple and city and carries off the pillars, the brasen Sea, and the vessels of gold and silver, inventoried in detail."
+        }
+      ]
+    },
+    {
+      "id": "gedaliah_geneva",
+      "name": "Gedaliah the sonne of Ahikam",
+      "role": "manager",
+      "scribeTier": "The Governour's Table at Mizpah",
+      "genealogy": {
+        "father": "Ahikam the sonne of Shaphan",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A different man from Gedaliah the sonne of Pashur, one of the four princes who casts Ieremiah into the dungeon (38:1)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 40:5-7",
+          "note": "Appointed governour over the remnant of Iudah by Nebuzar-adan the chief steward."
+        },
+        {
+          "ref": "Jeremiah 40:13-16",
+          "note": "Warned by Iohanan that Ishmael has been sent to kill him, and refuses to believe it."
+        },
+        {
+          "ref": "Jeremiah 41:1-3",
+          "note": "Assassinated by Ishmael the sonne of Nethaniah during a shared meal at Mizpah, along with the Iewes and Caldeans present."
+        }
+      ]
+    },
+    {
+      "id": "ishmael_geneva",
+      "name": "Ishmael the sonne of Nethaniah",
+      "role": "manager",
+      "scribeTier": "The Cisterne of Mizpah",
+      "genealogy": {
+        "father": "Nethaniah, the sonne of Elishama",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'Of the seede royall,' one of the King's princes (41:1)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 41:1-3",
+          "note": "Murders Gedaliah and all the Iewes and Caldeans at Mizpah."
+        },
+        {
+          "ref": "Jeremiah 41:4-9",
+          "note": "The next day slays seventy of eighty pilgrims traveling with offerings and casts their bodies into the pit Asa the King had made."
+        },
+        {
+          "ref": "Jeremiah 41:10-16",
+          "note": "Carries the remaining people of Mizpah, including the King's daughters, toward the Ammonites before Iohanan intercepts and frees them."
+        }
+      ]
+    },
+    {
+      "id": "johanan_geneva",
+      "name": "Iohanan the sonne of Kareah",
+      "role": "manager",
+      "scribeTier": "The Road to Egypt",
+      "genealogy": {
+        "father": "Kareah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "One of the captains of the host remaining scattered in the field after Ierusalem's fall (40:7-8)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 40:13-16",
+          "note": "Warns Gedaliah of Ishmael's plot and offers to kill him secretly first; Gedaliah refuses."
+        },
+        {
+          "ref": "Jeremiah 41:11-16",
+          "note": "Pursues Ishmael after Gedaliah's murder and recovers the captives, though Ishmael himself escapes to the Ammonites."
+        },
+        {
+          "ref": "Jeremiah 42:1-6 / 43:1-7",
+          "note": "Swears in advance to obey whatever the Lord answers through Ieremiah about fleeing to Egypt, then rejects the answer and leads the remnant to Egypt anyway, taking Ieremiah and Baruch by force."
+        }
+      ]
+    },
+    {
+      "id": "rechabites_obedience_geneva",
+      "name": "The Rechabites' Obedience",
+      "role": "law",
+      "deliveredBy": null,
+      "purpose": "The Rechabites' unbroken obedience to their ancestor Ionadab's generations-old command - never drink wine, never build houses, live only in tents - is used by Ieremiah as an object lesson shaming Iudah's refusal to obey the living God who has spoken to them 'rising earely and speaking.'",
+      "verses": [
+        {
+          "ref": "Jeremiah 35:1-11",
+          "note": "Ieremiah sets pots of wine before the Rechabites in a Temple chamber and offers them a drink; they refuse, citing Ionadab's ancient command kept unto that day."
+        },
+        {
+          "ref": "Jeremiah 35:18-19",
+          "note": "The Lord rewards their fidelity: 'Ionadab the sonne of Rechab shall not want a man to stand before me for euer.'"
+        }
+      ],
+      "funFacts": [
+        "They explain they came into Ierusalem's walls at all only because of the invading Caldean and Aramean armies (35:11)."
+      ]
+    },
+    {
+      "id": "ahikam_son_of_shaphan_geneva",
+      "name": "Ahikam the sonne of Shaphan",
+      "role": "submanager",
+      "parentManagerId": "jeremiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Shaphan the secretarie",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Gedaliah, later governour of Iudah"
+        ],
+        "note": "His son Gedaliah becomes governour of the remnant after Ierusalem's fall (40:5)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 26:24",
+          "note": "His hand was with Ieremiah, so he was not given into the people's hand to be put to death."
+        }
+      ]
+    },
+    {
+      "id": "hanameel_geneva",
+      "name": "Hanameel",
+      "role": "submanager",
+      "parentManagerId": "jeremiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shallum, Ieremiah's uncle (32:7) - a different man from King Iehoahaz, also called Shallum (22:11)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Ieremiah's cousin, called his 'vncles sonne' (32:12)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 32:6-12",
+          "note": "Sells his field at Anathoth to Ieremiah for seventeen shekels of silver, sealed and witnessed, in the court of the prison."
+        }
+      ]
+    },
+    {
+      "id": "zephaniah_the_priest_geneva",
+      "name": "Zephaniah the Priest",
+      "role": "submanager",
+      "parentManagerId": "zedekiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A priest sent as royal messenger; distinct from the prophet Zephaniah, author of a separate OT book."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 21:1-2",
+          "note": "Sent by Zedekiah, alongside Pashur, to ask Ieremiah to inquire of the Lord."
+        },
+        {
+          "ref": "Jeremiah 37:3",
+          "note": "Sent a second time, with Iucal, on a similar errand during the siege."
+        }
+      ]
+    },
+    {
+      "id": "the_four_princes_geneva",
+      "name": "The Foure Princes (Shephatiah, Gedaliah sonne of Pashur, Iucal, and Pashur sonne of Malchiah)",
+      "role": "submanager",
+      "parentManagerId": "zedekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named together at 38:1; this Pashur sonne of Malchiah is distinct from Pashur the sonne of Immer (ch. 20) and from Malchiah the sonne of Hammelech (38:6); this Gedaliah sonne of Pashur is distinct from Gedaliah the sonne of Ahikam."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:1-6",
+          "note": "Accuse Ieremiah of weakening the hands of the men of war and have him cast into the dungeon."
+        }
+      ]
+    },
+    {
+      "id": "malchiah_son_of_hammelech_geneva",
+      "name": "Malchiah the sonne of Hammelech",
+      "role": "submanager",
+      "parentManagerId": "zedekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Hammelech",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Owner or namesake of the dungeon in the court of the prison; a different man from Pashur the sonne of Malchiah."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:6",
+          "note": "Ieremiah is let down by cords into his dungeon and sinks in the mire."
+        }
+      ]
+    },
+    {
+      "id": "iriiah_the_captain_geneva",
+      "name": "Iriiah",
+      "role": "submanager",
+      "parentManagerId": "zedekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shelemiah, the sonne of Hananiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A chief officer at the gate of Beniamin (37:13)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 37:13-16",
+          "note": "Arrests Ieremiah on a false charge of fleeing to the Caldeans; Ieremiah is beaten and imprisoned in Iehonathan the scribe's house regardless."
+        }
+      ]
+    },
+    {
+      "id": "jehoahaz_shallum_geneva",
+      "name": "Iehoahaz (Shallum)",
+      "role": "submanager",
+      "parentManagerId": "jehoiakim_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Iosiah, King of Iudah",
+        "mother": "Hamutal, the daughter of Ieremiah of Libnah",
+        "spouses": [],
+        "children": [],
+        "note": "Reigned briefly under his throne name Shallum before Pharaoh deposed him for his brother Iehoiakim; a different man from Ieremiah's uncle Shallum (32:7)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 22:10-12",
+          "note": "Prophesied never to return from exile, but to die in the place he was led captive."
+        }
+      ]
+    },
+    {
+      "id": "uriah_son_of_shemaiah_geneva",
+      "name": "Vriiah the sonne of Shemaiah",
+      "role": "submanager",
+      "parentManagerId": "jehoiakim_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shemaiah, of Kiriath-iarem - a different Shemaiah from Shemaiah the Nehelamite (ch. 29)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 26:20-23",
+          "note": "Prophesies like Ieremiah against the city, flees to Egypt in fear of Iehoiakim, is fetched back and executed."
+        }
+      ]
+    },
+    {
+      "id": "elnathan_son_of_achbor_geneva",
+      "name": "Elnathan the sonne of Achbor",
+      "role": "submanager",
+      "parentManagerId": "jehoiakim_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Achbor",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A prince in Iehoiakim's court."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 26:22-23",
+          "note": "Sent to Egypt to bring back the prophet Vriiah for execution."
+        },
+        {
+          "ref": "Jeremiah 36:25",
+          "note": "With Delaiah and Gemariah, unsuccessfully urges Iehoiakim not to burn Baruch's scroll."
+        }
+      ]
+    },
+    {
+      "id": "jehudi_geneva",
+      "name": "Iehudi",
+      "role": "submanager",
+      "parentManagerId": "jehoiakim_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Nethaniah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Court official sent to fetch and read Baruch's scroll (36:14)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:21-23",
+          "note": "Reads the scroll to Iehoiakim, who cuts and burns it section by section as it is read."
+        }
+      ]
+    },
+    {
+      "id": "seraiah_son_of_neriah_geneva",
+      "name": "Sheraiah the sonne of Neriiah",
+      "role": "submanager",
+      "parentManagerId": "baruch_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Neriiah, the sonne of Maaseiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Baruch's brother, called 'a peaceable prince' (51:59)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 51:59-64",
+          "note": "Carries Ieremiah's scroll of judgment against Babel there, reads it aloud, binds it to a stone, and sinks it in Euphrates as a sign Babel 'shalbe drowned, and shall not rise.'"
+        }
+      ]
+    },
+    {
+      "id": "nebuzaradan_geneva",
+      "name": "Nebuzar-adan",
+      "role": "submanager",
+      "parentManagerId": "nebuchadnezzar_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'The chiefe stewarde,' Nebuchad-nezzar's chief officer over the destruction of Ierusalem (39:9-10)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 39:8-10",
+          "note": "Oversees the burning of Ierusalem and deportation of the people."
+        },
+        {
+          "ref": "Jeremiah 40:1-5",
+          "note": "Personally frees Ieremiah from his chains and gives him the choice of where to go."
+        }
+      ]
+    },
+    {
+      "id": "azariah_son_of_hoshaiah_geneva",
+      "name": "Azariah the sonne of Hoshaiah",
+      "role": "submanager",
+      "parentManagerId": "johanan_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Hoshaiah",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "One of 'the proude men' who stood with Iohanan against Ieremiah's word (43:2)."
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 43:2-3",
+          "note": "Accuses Ieremiah of lying, claiming Baruch incited him, and refuses to stay in the land."
+        }
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "babylonian_officials_at_the_siege": {
+      "description": "Named Babylonian officers present at the breach of Ierusalem, listed together with no individual narrative action beyond their titles.",
+      "members": [
+        "Neregal, Sharezer, of Samgar",
+        "Samgar-nebo",
+        "Sarsechim",
+        "Rab-saris",
+        "Neregal, Sharezer, Rab-mag",
+        "with all the residue of the princes of the King of Babel"
+      ],
+      "ref": "Jeremiah 39:3"
+    },
+    "temple_vessels_carried_to_babel": {
+      "description": "Detailed inventory of the brass, silver, and gold Temple furnishings taken to Babel at the fall of Ierusalem - no individual actor named, but a famous, heavily-detailed closing passage.",
+      "items": [
+        "the two pillars",
+        "the one Sea",
+        "the twelve brasen bulls / bases",
+        "the pots, besomes, instruments of music, basins, and incense dishes of brass used in Temple service",
+        "bowls, ashpans, basins, pots, candlesticks, incense dishes, and cups of gold and silver"
+      ],
+      "ref": "Jeremiah 52:17-23"
+    }
+  }
+}

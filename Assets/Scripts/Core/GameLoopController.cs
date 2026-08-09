@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using ClickerGenesis.Achievements;
 using ClickerGenesis.Data;
 using ClickerGenesis.Economy;
 using ClickerGenesis.Progression;
@@ -43,8 +44,18 @@ namespace ClickerGenesis.Core
         [Header("Grace skill tree")]
         [SerializeField] private PrestigeSkillTreeConfig prestigeSkillTreeConfig;
 
+        [Header("Achievements (2026-08-08)")]
+        [Tooltip("One or more achievement lists merged into a single AchievementSystem - e.g. a hand-authored \"headline\" set plus a procedurally generated per-book set, kept as separate assets so the generated family can be regenerated without touching hand-authored content.")]
+        [SerializeField] private List<AchievementSetConfig> achievementConfigs = new List<AchievementSetConfig>();
+
         public InkWallet Wallet { get; private set; }
         public LevelSystem Levels { get; private set; }
+
+        /// <summary>GLOBAL, not per-save-slot - persists independently of BuildFreshState()/
+        /// ResetGameAndDeleteSave(), which rebuild every OTHER system below. See
+        /// Achievement-System-Design.html's "Persistence: a GLOBAL ledger" section for why.</summary>
+        public AchievementSystem Achievements { get; private set; }
+        private IAchievementStorage achievementStorage;
 
         /// <summary>One ScribeSystem per book that actually has a roster authored (2026-08-08,
         /// multi-book economy - was a single instance when only Genesis existed). Every registered
@@ -61,7 +72,43 @@ namespace ClickerGenesis.Core
 
         public PrestigeSystem Prestige { get; private set; }
         public PrestigeSkillSystem Skills { get; private set; }
-        public PrestigeSkillTreeConfig SkillTreeConfig => prestigeSkillTreeConfig;
+
+        /// <summary>The book the player originally started this slot in (2026-08-08, Skill Tree
+        /// redesign) - distinct from activeBookResourceId, which moves as the player switches
+        /// books. The Book Progression branch is anchored to THIS and never re-anchors on a later
+        /// switch, so Grace already spent against it stays meaningful.</summary>
+        private string startingBookResourceId;
+
+        /// <summary>A per-session clone of the design-time prestigeSkillTreeConfig asset (Core + 8
+        /// economy branches) with the Book Progression branch's nodes appended at runtime via
+        /// BookProgressionTreeBuilder, anchored to startingBookResourceId (2026-08-08 redesign -
+        /// see BookProgressionTreeBuilder's doc comment for why this can't be design-time data).
+        /// Cloned rather than mutating the asset directly so the asset on disk is never touched.</summary>
+        private PrestigeSkillTreeConfig runtimeSkillTreeConfig;
+
+        public PrestigeSkillTreeConfig SkillTreeConfig => runtimeSkillTreeConfig != null ? runtimeSkillTreeConfig : prestigeSkillTreeConfig;
+
+        /// <summary>The book this save actually started in - always free/unlocked, same as Genesis
+        /// used to be hardcoded as before the 2026-08-08 Skill Tree redesign let players start
+        /// anywhere. Every other book (including Genesis itself, for a non-Genesis-starting save)
+        /// must be bought via the Book Progression branch.</summary>
+        public string StartingBookResourceId => startingBookResourceId;
+
+        /// <summary>(Re)builds runtimeSkillTreeConfig anchored to the given starting book. Safe to
+        /// call more than once per session (e.g. Continue loading a save whose real starting book
+        /// differs from whatever BuildFreshState defaulted to) - always constructs a fresh clone
+        /// rather than mutating the previous one in place.</summary>
+        private void RebuildSkillTree(string forStartingBookResourceId)
+        {
+            if (prestigeSkillTreeConfig == null) return;
+            startingBookResourceId = forStartingBookResourceId;
+            var runtime = ScriptableObject.CreateInstance<PrestigeSkillTreeConfig>();
+            runtime.branchOrder = new List<string>(prestigeSkillTreeConfig.branchOrder);
+            runtime.nodes = new List<PrestigeSkillNode>(prestigeSkillTreeConfig.nodes);
+            runtime.nodes.AddRange(BookProgressionTreeBuilder.Build(forStartingBookResourceId));
+            runtime.nodes.AddRange(PostConvergenceTreeBuilder.Build());
+            runtimeSkillTreeConfig = runtime;
+        }
 
         // ---------- Per-book progress (2026-08-06, Phase F) ----------
         // Every unlocked/touched book gets its own BookProgress record (verse cursor, chapter
@@ -78,10 +125,53 @@ namespace ClickerGenesis.Core
         private BookProgress ActiveBook =>
             bookProgress.TryGetValue(activeBookResourceId, out var bp) ? bp : null;
 
-        // ---------- Save/load (2026-08-08, per Save-System-Design.md) ----------
+        // ---------- Save/load (2026-08-08, per Save-System-Design.md; slot-aware 2026-08-08) ----------
         private ISaveStorage saveStorage;
         private float autoSaveTimer;
         private const float AutoSaveIntervalSeconds = 30f;
+
+        /// <summary>Set by the New Game setup screen (translation/starting-book picker) before
+        /// loading this scene, consumed once by BuildFreshState() then cleared - a static field
+        /// because no GameLoopController instance exists yet when the setup screen makes its
+        /// selection (MainMenu's GameRoot hasn't spawned). Null/empty means "use the default
+        /// starting book" (Genesis) - the ordinary Continue-an-existing-save path, and the
+        /// Settings screen's Delete-Saved-Game reset, both leave this unset.</summary>
+        public static string PendingNewGameStartingBookResourceId;
+
+        /// <summary>Set alongside PendingNewGameStartingBookResourceId - true means Awake() skips
+        /// LoadGame() for this session (the slot is guaranteed fresh; loading would just apply an
+        /// empty save and no-op anyway, but skipping makes the intent explicit). Cleared after
+        /// being read once.</summary>
+        public static bool PendingIsNewGame;
+
+        /// <summary>Real entry point for the save-slot system's Continue/New-Game flows
+        /// (2026-08-08) - called DIRECTLY by SaveSlotScreenUI/NewGameSetupScreenUI right before
+        /// navigating to ClickerScreen, rather than relying on Awake() to consume static pending
+        /// fields. GameLoopController is a DontDestroyOnLoad singleton spawned once from MainMenu -
+        /// its Awake() only ever runs on that very first scene load, never again on later scene
+        /// changes, so anything meant to take effect on a later "switch slots" action has to be a
+        /// real method call like this one, not a field Awake() happens to read.</summary>
+        public void SwitchToSlot(int slotIndex, bool isNewGame, string startingBookResourceId = null)
+        {
+            saveStorage = new LocalFileSaveStorage(slotIndex);
+            SaveSlotManager.CurrentSlot = slotIndex;
+
+            if (isNewGame)
+            {
+                PendingNewGameStartingBookResourceId = startingBookResourceId;
+                BuildFreshState();
+                autoSaveTimer = 0f;
+                // Establish the file immediately - otherwise the slot picker would show this as
+                // "Empty" again if the player backs out before the next autosave/pause/quit tick.
+                SaveGame();
+            }
+            else
+            {
+                LoadGame();
+            }
+
+            OnStateChanged?.Invoke();
+        }
 
         /// <summary>Superseded 2026-08-08 (multi-book economy): scribe/manager gating used to
         /// always read Genesis' progress specifically regardless of the active book, since only
@@ -106,6 +196,18 @@ namespace ClickerGenesis.Core
         /// last Grace reward term. Computed from each BookProgress.IsComplete, same
         /// never-drifts-out-of-sync reasoning as ChaptersCompletedCount above.</summary>
         public int BooksCompletedCount => bookProgress.Values.Count(b => b.IsComplete);
+
+        /// <summary>Total scribes owned across every tier of every registered book - the
+        /// Achievement System's ScribesOwned stat (2026-08-08), account-wide rather than per-tier.</summary>
+        private int TotalScribesOwnedAcrossAllBooks => scribeSystemsByBook.Values.Sum(s => s.TotalOwned());
+
+        /// <summary>Total managers unlocked across every registered book - the Achievement
+        /// System's ManagersUnlocked stat (2026-08-08).</summary>
+        private int TotalManagersUnlockedAcrossAllBooks => scribeSystemsByBook.Values.Sum(s => s.UnlockedManagerCount());
+
+        /// <summary>Total submanagers hired across every registered book - the Achievement
+        /// System's SubmanagersUnlocked stat (2026-08-08).</summary>
+        private int TotalSubmanagersUnlockedAcrossAllBooks => scribeSystemsByBook.Values.Sum(s => s.OwnedSubmanagerCount());
 
         /// <summary>Every OT book in canonical order (Genesis first) - for the Books tab (Phase F3).</summary>
         public IReadOnlyList<(string resourceId, string displayName)> AllBooksInOrder => CanonicalBookOrder.Books;
@@ -136,21 +238,17 @@ namespace ClickerGenesis.Core
             bookProgress.TryGetValue(resourceId, out var b) && b.IsComplete;
 
         /// <summary>True if resourceId can become the active book right now: unlocked via the
-        /// Grace tree (or it's Genesis, always free) AND the immediately-preceding canonical book
-        /// is fully complete (2026-08-06, Phase F2 - "can't start the next book until the first
-        /// book is finished"). A book with no BookProgress record yet (never touched) fails the
-        /// previous-book check rather than throwing - not started means not complete.</summary>
+        /// Grace tree (or it's Genesis, always free). The old "immediately-preceding canonical book
+        /// must be complete" gate is GONE (2026-08-09, player-choice book unlocking redesign) -
+        /// once the Book Progression branch's generic slots let a player unlock books in whatever
+        /// order they actually want (see BookProgressionTreeBuilder), a fixed canonical-neighbor
+        /// completion requirement no longer describes a coherent chain - the "neighbor" might not
+        /// even be a book the player has touched yet. Spending real Grace on the unlock slot is
+        /// itself the gate now; once a book is unlocked, it's freely switchable.</summary>
         public bool CanSwitchToBook(string resourceId)
         {
             if (string.IsNullOrEmpty(resourceId)) return false;
-
-            bool isUnlocked = resourceId == GenesisResourceId || (Skills != null && Skills.IsBookUnlocked(resourceId));
-            if (!isUnlocked) return false;
-
-            string previousId = CanonicalBookOrder.PreviousResourceId(resourceId);
-            if (previousId == null) return true; // Genesis - no previous book required
-
-            return bookProgress.TryGetValue(previousId, out var previous) && previous.IsComplete;
+            return resourceId == startingBookResourceId || (Skills != null && Skills.IsBookUnlocked(resourceId));
         }
 
         /// <summary>Switches the active book to resourceId, lazy-loading its VerseDatabase on
@@ -380,6 +478,12 @@ namespace ClickerGenesis.Core
             // Play mode actually starts, so this still persists correctly at runtime.
             if (Application.isPlaying) DontDestroyOnLoad(gameObject);
 
+            // Achievements are GLOBAL (2026-08-08) - constructed once here, NOT inside
+            // BuildFreshState(), so a "Delete Saved Game" reset (which calls BuildFreshState()
+            // again mid-session) never touches unlock/progress state. Built unconditionally
+            // (like every other system below) so it's never null, even at editor-time.
+            Achievements = new AchievementSystem(achievementConfigs);
+
             BuildFreshState();
 
             if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
@@ -390,8 +494,25 @@ namespace ClickerGenesis.Core
             // treats as "nothing to apply" so a brand-new player still starts at Genesis verse 0.
             if (Application.isPlaying)
             {
-                saveStorage = new LocalFileSaveStorage();
-                LoadGame();
+                // Slot-aware (2026-08-08) - whichever slot SaveSlotManager.CurrentSlot points at,
+                // set explicitly by the Main Menu's Continue/New Game flow before this scene loads.
+                saveStorage = new LocalFileSaveStorage(SaveSlotManager.CurrentSlot);
+                if (!PendingIsNewGame) LoadGame();
+                PendingIsNewGame = false;
+
+                // Separate file, separate load - deliberately independent of the save-slot system
+                // above (see Achievements property doc comment).
+                achievementStorage = new AchievementFileStorage();
+                LoadAchievements();
+
+                // Replay EvaluateBookComplete for every book already complete on this slot
+                // (2026-08-09) - AchievementSystem.completedBooks is in-memory-only, not part of
+                // AchievementData, so a section-grouping achievement whose books were all finished
+                // in a PRIOR session needs this replay to know that on a fresh load. Harmless for
+                // already-unlocked achievements (Unlock() no-ops) and for books completed this
+                // session (EvaluateBookComplete already gets called at the real completion moment).
+                foreach (var bp in bookProgress.Values)
+                    if (bp.IsComplete) Achievements.EvaluateBookComplete(bp.ResourceId);
             }
         }
 
@@ -404,21 +525,40 @@ namespace ClickerGenesis.Core
         {
             Wallet = new InkWallet(startingInk);
             Levels = new LevelSystem(xpConfig);
+            // Levels is rebuilt here on every reset, so this subscription must be re-added each
+            // time too (2026-08-08) - Achievements itself is NOT rebuilt (it's global), only the
+            // event hook needs re-wiring to the new LevelSystem instance.
+            Levels.OnLevelUp += level => Achievements.EvaluateStat(TrackedStat.PlayerLevel, level);
             scribeSystemsByBook.Clear();
             if (scribeConfig != null) scribeSystemsByBook[GenesisResourceId] = new ScribeSystem(scribeConfig);
             foreach (var entry in additionalScribeConfigs)
                 if (entry.config != null && !string.IsNullOrEmpty(entry.bookResourceId))
                     scribeSystemsByBook[entry.bookResourceId] = new ScribeSystem(entry.config);
             Prestige = new PrestigeSystem();
-            Skills = new PrestigeSkillSystem(prestigeSkillTreeConfig);
 
-            // Genesis is always the hardcoded starting book (2026-08-06) - seeded into
-            // bookProgress exactly like the old single-book init, just wrapped in a BookProgress
-            // record now so other books can get their own records alongside it.
+            // Genesis is the DEFAULT starting book (2026-08-06), but the New Game setup screen
+            // (2026-08-08, save-slot system) can override this via PendingNewGameStartingBookResourceId
+            // - a free pick among every canonical OT book, not gated by the normal "book N+1 needs
+            // book N finished" mid-game switching rule, since this is the very first book, not a
+            // switch. Consumed once and cleared so a later in-session reset doesn't reuse it.
             bookProgress.Clear();
-            activeBookResourceId = GenesisResourceId;
-            var genesisDb = VerseDatabase.LoadFromResources(verseResourcePath);
-            bookProgress[activeBookResourceId] = new BookProgress(activeBookResourceId, "Genesis", genesisDb);
+            string chosenStartingBookResourceId = string.IsNullOrEmpty(PendingNewGameStartingBookResourceId)
+                ? GenesisResourceId
+                : PendingNewGameStartingBookResourceId;
+            PendingNewGameStartingBookResourceId = null;
+
+            activeBookResourceId = chosenStartingBookResourceId;
+            bool startingIsGenesis = chosenStartingBookResourceId == GenesisResourceId;
+            string startingResourcePath = startingIsGenesis ? verseResourcePath : $"Verses/{chosenStartingBookResourceId}";
+            string startingDisplayName = startingIsGenesis ? "Genesis" : CanonicalBookOrder.DisplayNameOf(chosenStartingBookResourceId);
+            var startingDb = VerseDatabase.LoadFromResources(startingResourcePath);
+            bookProgress[activeBookResourceId] = new BookProgress(activeBookResourceId, startingDisplayName, startingDb);
+
+            // Skill tree is (re)anchored to the resolved starting book now that it's known
+            // (2026-08-08) - must happen before Skills is constructed, since Skills wraps
+            // whichever config SkillTreeConfig currently points at.
+            RebuildSkillTree(chosenStartingBookResourceId);
+            Skills = new PrestigeSkillSystem(runtimeSkillTreeConfig);
 
             ClickPowerLevel = 0;
             ProgressMultiplier = 1f;
@@ -449,6 +589,10 @@ namespace ClickerGenesis.Core
             {
                 Wallet.Add(inkPerSecond * Time.deltaTime);
                 changed = true;
+                // Cheap comparison over however many Ink-milestone achievements exist (a handful),
+                // NOT a UI rebuild - not the class of per-frame cost bug #22 was about. See
+                // AchievementSystem.EvaluateStat's doc comment.
+                Achievements.EvaluateStat(TrackedStat.LifetimeInk, (float)Wallet.LifetimeEarned);
             }
 
             // Manager auto-buy (2026-08-04): a manager doesn't just boost its tier's output — once
@@ -478,6 +622,7 @@ namespace ClickerGenesis.Core
 
                         sys.Buy(i);
                         changed = true;
+                        Achievements.EvaluateStat(TrackedStat.ScribesOwned, TotalScribesOwnedAcrossAllBooks);
                     }
                 }
             }
@@ -520,6 +665,7 @@ namespace ClickerGenesis.Core
         {
             if (saveStorage == null) return;
             saveStorage.Save(CaptureSaveData());
+            SaveAchievements();
         }
 
         private void LoadGame()
@@ -532,6 +678,28 @@ namespace ClickerGenesis.Core
 
             ApplySaveData(data);
             OnStateChanged?.Invoke();
+        }
+
+        /// <summary>Writes the global achievement ledger to its own file - deliberately separate
+        /// from SaveGame()'s per-slot save, though currently triggered alongside it (same
+        /// pause/quit/30s-autosave call sites) since there's no reason to save it on a different
+        /// cadence yet. Safe to call anytime after Awake(); no-ops if achievementStorage hasn't
+        /// been set up (e.g. an editor-time context outside Play mode).</summary>
+        public void SaveAchievements()
+        {
+            if (achievementStorage == null) return;
+            var data = new AchievementData();
+            data.unlockedIds.AddRange(Achievements.ExportUnlockedIds());
+            foreach (var kvp in Achievements.ExportProgress())
+                data.progress.Add(new AchievementProgressEntry { id = kvp.Key, value = kvp.Value });
+            achievementStorage.Save(data);
+        }
+
+        private void LoadAchievements()
+        {
+            if (achievementStorage == null) return;
+            var data = achievementStorage.Load();
+            Achievements.ImportState(data.unlockedIds, data.progress.Select(p => new KeyValuePair<string, float>(p.id, p.value)));
         }
 
         /// <summary>Builds a SaveData snapshot of the current live state - the save-file
@@ -566,6 +734,8 @@ namespace ClickerGenesis.Core
             data.prestige.resetPrestigeCount = Prestige.ResetPrestigeCount;
             foreach (var kvp in Skills.ExportRanks())
                 data.prestige.skillRanks.Add(new SkillRankEntry { nodeId = kvp.Key, rank = kvp.Value });
+            foreach (var kvp in Skills.ExportBookChoices())
+                data.prestige.bookChoices.Add(new BookChoiceEntry { nodeId = kvp.Key, bookResourceId = kvp.Value });
 
             foreach (var kvp in bookProgress)
             {
@@ -579,6 +749,7 @@ namespace ClickerGenesis.Core
                 });
             }
             data.activeBookResourceId = activeBookResourceId;
+            data.startingBookResourceId = startingBookResourceId;
 
             return data;
         }
@@ -604,9 +775,23 @@ namespace ClickerGenesis.Core
 
             Levels.LoadState(data.progression.totalXp, data.progression.currentLevel);
 
+            // Re-anchor the Book Progression branch to this save's REAL starting book if it
+            // differs from whatever BuildFreshState defaulted to (2026-08-08) - e.g. Continue on
+            // an existing save that didn't start in Genesis. Old saves written before this field
+            // existed fall back to Genesis (their only possible starting book at the time).
+            string savedStartingBook = string.IsNullOrEmpty(data.startingBookResourceId)
+                ? GenesisResourceId
+                : data.startingBookResourceId;
+            if (savedStartingBook != startingBookResourceId)
+            {
+                RebuildSkillTree(savedStartingBook);
+                Skills = new PrestigeSkillSystem(runtimeSkillTreeConfig);
+            }
+
             Prestige.LoadState(data.prestige.grace, data.prestige.graceEverSpent,
                 data.prestige.freePrestigeCount, data.prestige.resetPrestigeCount);
             Skills.LoadState(data.prestige.skillRanks.Select(e => new KeyValuePair<string, int>(e.nodeId, e.rank)));
+            Skills.LoadBookChoices(data.prestige.bookChoices.Select(e => new KeyValuePair<string, string>(e.nodeId, e.bookResourceId)));
 
             foreach (var entry in data.books)
             {
@@ -642,6 +827,8 @@ namespace ClickerGenesis.Core
             if (!Wallet.TrySpend(cost)) return false;
 
             Scribes.Buy(tierIndex);
+            Achievements.Unlock("first_scribe");
+            Achievements.EvaluateStat(TrackedStat.ScribesOwned, TotalScribesOwnedAcrossAllBooks);
             // Buying a scribe grants 0 XP normally - only starts granting XP once the player has
             // performed at least one Reset-Prestige (2026-08-06, user's explicit ask).
             if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
@@ -668,6 +855,9 @@ namespace ClickerGenesis.Core
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
 
             Scribes.UnlockManager(tierIndex);
+            Achievements.Unlock("first_manager");
+            Achievements.EvaluateStat(TrackedStat.ManagersUnlocked, TotalManagersUnlockedAcrossAllBooks);
+            Achievements.EvaluateManagerUnlocked(activeBookResourceId, Scribes.GetDefinition(tierIndex).managerId);
             OnStateChanged?.Invoke();
             return true;
         }
@@ -683,6 +873,14 @@ namespace ClickerGenesis.Core
             if (cost > 0 && !Wallet.TrySpend(cost)) return false;
 
             Scribes.BuySubmanager(tierIndex, subIndex);
+            Achievements.Unlock("first_submanager");
+            Achievements.EvaluateStat(TrackedStat.SubmanagersUnlocked, TotalSubmanagersUnlockedAcrossAllBooks);
+
+            int ownedSubs = 0;
+            for (int i = 0; i < Scribes.SubmanagerCount(tierIndex); i++)
+                if (Scribes.IsSubmanagerOwned(tierIndex, i)) ownedSubs++;
+            Achievements.EvaluateManagerHousehold(activeBookResourceId, Scribes.GetDefinition(tierIndex).managerId, ownedSubs);
+
             OnStateChanged?.Invoke();
             return true;
         }
@@ -739,6 +937,8 @@ namespace ClickerGenesis.Core
             }
             if (bought > 0)
             {
+                Achievements.Unlock("first_scribe");
+                Achievements.EvaluateStat(TrackedStat.ScribesOwned, TotalScribesOwnedAcrossAllBooks);
                 if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
                     Levels.AddXp(xpConfig.XpPerScribePurchaseAfterReset * bought);
                 OnStateChanged?.Invoke();
@@ -788,6 +988,8 @@ namespace ClickerGenesis.Core
         public void TapForInk()
         {
             Wallet.Add(EffectiveTapAmount);
+            Achievements.Unlock("first_tap");
+            Achievements.EvaluateStat(TrackedStat.LifetimeInk, (float)Wallet.LifetimeEarned);
             // Tapping grants 0 XP normally - only starts granting XP once the player has
             // performed at least one Reset-Prestige (2026-08-06, user's explicit ask).
             if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
@@ -893,9 +1095,15 @@ namespace ClickerGenesis.Core
             {
                 activeBook.ChaptersCompletedInBook++;
                 ProgressMultiplier *= 2f;
+                Achievements.EvaluateStat(TrackedStat.ChaptersCompleted, ChaptersCompletedCount);
             }
             // BooksCompletedCount is now computed from BookProgress.IsComplete - no increment
             // needed here, it just becomes true once NextVerseIndex runs past the book's last verse.
+            if (BookComplete)
+            {
+                Achievements.EvaluateBookComplete(activeBookResourceId);
+                Achievements.EvaluateStat(TrackedStat.BooksCompletedOT, BooksCompletedCount);
+            }
 
             if (xpConfig != null)
             {
@@ -946,6 +1154,10 @@ namespace ClickerGenesis.Core
 
             double grace = withReset ? PrestigeGracePreviewWithReset : PrestigeGracePreview;
             Prestige.AwardGrace(grace, withReset);
+
+            Achievements.Unlock(withReset ? "first_reset_prestige" : "first_grace");
+            Achievements.EvaluateStat(TrackedStat.FreePrestigeCount, Prestige.FreePrestigeCount);
+            Achievements.EvaluateStat(TrackedStat.ResetPrestigeCount, Prestige.ResetPrestigeCount);
 
             if (withReset)
             {
@@ -1092,10 +1304,32 @@ namespace ClickerGenesis.Core
         /// node is unknown, maxed, locked by its prerequisite, or unaffordable.</summary>
         public bool BuySkill(string nodeId)
         {
-            var node = prestigeSkillTreeConfig?.FindNode(nodeId);
+            var node = SkillTreeConfig?.FindNode(nodeId);
             if (node == null || !Skills.CanBuy(node, Prestige.Grace, Prestige.ResetPrestigeCount > 0)) return false;
 
             double cost = Skills.Buy(node);
+            Prestige.TrySpendGrace(cost);
+            OnStateChanged?.Invoke();
+            return true;
+        }
+
+        /// <summary>Buys a generic "Unlock New Book" Book Progression slot AND assigns the chosen
+        /// book in the same action (2026-08-09, player-choice book unlocking redesign) - Grace is
+        /// only spent once a real choice has been made, so a bought-but-unassigned slot state can
+        /// never exist. Returns false under the same conditions as BuySkill, plus if bookResourceId
+        /// is empty, already unlocked, or is the player's own starting book (nothing to unlock).</summary>
+        public bool BuySkillWithBookChoice(string nodeId, string bookResourceId)
+        {
+            var node = SkillTreeConfig?.FindNode(nodeId);
+            if (node == null || node.effectType != Progression.SkillEffectType.BookUnlock ||
+                !string.IsNullOrEmpty(node.unlockBookResourceId)) return false; // not a generic slot
+            if (string.IsNullOrEmpty(bookResourceId)) return false;
+            if (bookResourceId == startingBookResourceId) return false;
+            if (Skills == null || Skills.IsBookUnlocked(bookResourceId)) return false;
+            if (!Skills.CanBuy(node, Prestige.Grace, Prestige.ResetPrestigeCount > 0)) return false;
+
+            double cost = Skills.Buy(node);
+            Skills.ChooseBook(node.id, bookResourceId);
             Prestige.TrySpendGrace(cost);
             OnStateChanged?.Invoke();
             return true;

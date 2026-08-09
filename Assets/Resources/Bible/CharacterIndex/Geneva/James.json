@@ -1,0 +1,437 @@
+{
+  "book": "James",
+  "translation": "Geneva",
+  "canonicalOrder": 71,
+  "status": "drafted via direct read of the real Geneva 1560 verse text (Assets/Resources/Verses/Geneva/james_71.json), cross-checked against the existing validated KJV James.json for structural/tier-naming pattern only, not copied blindly; pending user read-through and confirmation",
+  "notes": "This Geneva-translation James is a genuinely close structural match to the existing KJV James.json: both texts run the identical 5 chapters / 108 verses (27+26+18+17+20), with the same verse-boundary numbering and the same real argument breaks (the \"faith without workes\" unit at 2:14-26, the tongue passage at 3:1-12, the two-part rich-man/worldliness warning spanning 4:13-5:6, the closing prayer/healing/restoration unit at 5:12-20) - so the same law/theme-tier-heavy shape used for the KJV file (one person tier for the author, ten law tiers covering the letter's standalone teaching units) was verified against this translation's own actual wording rather than assumed to carry over, and it does carry over cleanly. No canonical or structural divergence was found for this book specifically (unlike, e.g., the Ethiopian Bible's genuinely different 9-chapter Ezra) - what differs is 1560 English orthography and a few real spelling/word-choice variants worth flagging, not content: the author's own name is rendered \"Iames\" (period Roman-alphabet convention for J), \"Iesus Christ\" for Jesus Christ, \"tentations\" for temptations, \"woorkes\"/\"iustified\" for works/justified, and - the one variant worth calling out specifically as a genuine textual/orthographic difference, not an error - the prophet named in 5:17-18 is spelled \"Helias\" in this Geneva text (the KJV's file spells the same figure \"Elias\"), both period English rederings of the Greek Ēlias for the Hebrew Elijah; do not treat this as a different person, it is the same 1 Kings 17-18 prophet under a variant early-modern-English spelling. Same naming-collision risk as the KJV entry: this Iames is neither of the two apostles named James among the Twelve (son of Zebedee, son of Alphaeus) but is traditionally identified as James the Lord's brother and leader of the Jerusalem church, an identification built from cross-reference (Mark 6:3, Galatians 1:19, Acts 15) and early tradition rather than an explicit self-statement in the letter itself, which only says \"Iames a seruant of God, and of the Lord Iesus Christ\" (James 1:1) - flagged on his character entry, not asserted as settled fact. As with the KJV file, no submanagers exist here: this epistle has no supporting cast carrying its own narrative scene, only Old Testament figures (Abraham, Rahab, Job, Helias/Elias) cited purely as illustrations, cross-referenced via genealogyLists rather than duplicated as characters, since they belong to their own books' files.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Iames, Seruant of Christ",
+      "managerId": "james_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Tentations, Wisedome, and the Perfect Gift",
+      "managerId": "trials_wisdom_gift_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Doers of the Woord",
+      "managerId": "doers_of_the_word_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Respect of Persons Forbidden",
+      "managerId": "respect_of_persons_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Faith Without Woorkes Is Dead",
+      "managerId": "faith_without_works_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Taming the Tongue",
+      "managerId": "taming_the_tongue_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Wisedome From Aboue",
+      "managerId": "wisdom_from_above_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Warres, Worldlinesse, and Humilitie",
+      "managerId": "wars_worldliness_humility_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Presumption of Riches",
+      "managerId": "presumption_of_riches_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Patience Vnto the Comming of the Lord",
+      "managerId": "patience_unto_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Prayer, Othes, and the Wandering Soule",
+      "managerId": "prayer_oaths_wandering_soul_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "james_geneva",
+      "name": "Iames, Seruant of God and of the Lord Iesus Christ",
+      "role": "manager",
+      "scribeTier": "Iames, Seruant of Christ",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Traditionally identified with Ioseph the carpenter, husband of Marie (paralleling Matthew 13:55/Mark 6:3's naming of a 'brother' James in Jesus's household) - but whether this Iames was Ioseph's and Marie's own son (a full brother, the Helvidian view), Ioseph's son by an earlier marriage (a half-brother, the Epiphanian view), or a cousin/kinsman through Marie's sister or Ioseph's brother Cleophas (the Hieronymian/Jerome view, under which Ioseph would not be his literal father at all) is a longstanding, unresolved doctrinal question the epistle itself does not address at all - it makes no genealogical claim whatsoever. Not individually indexed here.",
+        "mother": "Traditionally identified with Marie, mother of Iesus, subject to the same unresolved relationship question described in the father field - not asserted here beyond what the 'brethren' language in Matthew/Mark itself states.",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "James 1:1",
+          "note": "'Iames a seruant of God, and of the Lord Iesus Christ, to the twelue Tribes, which are scattered abroade, salutation.' - the letter's sole self-description of its author, in this translation's own wording."
+        },
+        {
+          "ref": "Matthew 13:55",
+          "note": "Cross-reference (not itself part of this book's text): the Nazarenes ask whether this is not the carpenter's son, naming his brethren including James - the earliest textual link between Jesus and a brother of that name."
+        },
+        {
+          "ref": "Mark 6:3",
+          "note": "Parallel cross-reference naming James among Jesus's brethren, alongside Ioses, Iuda, and Simon."
+        },
+        {
+          "ref": "Acts 15:13-21",
+          "note": "Cross-reference: at the Jerusalem council James speaks last and delivers the deciding judgment on Gentile converts, reflecting his standing as leader of the Jerusalem church."
+        },
+        {
+          "ref": "Galatians 1:19",
+          "note": "Cross-reference: Paul says he saw none of the other apostles on his first post-conversion visit to Jerusalem 'saue James the Lords brother.'"
+        },
+        {
+          "ref": "Galatians 2:9",
+          "note": "Cross-reference: Paul names James alongside Cephas and John as those reputed to be pillars of the Jerusalem church."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally called 'James the Just,' identified as the Lord's brother and leader of the Jerusalem church - this identification rests on cross-reference (Mark 6:3, Galatians 1:19, Acts 15) and early tradition, not on any explicit self-statement within this epistle, which says only 'Iames a seruant of God, and of the Lord Iesus Christ' (1:1).",
+        "NAMING COLLISION FLAG: at least two other New Testament men are named James - James son of Zebedee and James son of Alphaeus, both among the Twelve. This epistle's traditional author was not one of the original Twelve; do not conflate the three."
+      ]
+    },
+    {
+      "id": "trials_wisdom_gift_geneva",
+      "name": "Tentations, Wisedome, and the Perfect Gift",
+      "role": "law",
+      "scribeTier": "Tentations, Wisedome, and the Perfect Gift",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Teaches that the trying of faith through diuers tentations bringeth forth patience, which must haue her perfect worke; that any man lacking wisedome should aske of God, who giueth liberally and reprocheth no man, but must aske in faith and not waue (a double minded man is vnstable in all his waies); that the brother of lowe degree should reioyce in his exaltation and the rich man in being made lowe, since he shall vanish as the flower of the grasse; that no man tempted should say he is tempted of God, since God cannot be tempted with euill nor tempteth any man - rather a man is drawen away and entised of his owne concupiscence, which conceiued bringeth foorth sinne, and sinne finished bringeth foorth death; and that euery good giuing and perfect gift is from aboue, from the Father of lights with whom is no variablenes, who of his owne will begate vs with the woorde of trueth as firstfruites of his creatures.",
+      "verses": [
+        {
+          "ref": "James 1:2-4",
+          "note": "Count it exceeding ioy when ye fall into diuers tentations, knowing the trying of your faith bringeth forth patience; let patience haue her perfect worke, that ye may be perfect and entier, lacking nothing."
+        },
+        {
+          "ref": "James 1:5-8",
+          "note": "If any lacke wisedome, let him aske of God, which giueth to all men liberally and reprocheth no man; but let him aske in faith and wauer not, for hee that wauereth is like a waue of the sea tost of the winde."
+        },
+        {
+          "ref": "James 1:9-11",
+          "note": "The brother of lowe degree is to reioyce in his exaltation, the rich in being made lowe, for as the flower of the grasse he shall wither away in all his waies."
+        },
+        {
+          "ref": "James 1:12-15",
+          "note": "Blessed is the man that endureth tentation, for he shall receiue the crowne of life; let no man say when tempted, 'I am tempted of God,' for euery man is tempted when drawen away by his owne concupiscence and entised, and lust when conceiued bringeth foorth sinne, and sinne finished bringeth foorth death."
+        },
+        {
+          "ref": "James 1:16-18",
+          "note": "Euery good giuing and perfect gift is from aboue, commeth downe from the Father of lights with whome is no variablenes nor shadow of turning; of his owne will begate he vs with the woorde of trueth, that we should be as the first fruites of his creatures."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "doers_of_the_word_geneva",
+      "name": "Doers of the Woord",
+      "role": "law",
+      "scribeTier": "Doers of the Woord",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Teaches that euery man should be swift to heare, slowe to speake, and slowe to wrath, laying apart all filthinesse and receiuing with meekenes the woord that is graffed in them; warnes that a hearer of the woord who is not a doer deceiueth himselfe, like a man beholding his naturall face in a glasse who forgetteth immediately what maner of one he was; and teaches that an vnbridled tongue makes a man's religion vaine, while pure religion vndefiled before God is to visite the fatherlesse and widdowes in their aduersitie and to keepe himselfe vnspotted of the world.",
+      "verses": [
+        {
+          "ref": "James 1:19-20",
+          "note": "Let euery man be swift to heare, slowe to speake, and slowe to wrath, for the wrath of man doeth not accomplish the righteousnesse of God."
+        },
+        {
+          "ref": "James 1:21-25",
+          "note": "Lay apart all filthinesse and receiue with meekenes the woord that is graffed in you; be doers of the woord and not hearers onely (illustrated by a man beholding his naturall face in a glasse and forgetting it); who so continueth in the perfect Lawe of libertie, a doer of the woorke, shalbe blessed in his deede."
+        },
+        {
+          "ref": "James 1:26-27",
+          "note": "If any man seeme religious and refraineth not his tongue, his religion is vaine; pure religion and vndefiled before God is to visite the fatherlesse and widdowes in their aduersitie and to keepe himselfe vnspotted of the world."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "respect_of_persons_geneva",
+      "name": "Respect of Persons Forbidden",
+      "role": "law",
+      "scribeTier": "Respect of Persons Forbidden",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Rebukes hauing the faith of the glorious Lord Iesus Christ in respect of persons, illustrated by a man with a golde ring in goodly apparell being seated aboue a poore man in vile raiment; askes whether God hath not chosen the poore of this worlde to be rich in faith and heires of the kingdome; teaches the royall Lawe, to loue thy neighbour as thy selfe, and warnes that whosoeuer keepeth the whole Lawe yet faileth in one poynt is guiltie of all, since mercie reioyceth against condemnation.",
+      "verses": [
+        {
+          "ref": "James 2:1-4",
+          "note": "Warnes against hauing the faith of the glorious Lord Iesus Christ 'in respect of persons,' illustrated by fauouring a man with a golde ring and goodly apparell ouer a poore man in vile raiment."
+        },
+        {
+          "ref": "James 2:5-7",
+          "note": "Askes whether God hath not chosen the poore of this worlde to be rich in faith and heires of the promised kingdome, noting it is the riche who oppresse by tyrannie and blaspheme the worthie Name."
+        },
+        {
+          "ref": "James 2:8-11",
+          "note": "Fulfilling the royall Lawe, 'thou shalt loue thy neighbour as thy selfe,' is doing well; but regarding persons is sinne, and whosoeuer keepeth the whole Lawe yet faileth in one poynt is guiltie of all."
+        },
+        {
+          "ref": "James 2:12-13",
+          "note": "So speake and doe as they that shalbe iudged by the Lawe of libertie; condemnation is merciles to him that sheweth not mercie, and mercie reioyceth against condemnation."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "faith_without_works_geneva",
+      "name": "Faith Without Woorkes Is Dead",
+      "role": "law",
+      "scribeTier": "Faith Without Woorkes Is Dead",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "The epistle's central standalone argument in this translation's own wording: faith without woorkes is dead in it selfe and cannot saue, illustrated first by a brother or sister naked and destitute of daily foode being merely bid depart in peace rather than helped; notes euen the deuils beleeue there is one God, and tremble; vses Abraham's offering of Isaac vpon the altar as proof that faith wrought with his woorkes and through the woorkes was made perfect, fulfilling 'Abraham beleeued God, and it was imputed vnto him for righteousnesse,' so he was called the friende of God; vses Rahab the harlot's receiuing of the messengers and sending them out another way as a second witnesse that a man is iustified by woorkes and not of faith onely; concludes that as the body without the spirit is dead, euen so the faith without woorkes is dead.",
+      "verses": [
+        {
+          "ref": "James 2:14-17",
+          "note": "What auaileth it though a man saith he hath faith, when he hath no woorkes - can that faith saue him? illustrated by a brother or sister destitute of daily foode being bid 'depart in peace' rather than helped; faith without woorkes is dead in it selfe."
+        },
+        {
+          "ref": "James 2:18-20",
+          "note": "A man might claim faith apart from woorkes, but euen the deuils beleeue there is one God, and tremble; the faith which is without woorkes is dead."
+        },
+        {
+          "ref": "James 2:21-24",
+          "note": "Was not Abraham our father iustified through woorkes, when he offred Isaac his sonne vpon the altar? the faith wrought with his woorkes, and through the woorkes was the faith made perfect, fulfilling 'Abraham beleeued God, and it was imputed vnto him for righteousnesse,' and hee was called the friende of God - a man is iustified of woorkes, and not of faith onely."
+        },
+        {
+          "ref": "James 2:25-26",
+          "note": "Likewise was not Rahab the harlot iustified through woorkes, when she had receiued the messengers and sent them out another way? as the body without the spirit is dead, euen so the faith without woorkes is dead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Abraham (Genesis 22) and Rahab (Joshua 2) are cited here purely as illustrations from earlier scripture and are deliberately not duplicated as characters in this file - see genealogyLists below."
+      ]
+    },
+    {
+      "id": "taming_the_tongue_geneva",
+      "name": "Taming the Tongue",
+      "role": "law",
+      "scribeTier": "Taming the Tongue",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Warnes that not many should be masters, since they shall receiue the greater condemnation, and that in many things we sinne all; likens the tongue to bittes put into horses mouthes and to a shippes small rudder that turnes a great vessell whither the gouernour listeth, though it is a litle member that boasteth great things; calls it fire, a worlde of wickednesse, setting on fire the course of nature and it selfe set on fire of hell; obserues that the whole nature of beasts, birds, creeping things, and things of the sea hath bene tamed of the nature of man, but the tongue can no man tame, an vnruly euill full of deadly poyson; teaches that blessing and cursing proceeding out of one mouth ought not so to be, no more than a fountaine sends forth sweete water and bitter at one place, or a figge tree bringeth forth oliues.",
+      "verses": [
+        {
+          "ref": "James 3:1-2",
+          "note": "My brethren, be not many masters, knowing that we shall receiue the greater condemnation; in many things we sinne all, and if any man sinne not in word, he is a perfect man, able to bridle all the body."
+        },
+        {
+          "ref": "James 3:3-6",
+          "note": "We put bittes into the horses mouthes, and turne about ships with a very small rudder, whither soeuer the gouernour listeth; euen so the tongue is a litle member that boasteth of great things - it is fire, a worlde of wickednesse, set on fire of hell."
+        },
+        {
+          "ref": "James 3:7-8",
+          "note": "The whole nature of beasts, birds, creeping things, and things of the sea is tamed and hath bene tamed of the nature of man; but the tongue can no man tame, an vnruly euill, full of deadly poyson."
+        },
+        {
+          "ref": "James 3:9-12",
+          "note": "Therewith blesse we God the Father, and therewith curse we men made after the similitude of God; out of one mouth proceedeth blessing and cursing, which ought not so to be - no fountaine sendeth forth both salt water and sweete, nor doeth a figge tree bring forth oliues."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wisdom_from_above_geneva",
+      "name": "Wisedome From Aboue",
+      "role": "law",
+      "scribeTier": "Wisedome From Aboue",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Contrasts the wisedome that descendeth not from aboue but is earthly, sensuall, and deuilish - marked by bitter enuying and strife in the heart, and by sedition and all maner of euill woorkes - with the wisedome that is from aboue, which is first pure, then peaceable, gentle, easie to be intreated, full of mercie and good fruites, without iudging and without hipocrisie; concludes that the fruite of righteousnesse is sowen in peace of them that make peace.",
+      "verses": [
+        {
+          "ref": "James 3:13",
+          "note": "Who is a wise man and endued with knowledge among you? let him shew by good conuersation his woorkes in meekenesse of wisdome."
+        },
+        {
+          "ref": "James 3:14-16",
+          "note": "Bitter enuying and strife in the heart, and lying against the trueth, is not wisedome descending from aboue but earthly, sensuall, and deuilish - where enuying and strife is, there is sedition and all maner of euill woorkes."
+        },
+        {
+          "ref": "James 3:17-18",
+          "note": "The wisedome that is from aboue is first pure, then peaceable, gentle, easie to be intreated, full of mercie and good fruites, without iudging and without hipocrisie; the fruite of righteousnesse is sowen in peace of them that make peace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wars_worldliness_humility_geneva",
+      "name": "Warres, Worldlinesse, and Humilitie",
+      "role": "law",
+      "scribeTier": "Warres, Worldlinesse, and Humilitie",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Traces warres and contentions among believers to their owne pleasures that fight in their members; rebukes asking amisse to lay the same out on ones pleasures, and warnes that the amitie of the world is the enimitie of God, so whosoeuer will be a friend of the world maketh himselfe the enemie of God; calls for submitting to God, resisting the deuill (who will flee), and drawing neere to God with clensed handes and purged hearts; instructs the double minded to cast downe themselues before the Lord, who will lift them vp, since God resisteth the proude and giueth grace to the humble; forbids speaking euill of or condemning a brother, since there is one Lawgiuer able to saue and to destroy.",
+      "verses": [
+        {
+          "ref": "James 4:1-3",
+          "note": "From whence are warres and contentions among you but of your pleasures that fight in your members? ye lust, enuie, fight, and warre, and get nothing, because ye aske not, or aske amisse to lay it out on your pleasures."
+        },
+        {
+          "ref": "James 4:4-6",
+          "note": "Ye adulterers and adulteresses, know ye not that the amitie of the world is the enimitie of God? the Scripture offereth more grace, and sayth 'God resisteth the proude, and giueth grace to the humble.'"
+        },
+        {
+          "ref": "James 4:7-10",
+          "note": "Submit your selues to God, resist the deuill and he will flee from you; drawe neere to God and he will drawe neere to you - clense your handes ye sinners, purge your hearts ye double minded, cast downe your selues before the Lord and he will lift you vp."
+        },
+        {
+          "ref": "James 4:11-12",
+          "note": "Speake not euill one of another, brethren; there is one Lawgiuer, which is able to saue and to destroy - who art thou that iudgest another man?"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "presumption_of_riches_geneva",
+      "name": "The Presumption of Riches",
+      "role": "law",
+      "scribeTier": "The Presumption of Riches",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Rebukes those who say 'to day or to morowe we will goe into such a citie... and get gaine,' not knowing what shalbe to morowe since life is euen a vapour that appeareth for a litle time and vanisheth away, and that to him that knoweth how to doe well and doeth it not, to him it is sinne; pronounces a woe on rich men bidden to weepe and howle for their miseries - riches corrupt, garments moth eaten, golde and siluer cankred, a witnesse against them, hauing heaped vp treasure for the last dayes; condemns the fraudulent withholding of labourers' hire, whose cryes are entred into the eares of the Lord of hostes, and a life liued in pleasure and wantonnes while the iust is condemned and killed, not resisting.",
+      "verses": [
+        {
+          "ref": "James 4:13-16",
+          "note": "Rebukes those who say 'to day or to morowe we will goe into such a citie... and get gaine,' and yet cannot tell what shalbe to morowe, for life is euen a vapour that appeareth for a litle time and afterward vanisheth away."
+        },
+        {
+          "ref": "James 4:17",
+          "note": "Therefore, to him that knoweth how to doe well, and doeth it not, to him it is sinne."
+        },
+        {
+          "ref": "James 5:1-3",
+          "note": "'Goe to nowe, ye rich men: weepe, and howle for your miseries that shall come vpon you' - your riches are corrupt, your garments moth eaten, your golde and siluer cankred, the rust a witnesse against you, hauing heaped vp treasure for the last dayes."
+        },
+        {
+          "ref": "James 5:4-6",
+          "note": "The hire of ye labourers which haue reaped your fieldes, kept backe by fraude, cryeth, and the cryes are entred into the eares of the Lord of hostes; ye haue liued in pleasure and wantonnes, nourished your heartes as in a day of slaughter, and haue condemned and killed the iust, who hath not resisted you."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "patience_unto_lord_geneva",
+      "name": "Patience Vnto the Comming of the Lord",
+      "role": "law",
+      "scribeTier": "Patience Vnto the Comming of the Lord",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Calls believers to be patient vnto the comming of the Lord, likened to the husbandman that wayteth for the precious fruite of the earth with long patience, vntill he receiue the former and the latter rayne; instructs them to settle their hearts, for the comming of the Lord draweth neere, and to grudge not one against another lest they be condemned, since the iudge standeth before the doore; holds vp the Prophets who haue spoken in the Name of the Lord as an ensample of suffering aduersitie and long patience, and points to the patience of Iob and the ende the Lord made, since the Lord is very pitifull and mercifull.",
+      "verses": [
+        {
+          "ref": "James 5:7-8",
+          "note": "Be patient therefore, brethren, vnto the comming of the Lord - behold, the husbandman wayteth for the precious fruite of the earth, and hath long patience for it, vntill he receiue the former and the latter rayne; settle your hearts, for the comming of the Lord draweth neere."
+        },
+        {
+          "ref": "James 5:9",
+          "note": "Grudge not one against another, brethren, least ye be condemned - behold, the iudge standeth before the doore."
+        },
+        {
+          "ref": "James 5:10-11",
+          "note": "Take the Prophets for an ensample of suffering aduersitie and of long patience, which haue spoken in the Name of the Lord; we count them blessed which endure - ye haue heard of the patience of Iob, and haue knowen what ende the Lord made, for the Lord is very pitifull and mercifull."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Iob (James 5:11) is cited only as an example of endurance and is the subject of his own separate canonical book; not indexed as a character in this file - see genealogyLists below."
+      ]
+    },
+    {
+      "id": "prayer_oaths_wandering_soul_geneva",
+      "name": "Prayer, Othes, and the Wandering Soule",
+      "role": "law",
+      "scribeTier": "Prayer, Othes, and the Wandering Soule",
+      "parentManagerId": null,
+      "deliveredBy": "james_geneva",
+      "purpose": "Forbids swearing neither by heauen, nor by earth, nor by any other othe, instructing that yea be yea and nay be nay, lest one fall into condemnation; instructs the afflicted to pray, the merie to sing, and the sicke to call for the Elders of the Church to pray for him and anoynt him with oyle in the Name of the Lord, the prayer of faith to saue the sicke and the Lord to raise him vp, with any sinnes committed forgiuen him; calls believers to acknowledge their faultes one to another and pray one for another, that they may be healed, since the prayer of a righteous man auaileth much, if it be feruent; holds vp Helias as a man subiect to like passions as we are, who prayed earnestly that it might not rayne, and it rayned not for three yeeres and sixe moneths, then prayed againe and the heauen gaue rayne; closes by teaching that he which conuerteth a sinner from going astray shall saue a soule from death and hide a multitude of sinnes.",
+      "verses": [
+        {
+          "ref": "James 5:12",
+          "note": "But before all thinges, my brethren, sweare not, neither by heauen, nor by earth, nor by any other othe - let your yea be yea, and your nay, nay, lest ye fall into condemnation."
+        },
+        {
+          "ref": "James 5:13-15",
+          "note": "Is any among you afflicted? let him pray. Is any merie? let him sing. Is any sicke? let him call for the Elders of the Church, and let them pray for him and anoynt him with oyle in the Name of the Lord - the prayer of faith shall saue the sicke, and the Lord shall raise him vp, and if he haue committed sinnes they shalbe forgiuen him."
+        },
+        {
+          "ref": "James 5:16",
+          "note": "Acknowledge your faultes one to another, and pray one for another, that ye may be healed - the prayer of a righteous man auaileth much, if it be feruent."
+        },
+        {
+          "ref": "James 5:17-18",
+          "note": "Helias was a man subiect to like passions as we are, and he prayed earnestly that it might not rayne, and it rayned not on the earth for three yeeres and sixe moneths; he prayed againe, and the heauen gaue rayne, and the earth brought forth her fruite."
+        },
+        {
+          "ref": "James 5:19-20",
+          "note": "Brethren, if any of you hath erred from the trueth, and some man hath conuerted him, let him know that hee which hath conuerted the sinner from going astray shall saue a soule from death, and shall hide a multitude of sinnes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation spells the prophet's name 'Helias' (James 5:17-18) rather than the more familiar 'Elias' - a genuine period-spelling variant for the same 1 Kings 17-18 figure (Elijah), not a different person and not an extraction error; verified directly against the source text.",
+        "Helias/Elias is cited here as an example of prevailing prayer and is not indexed as a character in this file; his narrative belongs to 1 Kings - see genealogyLists below."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Figures cited by this epistle purely as illustrations from earlier or separate scripture, deliberately kept out of the character list above so they aren't duplicated across book/translation files.",
+    "abraham_reference": {
+      "ref": "James 2:21-23",
+      "note": "Abraham's offering of Isaac (Genesis 22) is cited as proof that faith and woorkes wrought together in him, fulfilling Genesis 15:6 and earning him the title 'the friende of God.' Indexed as a major figure in the Genesis character index; not duplicated here."
+    },
+    "rahab_reference": {
+      "ref": "James 2:25",
+      "note": "Rahab the harlot's receiuing of the spies and sending them out another way (Joshua 2) is cited as a second witnesse that woorkes iustifie faith. Indexed, if at all, in the Joshua book file, not here."
+    },
+    "job_reference": {
+      "ref": "James 5:11",
+      "note": "The patience of Iob is cited as a model of endurance. Iob is the subject of his own separate canonical book and is not indexed in this file."
+    },
+    "helias_reference": {
+      "ref": "James 5:17-18",
+      "note": "Helias/Elias's prayer that stopped rayne for three yeeres and sixe moneths and then restored it (paralleling 1 Kings 17:1, 18:1, 18:42-45) is cited as an example of effectual feruent prayer. Indexed, if at all, under 1 Kings, not here. Note the 'Helias' spelling variant used by this translation, flagged on his verse entry above."
+    },
+    "twelve_tribes_scattered_abroad": {
+      "ref": "James 1:1",
+      "note": "The letter's addressees - 'the twelue Tribes, which are scattered abroade' - a collective audience never individuated in the text, so not modeled as a character per the collective-group rule."
+    }
+  }
+}

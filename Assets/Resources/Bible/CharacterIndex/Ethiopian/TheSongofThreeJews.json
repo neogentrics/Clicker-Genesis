@@ -1,0 +1,189 @@
+{
+  "book": "The Song of Three Jews",
+  "translation": "Ethiopian",
+  "canonicalOrder": 47,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Very short text (1 chapter, verses 24-69 only - the book opens mid-scene, not at v1). This is the deuterocanonical \"Song of the Three Holy Children\" / Prayer of Azariah tradition (the Greek/LXX Additions to Daniel, inserted in other canons between Daniel 3:23 and 3:24) - here extracted by the Ethiopian Orthodox canon as its own standalone book rather than embedded inside Daniel, a real structural/canonical difference from the KJV/Masoretic Daniel (which has no such material at all) worth flagging, not an extraction artifact. Source JSON also lists verse 28 before verse 24 (file ordering only, not a content problem - each verse's own verseNumber is explicit and correct, so canonical order was reconstructed by verseNumber for this draft). Naming-collision flag: Hananiah, Azariah, and Mishael are the three companions' original Hebrew names (per Daniel 1:6-7 tradition) - the Babylonian names given to them there, Shadrach/Meshach/Abednego, never appear anywhere in this text, only the Hebrew names are used throughout. No in-book collision exists (only one Hananiah/Azariah/Mishael appears here), but this is flagged for consistency should Daniel itself later be indexed under this translation. Two unnamed collective groups appear (the king's furnace-stoking servants, v28; the Chaldeans burned near the furnace, v25) - kept out of the character list as undifferentiated groups per rule 5, logged in genealogyLists instead. Content is almost entirely a hymn (the \"Cosmic Doxology,\" vv30-68's repeating \"Bless the Lord... sing praise... for ever\" refrain calling on every tier of creation and humanity by name) bracketing a short deliverance narrative (vv24-29) - the doxology is modeled as a law/theme tier since it is sustained praise-content, not a further narrative event, matching the Leviticus/Pauline-epistle precedent for this shape. CORRECTION (post-draft QA pass): the king's-servants entry in genealogyLists originally cited verse 1:24 for \"threw them into the furnace and kept stoking it with naphtha, pitch, tow, and brushwood\" - re-checked against the real source file, that action is verse 1:28; verse 1:24 actually reads \"the flames poured out above the furnace forty-nine cubits.\" Fixed below; the chaldeans entry (ref 1:25) was already correct.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Furnace of Deliverance",
+      "managerId": "angel_of_the_lord_song_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Three Voices in the Flame",
+      "managerId": "azariah_song_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Cosmic Doxology",
+      "managerId": "cosmic_doxology_song_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "angel_of_the_lord_song_ethiopian",
+      "name": "The Angel of the Lord",
+      "role": "manager",
+      "scribeTier": "Furnace of Deliverance",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Song of Three Jews 1:26",
+          "note": "Comes down into the furnace to be with Azariah and his companions and drives the fiery flame out of the furnace."
+        },
+        {
+          "ref": "Song of Three Jews 1:27",
+          "note": "Makes the inside of the furnace feel like a moist wind whistling through it; the fire touches the three not at all, causing no pain or distress."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text never names this angel - identifications with a specific named angel found in other traditions are not made by this passage itself."
+      ]
+    },
+    {
+      "id": "azariah_song_ethiopian",
+      "name": "Azariah",
+      "role": "manager",
+      "scribeTier": "Three Voices in the Flame",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Song of Three Jews 1:26",
+          "note": "Singled out by name as the one the angel comes to be with, alongside his companions, in the furnace."
+        },
+        {
+          "ref": "Song of Three Jews 1:67",
+          "note": "Named first of the three (with Hananiah and Mishael) in the final call to bless the Lord, who rescued them from Hades and delivered them from the fire."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hananiah_song_ethiopian",
+      "name": "Hananiah",
+      "role": "submanager",
+      "scribeTier": "Three Voices in the Flame",
+      "parentManagerId": "azariah_song_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Song of Three Jews 1:67",
+          "note": "Named together with Azariah and Mishael as one of the three delivered from the burning fiery furnace, called to bless the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mishael_song_ethiopian",
+      "name": "Mishael",
+      "role": "submanager",
+      "scribeTier": "Three Voices in the Flame",
+      "parentManagerId": "azariah_song_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Song of Three Jews 1:67",
+          "note": "Named together with Azariah and Hananiah as one of the three delivered from the burning fiery furnace, called to bless the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cosmic_doxology_song_ethiopian",
+      "name": "The Cosmic Doxology",
+      "role": "law",
+      "scribeTier": "Cosmic Doxology",
+      "parentManagerId": null,
+      "deliveredBy": "azariah_song_ethiopian",
+      "purpose": "A sustained hymn of praise sung by the three from within the flame with one voice, calling every tier of creation in turn - the heavens, angels, waters, sun and moon, stars, weather, the earth, mountains, seas, plants, sea creatures, birds, animals, all humankind, Israel, priests, and the spirits of the righteous - and finally themselves by name (Hananiah, Azariah, and Mishael), to bless, praise, and give thanks to the Lord who rescued them from Hades and delivered them from death and the fire.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Song of Three Jews 1:29",
+          "note": "The three with one voice begin to praise, glorify, and bless God in the furnace."
+        },
+        {
+          "ref": "Song of Three Jews 1:30-35",
+          "note": "Opening blessing of God's own name, glory, and throne."
+        },
+        {
+          "ref": "Song of Three Jews 1:36-42",
+          "note": "Call to the heavens, angels, waters above, sun, moon, and stars to bless the Lord."
+        },
+        {
+          "ref": "Song of Three Jews 1:43-52",
+          "note": "Call to rain, dew, wind, fire, heat, cold, snow, night and day, and lightning to bless the Lord."
+        },
+        {
+          "ref": "Song of Three Jews 1:53-60",
+          "note": "Call to the earth, mountains, plants, seas, springs, sea creatures, birds, and animals to bless the Lord."
+        },
+        {
+          "ref": "Song of Three Jews 1:61-66",
+          "note": "Call to all people, Israel, priests, servants of the Lord, and the spirits of the righteous and humble-hearted to bless the Lord."
+        },
+        {
+          "ref": "Song of Three Jews 1:67",
+          "note": "Call turns to the three singers themselves by name - Hananiah, Azariah, and Mishael - for their rescue from Hades and the fire."
+        },
+        {
+          "ref": "Song of Three Jews 1:68-69",
+          "note": "Closing refrain: give thanks to the Lord for he is good, his mercy endures for ever."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "kings_servants": {
+      "ref": "Song of Three Jews 1:28",
+      "note": "Unnamed collective group who threw the three into the furnace and kept stoking it with naphtha, pitch, tow, and brushwood - not individuated in the text."
+    },
+    "chaldeans": {
+      "ref": "Song of Three Jews 1:25",
+      "note": "Unnamed Chaldeans caught near the furnace who were burned by the flame that poured out 49 cubits above it - not individuated in the text."
+    }
+  }
+}

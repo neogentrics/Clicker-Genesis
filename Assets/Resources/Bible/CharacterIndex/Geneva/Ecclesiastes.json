@@ -1,0 +1,387 @@
+{
+  "book": "Ecclesiastes",
+  "translation": "Geneva",
+  "canonicalOrder": 21,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Grounded in a direct read of Assets/Resources/Verses/Geneva/ecclesiastes_21.json (the real 1560 Geneva extraction), not memory of the KJV. Content and theme are a faithful match to the familiar 12-chapter Ecclesiastes: the unnamed Preacher (\"the sonne of Dauid King in Ierusalem,\" 1:1 — never called \"Solomon\" in the text, same restraint as KJV), the vanitie-of-vanities thesis, the Season's-Wheel poem, the oppression/injustice material, the recurring eat-drink-and-enjoy-thy-labour refrain, the threefold-cord companionship poem, the aging/Silver-Cord poem, and the fear-God-and-keep-His-commandments conclusion. No deuterocanonical content and no named individuals beyond the unnamed Preacher and an unnamed \"poore and wise man\" (9:15) — same finding as the existing KJV Character Index for this book — so no submanagers are possible here, matching that file's own note that Ecclesiastes names no minor supporting figures the text itself gives a name to. REAL DIFFERENCES FOUND, not invented: (1) Archaic 1560 English spelling/idiom throughout (\"trauaile,\" \"sunne,\" \"vnto,\" \"beholde\") — style only, not content. (2) A genuine notable wording variant at 2:8: this Geneva printing renders the famously obscure Hebrew phrase as \"the delites of the sonnes of men, as a woman taken captiue, and women taken captiues,\" where KJV instead reads \"musical instruments, and that of all sorts\" — a real divergent translation choice for a textually difficult phrase, flagged here rather than silently harmonized to the more familiar KJV wording. (3) Two real versification quirks in THIS extraction, used as-printed rather than remapped to KJV numbers, per this project's scripture-accuracy rule: at 4:16 the text carries a trailing bracketed \"(Ecclesiastes : )\" tag immediately followed by content that KJV numbers as its own verse 5:1 (\"Take heede to thy foote when thou entrest into the House of God...\") — appended to 4:16 rather than given its own verse number, after which this file's chapter 5 begins at content KJV numbers 5:2, so every verse number in this file's chapter 5 sits one behind the equivalent KJV verse throughout. Separately, this file's chapter 6 ends two verses earlier than KJV's (this file's 6:10 = KJV 6:10), and chapter 7 opens with content KJV places at the end of chapter 6 (this file's 7:1-2 = KJV 6:11-12), so from 7:3 onward every verse in this file's chapter 7 sits two ahead of the equivalent KJV verse; chapter 7's closing verse (7:29) also carries a bracketed \"(Ecclesiastes )\" tag mid-verse and compresses content KJV splits across three verses (7:27-29) into one. These bracketed tags match this project's already-documented Geneva-extraction artifact (superscript verse/footnote-number collision baked into the source PDF's font encoding) rather than being treated as genuine 1560 printed content — flagged, not silently resolved or \"fixed\" to match KJV. All verse \"ref\" values below use this file's own printed chapter:verse numbering exactly as extracted, never remapped.",
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references required for this book — Ecclesiastes contains no named individuals beyond the unnamed Preacher himself and one unnamed 'poore and wise man' (9:15), both already captured in the character entries below."
+  },
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Preacher's Scroll",
+      "managerId": "the_preacher_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Vapor Under the Sunne",
+      "managerId": "vanity_of_vanities_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Lamp of Wisedome",
+      "managerId": "wisdom_and_folly_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Season's Wheel",
+      "managerId": "time_for_every_purpose_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Teares of the Oppressed",
+      "managerId": "injustice_under_the_sun_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Bread and Wine",
+      "managerId": "eat_drink_and_enjoy_labour_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Threefold Coard",
+      "managerId": "two_are_better_than_one_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Siluer Coard",
+      "managerId": "remember_thy_creator_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Whole Dutie",
+      "managerId": "fear_god_keep_commandments_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "the_preacher_geneva",
+      "name": "The Preacher (Geneva 1560)",
+      "role": "manager",
+      "scribeTier": "The Preacher's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Dauid",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "This Geneva 1560 printing never names its narrator 'Solomon' — he identifies himself only as 'the Preacher, the sonne of Dauid King in Ierusalem' (1:1) and 'I the Preacher haue bene King ouer Israel in Ierusalem' (1:12), identical restraint to KJV. No mother, spouse, or children are named anywhere in the book itself."
+      },
+      "verses": [
+        {
+          "ref": "1:1",
+          "note": "'The wordes of the Preacher, the sonne of Dauid King in Ierusalem.' — the book's self-identification, its only genealogical claim."
+        },
+        {
+          "ref": "1:12",
+          "note": "'I the Preacher haue bene King ouer Israel in Ierusalem.'"
+        },
+        {
+          "ref": "1:16",
+          "note": "'I am become great, and excell in wisdome all them that haue bene before me in Ierusalem.'"
+        },
+        {
+          "ref": "2:4-7",
+          "note": "catalogues his own building projects: 'I haue built me houses: I haue planted me vineyards...gardens and orchards...cisternes of water...seruants and maides.'"
+        },
+        {
+          "ref": "2:8",
+          "note": "'I haue gathered vnto me also siluer and gold...I haue prouided me men singers and women singers, and the delites of the sonnes of men, as a woman taken captiue, and women taken captiues.' — a real, notable wording variant: this Geneva printing renders the textually obscure closing phrase as captive women, where KJV instead reads 'musical instruments, and that of all sorts' for the same difficult Hebrew — genuinely different imagery, flagged rather than harmonized."
+        },
+        {
+          "ref": "12:9-10",
+          "note": "'the more wise the Preacher was, the more he taught the people knowledge...sought to finde out pleasant wordes, and an vpright writing, euen the wordes of trueth.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never named 'Solomon' anywhere in this printing either — only 'the Preacher' and 'sonne of Dauid King in Ierusalem,' the same restraint the standard KJV text keeps.",
+        "2:8's rendering of the delites of the sonnes of men as literal captive women is a real, distinctive Geneva 1560 wording choice for one of the most textually disputed phrases in the book."
+      ]
+    },
+    {
+      "id": "vanity_of_vanities_geneva",
+      "name": "Vanitie of Vanities",
+      "role": "law",
+      "scribeTier": "Vapor Under the Sunne",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "States the book's governing thesis in its own archaic phrasing — that every pursuit 'vnder the sunne' is vanitie — framing the whole book as an inquiry into whether anything has lasting profit.",
+      "verses": [
+        {
+          "ref": "1:2",
+          "note": "'Vanitie of vanities, sayth the Preacher: vanitie of vanities, all is vanitie.' — the book's opening thesis."
+        },
+        {
+          "ref": "1:3",
+          "note": "'What remaineth vnto man in all his trauaile, which he suffereth vnder ye sunne?'"
+        },
+        {
+          "ref": "1:4-7",
+          "note": "generations, sunne, wind and rivers each cycle endlessly: 'One generation passeth, and another generation succeedeth: but the earth remaineth for euer.'"
+        },
+        {
+          "ref": "1:9",
+          "note": "'that that shalbe: and what is it that hath bene done? that which shalbe done: and there is no newe thing vnder the sunne.'"
+        },
+        {
+          "ref": "12:8",
+          "note": "'Vanitie of vanities, saieth the Preacher, all is vanitie.' — the closing bookend, nearly repeating 1:2."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "1:2 and 12:8 bookend the whole work with almost identical wording, a deliberate inclusio preserved in this Geneva printing."
+      ]
+    },
+    {
+      "id": "wisdom_and_folly_geneva",
+      "name": "Wisedome and Follie",
+      "role": "law",
+      "scribeTier": "Lamp of Wisedome",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "Weighs wisdom against folly and finds wisdom genuinely superior — 'as the light is more excellent then darkenes' — yet unable to outrun death or guarantee remembrance.",
+      "verses": [
+        {
+          "ref": "1:16-18",
+          "note": "'I am become great, and excell in wisdome...in the multitude of wisedome is much griefe: and he that increaseth knowledge, increaseth sorowe.'"
+        },
+        {
+          "ref": "2:13-14",
+          "note": "'Then I saw that there is profite in wisdome, more then in follie: as the light is more excellent then darkenes...I know also that the same condition falleth to them all.'"
+        },
+        {
+          "ref": "7:3",
+          "note": "'A good name is better then a good oyntment, and the day of death, then the day that one is borne.'"
+        },
+        {
+          "ref": "7:21",
+          "note": "'Wisedome shall strengthen the wise man more then ten mightie princes that are in ye citie.'"
+        },
+        {
+          "ref": "9:11",
+          "note": "'the race is not to the swift, nor the battell to the strong...but time and chance commeth to them all.'"
+        },
+        {
+          "ref": "9:14-16",
+          "note": "an unnamed 'poore and wise man' delivers a besieged 'litle citie' by his wisdom, 'but none remembred this poore man' — wisdom unrewarded."
+        },
+        {
+          "ref": "10:1",
+          "note": "'Dead flies cause to stinke, and putrifie the ointment of the apoticarie: so doeth a litle follie him that is in estimation for wisedome, and for glorie.'"
+        },
+        {
+          "ref": "11:1-2",
+          "note": "'Cast thy bread vpon the waters: for after many daies thou shalt finde it...for thou knowest not what euill shalbe vpon ye earth.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The unnamed 'poore and wise man' of 9:14-16 is left nameless in this Geneva text too, matching KJV exactly and reinforcing the passage's own point about wisdom going unremembered.",
+        "'Cast thy bread vpon the waters' (11:1) already reads as the familiar English idiom in this 1560 printing."
+      ]
+    },
+    {
+      "id": "time_for_every_purpose_geneva",
+      "name": "A Time for Euery Purpose",
+      "role": "law",
+      "scribeTier": "Season's Wheel",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "A poetic catalogue of paired opposites — a fourteen-couplet poem asserting God has appointed a fitting season for every human activity.",
+      "verses": [
+        {
+          "ref": "3:1",
+          "note": "'To all things there is an appointed time, and a time to euery purpose vnder the heauen.'"
+        },
+        {
+          "ref": "3:2-8",
+          "note": "the full poem: 'A time to bee borne, and a time to die...a time of warre, and a time of peace.'"
+        },
+        {
+          "ref": "3:11",
+          "note": "'He hath made euery thing beautifull in his time...yet can not man finde out the worke that God hath wrought from the beginning euen to the end.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Fourteen paired opposites (28 activities total), preserved intact in this Geneva printing's own archaic wording."
+      ]
+    },
+    {
+      "id": "injustice_under_the_sun_geneva",
+      "name": "Iniustice Vnder the Sunne",
+      "role": "law",
+      "scribeTier": "Teares of the Oppressed",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "Surveys corrupted courts and social power — wickedness sitting where justice should — and the leveling truth that death erases whatever distinction wealth once bought, concluding ultimate justice belongs to God alone.",
+      "verses": [
+        {
+          "ref": "3:16",
+          "note": "'I haue seene vnder the sunne the place of iudgement, where was wickednesse, and the place of iustice where was iniquitie.'"
+        },
+        {
+          "ref": "3:17",
+          "note": "'God wil iudge the iust and the wicked: for time is there for euery purpose and for euery worke.'"
+        },
+        {
+          "ref": "3:18-21",
+          "note": "'they are in themselues as beastes...they haue all one breath, and there is no excellency of man aboue ye beast...Who knoweth whether the spirit of man ascend vpward, and the spirit of the beast descend downeward to the earth?'"
+        },
+        {
+          "ref": "4:1",
+          "note": "'beholde the teares of the oppressed, and none comforteth them: and lo, the strength is of the hand of them that oppresse them, and none comforteth them.'"
+        },
+        {
+          "ref": "5:7",
+          "note": "'If in a countrey thou seest the oppression of the poore, and the defrauding of iudgement and iustice, be not astonied at the matter.'"
+        },
+        {
+          "ref": "8:14",
+          "note": "'there be righteous men to whom it commeth according to the worke of the wicked: and there be wicked men to whom it commeth according to the worke of the iust.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "4:1 repeats 'none comforteth them' twice within the same verse in this printing, doubling down on the oppressed's isolation."
+      ]
+    },
+    {
+      "id": "eat_drink_and_enjoy_labour_geneva",
+      "name": "Eate, Drinke, and Enioy Thy Labour",
+      "role": "law",
+      "scribeTier": "Bread and Wine",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "The book's recurring positive counter-refrain: since ultimate gain cannot be secured, God's gift is the simple enjoyment of food, drink, and one's own labour — restated across the book.",
+      "verses": [
+        {
+          "ref": "2:24",
+          "note": "'There is no profit to man: but that he eate, and drinke, and delight his soule with the profit of his labour: I saw also this, that it was of the hand of God.' — first statement."
+        },
+        {
+          "ref": "3:12-13",
+          "note": "'I know that there is nothing good in them, but to reioyce, and to doe good in his life. And also that euery man eateth and drinketh, and seeth the commoditie of all his labour. this is the gift of God.' — second statement."
+        },
+        {
+          "ref": "5:17-18",
+          "note": "'it is comely to eate, and to drinke, and to take pleasure in all his labour...this is the gift of God.' — third statement."
+        },
+        {
+          "ref": "8:15",
+          "note": "'I praysed ioy: for there is no goodnesse to man vnder the sunne, saue to eate and to drinke and to reioyce.' — fourth statement."
+        },
+        {
+          "ref": "9:7-9",
+          "note": "'Goe, eate thy bread with ioy, and drinke thy wine with a cheerefull heart...Reioyce with the wife whom thou hast loued all the dayes of the life of thy vanitie...for this is thy portion.' — fifth and fullest statement."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Recurs five times across the book in this printing too (2:24; 3:12-13; 5:17-18; 8:15; 9:7-9), the same structural repetition documented in the KJV Character Index for this book."
+      ]
+    },
+    {
+      "id": "two_are_better_than_one_geneva",
+      "name": "Two Are Better Then One",
+      "role": "law",
+      "scribeTier": "The Threefold Coard",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "A short wisdom poem on companionship — two working together can lift, warm, and defend one another where a lone person cannot.",
+      "verses": [
+        {
+          "ref": "4:9",
+          "note": "'Two are better then one: for they haue better wages for their labour.'"
+        },
+        {
+          "ref": "4:10",
+          "note": "'if they fal, the one wil lift vp his felow: but wo vnto him that is alone: for he falleth, and there is not a second to lift him vp.'"
+        },
+        {
+          "ref": "4:11-12",
+          "note": "'if two sleepe together, then shall they haue heate...a threefolde coard is not easily broken.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'threefolde coard' image (4:12) extends the two-are-better logic further still, implying the principle strengthens rather than caps at pairs."
+      ]
+    },
+    {
+      "id": "remember_thy_creator_geneva",
+      "name": "Remember Nowe Thy Creator",
+      "role": "law",
+      "scribeTier": "The Siluer Coard",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "An extended poem picturing the body's decline into old age and death — a broken silver cord and golden ewer — urging the young to remember their Creator before these losses arrive.",
+      "verses": [
+        {
+          "ref": "12:1",
+          "note": "'Remember nowe thy Creator in the daies of thy youth, whiles the euill daies come not.'"
+        },
+        {
+          "ref": "12:2-5",
+          "note": "the aging body pictured through a darkened sun and moon, trembling 'keepers of ye house,' failing 'grinders,' the flourishing almond tree, the burdensome grasshopper — ending 'man goeth to the house of his age, and the mourners goe about in the streete.'"
+        },
+        {
+          "ref": "12:6",
+          "note": "'Whiles the siluer coarde is not lengthened, nor the golden ewer broken, nor the pitcher broken at the well, nor the wheele broken at the cisterne.'"
+        },
+        {
+          "ref": "12:7",
+          "note": "'dust returne to the earth as it was, and the spirit returne to God that gaue it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This printing renders the famous image as a 'golden ewer' rather than KJV's 'golden bowl' — a small, real wording difference in the same verse (12:6)."
+      ]
+    },
+    {
+      "id": "fear_god_keep_commandments_geneva",
+      "name": "Feare God and Keepe His Commandements",
+      "role": "law",
+      "scribeTier": "The Whole Dutie",
+      "parentManagerId": null,
+      "deliveredBy": "the_preacher_geneva",
+      "purpose": "The book's closing summation — after every earthly pursuit is tested and found vanitie, the one enduring counsel is to fear God and keep his commandments, since God will judge every deed.",
+      "verses": [
+        {
+          "ref": "12:9-10",
+          "note": "'the more wise the Preacher was, the more he taught the people knowledge, and caused them to heare, and searched foorth, and prepared many parables.'"
+        },
+        {
+          "ref": "12:11",
+          "note": "'The wordes of the wise are like goads, and like nailes fastened by the masters of the assemblies, which are giuen by one pastour.'"
+        },
+        {
+          "ref": "12:13",
+          "note": "'Let vs heare the end of all: feare God and keepe his commandements: for this is the whole duetie of man.'"
+        },
+        {
+          "ref": "12:14",
+          "note": "'For God will bring euery worke vnto iudgement, with euery secret thing, whether it be good or euill.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This printing calls the wise teacher 'one pastour' (12:11) rather than KJV's 'one shepherd' — same image, different word choice, real 1560 English idiom."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,529 @@
+{
+  "book": "2 Timothy",
+  "translation": "Ethiopian",
+  "canonicalOrder": 75,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This Ethiopian translation's 2 Timothy text is verbatim-identical (word-for-word, including archaic phrasing and punctuation) to the already-completed KJV 2Timothy.json across all 4 chapters/83 verses - confirmed by reading the full extracted source at Assets/Resources/Verses/Ethiopian/2_timothy_75.json line by line against the KJV draft, no content differences found (unlike this Ethiopian Bible's own Ezra, which genuinely diverges). Structure therefore adapted directly from the KJV draft rather than built from scratch, with every id re-verified against this translation's own text and re-suffixed \"_ethiopian_2timothy\" (not \"_2timothy\") per the schema's translation-scoping requirement, and every character/verse/law tier independently re-checked against the read text rather than blindly copied. Same seven-tier shape: Paul (person, The Crown of Righteousness) and Timothy (person, The Good Soldier) as the two person tiers, plus five law/theme tiers built around Paul's major teaching blocks since he is the sole deliverer of all doctrinal content in this letter (The Faithful Saying 2:11-13, Vessels of Gold and Earth 2:14-21, The Perilous Times 3:1-9, The Inspired Scripture 3:14-17, Preach the Word 4:1-5) - the personally-embodied-vs-pure-transmission test again keeps Paul's own suffering/imprisonment/valedictory testimony (4:6-8) inside his own person-tier since he is himself living and dying inside that content, not merely relaying it. Submanagers under Paul split the same way by loyalty: Onesiphorus/Luke/Mark (loyalty-boost, real supportive acts) vs. Demas/Phygellus-and-Hermogenes (one collective entry, undifferentiated in the text)/Hymenaeus-and-Philetus (one collective entry, undifferentiated)/Alexander the Coppersmith (cost-cutter, real opposition or desertion). Timothy's submanagers are his grandmother Lois and mother Eunice (loyalty-boost, explicitly credited with his unfeigned faith in 1:5). Naming-collision flags carried forward and re-verified against this translation's own text (which, being identical, states nothing more or less than the KJV on these points): Hymenaeus (also named in 1 Timothy 1:20) and possibly Alexander are likely the same recurring Ephesian figures, but 2 Timothy itself never restates or confirms that identification here either, so both stay flagged probable-not-certain, not merged. Jannes and Jambres (3:8) are the scriptural source naming Exodus's own unnamed magicians - logged in genealogyLists as a cross-reference to Exodus's character index, not re-indexed here, matching the KJV draft's own handling. Chapter 4's travel/greeting-only names (Crescens, Titus, Tychicus, Carpus, Prisca and Aquila, Erastus, Trophimus, Eubulus, Pudens, Linus, Claudia) receive no individual scene and are logged in genealogyLists rather than given full character entries, exactly as in the KJV version. No Ethiopian-specific structural or content divergence was found in this book - flagging explicitly per the workflow's \"if it matches, don't invent a new shape\" guidance rather than silently asserting a difference that isn't there.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Crown of Righteousness",
+      "managerId": "paul_ethiopian_2timothy",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Good Soldier",
+      "managerId": "timothy_ethiopian_2timothy",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Faithful Saying",
+      "managerId": "faithful_saying_ethiopian_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Vessels of Gold and Earth",
+      "managerId": "vessels_of_the_house_ethiopian_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Perilous Times",
+      "managerId": "perilous_times_ethiopian_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Inspired Scripture",
+      "managerId": "inspired_scripture_ethiopian_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Preach the Word",
+      "managerId": "preach_the_word_ethiopian_2timothy",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_ethiopian_2timothy",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:1-2",
+          "note": "Paul, an apostle of Jesus Christ by the will of God, according to the promise of life which is in Christ Jesus, greets Timothy, his dearly beloved son."
+        },
+        {
+          "ref": "2 Timothy 1:3",
+          "note": "Paul thanks God, whom he serves from his forefathers with pure conscience, remembering Timothy in his prayers night and day."
+        },
+        {
+          "ref": "2 Timothy 1:8-12",
+          "note": "Not ashamed of the testimony of the Lord or of Paul his prisoner; called with an holy calling; appointed a preacher, an apostle, and a teacher of the Gentiles; suffers for it but is not ashamed, 'for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him.'"
+        },
+        {
+          "ref": "2 Timothy 1:15",
+          "note": "All they which are in Asia be turned away from Paul."
+        },
+        {
+          "ref": "2 Timothy 1:16-18",
+          "note": "Paul blesses the house of Onesiphorus, who oft refreshed him and was not ashamed of his chain."
+        },
+        {
+          "ref": "2 Timothy 2:9-10",
+          "note": "Paul suffers trouble as an evil doer, even unto bonds, for the gospel; endures all things for the elect's sakes, that they may also obtain the salvation which is in Christ Jesus with eternal glory."
+        },
+        {
+          "ref": "2 Timothy 3:10-11",
+          "note": "Timothy has fully known Paul's doctrine, manner of life, purpose, faith, longsuffering, charity, patience, and the persecutions and afflictions that came unto him at Antioch, at Iconium, at Lystra -- out of them all the Lord delivered him."
+        },
+        {
+          "ref": "2 Timothy 4:6-8",
+          "note": "'I am now ready to be offered, and the time of my departure is at hand. I have fought a good fight, I have finished my course, I have kept the faith: Henceforth there is laid up for me a crown of righteousness, which the Lord, the righteous judge, shall give me at that day: and not to me only, but unto all them also that love his appearing.'"
+        },
+        {
+          "ref": "2 Timothy 4:9-11",
+          "note": "Asks Timothy to come shortly; Demas has forsaken Paul, having loved this present world; only Luke is with him; asks that Mark be brought, for he is profitable to Paul for the ministry."
+        },
+        {
+          "ref": "2 Timothy 4:14-15",
+          "note": "Alexander the coppersmith did Paul much evil; the Lord reward him according to his works."
+        },
+        {
+          "ref": "2 Timothy 4:16-18",
+          "note": "At his first answer no man stood with him, all men forsook him -- he prays it not be laid to their charge. The Lord stood with him and strengthened him so the preaching might be fully known, and he was delivered out of the mouth of the lion; the Lord shall deliver him from every evil work and preserve him unto his heavenly kingdom."
+        },
+        {
+          "ref": "2 Timothy 4:19-21",
+          "note": "Final greetings: to Prisca and Aquila and the household of Onesiphorus; Erastus stayed at Corinth, Trophimus left sick at Miletum; urges Timothy to come before winter; Eubulus, Pudens, Linus, Claudia, and all the brethren greet him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is traditionally read as Paul's last surviving letter, written from a Roman imprisonment harsher than the one behind Acts 28 -- he expects execution rather than release ('I am now ready to be offered').",
+        "The 'crown of righteousness' (4:8) draws on the image of a victor's wreath from the Greek games, the same athletic imagery Paul uses of Timothy in 2:5."
+      ]
+    },
+    {
+      "id": "timothy_ethiopian_2timothy",
+      "name": "Timothy",
+      "role": "manager",
+      "scribeTier": "The Good Soldier",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "unnamed Greek father, per Acts 16:1 -- not named within 2 Timothy itself",
+        "mother": "eunice_ethiopian_2timothy",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:2",
+          "note": "Addressed by Paul as 'my dearly beloved son.'"
+        },
+        {
+          "ref": "2 Timothy 1:4",
+          "note": "Paul greatly desires to see him, being mindful of his tears, that he may be filled with joy."
+        },
+        {
+          "ref": "2 Timothy 1:6-7",
+          "note": "Charged to stir up the gift of God which is in him by the putting on of Paul's hands; God hath not given us the spirit of fear, but of power, and of love, and of a sound mind."
+        },
+        {
+          "ref": "2 Timothy 1:13-14",
+          "note": "Hold fast the form of sound words heard from Paul; keep that good thing committed to him by the Holy Ghost which dwelleth in us."
+        },
+        {
+          "ref": "2 Timothy 2:1-3",
+          "note": "Be strong in the grace that is in Christ Jesus; commit the things heard among many witnesses to faithful men who shall be able to teach others also; endure hardness as a good soldier of Jesus Christ."
+        },
+        {
+          "ref": "2 Timothy 2:15",
+          "note": "Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth."
+        },
+        {
+          "ref": "2 Timothy 2:22",
+          "note": "Flee also youthful lusts; follow righteousness, faith, charity, peace, with them that call on the Lord out of a pure heart."
+        },
+        {
+          "ref": "2 Timothy 2:23-26",
+          "note": "Avoid foolish and unlearned questions; the servant of the Lord must not strive, but be gentle unto all men, apt to teach, patient, in meekness instructing those that oppose themselves."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'putting on of hands' in 1:6 recalls Timothy's own ordination, also referenced in 1 Timothy 4:14."
+      ]
+    },
+    {
+      "id": "onesiphorus_ethiopian_2timothy",
+      "name": "Onesiphorus",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Paul prays mercy 'unto the house of Onesiphorus' rather than to the man directly in both mentions (1:16, 4:19), which some readers take as a hint he had died by the time of writing -- the text itself never states this explicitly.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:16-17",
+          "note": "The Lord give mercy unto the house of Onesiphorus for he oft refreshed Paul and was not ashamed of his chain; when he was in Rome, he sought Paul out very diligently, and found him."
+        },
+        {
+          "ref": "2 Timothy 1:18",
+          "note": "Paul asks that he find mercy of the Lord in that day; Timothy knows very well how many things he ministered to Paul at Ephesus."
+        },
+        {
+          "ref": "2 Timothy 4:19",
+          "note": "Paul sends greeting to the household of Onesiphorus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "demas_ethiopian_2timothy",
+      "name": "Demas",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:10",
+          "note": "Demas hath forsaken Paul, having loved this present world, and is departed unto Thessalonica."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Demas appears as one of Paul's fellow-labourers in Colossians 4:14 and Philemon 1:24 -- this verse marks his real reversal from co-worker to deserter."
+      ]
+    },
+    {
+      "id": "phygellus_and_hermogenes_ethiopian_2timothy",
+      "name": "Phygellus and Hermogenes",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Named together with no individually distinguished actions in the text -- treated as one collective entry rather than inventing a differentiation the text doesn't support.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:15",
+          "note": "Named as being among 'all they which are in Asia' who turned away from Paul."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hymenaeus_and_philetus_ethiopian_2timothy",
+      "name": "Hymenaeus and Philetus",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Attached to Paul's own tier (The Crown of Righteousness) rather than the Vessels of Gold and Earth law tier, since law/theme tiers do not carry submanagers of their own -- Paul is the one relaying this content, and Hymenaeus and Philetus are his named opponents within it. Hymenaeus is also named in 1 Timothy 1:20 as one Paul 'delivered unto Satan' -- likely the same recurring false teacher, though 2 Timothy itself does not restate that earlier judgment, so flagged as probable rather than certain. Philetus appears only here in scripture. Treated as one collective entry since the text does not differentiate their individual actions.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 2:17-18",
+          "note": "Their word will eat as doth a canker: Hymenaeus and Philetus have erred concerning the truth, saying the resurrection is past already, and overthrow the faith of some."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "alexander_ethiopian_2timothy",
+      "name": "Alexander the Coppersmith",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Possibly the same Alexander named alongside Hymenaeus in 1 Timothy 1:20, but 2 Timothy does not itself make that identification explicit -- flagged as an open naming question, not asserted as fact.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:14-15",
+          "note": "Alexander the coppersmith did Paul much evil; the Lord reward him according to his works; Timothy should also beware of him, for he hath greatly withstood our words."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "luke_ethiopian_2timothy",
+      "name": "Luke",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:11",
+          "note": "Only Luke is with Paul."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified as the physician of Colossians 4:14 and the author of the Gospel of Luke and Acts -- 2 Timothy itself only names him as Paul's sole remaining companion."
+      ]
+    },
+    {
+      "id": "mark_ethiopian_2timothy",
+      "name": "Mark",
+      "role": "submanager",
+      "scribeTier": "The Crown of Righteousness",
+      "parentManagerId": "paul_ethiopian_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:11",
+          "note": "Paul asks Timothy to take Mark and bring him, for he is profitable to Paul for the ministry."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This reads as a real reconciliation: the same Mark whose earlier departure from a missionary journey caused Paul and Barnabas to separate (Acts 15:37-39) is here called profitable for the ministry -- 2 Timothy does not narrate the reconciliation itself, only its result."
+      ]
+    },
+    {
+      "id": "lois_ethiopian_2timothy",
+      "name": "Lois",
+      "role": "submanager",
+      "scribeTier": "The Good Soldier",
+      "parentManagerId": "timothy_ethiopian_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "1:5 names Eunice as Timothy's mother and Lois as his grandmother in the same breath ('dwelt first in thy grandmother Lois, and thy mother Eunice'), implying Eunice is Lois's daughter -- the text does not explicitly state this relationship, only the generational sequence.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "eunice_ethiopian_2timothy"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:5",
+          "note": "Paul calls to remembrance the unfeigned faith that is in Timothy, which dwelt first in his grandmother Lois, and his mother Eunice, and is persuaded is in Timothy also."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eunice_ethiopian_2timothy",
+      "name": "Eunice",
+      "role": "submanager",
+      "scribeTier": "The Good Soldier",
+      "parentManagerId": "timothy_ethiopian_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "lois_ethiopian_2timothy",
+        "spouses": [
+          "unnamed Greek father of Timothy -- Acts 16:1, not named in 2 Timothy itself"
+        ],
+        "children": [
+          "timothy_ethiopian_2timothy"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:5",
+          "note": "Named alongside Lois as one in whom Timothy's unfeigned faith first dwelt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Likely the same instructor implied by 3:15's 'from a child hast known the holy scriptures,' though that verse itself does not name her directly."
+      ]
+    },
+    {
+      "id": "faithful_saying_ethiopian_2timothy",
+      "name": "The Faithful Saying",
+      "role": "law",
+      "scribeTier": "The Faithful Saying",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2timothy",
+      "purpose": "Paul quotes what reads as an already-known early creedal fragment to ground Timothy's endurance in the certainty of Christ's own unwavering faithfulness, setting human faithfulness and denial against Christ's constancy: 'he cannot deny himself.'",
+      "verses": [
+        {
+          "ref": "2 Timothy 2:11-13",
+          "note": "'It is a faithful saying: For if we be dead with him, we shall also live with him: If we suffer, we shall also reign with him: if we deny him, he also will deny us: If we believe not, yet he abideth faithful: he cannot deny himself.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The phrase 'it is a faithful saying' also introduces set formulas elsewhere in the Pastoral Epistles (e.g. 1 Timothy 1:15, 4:9, Titus 3:8), suggesting Paul is citing a known early-church saying rather than composing a new one here."
+      ]
+    },
+    {
+      "id": "vessels_of_the_house_ethiopian_2timothy",
+      "name": "Vessels of Gold and Earth",
+      "role": "law",
+      "scribeTier": "Vessels of Gold and Earth",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2timothy",
+      "purpose": "Teaches Timothy how to guard sound doctrine against corrosive false teaching -- using Hymenaeus and Philetus as the concrete negative example -- and how personal purity determines a person's usefulness to the Master, likened to a vessel of gold, silver, wood, or earth within a great house.",
+      "verses": [
+        {
+          "ref": "2 Timothy 2:14",
+          "note": "Put them in remembrance, charging them before the Lord that they strive not about words to no profit, but to the subverting of the hearers."
+        },
+        {
+          "ref": "2 Timothy 2:16-18",
+          "note": "Shun profane and vain babblings, for they will increase unto more ungodliness, and their word will eat as doth a canker -- of whom is Hymenaeus and Philetus."
+        },
+        {
+          "ref": "2 Timothy 2:19",
+          "note": "Nevertheless the foundation of God standeth sure, having this seal, the Lord knoweth them that are his; let every one that nameth the name of Christ depart from iniquity."
+        },
+        {
+          "ref": "2 Timothy 2:20-21",
+          "note": "In a great house there are vessels of gold and of silver, but also of wood and of earth, some to honour and some to dishonour; if a man purge himself from these, he shall be a vessel unto honour, sanctified and meet for the master's use, prepared unto every good work."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "perilous_times_ethiopian_2timothy",
+      "name": "The Perilous Times",
+      "role": "law",
+      "scribeTier": "The Perilous Times",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2timothy",
+      "purpose": "Warns Timothy of the moral and spiritual character of people in the last days, instructing him to have nothing to do with such people while reassuring him that their deception has a real, appointed limit.",
+      "verses": [
+        {
+          "ref": "2 Timothy 3:1-5",
+          "note": "In the last days perilous times shall come: men shall be lovers of their own selves, covetous, boasters, proud, blasphemers, disobedient to parents, unthankful, unholy, without natural affection, trucebreakers, false accusers, incontinent, fierce, despisers of those that are good, traitors, heady, highminded, lovers of pleasures more than lovers of God; having a form of godliness, but denying the power thereof: from such turn away."
+        },
+        {
+          "ref": "2 Timothy 3:6-7",
+          "note": "Describes those who creep into houses and lead captive silly women laden with sins, led away with divers lusts, ever learning, and never able to come to the knowledge of the truth."
+        },
+        {
+          "ref": "2 Timothy 3:8-9",
+          "note": "As Jannes and Jambres withstood Moses, so do these also resist the truth: men of corrupt minds, reprobate concerning the faith; but they shall proceed no further, for their folly shall be manifest unto all men, as theirs also was."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "inspired_scripture_ethiopian_2timothy",
+      "name": "The Inspired Scripture",
+      "role": "law",
+      "scribeTier": "The Inspired Scripture",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2timothy",
+      "purpose": "Establishes the divine origin, trustworthiness, and practical sufficiency of scripture itself for teaching, reproof, correction, and instruction, so that the man of God may be complete and thoroughly equipped for every good work.",
+      "verses": [
+        {
+          "ref": "2 Timothy 3:14-15",
+          "note": "Continue thou in the things which thou hast learned and hast been assured of, knowing of whom thou hast learned them; and that from a child thou hast known the holy scriptures, which are able to make thee wise unto salvation through faith which is in Christ Jesus."
+        },
+        {
+          "ref": "2 Timothy 3:16-17",
+          "note": "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness: that the man of God may be perfect, throughly furnished unto all good works."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given this game's own premise of unlocking scripture verse by verse, 3:16-17 is arguably the single most self-referential passage in the whole book for this project."
+      ]
+    },
+    {
+      "id": "preach_the_word_ethiopian_2timothy",
+      "name": "Preach the Word",
+      "role": "law",
+      "scribeTier": "Preach the Word",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_2timothy",
+      "purpose": "Paul's final, most solemn commission to Timothy for gospel ministry, anticipating a coming era of doctrinal drift among hearers and instructing him to remain steady in the work regardless.",
+      "verses": [
+        {
+          "ref": "2 Timothy 4:1-2",
+          "note": "I charge thee therefore before God, and the Lord Jesus Christ, who shall judge the quick and the dead at his appearing and his kingdom: Preach the word; be instant in season, out of season; reprove, rebuke, exhort with all longsuffering and doctrine."
+        },
+        {
+          "ref": "2 Timothy 4:3-4",
+          "note": "The time will come when they will not endure sound doctrine, but after their own lusts shall heap to themselves teachers, having itching ears; and shall turn away their ears from the truth, and shall be turned unto fables."
+        },
+        {
+          "ref": "2 Timothy 4:5",
+          "note": "Watch thou in all things, endure afflictions, do the work of an evangelist, make full proof of thy ministry."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "paulsCompanionsAndGreetings": {
+      "ref": "2 Timothy 4:10-13, 19-21",
+      "note": "Brief travel/greeting notices with no individual scene given here: Crescens (departed to Galatia, 4:10), Titus (departed to Dalmatia, 4:10), Tychicus (sent to Ephesus, 4:12), Carpus (host of the cloke and books Paul left at Troas, 4:13), Prisca and Aquila (greeted, 4:19 -- a recurring couple from Acts/Romans/1 Corinthians, not individually indexed here), Erastus (abode at Corinth, 4:20), Trophimus (left sick at Miletum, 4:20), Eubulus, Pudens, Linus, and Claudia (send greetings, 4:21), and 'all the brethren' (4:21, unnamed as individuals). Later church tradition associates some of these names with the early Roman church and even British legend, but the text itself states nothing beyond their names sending greeting, so no identification is asserted here."
+    },
+    "jannesAndJambres": {
+      "ref": "2 Timothy 3:8",
+      "note": "Paul names the Egyptian magicians who 'withstood Moses' as Jannes and Jambres. These men are NOT named in Exodus itself -- 2 Timothy 3:8 is the scriptural source for the tradition tying those unnamed Exodus magicians to these two names. Not re-indexed as separate characters here since they belong to Exodus's own character index (as an unnamed-in-Exodus, named-via-2-Timothy cross-reference) rather than to 2 Timothy's own narrative."
+    }
+  }
+}

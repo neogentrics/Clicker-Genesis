@@ -1,0 +1,765 @@
+{
+  "book": "1 Enoch",
+  "translation": "Ethiopian",
+  "canonicalOrder": 26,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "1 Enoch does not exist in the KJV index - drafted fresh from the Ethiopian translation's actual 105-chapter text (this translation's own chapter numbering differs from the standard critical edition's 108 chapters; content that scholarship usually cites as chs.106-108 appears folded into this file's chapter 105). Real structure found by reading: five blocks - Book of the Watchers (1-36, the fallen-angel/Nephilim narrative and Enoch's cosmic tour), Book of Parables/Similitudes (37-71, visions of the Elect One/Son of Man judging kings, with an interpolated Noah episode at chs.64-67), the Astronomical Book (72-82, laws of sun/moon/stars taught by Uriel), the Book of Dreams (83-90, two visions: a private flood-warning to Enoch's grandfather Mahalaleel in 83-84, then the large Animal Apocalypse in 85-90 where mankind's history is told through beasts/sheep/shepherds with NO named identification of which animal is which person actually stated in the verses I read - so no individual characters were invented for that allegory, it's kept as one law/theme tier true to the literal text), and the Epistle of Enoch (91-105, the Apocalypse of the Ten Weeks in ch.93, woes/exhortations in 94-104, and closing with the marvel-birth of Noah in ch.105). NAMING/TEXT NOTES: (1) spelling varies within this same translation - \"Azazyel\"/\"Azazeel\" and \"Enoch\"/\"Mathusala\" for Methuselah are the same figures, not different people, kept as the text spells them contextually. (2) Text calls Mahalaleel \"my grandfather\" (ch.83:3) though the standard Genesis 5 genealogy (Adam-Seth-Enos-Cainan-Mahalaleel-Jared-Enoch) makes him Enoch's great-great-grandfather - kept exactly as the text itself states it, not silently corrected. (3) Noah appears twice non-chronologically: as a grown, speaking adult witnessing the earth's convulsions in chs.64-67 (an interpolated \"Book of Noah\" fragment sitting inside the Parables), and as a newborn marvel-child in ch.105 - both are the same Noah per the shared \"great-grandfather Enoch\" language, just placed out of order by the text's own compilation, not a collision of two different Noahs. (4) The Animal Apocalypse (85-90) genuinely never names its own symbols in the verses read (no verse says \"this bull is Adam\") - so per the no-invention rule, its scribe tier stays a general law/theme entry about the vision's flock-and-shepherds content rather than asserting scholarly identifications the text itself doesn't state. (5) The ~20 lesser Watcher-leader names listed in chs.7:9/8/68:2-3 are named individually but never given any individual action beyond appearing in a roster, so they're kept as a bulk genealogyLists reference rather than invented into distinct characters, per the undifferentiated-named-group rule. CORRECTION PASS: the six law-tier scribeTiers entries had a null managerId, which must reference a real character id per the schema's hard requirement - fixed by pointing each at its own matching law-type character already present in the characters array (structural fix only, no re-read of source text needed since the character entries themselves were already complete and correct).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Open-Eyed Vision",
+      "managerId": "enoch_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Armon's Oath",
+      "managerId": "samyaza_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Dudael's Chains",
+      "managerId": "azazyel_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Star-Counter",
+      "managerId": "uriel_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Healing Waters",
+      "managerId": "raphael_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Seventy Generations' Chains",
+      "managerId": "michael_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Devouring Giants",
+      "managerId": "giants_1_enoch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Forger's Craft",
+      "managerId": "forbidden_arts_1_enoch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Throne of the Ancient of Days",
+      "managerId": "elect_one_1_enoch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Consoler of the Earth",
+      "managerId": "noah_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Gates of Heaven",
+      "managerId": "luminaries_1_enoch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Seventy Shepherds",
+      "managerId": "flock_of_israel_1_enoch_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Keeper of the Books",
+      "managerId": "methuselah_1_enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Book of the Ten Weeks",
+      "managerId": "ten_weeks_1_enoch_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "enoch_1_enoch_ethiopian",
+      "name": "Enoch",
+      "role": "manager",
+      "scribeTier": "The Open-Eyed Vision",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jared",
+        "mother": null,
+        "spouses": [
+          "Edna"
+        ],
+        "children": [
+          "Methuselah",
+          "unnamed additional children (see genealogyLists)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 1:1",
+          "note": "Opening: Enoch, a righteous man who was with God, blesses the elect while his eyes were open and he saw a holy vision."
+        },
+        {
+          "ref": "1 Enoch 12:4",
+          "note": "The Watchers themselves call him 'Enoch the scribe.'"
+        },
+        {
+          "ref": "1 Enoch 12:5",
+          "note": "The Lord names him directly: 'Enoch, scribe of righteousness,' and sends him to reprove the Watchers."
+        },
+        {
+          "ref": "1 Enoch 37:1",
+          "note": "His genealogy given in full: son of Jared, son of Malaleel, son of Cainan, son of Enos, son of Seth, son of Adam."
+        },
+        {
+          "ref": "1 Enoch 58:1",
+          "note": "Dated to 'the five hundredth year... of the lifetime of Enoch' - a real stated age at the time of this vision."
+        },
+        {
+          "ref": "1 Enoch 85:3",
+          "note": "Mentions marrying 'your mother Edna' before this vision, naming his wife and Methuselah's mother."
+        },
+        {
+          "ref": "1 Enoch 92:1",
+          "note": "Calls together Methuselah and 'all the children of your mother' to hear his final testament."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Receives the vision of the heavenly throne-hall and the great shaking of heaven",
+          "age": "500 years old",
+          "note": "1 Enoch 58:1, explicitly dated by the text."
+        }
+      ],
+      "funFacts": [
+        "The text has the Watchers themselves coin his title, 'Enoch the scribe' - the very word this game's whole scribe system is named after."
+      ]
+    },
+    {
+      "id": "samyaza_1_enoch_ethiopian",
+      "name": "Samyaza",
+      "role": "manager",
+      "scribeTier": "Armon's Oath",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 7:3",
+          "note": "As leader of the Watchers, fears he alone will suffer for the crime of taking human wives."
+        },
+        {
+          "ref": "1 Enoch 7:7",
+          "note": "Leads 200 angels in a mutual oath on Mount Armon (named for the oath itself), before descending to take wives."
+        },
+        {
+          "ref": "1 Enoch 9:6",
+          "note": "The archangels report to God that Samyaza has taught sorcery and led the Watchers to defile themselves."
+        },
+        {
+          "ref": "1 Enoch 54:9",
+          "note": "Referenced again as among those whose judgment princes and kings will one day help enact."
+        },
+        {
+          "ref": "1 Enoch 68:2",
+          "note": "Named first in the roster of the twenty-one Watcher chiefs and their names."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "azazyel_1_enoch_ethiopian",
+      "name": "Azazyel",
+      "role": "manager",
+      "scribeTier": "Dudael's Chains",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 8:1",
+          "note": "Teaches men to forge weapons and armor, make mirrors and ornaments, and use cosmetics and dyes - 'the world became altered.'"
+        },
+        {
+          "ref": "1 Enoch 9:5",
+          "note": "The archangels single him out by name before God: 'You have seen what Azazyel has done, how he has taught every species of iniquity.'"
+        },
+        {
+          "ref": "1 Enoch 10:6",
+          "note": "God commands Raphael specifically: 'Bind Azazyel hand and foot... cast him into darkness' in the desert of Dudael."
+        },
+        {
+          "ref": "1 Enoch 10:8",
+          "note": "He is to remain covered in darkness forever, never seeing light, until cast into fire at the great judgment."
+        },
+        {
+          "ref": "1 Enoch 13:1",
+          "note": "Enoch personally confronts him: 'You shalt not obtain peace. A great sentence is gone forth against you.'"
+        },
+        {
+          "ref": "1 Enoch 54:5",
+          "note": "Kings and the mighty are told they will one day behold the Elect One judge Azazeel and all his hosts."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "uriel_1_enoch_ethiopian",
+      "name": "Uriel",
+      "role": "manager",
+      "scribeTier": "The Star-Counter",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 18:14",
+          "note": "Explains the imprisoned stars: 'This place, until the consummation of heaven and earth, will be the prison of the stars.'"
+        },
+        {
+          "ref": "1 Enoch 19:1",
+          "note": "Named directly: 'Then Uriel said, Here the angels, who cohabited with women, appointed their leaders.'"
+        },
+        {
+          "ref": "1 Enoch 20:2",
+          "note": "Formally listed among the named holy angels: 'Uriel, one of the holy angels, who presides over clamor and terror.'"
+        },
+        {
+          "ref": "1 Enoch 21:3",
+          "note": "Identified as Enoch's guide: 'Uriel, one of the holy angels who was with me, and who conducted me, answered.'"
+        },
+        {
+          "ref": "1 Enoch 26:2",
+          "note": "Explains the accursed valley reserved for blasphemers."
+        },
+        {
+          "ref": "1 Enoch 32:2",
+          "note": "Points out the celestial stars emerging from heaven's gates and their names, times, and seasons to Enoch."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "raphael_1_enoch_ethiopian",
+      "name": "Raphael",
+      "role": "manager",
+      "scribeTier": "The Healing Waters",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 10:6",
+          "note": "Given the direct command to bind Azazyel and cast him into the desert of Dudael."
+        },
+        {
+          "ref": "1 Enoch 20:3",
+          "note": "Listed among the holy angels as 'one of the holy angels, who presides over the spirits of men.'"
+        },
+        {
+          "ref": "1 Enoch 22:3",
+          "note": "Explains the four divisions where the souls of the dead, including Abel's, are collected until judgment."
+        },
+        {
+          "ref": "1 Enoch 22:7",
+          "note": "Identifies the crying spirit as Abel's, slain by his brother Cain, still accusing him."
+        },
+        {
+          "ref": "1 Enoch 31:5",
+          "note": "Explains the tree of knowledge Adam and Eve ate from in the garden of righteousness."
+        },
+        {
+          "ref": "1 Enoch 67:2",
+          "note": "Converses with Michael over the severity of the judgment prepared for the Watchers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "michael_1_enoch_ethiopian",
+      "name": "Michael",
+      "role": "manager",
+      "scribeTier": "Seventy Generations' Chains",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 10:15",
+          "note": "Commanded to announce Samyaza's crime and bind the Watchers 'for seventy generations underneath the earth... until the day of judgment.'"
+        },
+        {
+          "ref": "1 Enoch 20:5",
+          "note": "Listed as 'one of the holy angels, who, presiding over human virtue, commands the nations.'"
+        },
+        {
+          "ref": "1 Enoch 40:8",
+          "note": "Identified by the angel of peace as 'the merciful, the patient, the holy Michael,' first of the four voices around the throne."
+        },
+        {
+          "ref": "1 Enoch 58:1",
+          "note": "Personally raises Enoch up after he collapses in terror at the shaking of the heaven of heavens."
+        },
+        {
+          "ref": "1 Enoch 68:2",
+          "note": "Answers Raphael directly on the severity of the secret judgment against the Watchers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gabriel_1_enoch_ethiopian",
+      "name": "Gabriel",
+      "role": "submanager",
+      "scribeTier": "Seventy Generations' Chains",
+      "parentManagerId": "michael_1_enoch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 10:13",
+          "note": "Commanded to destroy the offspring of the Watchers' fornication, the giants, by inciting them to mutual slaughter."
+        },
+        {
+          "ref": "1 Enoch 20:7",
+          "note": "Listed as presiding over paradise and the cherubim."
+        },
+        {
+          "ref": "1 Enoch 53:6",
+          "note": "Named alongside Michael, Raphael, and Phanuel as one who will cast the host of Azazeel into the fiery furnace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phanuel_1_enoch_ethiopian",
+      "name": "Phanuel",
+      "role": "submanager",
+      "scribeTier": "Seventy Generations' Chains",
+      "parentManagerId": "michael_1_enoch_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 40:9",
+          "note": "The fourth voice, 'who presides over repentance, and the hope of those who will inherit eternal life.'"
+        },
+        {
+          "ref": "1 Enoch 53:6",
+          "note": "Joins Michael, Gabriel, and Raphael to cast the host of Azazeel into the furnace of blazing fire."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "raguel_1_enoch_ethiopian",
+      "name": "Raguel",
+      "role": "submanager",
+      "scribeTier": "Seventy Generations' Chains",
+      "parentManagerId": "michael_1_enoch_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 20:4",
+          "note": "Listed as 'one of the holy angels, who inflicts punishment on the world and the luminaries.'"
+        },
+        {
+          "ref": "1 Enoch 23:4",
+          "note": "Explains to Enoch the fire that blazes without cessation at the western extremity of the earth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "giants_1_enoch_ethiopian",
+      "name": "The Devouring Giants",
+      "role": "law",
+      "scribeTier": "The Devouring Giants",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": null,
+      "purpose": "The judged fate of the Nephilim - the giant offspring born when the Watchers took human wives. Each stood three hundred cubits tall, devoured all human labor could produce, then turned to devour men, birds, beasts, and fish, drinking blood, until the earth itself cried out against them and God decreed their destruction.",
+      "verses": [
+        {
+          "ref": "1 Enoch 7:11-12",
+          "note": "The women bear giants, each three hundred cubits tall, who devour all human labor produces."
+        },
+        {
+          "ref": "1 Enoch 7:13-15",
+          "note": "The giants turn on men to devour them and injure birds, beasts, and fish - the earth reproves the unrighteous."
+        },
+        {
+          "ref": "1 Enoch 15:8-10",
+          "note": "Explains their spirits become evil spirits on earth after death, since they were born of both flesh and holy spirit."
+        },
+        {
+          "ref": "1 Enoch 10:9-10",
+          "note": "God commands their destruction directly so 'the sons of men shall not perish' by what the Watchers taught their offspring."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "forbidden_arts_1_enoch_ethiopian",
+      "name": "The Forger's Craft",
+      "role": "law",
+      "scribeTier": "The Forger's Craft",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "azazyel_1_enoch_ethiopian",
+      "purpose": "The catalogue of forbidden knowledge the lesser Watchers taught mankind - Azazyel's own weapons, ornaments, and cosmetics, plus sorcery (Amazarak), spell-solving (Armers), astrology (Barkayal), omens (Akibeel), astronomy (Tamiel), and the moon's motion (Asaradel) - impiety and fornication multiplied as a direct result.",
+      "verses": [
+        {
+          "ref": "1 Enoch 8:1",
+          "note": "Azazyel teaches the forging of weapons, mirrors, ornaments, cosmetics, and dyes."
+        },
+        {
+          "ref": "1 Enoch 8:3",
+          "note": "Amazarak teaches sorcerers and root-dividers."
+        },
+        {
+          "ref": "1 Enoch 8:5",
+          "note": "Barkayal teaches the observers of the stars (astrology)."
+        },
+        {
+          "ref": "1 Enoch 8:7",
+          "note": "Tamiel teaches astronomy."
+        },
+        {
+          "ref": "1 Enoch 8:9",
+          "note": "Men, being destroyed by the fallout of this knowledge, cry out and their voice reaches heaven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elect_one_1_enoch_ethiopian",
+      "name": "The Throne of the Ancient of Days",
+      "role": "law",
+      "scribeTier": "The Throne of the Ancient of Days",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "deliveredBy": null,
+      "purpose": "The Parables' central revelation: a coming judge called the Elect One and the Son of Man, seated beside the Ancient of Days, who will raise up the righteous, cast down kings and the mighty from their thrones, and judge Azazeel and his hosts - the text's own vision of end-time vindication, not attributed to any single speaking character.",
+      "verses": [
+        {
+          "ref": "1 Enoch 46:1-2",
+          "note": "Enoch sees the Ancient of Days beside 'this Son of man' and is told righteousness dwells with him."
+        },
+        {
+          "ref": "1 Enoch 48:2",
+          "note": "'The Elect One stands before the Lord of spirits and his glory is for ever and ever.'"
+        },
+        {
+          "ref": "1 Enoch 61:9",
+          "note": "Kings and princes tremble 'when they shall behold this Son of woman sitting upon the throne of his glory.'"
+        },
+        {
+          "ref": "1 Enoch 62:5",
+          "note": "Kings, princes, and the exalted fall down and worship him, confessing their sins."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "noah_1_enoch_ethiopian",
+      "name": "Noah",
+      "role": "manager",
+      "scribeTier": "The Consoler of the Earth",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Lamech",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 64:1-3",
+          "note": "As a grown man, sees the earth becoming inclined toward destruction and cries out three times to his great-grandfather Enoch, fearing he will perish."
+        },
+        {
+          "ref": "1 Enoch 64:11",
+          "note": "Enoch tells him, 'The Lord of spirits knows that you are pure and good,' and promises his seed will be established in righteousness."
+        },
+        {
+          "ref": "1 Enoch 66:1",
+          "note": "God tells Enoch of Noah: 'Behold, your lot has ascended up to me, a lot void of crime, a lot beloved and upright.'"
+        },
+        {
+          "ref": "1 Enoch 105:20",
+          "note": "Born to Lamech as a marvel-child - white as snow, red as a rose, hair white as wool, eyes like sunrays - Methuselah names him Noah, 'because he was to console the earth on account of all its destruction.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text places Noah's own birth-narrative (ch.105) after his adult appearance earlier in the book (chs.64-67) - the compilation is genuinely non-chronological, not a data error."
+      ]
+    },
+    {
+      "id": "mahalaleel_1_enoch_ethiopian",
+      "name": "Mahalaleel",
+      "role": "submanager",
+      "scribeTier": "The Consoler of the Earth",
+      "parentManagerId": "noah_1_enoch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 83:3",
+          "note": "Called by Enoch 'my grandfather Malalel' - raises Enoch up when he cries out in terror from a flood-vision."
+        },
+        {
+          "ref": "1 Enoch 83:5",
+          "note": "Confirms the vision is true and urges Enoch to pray that a remnant be left on the earth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "luminaries_1_enoch_ethiopian",
+      "name": "The Gates of Heaven",
+      "role": "law",
+      "scribeTier": "The Gates of Heaven",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "uriel_1_enoch_ethiopian",
+      "purpose": "The Astronomical Book's laws governing the sun, moon, stars, winds, and calendar - twelve heavenly gates through which the luminaries pass on fixed, invariable paths, taught to Enoch by Uriel and repeatedly passed on 'to you, my son Mathusala' for future generations to preserve.",
+      "verses": [
+        {
+          "ref": "1 Enoch 33:3-4",
+          "note": "Three northern gates through which the winds blow cold, hail, frost, snow, dew, and rain."
+        },
+        {
+          "ref": "1 Enoch 35:1-2",
+          "note": "Three southern and three eastern gates, each governing the stars' fixed westward paths."
+        },
+        {
+          "ref": "1 Enoch 3:2",
+          "note": "Notes the heavenly luminaries never transgress their appointed paths, rising and setting each at its proper period."
+        },
+        {
+          "ref": "1 Enoch 82:1",
+          "note": "Enoch closes the astronomical teaching: 'Now, my son Mathusala, all these things I speak unto you, and write for you.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "flock_of_israel_1_enoch_ethiopian",
+      "name": "The Seventy Shepherds",
+      "role": "law",
+      "scribeTier": "The Seventy Shepherds",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "enoch_1_enoch_ethiopian",
+      "purpose": "The Animal Apocalypse - a long allegorical vision of mankind's history told through cattle, sheep, wolves, and birds, culminating in a flock delivered by its Lord to seventy shepherds who are held individually accountable, book by book, for every sheep lost to the beasts of prey. The text never states which animal represents which historical person, so no individual figures are drawn from it here.",
+      "verses": [
+        {
+          "ref": "1 Enoch 85:3",
+          "note": "The vision opens with a white bull emerging from the earth, followed by a heifer."
+        },
+        {
+          "ref": "1 Enoch 89:16",
+          "note": "Sheep flee to their Lord, who inspects them and rebukes the wolves for touching them."
+        },
+        {
+          "ref": "1 Enoch 89:53",
+          "note": "The Lord of the sheep calls seventy shepherds and resigns the flock's care to them, promising a reckoning of how many each destroys."
+        },
+        {
+          "ref": "1 Enoch 89:70-72",
+          "note": "One who 'wrote the book' records every sheep the shepherds destroy, each day, presenting the tally before the Lord of the sheep."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "methuselah_1_enoch_ethiopian",
+      "name": "Methuselah",
+      "role": "manager",
+      "scribeTier": "Keeper of the Books",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "enoch_1_enoch_ethiopian",
+        "mother": "Edna",
+        "spouses": [],
+        "children": [
+          "Lamech"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 76.., addressed throughout chs.72-82",
+          "note": "Enoch's constant addressee across the astronomical teaching: 'Now, my son Mathusala, all these things I speak unto you.'"
+        },
+        {
+          "ref": "1 Enoch 82:1",
+          "note": "Directly charged: 'Preserve, my son Mathusala, the books written by your father that you may reveal them to future generations.'"
+        },
+        {
+          "ref": "1 Enoch 92:1",
+          "note": "Called together with all his siblings to hear Enoch's final testament and prophecy."
+        },
+        {
+          "ref": "1 Enoch 105:15-20",
+          "note": "Personally travels to Enoch at the ends of the earth to ask about his newborn grandson's strange appearance, then returns and names the child Noah himself."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Nearly every chapter of the Astronomical Book and the closing Epistle is framed as a direct address to him by name - he is effectively the book's in-text dedicatee."
+      ]
+    },
+    {
+      "id": "lamech_1_enoch_ethiopian",
+      "name": "Lamech",
+      "role": "submanager",
+      "scribeTier": "Keeper of the Books",
+      "parentManagerId": "methuselah_1_enoch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "methuselah_1_enoch_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "noah_1_enoch_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Enoch 105:15-17",
+          "note": "Methuselah reports to Enoch that a strange, marvel-appearing child has been born to Lamech, 'who resembles not him.'"
+        },
+        {
+          "ref": "1 Enoch 105:18-19",
+          "note": "Enoch instructs Methuselah to tell Lamech plainly that the child is his in truth, with no deception - resolving Lamech's implied fear."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ten_weeks_1_enoch_ethiopian",
+      "name": "The Book of the Ten Weeks",
+      "role": "law",
+      "scribeTier": "The Book of the Ten Weeks",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "enoch_1_enoch_ethiopian",
+      "purpose": "Enoch's closing testament: a prophecy dividing world history into ten 'weeks' culminating in a new heaven, followed by exhortations and woes distinguishing the fate of the righteous poor from the wicked rich, spoken directly by Enoch 'from a book' to Methuselah and all his children.",
+      "verses": [
+        {
+          "ref": "1 Enoch 93:1",
+          "note": "'Enoch then began to speak from a book, and said, I have been born the seventh in the first week.'"
+        },
+        {
+          "ref": "1 Enoch 93:10",
+          "note": "In the seventh week a perverse generation arises, from which the righteous are selected and given sevenfold doctrine."
+        },
+        {
+          "ref": "1 Enoch 91:16",
+          "note": "The former heaven departs and a new heaven appears with sevenfold splendour."
+        },
+        {
+          "ref": "1 Enoch 103:26",
+          "note": "God promises to place each of the righteous 'on a throne of glory... and they shall be at rest during unnumbered periods.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list per the undifferentiated-named-group rule - these figures are named individually in the text but given no individual action beyond appearing in a roster.",
+    "twoHundredWatcherChiefs": {
+      "ref": "1 Enoch 7:9, 68:2-3",
+      "note": "Nineteen named prefects beyond Samyaza (Urakabarameel, Akibeel, Tamiel, Ramuel, Danel, Azkeel, Saraknyal, Asael, Armers, Batraal, Anane, Zavebe, Samsaveel, Ertael, Turel, Yomyael, Arazyal, plus a second, differently-spelled twenty-one-name roster at ch.68) leading the two hundred Watchers who descended on Mount Armon - none receives individual narrative action distinguishing them from the group."
+    },
+    "enochsOtherChildren": {
+      "ref": "1 Enoch 92:1",
+      "note": "Enoch calls together 'all the children of your mother' alongside Methuselah - never named individually."
+    },
+    "animalApocalypseFigures": {
+      "ref": "1 Enoch 85-90",
+      "note": "The bulls, heifers, sheep, rams, and shepherds of the Animal Apocalypse are deliberately not resolved to named biblical figures here, since the verses read never state the identification themselves - see notes field for the full reasoning."
+    }
+  }
+}

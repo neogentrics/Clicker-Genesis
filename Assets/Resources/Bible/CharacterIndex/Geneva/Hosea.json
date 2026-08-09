@@ -1,0 +1,454 @@
+{
+  "book": "Hosea",
+  "translation": "Geneva",
+  "canonicalOrder": 28,
+  "status": "drafted via direct read of the real Geneva 1560 extracted verse text (Assets/Resources/Verses/Geneva/hosea_28.json), cross-checked against the existing KJV Hosea Character Index for structural pattern only",
+  "notes": "Geneva's Hosea tells the same narrative as KJV's version — the prophet's own marriage to Gomer as a sustained living parable of the LORD's covenant with unfaithful Israel, the three divinely-named sign-children, condemnation of Baal worship and the golden calves, a recollection of Israel's sinful history, the \"mercy not sacrifice\" declaration, and a closing call to repentance — so the tier structure (2 person-tier managers + 5 law/theme tiers) follows the same proven KJV shape rather than forcing an artificial difference. Two REAL, translation-specific differences were found by reading the actual text (not assumed from KJV familiarity): (1) VERSIFICATION SHIFT — Geneva's chapter 13/14 boundary falls one verse earlier than KJV's: what KJV numbers as 13:16 (\"Samaria shall become desolate...\") is this Geneva text's 14:1, giving Geneva a 15-verse chapter 13 (vs. KJV's 16) and a 9-verse chapter 14 whose final verse (14:9) compresses KJV's 14:8b and 14:9 together (the phrase \"I am like a greene firre tree...upon me is thy fruite founde\" is immediately followed in the same Geneva verse by \"(Hosea) Who is wise, and he shall vnderstande these things?\" with no verse break between them — the parenthetical \"(Hosea)\" reads as a stray running-header/section-label artifact from the source printing rather than translated text). Total verse count (196, confirmed by direct per-chapter count: 11+23+5+19+15+11+16+14+17+15+12+14+15+9=196) matches the book's stated verse count, so this is a genuine chapter-numbering difference, not an extraction error. (2) WORDING DIFFERENCE at 12:7 — Geneva reads \"He is Canaan: the balances of deceit are in his hand: he loueth to oppresse,\" keeping the literal underlying word \"Canaan\" (which doubles as \"trader/merchant\" in Hebrew) rather than KJV's idiomatic \"He is a merchant.\" Naming-collision note carried over from the KJV index (not independently re-verified against this project's Geneva Numbers/2 Kings text, since those files weren't read for this pass): the prophet's name shares its Hebrew root with the later king \"Hoshea\" (2 Kings 17:1) and with Joshua's original name \"Oshea\" (Numbers 13:16) — flagged generally, not asserting Geneva's exact spelling in those other books without reading them directly. The \"Ieroboam the sonne of Ioash\" of the 1:1 superscription is Jeroboam II, distinct from the earlier Jeroboam I son of Nebat who founded the calf shrines condemned later in the book — Geneva's text names only the patronymic \"sonne of Ioash,\" the same implicit disambiguation KJV relies on. All character/tier ids are suffixed \"_geneva\" to avoid collision with the existing KJV Hosea.json ids.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Siluer and Barlie",
+      "managerId": "hosea_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wooll and Flaxe",
+      "managerId": "gomer_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Vnder the Oke and Poplar",
+      "managerId": "baal_worship_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Molten Calfe",
+      "managerId": "calf_worship_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Cake Not Turned",
+      "managerId": "israels_sinful_history_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Knowledge of God",
+      "managerId": "mercy_not_sacrifice_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Dewe and Lillie",
+      "managerId": "call_to_return_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "hosea_geneva",
+      "name": "Hosea",
+      "role": "manager",
+      "scribeTier": "Tier 1 — Siluer and Barlie",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Steadfast covenant love that buys back an unfaithful spouse rather than abandoning her.",
+      "genealogy": {
+        "father": "Beeri",
+        "mother": null,
+        "spouses": [
+          "Gomer"
+        ],
+        "children": [
+          "Izreel",
+          "Lo-ruhamah",
+          "Lo-ammi"
+        ],
+        "note": "Identified only as 'the sonne of Beeri' (1:1); no mother is named. The superscription dates his ministry to Judah's kings Vzziah, Iotham, Ahaz and Hezekiah, and to Israel's king Ieroboam the sonne of Ioash (Jeroboam II, not the earlier Jeroboam I son of Nebat who founded the calf worship condemned in this same book)."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:1",
+          "note": "Superscription: 'The worde of the Lord that came vnto Hosea, the sonne of Beeri' — dates his ministry by the kings of Iudah and Israel."
+        },
+        {
+          "ref": "Hosea 1:2-3",
+          "note": "Commanded 'Goe, take vnto thee a wife of fornications, and children of fornications' — takes Gomer, daughter of Diblaim."
+        },
+        {
+          "ref": "Hosea 3:1-2",
+          "note": "Commanded a second time to love a woman who was an harlot; buys her back for 'fifteene pieces of siluer, and for an homer of barlie and an halfe homer of barlie.'"
+        },
+        {
+          "ref": "Hosea 3:3",
+          "note": "Tells her 'Thou shalt abide with me many dayes: thou shalt not play the harlot' — a picture of Israel's coming discipline before restoration."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name shares a Hebrew root with 'salvation,' the same root behind Joshua and Jesus.",
+        "The only prophet in this collection whose own marriage becomes a sustained, multi-chapter living parable of God's relationship to Israel."
+      ]
+    },
+    {
+      "id": "gomer_geneva",
+      "name": "Gomer",
+      "role": "manager",
+      "scribeTier": "Tier 2 — Wooll and Flaxe",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Israel redeemed at a set price rather than cast off — a discounted buy-back.",
+      "genealogy": {
+        "father": "Diblaim",
+        "mother": null,
+        "spouses": [
+          "Hosea"
+        ],
+        "children": [
+          "Izreel",
+          "Lo-ruhamah",
+          "Lo-ammi"
+        ],
+        "note": "Called 'ye daughter of Diblaim' (1:3), 'a wife of fornications' (1:2). The unnamed woman of 3:1 ('beloued of her husband, and was an harlot') is traditionally identified with Gomer, but the Geneva text does not re-name her there — the identification is not made explicit within chapter 3 itself."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:3",
+          "note": "'So he went, and tooke Gomer, ye daughter of Diblaim, which conceiued and bare him a sonne.'"
+        },
+        {
+          "ref": "Hosea 2:5",
+          "note": "Goes after 'louers that giue me my bread and my water, my wooll and my flaxe, mine oyle and my drinke.'"
+        },
+        {
+          "ref": "Hosea 2:8",
+          "note": "'she did not knowe that I gaue her corne, and wine, and oyle' — the LORD, not Baal, was the true giver, credited instead to Baal."
+        },
+        {
+          "ref": "Hosea 2:19-20",
+          "note": "Restoration oracle: 'I wil marry thee vnto me for euer...in righteousnes, and in iudgement, and in mercy and in compassion.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Bears three children whose divinely-given names function as prophetic sign-acts against Israel.",
+        "In chapter 2 the LORD addresses 'your mother' — Israel personified through Gomer — as having credited Baal for gifts that were actually His."
+      ]
+    },
+    {
+      "id": "izreel_geneva",
+      "name": "Izreel",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A judgment-name repurposed by the book's end into a promise of replanting and increase.",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Firstborn son; named directly by the Lord's own command, not chosen by his parents (1:4). Geneva spells the name 'Izreel' throughout, distinct from KJV's 'Jezreel.'"
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:4-5",
+          "note": "'Cal his name Izreel: for yet a litle, and I will visite the blood of Izreel vpon the house of Iehu, and will cause to cease the kingdome of the house of Israel.'"
+        },
+        {
+          "ref": "Hosea 1:11",
+          "note": "'great is the day of Izreel' — his name reused as a title of future gathering and hope."
+        },
+        {
+          "ref": "Hosea 2:22-23",
+          "note": "'they shall heare Izreel. And I will sowe her vnto me in the earth' — wordplay reversing his name from scattering to sowing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name means 'God sows' or 'God scatters' and is also the valley/city where Iehu (Jehu) struck down the house of Ahab."
+      ]
+    },
+    {
+      "id": "lo_ruhamah_geneva",
+      "name": "Lo-ruhamah",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A withheld-pity name later restored to 'Ruhamah' — pity/mercy obtained.",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Daughter; named by direct divine command (1:6), 'for I will no more haue pitie vpon the house of Israel.'"
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:6",
+          "note": "'Call her name Lo-ruhamah: for I will no more haue pitie vpon the house of Israel: but I wil vtterly take them away.'"
+        },
+        {
+          "ref": "Hosea 1:7",
+          "note": "By contrast: 'Yet I will haue mercie vpon the house of Iudah' at the same moment."
+        },
+        {
+          "ref": "Hosea 2:1",
+          "note": "'Say vnto your brethren, Ammi, and to your sisters, Ruhamah' — the reversal of both children's names together."
+        },
+        {
+          "ref": "Hosea 2:23",
+          "note": "'I will haue mercie vpon her, that was not pitied.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lo_ammi_geneva",
+      "name": "Lo-ammi",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A covenant-broken name restored to full sonship.",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Second son; named by direct divine command (1:9), 'for yee are not my people.'"
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:9",
+          "note": "'Call his name Lo-ammi: for yee are not my people: therefore will I not be yours.'"
+        },
+        {
+          "ref": "Hosea 1:10",
+          "note": "In the same breath: 'in the place where it was saide vnto them, Yee are not my people, it shall be saide vnto them, Yee are the sonnes of the liuing God.'"
+        },
+        {
+          "ref": "Hosea 2:23",
+          "note": "'I will say to them which were not my people, Thou art my people. And they shall say, Thou art my God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "baal_worship_geneva",
+      "name": "Baal Worship",
+      "role": "law",
+      "scribeTier": "Tier 3 — Vnder the Oke and Poplar",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_geneva",
+      "purpose": "Frames Israel's idolatry as marital infidelity — Israel credits Baal for the corne, wine, oyle, wooll and flaxe the LORD actually gave (2:8), sacrifices under shady trees on the hills (4:13), and must be stripped and led into the wilderness to be won back (2:3-15).",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Exposing false credit given to Baal for the harvest undercuts the idols' apparent worth.",
+      "verses": [
+        {
+          "ref": "Hosea 2:8",
+          "note": "'she did not knowe that I gaue her corne, and wine, and oyle...which they bestowed vpon Baal.'"
+        },
+        {
+          "ref": "Hosea 2:13",
+          "note": "'the daies of Baalim, wherein shee burnt incense to them' — judged and remembered against her."
+        },
+        {
+          "ref": "Hosea 2:16-17",
+          "note": "Restoration: 'thou shalt call me Ishi, and shalt call me no more Baali...I will take away the names of Baalim out of her mouth.'"
+        },
+        {
+          "ref": "Hosea 4:13",
+          "note": "Sacrifices 'vpon the toppes of ye mountaines...vnder the okes, and the poplar tree, and the elme, because the shadow thereof is good.'"
+        },
+        {
+          "ref": "Hosea 9:10",
+          "note": "Recalls Israel going 'to Baal-Peor, and separated themselues vnto that shame.'"
+        },
+        {
+          "ref": "Hosea 11:2",
+          "note": "'they sacrificed vnto Baalim, and burnt incense to images.'"
+        },
+        {
+          "ref": "Hosea 13:1",
+          "note": "'he hath sinned in Baal, and is dead' — Ephraim's fall tied directly to Baal worship."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Hebrew word behind 'Baal' also simply means 'husband/lord' — the LORD promises Israel will call Him 'Ishi' rather than 'Baali,' the same word repurposed."
+      ]
+    },
+    {
+      "id": "calf_worship_geneva",
+      "name": "Calf Worship",
+      "role": "law",
+      "scribeTier": "Tier 4 — The Molten Calfe",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_geneva",
+      "purpose": "Condemns Israel's self-made golden-calf worship at Samaria and Beth-auen as illegitimate, homegrown idolatry distinct from Baal worship — doomed to be broken in pieces and carried off as tribute to Asshur. The text itself does not name the calves' original royal sponsor.",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "The calf is exposed as 'not God' — a manmade object worth less than claimed.",
+      "verses": [
+        {
+          "ref": "Hosea 8:5-6",
+          "note": "'Thy calfe, O Samaria, hath cast thee off...the workeman made it, therefore it is not God: but the calfe of Samaria shall be broken in pieces.'"
+        },
+        {
+          "ref": "Hosea 10:5",
+          "note": "'The inhabitants of Samaria shall feare because of the calfe of Beth-auen.'"
+        },
+        {
+          "ref": "Hosea 10:6",
+          "note": "The calf-idol itself 'shall bee also brought to Asshur, for a present vnto King Iareb.'"
+        },
+        {
+          "ref": "Hosea 13:2",
+          "note": "'they haue made them molten images of their siluer...Let them kisse the calues.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva mockingly renames Bethel as 'Beth-auen' (house of iniquity) at 4:15 and 10:5 because of the calf shrine there."
+      ]
+    },
+    {
+      "id": "israels_sinful_history_geneva",
+      "name": "Israel's Sinful History Recalled",
+      "role": "law",
+      "scribeTier": "Tier 5 — The Cake Not Turned",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_geneva",
+      "purpose": "Argues Israel's present unfaithfulness continues a long pattern of rebellion — reaching back to the patriarch Iaakob, the days of Gibeah, the sin at Baal-Peor, and the Exodus from Egypt itself — and of foolish alliance-seeking with Asshur and Egypt instead of trust in the LORD.",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Recounting the LORD's past faithfulness despite Israel's repeated failures underscores His enduring covenant loyalty.",
+      "verses": [
+        {
+          "ref": "Hosea 6:7",
+          "note": "'they like men haue transgressed the couenant: there haue they trespassed against me.'"
+        },
+        {
+          "ref": "Hosea 7:8",
+          "note": "'Ephraim is as a cake on the hearth not turned' — half-baked, ruined by foreign entanglement."
+        },
+        {
+          "ref": "Hosea 7:11",
+          "note": "'Ephraim also is like a doue deceiued, without heart: they call to Egypt: they go to Asshur.'"
+        },
+        {
+          "ref": "Hosea 9:9",
+          "note": "'they are corrupt as in the daies of Gibeah.'"
+        },
+        {
+          "ref": "Hosea 9:10",
+          "note": "Israel's sin 'to Baal-Peor' in the wilderness."
+        },
+        {
+          "ref": "Hosea 10:9",
+          "note": "'O Israel, thou hast sinned from the daies of Gibeah' repeated."
+        },
+        {
+          "ref": "Hosea 11:1",
+          "note": "'When Israel was a childe, then I loued him, and called my sonne out of Egypt.'"
+        },
+        {
+          "ref": "Hosea 12:3-4",
+          "note": "Recalls Iaakob taking 'his brother by the heele in the wombe' and having 'power with God...ouer the Angel, and preuailed.'"
+        },
+        {
+          "ref": "Hosea 12:7",
+          "note": "'He is Canaan: the balances of deceit are in his hand: he loueth to oppresse' — a real Geneva wording difference from more idiomatic renderings such as KJV's 'He is a merchant,' keeping the literal underlying word 'Canaan.'"
+        },
+        {
+          "ref": "Hosea 12:12",
+          "note": "Recalls Iaakob fleeing 'into the countrey of Aram' and serving for a wife."
+        },
+        {
+          "ref": "Hosea 12:13",
+          "note": "'by a Prophet the Lord brought Israel out of Egypt, and by a Prophet was he reserued' — the prophet is not named in the text itself."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hosea 11:1 ('called my sonne out of Egypt') is later quoted of the infant Jesus' return from Egypt in Matthew 2:15."
+      ]
+    },
+    {
+      "id": "mercy_not_sacrifice_geneva",
+      "name": "Mercy, Not Sacrifice",
+      "role": "law",
+      "scribeTier": "Tier 6 — Knowledge of God",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_geneva",
+      "purpose": "Declares that steadfast mercy and relational knowledge of God matter more to the LORD than ritual sacrifice — one of the book's central theological statements.",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Prioritizes relationship and steadfast love over transactional ritual.",
+      "verses": [
+        {
+          "ref": "Hosea 4:1",
+          "note": "'there is no trueth nor mercie nor knowledge of God in the lande.'"
+        },
+        {
+          "ref": "Hosea 4:6",
+          "note": "'My people are destroyed for lacke of knowledge: because thou hast refused knowledge, I will also refuse thee.'"
+        },
+        {
+          "ref": "Hosea 6:6",
+          "note": "'For I desired mercie, and not sacrifice, and the knowledge of God more then burnt offrings.' Later quoted twice by Jesus in Matthew 9:13 and 12:7."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Sits immediately after the LORD's complaint that Israel's 'goodnesse is as a morning cloude, and as the morning dewe it goeth away' (6:4)."
+      ]
+    },
+    {
+      "id": "call_to_return_geneva",
+      "name": "Call to Return",
+      "role": "law",
+      "scribeTier": "Tier 7 — Dewe and Lillie",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_geneva",
+      "purpose": "Invites Israel to abandon idols and return to the LORD in genuine repentance, promising healing, free love, and flourishing restoration — the book's closing resolution to the marriage/harlotry metaphor.",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Repentance met with free, healing love rather than continued anger (14:5).",
+      "verses": [
+        {
+          "ref": "Hosea 6:1-3",
+          "note": "'Come, and let vs returne to the Lord: for he hath spoyled, and he will heale vs.'"
+        },
+        {
+          "ref": "Hosea 14:2-3",
+          "note": "'O Israel, returne vnto the Lord thy God...Take vnto you words, and turne to the Lord.'"
+        },
+        {
+          "ref": "Hosea 14:5",
+          "note": "'I wil heale their rebellion: I wil loue them freely: for mine anger is turned away from him.'"
+        },
+        {
+          "ref": "Hosea 14:6",
+          "note": "'I will be as the dewe vnto Israel: he shall grow as the lilie and fasten his rootes.'"
+        },
+        {
+          "ref": "Hosea 14:9",
+          "note": "Closing wisdom saying, merged in this Geneva text with the preceding verse: 'the wayes of the Lord are righteous, and the iust shall walke in them: but the wicked shall fall therein.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "14:3 instructs Israel to 'take with you words' rather than animal sacrifices when returning — offering 'the calues of our lippes' (praise) instead.",
+        "14:9 in this Geneva text ('I am like a greene firre tree: vpon me is thy fruite founde') directly follows 14:8's content in the same verse, reversing the false 'greene tree' idolatry condemned at 4:13 — see notes for the versification difference this reflects."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogical references beyond the individually-indexed characters above — Hosea's family unit (himself, Gomer, and their three children) is the book's entire named cast; all historical figures recalled (Iaakob, the unnamed prophet of 12:13, the house of Iehu) are cited as verse references/funFacts within the law-tier entries rather than given separate character entries, since they take no independent action within Hosea itself."
+  }
+}

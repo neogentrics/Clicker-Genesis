@@ -1,0 +1,2728 @@
+{
+  "book": "Genesis",
+  "translation": "Ethiopian",
+  "canonicalOrder": 1,
+  "status": "drafted via direct reading of the real extracted verse text (Assets/Resources/Verses/Ethiopian/genesis_1.json, chapters 1-34 read verbatim in full, chapters 35-50 cross-checked against the verified-identical pattern), grounded against the existing validated KJV Genesis Character Index for tier-count/style reference only",
+  "notes": "Read the real Ethiopian-translation Genesis text directly (all of chapters 1-34 verbatim, spot-checked structure through 50) rather than working from memory, per this project's core rule. Real finding, worth flagging explicitly: unlike some other books in this Ethiopian Bible (the already-documented case of a 9-chapter 1-Esdras-style 'Ezra' distinct from the Masoretic 10-chapter book), THIS book's Genesis text is word-for-word IDENTICAL to the standard KJV rendering everywhere checked - same 50 chapters, same verse divisions, same wording, right down to idiosyncratic phrasing ('a fugitive and a vagabond', 'Jehovah-jireh', 'his hand shall be against every man'). No unique Ethiopian-canon content, no restructured chapters, no added material was found in this book - the Ethiopian/Ge'ez textual tradition and the KJV agree on Genesis's actual content, so the character/manager/submanager roster below is built on the same real narrative beats as the existing KJV Genesis index, just re-authored fresh (own ids, own scribe-tier names, own verse-note phrasing) per the instruction not to blindly copy. One in-text detail worth surfacing given the translation: Genesis 2:13 names the second Eden river Gihon as 'that which compasseth the whole land of Ethiopia' - present in the source text itself, not an addition, but a natural point of interest for this specific translation's players. Naming collisions flagged and kept separate, matching the project-wide rule: two men named Lamech (Cain's line, Genesis 4:18-24, violent boast-song; Noah's father, Genesis 5:28-31, hopeful naming of Noah) - never merged; two men named Nahor (Serug's son / Terah's father, Genesis 11:22-25; Terah's son / Abraham's brother, Genesis 11:26-29, grandfather of Rebekah) - kept as nahor_elder_ethiopian and nahor_younger_ethiopian. Ishmael's twelve sons (25:13-16), Keturah's six sons and their descendants (25:1-4), Nahor's eight sons by Milcah plus four by his concubine Reumah (22:20-24), and the extensive Edomite chief/king lists of chapter 36 are all collective genealogical listings where the text gives no individual action beyond the name - kept out of the character array as genealogyLists bulk references rather than invented individual entries, per the project's 'don't invent individuals the text doesn't differentiate' rule. The nine law/theme-tier model used for Leviticus/Deuteronomy does not apply here - Genesis is entirely narrative, all nineteen scribe tiers are person-type, matching the real shape of the book.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Dust and Breath",
+      "managerId": "adam_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Serpent's Whisper",
+      "managerId": "eve_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Mark of Wandering",
+      "managerId": "cain_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Shepherd's First Offering",
+      "managerId": "abel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Walk Beyond Death",
+      "managerId": "enoch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Gopherwood Ark",
+      "managerId": "noah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Blessed Tent",
+      "managerId": "shem_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Mighty Hunter's Bow",
+      "managerId": "nimrod_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Covenant Stars",
+      "managerId": "abraham_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Sarah's Laughter",
+      "managerId": "sarah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Lot's Salt Pillar",
+      "managerId": "lot_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Isaac's Reopened Wells",
+      "managerId": "isaac_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Jacob's Stone Pillow",
+      "managerId": "jacob_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Esau's Bowl of Pottage",
+      "managerId": "esau_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Rachel's Stolen Idols",
+      "managerId": "rachel_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Leah's Mandrake Basket",
+      "managerId": "leah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Joseph's Coat of Colors",
+      "managerId": "joseph_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Judah's Signet and Staff",
+      "managerId": "judah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Benjamin's Silver Cup",
+      "managerId": "benjamin_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "adam_ethiopian",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Dust and Breath",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "eve_ethiopian"
+        ],
+        "children": [
+          "cain_ethiopian",
+          "abel_ethiopian",
+          "seth_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 1:27",
+          "note": "Created male and female in God's own image."
+        },
+        {
+          "ref": "Genesis 2:7",
+          "note": "Formed of the dust of the ground; God breathes life into him and he becomes a living soul."
+        },
+        {
+          "ref": "Genesis 2:19-20",
+          "note": "Names every beast of the field and fowl of the air God brings before him."
+        },
+        {
+          "ref": "Genesis 2:23",
+          "note": "Recognizes the woman as 'bone of my bones, and flesh of my flesh.'"
+        },
+        {
+          "ref": "Genesis 3:6",
+          "note": "Eats the forbidden fruit his wife gives him."
+        },
+        {
+          "ref": "Genesis 3:12",
+          "note": "When confronted, blames 'the woman whom thou gavest to be with me.'"
+        },
+        {
+          "ref": "Genesis 3:17-19",
+          "note": "Cursed to eat bread in the sweat of his face; the ground itself is cursed for his sake."
+        },
+        {
+          "ref": "Genesis 3:23-24",
+          "note": "Driven out of the garden of Eden to till the ground from which he was taken."
+        },
+        {
+          "ref": "Genesis 5:3-5",
+          "note": "Begets Seth at 130; lives 930 years total, then dies."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 930,
+          "ref": "Genesis 5:5"
+        }
+      ],
+      "funFacts": [
+        "Lived long enough to see nine generations of his own descendants born, down through Lamech, Noah's father."
+      ]
+    },
+    {
+      "id": "eve_ethiopian",
+      "name": "Eve",
+      "role": "manager",
+      "scribeTier": "Serpent's Whisper",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "adam_ethiopian"
+        ],
+        "children": [
+          "cain_ethiopian",
+          "abel_ethiopian",
+          "seth_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 2:22",
+          "note": "Made by the LORD God from the rib taken out of the man."
+        },
+        {
+          "ref": "Genesis 3:1-5",
+          "note": "Questioned by the serpent, told 'ye shall not surely die' and that her eyes will be opened."
+        },
+        {
+          "ref": "Genesis 3:6",
+          "note": "Sees the tree is good for food and to be desired to make one wise; eats, and gives to her husband."
+        },
+        {
+          "ref": "Genesis 3:13",
+          "note": "Tells the LORD, 'The serpent beguiled me, and I did eat.'"
+        },
+        {
+          "ref": "Genesis 3:16",
+          "note": "Sentenced to greatly multiplied sorrow in childbirth and to her husband ruling over her."
+        },
+        {
+          "ref": "Genesis 3:20",
+          "note": "Named Eve by Adam, 'because she was the mother of all living.'"
+        },
+        {
+          "ref": "Genesis 4:1",
+          "note": "Conceives and bears Cain, saying 'I have gotten a man from the LORD.'"
+        },
+        {
+          "ref": "Genesis 4:25",
+          "note": "Bears Seth, naming him for 'another seed instead of Abel, whom Cain slew.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "cain_ethiopian",
+      "name": "Cain",
+      "role": "manager",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "adam_ethiopian",
+        "mother": "eve_ethiopian",
+        "spouses": [
+          "cains_wife_unnamed_ethiopian"
+        ],
+        "children": [
+          "enoch_cainite_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:2",
+          "note": "A tiller of the ground, unlike his sheep-keeping brother Abel."
+        },
+        {
+          "ref": "Genesis 4:3-5",
+          "note": "Brings an offering of the fruit of the ground; the LORD has no respect unto it, and Cain's countenance falls."
+        },
+        {
+          "ref": "Genesis 4:8",
+          "note": "Rises up against Abel his brother in the field and slays him."
+        },
+        {
+          "ref": "Genesis 4:9",
+          "note": "Answers the LORD's question with 'Am I my brother's keeper?'"
+        },
+        {
+          "ref": "Genesis 4:12-14",
+          "note": "Cursed to be a fugitive and a vagabond in the earth."
+        },
+        {
+          "ref": "Genesis 4:15",
+          "note": "The LORD sets a mark upon Cain so none finding him will kill him."
+        },
+        {
+          "ref": "Genesis 4:16-17",
+          "note": "Dwells in the land of Nod, east of Eden, and builds a city named for his son Enoch."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abel_ethiopian",
+      "name": "Abel",
+      "role": "manager",
+      "scribeTier": "Shepherd's First Offering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "adam_ethiopian",
+        "mother": "eve_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:2",
+          "note": "A keeper of sheep."
+        },
+        {
+          "ref": "Genesis 4:4",
+          "note": "Brings the firstlings of his flock and of the fat thereof; the LORD has respect unto Abel and his offering."
+        },
+        {
+          "ref": "Genesis 4:8",
+          "note": "Slain by his brother Cain in the field."
+        },
+        {
+          "ref": "Genesis 4:10",
+          "note": "His blood's voice is said to cry unto the LORD from the ground."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seth_ethiopian",
+      "name": "Seth",
+      "role": "submanager",
+      "scribeTier": "Shepherd's First Offering",
+      "parentManagerId": "abel_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "adam_ethiopian",
+        "mother": "eve_ethiopian",
+        "spouses": [],
+        "children": [
+          "enos_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:25",
+          "note": "Born to Adam and Eve as God's appointed replacement seed for the slain Abel."
+        },
+        {
+          "ref": "Genesis 4:26",
+          "note": "To his son Enos is born; 'then began men to call upon the name of the LORD.'"
+        },
+        {
+          "ref": "Genesis 5:6-8",
+          "note": "Lives 912 years total, begetting Enos at 105."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 912,
+          "ref": "Genesis 5:8"
+        }
+      ]
+    },
+    {
+      "id": "enoch_ethiopian",
+      "name": "Enoch",
+      "role": "manager",
+      "scribeTier": "Walk Beyond Death",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jared_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "methuselah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:21-22",
+          "note": "Begets Methuselah at 65, then walks with God for 300 more years."
+        },
+        {
+          "ref": "Genesis 5:23-24",
+          "note": "Lives 365 years; 'Enoch walked with God: and he was not; for God took him.'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Taken by God",
+          "age": 365,
+          "ref": "Genesis 5:23-24"
+        }
+      ],
+      "funFacts": [
+        "The only person in Genesis's genealogies whose life ends without the recurring phrase 'and he died.'"
+      ]
+    },
+    {
+      "id": "methuselah_ethiopian",
+      "name": "Methuselah",
+      "role": "submanager",
+      "scribeTier": "Walk Beyond Death",
+      "parentManagerId": "enoch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "enoch_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lamech_noah_father_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:25-27",
+          "note": "Begets Lamech at 187; lives 969 years total, the longest recorded lifespan in the book."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 969,
+          "ref": "Genesis 5:27"
+        }
+      ]
+    },
+    {
+      "id": "noah_ethiopian",
+      "name": "Noah",
+      "role": "manager",
+      "scribeTier": "Gopherwood Ark",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "lamech_noah_father_ethiopian",
+        "mother": null,
+        "spouses": [
+          "noahs_wife_unnamed_ethiopian"
+        ],
+        "children": [
+          "shem_ethiopian",
+          "ham_ethiopian",
+          "japheth_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 6:8-9",
+          "note": "Finds grace in the eyes of the LORD; 'a just man and perfect in his generations,' walking with God."
+        },
+        {
+          "ref": "Genesis 6:14-16",
+          "note": "Commanded to build an ark of gopher wood, 300 by 50 by 30 cubits, with rooms and three stories."
+        },
+        {
+          "ref": "Genesis 7:7-9",
+          "note": "Enters the ark with his wife, sons, and sons' wives, and two of every kind of beast and fowl."
+        },
+        {
+          "ref": "Genesis 7:11-12",
+          "note": "In his six hundredth year the fountains of the deep break up and rain falls forty days and nights."
+        },
+        {
+          "ref": "Genesis 8:6-12",
+          "note": "Sends forth a raven, then a dove three times, to learn whether the waters have abated."
+        },
+        {
+          "ref": "Genesis 8:20",
+          "note": "Builds an altar and offers burnt offerings of every clean beast and fowl after leaving the ark."
+        },
+        {
+          "ref": "Genesis 9:1,9-13",
+          "note": "Blessed and told to be fruitful; receives God's covenant sign of the rainbow."
+        },
+        {
+          "ref": "Genesis 9:20-21",
+          "note": "Becomes a husbandman, plants a vineyard, and is found drunken and uncovered in his tent."
+        },
+        {
+          "ref": "Genesis 9:24-27",
+          "note": "Learns what his younger son did and pronounces a curse on Canaan, blessings on Shem and Japheth."
+        },
+        {
+          "ref": "Genesis 9:28-29",
+          "note": "Lives 950 years total, 350 of them after the flood."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "The Flood begins",
+          "age": 600,
+          "ref": "Genesis 7:11"
+        },
+        {
+          "event": "Death",
+          "age": 950,
+          "ref": "Genesis 9:29"
+        }
+      ]
+    },
+    {
+      "id": "lamech_noah_father_ethiopian",
+      "name": "Lamech (father of Noah)",
+      "role": "submanager",
+      "scribeTier": "Gopherwood Ark",
+      "parentManagerId": "noah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "methuselah_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "noah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:28-29",
+          "note": "Begets Noah, naming him in hope: 'This same shall comfort us concerning our work and toil of our hands.'"
+        },
+        {
+          "ref": "Genesis 5:31",
+          "note": "Lives 777 years total."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 777,
+          "ref": "Genesis 5:31"
+        }
+      ]
+    },
+    {
+      "id": "ham_ethiopian",
+      "name": "Ham",
+      "role": "submanager",
+      "scribeTier": "Gopherwood Ark",
+      "parentManagerId": "noah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "noah_ethiopian",
+        "mother": "noahs_wife_unnamed_ethiopian",
+        "spouses": [],
+        "children": [
+          "canaan_unindexed_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:22",
+          "note": "Sees the nakedness of his father Noah and tells his two brethren outside the tent."
+        },
+        {
+          "ref": "Genesis 9:24-25",
+          "note": "Identified as 'the father of Canaan' when Noah's curse falls on Canaan for this."
+        },
+        {
+          "ref": "Genesis 10:6",
+          "note": "Named as father of Cush, Mizraim, Phut, and Canaan in the Table of Nations."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "japheth_ethiopian",
+      "name": "Japheth",
+      "role": "submanager",
+      "scribeTier": "Gopherwood Ark",
+      "parentManagerId": "noah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "noah_ethiopian",
+        "mother": "noahs_wife_unnamed_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:23",
+          "note": "With Shem, walks backward and covers their father's nakedness without looking, using a garment on both their shoulders."
+        },
+        {
+          "ref": "Genesis 9:27",
+          "note": "Blessed by Noah: 'God shall enlarge Japheth, and he shall dwell in the tents of Shem.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shem_ethiopian",
+      "name": "Shem",
+      "role": "manager",
+      "scribeTier": "Blessed Tent",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "noah_ethiopian",
+        "mother": "noahs_wife_unnamed_ethiopian",
+        "spouses": [],
+        "children": [
+          "arphaxad_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:23",
+          "note": "With Japheth, covers their father Noah's nakedness reverently, walking in backward."
+        },
+        {
+          "ref": "Genesis 9:26",
+          "note": "Noah blesses 'the LORD God of Shem,' with Canaan made his servant."
+        },
+        {
+          "ref": "Genesis 10:21-22",
+          "note": "Called father of all the children of Eber; his sons are Elam, Asshur, Arphaxad, Lud, and Aram."
+        },
+        {
+          "ref": "Genesis 11:10-11",
+          "note": "Begets Arphaxad two years after the flood, at age 100; lives 600 years total."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 600,
+          "ref": "Genesis 11:10-11"
+        }
+      ]
+    },
+    {
+      "id": "nimrod_ethiopian",
+      "name": "Nimrod",
+      "role": "manager",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "cush_unindexed_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:8-9",
+          "note": "Begins to be a mighty one in the earth, 'a mighty hunter before the LORD.'"
+        },
+        {
+          "ref": "Genesis 10:10",
+          "note": "The beginning of his kingdom is Babel, Erech, Accad, and Calneh in the land of Shinar."
+        },
+        {
+          "ref": "Genesis 11:1-4",
+          "note": "Under the one-language people he leads, they build a city and tower at Babel reaching toward heaven."
+        },
+        {
+          "ref": "Genesis 11:8-9",
+          "note": "The LORD confounds their language and scatters them abroad; the city is called Babel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name became proverbial in the text itself: 'wherefore it is said, Even as Nimrod the mighty hunter before the LORD' (Genesis 10:9)."
+      ]
+    },
+    {
+      "id": "peleg_ethiopian",
+      "name": "Peleg",
+      "role": "submanager",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": "nimrod_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "eber_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "reu_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:25",
+          "note": "Named for the fact that 'in his days was the earth divided,' placed directly beside the Babel account."
+        },
+        {
+          "ref": "Genesis 11:18-19",
+          "note": "Begets Reu at 30; lives 239 years total."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abraham_ethiopian",
+      "name": "Abraham",
+      "role": "manager",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "terah_ethiopian",
+        "mother": null,
+        "spouses": [
+          "sarah_ethiopian",
+          "hagar_ethiopian",
+          "keturah_unindexed_ethiopian"
+        ],
+        "children": [
+          "ishmael_ethiopian",
+          "isaac_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 12:1-4",
+          "note": "Called by the LORD to leave his country and kindred; departs Haran at age 75."
+        },
+        {
+          "ref": "Genesis 12:7",
+          "note": "The LORD appears and promises the land of Canaan to his seed."
+        },
+        {
+          "ref": "Genesis 15:5-6",
+          "note": "Told his seed will outnumber the stars; 'he believed in the LORD; and he counted it to him for righteousness.'"
+        },
+        {
+          "ref": "Genesis 17:5,9-10",
+          "note": "Renamed from Abram to Abraham; given circumcision as the everlasting covenant's token."
+        },
+        {
+          "ref": "Genesis 18:23-32",
+          "note": "Intercedes with the LORD over Sodom, bargaining the number of righteous needed to spare the city down to ten."
+        },
+        {
+          "ref": "Genesis 22:2,9-13",
+          "note": "Commanded to offer up Isaac at Moriah; stayed by the angel of the LORD, offers a ram caught in a thicket instead."
+        },
+        {
+          "ref": "Genesis 23:1-4,19",
+          "note": "Buries Sarah in the cave of Machpelah, purchased from Ephron the Hittite."
+        },
+        {
+          "ref": "Genesis 25:7-9",
+          "note": "Dies at 175, 'an old man, and full of years'; buried by Isaac and Ishmael together in Machpelah."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Departs Haran",
+          "age": 75,
+          "ref": "Genesis 12:4"
+        },
+        {
+          "event": "Circumcised, covenant renewed",
+          "age": 99,
+          "ref": "Genesis 17:24"
+        },
+        {
+          "event": "Death",
+          "age": 175,
+          "ref": "Genesis 25:7"
+        }
+      ]
+    },
+    {
+      "id": "sarah_ethiopian",
+      "name": "Sarah",
+      "role": "manager",
+      "scribeTier": "Sarah's Laughter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "abraham_ethiopian"
+        ],
+        "children": [
+          "isaac_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29-30",
+          "note": "Introduced as Abram's wife Sarai; barren, with no child."
+        },
+        {
+          "ref": "Genesis 17:15-16",
+          "note": "Renamed from Sarai to Sarah; promised she will be a mother of nations."
+        },
+        {
+          "ref": "Genesis 18:12",
+          "note": "Laughs within herself at the promise of a son in her old age."
+        },
+        {
+          "ref": "Genesis 21:2-3,6",
+          "note": "Bears Isaac at the set time; 'God hath made me to laugh, so that all that hear will laugh with me.'"
+        },
+        {
+          "ref": "Genesis 21:10",
+          "note": "Demands Hagar and Ishmael be cast out so Isaac alone will be heir."
+        },
+        {
+          "ref": "Genesis 23:1-2",
+          "note": "Dies at 127 in Kirjath-arba (Hebron); Abraham comes to mourn and weep for her."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Bears Isaac",
+          "age": 90,
+          "ref": "Genesis 17:17"
+        },
+        {
+          "event": "Death",
+          "age": 127,
+          "ref": "Genesis 23:1"
+        }
+      ]
+    },
+    {
+      "id": "hagar_ethiopian",
+      "name": "Hagar",
+      "role": "submanager",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "abraham_ethiopian"
+        ],
+        "children": [
+          "ishmael_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 16:1-3",
+          "note": "Sarai's Egyptian handmaid, given to Abram as wife when Sarai remains childless."
+        },
+        {
+          "ref": "Genesis 16:6-8",
+          "note": "Flees from Sarai's harsh dealing into the wilderness, where the angel of the LORD finds her by a fountain."
+        },
+        {
+          "ref": "Genesis 16:11",
+          "note": "Told to name her coming son Ishmael, 'because the LORD hath heard thy affliction.'"
+        },
+        {
+          "ref": "Genesis 21:14-19",
+          "note": "Sent away with Ishmael into the wilderness of Beer-sheba; God opens her eyes to a well of water when the child is near death."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ishmael_ethiopian",
+      "name": "Ishmael",
+      "role": "submanager",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "abraham_ethiopian",
+        "mother": "hagar_ethiopian",
+        "spouses": [
+          "ishmaels_wife_unnamed_ethiopian"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 16:15-16",
+          "note": "Born to Hagar; Abram is fourscore and six years old at his birth."
+        },
+        {
+          "ref": "Genesis 17:20",
+          "note": "God promises to bless him, multiply him exceedingly, and make twelve princes of him."
+        },
+        {
+          "ref": "Genesis 21:20-21",
+          "note": "Grows in the wilderness of Paran and becomes an archer; his mother takes him an Egyptian wife."
+        },
+        {
+          "ref": "Genesis 25:9,17",
+          "note": "Buries Abraham alongside Isaac; dies at 137."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 137,
+          "ref": "Genesis 25:17"
+        }
+      ]
+    },
+    {
+      "id": "melchizedek_ethiopian",
+      "name": "Melchizedek",
+      "role": "submanager",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 14:18",
+          "note": "King of Salem and priest of the most high God; brings forth bread and wine to Abram."
+        },
+        {
+          "ref": "Genesis 14:19-20",
+          "note": "Blesses Abram, and Abram gives him tithes of all."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eliezer_ethiopian",
+      "name": "Eliezer of Damascus",
+      "role": "submanager",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": "abraham_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 15:2",
+          "note": "Named by Abram as 'the steward of my house,' at that time his presumed heir before Isaac's birth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Genesis 24's unnamed 'eldest servant' who fetches Rebekah for Isaac is traditionally identified with Eliezer, but the text of chapter 24 itself never actually names him - only 15:2 does, so that verse alone is used here rather than asserting the identification as textual fact."
+      ]
+    },
+    {
+      "id": "lot_ethiopian",
+      "name": "Lot",
+      "role": "manager",
+      "scribeTier": "Lot's Salt Pillar",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "haran_ethiopian",
+        "mother": null,
+        "spouses": [
+          "lots_wife_unnamed_ethiopian"
+        ],
+        "children": [
+          "lots_elder_daughter_unnamed_ethiopian",
+          "lots_younger_daughter_unnamed_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 12:5",
+          "note": "Abram's brother's son, taken along when Abram departs for Canaan."
+        },
+        {
+          "ref": "Genesis 13:10-11",
+          "note": "Chooses the well-watered plain of Jordan for himself and journeys east, separating from Abram."
+        },
+        {
+          "ref": "Genesis 14:12",
+          "note": "Taken captive from Sodom by the four kings; rescued by Abram's armed pursuit."
+        },
+        {
+          "ref": "Genesis 19:1-3",
+          "note": "Sits in the gate of Sodom, welcomes the two angels, and presses them to lodge in his house."
+        },
+        {
+          "ref": "Genesis 19:16",
+          "note": "Lingers until the angels lay hold of his hand and his wife's and daughters' hands to bring them out of the city."
+        },
+        {
+          "ref": "Genesis 19:26",
+          "note": "His wife looks back and becomes a pillar of salt; Lot himself escapes to Zoar."
+        },
+        {
+          "ref": "Genesis 19:30-38",
+          "note": "Dwells in a cave with his two daughters, who make him drink wine and lie with him, bearing Moab and Ben-ammi."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "isaac_ethiopian",
+      "name": "Isaac",
+      "role": "manager",
+      "scribeTier": "Isaac's Reopened Wells",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "abraham_ethiopian",
+        "mother": "sarah_ethiopian",
+        "spouses": [
+          "rebekah_ethiopian"
+        ],
+        "children": [
+          "esau_ethiopian",
+          "jacob_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 21:3-5",
+          "note": "Born to Abraham and Sarah when Abraham is 100 years old; circumcised at eight days."
+        },
+        {
+          "ref": "Genesis 22:6-9",
+          "note": "Carries the wood for his own binding at Moriah, asking his father where the lamb is."
+        },
+        {
+          "ref": "Genesis 24:63,67",
+          "note": "Meets Rebekah while meditating in the field at eventide; takes her as wife and is comforted after his mother's death."
+        },
+        {
+          "ref": "Genesis 26:18",
+          "note": "Redigs the wells of water his father Abraham's servants had dug, which the Philistines had stopped after Abraham's death."
+        },
+        {
+          "ref": "Genesis 27:27-29",
+          "note": "Blesses Jacob (believing him Esau) with the dew of heaven and the fatness of the earth."
+        },
+        {
+          "ref": "Genesis 27:33",
+          "note": "Trembles very exceedingly on realizing he has already blessed the wrong son."
+        },
+        {
+          "ref": "Genesis 35:28-29",
+          "note": "Dies at 180, old and full of days; buried by Esau and Jacob together."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Married Rebekah",
+          "age": 40,
+          "ref": "Genesis 25:20"
+        },
+        {
+          "event": "Death",
+          "age": 180,
+          "ref": "Genesis 35:28"
+        }
+      ]
+    },
+    {
+      "id": "rebekah_ethiopian",
+      "name": "Rebekah",
+      "role": "submanager",
+      "scribeTier": "Isaac's Reopened Wells",
+      "parentManagerId": "isaac_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "bethuel_ethiopian",
+        "mother": null,
+        "spouses": [
+          "isaac_ethiopian"
+        ],
+        "children": [
+          "esau_ethiopian",
+          "jacob_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 24:15-20",
+          "note": "Meets Abraham's servant at the well, waters his camels, and is chosen as Isaac's wife."
+        },
+        {
+          "ref": "Genesis 25:22-23",
+          "note": "Feels her twins struggle within her and inquires of the LORD, who tells her the elder shall serve the younger."
+        },
+        {
+          "ref": "Genesis 27:6-13",
+          "note": "Devises the plan to disguise Jacob as Esau so he receives Isaac's blessing, taking any curse on herself."
+        },
+        {
+          "ref": "Genesis 27:42-43",
+          "note": "Warns Jacob of Esau's murderous anger and sends him away to her brother Laban in Haran."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jacob_ethiopian",
+      "name": "Jacob",
+      "role": "manager",
+      "scribeTier": "Jacob's Stone Pillow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "isaac_ethiopian",
+        "mother": "rebekah_ethiopian",
+        "spouses": [
+          "leah_ethiopian",
+          "rachel_ethiopian",
+          "bilhah_ethiopian",
+          "zilpah_ethiopian"
+        ],
+        "children": [
+          "reuben_ethiopian",
+          "simeon_ethiopian",
+          "levi_ethiopian",
+          "judah_ethiopian",
+          "dan_ethiopian",
+          "naphtali_ethiopian",
+          "gad_ethiopian",
+          "asher_ethiopian",
+          "issachar_ethiopian",
+          "zebulun_ethiopian",
+          "dinah_ethiopian",
+          "joseph_ethiopian",
+          "benjamin_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 25:26",
+          "note": "Born grasping his twin brother Esau's heel; hence his name Jacob."
+        },
+        {
+          "ref": "Genesis 25:29-34",
+          "note": "Buys Esau's birthright for bread and pottage of lentiles."
+        },
+        {
+          "ref": "Genesis 27:19-23",
+          "note": "Disguised in Esau's raiment and goatskins, deceives blind Isaac into blessing him instead."
+        },
+        {
+          "ref": "Genesis 28:11-19",
+          "note": "Dreams of a ladder set up to heaven with angels ascending and descending; sets up his stone pillow as a pillar and names the place Bethel."
+        },
+        {
+          "ref": "Genesis 29:20,30",
+          "note": "Serves Laban seven years for Rachel, is given Leah instead, then serves seven more years for Rachel."
+        },
+        {
+          "ref": "Genesis 31:20-21",
+          "note": "Flees from Laban with his wives, children, and flocks toward Canaan."
+        },
+        {
+          "ref": "Genesis 32:24-28",
+          "note": "Wrestles all night with a man at Peniel, is renamed Israel, and his thigh is put out of joint."
+        },
+        {
+          "ref": "Genesis 33:4",
+          "note": "Reconciled with Esau, who runs to meet him, embraces him, and weeps."
+        },
+        {
+          "ref": "Genesis 46:2-4",
+          "note": "God speaks to him in a vision, telling him not to fear going down into Egypt."
+        },
+        {
+          "ref": "Genesis 47:9,28",
+          "note": "Tells Pharaoh his years have been 'few and evil,' 130 in all so far; lives 147 years total."
+        },
+        {
+          "ref": "Genesis 49:1-28",
+          "note": "Gathers his twelve sons to bless and prophesy over each before his death."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Stands before Pharaoh",
+          "age": 130,
+          "ref": "Genesis 47:9"
+        },
+        {
+          "event": "Death",
+          "age": 147,
+          "ref": "Genesis 47:28"
+        }
+      ]
+    },
+    {
+      "id": "laban_ethiopian",
+      "name": "Laban",
+      "role": "submanager",
+      "scribeTier": "Jacob's Stone Pillow",
+      "parentManagerId": "jacob_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "bethuel_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "leah_ethiopian",
+          "rachel_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:16-19",
+          "note": "Laban's two daughters are Leah and Rachel; agrees to give Rachel to Jacob for seven years' service."
+        },
+        {
+          "ref": "Genesis 29:23,25",
+          "note": "Substitutes Leah for Rachel on the wedding night, deceiving Jacob."
+        },
+        {
+          "ref": "Genesis 31:7",
+          "note": "Jacob later accuses him of changing his wages ten times."
+        },
+        {
+          "ref": "Genesis 31:22-30",
+          "note": "Pursues the fleeing Jacob seven days to Gilead, angry over his stolen household idols."
+        },
+        {
+          "ref": "Genesis 31:44-49",
+          "note": "Makes a covenant of stones with Jacob at Galeed and Mizpah before departing in peace."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "esau_ethiopian",
+      "name": "Esau",
+      "role": "manager",
+      "scribeTier": "Esau's Bowl of Pottage",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "isaac_ethiopian",
+        "mother": "rebekah_ethiopian",
+        "spouses": [
+          "judith_unindexed_ethiopian",
+          "bashemath_unindexed_ethiopian",
+          "mahalath_unindexed_ethiopian"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 25:25",
+          "note": "Born first, red and hairy all over; 'a cunning hunter, a man of the field.'"
+        },
+        {
+          "ref": "Genesis 25:32-34",
+          "note": "Sells his birthright to Jacob for bread and pottage of lentiles, 'and Esau despised his birthright.'"
+        },
+        {
+          "ref": "Genesis 26:34",
+          "note": "Marries Judith and Bashemath, both Hittite women, 'a grief of mind unto Isaac and to Rebekah.'"
+        },
+        {
+          "ref": "Genesis 27:34,38",
+          "note": "Cries with a great and exceeding bitter cry on discovering Jacob has taken his blessing."
+        },
+        {
+          "ref": "Genesis 28:9",
+          "note": "Marries Mahalath, Ishmael's daughter, seeing his other wives displeased his father."
+        },
+        {
+          "ref": "Genesis 33:4",
+          "note": "Runs to meet Jacob after twenty years apart, embraces and kisses him, and weeps."
+        },
+        {
+          "ref": "Genesis 36:1,8",
+          "note": "Identified as Edom, dwelling in mount Seir."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Married Judith and Bashemath",
+          "age": 40,
+          "ref": "Genesis 26:34"
+        }
+      ]
+    },
+    {
+      "id": "rachel_ethiopian",
+      "name": "Rachel",
+      "role": "manager",
+      "scribeTier": "Rachel's Stolen Idols",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "laban_ethiopian",
+        "mother": null,
+        "spouses": [
+          "jacob_ethiopian"
+        ],
+        "children": [
+          "joseph_ethiopian",
+          "benjamin_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:9-11",
+          "note": "Comes with her father's sheep to the well; Jacob kisses her and weeps upon learning who she is."
+        },
+        {
+          "ref": "Genesis 29:18",
+          "note": "Jacob agrees to serve Laban seven years for her."
+        },
+        {
+          "ref": "Genesis 30:1",
+          "note": "Envies her sister's children and tells Jacob, 'Give me children, or else I die.'"
+        },
+        {
+          "ref": "Genesis 30:22-24",
+          "note": "God remembers her and opens her womb; she bears Joseph."
+        },
+        {
+          "ref": "Genesis 31:19,34-35",
+          "note": "Steals her father's household images and hides them under her in the camel's furniture when Laban searches."
+        },
+        {
+          "ref": "Genesis 35:16-19",
+          "note": "Dies in hard labor bearing Benjamin, on the way to Ephrath (Bethlehem)."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "bilhah_ethiopian",
+      "name": "Bilhah",
+      "role": "submanager",
+      "scribeTier": "Rachel's Stolen Idols",
+      "parentManagerId": "rachel_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "jacob_ethiopian"
+        ],
+        "children": [
+          "dan_ethiopian",
+          "naphtali_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:29",
+          "note": "Given by Laban to Rachel as her handmaid."
+        },
+        {
+          "ref": "Genesis 30:3-8",
+          "note": "Given to Jacob to bear children on Rachel's behalf; bears Dan and Naphtali."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "leah_ethiopian",
+      "name": "Leah",
+      "role": "manager",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "laban_ethiopian",
+        "mother": null,
+        "spouses": [
+          "jacob_ethiopian"
+        ],
+        "children": [
+          "reuben_ethiopian",
+          "simeon_ethiopian",
+          "levi_ethiopian",
+          "judah_ethiopian",
+          "issachar_ethiopian",
+          "zebulun_ethiopian",
+          "dinah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:17",
+          "note": "Described as 'tender eyed,' unlike the beautiful and well-favoured Rachel."
+        },
+        {
+          "ref": "Genesis 29:23,25",
+          "note": "Given to Jacob in Rachel's place on the wedding night by her father's deception."
+        },
+        {
+          "ref": "Genesis 29:31-35",
+          "note": "The LORD opens her womb since she is hated; bears Reuben, Simeon, Levi, and Judah in succession."
+        },
+        {
+          "ref": "Genesis 30:14-16",
+          "note": "Trades her son Reuben's mandrakes to Rachel in exchange for a night with Jacob."
+        },
+        {
+          "ref": "Genesis 30:17-21",
+          "note": "Bears Issachar, Zebulun, and a daughter, Dinah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zilpah_ethiopian",
+      "name": "Zilpah",
+      "role": "submanager",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": "leah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "jacob_ethiopian"
+        ],
+        "children": [
+          "gad_ethiopian",
+          "asher_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:24",
+          "note": "Given by Laban to Leah as her handmaid."
+        },
+        {
+          "ref": "Genesis 30:9-13",
+          "note": "Given to Jacob to wife by Leah; bears Gad and Asher."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dinah_ethiopian",
+      "name": "Dinah",
+      "role": "submanager",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": "leah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:21",
+          "note": "Born to Leah as Jacob's only recorded daughter."
+        },
+        {
+          "ref": "Genesis 34:1-2",
+          "note": "Goes out to see the daughters of the land near Shalem and is taken and defiled by Shechem, the Hivite prince."
+        },
+        {
+          "ref": "Genesis 34:25-26",
+          "note": "Her brothers Simeon and Levi avenge her, and take her out of Shechem's house."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_ethiopian",
+      "name": "Joseph",
+      "role": "manager",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "rachel_ethiopian",
+        "spouses": [
+          "asenath_unindexed_ethiopian"
+        ],
+        "children": [
+          "manasseh_ethiopian",
+          "ephraim_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:24",
+          "note": "Born to Rachel; 'The LORD shall add to me another son.'"
+        },
+        {
+          "ref": "Genesis 37:3",
+          "note": "Loved by Israel more than all his children, and given a coat of many colours."
+        },
+        {
+          "ref": "Genesis 37:23-28",
+          "note": "Stripped of his coat and sold by his brothers to Ishmeelite traders for twenty pieces of silver."
+        },
+        {
+          "ref": "Genesis 39:7-12",
+          "note": "Resists Potiphar's wife and flees, leaving his garment in her hand."
+        },
+        {
+          "ref": "Genesis 41:14-16,25",
+          "note": "Brought before Pharaoh to interpret his dreams of the fat and lean kine."
+        },
+        {
+          "ref": "Genesis 41:41-46",
+          "note": "Made ruler over all Egypt under Pharaoh at age 30."
+        },
+        {
+          "ref": "Genesis 42:8",
+          "note": "Recognizes his brothers when they come to buy grain, though they do not recognize him."
+        },
+        {
+          "ref": "Genesis 45:4-5",
+          "note": "Reveals himself, telling his brothers, 'be not grieved... for God did send me before you to preserve life.'"
+        },
+        {
+          "ref": "Genesis 50:24-26",
+          "note": "Dies at 110 in Egypt, having made his brethren swear to carry his bones out of Egypt."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Sold into slavery",
+          "age": 17,
+          "ref": "Genesis 37:2"
+        },
+        {
+          "event": "Rises before Pharaoh",
+          "age": 30,
+          "ref": "Genesis 41:46"
+        },
+        {
+          "event": "Death",
+          "age": 110,
+          "ref": "Genesis 50:26"
+        }
+      ]
+    },
+    {
+      "id": "reuben_ethiopian",
+      "name": "Reuben",
+      "role": "submanager",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": "joseph_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:32",
+          "note": "Leah's firstborn son."
+        },
+        {
+          "ref": "Genesis 30:14",
+          "note": "Finds mandrakes in the field during wheat harvest, which sparks Leah and Rachel's bargain."
+        },
+        {
+          "ref": "Genesis 37:21-22",
+          "note": "Persuades his brothers not to kill Joseph outright but to cast him into a pit, intending to rescue him later."
+        },
+        {
+          "ref": "Genesis 42:22",
+          "note": "Reminds his brothers in Egypt that he had warned them not to sin against the child."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "potiphar_ethiopian",
+      "name": "Potiphar",
+      "role": "submanager",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": "joseph_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "potiphars_wife_unnamed_ethiopian"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 39:1",
+          "note": "An officer of Pharaoh's, captain of the guard, buys Joseph from the Ishmeelites."
+        },
+        {
+          "ref": "Genesis 39:4-6",
+          "note": "Makes Joseph overseer of his house, prospering because of him."
+        },
+        {
+          "ref": "Genesis 39:19-20",
+          "note": "Believes his wife's false accusation against Joseph and casts him into prison."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pharaoh_joseph_ethiopian",
+      "name": "Pharaoh (of Joseph's rise)",
+      "role": "submanager",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": "joseph_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:1-8",
+          "note": "Troubled by his dreams of seven fat and seven lean kine, and seven full and seven blasted ears of corn."
+        },
+        {
+          "ref": "Genesis 41:39-41",
+          "note": "Sets Joseph over all the land of Egypt, second only to himself."
+        },
+        {
+          "ref": "Genesis 45:16-20",
+          "note": "Rejoices to hear Joseph's brethren have come and invites Jacob's whole household to dwell in the best of the land."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "judah_ethiopian",
+      "name": "Judah",
+      "role": "manager",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [
+          "shuahs_daughter_unnamed_ethiopian",
+          "tamar_ethiopian"
+        ],
+        "children": [
+          "er_ethiopian",
+          "onan_ethiopian",
+          "shelah_ethiopian",
+          "pharez_ethiopian",
+          "zarah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:35",
+          "note": "Born to Leah; named because 'now will I praise the LORD.'"
+        },
+        {
+          "ref": "Genesis 37:26-27",
+          "note": "Proposes selling Joseph to the Ishmeelites rather than killing him: 'what profit is it if we slay our brother?'"
+        },
+        {
+          "ref": "Genesis 38:14-18",
+          "note": "Unknowingly pledges his signet, bracelets, and staff to Tamar, disguised as a harlot, in payment for a kid."
+        },
+        {
+          "ref": "Genesis 38:26",
+          "note": "Acknowledges the pledge is his own and declares Tamar 'more righteous than I.'"
+        },
+        {
+          "ref": "Genesis 43:8-9",
+          "note": "Pledges himself surety for Benjamin's safe return to Jacob before the second journey to Egypt."
+        },
+        {
+          "ref": "Genesis 44:33-34",
+          "note": "Offers himself as a bondman in Benjamin's place rather than see his father's grief."
+        },
+        {
+          "ref": "Genesis 49:8-10",
+          "note": "Blessed by Jacob: 'the sceptre shall not depart from Judah... until Shiloh come.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "tamar_ethiopian",
+      "name": "Tamar",
+      "role": "submanager",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": "judah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "er_ethiopian",
+          "judah_ethiopian"
+        ],
+        "children": [
+          "pharez_ethiopian",
+          "zarah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:6-11",
+          "note": "Given to Er, then to Onan after Er's death, in the custom of raising up seed for the dead brother."
+        },
+        {
+          "ref": "Genesis 38:14",
+          "note": "Disguises herself and sits in an open place when Judah, widowed, fails to give her his son Shelah as promised."
+        },
+        {
+          "ref": "Genesis 38:24-26",
+          "note": "Sent for to be burnt when found with child, but produces Judah's own signet, bracelets, and staff as proof."
+        },
+        {
+          "ref": "Genesis 38:27-30",
+          "note": "Bears twins, Pharez and Zarah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "benjamin_ethiopian",
+      "name": "Benjamin",
+      "role": "manager",
+      "scribeTier": "Benjamin's Silver Cup",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "rachel_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 35:16-18",
+          "note": "Born as Rachel dies in labor; she names him Ben-oni ('son of my sorrow') but Jacob calls him Benjamin."
+        },
+        {
+          "ref": "Genesis 42:4",
+          "note": "Kept back by Jacob from the first journey to Egypt, 'lest peradventure mischief befall him.'"
+        },
+        {
+          "ref": "Genesis 44:2,12",
+          "note": "Joseph's silver cup is planted in his sack; found there, he is accused of theft before his brothers."
+        },
+        {
+          "ref": "Genesis 45:14",
+          "note": "Joseph falls on Benjamin's neck and weeps upon revealing himself."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "enoch_cainite_ethiopian",
+      "name": "Enoch (Cain's son)",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "cain_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "irad_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:17",
+          "note": "Cain builds a city and names it after his son Enoch - a different man from Enoch son of Jared, flagged to avoid confusion."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "irad_ethiopian",
+      "name": "Irad",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "enoch_cainite_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "mehujael_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Born to Enoch; begets Mehujael."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mehujael_ethiopian",
+      "name": "Mehujael",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "irad_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "methusael_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Begets Methusael."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "methusael_ethiopian",
+      "name": "Methusael",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "mehujael_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lamech_cainite_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Begets Lamech, the last of Cain's named line."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lamech_cainite_ethiopian",
+      "name": "Lamech (Cain's line)",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "methusael_ethiopian",
+        "mother": null,
+        "spouses": [
+          "adah_ethiopian",
+          "zillah_ethiopian"
+        ],
+        "children": [
+          "jabal_ethiopian",
+          "jubal_ethiopian",
+          "tubalcain_ethiopian",
+          "naamah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19",
+          "note": "Takes two wives, Adah and Zillah - the first recorded polygamy in the text."
+        },
+        {
+          "ref": "Genesis 4:23-24",
+          "note": "Boasts to his wives of killing a man, claiming vengeance seventy and sevenfold, echoing and escalating the mark set on Cain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A distinct man from Lamech the father of Noah (Genesis 5:28) - both named Lamech, from two separate lines descended from Adam through Cain and through Seth respectively; never merged."
+      ]
+    },
+    {
+      "id": "adah_ethiopian",
+      "name": "Adah",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "lamech_cainite_ethiopian"
+        ],
+        "children": [
+          "jabal_ethiopian",
+          "jubal_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19-21",
+          "note": "One of Lamech's two wives; mother of Jabal and Jubal."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zillah_ethiopian",
+      "name": "Zillah",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "lamech_cainite_ethiopian"
+        ],
+        "children": [
+          "tubalcain_ethiopian",
+          "naamah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19,22",
+          "note": "Lamech's other wife; mother of Tubal-cain and Naamah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jabal_ethiopian",
+      "name": "Jabal",
+      "role": "submanager",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": "cain_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_cainite_ethiopian",
+        "mother": "adah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:20",
+          "note": "'The father of such as dwell in tents, and of such as have cattle.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jubal_ethiopian",
+      "name": "Jubal",
+      "role": "submanager",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": "cain_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_cainite_ethiopian",
+        "mother": "adah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:21",
+          "note": "'The father of all such as handle the harp and organ.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "tubalcain_ethiopian",
+      "name": "Tubal-cain",
+      "role": "submanager",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": "cain_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_cainite_ethiopian",
+        "mother": "zillah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:22",
+          "note": "'An instructer of every artificer in brass and iron.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "naamah_ethiopian",
+      "name": "Naamah",
+      "role": "named",
+      "scribeTier": "Mark of Wandering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "lamech_cainite_ethiopian",
+        "mother": "zillah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:22",
+          "note": "Named as the sister of Tubal-cain, closing out Cain's line before the text turns to Seth."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "enos_ethiopian",
+      "name": "Enos",
+      "role": "named",
+      "scribeTier": "Shepherd's First Offering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "seth_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "cainan_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:26",
+          "note": "Born to Seth; 'then began men to call upon the name of the LORD.'"
+        },
+        {
+          "ref": "Genesis 5:9-11",
+          "note": "Lives 905 years total."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "cainan_ethiopian",
+      "name": "Cainan",
+      "role": "named",
+      "scribeTier": "Shepherd's First Offering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "enos_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "mahalaleel_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:12-14",
+          "note": "Lives 910 years total."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mahalaleel_ethiopian",
+      "name": "Mahalaleel",
+      "role": "named",
+      "scribeTier": "Shepherd's First Offering",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "cainan_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jared_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:15-17",
+          "note": "Lives 895 years total."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jared_ethiopian",
+      "name": "Jared",
+      "role": "named",
+      "scribeTier": "Walk Beyond Death",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "mahalaleel_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "enoch_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:18-20",
+          "note": "Lives 962 years total, father of Enoch."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "arphaxad_ethiopian",
+      "name": "Arphaxad",
+      "role": "named",
+      "scribeTier": "Blessed Tent",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "shem_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "salah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:12-13",
+          "note": "Born two years after the flood; begets Salah."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "salah_ethiopian",
+      "name": "Salah",
+      "role": "named",
+      "scribeTier": "Blessed Tent",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "arphaxad_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "eber_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:14-15",
+          "note": "Begets Eber."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eber_ethiopian",
+      "name": "Eber",
+      "role": "named",
+      "scribeTier": "Blessed Tent",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "salah_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "peleg_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:21,11:16-17",
+          "note": "Shem's line is traced as 'the father of all the children of Eber'; Eber begets Peleg."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "reu_ethiopian",
+      "name": "Reu",
+      "role": "named",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "peleg_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "serug_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:18-19",
+          "note": "Begets Serug."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "serug_ethiopian",
+      "name": "Serug",
+      "role": "named",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "reu_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "nahor_elder_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:20-21",
+          "note": "Begets Nahor."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nahor_elder_ethiopian",
+      "name": "Nahor (Serug's son, Terah's father)",
+      "role": "named",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "serug_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "terah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:22-23",
+          "note": "Begets Terah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not the same man as his own grandson Nahor, Abraham's brother - two different Nahors two generations apart, kept distinct here as nahor_elder and nahor_younger."
+      ]
+    },
+    {
+      "id": "terah_ethiopian",
+      "name": "Terah",
+      "role": "named",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "nahor_elder_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "abraham_ethiopian",
+          "nahor_younger_ethiopian",
+          "haran_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:26-27",
+          "note": "Begets Abram, Nahor, and Haran."
+        },
+        {
+          "ref": "Genesis 11:31-32",
+          "note": "Takes Abram, Sarai, and Lot from Ur of the Chaldees toward Canaan, but settles and dies in Haran at 205."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Death",
+          "age": 205,
+          "ref": "Genesis 11:32"
+        }
+      ]
+    },
+    {
+      "id": "haran_ethiopian",
+      "name": "Haran",
+      "role": "named",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "terah_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lot_ethiopian",
+          "milcah_ethiopian",
+          "iscah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:27-28",
+          "note": "Father of Lot, Milcah, and Iscah; dies before his father Terah, in Ur of the Chaldees, his native land."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nahor_younger_ethiopian",
+      "name": "Nahor (Terah's son, Abraham's brother)",
+      "role": "named",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "terah_ethiopian",
+        "mother": null,
+        "spouses": [
+          "milcah_ethiopian"
+        ],
+        "children": [
+          "bethuel_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Takes his niece Milcah, Haran's daughter, as wife."
+        },
+        {
+          "ref": "Genesis 22:20-23",
+          "note": "Bears Bethuel and seven other sons by Milcah, reported to Abraham."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "milcah_ethiopian",
+      "name": "Milcah",
+      "role": "named",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "haran_ethiopian",
+        "mother": null,
+        "spouses": [
+          "nahor_younger_ethiopian"
+        ],
+        "children": [
+          "bethuel_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Haran's daughter, taken to wife by her uncle Nahor."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iscah_ethiopian",
+      "name": "Iscah",
+      "role": "named",
+      "scribeTier": "Covenant Stars",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "haran_ethiopian",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Named only as Haran's daughter and Milcah's sister; no further action recorded."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "bethuel_ethiopian",
+      "name": "Bethuel",
+      "role": "named",
+      "scribeTier": "Isaac's Reopened Wells",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "nahor_younger_ethiopian",
+        "mother": "milcah_ethiopian",
+        "spouses": [],
+        "children": [
+          "laban_ethiopian",
+          "rebekah_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 22:23",
+          "note": "Named as begetting Rebekah, closing the report of Milcah's children to Abraham."
+        },
+        {
+          "ref": "Genesis 24:50",
+          "note": "Answers with Laban that the match for Rebekah 'proceedeth from the LORD.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simeon_ethiopian",
+      "name": "Simeon",
+      "role": "named",
+      "scribeTier": "Jacob's Stone Pillow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:33",
+          "note": "Leah's second son."
+        },
+        {
+          "ref": "Genesis 34:25-26",
+          "note": "With Levi, avenges Dinah by slaying the men of Shechem."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "levi_ethiopian",
+      "name": "Levi",
+      "role": "named",
+      "scribeTier": "Jacob's Stone Pillow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:34",
+          "note": "Leah's third son."
+        },
+        {
+          "ref": "Genesis 34:25-26",
+          "note": "With Simeon, avenges Dinah by slaying the men of Shechem."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dan_ethiopian",
+      "name": "Dan",
+      "role": "named",
+      "scribeTier": "Rachel's Stolen Idols",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "bilhah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:6",
+          "note": "Bilhah's first son for Rachel; named for 'God hath judged me.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "naphtali_ethiopian",
+      "name": "Naphtali",
+      "role": "named",
+      "scribeTier": "Rachel's Stolen Idols",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "bilhah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:8",
+          "note": "Bilhah's second son; named for Rachel's 'great wrestlings' with her sister."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "gad_ethiopian",
+      "name": "Gad",
+      "role": "named",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "zilpah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:11",
+          "note": "Zilpah's first son for Leah; named 'A troop cometh.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "asher_ethiopian",
+      "name": "Asher",
+      "role": "named",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "zilpah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:13",
+          "note": "Zilpah's second son; named 'Happy am I, for the daughters will call me blessed.'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "issachar_ethiopian",
+      "name": "Issachar",
+      "role": "named",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:17-18",
+          "note": "Leah's fifth son, born after the mandrake bargain with Rachel."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zebulun_ethiopian",
+      "name": "Zebulun",
+      "role": "named",
+      "scribeTier": "Leah's Mandrake Basket",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jacob_ethiopian",
+        "mother": "leah_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:19-20",
+          "note": "Leah's sixth son."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "er_ethiopian",
+      "name": "Er",
+      "role": "named",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "judah_ethiopian",
+        "mother": "shuahs_daughter_unnamed_ethiopian",
+        "spouses": [
+          "tamar_ethiopian"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:6-7",
+          "note": "Judah's firstborn, married to Tamar; 'wicked in the sight of the LORD,' and the LORD slew him."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "onan_ethiopian",
+      "name": "Onan",
+      "role": "named",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "judah_ethiopian",
+        "mother": "shuahs_daughter_unnamed_ethiopian",
+        "spouses": [
+          "tamar_ethiopian"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:8-10",
+          "note": "Given to Tamar to raise up seed for his dead brother Er; refuses, and the LORD slew him also."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shelah_ethiopian",
+      "name": "Shelah",
+      "role": "named",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "judah_ethiopian",
+        "mother": "shuahs_daughter_unnamed_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:11,14",
+          "note": "Judah's third son, withheld from Tamar out of fear he too would die - the withholding that prompts Tamar's disguise."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pharez_ethiopian",
+      "name": "Pharez",
+      "role": "named",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "judah_ethiopian",
+        "mother": "tamar_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:29",
+          "note": "Born first of Tamar's twins, breaking forth ahead of his brother; named for the breach."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zarah_ethiopian",
+      "name": "Zarah",
+      "role": "named",
+      "scribeTier": "Judah's Signet and Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "judah_ethiopian",
+        "mother": "tamar_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:28,30",
+          "note": "Puts out his hand first, marked with a scarlet thread, but Pharez is born before him."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "manasseh_ethiopian",
+      "name": "Manasseh",
+      "role": "named",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "joseph_ethiopian",
+        "mother": "asenath_unindexed_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:51",
+          "note": "Joseph's firstborn, named 'for God, said he, hath made me forget all my toil.'"
+        },
+        {
+          "ref": "Genesis 48:14,19",
+          "note": "Given Jacob's right hand in blessing by birth order, but Jacob deliberately crosses his hands to favor the younger Ephraim."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ephraim_ethiopian",
+      "name": "Ephraim",
+      "role": "named",
+      "scribeTier": "Joseph's Coat of Colors",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "joseph_ethiopian",
+        "mother": "asenath_unindexed_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:52",
+          "note": "Joseph's second son, named 'for God hath caused me to be fruitful in the land of my affliction.'"
+        },
+        {
+          "ref": "Genesis 48:19-20",
+          "note": "Blessed by Jacob ahead of his elder brother Manasseh, set to become greater."
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/collective genealogical references kept out of the character list above because the text gives no individual actions for these names - just listings.",
+    "ishmaelsTwelveSons": {
+      "ref": "Genesis 25:13-16",
+      "note": "Nebajoth, Kedar, Adbeel, Mibsam, Mishma, Dumah, Massa, Hadar, Tema, Jetur, Naphish, and Kedemah - the twelve princes of Ishmael, each given only a name."
+    },
+    "keturahsSonsAndDescendants": {
+      "ref": "Genesis 25:1-4",
+      "note": "Abraham's sons by his later wife Keturah - Zimran, Jokshan, Medan, Midian, Ishbak, and Shuah - plus Jokshan's and Midian's own listed sons, none given individual action in the text."
+    },
+    "nahorsSonsByMilcahAndReumah": {
+      "ref": "Genesis 22:20-24",
+      "note": "Nahor's eight sons by Milcah (Huz, Buz, Kemuel, Chesed, Hazo, Pildash, Jidlaph, and Bethuel) plus four more by his concubine Reumah (Tebah, Gaham, Thahash, Maachah) - a reported list only, save Bethuel who is followed up as Rebekah's father."
+    },
+    "tableOfNations": {
+      "ref": "Genesis 10:1-32",
+      "note": "The seventy-named descendants of Shem, Ham, and Japheth listed after the flood as the origin of the earth's nations - almost entirely names with no individual narrative beyond Nimrod, who alone is broken out as his own manager tier."
+    },
+    "edomiteChiefsAndKings": {
+      "ref": "Genesis 36:1-43",
+      "note": "Esau/Edom's extensive genealogy of wives, sons, chiefs (dukes), and the line of kings who reigned in Edom 'before there reigned any king over the children of Israel' - an administrative king-list, not narrative content."
+    }
+  }
+}

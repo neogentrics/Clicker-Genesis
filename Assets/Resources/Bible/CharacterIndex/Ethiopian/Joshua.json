@@ -1,0 +1,702 @@
+{
+  "book": "Joshua",
+  "translation": "Ethiopian",
+  "canonicalOrder": 6,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Full direct read of the extracted Ethiopian-translation text (Assets/Resources/Verses/Ethiopian/joshua_6.json, 24 chapters, 658 verses) confirms this book is textually and structurally identical to the standard KJV-tradition Joshua narrative -- same 24 chapters, same event order, same wording throughout (spies/Rahab, Jordan crossing, circumcision at Gilgal, Jericho's fall, Achan's sin, Ai, Gibeonite deception, the five-king coalition and the long day at Gibeon, the northern coalition at the waters of Merom, the land allotment (Caleb at Hebron, Zelophehad's five daughters, the seven-tribe lot at Shiloh), the cities of refuge, the Levitical cities, the eastern-tribes' altar-of-witness dispute, and Joshua's farewell speech, covenant renewal at Shechem, and death/burial at Timnathserah). This is a genuine finding from reading the real text, not an assumption -- it stands in real contrast to this same Ethiopian Bible's confirmed structural divergence elsewhere (its own 9-chapter Ezra, matching the 1 Esdras tradition rather than the 10-chapter Masoretic Ezra). No unique Ethiopian-canon content, extra chapters, or reordering was found anywhere in this book.\n\nAll ids are suffixed _ethiopian to avoid collision with the existing plain-named KJV CharacterIndex ids for the same figures. Naming collisions carried forward from the same real-text patterns already documented for this book in the KJV index, re-verified against this translation's own wording: Jabin king of Hazor (Josh 11) shares a name only, not a stated identity, with a later Jabin king of Hazor in Judges; Phinehas son of Eleazar (Josh 22) is distinct from the later Phinehas son of Eli; Debir is used both as a king's personal name (Josh 10:3) and, within this very book, as a Canaanite city name (Josh 10:38-39, 15:15); Japhia king of Lachish (Josh 10) shares a name only with a much later son of David; among Zelophehad's five daughters, Noah shares a name only with the flood patriarch, Milcah shares a name only with Nahor's wife in Genesis, and Tirzah shares a name only with the Canaanite city later listed among the defeated kings (Josh 12:24) and later still a northern-kingdom capital -- none of these are asserted as the same person/place. Zelophehad's five daughters (Josh 17:3) act and speak as one undifferentiated group in the text, so per this index's collective-group convention only Mahlah (named first, both here and in Numbers 26:33) receives a full manager entry, with her four sisters as loyalty-boost submanagers. The five kings of Josh 10:3,5 are handled the same way: Adonizedek as the coalition's initiating major, the other four as cost-cutter submanagers, since the text differentiates none of their individual actions beyond being named and executed together. Geographic-only material (the ~25 undifferentiated kings of ch12 beyond the five of ch10 and Jabin of ch11, the extensive tribal boundary/town-name lists of ch13, 15-19, 21, and the unnamed spies/twelve stone-bearers/ten princes) is captured in genealogyLists rather than invented as individual characters, matching the same judgment call already validated for this book's KJV index.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Twelve Stones",
+      "managerId": "joshua_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Scarlet Cord",
+      "managerId": "rahab_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Achan's Wedge of Gold",
+      "managerId": "achan_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Gibeon's Ruse",
+      "managerId": "gibeonites_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Five Kings of the Amorites",
+      "managerId": "adonizedek_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Waters of Merom",
+      "managerId": "jabin_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Nether Springs",
+      "managerId": "caleb_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Portion Among the Brethren",
+      "managerId": "mahlah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Cities of Refuge",
+      "managerId": "cities_of_refuge_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Levites' Portion",
+      "managerId": "levitical_cities_law_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Altar of Witness",
+      "managerId": "phinehas_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "joshua_ethiopian",
+      "name": "Joshua",
+      "role": "manager",
+      "scribeTier": "Twelve Stones",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Nun",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Josh 1:1 (this translation): 'the LORD spake unto Joshua the son of Nun, Moses' minister.' No further family named within this book's own text."
+      },
+      "verses": [
+        {
+          "ref": "Josh 1:1-9",
+          "note": "Commissioned by the LORD after Moses' death; charged to 'be strong and of a good courage.'"
+        },
+        {
+          "ref": "Josh 3:7-17",
+          "note": "Leads Israel across the Jordan on dry ground behind the priest-borne ark."
+        },
+        {
+          "ref": "Josh 5:13-15",
+          "note": "Meets 'the captain of the LORD's host' near Jericho and is told to loose his shoe, 'for the place whereon thou standest is holy.'"
+        },
+        {
+          "ref": "Josh 6:1-21",
+          "note": "Leads the seven-day march and trumpet-blowing around Jericho until its wall falls."
+        },
+        {
+          "ref": "Josh 10:12-14",
+          "note": "Commands the sun to stand still over Gibeon and the moon over the valley of Ajalon."
+        },
+        {
+          "ref": "Josh 23:1-16",
+          "note": "Farewell charge to Israel's elders and officers in his old age."
+        },
+        {
+          "ref": "Josh 24:1-28",
+          "note": "Renews the covenant at Shechem: 'as for me and my house, we will serve the LORD.'"
+        },
+        {
+          "ref": "Josh 24:29-30",
+          "note": "Dies at 110 and is buried in Timnathserah in mount Ephraim."
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 110,
+          "event": "Death, called 'the servant of the LORD'",
+          "ref": "Josh 24:29"
+        }
+      ],
+      "funFacts": [
+        "At his death he is given the title 'the servant of the LORD' (Josh 24:29), a title this same book reserves for Moses at its opening (Josh 1:1)."
+      ]
+    },
+    {
+      "id": "rahab_ethiopian",
+      "name": "Rahab",
+      "role": "manager",
+      "scribeTier": "Scarlet Cord",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Her father's household (unnamed individually) is spared with her, Josh 6:23,25. This book's own text says nothing of a later marriage or descendants; no such claim is made here."
+      },
+      "verses": [
+        {
+          "ref": "Josh 2:1-21",
+          "note": "Hides the two unnamed spies Joshua sends to Jericho, misdirects the king's pursuers, and lets them down by a cord through her window; agrees to hang a scarlet line as a sign."
+        },
+        {
+          "ref": "Josh 6:17,22-25",
+          "note": "Spared with her household when Jericho is destroyed; 'she dwelleth in Israel even unto this day.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Explicitly called 'Rahab the harlot' in this translation's own text (Josh 2:1; 6:17,25)."
+      ]
+    },
+    {
+      "id": "achan_ethiopian",
+      "name": "Achan",
+      "role": "manager",
+      "scribeTier": "Achan's Wedge of Gold",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Carmi",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full stated line: 'Achan, the son of Carmi, the son of Zabdi, the son of Zerah, of the tribe of Judah' (Josh 7:1,18). His sons and daughters die with him (Josh 7:24) but are never named individually, so no separate entries are given for them."
+      },
+      "verses": [
+        {
+          "ref": "Josh 7:1",
+          "note": "Introduced as having 'committed a trespass in the accursed thing' from Jericho's spoil."
+        },
+        {
+          "ref": "Josh 7:10-26",
+          "note": "Identified by lot; confesses to taking a Babylonish garment, silver, and a wedge of gold; stoned and burned in the valley of Achor."
+        },
+        {
+          "ref": "Josh 22:20",
+          "note": "Retrospectively invoked as a warning by the western tribes: 'that man perished not alone in his iniquity.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gibeonites_ethiopian",
+      "name": "The Gibeonites",
+      "role": "manager",
+      "scribeTier": "Gibeon's Ruse",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Represented collectively -- no individual Gibeonite is named in Josh 9-10. Treated as one narrative unit per this index's convention for an undifferentiated named group."
+      },
+      "verses": [
+        {
+          "ref": "Josh 9:3-27",
+          "note": "Disguise themselves as travelers from a distant land with worn sacks, mouldy bread, and patched clothes to trick Israel into a covenant; once discovered, made 'hewers of wood and drawers of water' rather than destroyed, since Israel had sworn by the LORD."
+        },
+        {
+          "ref": "Josh 10:1-11",
+          "note": "Besieged by the five-king coalition for making peace with Israel, prompting Joshua's rescue march and the long day at Gibeon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Their trick worked specifically because Israel 'asked not counsel at the mouth of the LORD' (Josh 9:14)."
+      ]
+    },
+    {
+      "id": "adonizedek_ethiopian",
+      "name": "Adonizedek",
+      "role": "manager",
+      "scribeTier": "Five Kings of the Amorites",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named. King of Jerusalem."
+      },
+      "verses": [
+        {
+          "ref": "Josh 10:1-5",
+          "note": "Organizes a five-king Amorite coalition (naming Hoham, Piram, Japhia, and Debir individually) to besiege Gibeon for making peace with Israel."
+        },
+        {
+          "ref": "Josh 10:16-27",
+          "note": "Hides with the other four kings in the cave at Makkedah; captured, executed, and hanged on trees until evening."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name ('lord of righteousness') invites comparison to 'Melchizedek' ('king of righteousness'), an earlier king of the same city in Genesis 14:18 -- a name-pattern similarity only; this book's text nowhere states a family or identity link between them."
+      ]
+    },
+    {
+      "id": "hoham_ethiopian",
+      "name": "Hoham",
+      "role": "submanager",
+      "scribeTier": "Five Kings of the Amorites",
+      "parentManagerId": "adonizedek_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named."
+      },
+      "verses": [
+        {
+          "ref": "Josh 10:3,5",
+          "note": "Named king of Hebron, summoned by Adonizedek."
+        },
+        {
+          "ref": "Josh 10:23,26",
+          "note": "Brought out of the cave at Makkedah and executed with the other four kings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "piram_ethiopian",
+      "name": "Piram",
+      "role": "submanager",
+      "scribeTier": "Five Kings of the Amorites",
+      "parentManagerId": "adonizedek_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named."
+      },
+      "verses": [
+        {
+          "ref": "Josh 10:3,5",
+          "note": "Named king of Jarmuth, summoned by Adonizedek."
+        },
+        {
+          "ref": "Josh 10:23,26",
+          "note": "Brought out of the cave at Makkedah and executed with the other four kings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "japhia_ethiopian",
+      "name": "Japhia",
+      "role": "submanager",
+      "scribeTier": "Five Kings of the Amorites",
+      "parentManagerId": "adonizedek_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named here. NAMING COLLISION: shares his name only with one of David's sons born at Jerusalem, named far later in scripture -- a different, unrelated person."
+      },
+      "verses": [
+        {
+          "ref": "Josh 10:3,5",
+          "note": "Named king of Lachish, summoned by Adonizedek."
+        },
+        {
+          "ref": "Josh 10:23,26",
+          "note": "Brought out of the cave at Makkedah and executed with the other four kings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "debir_king_of_eglon_ethiopian",
+      "name": "Debir",
+      "role": "submanager",
+      "scribeTier": "Five Kings of the Amorites",
+      "parentManagerId": "adonizedek_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named. NAMING COLLISION within this very book: 'Debir' is used here as a personal name (king of Eglon), but 'Debir' is also a Canaanite city in Judah's hill country, formerly called Kirjathsepher, later taken by Othniel (Josh 10:38-39; 15:15-17) -- same word, two distinct referents."
+      },
+      "verses": [
+        {
+          "ref": "Josh 10:3,5",
+          "note": "Named king of Eglon, summoned by Adonizedek."
+        },
+        {
+          "ref": "Josh 10:23,26",
+          "note": "Brought out of the cave at Makkedah and executed with the other four kings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jabin_ethiopian",
+      "name": "Jabin",
+      "role": "manager",
+      "scribeTier": "Waters of Merom",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No family named. NAMING COLLISION: a different Jabin king of Hazor appears generations later in Judges as the oppressor defeated via Deborah, Barak, and Jael -- this index treats the two as separate figures who merely share a name and city-title, not the same person."
+      },
+      "verses": [
+        {
+          "ref": "Josh 11:1-11",
+          "note": "Assembles a northern coalition of kings at the waters of Merom; defeated by Joshua, and Hazor, 'the head of all those kingdoms,' is burned."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hazor is the only city among the defeated northern coalition that Israel burns (Josh 11:13)."
+      ]
+    },
+    {
+      "id": "caleb_ethiopian",
+      "name": "Caleb",
+      "role": "manager",
+      "scribeTier": "Nether Springs",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jephunneh the Kenezite",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "achsah_ethiopian"
+        ],
+        "note": "Called 'the son of Jephunneh the Kenezite' (Josh 14:6,14). His brother Othniel is called 'the son of Kenaz' (Josh 15:17); whether Caleb's own 'Kenezite' label reflects the same Kenaz as a shared father or a broader clan name is not made explicit by this book's text and is left unresolved here rather than silently decided."
+      },
+      "verses": [
+        {
+          "ref": "Josh 14:6-15",
+          "note": "Claims Hebron at Gilgal, citing Moses' oath after the spy mission from Kadeshbarnea forty-five years earlier."
+        },
+        {
+          "ref": "Josh 15:13-19",
+          "note": "Given Hebron; offers his daughter Achsah in marriage to whoever takes Kirjathsepher (Debir)."
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 40,
+          "event": "Sent by Moses from Kadeshbarnea to spy out the land",
+          "ref": "Josh 14:7"
+        },
+        {
+          "age": 85,
+          "event": "Claims his inheritance at Hebron, forty-five years after the spying mission",
+          "ref": "Josh 14:10-11"
+        }
+      ],
+      "funFacts": [
+        "Explicitly called 'the Kenezite' (Josh 14:6,14) yet receives a full inheritance within Judah's territory."
+      ]
+    },
+    {
+      "id": "achsah_ethiopian",
+      "name": "Achsah",
+      "role": "submanager",
+      "scribeTier": "Nether Springs",
+      "parentManagerId": "caleb_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "caleb_ethiopian",
+        "mother": null,
+        "spouses": [
+          "othniel_ethiopian"
+        ],
+        "children": [],
+        "note": "No further genealogy given beyond her marriage to Othniel."
+      },
+      "verses": [
+        {
+          "ref": "Josh 15:16-19",
+          "note": "Married to Othniel after he takes Kirjathsepher; asks Caleb for 'the upper springs and the nether springs' -- the source of this tier's name."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "othniel_ethiopian",
+      "name": "Othniel",
+      "role": "submanager",
+      "scribeTier": "Nether Springs",
+      "parentManagerId": "caleb_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Kenaz",
+        "mother": null,
+        "spouses": [
+          "achsah_ethiopian"
+        ],
+        "children": [],
+        "note": "Called 'the son of Kenaz, the brother of Caleb' (Josh 15:17) -- this book's own wording is ambiguous whether 'the brother of Caleb' modifies Othniel or Kenaz; hedged, not resolved, per this index's rule against silently deciding textual cruxes."
+      },
+      "verses": [
+        {
+          "ref": "Josh 15:17",
+          "note": "Takes Kirjathsepher and receives Achsah as wife."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mahlah_ethiopian",
+      "name": "Mahlah",
+      "role": "manager",
+      "scribeTier": "Portion Among the Brethren",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Full stated line for her father: 'Zelophehad, the son of Hepher, the son of Gilead, the son of Machir, the son of Manasseh' (Josh 17:3). Named first among her sisters. The five daughters act and speak as an undifferentiated group in this book's text, so only Mahlah is given a full manager entry, with her sisters as submanagers."
+      },
+      "verses": [
+        {
+          "ref": "Josh 17:3-6",
+          "note": "Comes with her sisters before Eleazar, Joshua, and the princes, citing the LORD's earlier command to Moses; receives an inheritance among their father's brethren."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "noah_daughter_ethiopian",
+      "name": "Noah",
+      "role": "submanager",
+      "scribeTier": "Portion Among the Brethren",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION: this 'Noah' (a daughter of Zelophehad) shares her name only with the flood patriarch Noah -- two unrelated figures who share an English spelling."
+      },
+      "verses": [
+        {
+          "ref": "Josh 17:3",
+          "note": "Named among Zelophehad's five daughters."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hoglah_daughter_ethiopian",
+      "name": "Hoglah",
+      "role": "submanager",
+      "scribeTier": "Portion Among the Brethren",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "A town called Bethhoglah ('house of Hoglah') sits on the Judah/Benjamin border within this same book (Josh 15:6; 18:19,21); the text never links the town's name to this daughter, so this is flagged only as a shared root, not a claimed identification."
+      },
+      "verses": [
+        {
+          "ref": "Josh 17:3",
+          "note": "Named among Zelophehad's five daughters."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "milcah_daughter_ethiopian",
+      "name": "Milcah",
+      "role": "submanager",
+      "scribeTier": "Portion Among the Brethren",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION: shares her name only with Milcah, wife of Nahor (Abraham's brother), named repeatedly in Genesis -- a different, much earlier figure."
+      },
+      "verses": [
+        {
+          "ref": "Josh 17:3",
+          "note": "Named among Zelophehad's five daughters."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tirzah_daughter_ethiopian",
+      "name": "Tirzah",
+      "role": "submanager",
+      "scribeTier": "Portion Among the Brethren",
+      "parentManagerId": "mahlah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Zelophehad",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "NAMING COLLISION within this very book: shares her name only with the Canaanite city of Tirzah, whose king is listed among the 31 defeated by Joshua (Josh 12:24) -- same word, two distinct referents."
+      },
+      "verses": [
+        {
+          "ref": "Josh 17:3",
+          "note": "Named among Zelophehad's five daughters."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cities_of_refuge_law_ethiopian",
+      "name": "Cities of Refuge",
+      "role": "law",
+      "scribeTier": "Cities of Refuge",
+      "parentManagerId": null,
+      "deliveredBy": "joshua_ethiopian",
+      "purpose": "Establishes six cities (three west, three east of the Jordan) where a person who kills another 'unawares and unwittingly' (Josh 20:3) may flee from the avenger of blood and receive a hearing before the congregation, remaining safe until the death of the serving high priest -- teaching that unintentional killing is judged differently from murder, and that justice requires due process rather than immediate vengeance.",
+      "verses": [
+        {
+          "ref": "Josh 20:1-6",
+          "note": "Purpose and procedure of the cities of refuge, relaying what the LORD had earlier commanded through Moses."
+        },
+        {
+          "ref": "Josh 20:7-9",
+          "note": "Names the six cities: Kedesh, Shechem, and Kirjatharba (Hebron) west of Jordan; Bezer, Ramoth in Gilead, and Golan in Bashan east of Jordan."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation's own phrase is 'unawares and unwittingly' (Josh 20:3)."
+      ]
+    },
+    {
+      "id": "levitical_cities_law_ethiopian",
+      "name": "Levitical Cities",
+      "role": "law",
+      "scribeTier": "Levites' Portion",
+      "parentManagerId": null,
+      "deliveredBy": "joshua_ethiopian",
+      "purpose": "Assigns the Levites forty-eight cities with surrounding pasture lands out of the other tribes' inheritances, since the Levites received no territorial inheritance of their own -- teaching that the priestly/Levitical calling is itself their portion, with the LORD as their inheritance, while still providing practically for their material needs through the rest of the nation.",
+      "verses": [
+        {
+          "ref": "Josh 21:1-3",
+          "note": "The Levites' request, made per the LORD's command through Moses, brought to Eleazar, Joshua, and the tribal heads at Shiloh."
+        },
+        {
+          "ref": "Josh 21:41-42",
+          "note": "Summary: forty-eight cities with their suburbs given to the Levites."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "phinehas_ethiopian",
+      "name": "Phinehas",
+      "role": "manager",
+      "scribeTier": "Altar of Witness",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Eleazar the priest",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Josh 22:13,32: 'Phinehas the son of Eleazar the priest.' NAMING COLLISION: a different Phinehas, son of Eli, appears far later in 1 Samuel -- an explicitly separate priestly line, not descended from this Phinehas or from Eleazar."
+      },
+      "verses": [
+        {
+          "ref": "Josh 22:13-20",
+          "note": "Sent with ten tribal princes to confront Reuben, Gad, and the half-tribe of Manasseh over the altar they built by the Jordan."
+        },
+        {
+          "ref": "Josh 22:30-34",
+          "note": "Satisfied by their explanation that the altar was meant as a witness, not for sacrifice; reports back and war is averted."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eleazar_ethiopian",
+      "name": "Eleazar",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Aaron",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "phinehas_ethiopian"
+        ],
+        "note": "His descent from Aaron is common scriptural knowledge rather than something restated within this book's own text, so it is noted here, not asserted as a claim this book itself makes. NAMING COLLISION: distinct from other Eleazars named elsewhere in scripture, e.g. Eleazar son of Abinadab or Eleazar the Ahohite among David's mighty men."
+      },
+      "verses": [
+        {
+          "ref": "Josh 14:1",
+          "note": "Co-presides with Joshua and the tribal heads over the distribution of Canaan's inheritance by lot."
+        },
+        {
+          "ref": "Josh 17:4",
+          "note": "Receives Zelophehad's daughters' inheritance claim alongside Joshua."
+        },
+        {
+          "ref": "Josh 21:1",
+          "note": "Receives the Levites' request for cities."
+        },
+        {
+          "ref": "Josh 24:33",
+          "note": "Dies; buried in a hill belonging to Phinehas his son in mount Ephraim."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above -- almost entirely geographic (place names, boundary markers, town lists) with no individual personal action attached, per the same judgment call already validated for this book's KJV index.",
+    "thirty_one_kings_ch12": "Josh 12 lists 31 kings defeated west of the Jordan under Joshua (12:7-24), plus Sihon and Og defeated earlier under Moses east of Jordan (12:1-6). Beyond the five kings of the ch10 coalition and Jabin of Hazor (ch11) -- all given full entries above -- the remaining roughly 25 kings are identified only by the city they ruled, with no individual action differentiated in the text.",
+    "sihon_and_og_ch12": "Josh 12:1-6 recaps Sihon king of the Amorites and Og king of Bashan, kings defeated earlier under Moses -- their narrative belongs to the book of Numbers, referenced here only in summary.",
+    "tribal_boundary_and_town_lists_ch13_15_19_21": "Chapters 13, 15-19, and 21 give detailed tribal territory boundaries, town-name lists, and Levitical-city lists -- almost entirely geographic, beyond Caleb (ch14-15) and Zelophehad's daughters (ch17:3-6), both already given full entries above.",
+    "ten_princes_ch22": "Josh 22:13-14 sends Phinehas 'and with him ten princes, of each chief house a prince throughout all the tribes' to confront the eastern tribes over the altar of witness; none of the ten is individually named.",
+    "reuben_gad_manasseh_respondents_ch22": "The Reubenites, Gadites, and half-tribe of Manasseh who built the altar of witness (Josh 22:10-34) respond and are quoted collectively; no individual leader on their side is named within this chapter.",
+    "unnamed_spies_ch2": "The 'two men to spy secretly' whom Joshua sends to Jericho, and whom Rahab hides (Josh 2:1), are never named.",
+    "twelve_men_ch3_4": "The twelve men chosen 'out of every tribe a man' to carry stones from the dry Jordan bed (Josh 3:12; 4:2-8) are not individually named."
+  }
+}

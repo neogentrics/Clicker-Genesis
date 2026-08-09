@@ -1,0 +1,248 @@
+{
+  "book": "Jonah",
+  "translation": "Geneva",
+  "canonicalOrder": 32,
+  "status": "drafted directly from the real extracted Geneva Bible (1560) verse text at Assets/Resources/Verses/Geneva/jonah_32.json, cross-checked against the established KJV Jonah tier pattern for structure only",
+  "notes": "Geneva Jonah matches the standard KJV Jonah exactly in structure and narrative content - 4 chapters, same sequence of events (flight to Tarshish, the storm and lots, the great fish, the psalm-prayer, Nineveh's repentance, the gourd/worm/wind lesson) - there is no deuterocanonical or structural divergence in this book, unlike some other translations/books in this project. The real differences are purely 1560-English orthography and word choice, worth recording rather than silently normalizing: the prophet's name is spelled \"Ionah\" throughout (I/J were interchangeable letters in this era's printing - the same person as KJV's \"Jonah,\" not a naming collision); Joppa is spelled \"Iapho\" (Jonah 1:3); \"Hebrew\" is spelled \"Ebrewe\" (1:9); the plant of chapter 4 is called a \"gourde,\" the same core word KJV also uses (unlike some modern translations' \"vine\" or \"plant\"). Tier structure mirrors the KJV draft's judgment that this book has exactly one truly major human figure (Jonah) plus three non-human \"actors\" the text itself frames as things \"the Lord\" or \"God\" specifically \"prepared\" (1:17 \"the Lord had prepared a great fish\"; 4:6 \"the Lord God prepared a gourde\"; 4:7 \"God prepared a worme\"; 4:8 \"God prepared also a feruent East winde\") - tying chapters 1 and 4 together in this translation's own wording just as in KJV's. Because no LORD/God character is indexed as a manager in this roster, all three law tiers' deliveredBy is anchored to jonah_geneva (Jonah is the narrative witness/recipient of the fish and the gourd-worm-wind sequence, and is literally the one who speaks the prayer) rather than left dangling, satisfying strict schema validity. The mariners (Jonah 1:5-16) and the king of Nineveh with his nobles and people (3:5-10) remain unnamed collectives in this translation exactly as in KJV, so they stay submanagers under Jonah rather than invented individual names.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Ionah, the Reluctant Prophet",
+      "managerId": "jonah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Great Fish",
+      "managerId": "great_fish_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Ionah's Prayer",
+      "managerId": "jonahs_prayer_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Gourde, the Worme, and the Winde",
+      "managerId": "gourd_worm_wind_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jonah_geneva",
+      "name": "Ionah (Jonah)",
+      "role": "manager",
+      "scribeTier": "Ionah, the Reluctant Prophet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Amittai",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:1-2",
+          "note": "The worde of the Lord comes vnto Ionah the sonne of Amittai, commanding him to arise and crye against Nineueh, for their wickednesse is come vp before the Lord."
+        },
+        {
+          "ref": "Jonah 1:3",
+          "note": "Ionah instead rises vp to flee vnto Tarshish from the presence of the Lord, going downe to Iapho, finding a ship, and paying the fare to go with them."
+        },
+        {
+          "ref": "Jonah 1:12",
+          "note": "Ionah tells the frightened mariners to take him and cast him into the sea, admitting the great tempest is vpon them for his sake."
+        },
+        {
+          "ref": "Jonah 1:17",
+          "note": "The Lord had prepared a great fish to swallow vp Ionah; he is in the belly of the fish three dayes and three nightes."
+        },
+        {
+          "ref": "Jonah 3:3-4",
+          "note": "On a second commission Ionah arises and goes to Nineueh, entering a dayes iourney into the citie and crying that yet fourtie dayes and Nineueh shalbe ouerthrowen."
+        },
+        {
+          "ref": "Jonah 3:10",
+          "note": "God sees their workes, that they turned from their euill wayes, and repents of the euill he said he woulde do vnto them, and does it not."
+        },
+        {
+          "ref": "Jonah 4:1-3",
+          "note": "It displeases Ionah exceedingly and he is angry, praying that the Lord take his life, saying it is better for him to die than to liue."
+        },
+        {
+          "ref": "Jonah 4:9-11",
+          "note": "God asks Ionah if he does well to be angrie for the gourde; Ionah says he does well to be angrie vnto the death, and the Lord answers by contrasting Ionah's pitie for the gourde with his own compassion for Nineueh's sixe score thousand persons and much cattell."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation spells his name \"Ionah\" throughout, the same person as the more familiar \"Jonah\" spelling - I and J were interchangeable letters in 1560 English printing.",
+        "The book ends on an unanswered question from God to Ionah (4:11) rather than a resolved narrative, exactly as in the KJV wording of the same verse."
+      ]
+    },
+    {
+      "id": "mariners_geneva",
+      "name": "The Mariners",
+      "role": "submanager",
+      "scribeTier": "Ionah, the Reluctant Prophet",
+      "parentManagerId": "jonah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jonah 1:5",
+          "note": "The mariners are afraide and crye euery man vnto his God, casting the wares that were in the ship into the sea to lighten it."
+        },
+        {
+          "ref": "Jonah 1:6",
+          "note": "The shipmaster comes to the sleeping Ionah and asks what he means, bidding him arise and call vpon his God."
+        },
+        {
+          "ref": "Jonah 1:7",
+          "note": "They cast lottes to know for whose cause the euill is vpon them, and the lot falls vpon Ionah."
+        },
+        {
+          "ref": "Jonah 1:13-14",
+          "note": "The men row hard to bring the ship to land rather than cast Ionah into the sea, but the sea grows more troublous, so they crye vnto the Lord not to let them perish for one man's life."
+        },
+        {
+          "ref": "Jonah 1:15-16",
+          "note": "They take vp Ionah and cast him into the sea, the sea ceases from her raging, and the men feare the Lord exceedingly, offering a sacrifice and making vowes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The \"shipmaster\" who wakes Ionah (1:6) is distinguished from the general body of mariners, though also left unnamed in this translation."
+      ]
+    },
+    {
+      "id": "king_of_nineveh_geneva",
+      "name": "The King of Nineueh",
+      "role": "submanager",
+      "scribeTier": "Ionah, the Reluctant Prophet",
+      "parentManagerId": "jonah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jonah 3:6",
+          "note": "On hearing the worde, the King of Nineueh rises from his throne, layes his robe from him, couers himself with sackecloth, and sits in ashes."
+        },
+        {
+          "ref": "Jonah 3:7-8",
+          "note": "He proclaims through Nineueh, by the counsell of himself and his nobles, that neither man nor beast, bullocke nor sheepe, taste any thing nor drinke water, but put on sackecloth and crye mightily vnto God, turning euery man from his euill way."
+        },
+        {
+          "ref": "Jonah 3:9",
+          "note": "The king reasons, \"Who can tell if God will turne, and repent, and turne away from his fierce wrath, that we perish not?\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The decree extends fasting and sackcloth even to the citie's cattell (3:7-8), a detail this translation preserves identically to KJV."
+      ]
+    },
+    {
+      "id": "great_fish_geneva",
+      "name": "The Great Fish",
+      "role": "law",
+      "scribeTier": "The Great Fish",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_geneva",
+      "purpose": "The Lord's appointed instrument of judgment and rescue in one act - it swallows Ionah to save him from drowning after he is cast into the sea, and later, at the Lord's own word, casts him out again vpon dry lande, teaching that the Lord's power reaches even the depths of the sea.",
+      "verses": [
+        {
+          "ref": "Jonah 1:17",
+          "note": "The Lord had prepared a great fish to swallowe vp Ionah; he is in the belly of the fish three dayes and three nightes."
+        },
+        {
+          "ref": "Jonah 2:1",
+          "note": "Ionah prayes vnto the Lord his God out of the fishes belly."
+        },
+        {
+          "ref": "Jonah 2:10",
+          "note": "The Lord speakes vnto the fish, and it casts out Ionah vpon the dry lande."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva wording, like the KJV's, calls it simply a \"great fish\" (1:17) - not a whale."
+      ]
+    },
+    {
+      "id": "jonahs_prayer_geneva",
+      "name": "Ionah's Prayer",
+      "role": "law",
+      "scribeTier": "Ionah's Prayer",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_geneva",
+      "purpose": "A prayer of thanksgiving offered in deep affliction from within the fish, recounting Ionah's descent into the sea and affirming that \"saluation is of the Lord\" (2:9) - modeling repentant thanksgiving offered from the midst of consequence rather than a plea to escape it.",
+      "verses": [
+        {
+          "ref": "Jonah 2:2",
+          "note": "Ionah cryed in mine affliction vnto the Lord, and he heard me: out of the bellie of hell cryed I, and thou heardest my voyce."
+        },
+        {
+          "ref": "Jonah 2:5-6",
+          "note": "Ionah describes the waters compassing him about vnto the soule, the weedes wrapt about his head, and the earth's barres about him for euer, yet the Lord brought vp his life from the pit."
+        },
+        {
+          "ref": "Jonah 2:9",
+          "note": "Ionah will sacrifice vnto the Lord with the voice of thankesgiuing and pay that he has vowed, declaring \"saluation is of the Lord.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation's phrasing \"out of the bellie of hell cryed I\" (2:2) uses the same striking image as the KJV rendering of this verse."
+      ]
+    },
+    {
+      "id": "gourd_worm_wind_geneva",
+      "name": "The Gourde, the Worme, and the Winde",
+      "role": "law",
+      "scribeTier": "The Gourde, the Worme, and the Winde",
+      "parentManagerId": null,
+      "deliveredBy": "jonah_geneva",
+      "purpose": "Three things God \"prepares\" in succession to teach Ionah about misplaced pity - a gourde that shades and pleases him, a worme that destroys it, and a feruent East winde that afflicts him - exposing Ionah's greater concern for his own comfort than for the many souls of Nineueh.",
+      "verses": [
+        {
+          "ref": "Jonah 4:6",
+          "note": "The Lord God prepared a gourde, making it come vp ouer Ionah to be a shadowe ouer his head and deliuer him from his griefe; Ionah is exceeding glad of the gourde."
+        },
+        {
+          "ref": "Jonah 4:7",
+          "note": "God prepared a worme when the morning rose the next day, and it smote the gourd, that it withered."
+        },
+        {
+          "ref": "Jonah 4:8",
+          "note": "God prepared also a feruent East winde, and the sunne beat vpon the head of Ionah so that he fainted and wished in his heart to die."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "All three preparations use the same verb (\"prepared\") that describes the great fish in 1:17, tying chapters 1 and 4 together in this translation's own wording, just as in KJV."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "people_and_cattle_of_nineveh": {
+      "ref": "Jonah 4:11",
+      "note": "Nineueh's inhabitants, described as \"sixe score thousand persons, that cannot discerne betweene their right hand, and their left hand, and also much cattell.\" No individual among them is named beyond the king; their corporate repentance and sparing form the book's closing, unanswered question to Ionah."
+    }
+  }
+}

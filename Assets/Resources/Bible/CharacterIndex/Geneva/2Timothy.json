@@ -1,0 +1,526 @@
+{
+  "book": "2 Timothy",
+  "translation": "Geneva",
+  "canonicalOrder": 67,
+  "status": "drafted via multi-agent workflow grounded in the real extracted Geneva Bible (1560) verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from Assets/Resources/Verses/Geneva/2_timothy_67.json (4 chapters, 83 verses, matching the given count exactly). Content and structure are essentially IDENTICAL to the KJV's 2 Timothy - same events, same named persons, same four-chapter shape, no added or missing material - so this book's tier structure mirrors the existing KJV 2Timothy.json closely (2 person tiers for Paul and Timothy, 5 law/theme tiers for Paul's major teaching blocks), rather than being force-fit or reinvented, since the real Geneva text itself doesn't diverge structurally from KJV here the way some OT/deuterocanonical books in this project have. Real, worth-flagging TRANSLATION-LEVEL differences found by reading the actual Geneva text (not assumed from KJV memory): (1) Geneva 2:11 reads \"It is a TRUE saying\" where KJV has \"It is a FAITHFUL saying\" - same creedal quotation, different English rendering of the same Greek formula, so this book's law tier is named \"The True Saying\" (Geneva's own wording) rather than reusing KJV's \"The Faithful Saying\" tier name. (2) Geneva consistently renders agape as \"loue\" in 2:22 and 3:10 (Timothy's charge to \"follow after...loue\" and his knowledge of Paul's \"loue, patience\"), where the KJV instead uses \"charity\" in the parallel verses - noted as a real, consistent wording choice of this translation, not corrected to KJV's word. (3) Geneva 4:10 has Demas \"embraced this present world\" versus KJV's \"loved this present world\" - same idea, different verb choice. (4) Geneva's Elizabethan orthography renders names differently throughout: \"Timotheus\" (not Timothy), \"Iesus\" (not Jesus, I/J interchangeable in 1560 English), \"Marke\" (not Mark), \"Hymeneus\" (not Hymenaeus), \"Iannes and Iambres\" (not Jannes and Jambres) - orthographic/spelling variance only, not a naming-collision or content issue, and character `name` fields below preserve the real Geneva spelling for authenticity while ids stay in modern snake_case. All character ids carry a `_geneva_2timothy` suffix (distinct from the existing KJV file's plain `_2timothy` suffix and any future Ethiopian `_ethiopian_2timothy` ids) so none collide across translations per the project's cross-translation id-collision rule. Naming-collision/identification flags carried over from the same real ambiguities the KJV draft already correctly flagged, since they're properties of the underlying events, not the translation: Hymeneus (2:17) is likely the same recurring false teacher named in 1 Timothy 1:20, but 2 Timothy's own Geneva text does not restate that identification, so it stays probable-not-certain; Alexander the coppersmith (4:14) is possibly the same Alexander of 1 Timothy 1:20, same caveat. Iannes and Iambres (3:8) are the Geneva Bible's own naming of Exodus's unnamed Egyptian magicians (via the \"as Iannes and Iambres withstoode Moses\" cross-reference) - logged in genealogyLists as a pointer back to Exodus's own character index rather than re-indexed as standalone characters here, matching the KJV draft's same treatment. Phygellus and Hermogenes (1:15) and Hymeneus and Philetus (2:17) are each kept as one collective submanager entry apiece since the Geneva text, like the KJV, never differentiates their individual actions. A cluster of travel/greeting-only names in chapter 4 (Crescens, Titus, Tychicus, Carpus, Prisca and Aquila, Erastus, Trophimus, Eubulus, Pudens, Linus, Claudia) receive no individual scene in this book and are logged in genealogyLists rather than given full character entries, matching the KJV draft's same judgment call.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Crowne of Righteousnesse",
+      "managerId": "paul_geneva_2timothy",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Good Souldier",
+      "managerId": "timotheus_geneva_2timothy",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The True Saying",
+      "managerId": "true_saying_geneva_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Vessels of Golde and Earth",
+      "managerId": "vessels_of_the_house_geneva_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Perilous Times",
+      "managerId": "perilous_times_geneva_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Scripture Giuen by Inspiration",
+      "managerId": "inspired_scripture_geneva_2timothy",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Preach the Worde",
+      "managerId": "preach_the_word_geneva_2timothy",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_2timothy",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:1-2",
+          "note": "Paul, an Apostle of Iesus Christ by the will of God, according to the promise of life which is in Christ Iesus, writes to Timotheus his beloved sonne, wishing grace, mercie, and peace."
+        },
+        {
+          "ref": "2 Timothy 1:3",
+          "note": "Paul thankes God, whom he serues from his elders with pure conscience, having remembrance of Timotheus in his prayers night and day."
+        },
+        {
+          "ref": "2 Timothy 1:8-12",
+          "note": "Not ashamed of the testimonie of the Lord nor of himselfe his prisoner; called with an holy calling, appointed a preacher, an Apostle, and a teacher of the Gentiles; suffers these things but is not ashamed, 'for I knowe whom I haue beleeued, and I am persuaded that he is able to keepe that which I haue committed to him against that day.'"
+        },
+        {
+          "ref": "2 Timothy 1:15",
+          "note": "All they which are in Asia be turned from Paul."
+        },
+        {
+          "ref": "2 Timothy 1:16-18",
+          "note": "Paul prays mercie vnto the house of Onesiphorus, who oft refreshed him and was not ashamed of his chaine, and sought him out diligently at Rome."
+        },
+        {
+          "ref": "2 Timothy 2:9-10",
+          "note": "Paul suffers trouble as an euill doer, euen vnto bondes, but the worde of God is not bounde; he suffers all things for the elects sake, that they might also obtaine the saluation which is in Christ Iesus."
+        },
+        {
+          "ref": "2 Timothy 3:10-11",
+          "note": "Timotheus has fully knowen Paul's doctrine, maner of liuing, purpose, faith, long suffering, loue, patience, and the persecutions and afflictions that came vnto him at Antiochia, at Iconium, and at Lystri - from all of which the Lord deliuered him."
+        },
+        {
+          "ref": "2 Timothy 4:6-8",
+          "note": "'I am nowe readie to be offered, and the time of my departing is at hand. I haue fought a good fight, and haue finished my course: I haue kept the faith. For hence foorth is laide vp for me the crowne of righteousnesse, which the Lord the righteous iudge shall giue me at that day: and not to me onely, but vnto all them also that loue that his appearing.'"
+        },
+        {
+          "ref": "2 Timothy 4:9-11",
+          "note": "Asks Timotheus to come to him speedily; Demas hath forsaken him for this present world; onely Luke is with him; asks that Marke be brought, for he is profitable to Paul to minister."
+        },
+        {
+          "ref": "2 Timothy 4:14-15",
+          "note": "Alexander the coppersmith hath done Paul much euill; the Lord rewarde him according to his workes; Timotheus should beware of him also, for he greatly withstoode Paul's preaching."
+        },
+        {
+          "ref": "2 Timothy 4:16-18",
+          "note": "At his first answering no man assisted him, all men forsooke him - he prayes it be not laide to their charge. The Lord assisted and strengthened him so the preaching might be fully beleeued and all the Gentiles heare; he was deliuered out of the mouth of the lion, and the Lord will deliuer him from euery euill worke and preserue him vnto his heauenly kingdome."
+        },
+        {
+          "ref": "2 Timothy 4:19-21",
+          "note": "Final greetings: to Prisca and Aquila and the household of Onesiphorus; Erastus abode at Corinthus, Trophimus left sicke at Miletum; urges Timotheus to come before winter; Eubulus, Pudens, Linus, Claudia, and all the brethren greete him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 4:8 is the source of this tier's name - 'the crowne of righteousnesse' - the same athletic-victor imagery Paul uses of Timotheus in 2:5 ('if any man also striue for a Masterie, he is not crowned, except he striue as he ought to doe')."
+      ]
+    },
+    {
+      "id": "timotheus_geneva_2timothy",
+      "name": "Timotheus",
+      "role": "manager",
+      "scribeTier": "The Good Souldier",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "unnamed Greek father, per Acts 16:1 - not named within 2 Timothy itself",
+        "mother": "eunice_geneva_2timothy",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:2",
+          "note": "Addressed by Paul as 'my beloued sonne.'"
+        },
+        {
+          "ref": "2 Timothy 1:4",
+          "note": "Paul desires to see him, being mindfull of his teares."
+        },
+        {
+          "ref": "2 Timothy 1:6-7",
+          "note": "Put in remembrance to stirre vp the gift of God which is in him by the putting on of Paul's hands; God hath not giuen the spirite of feare, but of power, and of loue, and of a sound minde."
+        },
+        {
+          "ref": "2 Timothy 1:13-14",
+          "note": "Keepe the true paterne of the wholesome wordes heard of Paul in faith and loue; keepe that worthie thing committed to him through the Holy Ghost which dwelleth in vs."
+        },
+        {
+          "ref": "2 Timothy 2:1-3",
+          "note": "Be strong in the grace that is in Christ Iesus; deliuer what he has heard to faithfull men able to teach others also; suffer affliction as a good souldier of Iesus Christ."
+        },
+        {
+          "ref": "2 Timothy 2:15",
+          "note": "Studie to shewe himselfe approued vnto God, a workeman that needeth not to be ashamed, diuiding the worde of trueth aright."
+        },
+        {
+          "ref": "2 Timothy 2:22",
+          "note": "Flee also from the lustes of youth, and follow after righteousnes, faith, loue, and peace, with them that call on the Lord with pure heart."
+        },
+        {
+          "ref": "2 Timothy 2:23-26",
+          "note": "Put away foolish and vnlearned questions; the seruant of the Lord must not striue, but be gentle toward all men, apt to teache, suffering the euill, instructing with meekenesse them that are contrary minded."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells his name 'Timotheus' throughout, matching the Greek form more closely than the anglicized 'Timothy' used by later English translations."
+      ]
+    },
+    {
+      "id": "onesiphorus_geneva_2timothy",
+      "name": "Onesiphorus",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Paul prays mercy 'vnto the house of Onesiphorus' rather than to the man himself in both mentions (1:16, 4:19), which some readers take as an implication he had already died - the Geneva text itself never states this explicitly, same ambiguity as the KJV.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:16-17",
+          "note": "The Lord giue mercie vnto the house of Onesiphorus, for he oft refreshed Paul and was not ashamed of his chaine; when he was at Rome, he sought Paul out very diligently, and found him."
+        },
+        {
+          "ref": "2 Timothy 1:18",
+          "note": "Paul prays he may finde mercie with the Lord at that day; Timotheus knows well how many things he ministred to Paul at Ephesus."
+        },
+        {
+          "ref": "2 Timothy 4:19",
+          "note": "Paul salutes the household of Onesiphorus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "demas_geneva_2timothy",
+      "name": "Demas",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:10",
+          "note": "Demas hath forsaken Paul, and hath embraced this present world, and is departed vnto Thessalonica."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'hath embraced this present world' is a slightly different verb choice than later translations' 'loved this present world' for describing the same reversal."
+      ]
+    },
+    {
+      "id": "phygellus_and_hermogenes_geneva_2timothy",
+      "name": "Phygellus and Hermogenes",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Named together with no individually distinguished actions in the Geneva text - treated as one collective entry rather than inventing a differentiation the text doesn't support.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:15",
+          "note": "Named as being 'of which sort' among all they which are in Asia that be turned from Paul."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hymeneus_and_philetus_geneva_2timothy",
+      "name": "Hymeneus and Philetus",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Attached to Paul's own tier rather than the Vessels of Golde and Earth law tier, since law/theme tiers carry no submanagers of their own - Paul is the one relaying this content, and Hymeneus and Philetus are his named opponents within it. Geneva spells this 'Hymeneus' (not 'Hymenaeus'). Likely the same false teacher named in 1 Timothy 1:20, though 2 Timothy itself does not restate that earlier judgment, so flagged as probable rather than certain. Philetus appears only here in scripture. Treated as one collective entry since the text does not differentiate their individual actions.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 2:17-18",
+          "note": "Their worde shall fret as a canker: of which sort is Hymeneus and Philetus, which as concerning the trueth haue erred from the marke, saying that the resurrection is past already, and do destroy the faith of certaine."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "alexander_geneva_2timothy",
+      "name": "Alexander the Coppersmith",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Possibly the same Alexander named alongside Hymeneus in 1 Timothy 1:20, but 2 Timothy's own text does not make that identification explicit - flagged as an open naming question, not asserted as fact.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:14-15",
+          "note": "Alexander the coppersmith hath done Paul much euill; the Lord rewarde him according to his workes; Timotheus should be ware of him also, for he withstoode Paul's preaching sore."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "luke_geneva_2timothy",
+      "name": "Luke",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:11",
+          "note": "Onely Luke is with Paul."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Traditionally identified as the physician and Gospel/Acts author - 2 Timothy itself only names him as Paul's sole remaining companion."
+      ]
+    },
+    {
+      "id": "marke_geneva_2timothy",
+      "name": "Marke",
+      "role": "submanager",
+      "scribeTier": "The Crowne of Righteousnesse",
+      "parentManagerId": "paul_geneva_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 4:11",
+          "note": "Paul asks Timotheus to take Marke and bring him with him, for he is profitable to Paul to minister."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells him 'Marke.' Reads as a real reconciliation - the same Marke whose earlier departure from a missionary journey split Paul and Barnabas (Acts 15:37-39) is here called profitable for the ministry; 2 Timothy does not narrate the reconciliation itself, only its result."
+      ]
+    },
+    {
+      "id": "lois_geneva_2timothy",
+      "name": "Lois",
+      "role": "submanager",
+      "scribeTier": "The Good Souldier",
+      "parentManagerId": "timotheus_geneva_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "1:5 names Eunice as Timotheus's mother and Lois as his grandmother in the same breath ('dwelt first in thy grandmother Lois, and in thy mother Eunice'), implying Eunice is Lois's daughter - the text does not explicitly state this relationship, only the generational sequence.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "eunice_geneva_2timothy"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:5",
+          "note": "Paul calls to remembrance the vnfained faith that is in Timotheus, which dwelt first in his grandmother Lois, and in his mother Eunice, and is assured dwelleth in Timotheus also."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eunice_geneva_2timothy",
+      "name": "Eunice",
+      "role": "submanager",
+      "scribeTier": "The Good Souldier",
+      "parentManagerId": "timotheus_geneva_2timothy",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "lois_geneva_2timothy",
+        "spouses": [
+          "unnamed Greek father of Timotheus - Acts 16:1, not named in 2 Timothy itself"
+        ],
+        "children": [
+          "timotheus_geneva_2timothy"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Timothy 1:5",
+          "note": "Named alongside Lois as one in whom Timotheus's vnfained faith first dwelt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "true_saying_geneva_2timothy",
+      "name": "The True Saying",
+      "role": "law",
+      "scribeTier": "The True Saying",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2timothy",
+      "purpose": "Paul quotes an already-known early creedal fragment to ground Timotheus's endurance in Christ's own unwavering faithfulness, setting human faithfulness and denial against Christ's constancy: 'he cannot denie himselfe.'",
+      "verses": [
+        {
+          "ref": "2 Timothy 2:11-13",
+          "note": "'It is a true saying, For if we be dead together with him, we also shall liue together with him. If we suffer, we shall also reigne together with him: if we denie him, he also will denie vs. If we beleeue not, yet abideth he faithfull: he cannot denie himselfe.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva renders this 'a true saying' where the KJV instead has 'a faithful saying' - a real, verifiable wording difference between the two translations of this same creedal fragment, confirmed by reading the actual Geneva text rather than assumed from KJV memory."
+      ]
+    },
+    {
+      "id": "vessels_of_the_house_geneva_2timothy",
+      "name": "Vessels of Golde and Earth",
+      "role": "law",
+      "scribeTier": "Vessels of Golde and Earth",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2timothy",
+      "purpose": "Teaches Timotheus how to guard sound doctrine against corrosive false teaching - using Hymeneus and Philetus as the concrete negative example - and how personal purity determines a person's usefulness to the Lord, likened to a vessel of golde, siluer, wood, or earth within a great house.",
+      "verses": [
+        {
+          "ref": "2 Timothy 2:14",
+          "note": "Protest before the Lord that they striue not about wordes, which is to no profit, but to the peruerting of the hearers."
+        },
+        {
+          "ref": "2 Timothy 2:16-18",
+          "note": "Stay from prophane and vaine babblings, for they shall encrease vnto more vngodlinesse, and their worde shall fret as a canker - of which sort is Hymeneus and Philetus."
+        },
+        {
+          "ref": "2 Timothy 2:19",
+          "note": "The foundation of God remaineth sure, and hath this seale: The Lord knoweth who are his; let euery one that calleth on the Name of Christ depart from iniquitie."
+        },
+        {
+          "ref": "2 Timothy 2:20-21",
+          "note": "In a great house are not onely vessels of gold and of siluer, but also of wood and of earth, some for honour and some vnto dishonour; if any man purge himselfe from these, he shalbe a vessell vnto honour, sanctified and meete for the Lord, prepared vnto euery good worke."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "perilous_times_geneva_2timothy",
+      "name": "The Perilous Times",
+      "role": "law",
+      "scribeTier": "The Perilous Times",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2timothy",
+      "purpose": "Warns Timotheus of the moral and spiritual character of people in the last dayes, instructing him to turn away from such people while reassuring him their deception has a real, appointed limit.",
+      "verses": [
+        {
+          "ref": "2 Timothy 3:1-5",
+          "note": "In the last dayes shall come perilous times: men shalbe louers of their owne selues, couetous, boasters, proud, cursed speakers, disobedient to parents, vnthankefull, vnholy, without naturall affection, truce breakers, false accusers, intemperate, fierce, no louers of them which are good, traitours, headie, high minded, louers of pleasures more then louers of God, hauing a shewe of godlinesse but haue denied the power thereof - turne away from such."
+        },
+        {
+          "ref": "2 Timothy 3:6-7",
+          "note": "Describes those which creepe into houses and leade captiue simple women laden with sinnes, led with diuers lustes, euer learning, and neuer able to come to the acknowledging of the trueth."
+        },
+        {
+          "ref": "2 Timothy 3:8-9",
+          "note": "As Iannes and Iambres withstoode Moses, so doe these also resist the trueth, men of corrupt mindes, reprobate concerning the faith; but they shall preuaile no longer, for their madnesse shalbe euident vnto all men, as theirs also was."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "inspired_scripture_geneva_2timothy",
+      "name": "Scripture Giuen by Inspiration",
+      "role": "law",
+      "scribeTier": "Scripture Giuen by Inspiration",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2timothy",
+      "purpose": "Establishes the divine origin, trustworthiness, and practical sufficiency of scripture for teaching, conuincing, correcting, and instructing, so the man of God may be absolute, made perfect vnto all good workes.",
+      "verses": [
+        {
+          "ref": "2 Timothy 3:14-15",
+          "note": "Continue in the things learned and beene assured of, knowing of whom Timotheus learned them; and that he hath knowen the holy Scriptures of a childe, which are able to make him wise vnto saluation through the faith which is in Christ Iesus."
+        },
+        {
+          "ref": "2 Timothy 3:16-17",
+          "note": "For the whole Scripture is giuen by inspiration of God, and is profitable to teache, to conuince, to correct, and to instruct in righteousnesse, that the man of God may be absolute, being made perfect vnto all good workes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'the whole Scripture is giuen by inspiration of God' phrases 3:16 slightly differently than the more familiar 'All scripture is given by inspiration of God' wording - same doctrine, a real wording variant confirmed by reading this translation's actual text."
+      ]
+    },
+    {
+      "id": "preach_the_word_geneva_2timothy",
+      "name": "Preach the Worde",
+      "role": "law",
+      "scribeTier": "Preach the Worde",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_2timothy",
+      "purpose": "Paul's final, most solemn commission to Timotheus for gospel ministry, anticipating a coming era of doctrinal drift among hearers and instructing him to remain steadie in the worke regardless.",
+      "verses": [
+        {
+          "ref": "2 Timothy 4:1-2",
+          "note": "Charged before God and before the Lord Iesus Christ, which shall iudge the quicke and dead at his appearing and in his kingdome: Preach the worde; be instant in season and out of season; improue, rebuke, exhort with all long suffering and doctrine."
+        },
+        {
+          "ref": "2 Timothy 4:3-4",
+          "note": "The time will come when they will not suffer wholesome doctrine, but hauing their eares itching, shall after their owne lustes get them an heape of teachers, and shall turne their eares from the trueth vnto fables."
+        },
+        {
+          "ref": "2 Timothy 4:5",
+          "note": "Watch in all thinges, suffer aduersitie, doe the worke of an Euangelist, cause thy ministerie to be throughly liked of."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above, matching the same judgment calls already made in the KJV draft of this book.",
+    "paulsCompanionsAndGreetings": {
+      "ref": "2 Timothy 4:10-13, 19-21",
+      "note": "Brief travel/greeting notices with no individual scene in the Geneva text: Crescens (gone to Galatia, 4:10), Titus (departed vnto Dalmatia, 4:10 - expected to receive its own major indexing once the book of Titus is drafted for this translation), Tychicus (sent to Ephesus, 4:12), Carpus (host of the cloke and bookes/parchments Paul left at Troas, 4:13), Prisca and Aquila (saluted, 4:19), Erastus (abode at Corinthus, 4:20), Trophimus (left sicke at Miletum, 4:20), Eubulus, Pudens, Linus, and Claudia (send greeting, 4:21), and 'all the brethren' (4:21, unnamed as individuals)."
+    },
+    "iannesAndIambres": {
+      "ref": "2 Timothy 3:8",
+      "note": "Paul names the Egyptian magicians who 'withstoode Moses' as Iannes and Iambres (Geneva's spelling of the names KJV renders Jannes and Jambres). These men are NOT named in Exodus itself - 2 Timothy 3:8 is the scriptural source for the tradition tying those unnamed Exodus magicians to these two names. Not re-indexed as separate characters here since they belong to Exodus's own character index rather than to 2 Timothy's own narrative."
+    }
+  }
+}

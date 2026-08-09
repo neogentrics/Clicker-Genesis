@@ -1,0 +1,371 @@
+{
+  "book": "Song of Solomon",
+  "translation": "Geneva",
+  "canonicalOrder": 22,
+  "status": "drafted via direct read of the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/song_of_solomon_22.json), not yet adversarially fact-checked",
+  "notes": "Grounded directly in the real Geneva 1560 extraction, this book keeps the same two-voice-plus-theme structure as the existing KJV Song of Solomon index (Solomon, the Shulamite, and the \"Love As Strong As Death\" passage as a law/theme tier, with three anonymous supporting groups as submanagers) since the underlying poem's content and speaker structure genuinely match KJV's — this is the same 8-chapter dialogue poem, not a differently-structured text. However, three real, worth-flagging things were found by reading the actual extracted file rather than assuming KJV's shape: (1) REAL TRANSLATION CHOICE, not an error: Geneva 2:1 reads \"I am the rose of the fielde, and the lilie of the valleys\" — Geneva's translators rendered the Hebrew place name generically as \"the field\" rather than the proper noun \"Sharon\" that KJV uses (\"rose of Sharon\"). The scribe tier is named \"Rose of the Field\" to reflect this translation's own wording, not KJV's. (2) LIKELY EXTRACTION ARTIFACT: this file's chapter 1 has only 16 verses (KJV's chapter 1 has 17) because the traditional opening superscription \"The Song of songs, which is Solomon's\" (KJV 1:1) does not appear anywhere in this extraction at all — chapter 1 begins directly with \"Let him kisse me with the kisses of his mouth\" as its own verse 1. This shifts every subsequent verse number in chapter 1 down by one relative to KJV. Per the project's extraction-QA precedent (superscript verse-number encoding issues already documented for this translation), this reads as a dropped/unnumbered title line rather than a genuine Geneva 1560 textual variant, but it was NOT invented or restored here — the character index below cites this file's own verse numbers exactly as extracted, and does not manufacture a substitute \"1:1\" citation the way the KJV draft has one. (3) LIKELY EXTRACTION ARTIFACT, clearly flagged rather than silently fixed: the text corresponding to KJV 6:1 (\"O the fairest among women, whither is thy welbeloued gone? whither is thy welbeloued turned aside, that we may seeke him with thee?\") is not present as its own numbered verse anywhere in chapter 5 or 6 — instead it appears tacked onto the very end of this file's chapter 5, verse 16, preceded by a garbled parenthetical artifact reading \"(Song of Solomon : )\". This has the exact signature the project's Geneva/Ethiopian extraction QA process already identified elsewhere (marginal/heading text fusing with adjacent verse numbering with no separator) rather than a genuine content difference. Per the \"scripture is never altered\" rule, this was NOT renumbered or split into an invented \"6:1\" — it is cited below under \"5:16\" exactly as it sits in the source file, with the anomaly explained on that verse's note. This is also why this file's chapter 6 has only 12 verses instead of KJV's 13. Between artifacts (1) and (3), this file's total book verse count (115) is exactly 2 less than KJV's 117, fully accounted for by these two extraction issues rather than by any other real content difference — every other chapter (2, 3, 4, 7, 8) matches KJV's verse count and content exactly. No other structural or content differences were found; this is the same short love-dialogue poem in archaic 1560 English, not a differently-canoned text like some of this project's other non-KJV translation work has turned up elsewhere.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Cedar Palanquin",
+      "managerId": "solomon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Rose of the Field",
+      "managerId": "shulamite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Signet Seal",
+      "managerId": "love_strong_as_death_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "solomon_geneva",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "Cedar Palanquin",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "David",
+        "mother": "Bathsheba",
+        "spouses": [
+          "the Shulamite"
+        ],
+        "children": [],
+        "note": "Father and mother per the wider biblical record (2 Samuel 12; 1 Chronicles 3), not restated within this book itself. Unlike KJV, this Geneva extraction has no surviving 'which is Solomon's' title line attributing the whole poem to him (see book notes) — his identity here is established entirely through the text calling him 'the King' (1:11) and 'King Salomon' by name (3:9, 3:11, 8:11-12)."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Praises the Shulamite in three separate head-to-foot passages across the book (4:1-7; 6:3-9; 7:1-9), each with different imagery, matching the KJV's structure exactly despite this translation's own chapter/verse shifts.",
+        "His wedding-day bed/palace of Lebanon cedar, with silver pillars and a gold pavement, gets more physical description than any other object in the book (3:6-11).",
+        "6:6-8 (Geneva numbering) names 'threescore Queenes and fourescore concubines... of the damsels without nomber,' but 6:8 (Geneva) still sets the Shulamite apart from all of them as 'the onely daughter of her mother.'"
+      ],
+      "verses": [
+        {
+          "ref": "1:7-10",
+          "note": "Answers her question by sending her out among the shepherds' tents, then praises her: 'I haue compared thee... to the troupe of horses in the charets of Pharaoh,' her cheeks 'comely with rowes of stones,' and promises 'borders of golde with studdes of siluer.'"
+        },
+        {
+          "ref": "1:14",
+          "note": "'My loue, beholde, thou art faire: beholde, thou art faire: thine eyes are like the doues.'"
+        },
+        {
+          "ref": "2:2",
+          "note": "Answers her self-description: 'Like a lilie amog the thornes, so is my loue among the daughters.'"
+        },
+        {
+          "ref": "2:8-13",
+          "note": "His invitation speech, recalled: 'It is the voyce of my welbeloued: beholde, hee commeth leaping by the mountaines'; 'Arise, my loue, my faire one, and come thy way'; describes winter passing, flowers appearing, and the turtle-dove's voice in the land."
+        },
+        {
+          "ref": "2:14",
+          "note": "Calls her 'My doue, that art in the holes of ye rocke,' asking to see her sight and hear her voice, 'for thy voyce is sweete, and thy sight comely.'"
+        },
+        {
+          "ref": "3:6-11",
+          "note": "His wedding-day procession, described in the third person: 'King Salomon made himselfe a palace of the trees of Lebanon,' pillars of silver, pavement of gold, escorted by 'threescore strong men... of the valiant men of Israel'; crowned by his mother 'in ye day of his mariage.'"
+        },
+        {
+          "ref": "4:1-7",
+          "note": "First head-to-foot praise (hair, teeth, lips, temples, neck, breasts), closing 'Thou art all faire, my loue, and there is no spot in thee.'"
+        },
+        {
+          "ref": "4:8-15",
+          "note": "Continues addressing her as 'My sister, my spouse,' likening her to 'a garden inclosed... a fountaine sealed vp' filled with spice trees — spikenard, saffron, calamus, cinnamon, myrrh, aloes."
+        },
+        {
+          "ref": "5:1",
+          "note": "Answers that he has 'come into my garden, my sister, my spouse'; invites 'O friends' to eat, drink, and 'make you merie, O welbeloued.'"
+        },
+        {
+          "ref": "6:3-9",
+          "note": "Second head-to-foot/city praise: 'Thou art beautifull, my loue, as Tirzah... terrible as an army with baners' (6:3), repeated at the close (6:9); sets her apart from 'threescore Queenes and fourescore concubines' as 'the onely daughter of her mother' (6:6-8)."
+        },
+        {
+          "ref": "6:10-11",
+          "note": "'I went downe to the garden of nuttes... I knewe nothing, my soule set me as the charets of my noble people' — an obscure passage traditionally read as his voice."
+        },
+        {
+          "ref": "7:1-9",
+          "note": "Third head-to-foot praise, this time from feet to head, closing 'Howe faire art thou, and howe pleasant art thou, O my loue, in pleasures!'"
+        },
+        {
+          "ref": "8:13",
+          "note": "Asks to hear her voice: 'O thou that dwellest in the gardens, the companions hearken vnto thy voyce: cause me to heare it.'"
+        }
+      ]
+    },
+    {
+      "id": "shulamite_geneva",
+      "name": "The Shulamite",
+      "role": "manager",
+      "scribeTier": "Rose of the Field",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Solomon"
+        ],
+        "children": [],
+        "note": "Named only 'the Shulamite' (6:12 in this Geneva numbering) — a gentilic, not a personal name, used exactly once. Her mother is referenced but never named (1:4-5; 8:1-2; 8:5); her father is never mentioned at all. Called Solomon's 'spouse' from 4:8 onward and linked to his 'mariage' at 3:11."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Speaks more of the book's lines than any other voice, and frames both of its search-and-reunion sequences (3:1-5; 5:2-6:2).",
+        "Describes herself as 'blacke' from sun exposure while forced to keep her brothers' vineyards (1:4-5), then closes the book still speaking in vineyard imagery of her own (8:12).",
+        "In this Geneva rendering she calls herself 'the rose of the fielde' rather than 'the rose of Sharon' as in KJV — a real translation-choice difference, not an error (see book notes).",
+        "The watchmen who simply encounter her on her first search (3:3) turn violent on her second, striking her and taking her veil (5:7)."
+      ],
+      "verses": [
+        {
+          "ref": "1:1-3",
+          "note": "Opens the book with her own longing: 'Let him kisse me with the kisses of his mouth... Drawe me: we will runne after thee: the King hath brought me into his chabers.'"
+        },
+        {
+          "ref": "1:4-5",
+          "note": "'I am blacke, O daughters of Ierusalem, but comely'; explains it as sun-darkening from being made 'the keeper of ye vines' by her mother's angry sons, closing 'but I kept not mine owne vine.'"
+        },
+        {
+          "ref": "1:6",
+          "note": "Asks where he pastures at noon, 'for why should I be as she that turneth aside to the flockes of thy companions?'"
+        },
+        {
+          "ref": "1:11-13",
+          "note": "While the King is at his 'repast,' she is 'a bundle of myrrhe' and 'a cluster of camphire... in the vines of Engedi' to him."
+        },
+        {
+          "ref": "1:15-16",
+          "note": "Returns his praise: 'My welbeloued, beholde, thou art faire and pleasant: also our bed is greene: The beames of our house are cedars, our rafters are of firre.'"
+        },
+        {
+          "ref": "2:1",
+          "note": "Names herself: 'I am the rose of the fielde, and the lilie of the valleys.'"
+        },
+        {
+          "ref": "2:3-7",
+          "note": "Likens him to 'the apple tree among the trees of the forest'; first of the book's four-times-repeated charge to the daughters of Jerusalem, 'that ye stirre not vp, nor waken my loue, vntill she please.'"
+        },
+        {
+          "ref": "2:15-17",
+          "note": "'Take vs the foxes, the little foxes, which destroy the vines'; closes 'My welbeloued is mine, and I am his: hee feedeth among the lilies.'"
+        },
+        {
+          "ref": "3:1-2",
+          "note": "First search begins: seeks him 'in my bed by night,' finds him not, rises to 'goe about in the citie, by the streetes and by the open places.'"
+        },
+        {
+          "ref": "3:3",
+          "note": "The city watchmen find her; she asks, 'Haue you seene him, whome my soule loueth?'"
+        },
+        {
+          "ref": "3:4",
+          "note": "Just past the watchmen she finds him: 'I tooke holde on him and left him not,' bringing him to 'my mothers house.'"
+        },
+        {
+          "ref": "3:5",
+          "note": "Second occurrence of the charge to the daughters of Jerusalem."
+        },
+        {
+          "ref": "4:16",
+          "note": "Invites the winds to her garden so its spices 'may flow out,' and calls her beloved in to 'eate his pleasant fruite.'"
+        },
+        {
+          "ref": "5:2-6",
+          "note": "Second search begins: 'I sleepe, but mine heart waketh,' hears him knock, delays too long, opens to find her beloved 'gone, and past.'"
+        },
+        {
+          "ref": "5:7",
+          "note": "This time the watchmen 'smote me and wounded me,' and take her veil."
+        },
+        {
+          "ref": "5:8",
+          "note": "Third occurrence of the charge, this time asking the daughters that if they find him, 'tell him that I am sicke of loue.'"
+        },
+        {
+          "ref": "5:9",
+          "note": "The daughters ask what sets her beloved apart from any other, prompting her reply."
+        },
+        {
+          "ref": "5:10-16",
+          "note": "Her own head-to-foot praise of him in reply, closing 'this is my welbeloued, and this is my louer, O daughters of Ierusalem.' NOTE: in this specific extraction, verse 16 also has an extra fragment appended after her closing line — a garbled '(Song of Solomon : )' marker followed by 'O the fairest among women, whither is thy welbeloued gone?... that we may seeke him with thee?' This is the daughters' question that corresponds to KJV 6:1; it is not present as its own numbered verse in this file (see book notes for why this is treated as a likely extraction artifact, not new content)."
+        },
+        {
+          "ref": "6:1-2",
+          "note": "Answers the daughters (per the question appended above): he is 'gone downe into his garden, to the beds of spices'; closes 'I am my welbeloueds, and my welbeloued is mine, who feedeth among the lilies.'"
+        },
+        {
+          "ref": "6:12",
+          "note": "Named here only: 'Returne, returne, O Shulamite, returne: returne that we may behold thee.'"
+        },
+        {
+          "ref": "7:10-13",
+          "note": "'I am my welbeloueds, and his desire is toward mee'; invites him out to the fields and villages, 'there will I giue thee my loue.'"
+        },
+        {
+          "ref": "8:1-4",
+          "note": "Wishes he 'werest as my brother'; fourth and final occurrence of the charge to the daughters of Jerusalem."
+        },
+        {
+          "ref": "8:5",
+          "note": "Asked, 'Who is this that commeth vp out of the wildernesse, leaning vpon her welbeloued?'; recalls being raised up and that her mother 'conceiued' her there."
+        },
+        {
+          "ref": "8:10",
+          "note": "Answers her brothers: 'I am a wall, and my breasts are as towres: then was I in his eyes as one that findeth peace.'"
+        },
+        {
+          "ref": "8:12",
+          "note": "Contrasts Solomon's leased vineyard at Baal-hamon with her own kept vineyard: 'my vineyarde which is mine, is before me.'"
+        },
+        {
+          "ref": "8:14",
+          "note": "The book's final line: 'O my welbeloued, flee away, and be like vnto the roe, or to the yong harte vpon ye mountaines of spices.'"
+        }
+      ]
+    },
+    {
+      "id": "love_strong_as_death_geneva",
+      "name": "Love As Strong As Death",
+      "role": "law",
+      "scribeTier": "Signet Seal",
+      "parentManagerId": null,
+      "deliveredBy": "shulamite_geneva",
+      "purpose": "Declares the nature of love itself — as strong as death, its jealousy as cruel as the grave, burning like the fiercest flame, unquenchable by any flood, and beyond purchase at any price.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Spoken by the Shulamite directly to Solomon (8:6-7), not by a narrator or third party.",
+        "One of the most-quoted passages in the entire Bible on the nature of love, in this translation's own archaic phrasing: 'loue is strong as death: ielousie is cruel as the graue.'",
+        "Uses fire/flame imagery ('the coles thereof are fierie coles, and a vehement flame') found nowhere else in the book's otherwise garden-and-spice vocabulary."
+      ],
+      "verses": [
+        {
+          "ref": "8:6",
+          "note": "'Set mee as a seale on thine heart, and as a signet vpon thine arme: for loue is strong as death: ielousie is cruel as the graue: the coles thereof are fierie coles, and a vehement flame.'"
+        },
+        {
+          "ref": "8:7",
+          "note": "'Much water can not quench loue, neither can the floods drowne it'; love cannot be bought, 'for loue, they would greatly contemne it,' if a man offered 'all the substance of his house.'"
+        }
+      ]
+    },
+    {
+      "id": "daughters_of_jerusalem_geneva",
+      "name": "Daughters of Jerusalem",
+      "role": "submanager",
+      "scribeTier": "Rose of the Field",
+      "parentManagerId": "shulamite_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The bride's circle of companions and witnesses — repeatedly charged by her not to awaken love before its time (2:7; 3:5; 8:4), the ones she turns to for reassurance in 5:9, and the ones who ask after her beloved in the text merged into 5:16 (see book notes).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "An anonymous chorus of young women, companions to the Shulamite; no individual genealogy is given."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Addressed with the same near-identical refrain, 'I charge you, O ye daughters of Ierusalem... that ye stirre not vp, nor waken my loue, vntill she please,' at 2:7, 3:5, and 8:4.",
+        "The only ones in the book who ask the Shulamite a direct question about her beloved (5:9)."
+      ],
+      "verses": [
+        {
+          "ref": "2:7",
+          "note": "First charge: 'that ye stirre not vp, nor waken my loue, vntill she please.'"
+        },
+        {
+          "ref": "3:5",
+          "note": "Second, near-identical charge."
+        },
+        {
+          "ref": "5:8-9",
+          "note": "Charged a third time, then ask what makes her beloved 'more then another louer, that thou doest so charge vs?'"
+        },
+        {
+          "ref": "5:16 (appended text)",
+          "note": "The fragment appended to the end of this file's 5:16 (see book notes) has them ask where her beloved has gone so they can 'seeke him with thee.'"
+        },
+        {
+          "ref": "8:4",
+          "note": "Fourth and final repetition of the charge."
+        }
+      ]
+    },
+    {
+      "id": "watchmen_of_the_city_geneva",
+      "name": "The Watchmen",
+      "role": "submanager",
+      "scribeTier": "Rose of the Field",
+      "parentManagerId": "shulamite_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Patrol the city she searches by night — a neutral presence on her first search (3:3), but strike her and take her veil on the second (5:7).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Anonymous city guards; no genealogy is given."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Their role shifts sharply between the book's two search sequences: helpful bystanders in 3:3, violent in 5:7."
+      ],
+      "verses": [
+        {
+          "ref": "3:3",
+          "note": "Encountered on her first search; she asks if they have seen her beloved."
+        },
+        {
+          "ref": "5:7",
+          "note": "On her second search: 'they smote me and wounded me: the watchmen of the walles tooke away my vaile from me.'"
+        }
+      ]
+    },
+    {
+      "id": "brothers_of_the_shulamite_geneva",
+      "name": "The Shulamite's Brothers",
+      "role": "submanager",
+      "scribeTier": "Rose of the Field",
+      "parentManagerId": "shulamite_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Set her to labor keeping the family vineyards as a girl (1:5), then debate how to guard her honor as a woman in 8:8-9 — answered by her own declaration, 'I am a wall' (8:10).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Referred to only as 'the sonnes of my mother' (1:5), never individually named; their father is never mentioned."
+      },
+      "ageEvents": [],
+      "funFacts": [
+        "Their plan for their 'litle sister' in 8:8-9 is directly answered by her own words in the very next verse, 8:10."
+      ],
+      "verses": [
+        {
+          "ref": "1:5",
+          "note": "'The sonnes of my mother were angry against mee: they made me the keeper of ye vines: but I kept not mine owne vine.'"
+        },
+        {
+          "ref": "8:8-9",
+          "note": "Debate what to do for their 'litle sister' when 'she shalbe spoken for': 'If shee be a wall, we will builde vpon her a siluer palace: and if she be a doore, we wil keepe her in with bordes of cedar.'"
+        }
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "This book contains no genealogies or ancestry records beyond what is already captured in each character's own genealogy field above (Solomon's parentage is drawn from the wider biblical record, not restated in this book; the Shulamite's parents are referenced but never named within the text itself)."
+  }
+}

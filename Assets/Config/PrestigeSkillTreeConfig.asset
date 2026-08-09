@@ -28,8 +28,8 @@ MonoBehaviour:
     description: Awakens your capacity to draw on Grace. Every skill on this tree
       - every branch, and Book Progression - requires this first.
     branch: Core
-    prerequisiteId: 
-    prerequisiteRankRequired: 0
+    prerequisites: []
+    shape: 3
     maxRank: 1
     baseCost: 8
     costGrowthPerRank: 1
@@ -43,8 +43,10 @@ MonoBehaviour:
     displayName: Ink Flow I
     description: +2% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 8
     costGrowthPerRank: 2
@@ -58,8 +60,10 @@ MonoBehaviour:
     displayName: Ink Flow II
     description: +2% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Ink_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 12
     costGrowthPerRank: 2
@@ -73,8 +77,10 @@ MonoBehaviour:
     displayName: Ink Flow III
     description: +2% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Ink_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 18
     costGrowthPerRank: 2
@@ -88,8 +94,10 @@ MonoBehaviour:
     displayName: Ink Flow IV
     description: +3% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Ink_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 23
     costGrowthPerRank: 2
@@ -103,8 +111,10 @@ MonoBehaviour:
     displayName: Ink Flow V
     description: +3% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Ink_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 38
     costGrowthPerRank: 2
@@ -118,8 +128,10 @@ MonoBehaviour:
     displayName: Ink Flow VI
     description: +2.5% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Ink_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 60
     costGrowthPerRank: 2
@@ -133,8 +145,10 @@ MonoBehaviour:
     displayName: Ink Flow VII
     description: +2.5% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Ink_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 105
     costGrowthPerRank: 2
@@ -148,8 +162,10 @@ MonoBehaviour:
     displayName: River of Living Ink
     description: +15% total Ink/sec per rank.
     branch: Ink Flow
-    prerequisiteId: Ink_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Ink_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 375
     costGrowthPerRank: 2
@@ -163,8 +179,10 @@ MonoBehaviour:
     displayName: Steady Hand I
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 8
     costGrowthPerRank: 2
@@ -178,8 +196,10 @@ MonoBehaviour:
     displayName: Steady Hand II
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Tap_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 12
     costGrowthPerRank: 2
@@ -193,8 +213,10 @@ MonoBehaviour:
     displayName: Steady Hand III
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Tap_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 18
     costGrowthPerRank: 2
@@ -208,8 +230,10 @@ MonoBehaviour:
     displayName: Steady Hand IV
     description: +3% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Tap_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 23
     costGrowthPerRank: 2
@@ -223,8 +247,10 @@ MonoBehaviour:
     displayName: Steady Hand V
     description: +3% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Tap_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 38
     costGrowthPerRank: 2
@@ -238,8 +264,10 @@ MonoBehaviour:
     displayName: Steady Hand VI
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Tap_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 60
     costGrowthPerRank: 2
@@ -253,8 +281,10 @@ MonoBehaviour:
     displayName: Steady Hand VII
     description: +2.5% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Tap_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 105
     costGrowthPerRank: 2
@@ -268,8 +298,10 @@ MonoBehaviour:
     displayName: Scribe's Unshaking Hand
     description: +15% tap value per rank.
     branch: Steady Hand
-    prerequisiteId: Tap_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Tap_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 375
     costGrowthPerRank: 2
@@ -283,8 +315,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom I
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 15
     costGrowthPerRank: 2
@@ -298,8 +332,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom II
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Manager_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 23
     costGrowthPerRank: 2
@@ -313,8 +349,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom III
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Manager_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 33
     costGrowthPerRank: 2
@@ -328,8 +366,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom IV
     description: +2.5% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Manager_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 45
     costGrowthPerRank: 2
@@ -343,8 +383,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom V
     description: +2.5% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Manager_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 68
     costGrowthPerRank: 2
@@ -358,8 +400,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom VI
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Manager_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 98
     costGrowthPerRank: 2
@@ -373,8 +417,10 @@ MonoBehaviour:
     displayName: Overseer's Wisdom VII
     description: +2% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Manager_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 135
     costGrowthPerRank: 2
@@ -388,8 +434,10 @@ MonoBehaviour:
     displayName: Joseph's Full Storehouse
     description: +10% manager bonus per rank.
     branch: Overseer's Wisdom
-    prerequisiteId: Manager_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Manager_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 450
     costGrowthPerRank: 2
@@ -403,8 +451,10 @@ MonoBehaviour:
     displayName: Illuminated Pages I
     description: +2% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 9
     costGrowthPerRank: 2
@@ -418,8 +468,10 @@ MonoBehaviour:
     displayName: Illuminated Pages II
     description: +2% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Progress_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 15
     costGrowthPerRank: 2
@@ -433,8 +485,10 @@ MonoBehaviour:
     displayName: Illuminated Pages III
     description: +2% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Progress_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 23
     costGrowthPerRank: 2
@@ -448,8 +502,10 @@ MonoBehaviour:
     displayName: Illuminated Pages IV
     description: +3% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Progress_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 30
     costGrowthPerRank: 2
@@ -463,8 +519,10 @@ MonoBehaviour:
     displayName: Illuminated Pages V
     description: +3% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Progress_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 45
     costGrowthPerRank: 2
@@ -478,8 +536,10 @@ MonoBehaviour:
     displayName: Illuminated Pages VI
     description: +2.5% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Progress_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 68
     costGrowthPerRank: 2
@@ -493,8 +553,10 @@ MonoBehaviour:
     displayName: Illuminated Pages VII
     description: +2.5% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Progress_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 98
     costGrowthPerRank: 2
@@ -508,8 +570,10 @@ MonoBehaviour:
     displayName: Marginalia of the Faithful
     description: +15% progress multiplier per rank.
     branch: Illuminated Pages
-    prerequisiteId: Progress_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Progress_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 330
     costGrowthPerRank: 2
@@ -523,8 +587,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence I
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 9
     costGrowthPerRank: 2
@@ -538,8 +604,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence II
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Milestone_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 15
     costGrowthPerRank: 2
@@ -553,8 +621,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence III
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Milestone_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 23
     costGrowthPerRank: 2
@@ -568,8 +638,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence IV
     description: +2.5% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Milestone_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 30
     costGrowthPerRank: 2
@@ -583,8 +655,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence V
     description: +2.5% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Milestone_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 45
     costGrowthPerRank: 2
@@ -598,8 +672,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence VI
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Milestone_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 68
     costGrowthPerRank: 2
@@ -613,8 +689,10 @@ MonoBehaviour:
     displayName: Scribe's Diligence VII
     description: +2% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Milestone_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 98
     costGrowthPerRank: 2
@@ -628,8 +706,10 @@ MonoBehaviour:
     displayName: Tireless Copyist
     description: +10% scribe milestone bonus per rank.
     branch: Scribe's Diligence
-    prerequisiteId: Milestone_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Milestone_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 330
     costGrowthPerRank: 2
@@ -643,8 +723,10 @@ MonoBehaviour:
     displayName: Grace of Memorization I
     description: +2% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 12
     costGrowthPerRank: 2
@@ -658,8 +740,10 @@ MonoBehaviour:
     displayName: Grace of Memorization II
     description: +2% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Grace_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 18
     costGrowthPerRank: 2
@@ -673,8 +757,10 @@ MonoBehaviour:
     displayName: Grace of Memorization III
     description: +2% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Grace_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 27
     costGrowthPerRank: 2
@@ -688,8 +774,10 @@ MonoBehaviour:
     displayName: Grace of Memorization IV
     description: +3% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Grace_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 38
     costGrowthPerRank: 2
@@ -703,8 +791,10 @@ MonoBehaviour:
     displayName: Grace of Memorization V
     description: +3% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Grace_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 53
     costGrowthPerRank: 2
@@ -718,8 +808,10 @@ MonoBehaviour:
     displayName: Grace of Memorization VI
     description: +2.5% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Grace_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 83
     costGrowthPerRank: 2
@@ -733,8 +825,10 @@ MonoBehaviour:
     displayName: Grace of Memorization VII
     description: +2.5% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Grace_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 128
     costGrowthPerRank: 2
@@ -748,8 +842,10 @@ MonoBehaviour:
     displayName: Perfect Recall
     description: +15% Grace earned per prestige, per rank.
     branch: Grace of Memorization
-    prerequisiteId: Grace_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Grace_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 450
     costGrowthPerRank: 2
@@ -763,8 +859,10 @@ MonoBehaviour:
     displayName: Swift Unlock I
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 9
     costGrowthPerRank: 2
@@ -778,8 +876,10 @@ MonoBehaviour:
     displayName: Swift Unlock II
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Discount_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 15
     costGrowthPerRank: 2
@@ -793,8 +893,10 @@ MonoBehaviour:
     displayName: Swift Unlock III
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Discount_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 23
     costGrowthPerRank: 2
@@ -808,8 +910,10 @@ MonoBehaviour:
     displayName: Swift Unlock IV
     description: -2% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Discount_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 30
     costGrowthPerRank: 2
@@ -823,8 +927,10 @@ MonoBehaviour:
     displayName: Swift Unlock V
     description: -2% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Discount_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 45
     costGrowthPerRank: 2
@@ -838,8 +944,10 @@ MonoBehaviour:
     displayName: Swift Unlock VI
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Discount_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 68
     costGrowthPerRank: 2
@@ -853,8 +961,10 @@ MonoBehaviour:
     displayName: Swift Unlock VII
     description: -1.5% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Discount_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 98
     costGrowthPerRank: 2
@@ -868,8 +978,10 @@ MonoBehaviour:
     displayName: Open Door
     description: -8% verse/chapter Ink cost per rank.
     branch: Swift Unlock
-    prerequisiteId: Discount_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Discount_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 330
     costGrowthPerRank: 2
@@ -883,8 +995,10 @@ MonoBehaviour:
     displayName: Manager's Calling I
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Core
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 15
     costGrowthPerRank: 2
@@ -898,8 +1012,10 @@ MonoBehaviour:
     displayName: Manager's Calling II
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_0
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Unlock_0
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 23
     costGrowthPerRank: 2
@@ -913,8 +1029,10 @@ MonoBehaviour:
     displayName: Manager's Calling III
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_1
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Unlock_1
+      rankRequired: 1
+    shape: 0
     maxRank: 1
     baseCost: 30
     costGrowthPerRank: 2
@@ -928,8 +1046,10 @@ MonoBehaviour:
     displayName: Manager's Calling IV
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_2
-    prerequisiteRankRequired: 1
+    prerequisites:
+    - nodeId: Unlock_2
+      rankRequired: 1
+    shape: 0
     maxRank: 3
     baseCost: 45
     costGrowthPerRank: 2
@@ -943,8 +1063,10 @@ MonoBehaviour:
     displayName: Manager's Calling V
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_3
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Unlock_3
+      rankRequired: 3
+    shape: 0
     maxRank: 3
     baseCost: 68
     costGrowthPerRank: 2
@@ -958,8 +1080,10 @@ MonoBehaviour:
     displayName: Manager's Calling VI
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_4
-    prerequisiteRankRequired: 3
+    prerequisites:
+    - nodeId: Unlock_4
+      rankRequired: 3
+    shape: 0
     maxRank: 5
     baseCost: 105
     costGrowthPerRank: 2
@@ -973,8 +1097,10 @@ MonoBehaviour:
     displayName: Manager's Calling VII
     description: -1 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_5
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Unlock_5
+      rankRequired: 5
+    shape: 0
     maxRank: 5
     baseCost: 150
     costGrowthPerRank: 2
@@ -988,8 +1114,10 @@ MonoBehaviour:
     displayName: Called Before Their Time
     description: -3 manager unlock level requirement per rank.
     branch: Manager's Calling
-    prerequisiteId: Unlock_6
-    prerequisiteRankRequired: 5
+    prerequisites:
+    - nodeId: Unlock_6
+      rankRequired: 5
+    shape: 2
     maxRank: 1
     baseCost: 525
     costGrowthPerRank: 2
@@ -999,621 +1127,35 @@ MonoBehaviour:
     unlockBookDisplayName: 
     isCapstone: 1
     requiresResetPrestige: 1
-  - id: Book_exodus_2
-    displayName: Exodus
-    description: Unlocks Exodus for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Core
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 30
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: exodus_2
-    unlockBookDisplayName: Exodus
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_leviticus_3
-    displayName: Leviticus
-    description: Unlocks Leviticus for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_exodus_2
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 35
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: leviticus_3
-    unlockBookDisplayName: Leviticus
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_numbers_4
-    displayName: Numbers
-    description: Unlocks Numbers for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_leviticus_3
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 42
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: numbers_4
-    unlockBookDisplayName: Numbers
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_deuteronomy_5
-    displayName: Deuteronomy
-    description: Unlocks Deuteronomy for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_numbers_4
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 49
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: deuteronomy_5
-    unlockBookDisplayName: Deuteronomy
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_joshua_6
-    displayName: Joshua
-    description: Unlocks Joshua for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_deuteronomy_5
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 58
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: joshua_6
-    unlockBookDisplayName: Joshua
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_judges_7
-    displayName: Judges
-    description: Unlocks Judges for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_joshua_6
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 69
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: judges_7
-    unlockBookDisplayName: Judges
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_ruth_8
-    displayName: Ruth
-    description: Unlocks Ruth for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_judges_7
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 81
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: ruth_8
-    unlockBookDisplayName: Ruth
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_1samuel_9
-    displayName: 1 Samuel
-    description: Unlocks 1 Samuel for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_ruth_8
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 96
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 1samuel_9
-    unlockBookDisplayName: 1 Samuel
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_2samuel_10
-    displayName: 2 Samuel
-    description: Unlocks 2 Samuel for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_1samuel_9
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 113
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 2samuel_10
-    unlockBookDisplayName: 2 Samuel
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_1kings_11
-    displayName: 1 Kings
-    description: Unlocks 1 Kings for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_2samuel_10
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 133
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 1kings_11
-    unlockBookDisplayName: 1 Kings
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_2kings_12
-    displayName: 2 Kings
-    description: Unlocks 2 Kings for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_1kings_11
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 157
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 2kings_12
-    unlockBookDisplayName: 2 Kings
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_1chronicles_13
-    displayName: 1 Chronicles
-    description: Unlocks 1 Chronicles for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_2kings_12
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 185
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 1chronicles_13
-    unlockBookDisplayName: 1 Chronicles
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_2chronicles_14
-    displayName: 2 Chronicles
-    description: Unlocks 2 Chronicles for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_1chronicles_13
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 219
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: 2chronicles_14
-    unlockBookDisplayName: 2 Chronicles
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_ezra_15
-    displayName: Ezra
-    description: Unlocks Ezra for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_2chronicles_14
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 258
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: ezra_15
-    unlockBookDisplayName: Ezra
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_nehemiah_16
-    displayName: Nehemiah
-    description: Unlocks Nehemiah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_ezra_15
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 304
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: nehemiah_16
-    unlockBookDisplayName: Nehemiah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_esther_17
-    displayName: Esther
-    description: Unlocks Esther for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_nehemiah_16
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 359
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: esther_17
-    unlockBookDisplayName: Esther
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_job_18
-    displayName: Job
-    description: Unlocks Job for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_esther_17
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 424
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: job_18
-    unlockBookDisplayName: Job
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_psalms_19
-    displayName: Psalms
-    description: Unlocks Psalms for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_job_18
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 500
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: psalms_19
-    unlockBookDisplayName: Psalms
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_proverbs_20
-    displayName: Proverbs
-    description: Unlocks Proverbs for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_psalms_19
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 590
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: proverbs_20
-    unlockBookDisplayName: Proverbs
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_ecclesiastes_21
-    displayName: Ecclesiastes
-    description: Unlocks Ecclesiastes for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_proverbs_20
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 696
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: ecclesiastes_21
-    unlockBookDisplayName: Ecclesiastes
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_songofsolomon_22
-    displayName: Song of Solomon
-    description: Unlocks Song of Solomon for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_ecclesiastes_21
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 822
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: songofsolomon_22
-    unlockBookDisplayName: Song of Solomon
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_isaiah_23
-    displayName: Isaiah
-    description: Unlocks Isaiah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_songofsolomon_22
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 970
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: isaiah_23
-    unlockBookDisplayName: Isaiah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_jeremiah_24
-    displayName: Jeremiah
-    description: Unlocks Jeremiah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_isaiah_23
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 1144
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: jeremiah_24
-    unlockBookDisplayName: Jeremiah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_lamentations_25
-    displayName: Lamentations
-    description: Unlocks Lamentations for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_jeremiah_24
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 1350
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: lamentations_25
-    unlockBookDisplayName: Lamentations
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_ezekiel_26
-    displayName: Ezekiel
-    description: Unlocks Ezekiel for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_lamentations_25
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 1593
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: ezekiel_26
-    unlockBookDisplayName: Ezekiel
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_daniel_27
-    displayName: Daniel
-    description: Unlocks Daniel for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_ezekiel_26
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 1880
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: daniel_27
-    unlockBookDisplayName: Daniel
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_hosea_28
-    displayName: Hosea
-    description: Unlocks Hosea for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_daniel_27
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 2218
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: hosea_28
-    unlockBookDisplayName: Hosea
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_joel_29
-    displayName: Joel
-    description: Unlocks Joel for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_hosea_28
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 2618
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: joel_29
-    unlockBookDisplayName: Joel
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_amos_30
-    displayName: Amos
-    description: Unlocks Amos for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_joel_29
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 3089
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: amos_30
-    unlockBookDisplayName: Amos
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_obadiah_31
-    displayName: Obadiah
-    description: Unlocks Obadiah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_amos_30
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 3645
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: obadiah_31
-    unlockBookDisplayName: Obadiah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_jonah_32
-    displayName: Jonah
-    description: Unlocks Jonah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_obadiah_31
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 4301
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: jonah_32
-    unlockBookDisplayName: Jonah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_micah_33
-    displayName: Micah
-    description: Unlocks Micah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_jonah_32
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 5075
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: micah_33
-    unlockBookDisplayName: Micah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_nahum_34
-    displayName: Nahum
-    description: Unlocks Nahum for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_micah_33
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 5989
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: nahum_34
-    unlockBookDisplayName: Nahum
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_habakkuk_35
-    displayName: Habakkuk
-    description: Unlocks Habakkuk for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_nahum_34
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 7067
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: habakkuk_35
-    unlockBookDisplayName: Habakkuk
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_zephaniah_36
-    displayName: Zephaniah
-    description: Unlocks Zephaniah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_habakkuk_35
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 8339
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: zephaniah_36
-    unlockBookDisplayName: Zephaniah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_haggai_37
-    displayName: Haggai
-    description: Unlocks Haggai for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_zephaniah_36
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 9840
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: haggai_37
-    unlockBookDisplayName: Haggai
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_zechariah_38
-    displayName: Zechariah
-    description: Unlocks Zechariah for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_haggai_37
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 11611
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: zechariah_38
-    unlockBookDisplayName: Zechariah
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_malachi_39
-    displayName: Malachi
-    description: Unlocks Malachi for purchase on the Books tab.
-    branch: Book Progression
-    prerequisiteId: Book_zechariah_38
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 13701
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: malachi_39
-    unlockBookDisplayName: Malachi
-    isCapstone: 0
-    requiresResetPrestige: 0
-  - id: Book_NT_Gospel Threshold
-    displayName: Gospel Threshold
-    description: 'Unlocks New Testament books: matthew_40, mark_41, luke_42, john_43.'
-    branch: Book Progression
-    prerequisiteId: Book_malachi_39
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 2000
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: matthew_40,mark_41,luke_42,john_43
-    unlockBookDisplayName: Gospel Threshold
-    isCapstone: 0
-    requiresResetPrestige: 1
-  - id: Book_NT_Apostolic Path
-    displayName: Apostolic Path
-    description: 'Unlocks New Testament books: acts_44, romans_45, 1corinthians_46,
-      2corinthians_47, galatians_48, ephesians_49, philippians_50, colossians_51,
-      1thessalonians_52, 2thessalonians_53, 1timothy_54, 2timothy_55, titus_56, philemon_57,
-      hebrews_58, james_59, 1peter_60, 2peter_61, 1john_62, 2john_63, 3john_64.'
-    branch: Book Progression
-    prerequisiteId: Book_NT_Gospel Threshold
-    prerequisiteRankRequired: 1
+  - id: Convergence
+    displayName: Grace Made Perfect
+    description: Requires every branch's capstone fully mastered. +25% total Ink/sec,
+      on top of every other bonus.
+    branch: Core
+    prerequisites:
+    - nodeId: Ink_7
+      rankRequired: 1
+    - nodeId: Tap_7
+      rankRequired: 1
+    - nodeId: Manager_7
+      rankRequired: 1
+    - nodeId: Progress_7
+      rankRequired: 1
+    - nodeId: Milestone_7
+      rankRequired: 1
+    - nodeId: Grace_7
+      rankRequired: 1
+    - nodeId: Discount_7
+      rankRequired: 1
+    - nodeId: Unlock_7
+      rankRequired: 1
+    shape: 4
     maxRank: 1
     baseCost: 5000
     costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: acts_44,romans_45,1corinthians_46,2corinthians_47,galatians_48,ephesians_49,philippians_50,colossians_51,1thessalonians_52,2thessalonians_53,1timothy_54,2timothy_55,titus_56,philemon_57,hebrews_58,james_59,1peter_60,2peter_61,1john_62,2john_63,3john_64
-    unlockBookDisplayName: Apostolic Path
-    isCapstone: 0
-    requiresResetPrestige: 1
-  - id: Book_NT_Revelation's Veil
-    displayName: Revelation's Veil
-    description: 'Unlocks New Testament books: jude_65, revelation_66.'
-    branch: Book Progression
-    prerequisiteId: Book_NT_Apostolic Path
-    prerequisiteRankRequired: 1
-    maxRank: 1
-    baseCost: 8000
-    costGrowthPerRank: 1
-    effectType: 8
-    effectPerRank: 0
-    unlockBookResourceId: jude_65,revelation_66
-    unlockBookDisplayName: Revelation's Veil
+    effectType: 0
+    effectPerRank: 0.25
+    unlockBookResourceId: 
+    unlockBookDisplayName: 
     isCapstone: 1
     requiresResetPrestige: 1

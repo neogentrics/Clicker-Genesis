@@ -22,6 +22,13 @@ namespace ClickerGenesis.Save
         public PrestigeState prestige = new PrestigeState();
         public List<BookProgressEntry> books = new List<BookProgressEntry>();
         public string activeBookResourceId;
+
+        /// <summary>The book the player originally started this slot in (2026-08-08, Skill Tree
+        /// redesign) - set once at New Game and never changed afterward, even if activeBookResourceId
+        /// later moves via SwitchActiveBook. The Grace tree's Book Progression branch is anchored to
+        /// this, not to whichever book happens to be active, so re-loading a save always rebuilds
+        /// the exact same cost/prerequisite shape the player has already spent Grace against.</summary>
+        public string startingBookResourceId;
     }
 
     [Serializable]
@@ -73,6 +80,11 @@ namespace ClickerGenesis.Save
         /// <summary>Every purchased Grace skill node id + its rank. List-of-pairs, not a
         /// Dictionary - JsonUtility doesn't support Dictionary&lt;,&gt; directly.</summary>
         public List<SkillRankEntry> skillRanks = new List<SkillRankEntry>();
+
+        /// <summary>Which book each generic "Unlock New Book" node's rank was spent on
+        /// (2026-08-09, player-choice book unlocking redesign) - list-of-pairs, same reason as
+        /// skillRanks above.</summary>
+        public List<BookChoiceEntry> bookChoices = new List<BookChoiceEntry>();
     }
 
     [Serializable]
@@ -80,6 +92,13 @@ namespace ClickerGenesis.Save
     {
         public string nodeId;
         public int rank;
+    }
+
+    [Serializable]
+    public class BookChoiceEntry
+    {
+        public string nodeId;
+        public string bookResourceId;
     }
 
     /// <summary>One entry per book the player has EVER touched, not just the active one -

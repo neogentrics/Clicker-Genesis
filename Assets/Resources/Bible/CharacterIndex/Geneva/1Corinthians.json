@@ -1,0 +1,723 @@
+{
+  "book": "1 Corinthians",
+  "translation": "Geneva",
+  "canonicalOrder": 58,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read in full from the real Geneva 1560 extraction (16 chapters, 437 verses). Structurally and narratively this book is IDENTICAL to the KJV's 1 Corinthians — same 16 chapters, same pastoral-letter shape, same named individuals (Paul, Sosthenes, the household of Cloe, Apollos, Cephas, Crispus, Gaius, the household of Stephanas, Timotheus, Fortunatus, Achaicus, Aquila and Priscilla, and an undisambiguated James at 15:7), same doctrinal topics in the same order. No deuterocanonical or canonical-structure differences exist here (unlike some other books in this project) — this is a genuine like-for-like content match to KJV, just rendered in 1560 English. Per the guiding \"index the real text, don't force-fit\" rule, the tier/character model below is the SAME shape as the validated KJV draft (one personally-embodied figure, Paul, carrying ten law/theme tiers of doctrinal content as submanagers around him), because that shape is what the actual Geneva text supports too — only Paul acts in scenes of his own; every other name is reported, sent, greeted, or cited in passing. Real WORDING-LEVEL differences worth flagging (translation choices, not content differences): (1) the household is spelled 'Cloe' in this text (1:11), not 'Chloe' — same collective reference, spelling variant of the period, not a different group; (2) throughout ch.13 this translation reads 'loue' consistently, never 'charity' — the tier here is named 'Love' rather than the KJV-style 'Charity' to match the real word actually used; (3) 6:20 reads 'bought for a price,' not 'bought with a price'; (4) 6:9-10's vice list uses the period word 'buggerers' where other translations phrase the same category differently; (5) ch.8 opens 'things sacrificed vnto idols' rather than a 'meats offered' heading-style phrase; (6) 14:40 closes 'let all things be done honestly, and by order,' not 'decently and in order.' Also period-typical orthography throughout (I/J interchange: 'Iesus,' 'Iewes,' 'Iames') is a printing convention of 1560 English, not a naming variant, and is normalized to modern spelling in names/ids here while direct verse notes preserve the real archaic wording where quoted. Naming-collision flags carried over from the KJV precedent, since the same names recur here: 'Cephas' is Simon Peter's Aramaic name, never narrated in action within this letter, only cited; the 'Iames' of 15:7 is not textually disambiguated from other men named James within this book, flagged rather than asserted; Sosthenes' possible identity with the synagogue ruler beaten in Acts 18:17 is an unconfirmed traditional link, not stated in this text. The unnamed man of ch.5 (father's-wife case) is never given an invented name — indexed as a law/theme tier around the case itself, not as a person.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paul, Apostle to the Corinthians",
+      "managerId": "paul_geneva_1corinthians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Contentions Among You",
+      "managerId": "church_divisions_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "One Should Have His Fathers Wife",
+      "managerId": "unrepentant_brother_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Ye Are Bought For a Price",
+      "managerId": "lawsuits_and_temple_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Instructions on Marriage",
+      "managerId": "marriage_instructions_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Things Sacrificed Unto Idols",
+      "managerId": "meat_offered_idols_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Head Coverings and the Lords Supper",
+      "managerId": "head_covering_lords_table_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "One Body, Many Members",
+      "managerId": "spiritual_gifts_one_body_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Love",
+      "managerId": "love_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Order in the Assembly",
+      "managerId": "order_in_assembly_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Resurrection of the Dead",
+      "managerId": "resurrection_of_dead_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_1corinthians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:1",
+          "note": "Opens the letter as 'an Apostle of Iesus Christ, through the will of God,' with 'our brother Sosthenes' joining as co-sender."
+        },
+        {
+          "ref": "1 Corinthians 1:10-13",
+          "note": "Beseeches the brethren by the Name of the Lord that there be no dissensions among them, directly addressing the report that 'euery one of you saith, I am Pauls, and I am Apollos, and I am Cephas, and I am Christs.'"
+        },
+        {
+          "ref": "1 Corinthians 1:14-17",
+          "note": "States he is thankful he baptized none of them but Crispus and Gaius (and the household of Stephanas), lest any say he baptized into his own name; recalls Christ sent him 'not to baptize, but to preache the Gospel.'"
+        },
+        {
+          "ref": "1 Corinthians 2:1-5",
+          "note": "Recalls coming to them 'not with excellencie of woordes, or of wisedome' but in weakness, fear, and much trembling, so their faith would stand in the power of God, not the wisdom of men."
+        },
+        {
+          "ref": "1 Corinthians 3:6",
+          "note": "Describes his own role and Apollos's as complementary labor: 'I haue planted, Apollos watred, but God gaue the increase.'"
+        },
+        {
+          "ref": "1 Corinthians 4:14-17",
+          "note": "Writes not to shame but to admonish 'as my beloued children,' and states he has sent Timotheus, 'my beloued sonne,' to remind them of his ways in Christ."
+        },
+        {
+          "ref": "1 Corinthians 4:21",
+          "note": "Asks whether he should come to them 'with a rod, or in loue, and in ye spirite of meekenes.'"
+        },
+        {
+          "ref": "1 Corinthians 9:1-18",
+          "note": "Defends his own apostleship and his right to eat, drink, and be materially supported, yet states he has used none of these rights so as not to hinder the Gospel of Christ."
+        },
+        {
+          "ref": "1 Corinthians 9:19-27",
+          "note": "Describes making himself 'seruant vnto all men' to win the more, being made 'all thinges to all men,' and beating down his own body 'lest by any meanes after that I haue preached to other, I my selfe should be reproued.'"
+        },
+        {
+          "ref": "1 Corinthians 15:8-10",
+          "note": "Recounts being 'seene also of me, as of one borne out of due time,' calling himself 'the least of the Apostles, which am not meete to be called an Apostle, because I persecuted the Church of God,' and crediting the grace of God for what he is."
+        },
+        {
+          "ref": "1 Corinthians 16:1-4",
+          "note": "Gives practical instructions for the gathering for the Saints, as he had ordained in the Churches of Galatia."
+        },
+        {
+          "ref": "1 Corinthians 16:5-9",
+          "note": "Shares his travel plans, intending to tarry at Ephesus until Pentecost because 'a great doore and effectuall is opened vnto me,' though 'there are many aduersaries.'"
+        },
+        {
+          "ref": "1 Corinthians 16:21-24",
+          "note": "Closes with 'the salutation of me Paul with mine owne hand,' pronounces execration on any who love not the Lord Iesus Christ ('maran-atha'), and blesses the church with grace and his own love."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Calls himself in 15:9 'the least of the Apostles, which am not meete to be called an Apostle, because I persecuted the Church of God' — a direct self-assessment in the text itself.",
+        "States in 7:8 that he wishes 'all men were euen as I my selfe am,' i.e. unmarried, the basis for his counsel to the unmarried and widows."
+      ]
+    },
+    {
+      "id": "sosthenes_geneva_1corinthians",
+      "name": "Sosthenes",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A possible identification with the Sosthenes beaten as ruler of the synagogue in Acts 18:17 is a common tradition, but this letter itself gives no detail confirming they are the same man — flagged as unconfirmed, not asserted.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:1",
+          "note": "Named alongside Paul as co-sender, called 'our brother Sosthenes.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cloe_household_geneva",
+      "name": "The Household of Cloe",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Spelled 'Cloe' in this translation (KJV spells the same collective reference 'Chloe') — a period spelling variant, not a different group. Treated as one collective entry per the text, which names only 'them that are of the house of Cloe' without differentiating individuals.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:11",
+          "note": "Their report — 'declared vnto me...by them that are of the house of Cloe' — is what informed Paul of the contentions dividing the Corinthian church."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "apollos_geneva_1corinthians",
+      "name": "Apollos",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Named head of one Corinthian faction, but the text presents him as Paul's willing co-laborer rather than a rival — 'he that planteth, and he that watreth, are one' (3:8).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:12",
+          "note": "Named as one of the rallying figures ('I am Apollos') around whom the church had divided."
+        },
+        {
+          "ref": "1 Corinthians 3:4-9",
+          "note": "Described by Paul as a fellow servant who 'watred' what Paul had planted, with 'God gaue the increase.'"
+        },
+        {
+          "ref": "1 Corinthians 4:6",
+          "note": "Paul says he applied the planting/watering example 'figuratiuely' to himself and Apollos for their sakes, so none would 'swell' against another."
+        },
+        {
+          "ref": "1 Corinthians 16:12",
+          "note": "Paul reports he 'greatly desired' Apollos to come with the brethren, but 'his mind was not at all to come at this time,' though he would come when he had 'conuenient time.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cephas_geneva_1corinthians",
+      "name": "Cephas",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "NAMING NOTE: Cephas is Simon Peter's Aramaic name. He is referenced only as a faction namesake and in passing comparisons; he takes no narrated action within this letter, distinguishing this entry from a full person-tier appearance.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:12",
+          "note": "Named as another factional rallying figure ('I am Cephas')."
+        },
+        {
+          "ref": "1 Corinthians 3:22",
+          "note": "Listed among those the Corinthians belong to in Christ rather than being divided over ('whether it be Paul, or Apollos, or Cephas')."
+        },
+        {
+          "ref": "1 Corinthians 9:5",
+          "note": "Cited as an example of an Apostle with power to 'lead about a wife being a sister,' 'as well as...the brethren of the Lord, and Cephas.'"
+        },
+        {
+          "ref": "1 Corinthians 15:5",
+          "note": "Listed first among those to whom the risen Christ 'was seene.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "timotheus_geneva_1corinthians",
+      "name": "Timotheus",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Spelled 'Timotheus' in this translation (a common period rendering of the same name as 'Timothy').",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 4:17",
+          "note": "Paul describes sending Timotheus, 'my beloued sonne, and faithfull in the Lord,' to remind the church of Paul's ways in Christ."
+        },
+        {
+          "ref": "1 Corinthians 16:10-11",
+          "note": "Paul instructs the church to see that Timotheus 'be without feare with you,' since 'he worketh the worke of the Lord, euen as I doe,' and to send him forth in peace."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "stephanas_household_geneva",
+      "name": "The Household of Stephanas",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Stephanas, Fortunatus, and Achaicus are named together as one delegation in 16:17 and treated as a single collective entry, matching how the text presents them acting jointly.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:16",
+          "note": "Paul recalls he 'baptized also the houshold of Stephanas,' adding he does not know whether he baptized any other."
+        },
+        {
+          "ref": "1 Corinthians 16:15-18",
+          "note": "Described as 'the first fruites of Achaia' who 'haue giuen themselues to minister vnto the Saintes'; Paul urges obedience to such, and states Stephanas, Fortunatus, and Achaicus 'haue comforted my spirite and yours.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "aquila_priscilla_geneva_1corinthians",
+      "name": "Aquila and Priscilla",
+      "role": "submanager",
+      "scribeTier": "Paul, Apostle to the Corinthians",
+      "parentManagerId": "paul_geneva_1corinthians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Named together as a married couple acting jointly; kept as one combined entry since this text does not differentiate their individual actions.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Corinthians 16:19",
+          "note": "'Aquila and Priscilla with ye Church that is in their house, salute you greatly in the Lord.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "church_divisions_geneva",
+      "name": "Contentions Among You",
+      "role": "law",
+      "scribeTier": "Contentions Among You",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Addresses the report that the Corinthian church had split into rival factions around the names of Paul, Apollos, Cephas, and Christ. Contrasts worldly wisdom with the seeming 'foolishnesse' of the preached cross, reframes the apostles as servants and 'disposers of the secrets of God' rather than figures to exalt over one another, and warns against pride in place of the unity the Gospel is meant to produce.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 1:10-17",
+          "note": "Opens the rebuke of factionalism and Paul's thankfulness he baptized few, so none could claim baptism in his name."
+        },
+        {
+          "ref": "1 Corinthians 1:18-25",
+          "note": "Contrasts the wisdom of the world with 'the preaching of the crosse,' which is 'foolishnesse' to them that perish but 'the power of God' to them that are saved."
+        },
+        {
+          "ref": "1 Corinthians 2:6-16",
+          "note": "Speaks of 'the hid wisedom' of God revealed by the Spirit, not discerned by the natural man."
+        },
+        {
+          "ref": "1 Corinthians 3:1-3",
+          "note": "Rebukes the Corinthians as 'carnall,' still 'babes in Christ,' evidenced by envying and strife among them."
+        },
+        {
+          "ref": "1 Corinthians 3:10-15",
+          "note": "Uses a building metaphor — Paul as 'a skilfull master builder' who laid the foundation, with each man's work to be tried by fire."
+        },
+        {
+          "ref": "1 Corinthians 3:21-23",
+          "note": "Instructs that all things — including Paul, Apollos, and Cephas — belong to the believers, and they belong to Christ."
+        },
+        {
+          "ref": "1 Corinthians 4:1-5",
+          "note": "Describes ministers of Christ as 'disposers of the secrets of God,' accountable to the Lord rather than to human judgment."
+        },
+        {
+          "ref": "1 Corinthians 4:9-13",
+          "note": "Describes the apostles made 'a gasing stocke vnto the worlde,' fools for Christ's sake, reviled yet blessing in return."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "unrepentant_brother_geneva",
+      "name": "One Should Have His Fathers Wife",
+      "role": "law",
+      "scribeTier": "One Should Have His Fathers Wife",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Addresses a reported case of fornication within the church — a man with his father's wife — that the congregation had tolerated rather than mourned. Establishes church discipline: removing the unrepentant offender from fellowship both to protect the body (the 'leauen' warning) and for the offender's own restoration ('that the spirit may be saued').",
+      "verses": [
+        {
+          "ref": "1 Corinthians 5:1-2",
+          "note": "Reports fornication 'not once named among the Gentiles...that one should haue his fathers wife,' rebuking the church for being 'puffed vp' rather than sorrowful."
+        },
+        {
+          "ref": "1 Corinthians 5:3-5",
+          "note": "Paul, absent in body but present in spirit, directs the man 'be deliuered vnto Satan, for the destruction of the flesh, that the spirit may be saued in the day of the Lord Iesus.'"
+        },
+        {
+          "ref": "1 Corinthians 5:6-8",
+          "note": "Uses the image of leaven — 'a litle leauen, leaueneth ye whole lumpe' — urging them to purge it out and keep the feast 'with the vnleauened bread of synceritie and trueth.'"
+        },
+        {
+          "ref": "1 Corinthians 5:9-13",
+          "note": "Clarifies he meant not to avoid all worldly company but specifically one 'called a brother' who is a fornicator or similarly wicked; closes: 'Put away therefore from among your selues that wicked man.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lawsuits_and_temple_geneva",
+      "name": "Ye Are Bought For a Price",
+      "role": "law",
+      "scribeTier": "Ye Are Bought For a Price",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Covers two related concerns: believers taking legal disputes against each other before unbelieving judges instead of settling matters among the Saints, and a warning against fornication grounded in the teaching that the believer's body is a member of Christ and 'the temple of the holy Ghost,' bought for a price.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 6:1-6",
+          "note": "Rebukes believers for being 'iudged vnder the vniust' instead of settling disputes among the Saints, who shall one day judge the world and Angels."
+        },
+        {
+          "ref": "1 Corinthians 6:7-8",
+          "note": "Asks why they do not rather 'suffer wrong' or 'susteine harme' than sue a brother, accusing them of doing wrong and harm 'to your brethren.'"
+        },
+        {
+          "ref": "1 Corinthians 6:9-11",
+          "note": "Warns 'the vnrighteous shall not inherite the kingdome of God,' listing categories including 'fornicatours...wantons, nor buggerers...theeues...drunkards,' then reminds them 'such were some of you: but yee are washed...sanctified...iustified.'"
+        },
+        {
+          "ref": "1 Corinthians 6:12-17",
+          "note": "States 'all thinges are lawfull vnto mee, but all thinges are not profitable,' and he will not be 'brought vnder the power' of any; the body is 'not for fornication, but for the Lord,' made a member of Christ."
+        },
+        {
+          "ref": "1 Corinthians 6:18-20",
+          "note": "Commands fleeing fornication as sin against one's own body, calling it 'the temple of the holy Ghost,' urging believers to glorify God in body and spirit, 'for yee are bought for a price.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "marriage_instructions_geneva",
+      "name": "Instructions on Marriage",
+      "role": "law",
+      "scribeTier": "Instructions on Marriage",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Answers questions the Corinthians had written to Paul about marriage, celibacy, divorce, and marriages between believers and unbelievers, given 'the present necessitie.' Teaches both marriage and singleness are legitimate, that believers should not seek to leave existing marriages (including mixed ones, unless the unbeliever departs), and each should remain content in the calling wherein they were called.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 7:1-2",
+          "note": "Opens addressing 'the thinges whereof ye wrote vnto mee,' counseling each man and woman to have their own spouse to avoid fornication."
+        },
+        {
+          "ref": "1 Corinthians 7:8-9",
+          "note": "Counsels the unmarried and widows it is good to 'abide euen as I doe,' but 'better to marrie then to burne.'"
+        },
+        {
+          "ref": "1 Corinthians 7:10-11",
+          "note": "Commands, from the Lord, that a wife 'not depart from her husband,' and if she does, remain unmarried or be reconciled."
+        },
+        {
+          "ref": "1 Corinthians 7:12-16",
+          "note": "Addresses mixed marriages: the believer should remain if the unbeliever is content to dwell with them, but 'if the vnbeleeuing depart, let him depart,' since 'a brother or a sister is not in subiection in such things.'"
+        },
+        {
+          "ref": "1 Corinthians 7:17-24",
+          "note": "Establishes that each should 'abide in the same vocation wherein he was called.'"
+        },
+        {
+          "ref": "1 Corinthians 7:25-38",
+          "note": "Gives counsel on virgins and marriage 'for the present necessitie,' stating both marrying and remaining unmarried are good, though singleness allows undistracted care for the things of the Lord."
+        },
+        {
+          "ref": "1 Corinthians 7:39-40",
+          "note": "States a wife is bound 'as long as her husband liueth,' but free to marry after his death, 'onely in the Lord.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "meat_offered_idols_geneva",
+      "name": "Things Sacrificed Unto Idols",
+      "role": "law",
+      "scribeTier": "Things Sacrificed Unto Idols",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Works through the disputed question of eating meat sacrificed to idols. Teaches an idol 'is nothing in the worlde' and the food itself is not defiled, but love for a weaker believer's conscience should restrain a stronger believer's liberty rather than causing them to stumble. Uses Israel's wilderness history as a warning against presuming on liberty into idolatry, contrasting 'the Lords table' with the 'table of the deuils.'",
+      "verses": [
+        {
+          "ref": "1 Corinthians 8:1-3",
+          "note": "Opens noting 'knowledge puffeth vp, but loue edifieth' regarding idol-sacrificed food."
+        },
+        {
+          "ref": "1 Corinthians 8:4-6",
+          "note": "States 'an idole is nothing in the worlde,' and there is but one God, of whom are all things, and one Lord Iesus Christ, by whom are all things."
+        },
+        {
+          "ref": "1 Corinthians 8:7",
+          "note": "Notes 'euery man hath not that knowledge' — some, still bound to conscience of the idol, eat as a thing sacrificed to it, and their weak conscience 'is defiled.'"
+        },
+        {
+          "ref": "1 Corinthians 8:9-13",
+          "note": "Warns this liberty must not become 'an occasion of falling' to the weak; Paul states he would 'eate no flesh while the world standeth' rather than offend a brother."
+        },
+        {
+          "ref": "1 Corinthians 10:1-13",
+          "note": "Recalls Israel's wilderness generation, under the cloud and through the sea, who nonetheless fell into idolatry and 'were ouerthrowen in ye wildernes,' as warning against presumption; includes the promise God will not suffer them to be tempted 'aboue that you be able.'"
+        },
+        {
+          "ref": "1 Corinthians 10:14-22",
+          "note": "Commands fleeing idolatry, contrasting 'the cup of the Lord' and 'the table of the Lord' with 'the cup of the deuils' and 'the table of the deuils.'"
+        },
+        {
+          "ref": "1 Corinthians 10:23-33",
+          "note": "Balances liberty with edification — 'all things are lawfull for me, but all things edifie not' — permitting eating what is sold in the shambles or set before them without question, unless another's conscience raises it, concluding all should be done 'to the glory of God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "head_covering_lords_table_geneva",
+      "name": "Head Coverings and the Lords Supper",
+      "role": "law",
+      "scribeTier": "Head Coverings and the Lords Supper",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Addresses two problems of order and reverence in public worship: propriety of head-covering when praying or prophesying, and serious abuses at the shared meal accompanying the Lord's Supper, where some went hungry while others were drunken. Restates the institution of the Supper as tradition received directly 'of the Lord,' warning against partaking unworthily.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 11:2-6",
+          "note": "Instructs on head-covering: a man praying or prophesying with covered head 'dishonoureth his head'; a woman praying bare-headed 'dishonoureth her head.'"
+        },
+        {
+          "ref": "1 Corinthians 11:11-12",
+          "note": "Balances the discussion: 'neither is the man without the woman, neither the woman without the man in the Lord.'"
+        },
+        {
+          "ref": "1 Corinthians 11:17-22",
+          "note": "Rebukes divisions at their gatherings, where in eating the supper 'one is hungry, and another is drunken,' so that it is 'not to eate the Lords Supper' in truth."
+        },
+        {
+          "ref": "1 Corinthians 11:23-26",
+          "note": "States Paul 'receiued of the Lord' what he delivered: the bread and cup instituted the night Iesus was betrayed, done 'in remembrance of me,' showing 'the Lords death till hee come.'"
+        },
+        {
+          "ref": "1 Corinthians 11:27-32",
+          "note": "Warns against eating and drinking 'vnworthily' without discerning the Lord's body, urging self-examination, noting 'many are weake, and sicke among you, and many sleepe.'"
+        },
+        {
+          "ref": "1 Corinthians 11:33-34",
+          "note": "Instructs them to 'tary one for another' when they come together to eat, that the gathering not come 'vnto condemnation.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "spiritual_gifts_one_body_geneva",
+      "name": "One Body, Many Members",
+      "role": "law",
+      "scribeTier": "One Body, Many Members",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Explains that spiritual gifts, though diverse, come from the one Spirit and are given 'to profite withall.' Uses the human body as metaphor for the church — many distinct members, each necessary, forming one body in Christ — teaching that no gift or member should regard itself unnecessary or superior.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 12:4-11",
+          "note": "Lists 'diuersities of gifts' — the word of wisdom, knowledge, faith, healing, miracles, prophecy, discerning of spirits, tongues, and interpretation — all worked by 'the selfe same Spirit, distributing to euery man seuerally as he will.'"
+        },
+        {
+          "ref": "1 Corinthians 12:12-14",
+          "note": "Introduces the body metaphor: 'as the body is one, and hath many members...euen so is Christ.'"
+        },
+        {
+          "ref": "1 Corinthians 12:15-20",
+          "note": "Argues no member (foot, ear, eye) can say it is not of the body, since 'God disposed the members euery one of them in the bodie at his owne pleasure.'"
+        },
+        {
+          "ref": "1 Corinthians 12:21-26",
+          "note": "States the eye cannot say to the hand 'I haue no neede of thee,' and God gave 'more honour to that part which lacked,' so members care for one another, suffering and rejoicing together."
+        },
+        {
+          "ref": "1 Corinthians 12:27-31",
+          "note": "Declares the church collectively 'the body of Christ,' listing offices — Apostles, Prophets, teachers, miracles, healing, helpers, governours, tongues — and urging them to 'desire...the best giftes.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "love_geneva",
+      "name": "Love",
+      "role": "law",
+      "scribeTier": "Love",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Widely known standalone teaching between two chapters on spiritual gifts, arguing that love is the necessary quality that gives any spiritual gift meaning — without it, even the most impressive gift or sacrifice profits nothing. Describes love's character in a sustained list, then contrasts it with the partial, temporary nature of gifts like prophecy, tongues, and knowledge, which will cease, while love does not. This translation uses the word 'loue' consistently throughout the chapter, never 'charity' — the tier is named to match the actual word in the text rather than a later translation's word choice.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 13:1-3",
+          "note": "States that speaking with tongues of men and Angels, having prophecy and all knowledge, giving all one's goods, or one's body to be burned — 'and haue not loue' — profits nothing."
+        },
+        {
+          "ref": "1 Corinthians 13:4-7",
+          "note": "Describes love's character: it 'suffreth long...is bountifull...enuieth not...doeth not boast it selfe...is not puffed vp,' and 'suffreth all things...beleeueth all things...hopeth all things...endureth all things.'"
+        },
+        {
+          "ref": "1 Corinthians 13:8-10",
+          "note": "States 'loue doeth neuer fall away,' while prophesyings, tongues, and knowledge will be 'abolished' or 'vanish away,' being only 'in part.'"
+        },
+        {
+          "ref": "1 Corinthians 13:11-12",
+          "note": "Uses the image of putting away 'childish thinges' upon becoming a man, and seeing 'through a glasse darkely' now versus 'face to face' hereafter."
+        },
+        {
+          "ref": "1 Corinthians 13:13",
+          "note": "Concludes 'faith, hope and loue' abide, 'but the chiefest of these is loue.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "order_in_assembly_geneva",
+      "name": "Order in the Assembly",
+      "role": "law",
+      "scribeTier": "Order in the Assembly",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Regulates speaking in tongues and prophesying when the church gathers, prioritizing intelligible edification of the whole church over unintelligible individual experience, setting practical limits (turn-taking, interpretation, silence without an interpreter) so worship proceeds 'honestly, and by order' rather than confusion.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 14:1-5",
+          "note": "Urges desiring spiritual gifts, 'rather that ye may prophecie,' since prophecy 'edifieth the Church' while an unknown tongue 'edifieth himselfe' unless interpreted."
+        },
+        {
+          "ref": "1 Corinthians 14:6-19",
+          "note": "Argues speech without understanding profits little, using musical instruments giving 'an vncertaine sound' as illustration; states he would rather 'speake fiue wordes with mine vnderstanding' than 'ten thousande wordes in a strange tongue.'"
+        },
+        {
+          "ref": "1 Corinthians 14:20-25",
+          "note": "Describes tongues as 'for a signe' to unbelievers and prophecy as more useful to convince an unbeliever or unlearned person entering the assembly."
+        },
+        {
+          "ref": "1 Corinthians 14:26-33",
+          "note": "Sets order: things done 'vnto edifying,' tongues spoken by course with an interpreter or else kept silent, Prophets speaking 'two, or three' in turn, since 'God is not the author of confusion, but of peace.'"
+        },
+        {
+          "ref": "1 Corinthians 14:34-35",
+          "note": "Instructs that women 'keepe silence in the Churches,' asking their husbands at home if they wish to learn anything."
+        },
+        {
+          "ref": "1 Corinthians 14:39-40",
+          "note": "Closes urging them to 'couet to prophecie, and forbid not to speake languages,' but 'let all things be done honestly, and by order.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "resurrection_of_dead_geneva",
+      "name": "The Resurrection of the Dead",
+      "role": "law",
+      "scribeTier": "The Resurrection of the Dead",
+      "deliveredBy": "paul_geneva_1corinthians",
+      "purpose": "Defends the bodily resurrection of Christ as the foundation of the Gospel Paul preached, lists the eyewitnesses to the risen Christ, and argues that if Christ was not raised, faith is vain and believers remain in their sins. Explains the nature of the resurrection body — 'sowen a naturall body...raysed a spirituall body' — and closes with the promise of victory over death.",
+      "verses": [
+        {
+          "ref": "1 Corinthians 15:1-4",
+          "note": "Restates the Gospel Paul preached and they received: 'that Christ died for our sinnes, according to the Scriptures...was buried, and...arose the third day, according to the Scriptures.'"
+        },
+        {
+          "ref": "1 Corinthians 15:5-7",
+          "note": "Lists resurrection appearances: to Cephas, then the twelve, then 'aboue fiue hudreth brethren at once' (many still living, some 'asleepe'), then to Iames, then to all the Apostles."
+        },
+        {
+          "ref": "1 Corinthians 15:12-19",
+          "note": "Argues that if there be no resurrection, Christ is not risen, preaching and faith are vain, and believers 'are yet in your sinnes.'"
+        },
+        {
+          "ref": "1 Corinthians 15:20-26",
+          "note": "Declares Christ 'the first fruites of them that slept'; as in Adam all die, so in Christ 'shall all be made aliue,' with death as 'the last enemie that shalbe destroyed.'"
+        },
+        {
+          "ref": "1 Corinthians 15:35-49",
+          "note": "Answers how the dead are raised and with what body, using a sown seed's image, contrasting the natural body with the spiritual body, and 'the first man Adam' with 'the last Adam...a quickening Spirit.'"
+        },
+        {
+          "ref": "1 Corinthians 15:50-58",
+          "note": "Describes the mystery that not all will sleep, but all shall be changed 'in a moment, in the twinckling of an eye at the last trumpet,' closing with the declaration 'Death is swallowed vp into victorie.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'Iames' who saw the risen Christ in 15:7 is not identified further by the text itself, matching the same disambiguation gap present in KJV. See genealogyLists for this figure."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references kept out of the main character list, per the rule against inventing differentiation the text does not support or asserting identities the text does not itself confirm.",
+    "crispus_and_gaius_geneva": {
+      "ref": "1 Corinthians 1:14",
+      "note": "Named only as two of the few Corinthians Paul personally baptized ('I baptized none of you, but Crispus, and Gaius'), a rhetorical point that no faction could claim baptism in his name — not otherwise developed within this book."
+    },
+    "unnamed_man_of_chapter_5_geneva": {
+      "ref": "1 Corinthians 5:1",
+      "note": "The man involved in the fornication case addressed in chapter 5 is never named in the text. Not given an invented name here; the case is indexed as the law/theme tier 'One Should Have His Fathers Wife' (id: unrepentant_brother_geneva)."
+    },
+    "iames_1corinthians_15_7_geneva": {
+      "ref": "1 Corinthians 15:7",
+      "note": "Named as one to whom the risen Christ 'was seene' ('After that, he was seene of Iames'). This text does not disambiguate which James this is — commonly identified with James the Lord's brother based on other New Testament passages, but that identification is not made within this book, so it is flagged as a probable cross-referenced reading rather than settled textual fact here."
+    },
+    "five_hundred_brethren_geneva": {
+      "ref": "1 Corinthians 15:6",
+      "note": "The 'more then fiue hudreth brethren' who saw the risen Christ at once are described as a collective group with no individual names given, referenced only within the resurrection_of_dead_geneva law tier."
+    },
+    "churches_of_asia_and_all_the_brethren_geneva": {
+      "ref": "1 Corinthians 16:19-20",
+      "note": "General closing greetings from 'the Churches of Asia' and 'all the brethren' are collective and unnamed beyond Aquila and Priscilla, indexed individually as a submanager entry."
+    }
+  }
+}

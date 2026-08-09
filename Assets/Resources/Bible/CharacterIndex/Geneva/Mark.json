@@ -1,0 +1,1473 @@
+{
+  "book": "Mark",
+  "translation": "Geneva",
+  "canonicalOrder": 53,
+  "status": "drafted via direct reading of the extracted Geneva Bible (1560) verse text (Assets/Resources/Verses/Geneva/mark_53.json, all 16 chapters read in full), structural precedent checked against the existing validated KJV Mark Character Index but not copied from it",
+  "notes": "Real finding, stated honestly rather than assumed: unlike the genuine structural differences already documented elsewhere in this project (the Ethiopian Bible's 9-chapter \"Ezra\" matching the 1 Esdras tradition), this Geneva 1560 Mark is content-and-structure-identical to the standard 66-book-canon Mark - same 16 chapters, same episode order, same 12 apostles in the same ordination sequence (Simon/Peter, James+John Boanerges, Andrew, Philip, Bartholomew, Matthew, Thomas, James son of Alpheus, Thaddeus, Simon the Cananite, Judas Iscariot - Andrew fourth, not second), same Longer Ending at 16:9-20. This is expected, not a coincidence to paper over: the 1560 Geneva Bible was one of the primary source texts the 1611 KJV translators worked from, so their underlying Greek textual tradition for Mark is shared. The real differences here are entirely in archaic 1560 English wording and orthography, not content: \"Iesus\"/\"Iewes\"/\"Iohn\"/\"Iames\"/\"Hierusalem\"/\"Iordan\" (I for J), \"Marie\" for Mary, \"Cesar\" for Caesar, \"Symon\" used interchangeably with \"Simon\" for the SAME character within the same chapter (1:16 \"Simon\" vs 1:29-30 \"Symon\"/\"Symons wiues mother\" - a genuine period-spelling inconsistency in this specific translation, flagged rather than silently normalized), the hyphenated \"Eloi, Eloi, lamma-sabachthani\" (15:34), and \"Bartlemew\" for Bartholomew (3:18). Roster mirrors the same 19-tier shape the KJV Mark file settled on (16 person tiers, 3 law tiers) because the underlying narrative content genuinely is the same - Mark's fast-paced, miracle-heavy, discourse-light structure (only three real teaching blocks: the ch.4 parables, the 7:14-23 defilement teaching, and the ch.13 Olivet Discourse) produces the same weighting toward single-scene miracle recipients (Jairus, the woman with the issue of blood, the Gerasene demoniac, the Syrophenician woman, Bartimaeus) regardless of translation. Per the Gospel-specific rule, Jesus gets his own independent, translation-and-book-scoped tier (jesus_mark_geneva, never shared with the KJV's jesus_mark or with any future jesus_geneva_matthew). The centurion at the cross and Joseph of Arimathaea are kept as full manager tiers rather than jesus-tier submanagers, same rule-3 justification as the KJV draft: the centurion's \"Truely this man was the Sonne of God\" (15:39) is the book's climactic outsider confession at the moment of death, and Joseph \"went in boldly vnto Pilate\" and personally entombs the body (15:43-46) - without him Jesus has no burial at all in this account. Naming collisions, all kept distinct per the standing rule: five men named Simon (Simon Peter, Simon the Cananite, Simon the leper of 14:3, Simon of Cyrene of 15:21, and Jesus's own brother Simon at 6:3); two Marys beyond Jesus's mother (Mary Magdalene, Mary the mother of James the less and Joses); Herodias's unnamed dancing daughter (6:22, called only \"the daughter of the same Herodias,\" never named in this text) kept separate from Salome the disciple who is independently and by-name present at the cross and tomb (15:40, 16:1) - two different women sharing a name only via secondary tradition (Josephus), never asserted as the same person. Jesus's own brothers (James, Joses, Juda, Simon - 6:3) are kept out of the main character list as a genealogyLists bulk reference, since two of those names collide with apostles who are definitely not the same men. The high priest is kept unnamed throughout the trial narrative (14:53, 14:60-64) since this text itself never names him (unlike Matthew, which names Caiaphas) - the cross-Gospel identification via John 18:13 is flagged, not imported as this text's own claim. The young man who flees naked at the arrest (14:51-52) is logged in genealogyLists rather than given a character entry, since the text gives no name and any identification (a popular guess is Mark himself) is pure extra-biblical tradition with zero textual basis here.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Opened Heavens",
+      "managerId": "jesus_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Camel's Hair Girdle",
+      "managerId": "john_the_baptist_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Fisherman's Net",
+      "managerId": "simon_peter_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Sower's Seed",
+      "managerId": "parables_of_the_kingdom_mark_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Legion Among the Tombs",
+      "managerId": "gerasene_demoniac_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Synagogue Ruler's Plea",
+      "managerId": "jairus_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Hem of the Garment",
+      "managerId": "woman_with_issue_of_blood_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Tetrarch's Oath",
+      "managerId": "herod_antipas_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "That Which Defileth",
+      "managerId": "defilement_teaching_mark_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Crumbs Under the Table",
+      "managerId": "syrophenician_woman_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Roadside Cloak",
+      "managerId": "bartimaeus_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Fig Tree's Sign",
+      "managerId": "olivet_discourse_mark_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Alabaster Box",
+      "managerId": "woman_alabaster_box_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Thirty Pieces",
+      "managerId": "judas_iscariot_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "The Torn Robes",
+      "managerId": "high_priest_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Governor's Seat",
+      "managerId": "pontius_pilate_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Centurion's Confession",
+      "managerId": "centurion_at_cross_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Rock-Hewn Tomb",
+      "managerId": "joseph_of_arimathaea_mark_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "The Spice and Ointment",
+      "managerId": "mary_magdalene_mark_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jesus_mark_geneva",
+      "name": "Iesus Christ",
+      "role": "manager",
+      "scribeTier": "The Opened Heavens",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "mary_mother_of_jesus_mark_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:1",
+          "note": "\"The beginning of the Gospel of Iesus Christ, the Sonne of God.\""
+        },
+        {
+          "ref": "Mark 1:9-11",
+          "note": "Baptized of John in Iordan; heavens \"clouen in twaine,\" the holy Ghost descends like a dove, a voice: \"Thou art my beloued Sonne, in whome I am well pleased.\""
+        },
+        {
+          "ref": "Mark 1:12-13",
+          "note": "Driven by the Spirit into the wilderness forty days, tempted of Satan, with the wild beasts, ministered to by Angels."
+        },
+        {
+          "ref": "Mark 1:23-26",
+          "note": "In the Capernaum synagogue rebukes an unclean spirit in a man: \"Holde thy peace, and come out of him.\""
+        },
+        {
+          "ref": "Mark 4:35-41",
+          "note": "Stills the storm: \"Peace, and be still.\" The disciples: \"Who is this, that both the winde and sea obey him?\""
+        },
+        {
+          "ref": "Mark 6:3-6",
+          "note": "Rejected at Nazareth - called \"that carpenter Maries sonne\"; marvels at their unbelief."
+        },
+        {
+          "ref": "Mark 6:34-44",
+          "note": "Feeds five thousand with five loaves and two fishes."
+        },
+        {
+          "ref": "Mark 6:48-50",
+          "note": "Walks upon the sea; \"Be ye of good comfort: it is I, be not afrayd.\""
+        },
+        {
+          "ref": "Mark 8:1-9",
+          "note": "Feeds four thousand with seven loaves and a few small fishes."
+        },
+        {
+          "ref": "Mark 8:27-29",
+          "note": "At Cesarea Philippi: \"Whome doe men say that I am?\" Peter answers, \"Thou art that Christ.\""
+        },
+        {
+          "ref": "Mark 8:31-33",
+          "note": "First Passion prediction; rebukes Peter, \"Get thee behinde me, Satan.\""
+        },
+        {
+          "ref": "Mark 9:2-7",
+          "note": "Transfigured before Peter, James, and John; Elias and Moses appear talking with him; a voice from the cloud: \"This is my beloued Sonne: heare him.\""
+        },
+        {
+          "ref": "Mark 10:32-34",
+          "note": "Third, most detailed Passion prediction on the way up to Hierusalem."
+        },
+        {
+          "ref": "Mark 11:7-10",
+          "note": "Enters Hierusalem on a colt to cries of \"Hosanna: blessed be hee that commeth in the Name of the Lord.\""
+        },
+        {
+          "ref": "Mark 11:15-17",
+          "note": "Casts out the sellers and buyers in the Temple, overthrows the tables of the money-changers: \"you haue made it a denne of theeues.\""
+        },
+        {
+          "ref": "Mark 14:22-24",
+          "note": "Institutes the Lord's Supper: \"This is my bodie... this is my blood of that newe Testament, which is shed for many.\""
+        },
+        {
+          "ref": "Mark 14:32-36",
+          "note": "Prays in Gethsemane: \"Abba, Father, all things are possible vnto thee: take away this cup from me: neuertheles not that I will, but that thou wilt, be done.\""
+        },
+        {
+          "ref": "Mark 15:34-37",
+          "note": "Cries \"Eloi, Eloi, lamma-sabachthani? which is by interpretation, My God, my God, why hast thou forsaken me?\"; gives up the ghost."
+        },
+        {
+          "ref": "Mark 15:38",
+          "note": "The veil of the Temple rent in twain, top to bottom - the deliberate structural echo of the heavens \"clouen in twaine\" at his baptism (1:10)."
+        },
+        {
+          "ref": "Mark 16:6",
+          "note": "The young man at the tomb: \"he is risen, he is not here.\""
+        },
+        {
+          "ref": "Mark 16:15-19",
+          "note": "Longer Ending: \"Goe ye into all the worlde, and preach the Gospel to euery creature\"; received into heaven, sits at God's right hand."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mark has no birth narrative or genealogy at all - opens directly with John the Baptist, unlike Matthew or Luke.",
+        "6:3 calls him \"that carpenter\" directly, not merely \"the carpenter's son.\"",
+        "Repeatedly commands silence after healings/exorcisms (1:25, 1:34, 1:44, 3:12, 5:43, 7:36, 8:30, 9:9) - the 'messianic secret' motif, more pronounced in Mark than any other Gospel."
+      ]
+    },
+    {
+      "id": "mary_mother_of_jesus_mark_geneva",
+      "name": "Marie, mother of Iesus",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jesus_mark_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:31-35",
+          "note": "She and Jesus's brethren come seeking him and stand without; he asks \"Who is my mother and my brethren?\" and points to those who do the will of God."
+        },
+        {
+          "ref": "Mark 6:3",
+          "note": "The Nazareth crowd calls Jesus \"that carpenter Maries sonne\" - the only place she is named in this book."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "No nativity account of any kind appears in this text - her role is limited to these two brief mentions."
+      ]
+    },
+    {
+      "id": "john_the_baptist_mark_geneva",
+      "name": "Iohn (the Baptist)",
+      "role": "manager",
+      "scribeTier": "The Camel's Hair Girdle",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:4-5",
+          "note": "Baptizes in the wilderness, preaching \"the baptisme of amendment of life, for remission of sinnes\"; all Iudea and Hierusalem go out to him."
+        },
+        {
+          "ref": "Mark 1:6",
+          "note": "\"Clothed with camels heare, and with a girdle of a skinne about his loynes: and he did eate Locusts and wilde hony.\""
+        },
+        {
+          "ref": "Mark 1:7-8",
+          "note": "\"A stronger then I commeth after me, whose shoes latchet I am not worthy to stoupe downe, and vnloose... he will baptize you with the holy Ghost.\""
+        },
+        {
+          "ref": "Mark 1:9",
+          "note": "Baptizes Jesus in Iordan."
+        },
+        {
+          "ref": "Mark 6:17-18",
+          "note": "Bound in prison by Herod for Herodias' sake, his brother Philip's wife; \"It is not lawfull for thee to haue thy brothers wife.\""
+        },
+        {
+          "ref": "Mark 6:20",
+          "note": "Herod feared him, \"knowing that hee was a iust man, and an holy,\" and heard him gladly."
+        },
+        {
+          "ref": "Mark 6:21-28",
+          "note": "Beheaded at Herod's birthday banquet at Herodias' daughter's request; head brought in a charger."
+        },
+        {
+          "ref": "Mark 6:29",
+          "note": "His disciples take up his body and lay it in a tomb."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mark 6:14-16 records Herod fearing, on hearing of Jesus's works, that John had risen from the dead - the rumor framing the whole flashback of his death."
+      ]
+    },
+    {
+      "id": "simon_peter_mark_geneva",
+      "name": "Simon (Peter)",
+      "role": "manager",
+      "scribeTier": "The Fisherman's Net",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed wife, implied only via his mother-in-law at 1:30, not individually indexed"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:16-18",
+          "note": "Called with Andrew while \"casting a net into the sea, (for they were fishers)\"; \"I will make you to be fishers of men\"; they forsake their nets."
+        },
+        {
+          "ref": "Mark 1:29-31",
+          "note": "Called \"Symon\" here - Jesus heals his wife's mother of a fever in his house."
+        },
+        {
+          "ref": "Mark 3:16",
+          "note": "Named first among the Twelve; Jesus names him Peter."
+        },
+        {
+          "ref": "Mark 8:29",
+          "note": "At Cesarea Philippi: \"Thou art that Christ.\""
+        },
+        {
+          "ref": "Mark 8:32-33",
+          "note": "Rebukes Jesus over the Passion prediction and is himself rebuked: \"Get thee behinde me, Satan.\""
+        },
+        {
+          "ref": "Mark 9:5-6",
+          "note": "At the Transfiguration offers to build three tabernacles, \"not knowing what he saide: for they were afraide.\""
+        },
+        {
+          "ref": "Mark 14:29-31",
+          "note": "Vows he will not be offended even if all others are; told he will deny Jesus thrice before the cock crows twice."
+        },
+        {
+          "ref": "Mark 14:37",
+          "note": "Found asleep in Gethsemane: \"Simon, sleepest thou? couldest not thou watche one houre?\""
+        },
+        {
+          "ref": "Mark 14:66-72",
+          "note": "Denies Jesus three times in the high priest's hall; at the second cock-crow \"he wept.\""
+        },
+        {
+          "ref": "Mark 16:7",
+          "note": "The young man at the tomb names him specifically: \"tell his disciples, and Peter, that he goeth before you into Galile.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This translation spells his name both \"Simon\" (1:16) and \"Symon\" (1:29-30) within the same chapter - a genuine period spelling inconsistency, not two different people."
+      ]
+    },
+    {
+      "id": "andrew_mark_geneva",
+      "name": "Andrew",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:16-18",
+          "note": "Simon's brother; called together with him while casting their net."
+        },
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed fourth among the Twelve, after Simon and the sons of Zebedee."
+        },
+        {
+          "ref": "Mark 13:3",
+          "note": "One of the four (with Peter, James, John) who privately ask about the Temple's destruction, prompting the Olivet Discourse."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sons_of_thunder_mark_geneva",
+      "name": "Iames and Iohn, sonnes of Zebedeus (Boanerges)",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Kept as one combined entry for the scenes where this text pairs them undifferentiated - but 9:38-41 is a real exception (John alone speaks and acts) and is included below rather than dropped.",
+      "genealogy": {
+        "father": "Zebedeus - Mark 1:19-20, not individually indexed",
+        "mother": "traditionally Salome (see salome_disciple_mark_geneva) via comparison with other Gospels - not stated by this text itself, flagged not asserted",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:19-20",
+          "note": "Called from mending nets in the ship with their father Zebedeus; they leave him with his hired servants."
+        },
+        {
+          "ref": "Mark 3:17",
+          "note": "Surnamed Boanerges, \"the sonnes of thunder.\""
+        },
+        {
+          "ref": "Mark 9:38-41",
+          "note": "John alone: \"we sawe one casting out deuils by thy Name, which followeth not vs, and we forbade him, because he followeth vs not.\" Jesus: \"Forbid him not... whosoeuer is not against vs, is on our part.\""
+        },
+        {
+          "ref": "Mark 10:35-41",
+          "note": "Ask to sit at his right and left hand in his glory; the other ten \"began to disdaine\" at them."
+        },
+        {
+          "ref": "Mark 14:33",
+          "note": "Taken with Peter further into Gethsemane."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "9:38-41 is the one scene where John acts independently of James, despite the pair otherwise being treated as a unit throughout this text."
+      ]
+    },
+    {
+      "id": "philip_apostle_mark_geneva",
+      "name": "Philippe",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve; no individual action given for him in this text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "bartholomew_apostle_mark_geneva",
+      "name": "Bartlemew",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve, spelled \"Bartlemew\" in this translation; no individual action given for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "levi_matthew_mark_geneva",
+      "name": "Leui (Matthewe) the sonne of Alpheus",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Called 'Leui the sonne of Alpheus' at his calling (2:14) but listed as 'Matthewe' among the Twelve (3:18) - tradition holds these are one man, but this text never explicitly states it; flagged as inference, not asserted fact.",
+      "genealogy": {
+        "father": "Alpheus - Mark 2:14, shared name with James son of Alphaeus (3:18); same man or not is not stated",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 2:14",
+          "note": "Called while sitting \"at the receit of custome\": \"Folowe me. And he arose and followed him.\""
+        },
+        {
+          "ref": "Mark 2:15-17",
+          "note": "Jesus eats in his house with publicans and sinners: \"They that are whole haue no neede of the Physicion, but the sicke.\""
+        },
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve as \"Matthewe.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "thomas_apostle_mark_geneva",
+      "name": "Thomas",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve; no individual action given for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "james_alphaeus_mark_geneva",
+      "name": "Iames, the sonne of Alpheus",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A different James from James son of Zebedeus (of the 'sons of thunder'). Naming collision flagged, not merged.",
+      "genealogy": {
+        "father": "Alpheus - Mark 3:18, shared name with Levi's father (2:14); same man or not is not stated",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve; no individual action given for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "thaddaeus_mark_geneva",
+      "name": "Thaddeus",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18",
+          "note": "Listed among the Twelve; no individual action given for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "simon_canaanite_mark_geneva",
+      "name": "Simon the Cananite",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "One of five different men named Simon in this book (Simon Peter, Simon the Cananite, Simon the leper of 14:3, Simon of Cyrene of 15:21, Simon the brother of Jesus of 6:3) - all kept distinct.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:18-19",
+          "note": "Listed among the Twelve as \"Simon the Cananite\"; no individual action given for him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "peters_mother_in_law_mark_geneva",
+      "name": "Symon's wife's mother",
+      "role": "submanager",
+      "parentManagerId": "simon_peter_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 1:30-31",
+          "note": "\"Symons wiues mother lay sicke of a feuer\"; Jesus takes her by the hand, the fever leaves her, and \"shee ministred vnto them.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "parables_of_the_kingdom_mark_geneva",
+      "name": "The Parables of the Kingdom",
+      "role": "law",
+      "scribeTier": "The Sower's Seed",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_mark_geneva",
+      "purpose": "Teaches, through Galilean agricultural imagery, how the kingdom of God is received and grows: the sower explains why the same word yields different results in different hearers; the candle teaches what is hidden is meant to come to light; the secretly-growing seed and the mustard seed both teach that the kingdom's growth is God's own quiet, inevitable work.",
+      "verses": [
+        {
+          "ref": "Mark 4:3-8",
+          "note": "The sower - seed on the wayside, stony ground, among thorns, and on good ground, some yielding \"an hundreth folde.\""
+        },
+        {
+          "ref": "Mark 4:14-20",
+          "note": "Jesus privately expounds the sower to the disciples."
+        },
+        {
+          "ref": "Mark 4:21-22",
+          "note": "The candle: \"Commeth the candle in, to be put vnder a bushell?\""
+        },
+        {
+          "ref": "Mark 4:26-29",
+          "note": "The seed growing secretly, the man not knowing how - unique to this Gospel among the Synoptics."
+        },
+        {
+          "ref": "Mark 4:30-32",
+          "note": "The mustard seed, \"the least of all seedes,\" which grows \"greatest of all herbes.\""
+        },
+        {
+          "ref": "Mark 4:33-34",
+          "note": "Taught in parables publicly \"as they were able to heare it,\" but expounded privately to his disciples."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gerasene_demoniac_mark_geneva",
+      "name": "The Man with the Vncleane Spirit (\"Legion\")",
+      "role": "manager",
+      "scribeTier": "The Legion Among the Tombs",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 5:2-5",
+          "note": "Dwells among the graves in the country of the Gadarens, cannot be bound even with chains, cries and cuts himself with stones night and day."
+        },
+        {
+          "ref": "Mark 5:7-9",
+          "note": "\"My name is Legion: for we are many\"; begs not to be sent out of the country."
+        },
+        {
+          "ref": "Mark 5:11-13",
+          "note": "The spirits enter about two thousand swine, which run headlong into the sea and are drowned."
+        },
+        {
+          "ref": "Mark 5:15",
+          "note": "Found \"sit both clothed, and in his right minde.\""
+        },
+        {
+          "ref": "Mark 5:18-20",
+          "note": "Begs to go with Jesus but is sent home instead to \"shewe them what great thinges the Lord hath done\" - publishes it in Decapolis."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jairus_mark_geneva",
+      "name": "Iairus",
+      "role": "manager",
+      "scribeTier": "The Synagogue Ruler's Plea",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jairus_daughter_mark_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 5:22-23",
+          "note": "A ruler of the synagogue, falls at Jesus's feet: \"My litle daughter lyeth at point of death.\""
+        },
+        {
+          "ref": "Mark 5:35-36",
+          "note": "Told his daughter is dead; Jesus: \"Be not afraide: onely beleeue.\""
+        },
+        {
+          "ref": "Mark 5:38-40",
+          "note": "His household weeping and wailing; Jesus puts the mourners out."
+        },
+        {
+          "ref": "Mark 5:41-43",
+          "note": "\"Talitha cumi... Mayden, I say vnto thee, arise\"; she rises and walks; told to give her meat, and to tell no man."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jairus_daughter_mark_geneva",
+      "name": "Iairus's Daughter",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "jairus_mark_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 5:41-43",
+          "note": "Raised from apparent death by Jesus."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "raised from death by Jesus",
+          "age": "twelve years old",
+          "ref": "Mark 5:42"
+        }
+      ],
+      "funFacts": [
+        "Her stated age (\"of the age of twelue yeeres,\" 5:42) is one of the few precise ages given anywhere in this book."
+      ]
+    },
+    {
+      "id": "woman_with_issue_of_blood_mark_geneva",
+      "name": "The Woman with an Issue of Blood",
+      "role": "manager",
+      "scribeTier": "The Hem of the Garment",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 5:25-26",
+          "note": "Diseased twelve years, \"suffred many things of many physicions,\" spent all she had and grew worse."
+        },
+        {
+          "ref": "Mark 5:27-28",
+          "note": "Touches his garment in the crowd: \"If I may but touch his clothes, I shalbe whole.\""
+        },
+        {
+          "ref": "Mark 5:29",
+          "note": "\"The course of her blood was dried vp\" immediately."
+        },
+        {
+          "ref": "Mark 5:30-33",
+          "note": "Jesus perceives \"vertue\" gone out of him, asks who touched him; she comes fearing and tells him \"the whole trueth.\""
+        },
+        {
+          "ref": "Mark 5:34",
+          "note": "\"Daughter, thy faith hath made thee whole: go in peace, and be whole of thy plague.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "herod_antipas_mark_geneva",
+      "name": "Herod (the Tetrarch)",
+      "role": "manager",
+      "scribeTier": "The Tetrarch's Oath",
+      "parentManagerId": null,
+      "perkNote": "Called \"King Herod\" (6:14) though historically tetrarch - the same imprecision the text itself carries, not introduced here. Distinct from Herod the Great (Matthew 2) and Herod Agrippa I, neither appearing in Mark.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "herodias_mark_geneva"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 6:14-16",
+          "note": "Hears of Jesus's fame; fears John, whom he beheaded, has risen from the dead."
+        },
+        {
+          "ref": "Mark 6:17-18",
+          "note": "Had bound John in prison for Herodias' sake, his brother Philippe's wife, whom he had married."
+        },
+        {
+          "ref": "Mark 6:20",
+          "note": "Feared John, knowing him \"a iust man, and an holy... heard him gladly.\""
+        },
+        {
+          "ref": "Mark 6:21-23",
+          "note": "On his birthday makes a banquet; the daughter dances and pleases him; swears \"euen vnto the halfe of my kingdome.\""
+        },
+        {
+          "ref": "Mark 6:26",
+          "note": "\"The King was very sory: yet for his othes sake... he would not refuse her.\""
+        },
+        {
+          "ref": "Mark 6:27-28",
+          "note": "Sends the hangman; John's head brought in a charger."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "herodias_mark_geneva",
+      "name": "Herodias",
+      "role": "submanager",
+      "parentManagerId": "herod_antipas_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "herod_antipas_mark_geneva"
+        ],
+        "children": [
+          "herodias_daughter_mark_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 6:17",
+          "note": "Formerly wife of Herod's brother Philippe; Herod married her."
+        },
+        {
+          "ref": "Mark 6:19",
+          "note": "\"Layd waite against him, and would haue killed him, but she could not.\""
+        },
+        {
+          "ref": "Mark 6:24",
+          "note": "When her daughter asks what to request, instructs her: \"Iohn Baptists head.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "herodias_daughter_mark_geneva",
+      "name": "Herodias's Daughter",
+      "role": "submanager",
+      "parentManagerId": "herod_antipas_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Never named in this text - called only \"the daughter of the same Herodias\" (6:22). Later tradition (Josephus, not scripture) calls her Salome; NOT asserted here as fact, and explicitly NOT the same person as Salome the disciple present at the cross and tomb (15:40, 16:1) - two figures linked only by a shared traditional name.",
+      "genealogy": {
+        "father": null,
+        "mother": "herodias_mark_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 6:22",
+          "note": "\"Came in, and daunced, and pleased Herod.\""
+        },
+        {
+          "ref": "Mark 6:24-25",
+          "note": "Asks her mother what to request, then asks the King for John's head \"in a charger.\""
+        },
+        {
+          "ref": "Mark 6:28",
+          "note": "Receives the head and gives it to her mother."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "defilement_teaching_mark_geneva",
+      "name": "That Which Defileth",
+      "role": "law",
+      "scribeTier": "That Which Defileth",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_mark_geneva",
+      "purpose": "Delivered first to the multitude and then privately to the disciples, relocates true defilement away from external ritual failure (unwashed hands, the disputed \"tradition of the Elders\" in 7:1-13) to the internal condition of the heart.",
+      "verses": [
+        {
+          "ref": "Mark 7:14-15",
+          "note": "\"There is nothing without a man, that can defile him, when it entreth into him: but the things which proceede out of him, are they which defile the man.\""
+        },
+        {
+          "ref": "Mark 7:17-19",
+          "note": "Explains privately that what enters the mouth cannot defile since it enters the belly, not the heart, and \"goeth out into the draught.\""
+        },
+        {
+          "ref": "Mark 7:20-23",
+          "note": "\"That which commeth out of man, that defileth man\" - lists evil thoughts, adulteries, fornications, murders, thefts, covetousness, wickedness, deceit, uncleanness, an evil eye, backbiting, pride, foolishness."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "syrophenician_woman_mark_geneva",
+      "name": "The Syrophenissian Woman",
+      "role": "manager",
+      "scribeTier": "The Crumbs Under the Table",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "her daughter - Mark 7:25-30, not individually indexed, had an unclean spirit, healed at a distance"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 7:25-26",
+          "note": "\"A Greeke, a Syrophenissian by nation,\" falls at his feet in the borders of Tyrus and Sidon, seeking her daughter's healing."
+        },
+        {
+          "ref": "Mark 7:27-28",
+          "note": "Jesus: \"it is not good to take the childrens bread, and to cast it vnto whelpes.\" She answers: \"the whelpes eate vnder the table of the childrens crommes.\""
+        },
+        {
+          "ref": "Mark 7:29-30",
+          "note": "\"For this saying goe thy way: the deuil is gone out of thy daughter.\" She finds it so at home."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "bartimaeus_mark_geneva",
+      "name": "Bartimeus",
+      "role": "manager",
+      "scribeTier": "The Roadside Cloak",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Timeus - Mark 10:46, not individually indexed",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 10:46",
+          "note": "\"Bartimeus the sonne of Timeus, a blinde man,\" sits begging by the wayside near Iericho."
+        },
+        {
+          "ref": "Mark 10:47-48",
+          "note": "Cries \"Iesus, thou Sonne of Dauid, haue mercy on me\"; rebuked by many but cries the more."
+        },
+        {
+          "ref": "Mark 10:50",
+          "note": "\"Threwe away his cloke, and rose, and came to Iesus.\""
+        },
+        {
+          "ref": "Mark 10:51-52",
+          "note": "\"Thy fayth hath saued thee\"; receives his sight, follows Jesus in the way."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "olivet_discourse_mark_geneva",
+      "name": "The Olivet Discourse",
+      "role": "law",
+      "scribeTier": "The Fig Tree's Sign",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_mark_geneva",
+      "purpose": "Delivered privately to four of the Twelve after a prediction the Temple will be destroyed - warns against deception, describes coming persecution and the \"abomination of desolation,\" and repeatedly presses watchfulness over calculation of the day or hour.",
+      "verses": [
+        {
+          "ref": "Mark 13:1-2",
+          "note": "Prediction that not one stone of the Temple shall be left upon another."
+        },
+        {
+          "ref": "Mark 13:3-4",
+          "note": "Peter, Iames, Iohn, and Andrew ask him privately on the Mount of Olives."
+        },
+        {
+          "ref": "Mark 13:5-8",
+          "note": "False christs, wars and rumors of wars, earthquakes and famine: \"the beginnings of sorowes.\""
+        },
+        {
+          "ref": "Mark 13:14-20",
+          "note": "\"The abomination of desolation... let them that be in Iudea, flee into the mountaines.\""
+        },
+        {
+          "ref": "Mark 13:24-27",
+          "note": "Sun and moon darkened, stars falling, the Son of man coming in the clouds with power and glory."
+        },
+        {
+          "ref": "Mark 13:28-31",
+          "note": "The fig tree parable: when it buds, summer is near - likewise these signs."
+        },
+        {
+          "ref": "Mark 13:32-37",
+          "note": "\"Of that day and houre knoweth no man... Watch.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "woman_alabaster_box_mark_geneva",
+      "name": "The Woman with the Boxe of Oyntment",
+      "role": "manager",
+      "scribeTier": "The Alabaster Box",
+      "parentManagerId": null,
+      "perkNote": "Unnamed in this text. Other Gospels' parallel accounts identify a similar figure, not imported here since this account's own details (house of Simon the leper) are what this text actually states.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 14:3",
+          "note": "In Simon the leper's house at Bethania, breaks \"a boxe of oyntment of spikenarde, very costly,\" and pours it on his head."
+        },
+        {
+          "ref": "Mark 14:4-5",
+          "note": "Some \"disdained,\" saying it might have been sold for \"more then three hundreth pence\" and given to the poor."
+        },
+        {
+          "ref": "Mark 14:6-9",
+          "note": "Jesus defends her: \"Shee hath done that she coulde... this also that she hath done, shalbe spoken of in remembrance of her.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "judas_iscariot_mark_geneva",
+      "name": "Iudas Iscariot",
+      "role": "manager",
+      "scribeTier": "The Thirty Pieces",
+      "parentManagerId": null,
+      "perkNote": "Naming collision: Jesus's own brother is also called \"Iuda\" at 6:3 - a different man, not indexed separately here but flagged in genealogyLists.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 3:19",
+          "note": "Listed last among the Twelve: \"Iudas Iscariot, who also betraied him.\""
+        },
+        {
+          "ref": "Mark 14:10-11",
+          "note": "Goes to the high priests to betray Jesus; \"they were glad, and promised that they woulde giue him monie.\""
+        },
+        {
+          "ref": "Mark 14:18-21",
+          "note": "Foretold at supper: \"good were it for that man if he had neuer beene borne.\""
+        },
+        {
+          "ref": "Mark 14:43-45",
+          "note": "Comes with a multitude armed with swords and staves; a kiss as the prearranged sign: \"Haile Master.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Unlike Matthew, this text never records what became of Judas afterward - no remorse scene, no death, nothing beyond the betrayal and kiss."
+      ]
+    },
+    {
+      "id": "high_priest_mark_geneva",
+      "name": "The Hie Priest",
+      "role": "manager",
+      "scribeTier": "The Torn Robes",
+      "parentManagerId": null,
+      "perkNote": "Never named in this text, unlike Matthew's Gospel, which names Caiaphas. Kept unnamed here to stay faithful to what this text actually says.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 14:53",
+          "note": "Jesus led away to him; all the high priests, elders, and scribes assemble."
+        },
+        {
+          "ref": "Mark 14:55-59",
+          "note": "Seeks witness against Jesus, but the testimonies \"agreed not together.\""
+        },
+        {
+          "ref": "Mark 14:60-62",
+          "note": "\"Art thou that Christ the Sonne of the Blessed?\" Jesus: \"I am he.\""
+        },
+        {
+          "ref": "Mark 14:63-64",
+          "note": "Rends his clothes: \"What haue we any more neede of witnesses?\" All condemn him worthy of death."
+        },
+        {
+          "ref": "Mark 15:1",
+          "note": "Binds Jesus with the whole council and delivers him to Pilate."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sanhedrin_council_mark_geneva",
+      "name": "The Hie Priests, Elders, and Scribes (the Councill)",
+      "role": "submanager",
+      "parentManagerId": "high_priest_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 14:1",
+          "note": "Seek \"how they might take him by craft, and put him to death.\""
+        },
+        {
+          "ref": "Mark 15:1",
+          "note": "Hold a council at dawn and deliver him to Pilate."
+        },
+        {
+          "ref": "Mark 15:11",
+          "note": "Move the people to ask for Barabbas instead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pharisees_mark_geneva",
+      "name": "The Pharises",
+      "role": "submanager",
+      "parentManagerId": "high_priest_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 2:16-3:6",
+          "note": "Question his eating with sinners and sabbath healing; take counsel with the Herodians to destroy him."
+        },
+        {
+          "ref": "Mark 7:1-13",
+          "note": "Challenge the disciples over unwashen hands and the tradition of the Elders."
+        },
+        {
+          "ref": "Mark 10:2",
+          "note": "Ask about divorce, \"tempting him.\""
+        },
+        {
+          "ref": "Mark 12:13",
+          "note": "Sent with the Herodians to catch him in his talk over tribute to Cesar."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sadducees_mark_geneva",
+      "name": "The Sadduces",
+      "role": "submanager",
+      "parentManagerId": "high_priest_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 12:18-27",
+          "note": "\"Which say, there is no resurrection\"; pose the riddle of the woman with seven husbands; told \"Ye are therefore greatly deceiued.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pontius_pilate_mark_geneva",
+      "name": "Pilate",
+      "role": "manager",
+      "scribeTier": "The Governor's Seat",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:2",
+          "note": "\"Art thou the King of the Iewes?\" Jesus: \"Thou sayest it.\""
+        },
+        {
+          "ref": "Mark 15:3-5",
+          "note": "Accused of many things; answers nothing more; Pilate \"marueiled.\""
+        },
+        {
+          "ref": "Mark 15:9-14",
+          "note": "Offers to release a prisoner; the crowd, moved by the priests, asks for Barabbas; \"Crucifie him\" repeated."
+        },
+        {
+          "ref": "Mark 15:15",
+          "note": "\"Willing to content the people,\" releases Barabbas and delivers Jesus, scourged, to be crucified."
+        },
+        {
+          "ref": "Mark 15:44-45",
+          "note": "Marvels Jesus is already dead; confirms it with the Centurion before giving the body to Ioseph."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "barabbas_mark_geneva",
+      "name": "Barabbas",
+      "role": "submanager",
+      "parentManagerId": "pontius_pilate_mark_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:7",
+          "note": "Bound with fellow insurrectionists \"who in the insurrection had committed murder.\""
+        },
+        {
+          "ref": "Mark 15:11-15",
+          "note": "Released instead of Jesus at the crowd's demand."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "simon_of_cyrene_mark_geneva",
+      "name": "Simon of Cyrene",
+      "role": "submanager",
+      "parentManagerId": "pontius_pilate_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "One of the five Simons in this book, kept distinct from Simon Peter, Simon the Cananite, Simon the leper, and Jesus's brother Simon.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Alexander and Rufus, named only as his sons - Mark 15:21, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:21",
+          "note": "Compelled, \"as he passed by\" coming out of the country, \"father of Alexander and Rufus,\" to bear the cross."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "centurion_at_cross_mark_geneva",
+      "name": "The Centurion",
+      "role": "manager",
+      "scribeTier": "The Centurion's Confession",
+      "parentManagerId": null,
+      "perkNote": "Full manager tier, not a submanager: his declaration is this book's climactic outsider confession of Jesus's identity, at the precise moment of death.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:39",
+          "note": "Seeing how Jesus \"cryed, gaue vp the ghost,\" declares: \"Truely this man was the Sonne of God.\""
+        },
+        {
+          "ref": "Mark 15:44-45",
+          "note": "Confirms to Pilate that Jesus is already dead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never named in this text - identified only by his role, \"which stoode ouer against him.\""
+      ]
+    },
+    {
+      "id": "joseph_of_arimathaea_mark_geneva",
+      "name": "Ioseph of Arimathea",
+      "role": "manager",
+      "scribeTier": "The Rock-Hewn Tomb",
+      "parentManagerId": null,
+      "perkNote": "Full manager tier: he personally \"went in boldly vnto Pilate\" and personally entombs the body - without him Jesus has no burial at all in this account.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:43",
+          "note": "\"An honorable counsellour, which also looked for the kingdome of God, came, and went in boldly vnto Pilate, and asked the body of Iesus.\""
+        },
+        {
+          "ref": "Mark 15:46",
+          "note": "Buys a linen cloth, takes the body down, wraps it, lays it \"in a tombe that was hewen out of a rocke,\" rolls a stone to the door."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mary_magdalene_mark_geneva",
+      "name": "Marie Magdalene",
+      "role": "manager",
+      "scribeTier": "The Spice and Ointment",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:40",
+          "note": "Among the women watching afar off at the crucifixion, with \"Marie (the mother of Iames the lesse, and of Ioses) and Salome.\""
+        },
+        {
+          "ref": "Mark 15:47",
+          "note": "With Mary Ioses' mother, sees where the body is laid."
+        },
+        {
+          "ref": "Mark 16:1",
+          "note": "Buys sweet ointments with the other women to anoint him."
+        },
+        {
+          "ref": "Mark 16:5-8",
+          "note": "Finds the stone rolled away; the young man declares him risen; the women flee, afraid, and tell no one at first."
+        },
+        {
+          "ref": "Mark 16:9-10",
+          "note": "Longer Ending: Jesus \"appeared first to Marie Magdalene, out of whom he had cast seuen deuils\"; she tells the mourning disciples, who do not believe her."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "salome_disciple_mark_geneva",
+      "name": "Salome",
+      "role": "submanager",
+      "parentManagerId": "mary_magdalene_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "NOT the same woman as Herodias's unnamed dancing daughter (6:22) - two figures linked only by a shared traditional name via extra-biblical sources, never by this text.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:40",
+          "note": "Present, watching afar off, at the crucifixion."
+        },
+        {
+          "ref": "Mark 16:1",
+          "note": "Buys sweet ointments with Mary Magdalene and Mary the mother of James."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mary_mother_of_james_joses_mark_geneva",
+      "name": "Marie, mother of Iames the lesse and of Ioses",
+      "role": "submanager",
+      "parentManagerId": "mary_magdalene_mark_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Iames the lesse, Ioses - Mark 15:40, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Mark 15:40",
+          "note": "Present, watching afar off, at the crucifixion."
+        },
+        {
+          "ref": "Mark 15:47",
+          "note": "With Mary Magdalene, sees where the body is laid."
+        },
+        {
+          "ref": "Mark 16:1",
+          "note": "Buys sweet ointments to anoint him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "twelveApostlesList": {
+      "ref": "Mark 3:16-19",
+      "note": "The full ordination list of the Twelve given together: Simon (Peter), Iames and Iohn (sons of Zebedeus, Boanerges), Andrew, Philippe, Bartlemew, Matthewe, Thomas, Iames the sonne of Alpheus, Thaddeus, Simon the Cananite, and Iudas Iscariot."
+    },
+    "jesusBrethren": {
+      "ref": "Mark 6:3",
+      "note": "\"Is not this that carpenter Maries sonne, the brother of Iames and Ioses, and of Iuda and Simon? and are not his sisters here with vs?\" NAMING COLLISION FLAG: this Iames and this Simon share names with two of the Twelve, and this Iuda shares a name with Iudas Iscariot - none are the same people; kept out of the indexed character list to avoid false identification."
+    },
+    "youngManWhoFled": {
+      "ref": "Mark 14:51-52",
+      "note": "\"A certaine yong man, clothed in linnen vpon his bare bodie\" is seized at Jesus's arrest and flees naked, leaving the cloth behind. Unnamed in this text; a popular guess identifies him with Mark himself, but this is extra-biblical tradition with zero textual basis here - not indexed as a character."
+    },
+    "manyOtherWomen": {
+      "ref": "Mark 15:41",
+      "note": "Beyond the three named women, the text notes \"many other women which came vp with him vnto Hierusalem\" - an unindividuated collective."
+    },
+    "longerEndingTextualNote": {
+      "ref": "Mark 16:9-20",
+      "note": "Included in this translation and this game index as this text presents it, but flagged for completeness: widely recognized by textual scholars as absent from the earliest and most reliable Greek manuscripts - a textual-transmission fact carried over from the same issue already logged on the KJV Mark index, not unique to Geneva."
+    }
+  }
+}

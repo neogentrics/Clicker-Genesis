@@ -22,9 +22,13 @@ namespace ClickerGenesis.Core
         public Button MultiplierButton;
         public TMP_Text MultiplierButtonLabel;
 
-        [Header("XP bar (mirrors the one on ClickerScreen)")]
-        public TMP_Text XpBarText;
-        public Image XpBarFill;
+        [Header("Triple-lane bar (mirrors ClickerScreenUI - book/XP/Old Testament progress)")]
+        public Image BookLaneFill;
+        public TMP_Text BookLaneLabel;
+        public Image XpLaneFill;
+        public TMP_Text XpLaneLabel;
+        public Image OtLaneFill;
+        public TMP_Text OtLaneLabel;
 
         [Header("Verses/Chapters/Books tabs")]
         public Button VersesTabButton;
@@ -174,18 +178,30 @@ namespace ClickerGenesis.Core
             InkLabel.text = $"Ink: {NumberFormatter.Format(Controller.Wallet.Balance)}";
 
             var levels = Controller.Levels;
-            if (XpBarText != null) XpBarText.text = $"Level {levels.CurrentLevel} — {levels.XpIntoCurrentLevel}/{levels.XpRequiredForNextLevel} XP";
-            if (XpBarFill != null)
+
+            // Triple-lane bar (2026-08-08) - same book/XP/Old Testament progression display as
+            // ClickerScreenUI.Refresh, mirrored here per the user's explicit ask to match progression
+            // UI across both screens. XpBar above stays wired (harmless if its GameObject is
+            // disabled in-scene) so this isn't a behavior change if that swap is ever reverted.
+            void SetLane(Image fill, TMP_Text label, float fraction, string text)
             {
-                float fraction = levels.XpRequiredForNextLevel > 0
-                    ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
-                    : 0f;
-                // Sliced (not Filled) so the rounded-pill sprite's corners match the Background
-                // exactly at any width - see ClickerScreenUI.Refresh for the same fix + rationale.
-                var fillRt = XpBarFill.rectTransform;
-                fillRt.anchorMin = new Vector2(0f, 0f);
-                fillRt.anchorMax = new Vector2(fraction, 1f);
+                if (fill != null)
+                {
+                    var rt = fill.rectTransform;
+                    rt.anchorMin = new Vector2(0f, 0f);
+                    rt.anchorMax = new Vector2(Mathf.Clamp01(fraction), 1f);
+                }
+                if (label != null) label.text = text;
             }
+
+            float xpFraction = levels.XpRequiredForNextLevel > 0
+                ? (float)levels.XpIntoCurrentLevel / levels.XpRequiredForNextLevel
+                : 0f;
+            SetLane(XpLaneFill, XpLaneLabel, xpFraction, $"XP: Lv {levels.CurrentLevel} ({xpFraction * 100f:F0}%)");
+            SetLane(BookLaneFill, BookLaneLabel, Controller.ActiveBookProgressFraction,
+                $"{Controller.Verses?.BookName ?? "Book"}: {Controller.ActiveBookProgressFraction * 100f:F0}%");
+            SetLane(OtLaneFill, OtLaneLabel, Controller.OldTestamentProgressFraction,
+                $"Old Testament: {Controller.OldTestamentProgressFraction * 100f:F1}%");
 
             // Default to the most recently unlocked verse until the player picks something else
             // from the list - clamp in case a previously-selected index is somehow out of range.

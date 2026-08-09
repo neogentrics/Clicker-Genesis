@@ -1,0 +1,576 @@
+{
+  "book": "Colossians",
+  "translation": "Ethiopian",
+  "canonicalOrder": 71,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This Ethiopian-translation extraction of Colossians is textually identical (word-for-word, verse-for-verse, same 4 chapters/95 verses) to the KJV Colossians already indexed in the CharacterIndex - no real content divergence was found here (unlike this Ethiopian Bible's Ezra, which genuinely differs). Structure and content are therefore adapted directly from the KJV Colossians draft, re-verified line-by-line against this translation's own file, with every id re-scoped with an '_ethiopian' suffix per the schema's collision-avoidance rule. Same shape as KJV: Paul (writing in bonds, with Timothy/Aristarchus/Marcus/Jesus-called-Justus/Luke/Demas/Archippus/Nymphas as submanagers via the closing greetings), Epaphras (founding evangelist/intercessor for Colosse), six law/theme tiers carrying the epistle's doctrinal argument (Christ's supremacy in 1:15-20, the mystery/Paul's suffering in 1:24-2:5, the false-teaching polemic of 2:6-23, the New Man of 3:1-17, the household code of 3:18-4:1, and closing prayer/speech counsel in 4:2-6) all deliveredBy Paul since no rival teacher is named as an individual, and Tychicus as the letter's courier-manager with Onesimus as his submanager. Naming-collision flag preserved: 'Jesus, called Justus' (4:11) is a distinct individual from Jesus Christ, disambiguated by the text itself via the added surname. Cross-reference flags preserved: Onesimus (4:9) is the same figure whose full story is told in the separate Epistle to Philemon; Archippus (4:17) is very likely the same man addressed in Philemon 1:2 but Colossians itself never states this, so it stays a flagged probable link, not an assertion. Marcus's family link to Barnabas ('sister's son to Barnabas', 4:10) is supplied directly by this book's own text. Per the Gospel-only rule, Christ does not get his own person-tier in this epistle - he is taught about, never personally embodied within Colossians' own narrative frame, so the Christ-hymn is a law tier delivered by Paul, not a manager tier. Demas is given the same loyalty-boost flavor as Luke since 4:14 characterizes both identically with no in-text distinction (his later desertion is 2 Timothy content, outside this book). Nymphas is attached to Paul, not Epaphras, since 4:15 places him in the same Paul-sender closing-greetings list as Archippus/Luke/Demas.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Bonds",
+      "managerId": "paul_ethiopian_colossians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Faithful Minister",
+      "managerId": "epaphras_ethiopian_colossians",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Image of the Invisible God",
+      "managerId": "christ_preeminence_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Mystery Made Manifest",
+      "managerId": "mystery_manifest_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Philosophy and Vain Deceit",
+      "managerId": "philosophy_vain_deceit_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The New Man",
+      "managerId": "new_man_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Household Order",
+      "managerId": "household_order_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Salt-Seasoned Speech",
+      "managerId": "salt_seasoned_speech_ethiopian_col",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Beloved Fellowservant",
+      "managerId": "tychicus_ethiopian_colossians",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_ethiopian_colossians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:1",
+          "note": "Opens the epistle: 'Paul, an apostle of Jesus Christ by the will of God, and Timotheus our brother.'"
+        },
+        {
+          "ref": "Colossians 1:23-25",
+          "note": "Calls himself 'made a minister' of the gospel and says he now 'rejoice[s] in my sufferings for you.'"
+        },
+        {
+          "ref": "Colossians 1:29",
+          "note": "Describes his labor, 'striving according to his working, which worketh in me mightily.'"
+        },
+        {
+          "ref": "Colossians 2:1",
+          "note": "Reveals he has 'great conflict' for the Colossians and Laodiceans though he has 'not seen [their] face in the flesh.'"
+        },
+        {
+          "ref": "Colossians 4:3-4",
+          "note": "Asks them to pray that God would 'open unto us a door of utterance... for which I am also in bonds.'"
+        },
+        {
+          "ref": "Colossians 4:18",
+          "note": "Closes in his own handwriting: 'The salutation by the hand of me Paul. Remember my bonds. Grace be with you. Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Writes the closing salutation in his own hand (4:18) as a personal authenticating mark: 'The salutation by the hand of me Paul.'",
+        "Explicitly states he has never personally met the Colossians face to face (2:1), yet writes with full apostolic authority against the false teaching troubling them."
+      ]
+    },
+    {
+      "id": "timothy_ethiopian_colossians",
+      "name": "Timothy",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:1",
+          "note": "Named alongside Paul as co-sender of the epistle, 'and Timotheus our brother.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Colossians itself gives no further detail about Timothy beyond his being named co-sender of the letter."
+      ]
+    },
+    {
+      "id": "aristarchus_ethiopian_colossians",
+      "name": "Aristarchus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:10",
+          "note": "Sends greetings; Paul calls him 'my fellowprisoner.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "marcus_ethiopian_colossians",
+      "name": "Marcus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "unnamed sister of Barnabas — Colossians 4:10, not individually indexed",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:10",
+          "note": "Identified as 'sister's son to Barnabas'; the Colossians are told 'if he come unto you, receive him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Colossians itself supplies his family link to Barnabas directly, rather than requiring an outside cross-reference."
+      ]
+    },
+    {
+      "id": "justus_ethiopian_colossians",
+      "name": "Jesus, called Justus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "NAMING-COLLISION FLAG: a real, distinct individual from Jesus Christ. The text itself disambiguates by adding the surname 'Justus.'",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:11",
+          "note": "One of only three Jewish ('of the circumcision') fellow-workers Paul names as having 'been a comfort unto me.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "luke_ethiopian_colossians",
+      "name": "Luke",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:14",
+          "note": "Sends greetings, called 'the beloved physician.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Long church tradition identifies him as the author of the Gospel of Luke and Acts, but Colossians itself makes no authorship claim — flagged as tradition, not textual fact within this book."
+      ]
+    },
+    {
+      "id": "demas_ethiopian_colossians",
+      "name": "Demas",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Colossians 4:14 names Demas identically to Luke ('Luke, the beloved physician, and Demas, greet you') with no distinguishing characterization in this book, so he is given the same perk flavor as Luke rather than one based on his later desertion in 2 Timothy 4:10 — that event belongs to a different epistle.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:14",
+          "note": "Named only in passing alongside Luke as sending greetings; no action described."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "2 Timothy 4:10, a separate later epistle, describes Demas eventually forsaking Paul — but that event is outside this book and not reflected in Colossians' own neutral mention of him."
+      ]
+    },
+    {
+      "id": "archippus_ethiopian_colossians",
+      "name": "Archippus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Very likely the same Archippus addressed in Philemon 1:2, though Colossians never itself states that identification — logged as a probable, unconfirmed cross-reference.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:17",
+          "note": "Paul instructs the church to tell him, 'Take heed to the ministry which thou hast received in the Lord, that thou fulfil it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nymphas_ethiopian_colossians",
+      "name": "Nymphas",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bonds",
+      "parentManagerId": "paul_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Attached to Paul rather than Epaphras: Colossians 4:15 places Nymphas in the same closing-greetings list as Archippus, Luke, and Demas, all of whom relate to Paul as the letter's sender, not to any stated relationship with Epaphras.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:15",
+          "note": "Paul sends greetings to Nymphas and 'the church which is in his house,' part of the same closing greetings list as the brethren in Laodicea, Archippus, Luke, and Demas."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "epaphras_ethiopian_colossians",
+      "name": "Epaphras",
+      "role": "manager",
+      "scribeTier": "The Faithful Minister",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:7-8",
+          "note": "Identified as the one 'ye also learned' the gospel from — 'our dear fellowservant, who is for you a faithful minister of Christ' — and who reported the Colossians' love to Paul."
+        },
+        {
+          "ref": "Colossians 4:12-13",
+          "note": "Sends greetings, 'always labouring fervently for you in prayers'; Paul testifies he has 'a great zeal for you, and them that are in Laodicea, and them in Hierapolis.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Described as the one who originally brought the gospel to Colosse, making him the founding evangelist of the very church Paul is writing to.",
+        "His zeal explicitly extends beyond Colosse to the neighboring Lycus Valley churches at Laodicea and Hierapolis."
+      ]
+    },
+    {
+      "id": "christ_preeminence_ethiopian_col",
+      "name": "The Image of the Invisible God",
+      "role": "law",
+      "scribeTier": "The Image of the Invisible God",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "Establishes Christ's absolute supremacy over all creation, all authorities and powers, and the church, directly countering the false teaching's tendency to rank Christ alongside lesser spiritual powers or angelic mediators.",
+      "verses": [
+        {
+          "ref": "Colossians 1:15",
+          "note": "'Who is the image of the invisible God, the firstborn of every creature.'"
+        },
+        {
+          "ref": "Colossians 1:16",
+          "note": "'For by him were all things created... all things were created by him, and for him.'"
+        },
+        {
+          "ref": "Colossians 1:17",
+          "note": "'And he is before all things, and by him all things consist.'"
+        },
+        {
+          "ref": "Colossians 1:18",
+          "note": "'And he is the head of the body, the church: who is the beginning, the firstborn from the dead.'"
+        },
+        {
+          "ref": "Colossians 1:19-20",
+          "note": "'It pleased the Father that in him should all fulness dwell; And, having made peace through the blood of his cross, by him to reconcile all things unto himself.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mystery_manifest_ethiopian_col",
+      "name": "The Mystery Made Manifest",
+      "role": "law",
+      "scribeTier": "The Mystery Made Manifest",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "Explains Paul's own suffering and ministry as steward of a long-hidden 'mystery' — Christ dwelling in the Gentiles as the hope of glory — grounding his authority to warn a church he has never personally visited.",
+      "verses": [
+        {
+          "ref": "Colossians 1:24",
+          "note": "'Who now rejoice in my sufferings for you, and fill up that which is behind of the afflictions of Christ in my flesh for his body's sake, which is the church.'"
+        },
+        {
+          "ref": "Colossians 1:26-27",
+          "note": "'The mystery which hath been hid from ages and from generations, but now is made manifest to his saints... which is Christ in you, the hope of glory.'"
+        },
+        {
+          "ref": "Colossians 2:1-2",
+          "note": "'I would that ye knew what great conflict I have for you, and for them at Laodicea, and for as many as have not seen my face in the flesh.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "philosophy_vain_deceit_ethiopian_col",
+      "name": "Philosophy and Vain Deceit",
+      "role": "law",
+      "scribeTier": "Philosophy and Vain Deceit",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "The epistle's central corrective — warns against a syncretistic false teaching combining human philosophy, Jewish ceremonial regulation, and angel-worship/ascetic self-denial, insisting believers are already spiritually complete in Christ alone.",
+      "verses": [
+        {
+          "ref": "Colossians 2:8",
+          "note": "'Beware lest any man spoil you through philosophy and vain deceit, after the tradition of men, after the rudiments of the world, and not after Christ.'"
+        },
+        {
+          "ref": "Colossians 2:9-10",
+          "note": "'For in him dwelleth all the fulness of the Godhead bodily. And ye are complete in him.'"
+        },
+        {
+          "ref": "Colossians 2:11-12",
+          "note": "'In whom also ye are circumcised... Buried with him in baptism, wherein also ye are risen with him.'"
+        },
+        {
+          "ref": "Colossians 2:14-15",
+          "note": "'Blotting out the handwriting of ordinances that was against us... nailing it to his cross; And having spoiled principalities and powers, he made a shew of them openly.'"
+        },
+        {
+          "ref": "Colossians 2:16-18",
+          "note": "'Let no man therefore judge you in meat, or in drink, or in respect of an holyday... Let no man beguile you of your reward in a voluntary humility and worshipping of angels.'"
+        },
+        {
+          "ref": "Colossians 2:20-23",
+          "note": "'Touch not; taste not; handle not... which things have indeed a shew of wisdom in will worship, and humility, and neglecting of the body.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "new_man_ethiopian_col",
+      "name": "The New Man",
+      "role": "law",
+      "scribeTier": "The New Man",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "Applies the doctrine of union with Christ practically — putting to death earthly/sinful practices, putting on Christlike virtue, dissolving ethnic and social distinctions in Christ, and ordering corporate worship.",
+      "verses": [
+        {
+          "ref": "Colossians 3:1-2",
+          "note": "'If ye then be risen with Christ, seek those things which are above... Set your affection on things above, not on things on the earth.'"
+        },
+        {
+          "ref": "Colossians 3:5",
+          "note": "'Mortify therefore your members which are upon the earth; fornication, uncleanness, inordinate affection, evil concupiscence, and covetousness.'"
+        },
+        {
+          "ref": "Colossians 3:9-10",
+          "note": "'Seeing that ye have put off the old man with his deeds; And have put on the new man.'"
+        },
+        {
+          "ref": "Colossians 3:11",
+          "note": "'Where there is neither Greek nor Jew, circumcision nor uncircumcision, Barbarian, Scythian, bond nor free: but Christ is all, and in all.'"
+        },
+        {
+          "ref": "Colossians 3:12-14",
+          "note": "'Put on therefore... bowels of mercies, kindness, humbleness of mind... forgiving one another... above all these things put on charity.'"
+        },
+        {
+          "ref": "Colossians 3:16",
+          "note": "'Let the word of Christ dwell in you richly in all wisdom... admonishing one another in psalms and hymns and spiritual songs.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "household_order_ethiopian_col",
+      "name": "The Household Order",
+      "role": "law",
+      "scribeTier": "The Household Order",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "Reorders household relationships of authority — wives and husbands, children and fathers, servants and masters — under the lordship of Christ, applying the 'new man' ethic to the most immediate social unit.",
+      "verses": [
+        {
+          "ref": "Colossians 3:18-19",
+          "note": "'Wives, submit yourselves unto your own husbands... Husbands, love your wives, and be not bitter against them.'"
+        },
+        {
+          "ref": "Colossians 3:20-21",
+          "note": "'Children, obey your parents in all things... Fathers, provoke not your children to anger.'"
+        },
+        {
+          "ref": "Colossians 3:22-25",
+          "note": "'Servants, obey in all things your masters according to the flesh... whatsoever ye do, do it heartily, as to the Lord.'"
+        },
+        {
+          "ref": "Colossians 4:1",
+          "note": "'Masters, give unto your servants that which is just and equal; knowing that ye also have a Master in heaven.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "salt_seasoned_speech_ethiopian_col",
+      "name": "Salt-Seasoned Speech",
+      "role": "law",
+      "scribeTier": "Salt-Seasoned Speech",
+      "parentManagerId": null,
+      "deliveredBy": "paul_ethiopian_colossians",
+      "purpose": "Closes the epistle's practical instruction by calling the church to persistent prayer — including for Paul's own gospel proclamation while imprisoned — and to wise, gracious conduct toward outsiders.",
+      "verses": [
+        {
+          "ref": "Colossians 4:2",
+          "note": "'Continue in prayer, and watch in the same with thanksgiving.'"
+        },
+        {
+          "ref": "Colossians 4:3-4",
+          "note": "'Praying also for us, that God would open unto us a door of utterance, to speak the mystery of Christ, for which I am also in bonds.'"
+        },
+        {
+          "ref": "Colossians 4:5-6",
+          "note": "'Walk in wisdom toward them that are without, redeeming the time. Let your speech be alway with grace, seasoned with salt, that ye may know how ye ought to answer every man.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tychicus_ethiopian_colossians",
+      "name": "Tychicus",
+      "role": "manager",
+      "scribeTier": "The Beloved Fellowservant",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:7-8",
+          "note": "'All my state shall Tychicus declare unto you, who is a beloved brother, and a faithful minister and fellowservant in the Lord: Whom I have sent unto you for the same purpose, that he might know your estate, and comfort your hearts.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Entrusted as the physical courier of the epistle itself, sent together with Onesimus to verbally relay news of Paul's situation."
+      ]
+    },
+    {
+      "id": "onesimus_ethiopian_colossians",
+      "name": "Onesimus",
+      "role": "submanager",
+      "scribeTier": "The Beloved Fellowservant",
+      "parentManagerId": "tychicus_ethiopian_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "CROSS-REFERENCE FLAG: this is the same Onesimus whose full story — a slave who fled from his master Philemon of Colosse, was converted through Paul, and is being sent back — is the entire subject of the separate Epistle to Philemon.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:9",
+          "note": "Sent along with Tychicus, called 'a faithful and beloved brother, who is one of you' — they together are to 'make known unto you all things which are done here.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "barnabas_reference": {
+      "ref": "Colossians 4:10",
+      "note": "Barnabas himself is named only as Marcus's uncle ('sister's son to Barnabas') and never appears as an active figure in Colossians; not indexed as his own character in this book."
+    },
+    "philemon_cross_reference": {
+      "ref": "Colossians 4:9",
+      "note": "Onesimus's fuller story — a slave who fled from his master Philemon of Colosse, converted through Paul, and being sent back — is told in the separate Epistle to Philemon, not in Colossians itself."
+    },
+    "archippus_philemon_link": {
+      "ref": "Philemon 1:2",
+      "note": "Archippus is also addressed in Philemon's own opening greeting; long assumed to be the same man (possibly a member of Philemon's household), though neither Colossians nor Philemon explicitly states this identification."
+    },
+    "laodicean_epistle": {
+      "ref": "Colossians 4:16",
+      "note": "Paul references 'the epistle from Laodicea' to be exchanged and read alongside this one — a letter not preserved in the New Testament canon; not indexed as a character or a law-tier since its content is unknown."
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "book": "Titus",
+  "translation": "Geneva",
+  "canonicalOrder": 68,
+  "status": "drafted from direct read of the real Geneva Bible 1560 extracted text (Assets/Resources/Verses/Geneva/titus_68.json), cross-checked against the existing validated KJV Titus Character Index for structural precedent only",
+  "notes": "Titus in the Geneva 1560 translation is, content- and structure-wise, the same short pastoral epistle as the standard-canon KJV Titus (3 chapters, 46 verses, no deuterocanonical additions or omissions) — unlike some books in this project's Geneva/Ethiopian indexing effort (e.g. the Ethiopian Ezra), there is no real canonical/structural divergence here to flag. What DOES genuinely differ is the Geneva translators' specific word choices, distinct from the KJV phrasing at several points worth noting for anyone comparing translations: Geneva renders the \"sound doctrine\" concept throughout (1:9, 2:1) as \"wholesome doctrine\"; 3:13's \"lawyer\" (KJV) is \"the expounder of the Lawe\" in Geneva; 2:10's \"purloining\" (KJV) is \"pickers\" in Geneva (an archaic term for petty theft/pilfering); 1:7's \"not selfwilled\" (KJV) reads \"not froward\" in Geneva; 1:8's \"lover of hospitality\" (KJV) reads \"harberous\" in Geneva. Same two personally-embodied figures carry the letter as in the KJV version: Paul (the writer, making real decisions about ordaining elders, provisioning Zenas/Apollos, and wintering at Nicopolis) and Titus (his delegate in Crete, charged to teach and ordain). The rest of the letter's body is direct teaching content rather than narrative, so it is again carried by six law/theme tiers: elder qualifications (1:5-9), the warning about the \"vaine talkers\" of the circumcision party and the quoted Cretan-prophet saying (1:10-16), sound-doctrine-for-the-household instruction spanning elder men/women, young men/women, and servants (2:1-10), the grace-of-God doctrine grounding that ethic (2:11-15), the civic-obedience/regeneration-and-mercy doctrine of 3:1-8 (extended through 3:14's closing \"shew foorth good woorkes\" instruction, which continues that same theme via the Zenas/Apollos provisioning example), and the closing instruction on avoiding foolish/contentious questions and disciplining a heretic (3:9-11). All six law tiers are deliveredBy Paul, since every line of the letter is his own address to Titus. Four named companions appear only in the closing personal notes (3:12-13) with a single verse of action each — Artemas, Tychicus, Zenas (\"the expounder of the Lawe\"), and Apollos — none carrying independent narrative weight, so all four are submanagers under Paul with a loyalty-boost perkFlavor (fellow workers in his mission, not opposition). Every verse of the book (1:1 through 3:15) is accounted for across the eight tiers. Naming-collision/attribution note (same as the KJV pass): the unnamed \"one of their owne prophets\" quoted in 1:12 is traditionally associated with the Cretan poet Epimenides by later commentators, but the Geneva text itself never names him — flagged as tradition, not textual fact, per the project's naming-collision/traditional-name discipline. Tychicus and Apollos are well-attested elsewhere in the NT under other names/spellings, but only their single-verse mention within this book is indexed here, so their ids are book-and-translation-scoped rather than treated as full independent entries. No character in this book has any scripturally-stated age, so every ageEvents array is empty, and every genealogy field is left null/empty since the text states no family relationships for anyone in it.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paul the Apostle",
+      "managerId": "paul_geneva_titus",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Titus, Mine Owne Sonne",
+      "managerId": "titus_geneva_titus",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Elders Ordeined in Euery Citie",
+      "managerId": "elder_qualifications_geneva_titus",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Vaine Talkers of the Circumcision",
+      "managerId": "vaine_talkers_geneva_titus",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Wholesome Doctrine for the Household",
+      "managerId": "wholesome_doctrine_household_geneva_titus",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Grace That Bringeth Saluation",
+      "managerId": "grace_bringeth_saluation_geneva_titus",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Washing of the Newe Birth",
+      "managerId": "washing_new_birth_geneva_titus",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Foolish Questions and the Heretike",
+      "managerId": "foolish_questions_heretike_geneva_titus",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_titus",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 1:1",
+          "note": "Opens naming himself 'a seruaunt of God, and an Apostle of Iesus Christ, according to the faith of Gods elect, and the acknowledging of the trueth, which is according vnto godlines.'"
+        },
+        {
+          "ref": "Titus 1:2-3",
+          "note": "Describes eternal life 'which God that cannot lie, hath promised before the world began,' now made manifest 'through the preaching, which is committed vnto me, according to the commandement of God our Sauiour.'"
+        },
+        {
+          "ref": "Titus 1:4",
+          "note": "Greets Titus as 'my naturall sonne according to the common faith,' with grace, mercy, and peace from God the Father and the Lord Jesus Christ."
+        },
+        {
+          "ref": "Titus 1:5",
+          "note": "States why he left Titus in Crete: 'that thou shouldest continue to redresse the thinges that remaine, and shouldest ordeine Elders in euery citie, as I appointed thee.'"
+        },
+        {
+          "ref": "Titus 3:12",
+          "note": "Plans to send Artemas or Tychicus to Titus, then wants Titus to come to him at Nicopolis, 'for I haue determined there to winter.'"
+        },
+        {
+          "ref": "Titus 3:13",
+          "note": "Instructs Titus to 'Bring Zenas the expounder of the Lawe, and Apollos on their iourney diligently, that they lacke nothing.'"
+        },
+        {
+          "ref": "Titus 3:14",
+          "note": "'let ours also learne to shewe foorth good woorkes for necessary vses, that they be not vnfruitfull' — extends the Zenas/Apollos provisioning instruction into a general principle."
+        },
+        {
+          "ref": "Titus 3:15",
+          "note": "Closes: 'All that are with mee, salute thee. Greete them that loue vs in the faith. Grace bee with you all, Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This 1560 Geneva translation renders 'sound doctrine' (the more familiar KJV wording) as 'wholesome doctrine' throughout the letter (1:9, 2:1) — a real, distinctive wording choice of this translation, not a content difference."
+      ]
+    },
+    {
+      "id": "titus_geneva_titus",
+      "name": "Titus",
+      "role": "manager",
+      "scribeTier": "Titus, Mine Owne Sonne",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 1:4",
+          "note": "Addressed by Paul as 'my naturall sonne according to the common faith,' receiving the letter's opening grace/mercy/peace greeting."
+        },
+        {
+          "ref": "Titus 1:5",
+          "note": "Left by Paul in Crete to 'continue to redresse the thinges that remaine' and to 'ordeine Elders in euery citie.'"
+        },
+        {
+          "ref": "Titus 2:1",
+          "note": "Instructed: 'speake thou the thinges which become wholesome doctrine.'"
+        },
+        {
+          "ref": "Titus 2:7-8",
+          "note": "Told to 'shewe thy selfe an ensample of good woorkes with vncorrupt doctrine, with grauitie, integritie, And with the wholesome woorde, which can not be condemned.'"
+        },
+        {
+          "ref": "Titus 2:15",
+          "note": "Instructed: 'These things speake, and exhort, and conuince with all authoritie. See that no man despise thee.'"
+        },
+        {
+          "ref": "Titus 3:12-13",
+          "note": "To come to Paul at Nicopolis once relieved by Artemas or Tychicus, and to help Zenas and Apollos on their journey first, 'that they lacke nothing.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elder_qualifications_geneva_titus",
+      "name": "Elders Ordeined in Euery Citie",
+      "role": "law",
+      "scribeTier": "Elders Ordeined in Euery Citie",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Sets the moral and household qualifications an Elder/Bishop must meet before ordination, so the newly-planted Cretan churches gain steadfast, unreproueable leaders able to teach and defend sound doctrine.",
+      "verses": [
+        {
+          "ref": "Titus 1:5",
+          "note": "States the reason Titus is to ordain elders in every city."
+        },
+        {
+          "ref": "Titus 1:6",
+          "note": "Must be 'vnreproueable, the husband of one wife, hauing faithfull children, which are not slandered of riot, neither are disobedient.'"
+        },
+        {
+          "ref": "Titus 1:7-8",
+          "note": "A Bishop, as Gods steward, must be vnreproueable — 'not froward, not angrie, not giuen to wine, no striker, not giuen to filthie lucre, But harberous, one that loueth goodnesse, wise, righteous, holy, temperate.'"
+        },
+        {
+          "ref": "Titus 1:9",
+          "note": "Must hold fast the faithful word according to doctrine, able 'to exhort with wholesome doctrine, and conuince them that say against it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "vaine_talkers_geneva_titus",
+      "name": "Vaine Talkers of the Circumcision",
+      "role": "law",
+      "scribeTier": "Vaine Talkers of the Circumcision",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Warns Titus of disobedient, deceiving teachers subverting whole houses in Crete 'for filthie lucres sake,' and instructs him to rebuke them sharply so the churches remain sound in the faith.",
+      "verses": [
+        {
+          "ref": "Titus 1:10",
+          "note": "'there are many disobedient and vaine talkers and deceiuers of mindes, chiefly they of the Circumcision.'"
+        },
+        {
+          "ref": "Titus 1:11",
+          "note": "Their mouths 'must bee stopped, which subuert whole houses, teaching things, which they ought not, for filthie lucres sake.'"
+        },
+        {
+          "ref": "Titus 1:12",
+          "note": "Quotes 'one of themselues, euen one of their owne prophets': 'The Cretians are alwaies liars, euill beastes, slowe bellies.'"
+        },
+        {
+          "ref": "Titus 1:13-14",
+          "note": "Calls the witness true and instructs Titus to 'conuince them sharply, that they may be sound in ye faith, And not taking heede to Iewish fables and commandements of men, that turne away from the trueth.'"
+        },
+        {
+          "ref": "Titus 1:15-16",
+          "note": "'Vnto the pure are all things pure, but vnto them that are defiled...is nothing pure'; such 'professe that they know God, but by works they deny him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The unnamed 'prophet of their owne' quoted in 1:12 is traditionally identified by later commentators with the Cretan poet Epimenides — the Geneva text itself never names him, so this is flagged as tradition, not textual fact, exactly as in the KJV pass of this same book."
+      ]
+    },
+    {
+      "id": "wholesome_doctrine_household_geneva_titus",
+      "name": "Wholesome Doctrine for the Household",
+      "role": "law",
+      "scribeTier": "Wholesome Doctrine for the Household",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Orders godly conduct across every age and station in the church — elder men and women, young women and men, and seruants — so that the word of God and 'the doctrine of God our Sauiour' are adorned rather than euill spoken of.",
+      "verses": [
+        {
+          "ref": "Titus 2:1",
+          "note": "Opens: 'speake thou the thinges which become wholesome doctrine.'"
+        },
+        {
+          "ref": "Titus 2:2",
+          "note": "Elder men to be 'watchful, graue, teperate, sounde in the faith, in loue, and in patience.'"
+        },
+        {
+          "ref": "Titus 2:3",
+          "note": "Elder women likewise, 'in such behauiour as becommeth holinesse, not false accusers, not subiect to much wine, but teachers of honest things.'"
+        },
+        {
+          "ref": "Titus 2:4-5",
+          "note": "Elder women to instruct young women to be sober minded, loue their husbands and children, be 'temperate, chaste, keeping at home, good and subiect vnto their husbands, that the word of God be not euill spoken of.'"
+        },
+        {
+          "ref": "Titus 2:6",
+          "note": "Young men exhorted 'likewise, that they bee sober minded.'"
+        },
+        {
+          "ref": "Titus 2:9-10",
+          "note": "Seruants told to 'be subiect to their masters, and please them in al things, not answering again,' not 'pickers,' but showing 'al good faithfulnesse, that they may adorne the doctrine of God our Sauiour in all things.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'Neither pickers' (2:10) is this translation's word for the more familiar 'not purloining' (petty theft/pilfering) — same instruction, distinct archaic phrasing."
+      ]
+    },
+    {
+      "id": "grace_bringeth_saluation_geneva_titus",
+      "name": "The Grace That Bringeth Saluation",
+      "role": "law",
+      "scribeTier": "The Grace That Bringeth Saluation",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Describes the grace of God appearing to all men, teaching the denial of vngodlinesse and worldly lusts and a sober, righteous, godly life while looking for Christ's glorious appearing, and recalls that he gaue himselfe to redeeme and purge a peculiar people zealous of good works — directly following the household instruction of chapter 2.",
+      "verses": [
+        {
+          "ref": "Titus 2:11",
+          "note": "'that grace of God, that bringeth saluation vnto all men, hath appeared.'"
+        },
+        {
+          "ref": "Titus 2:12",
+          "note": "Teaches 'we should denie vngodlinesse and worldly lusts, and that we should liue soberly and righteously, and godly in this present world.'"
+        },
+        {
+          "ref": "Titus 2:13",
+          "note": "'Looking for that blessed hope, and appearing of that glorie of that mightie God, and of our Sauiour Iesus Christ.'"
+        },
+        {
+          "ref": "Titus 2:14",
+          "note": "Christ 'gaue him selfe for vs, that hee might redeeme vs from all iniquitie, and purge vs to bee a peculiar people vnto himselfe, zealous of good woorkes.'"
+        },
+        {
+          "ref": "Titus 2:15",
+          "note": "Closes: 'These things speake, and exhort, and conuince with all authoritie. See that no man despise thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "washing_new_birth_geneva_titus",
+      "name": "The Washing of the Newe Birth",
+      "role": "law",
+      "scribeTier": "The Washing of the Newe Birth",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Instructs subjection to Principalities and powers and gentleness toward all men, recalls what believers formerly were, then describes salvation as coming not by works of righteousness but by God's mercy through 'the washing of the newe birth, and the renewing of the holy Ghost'; closes affirming believers should be careful to shew foorth good works, extended in 3:14 into a general instruction that 'ours' likewise learn to shew foorth good works for necessary uses.",
+      "verses": [
+        {
+          "ref": "Titus 3:1",
+          "note": "'Pvt them in remembrance that they bee subiect to the Principalities and powers, and that they bee obedient, and ready to euery good woorke.'"
+        },
+        {
+          "ref": "Titus 3:2",
+          "note": "To 'speake euill of no man,' be no fighters, 'but soft, shewing all meekenesse vnto all men.'"
+        },
+        {
+          "ref": "Titus 3:3",
+          "note": "'wee our selues also were in times past vnwise, disobedient, deceiued, seruing the lustes and diuers pleasures, liuing in maliciousnes and enuie, hatefull, and hating one another.'"
+        },
+        {
+          "ref": "Titus 3:4-5",
+          "note": "'when that bountifulnesse and that loue of God our Sauiour toward man appeared, Not by the woorkes of righteousnesse...but according to his mercie he saued vs, by the washing of the newe birth, and the renewing of the holy Ghost.'"
+        },
+        {
+          "ref": "Titus 3:6-7",
+          "note": "The Holy Ghost 'shed on vs aboundantly, through Iesus Christ our Sauiour, That we, being iustified by his grace, should be made heires according to the hope of eternall life.'"
+        },
+        {
+          "ref": "Titus 3:8",
+          "note": "'This is a true saying...that they which haue beleeued God, might be carefull to shewe foorth good woorkes. These things are good and profitable vnto men.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'the washing of the newe birth' (3:5) is this translation's phrasing for what is more familiarly rendered 'the washing of regeneration' — same doctrine, distinct wording."
+      ]
+    },
+    {
+      "id": "foolish_questions_heretike_geneva_titus",
+      "name": "Foolish Questions and the Heretike",
+      "role": "law",
+      "scribeTier": "Foolish Questions and the Heretike",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_titus",
+      "purpose": "Preserves unity in the young Cretan churches by directing Titus to avoid divisive speculative controversy and prescribing a clear discipline process for a persistently false teacher.",
+      "verses": [
+        {
+          "ref": "Titus 3:9",
+          "note": "'stay foolish questions, and genealogies, and contentions, and brawlings about the Lawe: for they are vnprofitable and vaine.'"
+        },
+        {
+          "ref": "Titus 3:10",
+          "note": "'Reiect him that is an heretike, after once or twise admonition.'"
+        },
+        {
+          "ref": "Titus 3:11",
+          "note": "Explains such a man 'is peruerted, and sinneth, being damned of his owne selfe.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "artemas_geneva_titus",
+      "name": "Artemas",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_geneva_titus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Named only this once in the entire New Testament, in this translation as in every other.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 3:12",
+          "note": "One of two men (with Tychicus) Paul considers sending to Crete to relieve Titus so Titus can travel to Nicopolis."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tychicus_geneva_titus",
+      "name": "Tychicus",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_geneva_titus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Appears more fully elsewhere as a trusted courier (Ephesians, Colossians, 2 Timothy) — only his single mention within this book is indexed here, id book-and-translation-scoped to keep this entry distinct.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 3:12",
+          "note": "The other of the two men Paul considers sending to relieve Titus in Crete."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zenas_geneva_titus",
+      "name": "Zenas the Expounder of the Lawe",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_geneva_titus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Named only this once in the entire New Testament. Geneva calls him 'the expounder of the Lawe' — distinct wording from the more familiar 'the lawyer,' without further specifying Jewish or Roman legal training.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 3:13",
+          "note": "Paul instructs Titus: 'Bring Zenas the expounder of the Lawe, and Apollos on their iourney diligently, that they lacke nothing.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "apollos_geneva_titus",
+      "name": "Apollos",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_geneva_titus",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Appears more fully elsewhere (Acts 18, 1 Corinthians) as an eloquent teacher — only his single mention within this book is indexed here, id book-and-translation-scoped to keep this entry distinct.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Titus 3:13",
+          "note": "Sent along with Zenas; Titus is told to see that 'they lacke nothing' for their journey."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references kept out of the character list above.",
+    "cretians_collective": {
+      "ref": "Titus 1:10-16",
+      "note": "The 'vaine talkers' and the broader Cretan populace quoted in 1:12 are addressed collectively (see the vaine_talkers_geneva_titus law-tier character) — the Geneva text does not individuate them into named persons, so none are broken out as separate characters."
+    },
+    "titus_cross_book_background": {
+      "ref": "Galatians 2:1-3",
+      "note": "Titus's Gentile identity and presence with Paul at the Jerusalem council are stated in Galatians, not in this book itself — logged as a pointer only, not imported as content of Titus."
+    }
+  }
+}

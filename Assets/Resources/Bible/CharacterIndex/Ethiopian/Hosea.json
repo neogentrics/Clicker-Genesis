@@ -1,0 +1,455 @@
+{
+  "book": "Hosea",
+  "translation": "Ethiopian",
+  "canonicalOrder": 48,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian-translation text (14 chapters, 197 verses) directly from hosea_48.json. Content and wording are essentially identical to the KJV Hosea already indexed at CharacterIndex/Hosea.json (verse-for-verse match on every checked passage: 1:2-11 sign-children, 2:1-23 restoration oracle, 3:1-5 buy-back, 6:6 mercy-not-sacrifice, 11:1 Egypt/son, 12:3-4/12 Jacob allusions, 14:1-9 closing call to return) — no real Ethiopian-specific textual divergence was found in this book, unlike the Ezra case. Adapted the KJV structure's proven tier shape (2 person tiers + 5 law/theme tiers + 3 sign-named submanagers) rather than inventing a new one, but re-verified every verse reference, quote, and genealogy note directly against this translation's own extracted text before including it. All character/law ids suffixed '_ethiopian' to avoid collision with the existing KJV Hosea ids. Naming-collision flag carried over and re-confirmed in this text: the prophet Hosea (1:1, 'son of Beeri') shares his underlying Hebrew name with Hoshea the last king of Israel and with Oshea/Joshua's original name, and the 'Jeroboam' of the 1:1 superscription is Jeroboam II son of Joash (Israel's contemporary king), not Jeroboam I son of Nebat who founded the calf worship condemned later in the book (8:5-6, 10:5) — only the patronymic 'son of Joash' in 1:1 disambiguates this, so it is flagged explicitly rather than left implicit. The unnamed prophet of 12:13 ('by a prophet the LORD brought Israel out of Egypt') is traditionally understood as Moses but is not named in this text, so no character entry was created for that reference beyond a note in the Israel's Sinful History law tier. Gomer's identification with the unnamed woman of 3:1 ('a woman beloved of her friend, yet an adulteress') is traditional, not textually confirmed in chapter 3 itself, and is flagged as such rather than asserted as fact. FIX APPLIED: scribeTiers array was empty in the original draft (structural bug) — rebuilt it directly from the 7 scribeTier names already referenced by characters[].scribeTier in the draft (Silver and Barley/hosea_ethiopian/person, Wool and Flax/gomer_ethiopian/person, Under the Green Tree/baal_worship_ethiopian/law, The Molten Calves/calf_worship_ethiopian/law, Cake Not Turned/israels_sinful_history_ethiopian/law, Knowledge of God/mercy_not_sacrifice_ethiopian/law, Dew and Lily/call_to_return_ethiopian/law), no re-read of the source file needed since this was purely a structural omission with no factual content at stake.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Silver and Barley",
+      "managerId": "hosea_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wool and Flax",
+      "managerId": "gomer_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Under the Green Tree",
+      "managerId": "baal_worship_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Molten Calves",
+      "managerId": "calf_worship_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Cake Not Turned",
+      "managerId": "israels_sinful_history_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Knowledge of God",
+      "managerId": "mercy_not_sacrifice_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Dew and Lily",
+      "managerId": "call_to_return_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "hosea_ethiopian",
+      "name": "Hosea",
+      "role": "manager",
+      "scribeTier": "Silver and Barley",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Beeri",
+        "mother": null,
+        "spouses": [
+          "Gomer"
+        ],
+        "children": [
+          "Jezreel",
+          "Lo-ruhamah",
+          "Lo-ammi"
+        ],
+        "note": "Identified only as 'the son of Beeri' (1:1); no mother named. Ministry dated to the reigns of Judah's kings Uzziah, Jotham, Ahaz, and Hezekiah, and Israel's king Jeroboam the son of Joash (Jeroboam II) — not to be confused with the earlier Jeroboam I son of Nebat, founder of the calf worship condemned at 8:5-6 and 10:5."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:1",
+          "note": "Superscription: 'the word of the LORD that came unto Hosea, the son of Beeri' — dates his ministry by the kings of Judah and Israel."
+        },
+        {
+          "ref": "Hosea 1:2-3",
+          "note": "Commanded, 'Go, take unto thee a wife of whoredoms and children of whoredoms'; he takes Gomer the daughter of Diblaim."
+        },
+        {
+          "ref": "Hosea 3:1-2",
+          "note": "Commanded again to love an adulterous woman; buys her back 'for fifteen pieces of silver, and for an homer of barley, and an half homer of barley.'"
+        },
+        {
+          "ref": "Hosea 3:3",
+          "note": "Tells her she must abide with him many days without playing the harlot — a picture of Israel's coming discipline before restoration."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name means 'salvation,' sharing its root with Joshua and Jesus.",
+        "The prophet 'Hosea' shares his underlying Hebrew name with 'Hoshea,' the last king of Israel (2 Kings 17:1), and with 'Oshea,' Joshua's original name (Numbers 13:16) — three different people.",
+        "The only Old Testament prophet whose own marriage is used as a sustained, multi-chapter living parable of God's relationship to Israel."
+      ]
+    },
+    {
+      "id": "gomer_ethiopian",
+      "name": "Gomer",
+      "role": "manager",
+      "scribeTier": "Wool and Flax",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Diblaim",
+        "mother": null,
+        "spouses": [
+          "Hosea"
+        ],
+        "children": [
+          "Jezreel",
+          "Lo-ruhamah",
+          "Lo-ammi"
+        ],
+        "note": "Called 'the daughter of Diblaim' (1:3). The unnamed woman Hosea is commanded to love again in 3:1 ('a woman beloved of her friend, yet an adulteress') is traditionally identified with Gomer, but chapter 3 does not name her again — this text does not itself confirm the identification."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:3",
+          "note": "'So he went and took Gomer the daughter of Diblaim which conceived, and bare him a son.'"
+        },
+        {
+          "ref": "Hosea 2:5",
+          "note": "Pursues 'lovers,' crediting them for bread, water, wool, flax, oil, and drink."
+        },
+        {
+          "ref": "Hosea 2:8",
+          "note": "'she did not know that I gave her corn, and wine, and oil' — the LORD, not Baal, was the true source."
+        },
+        {
+          "ref": "Hosea 2:19-20",
+          "note": "Restoration oracle: the LORD betroths Israel to himself forever 'in righteousness, and in judgment, and in lovingkindness, and in mercies.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Bears three children whose divinely-given names function as prophetic sign-acts against Israel.",
+        "In chapter 2 the LORD addresses 'your mother' (Israel personified through Gomer) as having credited Baal for grain, wine, and oil that were actually His gifts (2:5, 8)."
+      ]
+    },
+    {
+      "id": "jezreel_ethiopian",
+      "name": "Jezreel",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Firstborn son; named directly by the LORD's command, not chosen by his parents (1:4)."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:4-5",
+          "note": "'Call his name Jezreel; for yet a little while, and I will avenge the blood of Jezreel upon the house of Jehu... and I will break the bow of Israel in the valley of Jezreel.'"
+        },
+        {
+          "ref": "Hosea 1:11",
+          "note": "'great shall be the day of Jezreel' — his name reused as a title of future restoration."
+        },
+        {
+          "ref": "Hosea 2:22-23",
+          "note": "'they shall hear Jezreel. And I will sow her unto me in the earth' — wordplay on his name (God sows/scatters)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Name means 'God sows' or 'God scatters'; also the valley/city where Jehu massacred the house of Ahab and where Ahab seized Naboth's vineyard.",
+        "His name's meaning is reversed from judgment to hope by the book's end."
+      ]
+    },
+    {
+      "id": "lo_ruhamah_ethiopian",
+      "name": "Lo-ruhamah",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Daughter; named 'Lo-ruhamah' ('not pitied'/'not having obtained mercy') by direct divine command (1:6)."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:6",
+          "note": "'Call her name Lo-ruhamah: for I will no more have mercy upon the house of Israel but I will utterly take them away.'"
+        },
+        {
+          "ref": "Hosea 1:7",
+          "note": "By contrast, the LORD says He 'will have mercy upon the house of Judah, and will save them by the LORD their God' at this same time."
+        },
+        {
+          "ref": "Hosea 2:1",
+          "note": "'Say ye unto your brethren, Ammi and to your sisters, Ru-hamah' — the reversal."
+        },
+        {
+          "ref": "Hosea 2:23",
+          "note": "'I will have mercy upon her that had not obtained mercy.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her name is reversed in the restoration oracle to 'Ruhamah' (mercy obtained).",
+        "Marks the point where God withholds mercy from Israel specifically while showing mercy to Judah at the same time (1:6-7)."
+      ]
+    },
+    {
+      "id": "lo_ammi_ethiopian",
+      "name": "Lo-ammi",
+      "role": "submanager",
+      "scribeTier": null,
+      "parentManagerId": "hosea_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hosea",
+        "mother": "Gomer",
+        "spouses": [],
+        "children": [],
+        "note": "Second son; named 'Lo-ammi' ('not my people') by direct divine command (1:9)."
+      },
+      "verses": [
+        {
+          "ref": "Hosea 1:9",
+          "note": "'Call his name Lo-ammi: for ye are not my people, and I will not be your God.'"
+        },
+        {
+          "ref": "Hosea 1:10",
+          "note": "Immediately followed by a promise Israel's number will be 'as the sand of the sea' and they will be called 'the sons of the living God.'"
+        },
+        {
+          "ref": "Hosea 2:23",
+          "note": "'I will say to them which were not my people, Thou art my people and they shall say, Thou art my God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name is reversed to 'Ammi' ('my people') in the restoration oracle.",
+        "1:10's promise, paired with his harsh naming, is quoted by Paul in Romans 9:25-26."
+      ]
+    },
+    {
+      "id": "baal_worship_ethiopian",
+      "name": "Baal Worship",
+      "role": "law",
+      "scribeTier": "Under the Green Tree",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Frames Israel's idolatry as marital infidelity — Israel credits Baal for the corn, wine, oil, wool, and flax the LORD actually provided (2:8-9), pursues Baal under shady trees on the hills (4:13), and must be stripped bare and led back into the wilderness to be won again (2:3-15).",
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Hosea 2:8",
+          "note": "Israel did not know the LORD gave the corn, wine, and oil later 'prepared for Baal.'"
+        },
+        {
+          "ref": "Hosea 2:13",
+          "note": "'the days of Baalim, wherein she burned incense to them' — judged, along with her earrings and jewels worn for her lovers."
+        },
+        {
+          "ref": "Hosea 2:16-17",
+          "note": "Restoration: Israel will call the LORD 'Ishi' (my husband), no longer 'Baali'; the names of Baalim taken away out of her mouth."
+        },
+        {
+          "ref": "Hosea 4:13",
+          "note": "Sacrifices offered 'upon the tops of the mountains... under oaks and poplars and elms, because the shadow thereof is good.'"
+        },
+        {
+          "ref": "Hosea 9:10",
+          "note": "Recalls Israel going 'to Baal-peor, and separated themselves unto that shame.'"
+        },
+        {
+          "ref": "Hosea 11:2",
+          "note": "'they sacrificed unto Baalim, and burned incense to graven images.'"
+        },
+        {
+          "ref": "Hosea 13:1",
+          "note": "'when he offended in Baal, he died' — Ephraim's fall tied directly to Baal worship."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Hebrew word 'baal' also simply means 'husband/lord' — part of the book's wordplay (2:16-17).",
+        "The LORD vows to 'take away the names of Baalim out of her mouth... they shall no more be remembered by their name' (2:17)."
+      ]
+    },
+    {
+      "id": "calf_worship_ethiopian",
+      "name": "Calf Worship",
+      "role": "law",
+      "scribeTier": "The Molten Calves",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Condemns Israel's self-manufactured golden-calf worship as illegitimate, homegrown idolatry distinct from Baal worship — 'the workman made it: therefore it is not God' (8:6) — doomed to be broken in pieces and carried off as tribute to Assyria (10:6).",
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Hosea 8:5-6",
+          "note": "'Thy calf, O Samaria, hath cast thee off... the workman made it, therefore it is not God: but the calf of Samaria shall be broken in pieces.'"
+        },
+        {
+          "ref": "Hosea 10:5",
+          "note": "'The inhabitants of Samaria shall fear because of the calves of Beth-aven.'"
+        },
+        {
+          "ref": "Hosea 10:6",
+          "note": "The calf-idol 'shall be also carried unto Assyria for a present to king Jareb.'"
+        },
+        {
+          "ref": "Hosea 13:2",
+          "note": "'they have made them molten images of their silver, and idols... Let the men that sacrifice kiss the calves.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text does not name the calves' original royal sponsor; 1 Kings 12:28-29 credits Jeroboam I's shrines at Bethel and Dan.",
+        "10:6 pictures the calf-idol itself carried off to Assyria as tribute — the object of worship becomes a captive."
+      ]
+    },
+    {
+      "id": "israels_sinful_history_ethiopian",
+      "name": "Israel's Sinful History Recalled",
+      "role": "law",
+      "scribeTier": "Cake Not Turned",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_ethiopian",
+      "purpose": "Argues Israel's present unfaithfulness continues a long pattern of rebellion — reaching back to the patriarch Jacob, the days at Gibeah, and the Exodus from Egypt itself — and of foolish alliance-seeking with Egypt and Assyria instead of trust in the LORD.",
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Hosea 6:7",
+          "note": "'they like men have transgressed the covenant: there have they dealt treacherously against me' — a broken covenant recalled."
+        },
+        {
+          "ref": "Hosea 7:8",
+          "note": "'Ephraim is a cake not turned' — half-baked, ruined by mixing with foreign peoples."
+        },
+        {
+          "ref": "Hosea 7:11",
+          "note": "Ephraim 'like a silly dove without heart: they call to Egypt, they go to Assyria.'"
+        },
+        {
+          "ref": "Hosea 9:9",
+          "note": "'they have deeply corrupted themselves, as in the days of Gibeah.'"
+        },
+        {
+          "ref": "Hosea 9:10",
+          "note": "Israel's shame at 'Baal-peor' in the wilderness recalled."
+        },
+        {
+          "ref": "Hosea 10:9",
+          "note": "'O Israel, thou hast sinned from the days of Gibeah' repeated."
+        },
+        {
+          "ref": "Hosea 11:1",
+          "note": "'When Israel was a child, then I loved him, and called my son out of Egypt.'"
+        },
+        {
+          "ref": "Hosea 12:3-4",
+          "note": "Recalls Jacob taking 'his brother by the heel in the womb' and having 'power with God... over the angel, and prevailed.'"
+        },
+        {
+          "ref": "Hosea 12:12",
+          "note": "Recalls Jacob fleeing 'into the country of Syria' and serving for a wife, keeping sheep."
+        },
+        {
+          "ref": "Hosea 12:13",
+          "note": "'by a prophet the LORD brought Israel out of Egypt, and by a prophet was he preserved' — the prophet is not named in this text (traditionally understood as Moses)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hosea 11:1 is quoted by Matthew (2:15) of the infant Jesus' return from Egypt.",
+        "Hosea 7:11 compares Ephraim to 'a silly dove without heart' flitting between Egypt and Assyria for help instead of the LORD."
+      ]
+    },
+    {
+      "id": "mercy_not_sacrifice_ethiopian",
+      "name": "Mercy, Not Sacrifice",
+      "role": "law",
+      "scribeTier": "Knowledge of God",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_ethiopian",
+      "purpose": "Declares that steadfast covenant love ('mercy') and relational knowledge of God matter more to the LORD than ritual sacrifice — one of the book's central theological statements, among the most quoted verses in the Minor Prophets.",
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Hosea 4:1",
+          "note": "'there is no truth, nor mercy, nor knowledge of God in the land.'"
+        },
+        {
+          "ref": "Hosea 4:6",
+          "note": "'My people are destroyed for lack of knowledge: because thou hast rejected knowledge, I will also reject thee.'"
+        },
+        {
+          "ref": "Hosea 6:6",
+          "note": "'For I desired mercy, and not sacrifice and the knowledge of God more than burnt offerings.' Quoted by Jesus in Matthew 9:13 and 12:7."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Sits just after the LORD's complaint that 'your goodness is as a morning cloud, and as the early dew it goeth away' (6:4), immediately before this explanation of what He truly desires."
+      ]
+    },
+    {
+      "id": "call_to_return_ethiopian",
+      "name": "Call to Return",
+      "role": "law",
+      "scribeTier": "Dew and Lily",
+      "parentManagerId": null,
+      "deliveredBy": "hosea_ethiopian",
+      "purpose": "Invites Israel to abandon idols and return to the LORD in genuine repentance, promising healing, free love, and flourishing restoration — the book's closing resolution to the marriage/harlotry metaphor developed throughout.",
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Hosea 6:1-3",
+          "note": "'Come, and let us return unto the LORD: for he hath torn, and he will heal us he hath smitten, and he will bind us up.'"
+        },
+        {
+          "ref": "Hosea 14:1-2",
+          "note": "'O Israel, return unto the LORD thy God... Take with you words, and turn to the LORD... so will we render the calves of our lips.'"
+        },
+        {
+          "ref": "Hosea 14:4",
+          "note": "'I will heal their backsliding, I will love them freely: for mine anger is turned away from him.'"
+        },
+        {
+          "ref": "Hosea 14:5",
+          "note": "'I will be as the dew unto Israel: he shall grow as the lily, and cast forth his roots as Lebanon.'"
+        },
+        {
+          "ref": "Hosea 14:9",
+          "note": "Closing wisdom saying: 'the ways of the LORD are right, and the just shall walk in them: but the transgressors shall fall therein.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "14:2 has Israel offer 'the calves of our lips' (praise) instead of animal sacrifice when returning to the LORD.",
+        "14:8 has the LORD say 'I am like a green fir tree. From me is thy fruit found' — reversing the false 'green tree' idolatry condemned at 4:13."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "jacob_allusion": {
+      "ref": "Hosea 12:3-4, 12:12",
+      "note": "Historical recollection of Jacob's Genesis narrative (heel-grasping at birth, wrestling the angel, fleeing to Syria, serving for a wife) — already fully indexed as a character under Genesis; not re-indexed here since he takes no independent action within Hosea itself."
+    }
+  }
+}

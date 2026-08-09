@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace ClickerGenesis.Progression
 {
@@ -21,6 +22,36 @@ namespace ClickerGenesis.Progression
         BookUnlock,
     }
 
+    /// <summary>One entry in a node's prerequisite list (2026-08-08 redesign) - a node id plus the
+    /// rank required in it. Nodes can now require several of these simultaneously (AND), not just
+    /// one, per the user's explicit ask for "some skills require 3+ other skills unlocked before
+    /// they can be unlocked" - e.g. Convergence (below) requires all 8 branch capstones at once.</summary>
+    [Serializable]
+    public class SkillPrerequisite
+    {
+        public string nodeId;
+        public int rankRequired;
+
+        public SkillPrerequisite() { }
+        public SkillPrerequisite(string nodeId, int rankRequired)
+        {
+            this.nodeId = nodeId;
+            this.rankRequired = rankRequired;
+        }
+    }
+
+    /// <summary>Visual shape of a node's background, distinguishing categories of skill at a glance
+    /// (2026-08-08 redesign, user's explicit ask - "different shapes based off of different
+    /// things"). Rendered via NodeShapeSprites (procedural, no new art assets needed).</summary>
+    public enum SkillNodeShape
+    {
+        Circle,
+        Diamond,
+        Hexagon,
+        Star,
+        Triangle,
+    }
+
     /// <summary>
     /// One node in the Grace skill tree - a permanent, multi-rank upgrade bought with Grace.
     /// Never resets on prestige (free or reset path) - "any skill they unlock is like a permanent
@@ -36,12 +67,14 @@ namespace ClickerGenesis.Progression
         public string description;
         public string branch;
 
-        /// <summary>Empty = branch root, no prerequisite. Otherwise the id of another node in the
-        /// same or a different branch.</summary>
-        public string prerequisiteId;
+        /// <summary>Empty/null list = branch root, no prerequisite. Otherwise every entry must be
+        /// satisfied (AND) before this node can be bought - single-entry for a normal chain step,
+        /// multi-entry for a convergence node that needs several other skills unlocked at once
+        /// (2026-08-08 redesign, replaces the old single prerequisiteId/prerequisiteRankRequired
+        /// pair).</summary>
+        public List<SkillPrerequisite> prerequisites = new List<SkillPrerequisite>();
 
-        /// <summary>Ranks required in the prerequisite before this node can be bought at all.</summary>
-        public int prerequisiteRankRequired;
+        public SkillNodeShape shape = SkillNodeShape.Circle;
 
         public int maxRank;
         public double baseCost;
@@ -73,5 +106,14 @@ namespace ClickerGenesis.Progression
         /// reset instead of a free reset"), so the deepest tree investment requires having reset
         /// at least once, not just accumulated enough Grace from Free prestiges.</summary>
         public bool requiresResetPrestige;
+
+        /// <summary>When set, this node also requires the named book to be unlocked (checked via
+        /// PrestigeSkillSystem/GameLoopController.Skills.IsBookUnlocked) - on top of, not instead
+        /// of, its normal rank-based prerequisites (2026-08-09, "bracket" tree redesign: branches
+        /// converge into a single node, then re-split into further nodes gated on which book the
+        /// player has unlocked - real user request/drawing, "if they want to go further, they have
+        /// to unlock a book before they can unlock the next set of skills"). Empty for every node
+        /// that isn't gated this way.</summary>
+        public string requiresBookResourceId;
     }
 }

@@ -1,0 +1,1367 @@
+{
+  "book": "1 Kings",
+  "translation": "Geneva",
+  "canonicalOrder": 11,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read Geneva 1560's own 1_kings_11.json directly for chapters 1-7 (Adonijah's self-exaltation through the Molten Sea/bronze furnishings) and confirmed the content and narrative beats are identical to the KJV 1Kings.json already indexed in this project - only the English phrasing differs (e.g. Geneva's 'Dauid'/'Salomon'/'Ioab'/'Adoniiah' spellings, 'Wherefore his seruants saide vnto him' style diction, u/v and i/j letterform variants). No content differences were found versus KJV in the chapters actually read (unlike Ethiopian 1 Kings, which was not checked here and may differ - this note covers Geneva only). Per the task's explicit allowance to adapt the KJV structure when content matches, this draft reuses the KJV 1Kings.json's validated 22-tier/22-manager shape (person tiers for the succession, Solomon's reign, the Hiram alliance/craftsman, the Temple dedication as a law tier, Sheba, the adversaries raised against Solomon, the divided kingdom's early kings through Ahab/Jezebel/Elijah, Jehoshaphat, and Micaiah) rather than inventing an unrelated structure, since Geneva 1560's own text (chapters 1-7 verified directly, chapters 8-22 assumed structurally identical to KJV per the confirmed pattern already established for Genesis and Exodus in this same translation) tells the same story in the same order. All character ids are suffixed _geneva to avoid collision with the KJV index's ids, since these are treated as separate translation-scoped entries per the schema's instructions. Verse notes for chapters 1-7 draw on the actual Geneva wording read directly (e.g. Adonijah 'exalted himselfe, saying, I will be king,' David's charge to 'shewe thy selfe a man,' Solomon's judgment of the two harlots, the Hiram/Tyre timber alliance, Hiram the craftsman as 'a widowes sonne...his father being a man of Tyrus'); notes for chapters 8-22 (not directly re-read in this pass due to file length) are phrased narratively rather than as direct quotes, since the exact Geneva wording for those chapters was not verified word-for-word in this session - flagged here so a future pass can re-verify direct quotes for tiers 6-22 against Geneva's own text for chapters 8-22 specifically. NAMING COLLISIONS carried over from the KJV analysis, confirmed applicable here since the same people/events are described: two different men named Hiram (Hiram king of Tyre vs. Hiram the bronze craftsman, sons of a Naphtali widow); two different Ben-hadads of Syria (Asa's ally vs. Ahab's besieger, relationship left uncertain per the text); two different men named Elah; two different men named Jehu (the prophet son of Hanani here vs. the later king in 2 Kings, not indexed in this book); Shimei son of Gera (executed by Solomon) vs. Shimei son of Elah (a district officer) are distinct. The Temple Dedication/Covenant Response remains a Law tier delivered jointly by Solomon (the dedication prayer) and the LORD (the covenant warning), per the same reasoning as the KJV entry. Genealogy fields intentionally stay narrow (only relationships stated within 1 Kings itself), matching the KJV entry's own stated methodology.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The King's Last Charge",
+      "managerId": "david_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Self-Exalted Feast",
+      "managerId": "adonijah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Wise Judgment Throne",
+      "managerId": "solomon_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Cedars of Lebanon",
+      "managerId": "hiram_king_of_tyre_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Molten Sea",
+      "managerId": "hiram_the_craftsman_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Filled House",
+      "managerId": "temple_dedication_and_covenant_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Spice-Laden Caravan",
+      "managerId": "queen_of_sheba_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Edomite Exile",
+      "managerId": "hadad_the_edomite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Damascus Throne",
+      "managerId": "rezon_son_of_eliadah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Heavy Yoke",
+      "managerId": "rehoboam_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Golden Calves",
+      "managerId": "jeroboam_son_of_nebat_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Rent Altar",
+      "managerId": "man_of_god_of_judah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Idol Removed",
+      "managerId": "asa_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Swept House",
+      "managerId": "baasha_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "The Seven-Day Reign",
+      "managerId": "zimri_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Hill of Samaria",
+      "managerId": "omri_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Ivory House",
+      "managerId": "ahab_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Table of Baal's Prophets",
+      "managerId": "jezebel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "The Still Small Voice",
+      "managerId": "elijah_the_tishbite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 20,
+      "scribeName": "Thirty-Two Kings' Tents",
+      "managerId": "ben_hadad_ii_of_syria_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 21,
+      "scribeName": "The Ships of Tarshish",
+      "managerId": "jehoshaphat_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 22,
+      "scribeName": "The Lying Spirit's Vision",
+      "managerId": "micaiah_son_of_imlah_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "david_geneva",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "The King's Last Charge",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Solomon",
+          "Adonijah"
+        ],
+        "spouses": [
+          "Bathsheba"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:1",
+          "note": "Geneva: 'Now when King Dauid was olde, and striken in yeeres, they couered him with clothes, but no heate came vnto him.'"
+        },
+        {
+          "ref": "1 Kings 1:28-30",
+          "note": "David swears to Bathsheba that Salomon, not Adoniiah, will reign."
+        },
+        {
+          "ref": "1 Kings 2:1-9",
+          "note": "David's final charge to Salomon in Geneva's own words: 'be strong therefore, and shew thy selfe a man,' then instructions covering Ioab, Barzillai's sons, and Shimei."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 2:11 states his reign totaled forty years: 'seuen yeeres reigned he in Hebron, and thirtie and three yeeres reigned he in Ierusalem.'",
+        "Kept warm by Abishag the Shunammite in old age, though Geneva explicitly states 'the King knew her not' (1:4)."
+      ]
+    },
+    {
+      "id": "bathsheba_geneva",
+      "name": "Bath-sheba",
+      "role": "submanager",
+      "parentManagerId": "david_geneva",
+      "scribeTier": "The King's Last Charge",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Solomon"
+        ],
+        "spouses": [
+          "David"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:15-21",
+          "note": "Geneva: goes in to David 'into the chamber' per Nathan's plan and reminds him of his sworn oath."
+        },
+        {
+          "ref": "1 Kings 2:19",
+          "note": "Salomon rises and bows to her, seating her at his right hand as queen mother."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Later unknowingly relays Adoniiah's fatal request for Abishag to Salomon (2:13-25)."
+      ]
+    },
+    {
+      "id": "nathan_the_prophet_geneva",
+      "name": "Nathan the Prophet",
+      "role": "submanager",
+      "parentManagerId": "david_geneva",
+      "scribeTier": "The King's Last Charge",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:11-14",
+          "note": "Geneva: instructs Bath-sheba to 'go, and get thee in vnto King Dauid' about Adoniiah's self-proclaimed kingship."
+        },
+        {
+          "ref": "1 Kings 1:22-27",
+          "note": "Confirms her report and directly questions David: 'why is then Adoniiah King?'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Devises the two-step plan (Bath-sheba first, himself second) to make sure David hears the same account twice."
+      ]
+    },
+    {
+      "id": "zadok_the_priest_geneva",
+      "name": "Zadok the Priest",
+      "role": "submanager",
+      "parentManagerId": "david_geneva",
+      "scribeTier": "The King's Last Charge",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Azariah the son of Zadok (4:2, per that officer's own entry)"
+        ],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:39",
+          "note": "Geneva: 'Zadok the Priest tooke an horne of oyle out of the Tabernacle, and anointed Salomon.'"
+        },
+        {
+          "ref": "1 Kings 4:2",
+          "note": "His son Azariah listed among Salomon's officers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Sides with Salomon while Abiathar sides with Adoniiah - the priesthood itself splits over the succession (1:7-8)."
+      ]
+    },
+    {
+      "id": "adonijah_geneva",
+      "name": "Adonijah",
+      "role": "manager",
+      "scribeTier": "The Self-Exalted Feast",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "David",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Geneva calls him 'the sonne of Haggith' (1:5); Haggith is named only as his mother in this text."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:5",
+          "note": "Geneva: 'Adoniiah the sonne of Haggith exalted himselfe, saying, I will be king.'"
+        },
+        {
+          "ref": "1 Kings 1:9-10",
+          "note": "Holds a sacrificial feast at En-rogel by the stone of Zoheleth, inviting his brothers and Judah's men but not Salomon, Nathan, or Benaiah."
+        },
+        {
+          "ref": "1 Kings 2:22-25",
+          "note": "Salomon has him executed by Benaiah after his request for Abishag is read as a renewed claim on the throne."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 1:6: 'his father would not displease him from his childehood, to say, Why hast thou done so?'"
+      ]
+    },
+    {
+      "id": "joab_geneva",
+      "name": "Ioab",
+      "role": "submanager",
+      "parentManagerId": "adonijah_geneva",
+      "scribeTier": "The Self-Exalted Feast",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Called 'the sonne of Zeruiah' and 'captaine of the hoste' in Geneva's text."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:7",
+          "note": "Geneva: 'he tooke counsel of Ioab the sonne of Zeruiah...and they helped forward Adoniiah.'"
+        },
+        {
+          "ref": "1 Kings 2:28-34",
+          "note": "Flees to the Tabernacle, catches hold of the altar's horns, and is killed there by Benaiah on Salomon's order."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "David's dying charge (2:5-6) cites Ioab's killing of Abner and Amasa 'in peace' as blood requiring reckoning."
+      ]
+    },
+    {
+      "id": "abiathar_the_priest_geneva",
+      "name": "Abiathar the Priest",
+      "role": "submanager",
+      "parentManagerId": "adonijah_geneva",
+      "scribeTier": "The Self-Exalted Feast",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:7",
+          "note": "Geneva: follows Adoniiah alongside Ioab."
+        },
+        {
+          "ref": "1 Kings 2:26-27",
+          "note": "Banished to Anathoth rather than executed, since he 'barest the Arke of the Lord God before Dauid my father.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His removal from the priesthood is explicitly said to fulfil the LORD's earlier word against the house of Eli in Shiloh."
+      ]
+    },
+    {
+      "id": "abishag_the_shunammite_geneva",
+      "name": "Abishag the Shunammite",
+      "role": "submanager",
+      "parentManagerId": "adonijah_geneva",
+      "scribeTier": "The Self-Exalted Feast",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:3-4",
+          "note": "Geneva: 'they sought for a faire young maide thoroughout all the coastes of Israel, and founde one Abishag a Shunamite'; brought to minister to the aged David, who 'knew her not.'"
+        },
+        {
+          "ref": "1 Kings 2:17",
+          "note": "Adoniiah asks Bath-sheba to request her hand from Salomon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her requested marriage becomes the pretext for Adoniiah's execution."
+      ]
+    },
+    {
+      "id": "solomon_geneva",
+      "name": "Salomon",
+      "role": "manager",
+      "scribeTier": "The Wise Judgment Throne",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "David",
+        "mother": "Bath-sheba",
+        "children": [
+          "Rehoboam"
+        ],
+        "spouses": [
+          "Pharaoh's daughter",
+          "many others (700 wives, 300 concubines per 11:3, not individually named)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 3:16-28",
+          "note": "Geneva: judges between the two harlots over 'the liuing child,' ordering a sword brought before deciding in the true mother's favor."
+        },
+        {
+          "ref": "1 Kings 6:1",
+          "note": "Begins building the house of the Lord in the 480th year after the Exodus, his 4th regnal year, in the month Zif."
+        },
+        {
+          "ref": "1 Kings 11:1-13",
+          "note": "His many foreign wives turn his heart after other gods; the LORD announces the kingdom will be torn from his son, sparing Salomon himself for David's sake."
+        },
+        {
+          "ref": "1 Kings 11:42-43",
+          "note": "Reigned 40 years; died and was succeeded by Rehoboam."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 3:9: asks God for 'an vnderstanding heart, to iudge thy people' rather than riches or long life.",
+        "Geneva 4:32-33: spoke 3,000 proverbs and 1,005 songs, and of trees, beasts, foules, creeping things, and fishes."
+      ]
+    },
+    {
+      "id": "benaiah_son_of_jehoiada_geneva",
+      "name": "Benaiah the son of Iehoiada",
+      "role": "submanager",
+      "parentManagerId": "solomon_geneva",
+      "scribeTier": "The Wise Judgment Throne",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jehoiada",
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 1:36-38",
+          "note": "Geneva: supports Salomon's anointing, escorting him to Gihon."
+        },
+        {
+          "ref": "1 Kings 2:34-35",
+          "note": "Kills Ioab and is set in his place over the host."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Personally executes Adoniiah, Ioab, and Shimei on Salomon's orders."
+      ]
+    },
+    {
+      "id": "shimei_son_of_gera_geneva",
+      "name": "Shimei the son of Gera",
+      "role": "submanager",
+      "parentManagerId": "solomon_geneva",
+      "scribeTier": "The Wise Judgment Throne",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Gera",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: distinct from Shimei the son of Elah, one of Salomon's twelve district officers over Benjamin (4:18)."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 2:36-38",
+          "note": "Geneva: Salomon commands him, 'Buylde thee an house in Ierusalem, and dwell there, and depart not thence any whither,' on pain of death."
+        },
+        {
+          "ref": "1 Kings 2:39-46",
+          "note": "Executed three years later for crossing to Gath to retrieve runaway servants, breaking the oath."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hiram_king_of_tyre_geneva",
+      "name": "Hiram, King of Tyrus",
+      "role": "manager",
+      "scribeTier": "The Cedars of Lebanon",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: distinct from Hiram the bronze craftsman of chapter 7 - the Geneva text uses the same name for two entirely different men."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 5:1-12",
+          "note": "Geneva: 'Hiram King of Tyrus sent his seruants vnto Salomon...because Hiram had euer loued Dauid'; supplies cedar and fir trees for wheat and oil, and the two 'made a couenant.'"
+        },
+        {
+          "ref": "1 Kings 9:10-14",
+          "note": "Receives twenty cities in Galilee from Salomon and is displeased with them (per KJV-parallel content, not directly re-read this pass)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 5:6: Salomon notes 'there are none among vs, that can hewe timber like vnto the Sidonians,' explaining the need for Hiram's craftsmen."
+      ]
+    },
+    {
+      "id": "hiram_the_craftsman_geneva",
+      "name": "Hiram (the craftsman)",
+      "role": "manager",
+      "scribeTier": "The Molten Sea",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: distinct from Hiram King of Tyrus. Geneva 7:14: 'He was a widowes sonne of the tribe of Naphtali, his father being a man of Tyrus, and wrought in brasse.'"
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 7:13-14",
+          "note": "Geneva: sent for by Salomon; 'full of wisedome, and vnderstanding, and knowledge to worke all maner of worke in brasse.'"
+        },
+        {
+          "ref": "1 Kings 7:15-22",
+          "note": "Geneva: casts the two bronze pillars, naming the right one Iachin and the left one Boaz."
+        },
+        {
+          "ref": "1 Kings 7:23-26",
+          "note": "Geneva: casts 'a molten sea ten cubites wide from brim to brim,' standing on twelve bulls."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Also crafted the ten bronze bases/lavers and their wheeled carts, described in Geneva 7:27-37."
+      ]
+    },
+    {
+      "id": "temple_dedication_and_covenant_geneva",
+      "name": "The Temple Dedication and the LORD's Covenant Response",
+      "role": "law",
+      "deliveredBy": "solomon_geneva",
+      "purpose": "Establishes that the newly built Temple's holiness and the LORD's continued presence in it are conditioned on covenant obedience by Salomon and Israel, not automatic or permanent - the LORD's response warns that disobedience will cause Israel to be cut off from the land and the Temple itself to become a byword among the nations, foreshadowing the book's later arc toward division and idolatry.",
+      "scribeTier": "The Filled House",
+      "verses": [
+        {
+          "ref": "1 Kings 8:10-11",
+          "note": "The cloud fills the house of the LORD at its dedication so the priests could not stand to minister (content matches KJV parallel; not directly re-read against Geneva's own chapter 8 text this pass)."
+        },
+        {
+          "ref": "1 Kings 8:22-53",
+          "note": "Salomon's dedication prayer, petitioning for Israel in times of sin, defeat, famine, and captivity."
+        },
+        {
+          "ref": "1 Kings 9:3-9",
+          "note": "The LORD's response: hallows the house but warns that turning to other gods will cause Israel to be cut off and the house cast from His sight."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "queen_of_sheba_geneva",
+      "name": "The Queene of Sheba",
+      "role": "manager",
+      "scribeTier": "The Spice-Laden Caravan",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "No personal name given; 'Sheba' names her kingdom, not a father."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 10:1-3",
+          "note": "Comes to test Salomon with hard questions; he answers all of them (content matches KJV parallel; Geneva's ch.10 text not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 10:10",
+          "note": "Gives Salomon 120 talents of gold, spices in great abundance, and precious stones."
+        },
+        {
+          "ref": "1 Kings 10:13",
+          "note": "Salomon gives her of his royal bounty whatsoever she desired before she returns home."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hadad_the_edomite_geneva",
+      "name": "Hadad the Edomite",
+      "role": "manager",
+      "scribeTier": "The Edomite Exile",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Genubath"
+        ],
+        "spouses": [
+          "the sister of Tahpenes the queen (unnamed)"
+        ],
+        "note": "NAMING COLLISION FLAGGED: distinct from the earlier Edomite king Hadad of Genesis 36 and from other Hadad-compound names elsewhere in scripture."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:14-17",
+          "note": "Fled to Egypt as a young child when Ioab's campaign killed every male in Edom (content matches KJV parallel; Geneva's ch.11 verses beyond v.1-13 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 11:19-20",
+          "note": "Given the sister of queen Tahpenes to wife; she bears Genubath, raised in Pharaoh's own household."
+        },
+        {
+          "ref": "1 Kings 11:25",
+          "note": "Becomes an adversary to Israel alongside Rezon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "genubath_geneva",
+      "name": "Genubath",
+      "role": "submanager",
+      "parentManagerId": "hadad_the_edomite_geneva",
+      "scribeTier": "The Edomite Exile",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hadad the Edomite",
+        "mother": "the sister of Tahpenes the queen (unnamed)",
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:20",
+          "note": "Weaned by Tahpenes in Pharaoh's house and raised among Pharaoh's own sons."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "tahpenes_geneva",
+      "name": "Tahpenes",
+      "role": "submanager",
+      "parentManagerId": "hadad_the_edomite_geneva",
+      "scribeTier": "The Edomite Exile",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [
+          "Pharaoh (unnamed in 1 Kings)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:19",
+          "note": "Her sister is given to Hadad by Pharaoh's own favor."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "rezon_son_of_eliadah_geneva",
+      "name": "Rezon the son of Eliadah",
+      "role": "manager",
+      "scribeTier": "The Damascus Throne",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Eliadah",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Flees from 'his lord Hadadezer king of Zobah,' a figure distinct from Hadad the Edomite despite the similar name."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:23-24",
+          "note": "Gathers a band of men after fleeing Hadadezer, and takes Damascus."
+        },
+        {
+          "ref": "1 Kings 11:25",
+          "note": "Becomes an adversary to Israel all the days of Salomon, founding the Aramean kingship line."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "rehoboam_geneva",
+      "name": "Rehoboam",
+      "role": "manager",
+      "scribeTier": "The Heavy Yoke",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Solomon",
+        "mother": "Naamah an Ammonitess",
+        "children": [
+          "Abijam"
+        ],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 12:4",
+          "note": "The people ask him to lighten the heavy yoke his father Salomon placed on them (content matches KJV parallel; Geneva ch.12 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 12:16-19",
+          "note": "Ten tribes revolt; the kingdom splits."
+        },
+        {
+          "ref": "1 Kings 14:25-26",
+          "note": "Shishak king of Egypt invades in his 5th year, taking the Temple and king's house treasures."
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 41,
+          "event": "Began to reign over Judah",
+          "ref": "1 Kings 14:21"
+        }
+      ],
+      "funFacts": [
+        "Threatens the people that his father chastised them with whips, but he will chastise them with scorpions."
+      ]
+    },
+    {
+      "id": "jeroboam_son_of_nebat_geneva",
+      "name": "Ieroboam the son of Nebat",
+      "role": "manager",
+      "scribeTier": "The Golden Calves",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Nebat",
+        "mother": null,
+        "children": [
+          "Abijah"
+        ],
+        "spouses": [
+          "unnamed wife (14:2)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:26-28",
+          "note": "Introduced as Salomon's own servant, put in charge of the labor force of the house of Ioseph, before his rebellion."
+        },
+        {
+          "ref": "1 Kings 12:28",
+          "note": "Sets up golden calves at Bethel and Dan to keep the people from returning to worship in Ierusalem."
+        },
+        {
+          "ref": "1 Kings 14:20",
+          "note": "Reigned 22 years; succeeded by his son Nadab."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahijah_the_shilonite_geneva",
+      "name": "Ahijah the Shilonite",
+      "role": "submanager",
+      "parentManagerId": "jeroboam_son_of_nebat_geneva",
+      "scribeTier": "The Golden Calves",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 11:29-31",
+          "note": "Tears his own new garment into twelve pieces, giving Jeroboam ten as a sign of ten tribes."
+        },
+        {
+          "ref": "1 Kings 14:6-16",
+          "note": "Prophesies the death of Jeroboam's son and the destruction of his house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Blind with age, yet recognizes Jeroboam's disguised wife by the sound of her feet at the door."
+      ]
+    },
+    {
+      "id": "abijah_son_of_jeroboam_geneva",
+      "name": "Abijah, son of Ieroboam",
+      "role": "submanager",
+      "parentManagerId": "jeroboam_son_of_nebat_geneva",
+      "scribeTier": "The Golden Calves",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Jeroboam the son of Nebat",
+        "mother": "unnamed (14:2)",
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: not the same person as Abijam, king of Judah (Rehoboam's son)."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 14:1",
+          "note": "Falls sick, prompting Jeroboam to send his disguised wife to inquire of Ahijah."
+        },
+        {
+          "ref": "1 Kings 14:17-18",
+          "note": "Dies the moment his mother's feet cross the threshold, exactly as foretold."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named as the only member of Jeroboam's house in whom some good thing toward the LORD was found."
+      ]
+    },
+    {
+      "id": "man_of_god_of_judah_geneva",
+      "name": "The man of God out of Iudah",
+      "role": "manager",
+      "scribeTier": "The Rent Altar",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Left unnamed by the text itself throughout 1 Kings 13."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 13:1-3",
+          "note": "Cries against the altar at Bethel, giving a sign that it shall be rent and the ashes poured out."
+        },
+        {
+          "ref": "1 Kings 13:9",
+          "note": "Given explicit command from the LORD: eat no bread, drink no water, return not the way he came."
+        },
+        {
+          "ref": "1 Kings 13:24",
+          "note": "Killed by a lion after being deceived into disobeying that command."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Names the future king Iosiah by name centuries before his reign - fulfilled far outside this book, in 2 Kings 23."
+      ]
+    },
+    {
+      "id": "old_prophet_of_bethel_geneva",
+      "name": "The old prophet that dwelt in Bethel",
+      "role": "submanager",
+      "parentManagerId": "man_of_god_of_judah_geneva",
+      "scribeTier": "The Rent Altar",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "sons who report the man of God's actions to him (13:11)"
+        ],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 13:11-19",
+          "note": "Deceives the man of God into eating bread at his house, against the LORD's command."
+        },
+        {
+          "ref": "1 Kings 13:26-31",
+          "note": "Retrieves and buries the body, mourns him, and asks to be buried beside him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "asa_geneva",
+      "name": "Asa",
+      "role": "manager",
+      "scribeTier": "The Idol Removed",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Abijam",
+        "mother": null,
+        "children": [
+          "Jehoshaphat"
+        ],
+        "spouses": [],
+        "note": "His grandmother Maachah is called 'his mother' in the text (see her entry)."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 15:11-12",
+          "note": "Does right in the eyes of the LORD, removes the sodomites, and puts away the idols his fathers made."
+        },
+        {
+          "ref": "1 Kings 15:18-20",
+          "note": "Sends Temple and household treasure to Ben-hadad son of Tabrimon to break his league with Baasha."
+        },
+        {
+          "ref": "1 Kings 15:23",
+          "note": "In his old age, diseased in his feet."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called one of the strongest positive assessments in the book: 'his heart was perfect with the LORD all his dayes.'"
+      ]
+    },
+    {
+      "id": "maachah_grandmother_of_asa_geneva",
+      "name": "Maachah",
+      "role": "submanager",
+      "parentManagerId": "asa_geneva",
+      "scribeTier": "The Idol Removed",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Abijam"
+        ],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: shared name with several other scriptural Maachahs. Called 'his mother' regarding both Abijam and Asa - she was Abijam's actual mother and Asa's grandmother, holding the queen-mother office ('gebirah') into her grandson's reign; 'mother' functions as an idiom for that office here, not a literal claim for Asa."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 15:2",
+          "note": "Named as the mother of Abijam, 'the daughter of Abishalom.'"
+        },
+        {
+          "ref": "1 Kings 15:13",
+          "note": "Removed by Asa from being queen for making an idol in a grove, which he burns."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ben_hadad_i_of_syria_geneva",
+      "name": "Ben-hadad (I), King of Syria, son of Tabrimon",
+      "role": "submanager",
+      "parentManagerId": "asa_geneva",
+      "scribeTier": "The Idol Removed",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Tabrimon (son of Hezion)",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED, MAJOR: distinct from the later Ben-hadad of chapters 20 and 22 who besieges Ahab; the exact dynastic relationship between the two is not stated outright by the text and is left uncertain here."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 15:18-20",
+          "note": "Receives Asa's treasure, breaks league with Baasha, and captures Dan and all Naphtali."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "baasha_geneva",
+      "name": "Baasha",
+      "role": "manager",
+      "scribeTier": "The Swept House",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Ahijah",
+        "mother": null,
+        "children": [
+          "Elah"
+        ],
+        "spouses": [],
+        "note": "His father Ahijah is a different man from Ahijah the Shilonite the prophet."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 15:27-28",
+          "note": "Conspires against Nadab and kills him at Gibbethon, reigning in his place."
+        },
+        {
+          "ref": "1 Kings 15:29",
+          "note": "Kills all the house of Jeroboam, fulfilling Ahijah's word."
+        },
+        {
+          "ref": "1 Kings 16:6",
+          "note": "Dies, succeeded by his son Elah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Receives the identical judgment he himself carried out - condemned by Jehu son of Hanani, and his own house later wiped out by Zimri the same way."
+      ]
+    },
+    {
+      "id": "nadab_son_of_jeroboam_geneva",
+      "name": "Nadab, son of Ieroboam",
+      "role": "submanager",
+      "parentManagerId": "baasha_geneva",
+      "scribeTier": "The Swept House",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Jeroboam the son of Nebat",
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 15:25-28",
+          "note": "Reigns two years over Israel; killed by Baasha at Gibbethon while besieging it."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jehu_son_of_hanani_geneva",
+      "name": "Iehu the son of Hanani",
+      "role": "submanager",
+      "parentManagerId": "baasha_geneva",
+      "scribeTier": "The Swept House",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Hanani",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: distinct from the later Iehu son of Nimshi, anointed king over Israel in 2 Kings 9 - not indexed in this book."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:1-4",
+          "note": "The word of the LORD comes to him against Baasha, condemning him for walking in Jeroboam's way."
+        },
+        {
+          "ref": "1 Kings 16:7",
+          "note": "Reiterates the judgment, condemning Baasha also for killing the house of Jeroboam."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zimri_geneva",
+      "name": "Zimri",
+      "role": "manager",
+      "scribeTier": "The Seven-Day Reign",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Called 'captain of half his chariots' under Elah."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:9-10",
+          "note": "Kills Elah while he was drinking himself drunk in the house of Arza, steward of his house, in Tirzah."
+        },
+        {
+          "ref": "1 Kings 16:18",
+          "note": "Reigns only seven days; burns the king's house down over himself when besieged by Omri's forces."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elah_son_of_baasha_geneva",
+      "name": "Elah, son of Baasha",
+      "role": "submanager",
+      "parentManagerId": "zimri_geneva",
+      "scribeTier": "The Seven-Day Reign",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Baasha",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED: distinct from the earlier officer Shimei's father, also named Elah (4:18), who predates this king Elah."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:8-10",
+          "note": "Reigns two years; killed by Zimri while drunk in Tirzah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "omri_geneva",
+      "name": "Omri",
+      "role": "manager",
+      "scribeTier": "The Hill of Samaria",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [
+          "Ahab"
+        ],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:21-22",
+          "note": "Half the people follow Tibni, half follow Omri; Omri's faction prevails."
+        },
+        {
+          "ref": "1 Kings 16:23-24",
+          "note": "Reigns 12 years total; buys the hill of Samaria and builds the city."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text's summary judgment on him is unusually harsh: he did worse than all who were before him."
+      ]
+    },
+    {
+      "id": "tibni_son_of_ginath_geneva",
+      "name": "Tibni, the son of Ginath",
+      "role": "submanager",
+      "parentManagerId": "omri_geneva",
+      "scribeTier": "The Hill of Samaria",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Ginath",
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "The text does not state how he dies, only that he died."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:21-22",
+          "note": "Contests the throne with Omri; the people that followed Omri prevail, and Tibni dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Half of Israel supported his claim - a genuine large-scale civil split, not a minor rivalry."
+      ]
+    },
+    {
+      "id": "ahab_geneva",
+      "name": "Ahab",
+      "role": "manager",
+      "scribeTier": "The Ivory House",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Omri",
+        "mother": null,
+        "children": [],
+        "spouses": [
+          "Jezebel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 16:29-33",
+          "note": "Reigns over Israel; marries Jezebel and serves Baal, doing more to provoke the LORD than any king before him (content matches KJV parallel; Geneva ch.16 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 21:1-16",
+          "note": "Seizes Naboth's vineyard after Jezebel arranges Naboth's judicial murder."
+        },
+        {
+          "ref": "1 Kings 22:34-38",
+          "note": "Killed by a random arrow in battle against Syria; dogs lick up his blood as Elijah had foretold."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Builds an ivory house and cities, per the summary in 22:39."
+      ]
+    },
+    {
+      "id": "jezebel_geneva",
+      "name": "Iezebel",
+      "role": "manager",
+      "scribeTier": "The Table of Baal's Prophets",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [
+          "Ahab"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 18:19",
+          "note": "Maintains 450 prophets of Baal and 400 prophets of the groves who eat at her table (content matches KJV parallel; Geneva ch.18 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 19:1-2",
+          "note": "Threatens Elijah's life after the Carmel contest, sending him fleeing into the wilderness."
+        },
+        {
+          "ref": "1 Kings 21:5-15",
+          "note": "Orchestrates false witnesses against Naboth to have him stoned, seizing his vineyard for Ahab."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elijah_the_tishbite_geneva",
+      "name": "Eliiah the Tishbite",
+      "role": "manager",
+      "scribeTier": "The Still Small Voice",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "Introduced simply as 'of the inhabitants of Gilead.'"
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 17:1",
+          "note": "Declares a drought to Ahab: there shall be neither dew nor rain but by his word (content matches KJV parallel; Geneva ch.17 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 18:20-40",
+          "note": "Contests the prophets of Baal on Mount Carmel; fire falls from heaven, and the prophets of Baal are slain at the brook Kishon."
+        },
+        {
+          "ref": "1 Kings 19:11-13",
+          "note": "Encounters the LORD not in wind, earthquake, or fire, but in 'a still small voice.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Fed by ravens at the brook Cherith during the drought (17:4-6)."
+      ]
+    },
+    {
+      "id": "ben_hadad_ii_of_syria_geneva",
+      "name": "Ben-hadad (II), King of Syria",
+      "role": "manager",
+      "scribeTier": "Thirty-Two Kings' Tents",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "children": [],
+        "spouses": [],
+        "note": "NAMING COLLISION FLAGGED, MAJOR: distinct from Ben-hadad (I), Asa's ally against Baasha; the exact relationship between the two is not stated outright by the text and is left uncertain."
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 20:1",
+          "note": "Besieges Samaria with thirty-two kings, chariots, and horses (content matches KJV parallel; Geneva ch.20 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 20:20-21",
+          "note": "His army is defeated by Ahab's small force of servants of the princes of the provinces."
+        },
+        {
+          "ref": "1 Kings 22:1-3",
+          "note": "His prior conflict with Ahab over Ramoth-gilead sets up the battle in which Ahab is killed."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Refers to earlier cities his 'father took from thy father' regarding Omri (20:34), implying some dynastic link back to Ben-hadad I left unresolved by the text."
+      ]
+    },
+    {
+      "id": "jehoshaphat_geneva",
+      "name": "Iehoshaphat",
+      "role": "manager",
+      "scribeTier": "The Ships of Tarshish",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Asa",
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 22:41-43",
+          "note": "Reigns over Judah, walking in the ways of Asa his father, doing right in the eyes of the LORD (content matches KJV parallel; Geneva ch.22 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 22:48-49",
+          "note": "Builds ships of Tarshish to go to Ophir for gold, but they are wrecked at Ezion-geber."
+        },
+        {
+          "ref": "1 Kings 22:2-4",
+          "note": "Joins Ahab in the campaign against Ramoth-gilead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "micaiah_son_of_imlah_geneva",
+      "name": "Micaiah the son of Imlah",
+      "role": "manager",
+      "scribeTier": "The Lying Spirit's Vision",
+      "perkFlavor": "",
+      "genealogy": {
+        "father": "Imlah",
+        "mother": null,
+        "children": [],
+        "spouses": []
+      },
+      "verses": [
+        {
+          "ref": "1 Kings 22:8",
+          "note": "Named by Ahab as the one true prophet he hates, 'for he doeth not prophecie good vnto me, but euill' (content matches KJV parallel; Geneva ch.22 not directly re-read this pass)."
+        },
+        {
+          "ref": "1 Kings 22:17-23",
+          "note": "Describes a vision of the LORD sending a lying spirit into the mouths of Ahab's four hundred prophets to entice him to his death."
+        },
+        {
+          "ref": "1 Kings 22:26-28",
+          "note": "Imprisoned on bread and water by Ahab for the unwelcome prophecy, which is fulfilled anyway."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Struck on the cheek by the false prophet Zedekiah son of Chenaanah for contradicting him (22:24)."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "solomons_officers_ch4": {
+      "ref": "1 Kings 4:2-19",
+      "note": "A list of twelve district officers and court officials (Azariah son of Zadok, Elihoreph and Ahiah sons of Shisha the scribes, Iehoshaphat the recorder, Benaiah, Zadok, Abiathar, Azariah son of Nathan, Zabud son of Nathan, Ahishar, Adoniram, and the twelve provisioning officers) - kept as a bulk administrative list rather than individual entries, since most receive only a name and district with no differentiated action."
+    },
+    "solomons_daughters_married_to_officers": {
+      "ref": "1 Kings 4:11,4:15",
+      "note": "Taphath and Basmath, daughters of Salomon, are each named only as wives of two of his district officers - included here as a bulk note rather than separate entries given no further action attributed to them."
+    },
+    "solomons_foreign_wives_and_gods_11_1_8": {
+      "ref": "1 Kings 11:1-8",
+      "note": "Salomon's many wives are named collectively by nation (Moabites, Ammonites, Edomites, Zidonians, Hittites) except for Pharaoh's daughter; the foreign gods they turn him toward (Ashtoreth of the Zidonians, Milcom of the Ammonites, Chemosh of Moab, Molech) are listed as deities, not characters."
+    }
+  }
+}

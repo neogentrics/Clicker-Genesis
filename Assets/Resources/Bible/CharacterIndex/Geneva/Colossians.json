@@ -1,0 +1,585 @@
+{
+  "book": "Colossians",
+  "translation": "Geneva",
+  "canonicalOrder": 63,
+  "status": "drafted by directly reading the real extracted Geneva Bible (1560) verse text at Assets/Resources/Verses/Geneva/colossians_63.json; single-pass hand draft grounded in the actual translation, cross-checked against the existing validated KJV Colossians.json for pattern/tier-naming reference only — not yet run through adversarial multi-agent review",
+  "notes": "This Geneva Bible (1560) rendering of Colossians has NO real structural or canonical difference from the standard KJV version of this book — same 4 chapters, same 95 verses, same persons, same doctrinal content and argument (Christ's supremacy, the false teaching combining philosophy/ceremonial law/angel-worship, the new-man ethic, the household code, closing greetings). The differences are entirely archaic 1560 English orthography and word choice (e.g. \"bee\" for \"be,\" \"loue\" for \"love,\" \"vnto\" for \"unto,\" \"Colosse\" for \"Colossae,\" \"Iesus\" for \"Jesus,\" \"seruaunt\"/\"seruaunts\" for \"servant(s),\" \"powdred with salt\" for \"seasoned with salt\" at 4:6, \"bands\" for \"bonds\" at 4:18/1:24) — this book was NOT a case like the Ethiopian Bible's structurally-different Ezra; it is the same Pauline prison epistle, just fifty years' older English. One genuine lexical/genealogical difference worth flagging: Geneva 4:10 reads \"Marcus, Barnabas cousin,\" where the more familiar KJV reads \"Marcus, sister's son to Barnabas\" — Geneva's own text does not specify the nephew-through-sister relationship, only calling him a \"cousin\" (kinsman), so Marcus's genealogy entry here reflects Geneva's own wording rather than importing KJV's more specific claim. Same tier/manager/law structure as the validated KJV file: two personally-embodied managers who carry real narrative weight in their own right (Paul, writing in his \"bands\"; Epaphras, the church's founding evangelist and constant intercessor) plus a third late-book manager (Tychicus, the letter's courier), six law/theme tiers carrying the epistle's actual doctrinal argument (all deliveredBy Paul, since no other individual voice ever speaks in this letter and the false teaching is never pinned to a named opponent), and a small cluster of closing-greeting submanagers. Naming-collision flags carried over and reverified against this translation's own wording: \"Iesus which is called Iustus\" (4:11) is explicitly disambiguated from Iesus Christ by Geneva's own text via the added surname \"Iustus,\" exactly as in KJV's \"Justus.\" Per the Gospel-only rule, Christ does not get his own person-tier in this book — Colossians never personally embodies him acting within its own narrative frame (he is described/taught about throughout, which is exactly the law-tier test), so the Christ-hymn of 1:15-20 is indexed as a law/theme tier delivered by Paul, matching the KJV file's same judgment call. Demas is given the same loyalty-boost perk flavor as Luke since Geneva 4:14 characterizes them identically with zero distinguishing text (\"Luke the beloued physician greeteth you, and Demas\") — his later desertion belongs to a different epistle (2 Timothy) and is not reflected here. Archippus (4:17) is very likely the same man addressed in Philemon 1:2, but Colossians itself never states that identification, so it is logged as a probable, unconfirmed cross-reference rather than asserted as fact. Nymphas (4:15) is attached to Paul as parentManagerId (not Epaphras), since Geneva's own closing-greetings list places him alongside Archippus/Luke/Demas, all of whom relate to Paul as the letter's sender.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Apostle's Bands",
+      "managerId": "paul_geneva_colossians",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Faithful Minister",
+      "managerId": "epaphras_geneva_colossians",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Image of the Invisible God",
+      "managerId": "christ_preeminence_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Mystery Made Manifest",
+      "managerId": "mystery_manifest_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Philosophy and Vain Deceit",
+      "managerId": "philosophy_vain_deceit_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The New Man",
+      "managerId": "new_man_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Household Order",
+      "managerId": "household_order_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Speech Powdered with Salt",
+      "managerId": "salt_seasoned_speech_geneva_col",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Beloved Fellow Servant",
+      "managerId": "tychicus_geneva_colossians",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_colossians",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:1",
+          "note": "Opens the epistle: 'Paul an Apostle of Iesus Christ, by the will of God, and Timotheus our brother,'"
+        },
+        {
+          "ref": "Colossians 1:23",
+          "note": "Calls himself a minister of the Gospel 'whereof I Paul am a minister.'"
+        },
+        {
+          "ref": "Colossians 1:24-25",
+          "note": "'Now reioyce I in my suffrings for you, and fulfill the rest of the afflictions of Christ in my flesh, for his bodies sake, which is the Church, Whereof I am a minister, according to the dispensation of God, which is giuen mee vnto you ward.'"
+        },
+        {
+          "ref": "Colossians 1:29",
+          "note": "'Whereunto I also labour and striue, according to his working which worketh in me mightily.'"
+        },
+        {
+          "ref": "Colossians 2:1",
+          "note": "'For I woulde ye knewe what great fighting I haue for your sakes, and for them of Laodicea, and for as many as haue not seene my person in the flesh,'"
+        },
+        {
+          "ref": "Colossians 4:3",
+          "note": "Asks for prayer 'that God may open vnto vs the doore of vtterance, to speake ye mysterie of Christ: wherefore I am also in bonds,'"
+        },
+        {
+          "ref": "Colossians 4:18",
+          "note": "Closes in his own hand: 'The salutation by the hand of me Paul. Remember my bands. Grace be with you, Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Writes the closing salutation with his own hand as a personal authenticating mark (4:18), specifically asking to be remembered in his 'bands' (chains).",
+        "States plainly he has 'not seene my person in the flesh' among the Colossians (2:1) — he writes with full authority to a church he never personally visited."
+      ]
+    },
+    {
+      "id": "timothy_geneva_colossians",
+      "name": "Timotheus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:1",
+          "note": "Named co-sender: 'Paul an Apostle of Iesus Christ, by the will of God, and Timotheus our brother,'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's Colossians gives no further detail about Timotheus beyond his being named co-sender."
+      ]
+    },
+    {
+      "id": "aristarchus_geneva_colossians",
+      "name": "Aristarchus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:10",
+          "note": "'Aristarchus my prison fellow saluteth you,'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "marcus_geneva_colossians",
+      "name": "Marcus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "TRANSLATION-DIFFERENCE FLAG: Geneva's own text calls him 'Barnabas cousin' (a kinsman), not KJV's more specific 'sister's son to Barnabas' (nephew). Genealogy reflects Geneva's actual wording rather than importing the more specific KJV claim.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "kinsman of Barnabas per Geneva 4:10 ('Barnabas cousin') — not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:10",
+          "note": "'and Marcus, Barnabas cousin (touching whom ye receiued commandements. If he come vnto you, receiue him)'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva calls him 'Barnabas cousin' rather than specifying a nephew relationship — a real, minor wording difference from the more commonly known KJV phrasing."
+      ]
+    },
+    {
+      "id": "justus_geneva_colossians",
+      "name": "Iesus, called Iustus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "NAMING-COLLISION FLAG: a real, distinct individual from Iesus Christ. Geneva's own text disambiguates by adding the surname 'Iustus,' matching KJV's same disambiguation.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:11",
+          "note": "'And Iesus which is called Iustus, which are of the circumcision. These onely are my worke fellowes vnto the kingdome of God, which haue bene vnto my consolation.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "luke_geneva_colossians",
+      "name": "Luke",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:14",
+          "note": "'Luke the beloued physician greeteth you, and Demas.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Long church tradition identifies him as author of the Gospel of Luke and Acts, but Geneva's Colossians itself makes no authorship claim — flagged as tradition, not textual fact within this book."
+      ]
+    },
+    {
+      "id": "demas_geneva_colossians",
+      "name": "Demas",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Geneva 4:14 names Demas identically to Luke with zero distinguishing characterization here, so he shares Luke's perk flavor rather than one drawn from his later desertion in 2 Timothy 4:10, which is a different epistle's content.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:14",
+          "note": "Named only in passing alongside Luke as sending greetings; no action described."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "2 Timothy 4:10, a separate later epistle, describes Demas eventually forsaking Paul — outside this book and not reflected in Geneva Colossians' own neutral mention of him."
+      ]
+    },
+    {
+      "id": "archippus_geneva_colossians",
+      "name": "Archippus",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Very likely the same Archippus addressed in Philemon 1:2, though Colossians never itself states that identification — logged as a probable, unconfirmed cross-reference.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:17",
+          "note": "'And say to Archippus, Take heede to the ministerie, that thou hast receiued in the Lord, that thou fulfill it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nymphas_geneva_colossians",
+      "name": "Nymphas",
+      "role": "submanager",
+      "scribeTier": "The Apostle's Bands",
+      "parentManagerId": "paul_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Attached to Paul rather than Epaphras: Geneva 4:15 places Nymphas in the same closing-greetings list as the Laodicean brethren, Archippus, Luke, and Demas — all relating to Paul as sender, with no stated relationship to Epaphras.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:15",
+          "note": "'Salute the brethren which are of Laodicea, and Nymphas, and the Church which is in his house.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "epaphras_geneva_colossians",
+      "name": "Epaphras",
+      "role": "manager",
+      "scribeTier": "The Faithful Minister",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 1:7-8",
+          "note": "'As yee also learned of Epaphras our deare fellowe seruaunt, which is for you a faithfull minister of Christ: Who hath also declared vnto vs your loue in the Spirit.'"
+        },
+        {
+          "ref": "Colossians 4:12-13",
+          "note": "'Epaphras the seruant of Christ, which is one of you, saluteth you, and alwayes striueth for you in prayers, that ye may stand perfect, and full in all the will of God. For I beare him record, that he hath a great zeale for you, and for them of Laodicea, and them of Hierapolis.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Described as the one 'yee also learned' the gospel from — the founding evangelist of the very church Paul is writing to.",
+        "His zeal explicitly extends beyond Colosse to the neighboring churches at Laodicea and Hierapolis."
+      ]
+    },
+    {
+      "id": "christ_preeminence_geneva_col",
+      "name": "The Image of the Invisible God",
+      "role": "law",
+      "scribeTier": "The Image of the Invisible God",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "Establishes Christ's absolute supremacy over all creation, thrones, dominions, principalities, powers, and the Church itself, directly countering the false teaching's tendency to rank Christ alongside lesser spiritual powers.",
+      "verses": [
+        {
+          "ref": "Colossians 1:15",
+          "note": "'Who is the image of the inuisible God, the first begotten of euery creature.'"
+        },
+        {
+          "ref": "Colossians 1:16",
+          "note": "'For by him were all things created, which are in heauen, and which are in earth, thinges visible and inuisible: whether they be Thrones or Dominions, or Principalities, or Powers, all things were created by him, and for him,'"
+        },
+        {
+          "ref": "Colossians 1:17",
+          "note": "'And hee is before all things, and in him all things consist.'"
+        },
+        {
+          "ref": "Colossians 1:18",
+          "note": "'And hee is the head of the body of the Church: he is the beginning, and the first begotten of the dead, that in all thinges hee might haue the preeminence.'"
+        },
+        {
+          "ref": "Colossians 1:19-20",
+          "note": "'For it pleased the Father, that in him should all fulnesse dwell, And through peace made by that blood of that his crosse, to reconcile to himselfe through him... both which are in earth, and which are in heauen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mystery_manifest_geneva_col",
+      "name": "The Mystery Made Manifest",
+      "role": "law",
+      "scribeTier": "The Mystery Made Manifest",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "Explains Paul's own suffering and ministry as steward of a long-hidden mystery — Christ in the Gentiles as the hope of glory — grounding his authority to warn a church he has never personally visited.",
+      "verses": [
+        {
+          "ref": "Colossians 1:24",
+          "note": "'Now reioyce I in my suffrings for you, and fulfill the rest of the afflictions of Christ in my flesh, for his bodies sake, which is the Church,'"
+        },
+        {
+          "ref": "Colossians 1:26-27",
+          "note": "'Which is the mysterie hid since the world began, and from all ages, but nowe is made manifest to his Saintes... which riches is Christ in you, the hope of glory,'"
+        },
+        {
+          "ref": "Colossians 2:1-2",
+          "note": "'For I woulde ye knewe what great fighting I haue for your sakes, and for them of Laodicea, and for as many as haue not seene my person in the flesh, That their heartes might be comforted...to know the mysterie of God, euen the Father, and of Christ:'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "philosophy_vain_deceit_geneva_col",
+      "name": "Philosophy and Vain Deceit",
+      "role": "law",
+      "scribeTier": "Philosophy and Vain Deceit",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "The epistle's central corrective — warns against a syncretistic false teaching blending human philosophy, ceremonial regulation, and angel-worship/self-denial, insisting believers are already complete in Christ alone.",
+      "verses": [
+        {
+          "ref": "Colossians 2:8",
+          "note": "'Beware lest there be any man that spoile you through philosophie, and vaine deceit, through the traditions of men, according to the rudiments of the world, and not after Christ.'"
+        },
+        {
+          "ref": "Colossians 2:9-10",
+          "note": "'For in him dwelleth all the fulnesse of the Godhead bodily. And yee are complete in him, which is the head of all principalitie and power.'"
+        },
+        {
+          "ref": "Colossians 2:11-12",
+          "note": "'In whome also yee are circumcised with circumcision made without handes...In that yee are buried with him through baptisme, in whome ye are also raised vp together through the faith of the operation of God.'"
+        },
+        {
+          "ref": "Colossians 2:14-15",
+          "note": "'And putting out the hand writing of ordinances that was against vs...hee euen tooke it out of the way, and fastened it vpon the crosse, And hath spoyled the Principalities, and Powers, and hath made a shew of them openly.'"
+        },
+        {
+          "ref": "Colossians 2:16-18",
+          "note": "'Let no man therefore condemne you in meate and drinke, or in respect of an holy day, or of the newe moone, or of the Sabbath dayes... Let no man at his pleasure beare rule ouer you...worshipping of Angels.'"
+        },
+        {
+          "ref": "Colossians 2:20-23",
+          "note": "'Touch not, Taste not, Handle not...Which thinges haue in deede a shewe of wisdome, in voluntarie religion and humblenesse of minde.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "new_man_geneva_col",
+      "name": "The New Man",
+      "role": "law",
+      "scribeTier": "The New Man",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "Applies union with Christ practically — mortifying earthly/sinful practices, putting on Christlike virtue, dissolving ethnic and social distinctions in Christ, and ordering corporate worship.",
+      "verses": [
+        {
+          "ref": "Colossians 3:1-2",
+          "note": "'If yee then bee risen with Christ, seeke those thinges which are aboue... Set your affections on things which are aboue, and not on things which are on the earth.'"
+        },
+        {
+          "ref": "Colossians 3:5",
+          "note": "'Mortifie therefore your members which are on the earth, fornication, vncleannes, the inordinate affection, euill concupiscence, and couetousnes which is idolatrie.'"
+        },
+        {
+          "ref": "Colossians 3:9-10",
+          "note": "'Lie not one to another, seeing that yee haue put off the olde man with his workes, And haue put on the newe, which is renewed in knowledge after the image of him that created him,'"
+        },
+        {
+          "ref": "Colossians 3:11",
+          "note": "'Where is neither Grecian nor Iewe, circumcision nor vncircumcision, Barbarian, Scythian, bond, free: But Christ is all, and in all things.'"
+        },
+        {
+          "ref": "Colossians 3:12-14",
+          "note": "'Now therfore as the elect of God holy and beloued, put on the bowels of mercies, kindnesse, humblenesse of minde, meekenesse, long suffering: Forbearing one another...And aboue all these thinges put on loue, which is the bond of perfectnes.'"
+        },
+        {
+          "ref": "Colossians 3:16",
+          "note": "'Let the worde of Christ dwell in you plenteously in all wisdome, teaching and admonishing your owne selues, in Psalmes, and hymnes, and spirituall songs.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "household_order_geneva_col",
+      "name": "The Household Order",
+      "role": "law",
+      "scribeTier": "The Household Order",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "Reorders household relationships of authority — wives and husbands, children and fathers, servants and masters — under the lordship of Christ.",
+      "verses": [
+        {
+          "ref": "Colossians 3:18-19",
+          "note": "'Wiues, submit your selues vnto your husbands, as it is comely in the Lord. Husbands, loue your wiues, and be not bitter vnto them.'"
+        },
+        {
+          "ref": "Colossians 3:20-21",
+          "note": "'Children, obey your parents in all thing for that is well pleasing vnto the Lord. Fathers, prouoke not your children to anger, least they be discouraged.'"
+        },
+        {
+          "ref": "Colossians 3:22-25",
+          "note": "'Seruants, be obedient vnto them that are your masters according to the flesh, in all things...And whatsoeuer ye doe, doe it heartily, as to the Lord, and not to men.'"
+        },
+        {
+          "ref": "Colossians 4:1",
+          "note": "'Ye masters, doe vnto your seruants, that which is iust, and equall, knowing that ye also haue a master in heauen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "salt_seasoned_speech_geneva_col",
+      "name": "Speech Powdered with Salt",
+      "role": "law",
+      "scribeTier": "Speech Powdered with Salt",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_colossians",
+      "purpose": "Closes the epistle's practical instruction by calling the church to persistent prayer — including for Paul's own gospel proclamation while imprisoned — and to wise, gracious conduct toward outsiders.",
+      "verses": [
+        {
+          "ref": "Colossians 4:2",
+          "note": "'Continue in prayer, and watch in the fame with thankesgiuing,'"
+        },
+        {
+          "ref": "Colossians 4:3-4",
+          "note": "'Praying also for vs, that God may open vnto vs the doore of vtterance, to speake ye mysterie of Christ: wherefore I am also in bonds, That I may vtter it, as it becommeth mee to speake.'"
+        },
+        {
+          "ref": "Colossians 4:5-6",
+          "note": "'Walke wisely towarde them that are without, and redeeme the season. Let your speach be gracious alwayes, and powdred with salt, that ye may know how to answere euery man.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's own phrasing — 'powdred with salt' — is a distinctive wording later rendered 'seasoned with salt' in KJV; both describe the same instruction for gracious, discerning speech."
+      ]
+    },
+    {
+      "id": "tychicus_geneva_colossians",
+      "name": "Tychicus",
+      "role": "manager",
+      "scribeTier": "The Beloved Fellow Servant",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:7-8",
+          "note": "'Tychicus our beloued brother and faithfull minister, and fellow seruant in the Lord, shall declare vnto you my whole state: Whom I haue sent vnto you for the same purpose that he might know your state, and might comfort your hearts,'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Entrusted as the physical courier of the epistle itself, sent together with Onesimus to verbally relay news of Paul's situation."
+      ]
+    },
+    {
+      "id": "onesimus_geneva_colossians",
+      "name": "Onesimus",
+      "role": "submanager",
+      "scribeTier": "The Beloved Fellow Servant",
+      "parentManagerId": "tychicus_geneva_colossians",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "CROSS-REFERENCE FLAG: the same Onesimus whose fuller story — a slave who fled from his master Philemon of Colosse, converted through Paul, and sent back — is the entire subject of the separate Epistle to Philemon.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Colossians 4:9",
+          "note": "'With Onesimus a faithfull and a beloued brother, who is one of you. They shall shew you of all things here.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "barnabas_reference": {
+      "ref": "Colossians 4:10",
+      "note": "Barnabas himself is named only as Marcus's kinsman ('Barnabas cousin') and never appears as an active figure in Geneva's Colossians; not indexed as his own character in this book."
+    },
+    "philemon_cross_reference": {
+      "ref": "Colossians 4:9",
+      "note": "Onesimus's fuller story — a slave who fled from his master Philemon of Colosse, converted through Paul, and being sent back — is told in the separate Epistle to Philemon, not in Colossians itself."
+    },
+    "archippus_philemon_link": {
+      "ref": "Philemon 1:2",
+      "note": "Archippus is also addressed in Philemon's own opening greeting; long assumed to be the same man, though neither Colossians nor Philemon explicitly states this identification."
+    },
+    "laodicean_epistle": {
+      "ref": "Colossians 4:16",
+      "note": "Paul references an epistle 'written from Laodicea' to be exchanged and read alongside this one — a letter not preserved in the New Testament canon; not indexed as a character or law-tier since its content is unknown."
+    }
+  }
+}

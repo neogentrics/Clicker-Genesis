@@ -1,0 +1,281 @@
+{
+  "book": "Philippians",
+  "translation": "Geneva",
+  "canonicalOrder": 62,
+  "status": "drafted directly following the established KJV indexing methodology, grounded in a full read of the real Geneva 1560 extracted verse text (Assets/Resources/Verses/Geneva/philippians_62.json); pending user read-through and confirmation, not yet run through the multi-agent adversarial workflow",
+  "notes": "Read the full real Geneva 1560 text before drafting (not worked from memory/KJV assumption). Verified structurally identical to the standard-canon Philippians used in the existing KJV CharacterIndex: same 4 chapters, same 30/30/21/23 verse split (104 verses total), same events, same named individuals, same verse boundaries for every reference below — no Ezra-style content/structural divergence was found here, and that absence is stated explicitly rather than assumed. The real differences are entirely in archaic 1560 wording and a few proper-name spellings, which this file preserves rather than silently normalizing to modern/KJV spelling, per the project's never-alter-scripture rule: 'Timotheus' (not 'Timothy', 1:1, 2:19), 'IESVS CHRIST' rendered in full caps at the letter's opening (1:1), 'bandes' for bonds/chains (1:7, 1:13-14), 'iudgement hall' for the praetorium (1:13), 'forme of God'/'forme of a seruant' for the Christ hymn's 'form' language (2:6-7), 'dongue' for KJV's 'dung' (3:8), and 'Cesars houshold' (4:22). Same tier/character design logic as the existing KJV Philippians file, re-derived from this translation's own wording: Timotheus and Epaphroditus are promoted to full person-tiers (each gets a dedicated, personally-embodied commendation passage — 2:19-24 and 2:25-30 — with real stakes, satisfying the 'would removing them change the outcome' test) rather than left as submanagers under Paul. Euodias and Syntyche (4:2-3) remain one collective manager entry, since the Geneva text (like KJV) gives them a single shared exhortation ('that they be of one accord in the Lord') without differentiating their individual actions or the substance of their disagreement. Clement (4:3) is a submanager under that tier, flagged for the same naming-collision caution as the KJV file: the text names him once with no independent action, and must not be conflated with the later extra-biblical tradition of 'Clement of Rome' — that identification is not made by the text itself. The Christ Hymn (2:6-11) is again a law/theme tier rather than folded into Paul's own tier, since it is content Paul relays about Christ's own self-emptying and exaltation as a pattern to imitate (2:5, 'Let the same minde be in you that was euen in Christ Iesus'), not a scene of Paul's own present action — Paul is recorded as its deliveredBy. Paul's own autobiographical material (his Pharisee credentials in 3:4-6, his testimony of learned contentment in 4:11-13) stays inside his own tier as personally-embodied first-person testimony, not law content. All ids are suffixed '_geneva' to avoid collision with the existing KJV ids (per the schema's own guidance) and with the eventual Ethiopian-translation ids for the same book/characters.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Ioyfull Bandes",
+      "managerId": "paul_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Sonne in the Faith",
+      "managerId": "timotheus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Ministring Messenger",
+      "managerId": "epaphroditus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Fellowe Labourers in the Gospel",
+      "managerId": "euodias_and_syntyche_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Forme of a Seruant",
+      "managerId": "christ_hymn_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Ioyfull Bandes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 1:1",
+          "note": "Opens the letter jointly with Timotheus, addressing 'all the Saintes in Christ Iesus which are at Philippi, with the Bishops, and Deacons.'"
+        },
+        {
+          "ref": "Philippians 1:7",
+          "note": "Says the Philippians were 'partakers of my grace' both in his bands and in 'the defence, and confirmation of the Gospell.'"
+        },
+        {
+          "ref": "Philippians 1:12-14",
+          "note": "Reports that his imprisonment has furthered the Gospel — his 'bandes in Christ are famous throughout all the iudgement hall' — and emboldened other brethren to 'more frankely speake the word.'"
+        },
+        {
+          "ref": "Philippians 1:21",
+          "note": "'For Christ is to me both in life, and in death aduantage' — his own stated outlook while awaiting the outcome of his imprisonment."
+        },
+        {
+          "ref": "Philippians 1:27-30",
+          "note": "Exhorts the Philippians to stand 'in one Spirit, and in one mind, fighting together through the faith of the Gospel,' unafraid of adversaries, expecting to suffer for Christ's sake as he does."
+        },
+        {
+          "ref": "Philippians 3:4-6",
+          "note": "States his own credentials: 'Circumcised the eight day, of the kinred of Israel, of the tribe of Beniamin, an Ebrewe of the Ebrewes, by the Lawe a Pharise... touching the righteousnesse which is in the Law, I was vnrebukeable.'"
+        },
+        {
+          "ref": "Philippians 3:7-11",
+          "note": "Counts his former credentials 'losse for Christes sake,' judging them 'to bee dongue, that I might winne Christ,' desiring 'the fellowship of his afflictions' and the resurrection of the dead."
+        },
+        {
+          "ref": "Philippians 3:12-14",
+          "note": "'Follow[s] hard toward the marke, for the prise of the hie calling of God in Christ Iesus,' not counting himself as having 'alreadie attained.'"
+        },
+        {
+          "ref": "Philippians 4:4",
+          "note": "'Reioyce in the Lord alway, againe I say, reioyce.'"
+        },
+        {
+          "ref": "Philippians 4:11-13",
+          "note": "His own testimony of learned contentment: 'I haue learned in whatsoeuer state I am, therewith to bee content... I am able to do al things through the helpe of Christ, which strengtheneth me.'"
+        },
+        {
+          "ref": "Philippians 4:15-18",
+          "note": "Thanks the Philippians for their repeated support, including gifts sent to him at Thessalonica, and confirms receipt of their most recent gift 'of Epaphroditus,' calling it 'an odour that smellleth sweete, a sacrifice acceptable and pleasant to God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text renders the opening greeting 'IESVS CHRIST' in full capitals, a typographic convention of this 1560 printing not carried into later KJV editions.",
+        "Uses the same reused, non-suffixed-by-book id pattern intended across future Geneva Pauline-epistle files (paul_geneva recurs), following the KJV file's own precedent of treating Paul as one continuous person across his letters."
+      ]
+    },
+    {
+      "id": "timotheus_geneva",
+      "name": "Timotheus",
+      "role": "manager",
+      "scribeTier": "The Sonne in the Faith",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 1:1",
+          "note": "Named jointly with Paul as sender: 'Paul and Timotheus the seruants of IESVS CHRIST.'"
+        },
+        {
+          "ref": "Philippians 2:19-20",
+          "note": "Paul trusts in the Lord Iesus 'to sende Timotheus shortly vnto you,' saying 'I haue no man like minded, who will faithfully care for your matters.'"
+        },
+        {
+          "ref": "Philippians 2:21-22",
+          "note": "Contrasted with others who 'seeke their owne' — the Philippians know 'the proofe of him, that as a sonne with the father, hee hath serued with me in the Gospel.'"
+        },
+        {
+          "ref": "Philippians 2:23-24",
+          "note": "Paul hopes to send him 'assoone as I knowe howe it will goe with me,' and trusts he himself will 'come shortly' after."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This text spells his name 'Timotheus' throughout, matching the Greek form more closely than the KJV's anglicized 'Timothy' — a real, deliberate translation-choice difference, not a typo."
+      ]
+    },
+    {
+      "id": "epaphroditus_geneva",
+      "name": "Epaphroditus",
+      "role": "manager",
+      "scribeTier": "The Ministring Messenger",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 2:25",
+          "note": "Paul calls him 'my brother Epaphroditus... my companion in labour, and fellowe souldier, euen your messenger, and he that ministred vnto me such things as I wanted.'"
+        },
+        {
+          "ref": "Philippians 2:26-27",
+          "note": "'He longed after all you, and was full of heauinesse, because yee had heard that hee had beene sicke... he was sicke, very neere vnto death: but God had mercie on him.'"
+        },
+        {
+          "ref": "Philippians 2:28-30",
+          "note": "Paul sends him back so the Philippians 'might reioyce,' instructing them to 'Receiue him therefore in the Lord with all gladnesse, and make much of such: Because that for the woorke of Christ he was neere vnto death, and regarded not his life.'"
+        },
+        {
+          "ref": "Philippians 4:18",
+          "note": "Paul confirms he 'receiued of Epaphroditus that which came from you, an odour that smellleth sweete, a sacrifice acceptable and pleasant to God.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His near-fatal illness (2:26-27) remains the closest thing this letter has to a suspenseful personal episode, same as in the KJV rendering, only in period 1560 phrasing ('sicke, very neere vnto death')."
+      ]
+    },
+    {
+      "id": "euodias_and_syntyche_geneva",
+      "name": "Euodias and Syntyche",
+      "role": "manager",
+      "scribeTier": "Fellowe Labourers in the Gospel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 4:2",
+          "note": "'I pray Euodias, and beseech Syntyche, that they be of one accord in the Lord' — the sole description of a disagreement between the two, given as one shared exhortation rather than separate accounts."
+        },
+        {
+          "ref": "Philippians 4:3",
+          "note": "Paul asks his 'faithfull yokefellow' to 'helpe those women, which laboured with me in the Gospel, with Clement also, and with other my fellowe labourers, whose names are in the booke of life.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Indexed as one collective entry, since this text (like KJV) applies the same exhortation to both women without differentiating their individual actions or the nature of their dispute.",
+        "This translation's 'Euodias' spelling is shared with the KJV rendering; the underlying Greek name is feminine (Euodia) and most modern translations render it to clearly match Syntyche as two women."
+      ]
+    },
+    {
+      "id": "clement_geneva",
+      "name": "Clement",
+      "role": "submanager",
+      "scribeTier": "Fellowe Labourers in the Gospel",
+      "parentManagerId": "euodias_and_syntyche_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philippians 4:3",
+          "note": "Named by Paul alongside Euodias and Syntyche and 'other my fellowe labourers' as one who laboured with him in the Gospel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: named only once, with no independent action recorded. Not to be conflated with the later, extra-biblical tradition of 'Clement of Rome' — this text makes no such identification, only the single mention here."
+      ]
+    },
+    {
+      "id": "christ_hymn_geneva",
+      "name": "The Forme of a Seruant",
+      "role": "law",
+      "scribeTier": "The Forme of a Seruant",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva",
+      "purpose": "Introduced in 2:1-5 as the pattern for the unity and lowliness of mind Paul is urging on the Philippians ('Let the same minde be in you that was euen in Christ Iesus') — presents Christ's own self-emptying, humbling, obedience unto death, and exaltation as the model believers are called to imitate toward one another.",
+      "verses": [
+        {
+          "ref": "Philippians 2:6-7",
+          "note": "Christ, 'being in ye forme of God, thought it no robberie to be equall with God: But he made himself of no reputation, and tooke on him ye forme of a seruant, and was made like vnto men, and was founde in shape as a man.'"
+        },
+        {
+          "ref": "Philippians 2:8",
+          "note": "'He humbled himselfe, and became obedient vnto the death, euen the death of the Crosse.'"
+        },
+        {
+          "ref": "Philippians 2:9-11",
+          "note": "'Wherefore God hath also highly exalted him, and giuen him a Name aboue euery name... euery tongue shoulde confesse that Iesus Christ is the Lord, vnto the glory of God the Father.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva rendering's 'forme of God'/'forme of a seruant' phrasing gives this tier's evocative name — same underlying content as the KJV's 'form of God'/'form of a servant', just this printing's own spelling."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above because the Geneva text does not name or differentiate them as individuals — same set as the KJV file, verified against this translation's own wording and verse numbers.",
+    "philippian_bishops_and_deacons": {
+      "ref": "Philippians 1:1",
+      "note": "'all the Saintes in Christ Iesus which are at Philippi, with the Bishops, and Deacons' — no individual office-holder named."
+    },
+    "true_yokefellow": {
+      "ref": "Philippians 4:3",
+      "note": "Paul addresses an unnamed 'faithfull yokefellow,' asking him to help Euodias and Syntyche. The text supplies no name."
+    },
+    "caesars_household": {
+      "ref": "Philippians 4:22",
+      "note": "'they which are of Cesars houshold' send greetings at the close — an unnamed collective group."
+    },
+    "brethren_with_paul": {
+      "ref": "Philippians 4:21",
+      "note": "'The brethren, which are with me, greete you' — an unnamed collective group accompanying Paul at the time of writing."
+    },
+    "dogs_evil_workers_concision": {
+      "ref": "Philippians 3:2",
+      "note": "'beware of dogges: beware of euil workers: beware of the concision' — commonly read as a warning against Judaizing teachers, but no individual is named."
+    },
+    "enemies_of_the_cross": {
+      "ref": "Philippians 3:18-19",
+      "note": "'many walke, of whom I haue told you often... that they are the enemies of the Crosse of Christ' — Paul says he has warned of these often but names no individual."
+    }
+  }
+}

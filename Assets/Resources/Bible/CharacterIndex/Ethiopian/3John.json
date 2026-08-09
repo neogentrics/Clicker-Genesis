@@ -1,0 +1,190 @@
+{
+  "book": "3 John",
+  "translation": "Ethiopian",
+  "canonicalOrder": 83,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Ethiopian translation text for 3 John (1 chapter, 14 verses) is content-identical to the KJV rendering already indexed for this book — same four named figures (the elder, Gaius, Diotrephes, Demetrius), same single collective group (brethren/strangers), same closing greetings, no additional or missing verses, no deuterocanonical variance (unlike this Ethiopian Bible's own Ezra/1-Esdras divergence elsewhere). Adapted the already-validated KJV structure (4 person-type manager tiers, no law tiers, one submanager) rather than inventing a new shape, per the task's own guidance for shared-canon books that turn out identical. IDs suffixed \"_ethiopian\" and tier names re-verified word-for-word against this translation's own extracted text before reuse. Naming-collision flags carried over and re-confirmed against this text: this Gaius is not identified with the Gaius of Corinth (Romans 16:23/1 Corinthians 1:14), Macedonia (Acts 19:29), or Derbe (Acts 20:4); this Demetrius is not identified with the silversmith of Acts 19:24-41; \"the elder\" is only ever self-designated that way in the text (matching 2 John 1:1) — traditional identification with John the Apostle/Evangelist is tradition, not textual fact, and is not asserted here. No genealogy (parents/spouses/children) or ageEvents are stated anywhere in this short personal letter for any figure — all such fields are empty/null. The one collective figure, \"the brethren and strangers\" Gaius supported (3 John 1:5-8), is kept as a single loyalty-boost submanager under Gaius rather than invented as individuals, since the text never differentiates them, matching this book's already-validated KJV structure.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Elder's Ink and Pen",
+      "managerId": "elder_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Gaius's Hospitality",
+      "managerId": "gaius_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Diotrephes' Preeminence",
+      "managerId": "diotrephes_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Demetrius's Good Report",
+      "managerId": "demetrius_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "elder_ethiopian",
+      "name": "The Elder",
+      "role": "manager",
+      "scribeTier": "Elder's Ink and Pen",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "3 John 1:1",
+          "note": "The elder writes to the wellbeloved Gaius, whom he loves in the truth."
+        },
+        {
+          "ref": "3 John 1:4",
+          "note": "Has no greater joy than to hear his children walk in truth."
+        },
+        {
+          "ref": "3 John 1:9-10",
+          "note": "Wrote to the church, but Diotrephes refuses to receive him and speaks maliciously against him."
+        },
+        {
+          "ref": "3 John 1:13-14",
+          "note": "Has many things to write but prefers to speak face to face rather than with ink and pen."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Self-designated only as \"the elder\" in this letter, the same title used in 2 John 1:1 — traditional identification with John the Apostle/Evangelist is not asserted as textual fact here."
+      ]
+    },
+    {
+      "id": "gaius_ethiopian",
+      "name": "Gaius",
+      "role": "manager",
+      "scribeTier": "Gaius's Hospitality",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "3 John 1:1-2",
+          "note": "The wellbeloved recipient of the letter; the elder wishes he may prosper and be in health."
+        },
+        {
+          "ref": "3 John 1:3",
+          "note": "Brethren testified of the truth in him, that he walks in the truth."
+        },
+        {
+          "ref": "3 John 1:5-8",
+          "note": "Faithfully supports the brethren and strangers, sending them forward on their journey in a godly manner, taking nothing of the Gentiles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not identified with the Gaius of Corinth (Romans 16:23/1 Corinthians 1:14), Macedonia (Acts 19:29), or Derbe (Acts 20:4) — naming collision flagged, not merged."
+      ]
+    },
+    {
+      "id": "traveling_brethren_ethiopian",
+      "name": "The Traveling Brethren and Strangers",
+      "role": "submanager",
+      "scribeTier": "Gaius's Hospitality",
+      "parentManagerId": "gaius_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "3 John 1:5-8",
+          "note": "Brethren and strangers whom Gaius supported on their journey; they bore witness of his charity before the church and went forth for the Name's sake, taking nothing of the Gentiles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "diotrephes_ethiopian",
+      "name": "Diotrephes",
+      "role": "manager",
+      "scribeTier": "Diotrephes' Preeminence",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "3 John 1:9",
+          "note": "Loves to have the preeminence among the church and refuses to receive the elder."
+        },
+        {
+          "ref": "3 John 1:10",
+          "note": "Prates against the elder with malicious words, refuses to receive the brethren, forbids others who would, and casts them out of the church."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "demetrius_ethiopian",
+      "name": "Demetrius",
+      "role": "manager",
+      "scribeTier": "Demetrius's Good Report",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "3 John 1:12",
+          "note": "Has good report of all men and of the truth itself; the elder and others bear record that it is true."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not identified with the silversmith Demetrius of Acts 19:24-41 — naming collision flagged, not merged."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "friends_greeting": {
+      "ref": "3 John 1:14",
+      "note": "\"Our friends salute thee. Greet the friends by name\" — unnamed collective well-wishers on both ends of the correspondence, not individually identified."
+    },
+    "spiritual_children": {
+      "ref": "3 John 1:4",
+      "note": "\"My children\" — the elder's spiritual converts/disciples in general, not named individuals; no biological family is mentioned for the elder anywhere in this letter."
+    },
+    "the_church": {
+      "ref": "3 John 1:9-10",
+      "note": "\"The church\" the elder wrote to, and from which Diotrephes casts out willing brethren — the congregation itself, not a person, kept out of the character list."
+    }
+  }
+}

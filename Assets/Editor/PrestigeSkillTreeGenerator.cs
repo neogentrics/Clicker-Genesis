@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEditor;
 using UnityEngine;
-using ClickerGenesis.Data;
 using ClickerGenesis.Progression;
 
 namespace ClickerGenesis.EditorTools
@@ -102,8 +100,8 @@ namespace ClickerGenesis.EditorTools
                 displayName = "Grace Awakened",
                 description = "Awakens your capacity to draw on Grace. Every skill on this tree - every branch, and Book Progression - requires this first.",
                 branch = "Core",
-                prerequisiteId = null,
-                prerequisiteRankRequired = 0,
+                prerequisites = new List<SkillPrerequisite>(),
+                shape = SkillNodeShape.Star,
                 maxRank = 1,
                 baseCost = 8,
                 costGrowthPerRank = 1.0,
@@ -120,8 +118,19 @@ namespace ClickerGenesis.EditorTools
                 BuildBranch(config, b);
             }
 
+            // Book Progression's nodes are NOT generated here - they're built at runtime by
+            // BookProgressionTreeBuilder, anchored to whichever book the player actually started
+            // in (2026-08-08 redesign). This asset only ever holds Core + the 8 economy branches;
+            // GameLoopController merges in the runtime book nodes on top of a clone of this asset
+            // once a save's starting book is known. branchOrder still lists "Book Progression" so
+            // the tree UI groups those runtime nodes correctly once merged in.
             config.branchOrder.Add("Book Progression");
-            BuildBookBranch(config);
+
+            // Convergence capstone (2026-08-08) - the concrete demonstration of the new
+            // multi-prerequisite feature: requires ALL 8 branch capstones maxed at once, not a
+            // single chain step. Sits conceptually "above" every branch, its own reward for having
+            // fully invested in every economy branch.
+            BuildConvergenceNode(config, branches);
 
             const string path = "Assets/Config/PrestigeSkillTreeConfig.asset";
             var existing = AssetDatabase.LoadAssetAtPath<PrestigeSkillTreeConfig>(path);
@@ -158,8 +167,10 @@ namespace ClickerGenesis.EditorTools
                     displayName = displayName,
                     description = DescribeEffect(b.effectType, b.perRankEffect[i]),
                     branch = b.name,
-                    prerequisiteId = prevId,
-                    prerequisiteRankRequired = prevMaxRank,
+                    prerequisites = new List<SkillPrerequisite> { new SkillPrerequisite(prevId, prevMaxRank) },
+                    // Capstones get their own shape (Hexagon) so they read as a different tier of
+                    // node from the regular rank-chain steps (Circle) at a glance (2026-08-08).
+                    shape = isCapstone ? SkillNodeShape.Hexagon : SkillNodeShape.Circle,
                     maxRank = b.ranks[i],
                     baseCost = b.baseCost[i],
                     costGrowthPerRank = 2.0,
@@ -180,79 +191,35 @@ namespace ClickerGenesis.EditorTools
             }
         }
 
-        // Canonical KJV Old Testament order, excluding Genesis (the always-free starting book).
-        // Single source of truth is ClickerGenesis.Data.CanonicalBookOrder (shared with runtime
-        // book-switching logic in GameLoopController, Phase F2 2026-08-06) - Genesis (index 0) is
-        // skipped here since it has no Grace tree node.
-        private static readonly (string id, string name)[] RemainingOldTestament =
-            CanonicalBookOrder.Books.Skip(1).Select(b => (b.resourceId, b.displayName)).ToArray();
-
-        private static void BuildBookBranch(PrestigeSkillTreeConfig config)
+        /// <summary>The tree's one true multi-prerequisite node (2026-08-08) - requires every
+        /// branch's capstone maxed simultaneously, not a single chain step. Demonstrates the new
+        /// AND-prerequisite-list mechanism for real rather than leaving it unused scaffolding.</summary>
+        private static void BuildConvergenceNode(PrestigeSkillTreeConfig config, BranchSpec[] branches)
         {
-            // First book node also requires Core at rank 1 (2026-08-06 hub redesign, user
-            // confirmed Book Progression is gated same as the economy branches) - prevId seeded
-            // with "Core" instead of null makes prerequisiteRankRequired below resolve to 1
-            // automatically for Exodus, same mechanism BuildBranch uses.
-            string prevId = "Core";
-            double cost = 30;
-            foreach (var (id, name) in RemainingOldTestament)
+            var prereqs = new List<SkillPrerequisite>();
+            foreach (var b in branches)
             {
-                string nodeId = $"Book_{id}";
-                config.nodes.Add(new PrestigeSkillNode
-                {
-                    id = nodeId,
-                    displayName = name,
-                    description = $"Unlocks {name} for purchase on the Books tab.",
-                    branch = "Book Progression",
-                    prerequisiteId = prevId,
-                    prerequisiteRankRequired = prevId == null ? 0 : 1,
-                    maxRank = 1,
-                    baseCost = System.Math.Round(cost),
-                    costGrowthPerRank = 1.0,
-                    effectType = SkillEffectType.BookUnlock,
-                    effectPerRank = 0,
-                    unlockBookResourceId = id,
-                    unlockBookDisplayName = name,
-                    isCapstone = false,
-                });
-                prevId = nodeId;
-                cost *= 1.18; // each successive OT book costs a bit more Grace than the last
+                string capstoneId = $"{b.flavor}_{b.ranks.Length - 1}";
+                int capstoneMaxRank = b.ranks[b.ranks.Length - 1];
+                prereqs.Add(new SkillPrerequisite(capstoneId, capstoneMaxRank));
             }
 
-            // New Testament sits behind a small, steeply-priced gate cluster rather than one node
-            // per book - "either an absurd amount of grace or paid for by whatever game store"
-            // (2026-08-04, user's own framing). No real payment wired up yet - unlockBookResourceId
-            // just needs the Grace-bought path to work; a Store-driven alternative unlock is a
-            // separate, later hook into the same IsBookUnlocked check.
-            AddNtGate(config, "Gospel Threshold", prevId,
-                "matthew_40,mark_41,luke_42,john_43", 2000);
-            AddNtGate(config, "Apostolic Path", "Book_NT_Gospel Threshold",
-                "acts_44,romans_45,1corinthians_46,2corinthians_47,galatians_48,ephesians_49,philippians_50,colossians_51,1thessalonians_52,2thessalonians_53,1timothy_54,2timothy_55,titus_56,philemon_57,hebrews_58,james_59,1peter_60,2peter_61,1john_62,2john_63,3john_64", 5000);
-            AddNtGate(config, "Revelation's Veil", "Book_NT_Apostolic Path",
-                "jude_65,revelation_66", 8000);
-        }
-
-        private static void AddNtGate(PrestigeSkillTreeConfig config, string displayName, string prereqId, string bookIds, double cost)
-        {
-            string nodeId = $"Book_NT_{displayName}";
             config.nodes.Add(new PrestigeSkillNode
             {
-                id = nodeId,
-                displayName = displayName,
-                description = $"Unlocks New Testament books: {bookIds.Replace(",", ", ")}.",
-                branch = "Book Progression",
-                prerequisiteId = prereqId,
-                prerequisiteRankRequired = prereqId == null ? 0 : 1,
+                id = "Convergence",
+                displayName = "Grace Made Perfect",
+                description = "Requires every branch's capstone fully mastered. +25% total Ink/sec, on top of every other bonus.",
+                branch = "Core",
+                prerequisites = prereqs,
+                shape = SkillNodeShape.Triangle,
                 maxRank = 1,
-                baseCost = cost,
+                baseCost = 5000,
                 costGrowthPerRank = 1.0,
-                effectType = SkillEffectType.BookUnlock,
-                effectPerRank = 0,
-                unlockBookResourceId = bookIds,
-                unlockBookDisplayName = displayName,
-                isCapstone = displayName == "Revelation's Veil",
-                // The whole New Testament gate cluster requires a Reset-Prestige (2026-08-06) -
-                // same "biggest payoffs behind an actual reset" rule as the economy capstones.
+                effectType = SkillEffectType.IncomeMultiplier,
+                effectPerRank = 0.25,
+                unlockBookResourceId = "",
+                unlockBookDisplayName = "",
+                isCapstone = true,
                 requiresResetPrestige = true,
             });
         }

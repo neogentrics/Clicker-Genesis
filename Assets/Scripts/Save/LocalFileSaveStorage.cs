@@ -18,19 +18,26 @@ namespace ClickerGenesis.Save
     /// </summary>
     public class LocalFileSaveStorage : ISaveStorage
     {
-        private const string FileName = "save.json";
+        // Slot-aware (2026-08-08, save-slot system, supersedes the single-save "save.json" this
+        // class originally wrote) - slot 0 keeps the legacy filename specifically so a save
+        // written before slots existed keeps loading as "Slot 1" instead of silently vanishing.
+        private readonly string fileName;
 
         // Deliberately not a secret worth protecting — see the anti-tamper note above.
         private static readonly byte[] ObfuscationKey = Encoding.UTF8.GetBytes("ClickerGenesisSave-NotRealEncryption-2026");
 
         private readonly string saveDirectory;
-        private string SavePath => Path.Combine(saveDirectory, FileName);
+        private string SavePath => Path.Combine(saveDirectory, fileName);
         private string BackupPath => SavePath + ".bak";
         private string TempPath => SavePath + ".tmp";
 
-        public LocalFileSaveStorage(string directory = null)
+        /// <param name="slotIndex">Which of the SaveSlotManager.SlotCount slots this instance
+        /// reads/writes. Defaults to 0 (== "save.json", the pre-slot-system filename) so any
+        /// existing caller that doesn't pass a slot keeps working unchanged.</param>
+        public LocalFileSaveStorage(int slotIndex = 0, string directory = null)
         {
             saveDirectory = string.IsNullOrEmpty(directory) ? Application.persistentDataPath : directory;
+            fileName = slotIndex <= 0 ? "save.json" : $"save_slot{slotIndex}.json";
         }
 
         /// <summary>Falls back to a fresh SaveData on ANY failure (missing file = first launch,
@@ -130,6 +137,8 @@ namespace ClickerGenesis.Save
             DeleteIfExists(BackupPath);
             DeleteIfExists(TempPath);
         }
+
+        public bool HasSave() => File.Exists(SavePath) || File.Exists(BackupPath);
 
         private static void DeleteIfExists(string path)
         {

@@ -1,0 +1,482 @@
+{
+  "book": "Esther",
+  "translation": "Ethiopian",
+  "canonicalOrder": 21,
+  "status": "drafted by direct reading of the real extracted Ethiopian-translation verse text (Assets/Resources/Verses/Ethiopian/esther_21.json, single-pass), structurally cross-checked verse-by-verse against the book's own 10-chapter/167-verse layout; consulted the existing KJV Esther.json only for tier-naming style, not copied blindly",
+  "notes": "Real structural finding, worth flagging clearly: this Ethiopian-translation source text for Esther is NOT the extended/Greek-Additions form of Esther (with Mordecai's dream, Esther's prayer in the throne-room scene, the full text of the king's letters, etc.) that many Orthodox-canon Bibles carry for this book. The extracted text here is the standard 10-chapter, 167-verse Hebrew/Masoretic-structure Esther (verified by direct chapter-by-chapter verse count: 22+23+15+17+14+14+10+17+32+3=167, matching exactly), and its wording is effectively identical to the familiar English (KJV-style) rendering of Esther, unlike this same Ethiopian source's genuinely distinct content elsewhere in the canon (e.g. its 9-chapter 'Ezra' matching the 1 Esdras tradition). This is reported as an observed fact about the source file, not assumed from memory - don't 'correct' it to match an expected extended-canon shape.\n\nCharacter/tier structure: 5 person-type manager tiers + 1 law-type tier, same shape as the existing KJV Esther index, because the underlying narrative content in this specific extracted text is the same standard-canon story beat-for-beat. Ids are suffixed '_ethiopian' throughout specifically to avoid collision with the existing KJV CharacterIndex ids for the same names (per the project's cross-translation id rule).\n\nNaming-collision flags carried forward from direct reading of this text: 'Ahasuerus' (1:1) is a royal name/title also used elsewhere in scripture for other rulers (Ezra 4:6, Daniel 9:1) - not asserted to be the same figure. Two royal chamberlains conspire together and are always named as a pair, never differentiated individually (2:21, spelled 'Bigthan'; 6:2 spells the same figure 'Bigthana' - a spelling variant within this same source text, not a different person) - kept as one paired submanager entry rather than invented as two. Harbona (1:10) and Harbonah (7:9) are likewise the same figure under a spelling variant within this text.\n\nGenealogy hedges applied per the established methodology: Mordecai's descent 'the son of Jair, the son of Shimei, the son of Kish, a Benjamite' (2:5) is stated text, but any further identification of this Kish with Saul's father Kish is a traditional/scholarly inference never made by the text itself - not asserted here. The antecedent of 'who had been carried away' (2:6) - Kish or Mordecai himself - is genuinely ambiguous in this text and left unresolved rather than guessed. Haman's title 'the Agagite' (3:1, 3:10, 8:3, 8:5, 9:24) is never explicitly linked by this text to King Agag of 1 Samuel 15 - noted as a thematic/traditional association only. Zeresh's maternity of Haman's ten named sons (9:7-10) is the natural implication of being 'his wife' (5:10) but is not stated outright by the text, so it is noted as implied rather than asserted as fact.\n\nSchema self-check performed: every scribeTiers[].managerId (ahasuerus_ethiopian, vashti_ethiopian, esther_ethiopian, mordecai_ethiopian, haman_ethiopian, purim_ethiopian_esther) resolves to a real characters[].id. Every characters[].parentManagerId (ahasuerus_ethiopian, esther_ethiopian, haman_ethiopian) resolves to a real manager id. purim_ethiopian_esther's deliveredBy resolves to mordecai_ethiopian. No character holds both a scribeTier and a parentManagerId. The characters array is fully populated (12 entries: 5 person managers, 6 submanagers, 1 law tier).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Golden Sceptre",
+      "managerId": "ahasuerus_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Crown Royal",
+      "managerId": "vashti_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Royal Apparel",
+      "managerId": "esther_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The King's Ring",
+      "managerId": "mordecai_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Gallows",
+      "managerId": "haman_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Pur (the Lot)",
+      "managerId": "purim_ethiopian_esther",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ahasuerus_ethiopian",
+      "name": "Ahasuerus",
+      "role": "manager",
+      "scribeTier": "The Golden Sceptre",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Vashti",
+          "Esther"
+        ],
+        "children": []
+      },
+      "genealogyNote": "No parentage or children stated in this text. Reigns 'from India even unto Ethiopia, over an hundred and seven and twenty provinces' (1:1) - the same span of provinces recurs verbatim at 8:9. 'Ahasuerus' is reused elsewhere in scripture as a royal name/title for other rulers (e.g. Ezra 4:6, Daniel 9:1); not asserted to be the same man here.",
+      "verses": [
+        {
+          "ref": "Esther 1:1-4",
+          "note": "Introduced reigning over 127 provinces from India to Ethiopia; holds a 180-day display of his kingdom's riches in his third year."
+        },
+        {
+          "ref": "Esther 1:10-12",
+          "note": "Sends seven chamberlains to bring Queen Vashti before the feast to show her beauty; she refuses, and his anger burns."
+        },
+        {
+          "ref": "Esther 2:16-17",
+          "note": "Loves Esther above all the women and sets the royal crown on her head in his seventh year, making her queen instead of Vashti."
+        },
+        {
+          "ref": "Esther 3:10-11",
+          "note": "Gives his own ring to Haman, telling him the silver and the people are his to do with as he pleases."
+        },
+        {
+          "ref": "Esther 7:7-10",
+          "note": "Rises in wrath from the wine banquet after Esther names Haman as the enemy; orders Haman hanged on Haman's own gallows."
+        },
+        {
+          "ref": "Esther 8:2, 7-8",
+          "note": "Gives Mordecai the ring taken back from Haman and grants Esther and Mordecai authority to write a new decree in his name."
+        }
+      ],
+      "funFacts": [
+        "This book never names God directly anywhere in its ten chapters, a distinction unique among the books indexed so far."
+      ]
+    },
+    {
+      "id": "memucan_ethiopian",
+      "name": "Memucan",
+      "role": "submanager",
+      "parentManagerId": "ahasuerus_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The one prince among the seven who actually speaks - proposes the specific wording of the decree removing Vashti (1:16-21), turning the king's anger into formal royal policy.",
+      "scribeTier": "The Golden Sceptre",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Named as one of 'the seven princes of Persia and Media, which saw the king's face, and which sat the first in the kingdom' (1:14); no further genealogy given.",
+      "verses": [
+        {
+          "ref": "Esther 1:14-15",
+          "note": "Named among the seven princes consulted by the king on what law applies to Vashti's refusal."
+        },
+        {
+          "ref": "Esther 1:16-21",
+          "note": "Answers that Vashti's act will spread contempt to husbands throughout the provinces, and proposes the irrevocable decree against her; the king and princes are pleased and act on his word."
+        }
+      ]
+    },
+    {
+      "id": "bigthan_and_teresh_ethiopian",
+      "name": "Bigthan and Teresh",
+      "role": "submanager",
+      "parentManagerId": "ahasuerus_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Two door-keeping chamberlains whose exposed plot against the king becomes the unpaid debt the chronicles later repay through Mordecai's public reward (ch. 6) - a threat removed rather than support given.",
+      "scribeTier": "The Golden Sceptre",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Always named as a pair, 'two of the king's chamberlains... of those which kept the door' (2:21); the text never differentiates between them individually, so they are kept as one paired entry. Spelled 'Bigthan' at 2:21 and 'Bigthana' at 6:2 within this same source text - a spelling variant, not a second person.",
+      "verses": [
+        {
+          "ref": "Esther 2:21-23",
+          "note": "Grow wroth and seek to lay hand on King Ahasuerus; Mordecai learns of it and reports it through Esther; both are found out and hanged, and it is written in the book of the chronicles."
+        },
+        {
+          "ref": "Esther 6:2",
+          "note": "The chronicle entry naming 'Bigthana and Teresh' is read back to the sleepless king, setting up Mordecai's reward."
+        }
+      ]
+    },
+    {
+      "id": "vashti_ethiopian",
+      "name": "Vashti",
+      "role": "manager",
+      "scribeTier": "The Crown Royal",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Ahasuerus"
+        ],
+        "children": []
+      },
+      "genealogyNote": "No parentage or children given. Her fate after being deposed is not stated beyond losing her royal position (1:19) - the text does not say she was executed or banished.",
+      "verses": [
+        {
+          "ref": "Esther 1:9",
+          "note": "Makes her own feast for the women in the royal house, running alongside the king's much larger feast for the men."
+        },
+        {
+          "ref": "Esther 1:12",
+          "note": "Refuses to come at the king's commandment brought by his chamberlains."
+        },
+        {
+          "ref": "Esther 1:19",
+          "note": "Memucan's proposed decree: Vashti is not to come before the king again, and her royal estate is given to another woman 'better than she.'"
+        },
+        {
+          "ref": "Esther 2:1",
+          "note": "Once his wrath is appeased, the king remembers Vashti and what was decreed against her."
+        }
+      ]
+    },
+    {
+      "id": "esther_ethiopian",
+      "name": "Esther",
+      "role": "manager",
+      "scribeTier": "The Royal Apparel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Abihail",
+        "mother": null,
+        "spouses": [
+          "Ahasuerus"
+        ],
+        "children": []
+      },
+      "genealogyNote": "Named daughter of Abihail (2:15, referenced again 9:29); mother not named. Esther is Mordecai's cousin by blood, 'his uncle's daughter' (2:7), not his biological daughter - orphaned, she was 'taken for his own daughter' by Mordecai, an adoptive relationship the text states explicitly rather than a literal parent-child one.",
+      "verses": [
+        {
+          "ref": "Esther 2:7",
+          "note": "Introduced as Hadassah, that is Esther, orphaned and fair, taken by Mordecai as his own daughter after her parents' death."
+        },
+        {
+          "ref": "Esther 2:10, 20",
+          "note": "Keeps her Jewish people and kindred hidden at Mordecai's charge, both before and after becoming queen."
+        },
+        {
+          "ref": "Esther 2:17",
+          "note": "The king loves her above all the women and sets the royal crown on her head, making her queen instead of Vashti."
+        },
+        {
+          "ref": "Esther 4:15-16",
+          "note": "Calls for a three-day fast among the Jews of Shushan before approaching the king unbidden: 'if I perish, I perish.'"
+        },
+        {
+          "ref": "Esther 5:1-3",
+          "note": "Stands in the inner court in her royal apparel; the king holds out the golden sceptre to her."
+        },
+        {
+          "ref": "Esther 7:3-6",
+          "note": "Petitions for her life and her people's lives, naming Haman directly as 'the adversary and enemy... this wicked Haman.'"
+        },
+        {
+          "ref": "Esther 9:29-32",
+          "note": "Writes with Mordecai 'with all authority' a second letter confirming the observance of Purim, which is written in the book."
+        }
+      ],
+      "funFacts": [
+        "Esther carries two names in this text: 'Hadassah,' introduced first, and 'Esther,' used throughout the rest of the book (2:7)."
+      ]
+    },
+    {
+      "id": "hegai_ethiopian",
+      "name": "Hegai",
+      "role": "submanager",
+      "parentManagerId": "esther_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Keeper of the women who favors Esther immediately, giving her preferential preparation, seven chosen maidens, and the best place in the house of the women (2:9).",
+      "scribeTier": "The Royal Apparel",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Identified only by office, 'keeper of the women' (2:3, 2:8). A separate chamberlain, Shaashgaz, later keeps the house of the concubines (2:14) - a different office and a different person.",
+      "verses": [
+        {
+          "ref": "Esther 2:8-9",
+          "note": "Esther comes into his custody; she pleases him and he speedily grants her purification items, seven chosen maidens, and the best place in the house of the women."
+        },
+        {
+          "ref": "Esther 2:15",
+          "note": "When her turn comes to go before the king, Esther requires nothing but what Hegai the keeper of the women advises."
+        }
+      ]
+    },
+    {
+      "id": "hatach_ethiopian",
+      "name": "Hatach",
+      "role": "submanager",
+      "parentManagerId": "esther_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The chamberlain appointed to attend Esther; carries the copy of Haman's decree and Mordecai's charge to her, then carries her reply back (4:5-17), making him the message-relay that turns Mordecai's warning into Esther's decision to act.",
+      "scribeTier": "The Royal Apparel",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Identified only by office, 'one of the king's chamberlains, whom he had appointed to attend upon her' (4:5).",
+      "verses": [
+        {
+          "ref": "Esther 4:5-9",
+          "note": "Sent by Esther to Mordecai to learn the cause of his mourning; brings back the copy of the destruction decree and Mordecai's charge that she plead for her people."
+        },
+        {
+          "ref": "Esther 4:10-12",
+          "note": "Carries Esther's reply back to Mordecai, that none may approach the king unbidden without risking death unless the golden sceptre is extended."
+        }
+      ]
+    },
+    {
+      "id": "mordecai_ethiopian",
+      "name": "Mordecai",
+      "role": "manager",
+      "scribeTier": "The King's Ring",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jair",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Genealogy per 2:5: 'the son of Jair, the son of Shimei, the son of Kish, a Benjamite.' Whether this Kish is the same Kish who fathered King Saul is never stated by the text - a traditional/scholarly inference only, not asserted here. Whether the 'carried away' clause in 2:6 refers to Kish or to Mordecai himself is genuinely ambiguous in this text and left unresolved. Raises his orphaned cousin Esther as his own daughter (2:7), but she is not his biological child, so she is not listed under 'children.'",
+      "verses": [
+        {
+          "ref": "Esther 2:5-6",
+          "note": "Introduced by genealogy - son of Jair, son of Shimei, son of Kish, a Benjamite - carried away from Jerusalem with the captivity of Jeconiah king of Judah."
+        },
+        {
+          "ref": "Esther 2:7",
+          "note": "Brings up Hadassah, that is Esther, his uncle's daughter, taking her as his own daughter after her parents' death."
+        },
+        {
+          "ref": "Esther 2:21-23",
+          "note": "Learns of Bigthan and Teresh's plot and reports it through Esther in his own name; it is written in the book of the chronicles."
+        },
+        {
+          "ref": "Esther 3:2",
+          "note": "Alone among the king's servants at the gate, refuses to bow or do reverence to Haman."
+        },
+        {
+          "ref": "Esther 4:13-14",
+          "note": "Sends word to Esther that deliverance will arise for the Jews from some place even if she stays silent, and asks whether she has come to the kingdom 'for such a time as this.'"
+        },
+        {
+          "ref": "Esther 6:10-12",
+          "note": "Is dressed in royal apparel and led on horseback through the city by Haman himself, then returns to the king's gate."
+        },
+        {
+          "ref": "Esther 8:2, 15",
+          "note": "Receives the king's ring taken back from Haman and goes out in royal apparel of blue and white with a great crown of gold."
+        },
+        {
+          "ref": "Esther 10:2-3",
+          "note": "Ends the book next in rank to King Ahasuerus, great among the Jews, seeking the good of his people and speaking peace to all his seed."
+        }
+      ]
+    },
+    {
+      "id": "haman_ethiopian",
+      "name": "Haman",
+      "role": "manager",
+      "scribeTier": "The Gallows",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Hammedatha",
+        "mother": null,
+        "spouses": [
+          "Zeresh"
+        ],
+        "children": [
+          "Parshandatha",
+          "Dalphon",
+          "Aspatha",
+          "Poratha",
+          "Adalia",
+          "Aridatha",
+          "Parmashta",
+          "Arisai",
+          "Aridai",
+          "Vajezatha"
+        ]
+      },
+      "genealogyNote": "Called 'the Agagite' throughout (3:1, 3:10, 8:3, 8:5, 9:24); this text never states a direct genealogical link to King Agag of 1 Samuel 15, only the title - any such link is a thematic/traditional association, not stated fact. His ten sons are named only as a list of the slain and later hanged (9:7-10) with no individual action, so they are treated as a group in genealogyLists rather than invented as individual characters.",
+      "verses": [
+        {
+          "ref": "Esther 3:1",
+          "note": "Promoted by the king above all the princes, described as 'Haman the son of Hammedatha the Agagite.'"
+        },
+        {
+          "ref": "Esther 3:5-6",
+          "note": "Full of wrath at Mordecai's refusal to bow, scorns laying hands on Mordecai alone and instead plots to destroy all Jews throughout the kingdom."
+        },
+        {
+          "ref": "Esther 3:7-9",
+          "note": "Casts Pur (the lot) to set the date of destruction and offers ten thousand talents of silver to fund the decree."
+        },
+        {
+          "ref": "Esther 5:11-14",
+          "note": "Boasts to Zeresh and his friends of his riches and honor, but says it profits him nothing while Mordecai sits unbowed at the gate; they counsel him to build a fifty-cubit gallows."
+        },
+        {
+          "ref": "Esther 7:6-10",
+          "note": "Named by Esther as 'this wicked Haman,' found fallen on Esther's own bed pleading for his life, and hanged on the gallows he built for Mordecai."
+        },
+        {
+          "ref": "Esther 9:7-10",
+          "note": "His ten sons are slain by the Jews in Shushan; the Jews take no spoil."
+        }
+      ]
+    },
+    {
+      "id": "zeresh_ethiopian",
+      "name": "Zeresh",
+      "role": "submanager",
+      "parentManagerId": "haman_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Haman's wife and closest counsel - first proposes the gallows for Mordecai (5:14), then later warns Haman his fall before Mordecai is now certain (6:13).",
+      "scribeTier": "The Gallows",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Haman"
+        ],
+        "children": []
+      },
+      "genealogyNote": "Described simply as Haman's wife (5:10). The text does not explicitly state she is the mother of his ten named sons (9:7-10), though it is the natural implication - noted as implied, not stated.",
+      "verses": [
+        {
+          "ref": "Esther 5:10, 14",
+          "note": "Haman recounts his grievances to her and his friends; she and they advise a fifty-cubit gallows for Mordecai, which pleases Haman."
+        },
+        {
+          "ref": "Esther 6:13",
+          "note": "After Mordecai is publicly honored, Zeresh and Haman's wise men tell him he will surely fall before a man of Mordecai's seed."
+        }
+      ]
+    },
+    {
+      "id": "harbona_ethiopian",
+      "name": "Harbona",
+      "role": "submanager",
+      "parentManagerId": "haman_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Speaks up at the critical moment to point the king toward the gallows Haman built for Mordecai, directly causing Haman's execution method (7:9-10).",
+      "scribeTier": "The Gallows",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "genealogyNote": "Named among the seven chamberlains who served before the king (1:10, spelled 'Harbona'); the same figure speaks again at 7:9, spelled 'Harbonah' within this same text - a spelling variant, not a different person.",
+      "verses": [
+        {
+          "ref": "Esther 1:10",
+          "note": "Named among the seven chamberlains who served in the presence of King Ahasuerus."
+        },
+        {
+          "ref": "Esther 7:9-10",
+          "note": "Tells the king of the gallows standing at Haman's house, built for Mordecai who had spoken good for the king; the king orders Haman hanged on it."
+        }
+      ]
+    },
+    {
+      "id": "purim_ethiopian_esther",
+      "name": "The Institution of Purim",
+      "role": "law",
+      "scribeTier": "The Pur (the Lot)",
+      "parentManagerId": null,
+      "deliveredBy": "mordecai_ethiopian",
+      "purpose": "Establishes an annual two-day feast (the 14th and 15th of Adar) commemorating the Jews' deliverance from Haman's planned massacre, turning the month 'from sorrow to joy, and from mourning into a good day' (9:22) into a lasting yearly memorial 'throughout every generation, every family, every province, and every city' (9:28). Named after the Pur (the lot) Haman cast to fix the date of the intended destruction (9:24-26), so the very device meant to destroy the Jews gives its name to the feast celebrating their survival.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Esther 9:17-19",
+          "note": "Explains why Jews in unwalled towns keep the 14th of Adar, while Shushan (where the fighting ran an extra day) keeps the 15th."
+        },
+        {
+          "ref": "Esther 9:20-22",
+          "note": "Mordecai writes letters to all the Jews in the king's provinces establishing the 14th and 15th of Adar as annual days of feasting, gladness, and gift-giving to the poor."
+        },
+        {
+          "ref": "Esther 9:24-26",
+          "note": "Explains the feast's name, Purim, from Pur, the lot Haman cast against the Jews."
+        },
+        {
+          "ref": "Esther 9:29-32",
+          "note": "Esther, with Mordecai, writes a second letter with full authority confirming the observance for all generations, and it is written in the book."
+        }
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above per the established methodology.",
+    "seven_princes_of_persia_and_media_esther_1_14": {
+      "ref": "Esther 1:14, 18",
+      "note": "Carshena, Shethar, Admatha, Tarshish, Meres, and Marsena - named as a group with no individual differentiation. Memucan, the seventh of the group, IS individually differentiated (he speaks at 1:16-21) and has his own character entry."
+    },
+    "seven_chamberlains_esther_1_10": {
+      "ref": "Esther 1:10",
+      "note": "Mehuman, Biztha, Bigtha, and Abagtha, Zethar, and Carcas - named as a group with no individual differentiation. Harbona, the seventh named, IS individually differentiated later (he speaks in ch. 7) and has his own character entry."
+    },
+    "shaashgaz_esther_2_14": {
+      "ref": "Esther 2:14",
+      "note": "Keeper of the house of the concubines - a different office from Hegai, keeper of the virgins. Named once with no individual action beyond his office."
+    },
+    "hamans_ten_sons_esther_9_7-10_and_9_13-14": {
+      "ref": "Esther 9:7-10, 13-14",
+      "note": "Parshandatha, Dalphon, Aspatha, Poratha, Adalia, Aridatha, Parmashta, Arisai, Aridai, and Vajezatha - named only as a list of the slain, then again as hanged; no individual differentiation or action beyond the name."
+    }
+  }
+}

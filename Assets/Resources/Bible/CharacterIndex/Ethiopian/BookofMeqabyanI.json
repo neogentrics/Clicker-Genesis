@@ -1,0 +1,696 @@
+{
+  "book": "Book of Meqabyan I",
+  "translation": "Ethiopian",
+  "canonicalOrder": 22,
+  "status": "drafted by a single agent that read the full real extracted verse text (all 36 chapters) of this exact translation before drafting; NOT yet run through a separate adversarial fact-check pass, unlike the multi-agent-workflow books elsewhere in the index. Treat as a first draft pending that verification pass.",
+  "notes": "This book does not exist in the KJV Character Index at all - it is a text unique to the Ethiopian Orthodox Tewahedo canon, and it is NOT the same work as the canonical 1st/2nd Maccabees (Judas Maccabeus never appears here at all; the similar-sounding title is a real, potentially confusing coincidence worth flagging explicitly, not a variant telling of the Hanukkah story). Structurally the book is almost entirely a sustained direct-address sermon from JAH (via an unattributed narrator/authorial voice) to a named idolatrous king, Tseerutsaydan, on the resurrection of the dead, divine judgment of rulers, and the coming reckoning of the nations - only two short passages are genuine character-driven narrative: (1) ch.1-4, where three brothers (sons of a man named Meqabees, tribe of Benjamin) refuse to worship Tseerutsaydan's idols, are repeatedly tortured and executed yet their corpses will not burn or sink, and finally appear to the king after death bearing swords, badly shaking him; and (2) ch.15-16, a second, unconnected episode where a different trio of brothers assassinates the invading Midianite king Akrandis at his own banquet table to save Israel from tribute and conquest. Given how sermon-dominated the book is, I built 3 Person-type manager tiers for the book's own original actors (Tseerutsaydan, and the two brother-trios) and 11 Law-type tiers for the sermon's major recurring thematic blocks, following the Leviticus/Deuteronomy precedent - this is a genuinely law/theme-heavy book, more so than any OT book indexed so far. REAL NAMING COLLISION, flagged per the standing rule: two different men are named \"Meqabees\" in this single book - the unnamed-further father of the martyred trio (2:1, never acts again after being named as their father) and one of the second trio of war-brothers (15:8, who fights alongside Yihuda and Mebikyas against King Akrandis). They are kept as fully separate identities (meqabees_father, referenced only in genealogyLists since he has zero independent action, vs. meqabees_warrior_meqabyan1, a built submanager). The book's title term \"Meqabyan\" itself appears to be an eponym tied to this recurring \"sons of Meqabees, brother-trio of warriors/martyrs\" motif rather than any single named individual. For the law tiers, most cite extensively from already-canonically-indexed OT history (Nebuchadnezzar, Saul/Samuel/Agag, David, Solomon, Hezekiah/Manasseh, Gideon, Deborah/Barak, Samson, Judith, Esther/Mordecai/Haman, Moses/Aaron at the Exodus and Horeb, Abraham/Isaac/Jacob, Adam/Eve/Cain/Abel/Seth/Noah, Job) purely as rhetorical exempla within JAH's sermon - none of them are built as characters in this draft since they carry no new narrative action within Meqabyan I itself, they are cited/reviewed, not enacted here; per the \"PERSONALLY EMBODIED vs PURE TRANSMISSION\" test, none of these citations are personally embodied within THIS book's own text. Because of this, every Law tier's deliveredByManagerId is left null rather than guessed - the sermon's speaker is JAH's own voice (repeatedly self-identified as \"I-man...JAH\") addressing Tseerutsaydan directly by name (first at 5:14), with no single human deliverer/teacher figure equivalent to Moses in Leviticus; the one clear exception (ch.14's citation of Moses actually commanding Israel at Horeb) still isn't attributed via deliveredByManagerId since Moses is not built as a character in this book's own roster and the id would dangle. One real distinctive-translation detail worth flagging for future content work: this Ethiopian translation names the Genesis forbidden fruit specifically as the \"Herb of Fig\" (27:15-19), not simply \"the fruit of the tree\" - used directly as this book's Creation/Fall tier's scribe name. Chapter/verse cumulative counts used for unlockAtVerseIndex were computed directly from the verses actually read (750 verses counted across 36 chapters versus a stated 756 in the source metadata - a small discrepancy, most likely from my own manual tally rather than missing content, since every chapter 1-36 was read in full - flagging rather than silently reconciling it).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Iron Idol House",
+      "managerId": "tseerutsaydan_meqabyan1",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Unquenched Flame",
+      "managerId": "abya_meqabyan1",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Proud King's Reckoning",
+      "managerId": "kings_accountability_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Judgment Seat of Kings",
+      "managerId": "work_examined_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Planted Vine",
+      "managerId": "resurrection_doctrine_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Sodom's Grape Vine",
+      "managerId": "fall_of_jerusalem_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Broken Calf of Horeb",
+      "managerId": "golden_calf_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Banquet Sword",
+      "managerId": "mebikyas_meqabyan1",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Abel's Clean Blood",
+      "managerId": "corruption_of_nations_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Shepherd's Sling",
+      "managerId": "faithful_kings_rewarded_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Widow's Tear",
+      "managerId": "justice_for_fatherless_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Herb of Fig",
+      "managerId": "creation_and_fall_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Bow That Turned Crooked",
+      "managerId": "cycle_of_unfaithfulness_meqabyan1",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Lightning from East to West",
+      "managerId": "nations_reckoning_meqabyan1",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "tseerutsaydan_meqabyan1",
+      "name": "Tseerutsaydan",
+      "role": "manager",
+      "scribeTier": "The Iron Idol House",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 1:1",
+          "note": "Introduced as a man who loved sin, boasting in his horses, troops, and authority."
+        },
+        {
+          "ref": "Meqabyan I 1:16-22",
+          "note": "Worships seventy idols (fifty male-pattern, twenty female-pattern) and builds five idol-houses of iron, brass, and lead, ornamented in silver and gold."
+        },
+        {
+          "ref": "Meqabyan I 3:11-13",
+          "note": "Orders the three brothers beaten, whipped, and split open when they refuse to sacrifice to his idols."
+        },
+        {
+          "ref": "Meqabyan I 3:33-37",
+          "note": "Commands a great fire-pit dug and the three martyrs cast into it after they refuse a final chance to recant."
+        },
+        {
+          "ref": "Meqabyan I 4:1-9",
+          "note": "Orders their unburnt, unsinking, uneaten corpses burned again and cast into the sea, then to the beasts, all without success."
+        },
+        {
+          "ref": "Meqabyan I 4:26-28",
+          "note": "The three martyrs appear to him at night bearing drawn swords; he is terrified, bows to them, and afterward stops burning their corpses."
+        },
+        {
+          "ref": "Meqabyan I 5:14",
+          "note": "Directly named and addressed by JAH's voice as the sermon's exemplar/audience for the remainder of the book."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His idols could not even be verified as eating the food sacrificed to them - his priests privately ate the offerings themselves and told him the idols consumed it at night (1:8).",
+        "Despite bowing in fear to the martyrs' post-mortem appearance, the text is careful to note he only partly reformed - he stopped burning their corpses, but the sermon continues rebuking him by name through most of the rest of the book."
+      ]
+    },
+    {
+      "id": "abya_meqabyan1",
+      "name": "Abya",
+      "role": "manager",
+      "scribeTier": "The Unquenched Flame",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "unindexed reference: a man of the tribe of Benjamin named Meqabees (2:1), never built as a full character since he has no independent action beyond being named as father - see genealogyLists for the naming-collision note",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 2:1-5",
+          "note": "Introduced with his two brothers as sons of Meqabees; the three confess faith in the Creator of Heaven and Earth when the king's men demand they worship idols."
+        },
+        {
+          "ref": "Meqabyan I 3:1",
+          "note": "Named individually for the first time alongside Seela and Fentos."
+        },
+        {
+          "ref": "Meqabyan I 3:6-13",
+          "note": "Answers the king together with his brothers, refusing to bow to idols of silver, gold, stone, and wood."
+        },
+        {
+          "ref": "Meqabyan I 3:19-21",
+          "note": "Renewed and whipped again after three days in prison, still refusing to recant."
+        },
+        {
+          "ref": "Meqabyan I 3:35-37",
+          "note": "Cast into a great fire-pit with his brothers and gives up his soul to JAH."
+        },
+        {
+          "ref": "Meqabyan I 4:8-27",
+          "note": "Appears with his brothers to King Tseerutsaydan at night, rebukes him, and explains that JAH preserved their bodies because they believed in Him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Even after repeated burning, the fire could not consume the hair on the martyrs' corpses (4:1).",
+        "Their bound bodies, weighted with millstones and iron hearthstones, would not sink when cast into the sea (4:3).",
+        "Birds and vultures shielded their corpses from the sun for fourteen days while they lay unburied (4:5)."
+      ]
+    },
+    {
+      "id": "seela_meqabyan1",
+      "name": "Seela",
+      "role": "submanager",
+      "scribeTier": "The Unquenched Flame",
+      "parentManagerId": "abya_meqabyan1",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "unindexed reference: Meqabees (see abya_meqabyan1)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 3:1",
+          "note": "Named alongside Abya and Fentos as one of the three martyred brothers."
+        },
+        {
+          "ref": "Meqabyan I 3:6",
+          "note": "Answers the king together with his brothers 'in one word,' refusing to worship the idols."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "fentos_meqabyan1",
+      "name": "Fentos",
+      "role": "submanager",
+      "scribeTier": "The Unquenched Flame",
+      "parentManagerId": "abya_meqabyan1",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "unindexed reference: Meqabees (see abya_meqabyan1)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 3:1",
+          "note": "Named alongside Abya and Seela as one of the three martyred brothers."
+        },
+        {
+          "ref": "Meqabyan I 3:6",
+          "note": "Answers the king together with his brothers 'in one word,' refusing to worship the idols."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "kings_accountability_meqabyan1",
+      "name": "The Proud King's Reckoning",
+      "role": "law",
+      "scribeTier": "The Proud King's Reckoning",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Warns that no king's power, army, or idol-worship can shield him from JAH's judgment, illustrated by an unnamed proud warrior struck down by plague, Keeram (a builder of an iron bed) hidden in death for his arrogance, and Nebuchadnezzar humbled to live seven years among the beasts of the wilderness until he acknowledged his Creator - then reviews King Saul's loss of the kingdom to David after he spared King Agag and the Amalekite plunder against the prophet Samuel's command.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 5:1-6",
+          "note": "Three proud men (an unnamed warrior, Keeram, Nebuchadnezzar) struck down or humbled for their arrogance."
+        },
+        {
+          "ref": "Meqabyan I 6:19-34",
+          "note": "Saul's rejection as king after sparing Agag and Amalek's plunder against Samuel's relayed command; David secretly anointed in his place."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "work_examined_meqabyan1",
+      "name": "The Judgment Seat of Kings",
+      "role": "law",
+      "scribeTier": "The Judgment Seat of Kings",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Commands rulers to judge truly, without favoring a face or accepting a bribe, and warns that every king - however glorious his throne, crown, warriors, and music - will die like any other man and be examined at the Resurrection on all his deeds, good or evil.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 7:6",
+          "note": "Commands true judgment without favoring small or great."
+        },
+        {
+          "ref": "Meqabyan I 7:16-24",
+          "note": "Warns the king to remember he will rise after death and be examined on all his works; describes Judgment Day as coming for rich and poor alike."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "resurrection_doctrine_meqabyan1",
+      "name": "The Planted Vine",
+      "role": "law",
+      "scribeTier": "The Planted Vine",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Teaches that the dead will surely rise, using the images of a planted vine growing from a small root, a sown grain that must first rot before it grows, sleep and waking as a nightly rehearsal of death and resurrection, and the four elements (earth, water, wind, fire) each returning the substance of the body while the soul waits in Light or in darkness until the appointed day - and answers the doubter who insists a handful of grave-dust could never rise again.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 8:1-9",
+          "note": "The planted-vine example for resurrection."
+        },
+        {
+          "ref": "Meqabyan I 8:29-35",
+          "note": "A sinner cannot rise righteous nor a righteous person rise sinful - each reaps according to their own deeds, not another's."
+        },
+        {
+          "ref": "Meqabyan I 10:3-8",
+          "note": "Rebukes the doubter who says a grave's dust is too scattered to ever rise again."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "fall_of_jerusalem_meqabyan1",
+      "name": "Sodom's Grape Vine",
+      "role": "law",
+      "scribeTier": "Sodom's Grape Vine",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Pronounces judgment on Jerusalem ('Iyerusaliem), likening her idolatry, child-sacrifice to demons, and bloodshed to Sodom and Gomorrah's own sin, and foretells the rise of a 'False Messeeh' (a proud Deeyablos-child who sets up his own image demanding worship) and the earlier fall of Deeyablos (the Devil) himself, cast down from Heaven for boasting he would set his throne above the stars.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 11:1-3",
+          "note": "Judgment pronounced on Jerusalem's daughters for idolatry and forgetting JAH's command."
+        },
+        {
+          "ref": "Meqabyan I 12:9-22",
+          "note": "Jerusalem's sacrifice of her own sons and daughters to demons and her coming judgment alongside Sodom and Gomorrah."
+        },
+        {
+          "ref": "Meqabyan I 13:2-17",
+          "note": "The rise of the False Messeeh who sets up his own image, and Deeyablos's fall from Heaven for his boastful arrogance."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "golden_calf_meqabyan1",
+      "name": "The Broken Calf of Horeb",
+      "role": "law",
+      "scribeTier": "The Broken Calf of Horeb",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Recounts Israel's worship of a golden calf at Mount Horeb while Moses (Mussie) was on the mountain, his shattering of the idol and grinding it to dust, the priests' judgment of one another for the sin, and restates the core commands given through Moses in the Repeating Law: love JAH completely, love your neighbor, do not worship other idols, do not commit adultery, do not kill, do not steal, do not bear false witness, and do not covet your neighbor's possessions.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 14:11-15",
+          "note": "Israel worships a cow-idol at Horeb; Moses breaks and crushes it after descending with his aide Iyasu."
+        },
+        {
+          "ref": "Meqabyan I 14:7-9",
+          "note": "Restates the commands to love JAH and neighbor, and not to steal, kill, or bear false witness."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mebikyas_meqabyan1",
+      "name": "Mebikyas",
+      "role": "manager",
+      "scribeTier": "The Banquet Sword",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 15:8",
+          "note": "Named as one of three brothers - Yihuda, Mebikyas, and Meqabees - raised up by JAH to save Israel from the invading Midianites."
+        },
+        {
+          "ref": "Meqabyan I 15:12",
+          "note": "Attacks King Akrandis at his own banquet table, cutting his throat while food is still in the king's mouth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Struck the fatal blow himself, killing the invading king mid-meal, while his brothers cut down the king's guards to his left and right."
+      ]
+    },
+    {
+      "id": "yihuda_meqabyan1",
+      "name": "Yihuda",
+      "role": "submanager",
+      "scribeTier": "The Banquet Sword",
+      "parentManagerId": "mebikyas_meqabyan1",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 15:8",
+          "note": "Named as one of the three brothers who deliver Israel from Midianite invasion."
+        },
+        {
+          "ref": "Meqabyan I 15:12",
+          "note": "Fights alongside Mebikyas, striking down the king's army after Akrandis is slain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "meqabees_warrior_meqabyan1",
+      "name": "Meqabees (of the second trio)",
+      "role": "submanager",
+      "scribeTier": "The Banquet Sword",
+      "parentManagerId": "mebikyas_meqabyan1",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 15:8",
+          "note": "Named as one of the three brothers who deliver Israel from Midianite invasion - a distinct figure from the earlier Meqabees named as father of the martyred trio in 2:1; see the book-level naming-collision note."
+        },
+        {
+          "ref": "Meqabyan I 15:12",
+          "note": "Fights alongside Mebikyas, striking down the king's army."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "akrandis_meqabyan1",
+      "name": "Akrandis",
+      "role": "submanager",
+      "scribeTier": "The Banquet Sword",
+      "parentManagerId": "mebikyas_meqabyan1",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 15:1-6",
+          "note": "King of Midian who gathers armies from Cilicia, Syria, and Damascus and demands tribute and slavery from Israel, threatening to plunder their livestock and capture their children."
+        },
+        {
+          "ref": "Meqabyan I 15:12",
+          "note": "Killed at his own banquet table by Mebikyas while eating."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "corruption_of_nations_meqabyan1",
+      "name": "Abel's Clean Blood",
+      "role": "law",
+      "scribeTier": "Abel's Clean Blood",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Denounces Amalek and Edom for lawlessness, idolatry, and bloodshed taught to them by Deeyablos; holds up Cain's envious murder of the innocent Abel as the pattern every such sinner follows; and explains the shortening of human lifespans from the great ages of the Antiquity as the consequence of Seth's line intermarrying with Cain's line and abandoning their fathers' teaching of JAH's Law.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 17:1-5",
+          "note": "Amalek and Edom denounced for lawlessness, bloodshed, and idolatry taught by Deeyablos."
+        },
+        {
+          "ref": "Meqabyan I 18:6-12",
+          "note": "Human lifespans shortened from nine hundred years after Seth's line intermarried with Cain's."
+        },
+        {
+          "ref": "Meqabyan I 19:1-10",
+          "note": "Cain's descendants and Seth's descendants intermarry, leading Adam and Eve's own descendants further into error."
+        },
+        {
+          "ref": "Meqabyan I 23:1-4",
+          "note": "Cain's murder of the innocent Abel held up as the pattern of envy and betrayal among companions."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "faithful_kings_rewarded_meqabyan1",
+      "name": "The Shepherd's Sling",
+      "role": "law",
+      "scribeTier": "The Shepherd's Sling",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Contrasts David and Hezekiah, who trusted JAH and were delivered from their enemies (Absalom, the Philistines, Edom, Amalek, and Sennacherib of Assyria), with Hezekiah's own son Manasseh, who trusted in himself rather than JAH and was bound and carried off by his enemies - teaching that trusting JAH surpasses trusting in armies, horses, bows, or shields.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 21:1-3",
+          "note": "David saved from Saul, Absalom, and various enemy nations because he believed in JAH."
+        },
+        {
+          "ref": "Meqabyan I 21:4-7",
+          "note": "Hezekiah saved from Sennacherib's hand, but his son Manasseh defeated and bound because he did not trust JAH."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "justice_for_fatherless_meqabyan1",
+      "name": "The Widow's Tear",
+      "role": "law",
+      "scribeTier": "The Widow's Tear",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Commands rulers to judge truly, to be a guardian to the fatherless child and to defend the widow and refugee from those who would rob them, and warns that a ruler's silver, gold, and comfortable living are as fleeting as a passing shadow next to the reward reserved for those who clothe the naked and feed the hungry.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 22:6-8",
+          "note": "Commands the king to judge truly and be a guardian, like a father, to the fatherless child."
+        },
+        {
+          "ref": "Meqabyan I 24:14-17",
+          "note": "Condemns kings who ignore the cries of the poor and sufferers instead of defending the wronged and the refugee."
+        },
+        {
+          "ref": "Meqabyan I 25:15-18",
+          "note": "A ruler's silver and gold and 'beautiful lifestyle' likened to a passing shadow and a moth-eaten garment before JAH."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "creation_and_fall_meqabyan1",
+      "name": "The Herb of Fig",
+      "role": "law",
+      "scribeTier": "The Herb of Fig",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Retells the six days of creation - light, the firmament, dry land and plants, sun/moon/stars, sea creatures and birds, and finally Adam formed in JAH's own image and appearance and given dominion over every living thing - followed by Eve's deception by the serpent, her eating of the forbidden 'Herb of Fig' and sharing it with Adam, and their expulsion from the Garden to a ground cursed to grow thistle and thorn.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 27:1-14",
+          "note": "The six days of creation, culminating in Adam formed in JAH's image and appearance and given dominion over the animals."
+        },
+        {
+          "ref": "Meqabyan I 27:15-16",
+          "note": "JAH's command not to eat from the 'Herb of Fig,' on pain of death."
+        },
+        {
+          "ref": "Meqabyan I 27:17-20",
+          "note": "Eve deceived by the serpent, eats the Herb of Fig and gives it to Adam; both expelled from the Garden to a cursed, thorn-growing ground."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cycle_of_unfaithfulness_meqabyan1",
+      "name": "The Bow That Turned Crooked",
+      "role": "law",
+      "scribeTier": "The Bow That Turned Crooked",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Reviews the repeating pattern of Israel's history from Cain and Abel through the patriarchs, Egypt, and the era of the judges and kings - Israel sins, is handed to an oppressing people, cries out, and is delivered, through figures including Deborah and Barak, Gideon, Samson, Judith, Matityahu, and finally Mordecai and Esther against Haman's plot in Persia - showing that JAH's mercy comes for the sake of the faithful patriarchs Abraham, Isaac, and Jacob, not because of Israel's own merit.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 28:2-9",
+          "note": "Cain and Abel, Noah's flood and covenant, and the patriarchs' faithfulness contrasted with later generations."
+        },
+        {
+          "ref": "Meqabyan I 28:25-34",
+          "note": "The repeating cycle of Israel's apostasy and deliverance through Deborah/Barak, Gideon, Samson, Judith, and Matityahu."
+        },
+        {
+          "ref": "Meqabyan I 28:38-46",
+          "note": "Haman's plot against the Jews in Persia and their deliverance through Mordecai and Esther's fasting and mourning."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nations_reckoning_meqabyan1",
+      "name": "The Lightning from East to West",
+      "role": "law",
+      "scribeTier": "The Lightning from East to West",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Pronounces coming judgment on the kingdoms of the nations - Macedon falling to Rome, Persia to Nineveh, Alexandria to Ethiopia, Amalek to Moab, and Ishmael's line for its pride - describes wars, famine, plague, and earthquake as signs of the coming Day of Judgment, and closes by holding up Abraham, Isaac, Jacob, and Job as models of a faithfulness that JAH rewards even through great trial.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Meqabyan I 34:1-6",
+          "note": "Judgment pronounced on the successive kingdoms of the nations, and the Day of Judgment likened to lightning from East to West."
+        },
+        {
+          "ref": "Meqabyan I 35:1-8",
+          "note": "Judgment on Israel's own nobles for injustice to the fatherless, leaving their country a desolate wilderness."
+        },
+        {
+          "ref": "Meqabyan I 36:16-22",
+          "note": "Abraham, Isaac, and Jacob held up as JAH's faithful friends who never departed from His Law."
+        },
+        {
+          "ref": "Meqabyan I 36:43-46",
+          "note": "Closing affirmation of Abraham's faith counted to him as righteousness, and the promise of resurrection for those who believe."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "meqabeesNamingCollision": {
+      "ref": "Meqabyan I 2:1 vs 15:8",
+      "note": "Two distinct men named Meqabees appear in this single book: (1) the father of the martyred trio Abya/Seela/Fentos, a man of the tribe of Benjamin (2:1) who is never built as a full character since he has zero independent narrative action beyond being named as their father; and (2) one of the second trio of brothers (15:8, built here as meqabees_warrior_meqabyan1) who helps kill the invading Midianite king Akrandis. Do not merge these two identities."
+    },
+    "citedHistoricalFigures": {
+      "ref": "Meqabyan I 5:1-36:46 (throughout the sermon chapters)",
+      "note": "Extensive citation of already-canonically-indexed OT figures used as moral exempla within JAH's direct address to King Tseerutsaydan: Nebuchadnezzar's seven-year humbling, Samuel/Saul/Agag/David's anointing, Solomon, Hezekiah and his son Manasseh, Gideon, Deborah and Barak, Samson, Judith, Matityahu (Mattathias), Mordecai and Esther against Haman, Moses and Aaron at the Exodus and at Horeb, Abraham/Isaac/Jacob, Adam/Eve/Cain/Abel/Seth/Noah, and Job. None are built as full characters in this draft since none carry new narrative action within Meqabyan I itself - they are cited and reviewed as examples, not enacted here. Future cross-book work (e.g. a genealogy/cross-linking screen) should resolve these citations back to their existing KJV CharacterIndex entries rather than re-indexing them fresh for this book."
+    },
+    "kingsOfTheNations": {
+      "ref": "Meqabyan I 34:1-2",
+      "note": "Named kingdoms in the closing judgment-of-nations sequence (Macedon/Meqiedonya, Rome/Rom, Persia/Fars, Nineveh/Nenewie, Ethiopia/'Ityopphya, Alexandria/'Iskindriya, Moab/Mo'ab, Amalek/'Amalieq, Ishmael/Yisma'iel) are treated as national/political entities, not individual characters, consistent with how the text itself uses them."
+    }
+  }
+}

@@ -1,0 +1,1282 @@
+{
+  "book": "Sirach",
+  "translation": "Ethiopian",
+  "canonicalOrder": 34,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Text read directly from sirach_34.json (51 chapters, matches the standard KJV Apocrypha \"Ecclesiasticus/Wisdom of Sirach\" almost verbatim in wording and structure - no prologue/translator's preface is present in this extraction, unlike some editions). Two natural halves: (1) chapters 1-43 (minus ch.24) are proverb/instruction collections on discrete themes - modeled as Law tiers, each with deliveredBy=\"jesus_sirach_eth\" since the whole book's didactic voice is the sage's own, matching the Leviticus/Deuteronomy \"deliveredBy the one teaching\" precedent; (2) chapter 24 (Wisdom's self-praise, first-person) and chapters 44-50 (\"Let us now praise famous men,\" 44:1) name real historical figures one by one - modeled as Person tiers matching the text's own catalog structure. Chapter 51 is the author's own closing autobiographical thanksgiving prayer, giving Jesus the son of Sirach himself (named at 50:27 and again as speaker in ch.51) a real Person tier, distinct from every other figure. NAMING COLLISION explicitly flagged and kept separate: \"Jesus the son of Nave\" (46:1, i.e. Joshua) vs. \"Jesus the son of Sirach of Jerusalem\" (50:27, the book's author) - two different men sharing the name Jesus/Joshua, never merged. Several praised figures get only a single terse verse each in the source text (Isaac/Jacob at 44:22; Adam/Seth/Shem at 49:16) - kept as named individuals per the rule against inventing content, but folded in as submanagers under the more fully-developed adjacent figure (Abraham for Isaac/Jacob; Adam for Seth/Shem) rather than given standalone thin tiers, since the text itself treats them as an appendage to the fuller figure's passage. Real content note: this Ethiopian-translation Sirach's \"Praise of Famous Men\" sequence (Enoch, Noah, Abraham/Isaac/Jacob, Moses, Aaron, Phinehas, Joshua/Caleb, Samuel, David/Nathan, Solomon, Elijah/Elisha, Hezekiah/Isaiah, Josiah, Jeremiah/Ezekiel/Twelve Prophets, Zerubbabel/Joshua-son-of-Josedec/Nehemiah, Enoch-again/Joseph/Shem-Seth-Adam, Simon the high priest) matches the standard canonical Ecclesiasticus 44-50 sequence exactly, with \"Neemias\" as this translation's spelling of Nehemiah and \"Esay\" for Isaiah, \"Ezekias\" for Hezekiah, \"Josias\" for Josiah, \"Zorobabel\" for Zerubbabel, \"Eliseus\" for Elisha, \"Elias\" for Elijah, \"Phinees\" for Phinehas. CORRECTIONS (post-draft verification pass against the real sirach_34.json text): four verse-reference errors fixed - (a) the \"Wine measurably drunk and in season bringeth gladness of the heart\" quote is Sirach 31:28, not 31:27 (31:27 is actually \"Wine is as good as life to a man...\"); (b) the excess-of-wine quote is Sirach 31:29, not 31:30 (31:30 is actually \"Drunkenness increaseth the rage of a fool...\"), and its quoted text corrected to the source's actual wording \"But wine drunken with excess maketh bitterness of the mind, with brawling and quarrelling.\"; (c) both the Elias (\"who was covered with a whirlwind\") and Eliseus (\"was filled with his spirit...\") quotes are Sirach 48:12, not 48:9 (48:9 is actually \"Who was taken up in a whirlwind of fire, and in a chariot of fiery horses\" - a different sentence, still about Elijah's ascension but not the quoted text).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Root of Wisdom",
+      "managerId": "fear_of_lord_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Filial Duty Tablet",
+      "managerId": "honor_parents_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Almsgiver's Hand",
+      "managerId": "kindness_to_poor_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Bridle of the Tongue",
+      "managerId": "guarding_tongue_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Watchman's Caution",
+      "managerId": "caution_powerful_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Humility's Scale",
+      "managerId": "humility_pride_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "True Friend's Seal",
+      "managerId": "true_friendship_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Fortune's Two Faces",
+      "managerId": "riches_poverty_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Discipline's Rod",
+      "managerId": "sin_repentance_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Household Ledger",
+      "managerId": "good_wife_evil_woman_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Wine Cup of Temperance",
+      "managerId": "wine_table_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Physician's Satchel",
+      "managerId": "physician_scribe_craft_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Creation's Hymn Scroll",
+      "managerId": "works_of_creation_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Wisdom's Own Voice",
+      "managerId": "wisdom_personified_sirach_eth",
+      "type": "law"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Enoch's Translation",
+      "managerId": "enoch_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Ark of Remnant",
+      "managerId": "noah_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Covenant of Glory",
+      "managerId": "abraham_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Cloud of Sinai",
+      "managerId": "moses_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Golden Bells of the Ephod",
+      "managerId": "aaron_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 20,
+      "scribeName": "Zealous Javelin",
+      "managerId": "phinehas_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Sun-Stopping Banner",
+      "managerId": "joshua_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 22,
+      "scribeName": "Anointing Horn",
+      "managerId": "samuel_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 23,
+      "scribeName": "Shepherd's Harp",
+      "managerId": "david_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 24,
+      "scribeName": "Peaceable Temple",
+      "managerId": "solomon_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 25,
+      "scribeName": "Fiery Chariot",
+      "managerId": "elijah_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 26,
+      "scribeName": "Rock-Cut Waterway",
+      "managerId": "hezekiah_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 27,
+      "scribeName": "Sweet Perfume of Reform",
+      "managerId": "josiah_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 28,
+      "scribeName": "Sanctified Womb's Word",
+      "managerId": "jeremiah_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 29,
+      "scribeName": "Signet of Rebuilding",
+      "managerId": "zerubbabel_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 30,
+      "scribeName": "Dust of the First Man",
+      "managerId": "adam_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 31,
+      "scribeName": "Morning Star of the Sanctuary",
+      "managerId": "simon_high_priest_sirach_eth",
+      "type": "person"
+    },
+    {
+      "tier": 32,
+      "scribeName": "Sage's Own Colophon",
+      "managerId": "jesus_sirach_eth",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "fear_of_lord_sirach_eth",
+      "role": "law",
+      "scribeTier": "Root of Wisdom",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Establishes the book's controlling premise - all wisdom comes from the Lord, and the fear of the Lord is its root, crown, and fulness - before any other instruction is given.",
+      "verses": [
+        {
+          "ref": "Sirach 1:1",
+          "note": "All wisdom cometh from the Lord, and is with him for ever."
+        },
+        {
+          "ref": "Sirach 1:14",
+          "note": "To fear the Lord is the beginning of wisdom."
+        },
+        {
+          "ref": "Sirach 1:20",
+          "note": "The root of wisdom is to fear the Lord, and the branches thereof are long life."
+        },
+        {
+          "ref": "Sirach 2:1",
+          "note": "My son, if thou come to serve the Lord, prepare thy soul for temptation."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "honor_parents_sirach_eth",
+      "role": "law",
+      "scribeTier": "Filial Duty Tablet",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Teaches that honoring father and mother atones for sin, secures blessing, and obligates a son to care for a father even in his failing old age.",
+      "verses": [
+        {
+          "ref": "Sirach 3:3",
+          "note": "Whoso honoureth his father maketh an atonement for his sins."
+        },
+        {
+          "ref": "Sirach 3:12",
+          "note": "My son, help thy father in his age, and grieve him not as long as he liveth."
+        },
+        {
+          "ref": "Sirach 3:16",
+          "note": "He that forsaketh his father is as a blasphemer."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "kindness_to_poor_sirach_eth",
+      "role": "law",
+      "scribeTier": "Almsgiver's Hand",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Commands generosity to the poor, the afflicted, and the fatherless, warning that a poor man's curse is heard by his Maker.",
+      "verses": [
+        {
+          "ref": "Sirach 4:1",
+          "note": "My son, defraud not the poor of his living."
+        },
+        {
+          "ref": "Sirach 4:10",
+          "note": "Be as a father unto the fatherless, and instead of an husband unto their mother."
+        },
+        {
+          "ref": "Sirach 7:32",
+          "note": "Stretch thine hand unto the poor, that thy blessing may be perfected."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "guarding_tongue_sirach_eth",
+      "role": "law",
+      "scribeTier": "Bridle of the Tongue",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Warns against gossip, lying, the double tongue, and hasty speech, and instructs on testing a friend before trusting him.",
+      "verses": [
+        {
+          "ref": "Sirach 5:13",
+          "note": "Honour and shame is in talk: and the tongue of man is his fall."
+        },
+        {
+          "ref": "Sirach 6:7",
+          "note": "If thou wouldest get a friend, prove him first."
+        },
+        {
+          "ref": "Sirach 6:14",
+          "note": "A faithful friend is a strong defence."
+        },
+        {
+          "ref": "Sirach 20:1-32 (general)",
+          "note": "Extended teaching on timely silence versus timely speech."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "caution_powerful_sirach_eth",
+      "role": "law",
+      "scribeTier": "Watchman's Caution",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Warns against striving with the mighty, the rich, judges, and angry men, and against opening one's heart to a stranger.",
+      "verses": [
+        {
+          "ref": "Sirach 8:1",
+          "note": "Strive not with a mighty man, lest thou fall into his hands."
+        },
+        {
+          "ref": "Sirach 8:14",
+          "note": "Go not to law with a judge for they will judge for him according to his honour."
+        },
+        {
+          "ref": "Sirach 9:13",
+          "note": "Keep thee far from the man that hath power to kill."
+        },
+        {
+          "ref": "Sirach 13:2",
+          "note": "Have no fellowship with one that is mightier and richer than thyself: for how agree the kettle and the earthen pot together?"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "humility_pride_sirach_eth",
+      "role": "law",
+      "scribeTier": "Humility's Scale",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Teaches that pride is the beginning of sin and that the Lord casts down proud princes and exalts the meek in their place.",
+      "verses": [
+        {
+          "ref": "Sirach 10:12",
+          "note": "The beginning of pride is when one departeth from God."
+        },
+        {
+          "ref": "Sirach 10:14",
+          "note": "The Lord hath cast down the thrones of proud princes, and set up the meek in their stead."
+        },
+        {
+          "ref": "Sirach 11:1",
+          "note": "Wisdom lifteth up the head of him that is of low degree."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "true_friendship_sirach_eth",
+      "role": "law",
+      "scribeTier": "True Friend's Seal",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Distinguishes true friends from fair-weather friends and enemies who flatter, warning that a friend cannot be known in prosperity, only in adversity.",
+      "verses": [
+        {
+          "ref": "Sirach 12:8",
+          "note": "A friend cannot be known in prosperity: and an enemy cannot be hidden in adversity."
+        },
+        {
+          "ref": "Sirach 12:16",
+          "note": "An enemy speaketh sweetly with his lips, but in his heart he imagineth how to throw thee into a pit."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "riches_poverty_sirach_eth",
+      "role": "law",
+      "scribeTier": "Fortune's Two Faces",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Contrasts how the world treats the rich and the poor differently for the same words and deeds, and how prosperity and affliction each make men forget the other.",
+      "verses": [
+        {
+          "ref": "Sirach 13:23",
+          "note": "When a rich man speaketh, every man holdeth his tongue... but if the poor man speak, they say, What fellow is this?"
+        },
+        {
+          "ref": "Sirach 13:19",
+          "note": "As the wild ass is the lion's prey in the wilderness: so the rich eat up the poor."
+        },
+        {
+          "ref": "Sirach 14:1-2",
+          "note": "Blessed is the man that hath not slipped with his mouth."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sin_repentance_sirach_eth",
+      "role": "law",
+      "scribeTier": "Discipline's Rod",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Teaches that God does not cause sin (man's own free choice does), and calls sinners to repentance before judgment falls.",
+      "verses": [
+        {
+          "ref": "Sirach 15:11",
+          "note": "Say not thou, It is through the Lord that I fell away: for thou oughtest not to do the things that he hateth."
+        },
+        {
+          "ref": "Sirach 17:24",
+          "note": "Unto them which repent, he granted them return, and comforted those that failed in patience."
+        },
+        {
+          "ref": "Sirach 21:1",
+          "note": "My son, hast thou sinned? do so no more."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "good_wife_evil_woman_sirach_eth",
+      "role": "law",
+      "scribeTier": "Household Ledger",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Contrasts the sorrow brought by a wicked, quarrelsome, or drunken wife with the blessing of a good wife, called a great grace and a pillar to lean upon.",
+      "verses": [
+        {
+          "ref": "Sirach 25:16",
+          "note": "I had rather dwell with a lion and a dragon, than to keep house with a wicked woman."
+        },
+        {
+          "ref": "Sirach 26:1",
+          "note": "Blessed is the man that hath a virtuous wife, for the number of his days shall be double."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "wine_table_sirach_eth",
+      "role": "law",
+      "scribeTier": "Wine Cup of Temperance",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Instructs on moderation at feasts and with wine, warning that wine drunk in excess makes bitterness of mind, brawling, and quarrels.",
+      "verses": [
+        {
+          "ref": "Sirach 31:28",
+          "note": "Wine measurably drunk and in season bringeth gladness of the heart, and cheerfulness of the mind."
+        },
+        {
+          "ref": "Sirach 31:29",
+          "note": "But wine drunken with excess maketh bitterness of the mind, with brawling and quarrelling."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "physician_scribe_craft_sirach_eth",
+      "role": "law",
+      "scribeTier": "Physician's Satchel",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "Honors the physician as one whom the Lord hath created, and praises the scribe who gives his soul to the study of the law and the wisdom of the ancients, as the immediate lead-in to the book's Praise of Famous Men.",
+      "verses": [
+        {
+          "ref": "Sirach 38:1",
+          "note": "Honour a physician with the honour due unto him for the uses which ye may have of him: for the Lord hath created him."
+        },
+        {
+          "ref": "Sirach 39:1",
+          "note": "He that giveth his mind to the law of the most High... will seek out the wisdom of all the ancient."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "works_of_creation_sirach_eth",
+      "role": "law",
+      "scribeTier": "Creation's Hymn Scroll",
+      "parentManagerId": null,
+      "deliveredBy": "jesus_sirach_eth",
+      "purpose": "A hymn cataloguing the sun, moon, stars, rainbow, snow, and hail as the glorious works of the Lord, closing with 'the Lord hath made all things.'",
+      "verses": [
+        {
+          "ref": "Sirach 42:15",
+          "note": "I will now remember the works of the Lord, and declare the things that I have seen."
+        },
+        {
+          "ref": "Sirach 43:33",
+          "note": "For the Lord hath made all things and to the godly hath he given wisdom."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "wisdom_personified_sirach_eth",
+      "role": "law",
+      "scribeTier": "Wisdom's Own Voice",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "Wisdom speaks of herself in the first person: created before the world, given a dwelling in Jacob and Israel, and identified at the chapter's close with the law Moses commanded.",
+      "verses": [
+        {
+          "ref": "Sirach 24:1",
+          "note": "Wisdom shall praise herself, and shall glory in the midst of her people."
+        },
+        {
+          "ref": "Sirach 24:9",
+          "note": "He created me from the beginning before the world, and I shall never fail."
+        },
+        {
+          "ref": "Sirach 24:23",
+          "note": "All these things are the book of the covenant of the most high God, even the law which Moses commanded."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "enoch_sirach_eth",
+      "name": "Enoch",
+      "role": "manager",
+      "scribeTier": "Enoch's Translation",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 44:16",
+          "note": "Enoch pleased the Lord, and was translated, being an example of repentance to all generations."
+        },
+        {
+          "ref": "Sirach 49:14",
+          "note": "But upon the earth was no man created like Enoch for he was taken from the earth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only figure named twice in the Praise of Famous Men sequence - once at its opening (ch.44) and again in its closing coda (ch.49)."
+      ]
+    },
+    {
+      "id": "noah_sirach_eth",
+      "name": "Noah",
+      "role": "manager",
+      "scribeTier": "Ark of Remnant",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 44:17",
+          "note": "Noah was found perfect and righteous in the time of wrath: he was taken in exchange for the world."
+        },
+        {
+          "ref": "Sirach 44:18",
+          "note": "An everlasting covenant was made with him, that all flesh should perish no more by the flood."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abraham_sirach_eth",
+      "name": "Abraham",
+      "role": "manager",
+      "scribeTier": "Covenant of Glory",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "isaac_sirach_eth"
+        ]
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 44:19",
+          "note": "Abraham was a great father of many people: in glory was there none like unto him."
+        },
+        {
+          "ref": "Sirach 44:20",
+          "note": "He established the covenant in his flesh and when he was proved, he was found faithful."
+        },
+        {
+          "ref": "Sirach 44:21",
+          "note": "He would bless the nations in his seed, and multiply him as the dust of the earth."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "isaac_sirach_eth",
+      "name": "Isaac",
+      "role": "submanager",
+      "scribeTier": "Covenant of Glory",
+      "parentManagerId": "abraham_sirach_eth",
+      "genealogy": {
+        "father": "abraham_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jacob_sirach_eth"
+        ]
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 44:22",
+          "note": "With Isaac did he establish likewise, for Abraham his father's sake, the blessing of all men, and the covenant."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jacob_sirach_eth",
+      "name": "Jacob",
+      "role": "submanager",
+      "scribeTier": "Covenant of Glory",
+      "parentManagerId": "abraham_sirach_eth",
+      "genealogy": {
+        "father": "isaac_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 44:22",
+          "note": "He made it rest upon the head of Jacob... and divided his portions among the twelve tribes."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "moses_sirach_eth",
+      "name": "Moses",
+      "role": "manager",
+      "scribeTier": "Cloud of Sinai",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 45:1",
+          "note": "A merciful man, which found favour in the sight of all flesh, even Moses, beloved of God and men."
+        },
+        {
+          "ref": "Sirach 45:5",
+          "note": "He made him to hear his voice, and brought him into the dark cloud, and gave him commandments before his face."
+        },
+        {
+          "ref": "Sirach 45:15",
+          "note": "Moses consecrated him [Aaron], and anointed him with holy oil."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "aaron_sirach_eth",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Golden Bells of the Ephod",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 45:6",
+          "note": "He exalted Aaron, an holy man like unto him, even his brother, of the tribe of Levi."
+        },
+        {
+          "ref": "Sirach 45:8",
+          "note": "He put upon him perfect glory, and strengthened him with rich garments, with breeches, with a long robe, and the ephod."
+        },
+        {
+          "ref": "Sirach 45:12",
+          "note": "He set a crown of gold upon the mitre, wherein was engraved Holiness."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sons_of_aaron_sirach_eth",
+      "name": "The Sons of Aaron (collective)",
+      "role": "submanager",
+      "scribeTier": "Golden Bells of the Ephod",
+      "parentManagerId": "aaron_sirach_eth",
+      "genealogy": {
+        "father": "aaron_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 50:13",
+          "note": "So were all the sons of Aaron in their glory, and the oblations of the Lord in their hands, before all the congregation of Israel."
+        },
+        {
+          "ref": "Sirach 50:16",
+          "note": "Then shouted the sons of Aaron, and sounded the silver trumpets."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "phinehas_sirach_eth",
+      "name": "Phinehas",
+      "role": "manager",
+      "scribeTier": "Zealous Javelin",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Eleazar (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 45:23",
+          "note": "The third in glory is Phinees the son of Eleazar, because he had zeal in the fear of the Lord, and stood up with good courage of heart."
+        },
+        {
+          "ref": "Sirach 45:24",
+          "note": "By the covenant made with David... the inheritance of Aaron should also be unto his seed."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joshua_sirach_eth",
+      "name": "Joshua (Jesus the son of Nave)",
+      "role": "manager",
+      "scribeTier": "Sun-Stopping Banner",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Nun/Nave (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 46:1",
+          "note": "Jesus the son of Nave was valiant in the wars, and was the successor of Moses in prophecies."
+        },
+        {
+          "ref": "Sirach 46:2",
+          "note": "According to his name was made great for the saving of the elect of God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAGGED: called 'Jesus the son of Nave' in this text - a different man entirely from 'Jesus the son of Sirach of Jerusalem,' the book's own author (see the jesus_sirach_eth tier). Never merge the two."
+      ]
+    },
+    {
+      "id": "caleb_sirach_eth",
+      "name": "Caleb",
+      "role": "submanager",
+      "scribeTier": "Sun-Stopping Banner",
+      "parentManagerId": "joshua_sirach_eth",
+      "genealogy": {
+        "father": "Jephunneh (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 46:7",
+          "note": "In the time of Moses also he did a work of mercy, he and Caleb the son of Jephunne, in that they withstood the congregation."
+        },
+        {
+          "ref": "Sirach 46:9",
+          "note": "The Lord gave strength also unto Caleb, which remained with him unto his old age."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "samuel_sirach_eth",
+      "name": "Samuel",
+      "role": "manager",
+      "scribeTier": "Anointing Horn",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 46:13",
+          "note": "Samuel, the prophet of the Lord, beloved of his Lord, established a kingdom, and anointed princes over his people."
+        },
+        {
+          "ref": "Sirach 46:14",
+          "note": "By the law of the Lord he judged the congregation, and the Lord had respect unto Jacob."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "david_sirach_eth",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jesse (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "solomon_sirach_eth"
+        ]
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 47:2",
+          "note": "As is the fat taken away from the peace offering, so was David chosen out of the children of Israel."
+        },
+        {
+          "ref": "Sirach 47:11",
+          "note": "The Lord took away his sins, and exalted his horn for ever: he gave him a covenant of kings."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nathan_sirach_eth",
+      "name": "Nathan",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Harp",
+      "parentManagerId": "david_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 47:1",
+          "note": "And after him rose up Nathan to prophesy in the time of David."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "solomon_sirach_eth",
+      "name": "Solomon",
+      "role": "manager",
+      "scribeTier": "Peaceable Temple",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "david_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Roboam (unindexed reference)"
+        ]
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 47:12",
+          "note": "Solomon reigned in a peaceable time, and was honoured for God made all quiet round about him, that he might build an house in his name."
+        },
+        {
+          "ref": "Sirach 47:20",
+          "note": "Thus rested Solomon with his fathers, and of his seed he left behind him Roboam."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "elijah_sirach_eth",
+      "name": "Elijah (Elias)",
+      "role": "manager",
+      "scribeTier": "Fiery Chariot",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 48:1",
+          "note": "Then stood up Elias the prophet as fire, and his word burned like a lamp."
+        },
+        {
+          "ref": "Sirach 48:12",
+          "note": "Elias it was, who was covered with a whirlwind."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "elisha_sirach_eth",
+      "name": "Elisha (Eliseus)",
+      "role": "submanager",
+      "scribeTier": "Fiery Chariot",
+      "parentManagerId": "elijah_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 48:12",
+          "note": "Eliseus was filled with his spirit: whilst he lived, he was not moved with the presence of any prince."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "hezekiah_sirach_eth",
+      "name": "Hezekiah (Ezekias)",
+      "role": "manager",
+      "scribeTier": "Rock-Cut Waterway",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 48:17",
+          "note": "Ezekias fortified his city, and brought in water into the midst thereof: he digged the hard rock with iron."
+        },
+        {
+          "ref": "Sirach 48:22",
+          "note": "For Ezekias had done the thing that pleased the Lord, and was strong in the ways of David his father."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "isaiah_sirach_eth",
+      "name": "Isaiah (Esay)",
+      "role": "submanager",
+      "scribeTier": "Rock-Cut Waterway",
+      "parentManagerId": "hezekiah_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 48:22",
+          "note": "As Esay the prophet, who was great and faithful in his vision, had commanded him."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "josiah_sirach_eth",
+      "name": "Josiah (Josias)",
+      "role": "manager",
+      "scribeTier": "Sweet Perfume of Reform",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:1",
+          "note": "The remembrance of Josias is like the composition of the perfume that is made by the art of the apothecary: it is sweet as honey in all mouths."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jeremiah_sirach_eth",
+      "name": "Jeremiah (Jeremias)",
+      "role": "manager",
+      "scribeTier": "Sanctified Womb's Word",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:6",
+          "note": "They burnt the chosen city of the sanctuary, and made the streets desolate, according to the prophecy of Jeremias."
+        },
+        {
+          "ref": "Sirach 49:7",
+          "note": "He was a prophet, sanctified in his mother's womb, that he might root out, and afflict, and destroy and that he might build up also, and plant."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ezekiel_sirach_eth",
+      "name": "Ezekiel",
+      "role": "submanager",
+      "scribeTier": "Sanctified Womb's Word",
+      "parentManagerId": "jeremiah_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:8",
+          "note": "It was Ezekiel who saw the glorious vision, which was shewed him upon the chariot of the cherubims."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "twelve_prophets_sirach_eth",
+      "name": "The Twelve Prophets (collective)",
+      "role": "submanager",
+      "scribeTier": "Sanctified Womb's Word",
+      "parentManagerId": "jeremiah_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 49:10",
+          "note": "And of the twelve prophets let the memorial be blessed, and let their bones flourish again out of their place: for they comforted Jacob."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zerubbabel_sirach_eth",
+      "name": "Zerubbabel (Zorobabel)",
+      "role": "manager",
+      "scribeTier": "Signet of Rebuilding",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:11",
+          "note": "How shall we magnify Zorobabel? even he was as a signet on the right hand."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joshua_josedec_sirach_eth",
+      "name": "Joshua the son of Josedec",
+      "role": "submanager",
+      "scribeTier": "Signet of Rebuilding",
+      "parentManagerId": "zerubbabel_sirach_eth",
+      "genealogy": {
+        "father": "Josedec (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 49:12",
+          "note": "So was Jesus the son of Josedec: who in their time builded the house, and set up an holy temple to the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A third distinct man named Jesus/Joshua in this book, alongside Joshua the son of Nave and Jesus the son of Sirach - the naming collision recurs a third time and is not merged with either."
+      ]
+    },
+    {
+      "id": "nehemiah_sirach_eth",
+      "name": "Nehemiah (Neemias)",
+      "role": "submanager",
+      "scribeTier": "Signet of Rebuilding",
+      "parentManagerId": "zerubbabel_sirach_eth",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 49:13",
+          "note": "Among the elect was Neemias, whose renown is great, who raised up for us the walls that were fallen, and set up the gates and the bars."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "adam_sirach_eth",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Dust of the First Man",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Seth (unindexed reference)"
+        ]
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:16",
+          "note": "Sem and Seth were in great honour among men, and so was Adam above every living thing in creation."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seth_shem_sirach_eth",
+      "name": "Seth and Shem (collective)",
+      "role": "submanager",
+      "scribeTier": "Dust of the First Man",
+      "parentManagerId": "adam_sirach_eth",
+      "genealogy": {
+        "father": "adam_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "cost-cutter",
+      "verses": [
+        {
+          "ref": "Sirach 49:16",
+          "note": "Sem and Seth were in great honour among men."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "joseph_sirach_eth",
+      "name": "Joseph",
+      "role": "submanager",
+      "scribeTier": "Dust of the First Man",
+      "parentManagerId": "adam_sirach_eth",
+      "genealogy": {
+        "father": "jacob_sirach_eth",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 49:15",
+          "note": "Neither was there a young man born like Joseph, a governor of his brethren, a stay of the people, whose bones were regarded of the Lord."
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simon_high_priest_sirach_eth",
+      "name": "Simon the High Priest",
+      "role": "manager",
+      "scribeTier": "Morning Star of the Sanctuary",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Onias (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 50:1",
+          "note": "Simon the high priest, the son of Onias, who in his life repaired the house again, and in his days fortified the temple."
+        },
+        {
+          "ref": "Sirach 50:5",
+          "note": "How was he honoured in the midst of the people in his coming out of the sanctuary!"
+        },
+        {
+          "ref": "Sirach 50:11",
+          "note": "When he put on the robe of honour, and was clothed with the perfection of glory, when he went up to the holy altar."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The last named historical figure in the Praise of Famous Men sequence, described in the most elaborate sensory detail of anyone in the catalogue - compared in a single passage to the morning star, the full moon, the sun, a rainbow, roses, lilies, and a vessel of beaten gold."
+      ]
+    },
+    {
+      "id": "jesus_sirach_eth",
+      "name": "Jesus the son of Sirach of Jerusalem",
+      "role": "manager",
+      "scribeTier": "Sage's Own Colophon",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Sirach (unindexed reference)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "perkFlavor": "loyalty-boost",
+      "verses": [
+        {
+          "ref": "Sirach 50:27",
+          "note": "Jesus the son of Sirach of Jerusalem hath written in this book the instruction of understanding and knowledge, who out of his heart poured forth wisdom."
+        },
+        {
+          "ref": "Sirach 51:1",
+          "note": "I will thank thee, O Lord and King, and praise thee, O God my Saviour."
+        },
+        {
+          "ref": "Sirach 51:6",
+          "note": "By an accusation to the king from an unrighteous tongue my soul drew near even unto death."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book's own author, naming himself directly in its closing colophon - a rare case in this index of the writer of the text also becoming one of its indexed characters.",
+        "NAMING COLLISION FLAGGED (see joshua_sirach_eth and joshua_josedec_sirach_eth): shares the name Jesus/Joshua with two other men praised earlier in this same book, and is not the same figure as either."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+{
+  "book": "Esther",
+  "translation": "Geneva",
+  "canonicalOrder": 17,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from Assets/Resources/Verses/Geneva/esther_17.json (all 10 chapters, 166 verses). Structurally this is the SAME short Hebrew-canon Esther as KJV — 10 chapters, no Greek/Apocryphal additions (no Mordecai's dream, no full text of the royal decrees, no explicit prayers of Esther/Mordecai that appear in the Septuagint/Apocrypha version of Esther) — confirmed by reading straight through; this is a real content-scope check worth having made explicit, not an assumption. The differences from KJV here are genuinely translational (archaic Geneva diction and several distinct word choices), not structural, so the tier/character shape below tracks the existing KJV Esther index closely but every id is _geneva-suffixed and every display name/quoted detail is pulled from this specific text.\n\nReal Geneva-specific wording differences worth flagging: (1) the instrument built to hang Mordecai/Haman is called \"the tree\" throughout this translation (5:14, 6:4, 7:9-10, 8:7, 9:13-14) — Geneva never uses the word \"gallows\" at all, unlike KJV; the scribe tier below is named after the Geneva wording specifically. (2) The seven royal attendants of 1:10 (Mehuman, Biztha, Harbona, Bigtha, Abagtha, Zethar, Carcas) are called \"the seuen eunuches\" in this translation, not \"chamberlains\" as in KJV. (3) The keeper of the virgins is spelled \"Hege\" consistently at every occurrence in this text (2:3, 2:8, 2:15) — this translation never shifts to the \"Hegai\" spelling KJV uses from 2:15 onward, so the character here is named Hege throughout, matching the source exactly. (4) Haman's father's name is spelled two ways within this same translation: \"Hammedatha\" (3:1, 3:10) and \"Ammedatha\" (8:5, 9:10, 9:24) — flagged as an internal spelling inconsistency in the source text itself, not a naming collision between two different people. (5) Mordecai's tribal identity (2:5) is rendered \"a man of Iemini\" rather than \"a Benjamite\" — a literal Geneva rendering of the Hebrew tribal name rather than the anglicized gentilic KJV uses. (6) Esther's Hebrew name is spelled \"Hadassah\" and her court name \"Ester\" (single 's', no 'h') throughout. (7) The king is \"Ahashuerosh\" throughout, never \"Ahasuerus.\" (8) \"The Kings Scribes\" (3:12, 8:9) are explicitly named as the ones who draft and seal both Haman's and Mordecai's decrees — a fitting textual anchor for this game's own scribe theming.\n\nNaming-collision flags carried over from general scriptural knowledge (not found within this book's own text, since Ezra/Daniel are separate books/translations not read for this pass, so stated cautiously): the royal name/title \"Ahashuerosh\" is reused elsewhere in scripture for other rulers; a \"Mordecai\" also appears among those who returned from Babylonian exile generations earlier — almost certainly a different man given the timespan, but flagged rather than silently assumed. Within this book itself: the eunuch \"Bigtha\" (one of the seven named in 1:10) and the conspirator \"Bigthan\" (2:21) are similarly-spelled but textually distinct figures — no indication they are the same person, flagged to avoid confusion rather than merged. Bigthan and Teresh are treated as one paired submanager entry since the text never differentiates their individual actions (2:21-23, 6:2). Zeresh's maternity of Haman's ten named sons (9:7-10) is the natural implication of being \"his wife\" (5:10) but is not itself stated by the text, so it is noted as implication, not asserted as flat fact.\n\n6 scribe tiers total (5 person-type + 1 law-type), matching the book's genuinely small named-character population relative to genealogy-dense books — no content was stretched or invented to pad this out.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Golden Scepter",
+      "managerId": "ahashuerosh_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Crown Royal",
+      "managerId": "vashti_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Royal Apparel",
+      "managerId": "ester_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The King's Ring",
+      "managerId": "mordecai_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Fifty-Cubit Tree",
+      "managerId": "haman_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Pur (the Lot)",
+      "managerId": "purim_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ahashuerosh_geneva",
+      "name": "Ahashuerosh",
+      "role": "manager",
+      "scribeTier": "The Golden Scepter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Vashti",
+          "Ester"
+        ],
+        "children": [],
+        "note": "No parentage or children are stated anywhere in this text. Reigns 'from India euen vnto Ethiopia, ouer an hundreth, and seuen and twentie prouinces' (1:1). This translation spells the name 'Ahashuerosh' throughout, never 'Ahasuerus.'"
+      },
+      "verses": [
+        {
+          "ref": "Esther 1:1-4",
+          "note": "Introduced reigning over 127 provinces; holds a 180-day feast displaying 'the riches and glorie of his kingdome.'"
+        },
+        {
+          "ref": "Esther 1:10-12",
+          "note": "Merry with wine, sends his seven eunuches to bring Queene Vashti before him; she refuses and his wrath kindles."
+        },
+        {
+          "ref": "Esther 2:17",
+          "note": "Loves Ester above all the women, sets the royal crown on her head, and makes her Queene in Vashti's stead."
+        },
+        {
+          "ref": "Esther 3:10-11",
+          "note": "Gives his ring to Haman, telling him 'the siluer be thine, and the people to doe with them as it pleaseth thee.'"
+        },
+        {
+          "ref": "Esther 7:7-10",
+          "note": "Rises from the banquet in wrath after Ester names Haman as 'the aduersarie and enemie'; orders him hanged on the tree Haman built."
+        },
+        {
+          "ref": "Esther 8:2",
+          "note": "Takes his ring back from Haman's memory and gives it to Mordecai; sets Mordecai over Haman's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "God is not named anywhere in this text, matching the same well-known feature of the book across translations.",
+        "The 'Kings Scribes' (3:12, 8:9) draft and seal both Haman's destruction decree and Mordecai's counter-decree in the king's name — the same office doing opposite work six chapters apart."
+      ]
+    },
+    {
+      "id": "memucan_geneva",
+      "name": "Memucan",
+      "role": "submanager",
+      "scribeTier": "The Golden Scepter",
+      "parentManagerId": "ahashuerosh_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The one prince among the seven who speaks — drafts the specific wording of the irrevocable decree against Vashti (1:16-21), turning the king's private anger into public law.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "One of 'Carshena, Shethar, Admatha, Tarshish, Meres, Marsena, and Memucan the seuen princes of Persia and Media, which sawe the Kings face' (1:14) — no further genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "Esther 1:14-15",
+          "note": "Named among the seven princes of Persia and Media consulted on what should be done about Vashti."
+        },
+        {
+          "ref": "Esther 1:16-21",
+          "note": "Answers before the King and princes that Vashti's refusal wrongs 'not only the King, but... all the princes, and... all the people'; proposes the decree deposing her, which pleases the King."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Memucan is the only one of the seven named princes given an individual speaking role — Carshena, Shethar, Admatha, Tarshish, Meres, and Marsena are never differentiated from each other in the text."
+      ]
+    },
+    {
+      "id": "bigthan_and_teresh_geneva",
+      "name": "Bigthan and Teresh",
+      "role": "submanager",
+      "scribeTier": "The Golden Scepter",
+      "parentManagerId": "ahashuerosh_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Two of the King's eunuches whose exposed plot against him becomes the unpaid debt the court chronicles repay through Mordecai's reward in chapter 6 — a threat neutralized, not a support given.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named together as 'two of the Kings eunuches, Bigthan and Teresh, which kept the doore' (2:21); the text never differentiates their individual actions, so they are treated as one paired entry. Spelled 'Bigtana' at 6:2 versus 'Bigthan' at 2:21 within this same translation — the same figure, a spelling variant."
+      },
+      "verses": [
+        {
+          "ref": "Esther 2:21",
+          "note": "'Were wroth, and sought to lay hand on the King Ahashuerosh' while keeping the door where Mordecai sat."
+        },
+        {
+          "ref": "Esther 2:22",
+          "note": "Mordecai learns of the plot and tells Queene Ester in Mordecai's name; upon inquisition it is found true and 'they were both hanged on a tree,' recorded in the book of the Chronicles."
+        },
+        {
+          "ref": "Esther 6:2",
+          "note": "The chronicle entry naming 'Bigtana, and Teresh' is read back to the sleepless King, setting up Mordecai's overdue reward."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Their plot is the very record the insomniac King has read to him in chapter 6, which is what starts Haman's public humiliation before Mordecai."
+      ]
+    },
+    {
+      "id": "vashti_geneva",
+      "name": "Vashti",
+      "role": "manager",
+      "scribeTier": "The Crown Royal",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Ahashuerosh"
+        ],
+        "children": [],
+        "note": "No parentage or children stated. Her fate after being deposed is left at losing her royal estate (1:19) — the text does not say she is executed or banished."
+      },
+      "verses": [
+        {
+          "ref": "Esther 1:9",
+          "note": "Makes her own feast for the women in the royal house of King Ahashuerosh, in parallel to the King's much larger feast for the men."
+        },
+        {
+          "ref": "Esther 1:11-12",
+          "note": "Refused to come at the King's word when summoned by the seven eunuches to display her beauty before the princes and people."
+        },
+        {
+          "ref": "Esther 1:19",
+          "note": "Memucan's decree: 'that Vashti come no more before King Ahashuerosh: and let the King giue her royal estate vnto her companion that is better then she.'"
+        },
+        {
+          "ref": "Esther 2:1",
+          "note": "Once the King's wrath is appeased, he 'remembred Vashti, and what she had done, and what was decreed against her.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The decree against Vashti is written 'among the statutes of Persia, and Media' so it 'not be transgressed' (1:19) — the same irrevocable-law mechanism that later traps the King when he cannot simply cancel Haman's decree against the Jews (8:8)."
+      ]
+    },
+    {
+      "id": "ester_geneva",
+      "name": "Ester",
+      "role": "manager",
+      "scribeTier": "The Royal Apparel",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Abihail",
+        "mother": null,
+        "spouses": [
+          "Ahashuerosh"
+        ],
+        "children": [],
+        "note": "'Ester the daughter of Abihail the vncle of Mordecai' (2:15) — her mother is not named. She is Mordecai's cousin by blood ('his vncles daughter,' 2:7), orphaned, and Mordecai 'tooke her for his own daughter' — an explicitly stated adoptive relationship, not a literal parent-child one."
+      },
+      "verses": [
+        {
+          "ref": "Esther 2:7",
+          "note": "Introduced as 'Hadassah, that is Ester,' Mordecai's uncle's daughter, taken as his own daughter after her parents' deaths."
+        },
+        {
+          "ref": "Esther 2:10",
+          "note": "'Ester shewed not her people and her kinred: for Mordecai had charged her, that shee should not tell it.'"
+        },
+        {
+          "ref": "Esther 2:17",
+          "note": "The King loves Ester above all the women; she is crowned Queene in Vashti's place."
+        },
+        {
+          "ref": "Esther 4:16",
+          "note": "Agrees to go to the King unbidden after a three-day fast: 'if I perish, I perish.'"
+        },
+        {
+          "ref": "Esther 5:2",
+          "note": "Approaches the King's court; he holds out the golden scepter and she touches its top."
+        },
+        {
+          "ref": "Esther 7:3-6",
+          "note": "Names Haman before the King: 'The aduersarie and enemie is this wicked Haman.'"
+        },
+        {
+          "ref": "Esther 9:29",
+          "note": "Writes 'with all authoritie' alongside Mordecai to confirm the observance of Purim a second time."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given two names in the text: 'Hadassah,' her Hebrew name, and 'Ester,' her Persian court name (2:7).",
+        "Along with Ruth, one of only two books of the Bible named for a woman; God is never named in it."
+      ]
+    },
+    {
+      "id": "hege_geneva",
+      "name": "Hege",
+      "role": "submanager",
+      "scribeTier": "The Royal Apparel",
+      "parentManagerId": "ester_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Keeper of the women who shows Ester immediate favor, hurrying her preparation and giving her the best place before she has done anything in the story to earn it.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified only by office, 'the Kings eunuche, keeper of the women' (2:3). This translation spells the name 'Hege' at every occurrence (2:3, 2:8, 2:15) and never shifts to an alternate spelling later in the book, unlike some other translations of this same book. A separate eunuch, Shaashgaz, later keeps a different house, the concubines (2:14) — a distinct office and person."
+      },
+      "verses": [
+        {
+          "ref": "Esther 2:8-9",
+          "note": "Ester is brought under Hege's hand; 'the mayde pleased him, and she founde fauour in his sight' — he speeds her purification and gives her seven choice maids and the best place in the house of the women."
+        },
+        {
+          "ref": "Esther 2:15",
+          "note": "When her turn comes to go before the King, Ester 'desired nothing, but what Hege the Kings eunuche the keeper of the women sayde.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hatach_geneva",
+      "name": "Hatach",
+      "role": "submanager",
+      "scribeTier": "The Royal Apparel",
+      "parentManagerId": "ester_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "The King's eunuche appointed to attend Ester; carries the copy of Haman's decree and every message between her and Mordecai in chapter 4.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Identified only by office, 'one of the Kings eunuches, whom he had appointed to serue her' (4:5)."
+      },
+      "verses": [
+        {
+          "ref": "Esther 4:5-6",
+          "note": "Sent by Ester to Mordecai in the street before the King's gate to learn what troubles him."
+        },
+        {
+          "ref": "Esther 4:7-9",
+          "note": "Mordecai gives him the copy of Haman's decree and a charge for Ester to go before the King for her people; Hatach relays the words back to Ester."
+        },
+        {
+          "ref": "Esther 4:10-12",
+          "note": "Carries Ester's reply about the thirty-day rule back to Mordecai, and his answer back to her."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Hatach personally hands Ester the copy of Haman's destruction decree (4:8) — the moment the threat becomes concrete to her, not merely reported secondhand."
+      ]
+    },
+    {
+      "id": "mordecai_geneva",
+      "name": "Mordecai",
+      "role": "manager",
+      "scribeTier": "The King's Ring",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jair",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "'Mordecai the sonne of Iair, the sonne of Shimei, the sonne of Kish a man of Iemini' (2:5) — this translation renders the tribal identity as 'a man of Iemini' rather than the anglicized 'Benjamite.' Whether 'which had bene caryed away' (2:6) refers to Kish or to Mordecai himself is left grammatically ambiguous by the text, an open question this index does not resolve either way. Raises his orphaned cousin Ester as his own daughter (2:7), an adoptive rather than biological relationship, so she is not listed under 'children.'"
+      },
+      "verses": [
+        {
+          "ref": "Esther 2:5-6",
+          "note": "Genealogy given: son of Iair, son of Shimei, son of Kish, 'a man of Iemini,' among those 'caryed away from Ierusalem with the captiuitie' of Ieconiah."
+        },
+        {
+          "ref": "Esther 2:7",
+          "note": "Nourishes his orphaned cousin Hadassah/Ester as his own daughter."
+        },
+        {
+          "ref": "Esther 2:21-22",
+          "note": "Uncovers the plot of Bigthan and Teresh and reports it through Ester; recorded in the book of the Chronicles."
+        },
+        {
+          "ref": "Esther 3:2",
+          "note": "'Mordecai bowed not the knee, neither did reuerence' to Haman."
+        },
+        {
+          "ref": "Esther 4:13-14",
+          "note": "Sends word to Ester that deliverance will come from elsewhere if she stays silent, asking 'who knoweth whether thou art come to the kingdome for such a time?'"
+        },
+        {
+          "ref": "Esther 6:10-11",
+          "note": "Haman is compelled to array Mordecai in royal apparel and lead him on horseback through the city."
+        },
+        {
+          "ref": "Esther 8:2, 15",
+          "note": "Receives the King's ring and goes out 'in royall apparell of blewe, and white... and with a great crowne of gold.'"
+        },
+        {
+          "ref": "Esther 10:3",
+          "note": "Ends the book 'the second vnto King Ahashuerosh, and great among the Iewes... who procured the wealth of his people, and spake peaceably to all his seede.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mordecai's public honor in chapter 6 is triggered by royal insomnia: the King has the chronicles read to him on a sleepless night and finds Mordecai's service was never rewarded."
+      ]
+    },
+    {
+      "id": "haman_geneva",
+      "name": "Haman",
+      "role": "manager",
+      "scribeTier": "The Fifty-Cubit Tree",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Hammedatha",
+        "mother": null,
+        "spouses": [
+          "Zeresh"
+        ],
+        "children": [
+          "Parshandatha",
+          "Dalphon",
+          "Aspatha",
+          "Poratha",
+          "Adalia",
+          "Aridatha",
+          "Parmashta",
+          "Arisai",
+          "Aridai",
+          "Vaiezatha"
+        ],
+        "note": "Called 'the Agagite' throughout (3:1, 3:10, 8:3, 8:5, 9:24). His father's name is spelled two ways within this same translation — 'Hammedatha' (3:1, 3:10) and 'Ammedatha' (8:5, 9:10, 9:24) — an internal spelling inconsistency in this Geneva text, not two different fathers. His ten sons are named only as a list of the slain and later hanged (9:7-10, 9:13-14), with no individual action or differentiation — see genealogyLists."
+      },
+      "verses": [
+        {
+          "ref": "Esther 3:1",
+          "note": "Promoted by King Ahashuerosh, 'the sonne of Hammedatha the Agagite,' set above all the princes."
+        },
+        {
+          "ref": "Esther 3:5-6",
+          "note": "Full of wrath that Mordecai will not bow, 'sought to destroy all the Iewes' throughout the kingdom, not Mordecai alone."
+        },
+        {
+          "ref": "Esther 3:7-9",
+          "note": "Casts Pur (the lot) to set the date and offers 'ten thousand talents of siluer' to fund the destruction."
+        },
+        {
+          "ref": "Esther 5:14",
+          "note": "Zeresh and his friends counsel him: 'Let them make a tree of fiftie cubites hie... that Mordecai may be hanged thereon.'"
+        },
+        {
+          "ref": "Esther 7:6-10",
+          "note": "Named 'this wicked Haman' by Ester; hanged 'on the tree, that he had prepared for Mordecai.'"
+        },
+        {
+          "ref": "Esther 9:7-10",
+          "note": "His ten sons are slain in Shushan and, per Ester's further request, later hanged."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Casts 'Pur' — glossed by the text itself as 'that is a lot' (3:7, 9:24) — to choose the massacre date; the name behind the festival Purim.",
+        "Builds a tree fifty cubits high to hang Mordecai (5:14) and is hanged on it himself (7:9-10)."
+      ]
+    },
+    {
+      "id": "zeresh_geneva",
+      "name": "Zeresh",
+      "role": "submanager",
+      "scribeTier": "The Fifty-Cubit Tree",
+      "parentManagerId": "haman_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Haman's wife and closest counsel — first proposes the fifty-cubit tree for Mordecai (5:14), later warns Haman he will surely fall before him (6:13).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Haman"
+        ],
+        "children": [],
+        "note": "Described as 'his wife' (5:10). The text does not explicitly state she is the mother of Haman's ten named sons, though it is the natural implication; not asserted here as flat fact."
+      },
+      "verses": [
+        {
+          "ref": "Esther 5:10, 14",
+          "note": "Haman recounts his grievances to Zeresh and his friends; she and they advise the fifty-cubit tree for Mordecai."
+        },
+        {
+          "ref": "Esther 6:13",
+          "note": "After Haman's public humiliation leading Mordecai's horse, Zeresh and his wise men tell him: 'thou shalt not preuaile against him, but shalt surely fall before him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her advice, meant to destroy Mordecai, supplies the very tree used against Haman himself a day later."
+      ]
+    },
+    {
+      "id": "harbona_geneva",
+      "name": "Harbonah",
+      "role": "submanager",
+      "scribeTier": "The Fifty-Cubit Tree",
+      "parentManagerId": "haman_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Points out the tree standing ready in Haman's own house, prompting the King to have Haman hanged on it instead of Mordecai.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "One of the seven eunuches named in 1:10 ('Harbona'); the same figure speaks again in 7:9, spelled 'Harbonah' there — a spelling variant within this translation, not a different person."
+      },
+      "verses": [
+        {
+          "ref": "Esther 1:10",
+          "note": "Named among the seven eunuches who served in the presence of King Ahashuerosh."
+        },
+        {
+          "ref": "Esther 7:9-10",
+          "note": "'Beholde, there standeth yet the tree in Hamans house fiftie cubites hie, which Haman had prepared for Mordecai, that spake good for the King' — the King orders Haman hanged on it."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His single line of dialogue directly decides Haman's method of execution."
+      ]
+    },
+    {
+      "id": "purim_geneva",
+      "name": "The Institution of Purim",
+      "role": "law",
+      "scribeTier": "The Pur (the Lot)",
+      "parentManagerId": null,
+      "deliveredBy": "mordecai_geneva",
+      "purpose": "Establishes a yearly two-day feast (the 14th and 15th of the moneth Adar) commemorating the day the Iewes' sorrow was 'turned vnto them from sorowe to ioy, and from mourning into a ioyfull day' (9:22) — the turn from Haman's planned massacre to the Iewes gaining 'rule ouer them that hated them' (9:1). Named for the Pur Haman cast to fix the date of destruction (9:24-26), so the very instrument of the intended slaughter becomes the name of the celebrated deliverance. First written and sent by Mordecai (9:20-22), then confirmed a second time 'with al authoritie' by a joint letter of Queene Ester and Mordecai (9:29-32), 'with words of peace and trueth' (9:30) and 'with fasting and prayer' (9:31).",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Esther 9:17-19",
+          "note": "Explains why unwalled-town Iewes keep the 14th of Adar, while walled Shushan (where fighting ran an extra day) keeps the 15th."
+        },
+        {
+          "ref": "Esther 9:20-22",
+          "note": "Mordecai writes to all the Iewes near and far, enjoining the 14th and 15th of Adar as days of feasting, gladness, gift-giving, and 'giftes to the poore.'"
+        },
+        {
+          "ref": "Esther 9:24-26",
+          "note": "Explains the festival's name: 'Purim, by the name of Pur' — the lot Haman cast against the Iewes."
+        },
+        {
+          "ref": "Esther 9:29-32",
+          "note": "'The Queene Ester ye daughter of Abihail and Mordecai the Iew wrote with al authoritie' a second letter confirming the days of Purim 'for them selues and for their seede.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text itself glosses 'Pur' as meaning 'a lot' (3:7, 9:24) — a loanword the narrative explains rather than assumes the reader knows."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved group references, kept out of the character list above because the text never differentiates their individual actions.",
+    "seven_princes_of_persia_and_media_esther_1_14": "Carshena, Shethar, Admatha, Tarshish, Meres, and Marsena — named as a group with no individual differentiation. Memucan, the seventh named, IS individually differentiated (he speaks) and has his own character entry.",
+    "seven_eunuches_esther_1_10": "Mehuman, Biztha, Bigtha, Abagtha, Zethar, and Carcas — named as a group with no individual differentiation. Harbonah, the seventh named, IS individually differentiated later (he speaks in ch. 7) and has his own character entry. Note: 'Bigtha' here is a separate figure from 'Bigthan' the conspirator of 2:21, despite the similar spelling.",
+    "shaashgaz_esther_2_14": "'Shaashgaz the Kings eunuche, which kept the concubines' — a different office from Hege, keeper of the virgins; named once with no individual action beyond his office.",
+    "hamans_ten_sons_esther_9_7-10_and_9_13-14": "Parshandatha, Dalphon, Aspatha, Poratha, Adalia, Aridatha, Parmashta, Arisai, Aridai, and Vaiezatha — named only as a list of the slain (9:7-10) and again as hanged at Ester's further request (9:13-14); no individual differentiation or action beyond the name."
+  }
+}

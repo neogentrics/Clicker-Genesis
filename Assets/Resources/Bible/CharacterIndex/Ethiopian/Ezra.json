@@ -1,0 +1,774 @@
+{
+  "book": "Ezra",
+  "translation": "Ethiopian",
+  "canonicalOrder": 16,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "MAJOR CONTENT DIFFERENCE FROM KJV, VERIFIED BY READING THE ACTUAL TEXT: this Ethiopian \"Ezra\" is NOT the 10-chapter Masoretic Ezra most readers expect - it is the 9-chapter, 448-verse Greek \"1 Esdras\" textual tradition. It opens with King Josiah's Passover (Ezra 1:1), not Cyrus's decree, and its narrative order is genuinely different from KJV Ezra: Josiah's Passover and death (ch.1) -> Cyrus's decree and vessel restoration, then a flash-forward to hostile letters under \"Artexerxes\" halting the work (ch.2, mirroring the same flash-forward structure KJV Ezra ch.4 uses) -> a wholly unique episode found nowhere in KJV Ezra-Nehemiah, the \"Tale of the Three Guardsmen\" contest of Wine/King/Women-and-Truth at Darius's court, won by Zorobabel (ch.3-4) -> the list of returning families (ch.5) -> Darius's own building decree and the temple's completion (ch.6-7) -> Ezra's (Esdras's) return, commission from Artexerxes, and the mixed-marriage reform (ch.8-9, which ends mid-scene at the public reading of the Law - this book has no equivalent to KJV Ezra's shorter, differently-organized text at all). Two real naming collisions were found and are flagged rather than silently merged: (1) two different kings are BOTH called \"Joacim\" by this text (1:37 \"Joacim his brother,\" made king by Pharaoh-Necho, later deposed by Nabuchodonosor; 1:43 \"Joacim his son,\" who then reigned only 3 months 10 days before also being deported) - kept as two distinct entries under one collective submanager rather than assumed to be the same man or silently renamed using outside tradition; (2) \"Zorobabel\" (governor of Judea, 6:27) and \"Sanabassarus\"/\"Sanabassar\" (also called \"the governor of Judea,\" 2:12, and \"the ruler,\" who receives vessels in 6:18 ALONGSIDE Zorobabel and lays the foundation in 6:20) are named as two separate people by the text's own wording (\"delivered to Zorobabel AND to Sanabassarus\") and are kept fully separate here, not conflated even though some scholarly traditions outside this text debate their relationship. \"Artexerxes\" is treated as a single character/id across ch.2 and ch.8 since the text itself never distinguishes two kings of that name - only the chronological placement is unusual (mirroring the same real quirk in KJV Ezra 4). This book is thoroughly narrative/history-and-letters in character throughout, unlike Leviticus/Numbers-style law books, so no law-type (role:\"law\") tiers were needed - every tier here is person-type. The book ends abruptly mid-scene at Ezra 9:55 (the people are told to feast because the day is holy) with no closing statement - this is a real, confirmed feature of 1 Esdras as preserved in this source text, not a truncation error in this project's extraction.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Josiah's Passover Lamb",
+      "managerId": "josias_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The King's Proclamation Scroll",
+      "managerId": "cyrus_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Sealed Accusation",
+      "managerId": "rathumus_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Royal Signet",
+      "managerId": "darius_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Pillow-Sealed Sentence",
+      "managerId": "zorobabel_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The New Altar's First Fire",
+      "managerId": "jesus_josedec_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Governor's Inquiry Letter",
+      "managerId": "sisinnes_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Scribe's Ready Pen",
+      "managerId": "esdras_1esd_eth",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The King's Commission Letter",
+      "managerId": "artexerxes_1esd_eth",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "josias_1esd_eth",
+      "name": "Josias (Josiah)",
+      "role": "manager",
+      "scribeTier": "Josiah's Passover Lamb",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Joachaz (Ezra 1:34)",
+          "Joacim I (Ezra 1:37)",
+          "Zaraces (Ezra 1:38)",
+          "Zedechias, implied brother of Joachaz per 1:46 (Ezra 1:46)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:1",
+          "note": "Holds the Passover feast in Jerusalem, offering it the fourteenth day of the first month."
+        },
+        {
+          "ref": "Ezra 1:7",
+          "note": "Personally gives 30,000 lambs/kids and 3,000 calves to the people from the king's own allowance."
+        },
+        {
+          "ref": "Ezra 1:20-22",
+          "note": "Text states no passover like this had been kept in Israel since the prophet Samuel; kept in the eighteenth year of his reign."
+        },
+        {
+          "ref": "Ezra 1:25-30",
+          "note": "Marches out against Pharaoh-Necho of Egypt at Carchamis despite the Egyptian king's warning that the war is not against him; is mortally wounded and carried from the battle."
+        },
+        {
+          "ref": "Ezra 1:31-32",
+          "note": "Dies after being carried back to Jerusalem in his second chariot; Jeremy the prophet and the people mourn him, becoming a standing ordinance of national lament."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text explicitly says his Passover exceeded even those held by any king of Israel before him."
+      ]
+    },
+    {
+      "id": "josiah_successors_1esd_eth",
+      "name": "Josiah's Successor Kings (collective)",
+      "role": "submanager",
+      "scribeTier": "Josiah's Passover Lamb",
+      "parentManagerId": "josias_1esd_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "josias_1esd_eth",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:34-36",
+          "note": "Joachaz, made king at 23, reigns only 3 months before Pharaoh-Necho deposes him and taxes the land."
+        },
+        {
+          "ref": "Ezra 1:37-42",
+          "note": "Joacim I, Josiah's other son, made king by Egypt at 25; does evil, is later bound in brass chains and carried to Babylon by Nabuchodonosor, who also takes the temple vessels."
+        },
+        {
+          "ref": "Ezra 1:43-45",
+          "note": "A second, different man also called 'Joacim' by this text - his own son - made king at 18, reigns just 3 months 10 days, does evil, and is likewise deported to Babylon within a year."
+        },
+        {
+          "ref": "Ezra 1:46-58",
+          "note": "Zedechias made king at 21, reigns 11 years, disregards the prophet Jeremy's words, breaks his sworn oath to Nabuchodonosor; his rebellion brings the Chaldean siege, the temple's burning, Jerusalem's walls torn down, and the people carried to Babylon for a decreed 70 years."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Joachaz made king",
+          "age": 23,
+          "ref": "Ezra 1:34"
+        },
+        {
+          "event": "Joacim I made king",
+          "age": 25,
+          "ref": "Ezra 1:39"
+        },
+        {
+          "event": "Joacim (son of Joacim I) made king",
+          "age": 18,
+          "ref": "Ezra 1:43"
+        },
+        {
+          "event": "Zedechias made king",
+          "age": 21,
+          "ref": "Ezra 1:46"
+        }
+      ],
+      "funFacts": [
+        "Naming collision flagged: two different kings in a row are both called 'Joacim' by this exact text - a father and his own son - kept distinct here rather than merged or silently renamed."
+      ]
+    },
+    {
+      "id": "jeremy_prophet_1esd_eth",
+      "name": "Jeremy the Prophet",
+      "role": "submanager",
+      "scribeTier": "Josiah's Passover Lamb",
+      "parentManagerId": "josias_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 1:28",
+          "note": "Josiah marches to battle 'not regarding the words of the prophet Jeremy spoken by the mouth of the Lord.'"
+        },
+        {
+          "ref": "Ezra 1:32",
+          "note": "Personally laments for Josiah after his death, alongside the chief men and women, in what becomes a continual national ordinance."
+        },
+        {
+          "ref": "Ezra 1:47",
+          "note": "Zedechias likewise ignores 'the words that were spoken unto him by the prophet Jeremy from the mouth of the Lord.'"
+        },
+        {
+          "ref": "Ezra 2:1",
+          "note": "The return under Cyrus is explicitly framed as fulfilling 'the word of the Lord... that he had promised by the mouth of Jeremy.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cyrus_1esd_eth",
+      "name": "Cyrus, King of the Persians",
+      "role": "manager",
+      "scribeTier": "The King's Proclamation Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:1-4",
+          "note": "The Lord raises up his spirit; he proclaims through his kingdom that the Lord has made him king of the whole world and commanded him to build the Lord's house at Jerusalem."
+        },
+        {
+          "ref": "Ezra 2:5-7",
+          "note": "Invites any of the Lord's people to go up to Jerusalem, and calls on their neighbors to help with gold, silver, gifts, horses, and cattle."
+        },
+        {
+          "ref": "Ezra 2:10-12",
+          "note": "Personally brings out the holy vessels Nabuchodonosor had carried off and set in his idol-temple, delivering them to his treasurer Mithridates, who in turn delivers them to Sanabassar."
+        },
+        {
+          "ref": "Ezra 4:44-45",
+          "note": "Referenced later as having 'vowed to destroy Babylon' and set apart the vessels for their return."
+        },
+        {
+          "ref": "Ezra 6:24-25",
+          "note": "Darius's own search of the archives confirms Cyrus's original decree specified the temple's dimensions and that its expenses come from the king's own house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mithridates_1esd_eth",
+      "name": "Mithridates the Treasurer",
+      "role": "submanager",
+      "scribeTier": "The King's Proclamation Scroll",
+      "parentManagerId": "cyrus_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:11",
+          "note": "Cyrus personally delivers the recovered holy vessels to him as his treasurer."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sanabassarus_1esd_eth",
+      "name": "Sanabassar(us), Governor of Judea",
+      "role": "submanager",
+      "scribeTier": "The King's Proclamation Scroll",
+      "parentManagerId": "cyrus_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:12",
+          "note": "Mithridates delivers the vessels to him as 'the governor of Judea.'"
+        },
+        {
+          "ref": "Ezra 2:15",
+          "note": "Brings the vessels and the captivity's people back from Babylon to Jerusalem."
+        },
+        {
+          "ref": "Ezra 6:18",
+          "note": "Named a second time as receiving the vessels 'to Zorobabel and to Sanabassarus the ruler' - the text lists them as two distinct recipients, not one man under two names."
+        },
+        {
+          "ref": "Ezra 6:20",
+          "note": "Personally lays the foundations of the house of the Lord at Jerusalem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming note: this text calls him 'governor of Judea' at points that overlap with Zorobabel's own title of governor - kept as a distinct figure here since 6:18 names them together with 'and,' not interchangeably."
+      ]
+    },
+    {
+      "id": "rathumus_1esd_eth",
+      "name": "Rathumus the Storywriter",
+      "role": "manager",
+      "scribeTier": "The Sealed Accusation",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:16-17",
+          "note": "Named with several companions ('Belemus, Mithridates, Tabellius... Beeltethmus, Semellius') writing against the Jews rebuilding Jerusalem to King Artexerxes."
+        },
+        {
+          "ref": "Ezra 2:18-24",
+          "note": "The letter warns the king that if Jerusalem's walls are rebuilt, the Jews will withhold tribute and rebel, urging him to search the royal chronicles."
+        },
+        {
+          "ref": "Ezra 2:25-29",
+          "note": "Receives the king's written reply commanding the builders be hindered."
+        },
+        {
+          "ref": "Ezra 2:30",
+          "note": "Personally removes toward Jerusalem in haste with horsemen and a multitude, halting the temple's building by force until the second year of Darius's reign."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "semellius_1esd_eth",
+      "name": "Semellius the Scribe",
+      "role": "submanager",
+      "scribeTier": "The Sealed Accusation",
+      "parentManagerId": "rathumus_1esd_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:17",
+          "note": "Named as co-author of the letter to Artexerxes, given the title 'the secretary'/'the scribe.'"
+        },
+        {
+          "ref": "Ezra 2:25",
+          "note": "Named again as recipient of the king's reply alongside Rathumus."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "beeltethmus_1esd_eth",
+      "name": "Beeltethmus",
+      "role": "submanager",
+      "scribeTier": "The Sealed Accusation",
+      "parentManagerId": "rathumus_1esd_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:16",
+          "note": "Named among the group of officials writing against the Jews."
+        },
+        {
+          "ref": "Ezra 2:25",
+          "note": "Named again as a recipient of the king's letter of reply."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "darius_1esd_eth",
+      "name": "Darius, King of the Persians",
+      "role": "manager",
+      "scribeTier": "The Royal Signet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 3:1-3",
+          "note": "Makes a great feast for his household and all the princes of Media and Persia, then retires to his bedchamber."
+        },
+        {
+          "ref": "Ezra 4:42",
+          "note": "After hearing all three guardsmen's speeches, tells Zorobabel to ask for whatever he wills 'because thou art found wisest.'"
+        },
+        {
+          "ref": "Ezra 4:47-49",
+          "note": "Personally stands up, kisses Zorobabel, and writes letters to every treasurer, lieutenant, captain, and governor to safely convey the returning builders and bring cedar wood from Libanus."
+        },
+        {
+          "ref": "Ezra 6:23-27",
+          "note": "Orders a search of the Babylon and Ecbatane archives, finds Cyrus's original decree recorded, and formally orders the governors NOT to hinder Zorobabel and the elders from building."
+        },
+        {
+          "ref": "Ezra 6:28-34",
+          "note": "Commands ongoing funding (bullocks, rams, lambs, corn, salt, wine, oil) from the tribute of Celosyria and Phenice, and decrees death by hanging for anyone who obstructs the work."
+        },
+        {
+          "ref": "Ezra 7:5",
+          "note": "The temple is finished in the sixth year of his reign."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zorobabel_1esd_eth",
+      "name": "Zorobabel (Zerubbabel)",
+      "role": "manager",
+      "scribeTier": "The Pillow-Sealed Sentence",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Salathiel (Ezra 5:5)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Joacim (Ezra 5:5)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Ezra 4:13",
+          "note": "Identified as the third of the three young guardsmen who wrote sentences under King Darius's pillow, the one who wrote of Women and Truth."
+        },
+        {
+          "ref": "Ezra 4:14-32",
+          "note": "Delivers the speech on the strength of women, including the vivid detail of Apame the king's concubine taking the crown from Darius's own head."
+        },
+        {
+          "ref": "Ezra 4:33-40",
+          "note": "Then delivers the climactic speech that 'Truth' is strongest of all, winning the contest; the whole people shout 'Great is Truth, and mighty above all things.'"
+        },
+        {
+          "ref": "Ezra 4:43-46",
+          "note": "When granted any wish, asks Darius to remember his own vow to rebuild Jerusalem and its temple and to send back the vessels Cyrus had set apart."
+        },
+        {
+          "ref": "Ezra 5:2",
+          "note": "Darius sends him back to Jerusalem with a thousand horsemen as escort."
+        },
+        {
+          "ref": "Ezra 5:48-58",
+          "note": "Co-leads with Jesus the son of Josedec in setting up the altar, offering sacrifice, and beginning construction of the temple's foundation."
+        },
+        {
+          "ref": "Ezra 5:70-71",
+          "note": "Refuses the offer of the land's adversaries to help build, insisting 'we ourselves alone will build unto the Lord of Israel' as Cyrus commanded."
+        },
+        {
+          "ref": "Ezra 6:2",
+          "note": "Resumes building in the second year of Darius, with the prophets Aggeus and Zacharias helping."
+        },
+        {
+          "ref": "Ezra 6:27",
+          "note": "Called by Darius 'the servant of the Lord, and governor of Judea.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The whole 'Three Guardsmen' contest (wine, the king, and women/truth) that reveals Zorobabel as its winner appears only in this 1 Esdras tradition - it has no equivalent anywhere in the standard KJV Ezra-Nehemiah text."
+      ]
+    },
+    {
+      "id": "jesus_josedec_1esd_eth",
+      "name": "Jesus (Joshua), son of Josedec, the High Priest",
+      "role": "manager",
+      "scribeTier": "The New Altar's First Fire",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Josedec (Ezra 5:5)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:5",
+          "note": "Named at the head of the returning priests, son of Josedec, son of Saraias."
+        },
+        {
+          "ref": "Ezra 5:48",
+          "note": "Stands up with Zorobabel and his priestly brethren to make ready the altar of the God of Israel."
+        },
+        {
+          "ref": "Ezra 5:56-58",
+          "note": "Alongside Zorobabel, begins the temple's foundation and appoints the Levites from twenty years old over the work."
+        },
+        {
+          "ref": "Ezra 5:68-70",
+          "note": "Together with Zorobabel, formally refuses the adversaries' offer to help build the temple."
+        },
+        {
+          "ref": "Ezra 6:2",
+          "note": "Resumes the building work alongside Zorobabel once building starts again under Darius."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "cadmiel_1esd_eth",
+      "name": "Cadmiel",
+      "role": "submanager",
+      "scribeTier": "The New Altar's First Fire",
+      "parentManagerId": "jesus_josedec_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 5:58",
+          "note": "Named as Jesus's brother, laboring alongside him and the Levites as one of the 'setters forward of the business' advancing the temple's construction."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sisinnes_1esd_eth",
+      "name": "Sisinnes, Governor of Syria and Phenice",
+      "role": "manager",
+      "scribeTier": "The Governor's Inquiry Letter",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 6:3-4",
+          "note": "Comes to the builders with Sathrabuzanes and companions, demanding to know by whose appointment they build the house."
+        },
+        {
+          "ref": "Ezra 6:7-22",
+          "note": "Writes a detailed letter to Darius describing the building work, quoting the elders' own answer ('We are the servants of the Lord which made heaven and earth'), and requesting a search of Cyrus's records."
+        },
+        {
+          "ref": "Ezra 7:1-2",
+          "note": "Following Darius's decree, personally 'very carefully' oversees the holy works and assists the elders and temple governors rather than hindering them further."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sathrabuzanes_1esd_eth",
+      "name": "Sathrabuzanes",
+      "role": "submanager",
+      "scribeTier": "The Governor's Inquiry Letter",
+      "parentManagerId": "sisinnes_1esd_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 6:3",
+          "note": "Comes with Sisinnes and companions to question the builders."
+        },
+        {
+          "ref": "Ezra 6:7",
+          "note": "Co-author of the letter sent to King Darius."
+        },
+        {
+          "ref": "Ezra 7:1",
+          "note": "Follows Sisinnes in overseeing and assisting the work once Darius's decree arrives."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "esdras_1esd_eth",
+      "name": "Esdras (Ezra) the Priest and Scribe",
+      "role": "manager",
+      "scribeTier": "The Scribe's Ready Pen",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Saraias (Ezra 8:1)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:1-2",
+          "note": "Full sixteen-generation priestly lineage given back through Sadduc, Achitob, Amarias, Zaraias, Phinees, and Eleazar, to 'Aaron the chief priest.'"
+        },
+        {
+          "ref": "Ezra 8:3",
+          "note": "Described as going up from Babylon as a scribe, 'very ready in the law of Moses.'"
+        },
+        {
+          "ref": "Ezra 8:6-7",
+          "note": "Leads the return in the king's seventh year, having 'very great skill' so that he 'omitted nothing of the law and commandments of the Lord.'"
+        },
+        {
+          "ref": "Ezra 8:54-64",
+          "note": "Personally weighs out and delivers the enormous sum of silver, gold, and holy vessels to the priests and Levites for transport to Jerusalem."
+        },
+        {
+          "ref": "Ezra 8:71-96",
+          "note": "On learning of the mixed marriages, rends his clothes and hair, prays a long personal confession before the temple, and calls the people to a sworn oath to put away their foreign wives."
+        },
+        {
+          "ref": "Ezra 9:1-2",
+          "note": "Withdraws to Joanan's chamber, eating no food and drinking no water, mourning the people's sin."
+        },
+        {
+          "ref": "Ezra 9:7-9",
+          "note": "Publicly charges the assembled multitude with transgressing the law by marrying strange wives and calls them to confess and separate from the heathen."
+        },
+        {
+          "ref": "Ezra 9:16-17",
+          "note": "Personally chooses the principal men of the families to examine the mixed-marriage cases, which are settled by the first day of the first month."
+        },
+        {
+          "ref": "Ezra 9:39-47",
+          "note": "Brings the book of the Law before the whole multitude, reads it aloud from morning to midday, and blesses the Lord God as the people fall down and worship."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jechonias_1esd_eth",
+      "name": "Jechonias, son of Jeelus",
+      "role": "submanager",
+      "scribeTier": "The Scribe's Ready Pen",
+      "parentManagerId": "esdras_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Jeelus (Ezra 8:92)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:92-95",
+          "note": "Steps forward from the weeping multitude to confess the sin of marrying strange women on behalf of the people, and urges Esdras to 'arise and put in execution' the needed reform."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "marriage_case_commission_1esd_eth",
+      "name": "The Marriage-Case Commission (collective: Jonathan, Ezechias, Mosollam, Levis, Sabbatheus)",
+      "role": "submanager",
+      "scribeTier": "The Scribe's Ready Pen",
+      "parentManagerId": "esdras_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 8:14",
+          "note": "Jonathan son of Azael and Ezechias son of Theocanus 'took this matter upon them,' helped by Mosollam, Levis, and Sabbatheus, to examine the mixed-marriage cases - the text credits them as one working group rather than differentiating their individual actions."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "attharates_1esd_eth",
+      "name": "Attharates",
+      "role": "submanager",
+      "scribeTier": "The Scribe's Ready Pen",
+      "parentManagerId": "esdras_1esd_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 9:49-52",
+          "note": "Speaks to Esdras and the teaching Levites, telling the weeping people the day is holy to the Lord and they should eat, drink, share with the needy, and not be sorrowful."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This appears to function as a governor's title (compare 'Tirshatha' in other Ezra-Nehemiah material) used here as if a personal name; the text itself gives no other identification, so it is recorded exactly as written rather than guessed at."
+      ]
+    },
+    {
+      "id": "artexerxes_1esd_eth",
+      "name": "Artexerxes (Artaxerxes), King of the Persians",
+      "role": "manager",
+      "scribeTier": "The King's Commission Letter",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Ezra 2:16-30",
+          "note": "Receives the adversaries' letter from Rathumus and companions and writes back ordering the builders hindered - narrated earlier in the book as a flash-forward, chronologically after Darius, mirroring the same structural quirk found in KJV Ezra chapter 4."
+        },
+        {
+          "ref": "Ezra 8:8-24",
+          "note": "Writes the full commission letter to Esdras: grants any willing Jew, priest, or Levite leave to go to Jerusalem, authorizes silver/gold/vessels for the temple, orders the treasurers of Syria and Phenice to supply Esdras's requests up to 100 talents of silver, exempts temple personnel from taxation, and instructs Esdras to appoint judges."
+        },
+        {
+          "ref": "Ezra 8:25-27",
+          "note": "Esdras blesses God specifically for having 'put these things into the heart of the king' and for honoring him before the king's own counsellors and nobles."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above - large collective name-lists the text itself does not narratively differentiate.",
+    "returningFamilies": {
+      "ref": "Ezra 5:9-46",
+      "note": "The full census of returning families by clan (sons of Phoros, Saphat, Ares, Phaath Moab, Elam, Zathul, and dozens more), plus priests, Levites, singers, porters, temple servants, and Solomon's servants - totals given as 40,000 Israelites plus servants, singers, and livestock."
+    },
+    "priestsExcludedForLostRecords": {
+      "ref": "Ezra 5:38-40",
+      "note": "Sons of Obdia, Accoz, and Addus (who married into Barzelus's family) were removed from priestly service because their genealogical records could not be found, pending a high priest 'clothed with doctrine and truth.'"
+    },
+    "mixedMarriageOffenders": {
+      "ref": "Ezra 9:18-35",
+      "note": "The full roll of priests, Levites, singers, porters, and Israelites found to have taken foreign wives, organized by family (sons of Jesus/Josedec's own household, sons of Emmer, Phaisur, Ela, Zamoth, Babai, Mani, Addi, Annas, Asom, Maani, Ethma, and others) - all put away their foreign wives per 9:36."
+    },
+    "returnGuides": {
+      "ref": "Ezra 5:8",
+      "note": "Named as guides of the return alongside Zorobabel and Jesus: Nehemias, Zacharias, Reesaias, Enenius, Mardocheus, Beelsarus, Aspharasus, Reelius, Roimus, Baana - listed together without individually differentiated actions."
+    }
+  }
+}

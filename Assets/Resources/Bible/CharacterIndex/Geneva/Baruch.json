@@ -1,0 +1,362 @@
+{
+  "book": "Baruch",
+  "translation": "Geneva",
+  "canonicalOrder": 47,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Baruch is a short (5 ch, 140 verse) apocryphal work unique to this translation's canon, absent from KJV's Character Index entirely, so drafted fresh with no precedent to reconcile against. It is almost entirely non-narrative — a single brief narrative frame in ch1:1-14 (Baruch writing the book in Babylon and sending it with money to Jerusalem) gives way to sustained poetic/liturgical material: a collective national Confession of Sin (1:15-4:4, itself containing a distinct Wisdom hymn in ch3-4:4), then a two-part personified-Jerusalem sequence — Zion's own Lament over her exiled children (4:5-29) and a narrator's prophetic Promise of Restoration addressed back to her (ch5). This shape (one real person-tier + a run of law/theme tiers carrying the actual theological weight) mirrors the Leviticus/Deuteronomy precedent for thin-narrative, doctrine-heavy books. NAMING COLLISIONS flagged: (1) TWO different men named Joakim appear in ch1 alone — Jechonias's father \"Joakim king of Judah\" (the exiled king, deposed before the narrative) versus \"Joakim the high priest... son of Helkias\" who receives the collected money in Jerusalem — kept as separate characters, not merged. (2) \"Nabuchodonosor\" here is the Geneva Apocrypha's own spelling of Nebuchadnezzar (same historical king as elsewhere in this translation's OT, spelling variant only). (3) The text's own claim that \"Baltasar\" is Nebuchadnezzar's SON (1:11-12) is a real, distinctive feature of Baruch's text as read — historically/per Daniel 5, Belshazzar was son of Nabonidus and grandson (not son) of Nebuchadnezzar — flagged as the book's own internal claim, not corrected or silently merged with the Daniel figure. Jerusalem is treated as a genuine personified character (a manager-tier \"person,\" not a law tier) since she speaks at length in her own first-person voice (4:9-29) — a real narrative device the text itself sustains across 21 verses, not mere personification-in-passing. Undifferentiated collective groups (\"the mighty men,\" \"the kings' sons,\" \"the elders,\" \"all the people from the least unto the greatest,\" 1:4) are deliberately NOT individualized into invented characters, per rule 5. CORRECTION: the draft's characters array omitted Sedekias (Zedekiah) son of Josias, king of Judah — named in 1:8 as the one who made the silver vessels that Joakim the priest returned to Judah; added as its own \"named\" character (distinct from the better-known last king of Judah of the same name in Kings/Jeremiah/Chronicles — the text here explicitly identifies this Sedekias as \"son of Josias,\" which is consistent with that same historical figure, but he is logged as his own entry here since he appears only via this single reference and is not otherwise developed in this book).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Scroll of Babylon",
+      "managerId": "baruch_gnv_bar",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Confession of the Captives",
+      "managerId": "confession_gnv_bar",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Fountain of Wisdom",
+      "managerId": "wisdom_gnv_bar",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Zion's Lament",
+      "managerId": "jerusalem_gnv_bar",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Everlasting Glory",
+      "managerId": "restoration_gnv_bar",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "baruch_gnv_bar",
+      "name": "Baruch",
+      "role": "manager",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Nerias (himself son of Maaseas, son of Sedekias, son of Asadias, son of Helkias — a five-generation chain given directly in the text's own opening verse)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:1-2",
+          "note": "Introduced writing this book in Babylon in the fifth year, on the day the Chaldeans burned Jerusalem."
+        },
+        {
+          "ref": "Baruch 1:3-4",
+          "note": "Reads the book aloud to Jechonias son of Joakim and all the exiled people of Babylon."
+        },
+        {
+          "ref": "Baruch 1:14",
+          "note": "Instructs that the book be read in the house of the Lord at Jerusalem on feast and assembly days."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book opens with an unusually deep five-generation genealogy for its author, tracing Baruch back through four named ancestors to Helkias in a single verse."
+      ]
+    },
+    {
+      "id": "jechonias_gnv_bar",
+      "name": "Jechonias, son of Joakim, king of Judah",
+      "role": "submanager",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": "baruch_gnv_bar",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Joakim, king of Judah (the exiled king — NOT the same man as Joakim the high priest, son of Helkias, also in this chapter; naming collision, kept separate)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:3",
+          "note": "Hears Baruch read the book aloud among the Babylonian captives."
+        },
+        {
+          "ref": "Baruch 1:9",
+          "note": "Named among those Nabuchodonosor carried away captive from Jerusalem to Babylon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This is the same exiled king known elsewhere as Jeconiah/Coniah — the text refers to him consistently as Jechonias."
+      ]
+    },
+    {
+      "id": "joakim_priest_gnv_bar",
+      "name": "Joakim the high priest, son of Helkias",
+      "role": "submanager",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": "baruch_gnv_bar",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Helkias, son of Salom",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:7",
+          "note": "Receives the money the exiles collected and sent from Babylon to Jerusalem."
+        },
+        {
+          "ref": "Baruch 1:8",
+          "note": "Returns the silver vessels of the Lord's house (made by Sedekias son of Josias) to the land of Judah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A distinct man from Jechonias's father, also confusingly named Joakim — the book names two different Joakims within its first chapter."
+      ]
+    },
+    {
+      "id": "sedekias_josias_gnv_bar",
+      "name": "Sedekias, son of Josias, king of Judah",
+      "role": "named",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Josias, king of Judah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:8",
+          "note": "Named as the one who made the silver vessels of the Lord's house that Joakim the priest returned to the land of Judah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Referenced only via this single verse in Baruch's text — the book does not otherwise narrate his reign or fate here, unlike his fuller treatment in Kings/Jeremiah/Chronicles."
+      ]
+    },
+    {
+      "id": "nabuchodonosor_gnv_bar",
+      "name": "Nabuchodonosor, king of Babylon",
+      "role": "named",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "baltasar_gnv_bar"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:9",
+          "note": "Carried Jechonias, the princes, captives, and mighty men away from Jerusalem to Babylon."
+        },
+        {
+          "ref": "Baruch 1:11-12",
+          "note": "The exiles are instructed to pray for his life and Baltasar's, that they may find favor and live under his shadow."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Spelled \"Nabuchodonosor\" in this Geneva rendering of the Apocrypha — the same king called Nebuchadnezzar elsewhere in this translation's Old Testament, a spelling variant only."
+      ]
+    },
+    {
+      "id": "baltasar_gnv_bar",
+      "name": "Baltasar, son of Nabuchodonosor",
+      "role": "named",
+      "scribeTier": "The Scroll of Babylon",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "nabuchodonosor_gnv_bar",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Baruch 1:11-12",
+          "note": "Prayed for alongside his father Nabuchodonosor, that their days may be long and the exiles find favor in their sight."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book of Baruch itself states Baltasar is Nabuchodonosor's SON — a real feature of this text as written; other traditions (e.g. Daniel 5) instead make Belshazzar the son of Nabonidus and Nebuchadnezzar's grandson. Kept as the book's own claim, not silently reconciled."
+      ]
+    },
+    {
+      "id": "confession_gnv_bar",
+      "name": "Confession of the Captives",
+      "role": "law",
+      "scribeTier": "Confession of the Captives",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "baruch_gnv_bar",
+      "purpose": "A collective national confession, written by Baruch for the exiles to read aloud in Jerusalem 'upon the day of the feast and on the days of the solemn assembly' (1:14): admitting disobedience to the Lord and to Moses' law since the Exodus (1:19-22), acknowledging that the prophesied curses and plagues (including the horror of the siege, 2:2-3) have literally come to pass, pleading for mercy and deliverance (2:11-19), and recalling God's promise of an everlasting covenant and a future heart to hear, given through Moses (2:27-35).",
+      "verses": [
+        {
+          "ref": "Baruch 1:15-1:22",
+          "note": "Opens the confession: 'To the Lord our God belongeth righteousness, but unto us confusion of face.'"
+        },
+        {
+          "ref": "Baruch 2:1-2:10",
+          "note": "Declares the plagues and captivity are God's word fulfilled exactly as written in the law of Moses."
+        },
+        {
+          "ref": "Baruch 2:11-2:26",
+          "note": "Pleads for the Lord to turn away His wrath and hear their petition."
+        },
+        {
+          "ref": "Baruch 2:27-2:35",
+          "note": "Recalls God's word to Moses that after captivity Israel will return, repent, and receive an everlasting covenant."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wisdom_gnv_bar",
+      "name": "Fountain of Wisdom",
+      "role": "law",
+      "scribeTier": "Fountain of Wisdom",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "baruch_gnv_bar",
+      "purpose": "A wisdom hymn continuing the same prayer, urging Israel to 'learn where is wisdom, where is strength, where is understanding' (3:14), surveying the ancient giants and the wealthy who perished for lacking it (3:26-28), and declaring that God alone has found Wisdom's way and 'hath given it unto Jacob his servant, and to Israel that is beloved of him' (3:36) — closing by identifying Wisdom itself as 'the book of the commandments of God, and the law that endureth for ever' (4:1) and urging Jacob to take hold of it (4:2-4).",
+      "verses": [
+        {
+          "ref": "Baruch 3:9-3:14",
+          "note": "Calls Israel to seek wisdom, strength, and understanding as the true way of life."
+        },
+        {
+          "ref": "Baruch 3:29-3:31",
+          "note": "Asks who has gone up to heaven or over the sea to find and bring down Wisdom — no one has."
+        },
+        {
+          "ref": "Baruch 3:36-3:37",
+          "note": "God alone found Wisdom's way and gave it to Jacob/Israel; Wisdom afterward 'appear[ed] upon earth, and was conversant with men.'"
+        },
+        {
+          "ref": "Baruch 4:1-4:4",
+          "note": "Identifies this wisdom directly with 'the book of the commandments of God, and the law that endureth for ever,' urging Jacob to hold it fast."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Baruch 3:37's line that Wisdom 'was conversant with men' is one of the more debated verses in the whole book across later Christian and Jewish reading traditions — logged here strictly as it reads in this Geneva text, no interpretive claim added."
+      ]
+    },
+    {
+      "id": "jerusalem_gnv_bar",
+      "name": "Jerusalem (personified as a mourning mother)",
+      "role": "manager",
+      "scribeTier": "Zion's Lament",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "her sons and daughters — an unindexed collective, not individually named (see genealogyLists)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Baruch 4:9-4:11",
+          "note": "Speaks as a grieving mother: she saw the wrath come upon her sons and daughters and was left mourning."
+        },
+        {
+          "ref": "Baruch 4:12",
+          "note": "Laments being left desolate 'a widow, and forsaken of many' for her children's sins."
+        },
+        {
+          "ref": "Baruch 4:19-4:20",
+          "note": "Bids her children farewell, having put off the garment of peace for sackcloth."
+        },
+        {
+          "ref": "Baruch 4:21-4:29",
+          "note": "Repeatedly urges her children to be of good cheer and cry to God, promising He will remember and deliver them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jerusalem speaks in her own first-person voice across 21 continuous verses (4:9-4:29) — a sustained personification rare in scale even among the Bible's other city-as-mother passages."
+      ]
+    },
+    {
+      "id": "restoration_gnv_bar",
+      "name": "The Everlasting Glory",
+      "role": "law",
+      "scribeTier": "The Everlasting Glory",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": null,
+      "purpose": "A closing prophetic promise, spoken by the narrator directly TO Jerusalem (not by Jerusalem herself, hence no deliveredBy) rather than by any single character: she is told to put off mourning and 'put on the comeliness of the glory that cometh from God for ever' (5:1), to look toward the east and see her children gathered home 'from the going down of the sun unto the rising thereof' (5:5), with every high mountain and hill made low and every valley filled to smooth Israel's road home (5:7).",
+      "verses": [
+        {
+          "ref": "Baruch 5:1-5:4",
+          "note": "Jerusalem is told to trade her garment of mourning for the robe of righteousness and a diadem of glory."
+        },
+        {
+          "ref": "Baruch 5:5-5:6",
+          "note": "Commanded to stand on the height and watch her children return, borne home 'as on a royal throne.'"
+        },
+        {
+          "ref": "Baruch 5:7-5:9",
+          "note": "God levels every mountain and fills every valley so Israel may travel safely home in His glory."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "exilesCollective": {
+      "ref": "Baruch 1:4",
+      "note": "\"The mighty men, and the kings' sons... the elders... all the people, from the least unto the greatest\" at Babylon by the river Sud — a large undifferentiated crowd hearing Baruch's reading, deliberately not broken into individual characters."
+    },
+    "jerusalemsChildren": {
+      "ref": "Baruch 4:9-4:37, 5:5-5:9",
+      "note": "Jerusalem's exiled \"sons and daughters,\" referenced repeatedly and collectively throughout chapters 4-5 (the same population as the Babylonian exiles of ch1) but never individually named within Baruch's own text."
+    }
+  }
+}

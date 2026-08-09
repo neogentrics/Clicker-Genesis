@@ -1,0 +1,328 @@
+{
+  "book": "Philemon",
+  "translation": "Geneva",
+  "canonicalOrder": 69,
+  "status": "drafted single-pass, grounded directly in the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/philemon_69.json), following the same person-tier/law-tier methodology and collective-submanager rule already validated for the KJV Character Index; cross-checked against the existing KJV Philemon.json only for tier-naming-style inspiration, not copied; not yet reviewed by the user",
+  "notes": "Philemon in the Geneva 1560 translation is, structurally and in content, the identical short single-chapter personal letter found in the KJV — 25 verses, the same three central figures (Paul, Philemon, Onesimus) and the same closing-greeting cast (Apphia, Archippus, Timotheus, Epaphras, and a four-name group). No structural or canonical differences were found — unlike the Ezra/1 Esdras case flagged elsewhere in this project, this is not a book where the translation changes what content exists, only how it is worded. Real, worth-noting WORDING differences from the KJV rendering (verified by direct comparison against the KJV Philemon.json's own verse notes, not assumed): (1) Geneva 1:2 explicitly calls Apphia 'our deare sister Apphia' — the word 'sister' is present in this translation's own text, where the existing KJV index's verse note for the same verse records only 'our beloved Apphia' with no kinship term; this is a real translation-specific detail, not an inference, and is logged on Apphia's own entry. (2) Geneva 1:1 uses the fuller Hellenized form 'Timotheus' rather than 'Timothy'. (3) Geneva 1:24 spells the name 'Luke' (not 'Lucas') and calls the four men Paul's 'felowe helpers' rather than 'fellowlabourers' — same meaning, different word choice. (4) Geneva 1:1 calls Philemon 'our deare friende, and fellowe helper' rather than KJV's 'our dearly beloved, and fellowlabourer' — softer/warmer phrasing, same relationship. All three scribe tiers are role:person, none role:law — exactly as in the KJV version, since this remains an intensely personal letter rather than doctrinal instruction: Paul writes as an actual aged prisoner making an actual personal appeal, Philemon is the actual addressee being personally persuaded, and Onesimus is a 'seruant' (the Geneva text itself never uses 'slave', and — like the KJV — never states outright that he ran away, only that he 'departed for a season', v.15) being actually sent back and personally vouched for; any 'runaway' framing remains a hedged external inference, never asserted as this text's own wording. Two collective submanagers are used rather than invented individuals, per rule 5: 'the Church that is in thine house' (v.2, undifferentiated congregation) under Philemon; and the v.24 closing names (Marcus, Aristarchus, Demas, Luke — 'my felowe helpers') under Paul, kept deliberately SEPARATE from Epaphras (v.23, 'my felowe prisoner in Christ Iesus') since the Geneva text itself draws the same real distinction between the two groups that the KJV text does. Apphia and Archippus are greeted alongside Philemon (v.2) with no stated family relationship to him in the text itself — the common tradition that Apphia is his wife and Archippus his son is flagged only as background on their own entries, never asserted in Philemon's own genealogy field, matching the KJV index's same discipline. No naming collisions arose within this book itself (no other Paul/Philemon/Onesimus/Apphia/Archippus/Epaphras/Timotheus indexed for the Geneva translation to date), but every id is translation-and-book-suffixed regardless, per the disambiguation rule, since this Paul/Timotheus/Epaphras will need distinct ids from both their KJV counterparts and any other Geneva-translation Pauline epistle once indexed.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Aged Prisoner's Pen",
+      "managerId": "paul_geneva_philemon",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Dear Friend's House",
+      "managerId": "philemon_geneva_recipient",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Profitable Name Returned",
+      "managerId": "onesimus_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_philemon",
+      "name": "Paul",
+      "role": "manager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "perkNote": "Id suffixed for both translation and book — Paul authors many epistles that would precede this one canonically and this id must not be merged with a future KJV 'paul_philemon' id or any other Geneva-translation Pauline entry without confirming they should share state.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "onesimus_geneva — described as 'my sonne Onesimus, whome I haue begotten in my bondes' (v.10), a spiritual/conversion relationship formed during imprisonment, not a literal biological son"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Identifies himself as 'a prisoner of Iesus Christ,' writing jointly with 'our brother Timotheus,' unto Philemon, called 'our deare friende, and fellowe helper.'"
+        },
+        {
+          "ref": "Philemon 1:4-7",
+          "note": "Gives thanks to God, making mention of Philemon always in his prayers, having heard of his love and faith toward the Lord Iesus and toward all Saintes; says the Saintes' bowels are comforted by him."
+        },
+        {
+          "ref": "Philemon 1:8-9",
+          "note": "Says he could be very bold in Christ to command what is convenient, but instead chooses to beseech for love's sake, describing himself as 'euen Paul aged, and euen nowe a prisoner for Iesus Christ.'"
+        },
+        {
+          "ref": "Philemon 1:10",
+          "note": "Beseeches Philemon 'for my sonne Onesimus, whome I haue begotten in my bondes.'"
+        },
+        {
+          "ref": "Philemon 1:11-14",
+          "note": "Notes Onesimus was 'in times past... vnprofitable, but nowe profitable both to thee and to me'; says he would have kept Onesimus to minister to him in the bonds of the Gospel, but would do nothing without Philemon's own mind, so the benefit would be willing, not of necessity."
+        },
+        {
+          "ref": "Philemon 1:17-19",
+          "note": "Asks Philemon to receive Onesimus 'as my selfe'; if Onesimus has wronged or owes him anything, to put it on Paul's own account — 'I Paul haue written this with mine owne hande: I will recompense it' — while noting Philemon owes Paul his very self besides."
+        },
+        {
+          "ref": "Philemon 1:20-21",
+          "note": "Asks to 'obteine this pleasure of thee in the Lord: comfort my bowels in the Lord'; trusts Philemon's obedience and expects him to 'doe eue more then I say.'"
+        },
+        {
+          "ref": "Philemon 1:22",
+          "note": "Asks Philemon to 'prepare mee lodging,' trusting through their prayers to 'be freely giuen vnto you' — implying an expected release from imprisonment."
+        },
+        {
+          "ref": "Philemon 1:25",
+          "note": "Closes with a benediction: 'The grace of our Lord Iesus Christ be with your spirit, Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Calls himself 'Paul aged' (v.9) in this translation's own wording — one of the only places in his own writings where Paul references his advancing age directly.",
+        "This is the shortest of Paul's epistles in the Geneva Bible as in the KJV (25 verses) and the only one addressed primarily to a private individual about a personal matter."
+      ]
+    },
+    {
+      "id": "philemon_geneva_recipient",
+      "name": "Philemon",
+      "role": "manager",
+      "scribeTier": "The Dear Friend's House",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "perkNote": "Id suffixed '_recipient' to avoid confusion with the book title itself. Genealogy fields are deliberately left empty rather than listing Apphia/Archippus (even hedged) — the text (v.2) only greets them alongside Philemon and states no family relationship; that relationship is tradition only, flagged on Apphia's and Archippus's own entries, not asserted here.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Addressed by Paul as 'our deare friende, and fellowe helper' — the letter's primary recipient."
+        },
+        {
+          "ref": "Philemon 1:2",
+          "note": "The greeting extends from him to Apphia, Archippus, and 'the Church that is in thine house' — implying a congregation meets in his home."
+        },
+        {
+          "ref": "Philemon 1:4-7",
+          "note": "Praised for his love and faith toward the Lord Iesus and toward all Saintes, and for comforting 'the Saintes bowels.'"
+        },
+        {
+          "ref": "Philemon 1:10-16",
+          "note": "The subject of Paul's central appeal: asked to receive back Onesimus, called a 'seruant' by the text itself (v.16) — 'Not now as a seruant, but aboue a seruant, euen as a brother beloued.'"
+        },
+        {
+          "ref": "Philemon 1:17-21",
+          "note": "Asked to receive Onesimus 'as my selfe,' to charge any debt to Paul's own account, and trusted by Paul to 'doe eue more then I say.'"
+        },
+        {
+          "ref": "Philemon 1:22",
+          "note": "Asked by Paul to 'prepare mee lodging,' anticipating a personal visit."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva 1:1 calls him 'our deare friende, and fellowe helper' — a warmer, more personal phrasing of the same relationship the KJV renders as 'dearly beloved, and fellowlabourer.'"
+      ]
+    },
+    {
+      "id": "onesimus_geneva",
+      "name": "Onesimus",
+      "role": "manager",
+      "scribeTier": "The Profitable Name Returned",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "perkNote": "The Geneva text calls him a 'seruant' (v.16), never 'slave,' and never states he ran away — it says only that he 'departed for a season' (v.15) and 'hath hurt thee, or oweth thee ought' (v.18). 'Runaway servant/slave' remains a hedged external inference in this index, not this text's own wording.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:10",
+          "note": "Called Paul's son, 'whome I haue begotten in my bondes' — converted by Paul while imprisoned."
+        },
+        {
+          "ref": "Philemon 1:11",
+          "note": "Paul plays on his name (Greek for 'profitable'): 'which in times past was to thee vnprofitable, but nowe profitable both to thee and to me.'"
+        },
+        {
+          "ref": "Philemon 1:12",
+          "note": "Paul sends him back to Philemon, calling him 'mine owne bowels.'"
+        },
+        {
+          "ref": "Philemon 1:13-14",
+          "note": "Paul says he would have liked to keep Onesimus to minister to him 'in the bondes of the Gospel,' but would do nothing without Philemon's own consent."
+        },
+        {
+          "ref": "Philemon 1:15-16",
+          "note": "Paul suggests he 'departed for a season, that thou shouldest receiue him for euer... Not now as a seruant, but aboue a seruant, euen as a brother beloued.'"
+        },
+        {
+          "ref": "Philemon 1:18",
+          "note": "Paul acknowledges Onesimus may have hurt Philemon or owe him something, and offers to cover it: 'that put on mine accounts.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name (Greek Onesimos) means 'profitable', which Paul directly plays on in v.11 — preserved in the Geneva translation's own wording ('vnprofitable... profitable')."
+      ]
+    },
+    {
+      "id": "apphia_geneva",
+      "name": "Apphia",
+      "role": "submanager",
+      "scribeTier": "The Dear Friend's House",
+      "parentManagerId": "philemon_geneva_recipient",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "REAL TRANSLATION DIFFERENCE: the Geneva text explicitly calls her 'our deare sister Apphia' (v.2) — the word 'sister' is present in this translation's own wording, where the existing KJV index recorded this same verse as calling her only 'beloved' with no kinship term. The widespread tradition that she is Philemon's wife is still NOT stated by the text itself (a 'sister' address does not by itself establish that) — flagged as tradition only, not asserted as fact, and not reflected in Philemon's own genealogy field.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted by Paul as 'our deare sister Apphia,' alongside Archippus and the Church in Philemon's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "archippus_geneva",
+      "name": "Archippus",
+      "role": "submanager",
+      "scribeTier": "The Dear Friend's House",
+      "parentManagerId": "philemon_geneva_recipient",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Called 'our fellowe souldier' in v.2. The tradition that he is Philemon's son is NOT stated by this text — flagged, not asserted, and not reflected in Philemon's own genealogy field.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted by Paul as 'Archippus our fellowe souldier,' alongside Apphia and the Church in Philemon's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "timothy_geneva_philemon",
+      "name": "Timotheus",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_geneva_philemon",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "REAL TRANSLATION DIFFERENCE: the Geneva text names him 'Timotheus' (v.1), the fuller Hellenized name form, rather than 'Timothy'. Display name kept as the text's own spelling; id suffixed since Timothy/Timotheus is a recurring figure across multiple Pauline epistles not yet indexed for this translation.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:1",
+          "note": "Named as co-sender: 'Paul a prisoner of Iesus Christ, and our brother Timotheus, vnto Philemon...'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "philemons_household_church_geneva",
+      "name": "The Church That Is In Thine House",
+      "role": "submanager",
+      "scribeTier": "The Dear Friend's House",
+      "parentManagerId": "philemon_geneva_recipient",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Collective entry per rule 5 — the text names the congregation as a single undifferentiated group with no individual actions attributed, so it is not split into invented individual members.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:2",
+          "note": "Greeted collectively as part of the letter's addressees: 'and to the Church that is in thine house.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "epaphras_geneva_philemon",
+      "name": "Epaphras",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_geneva_philemon",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Kept as his own entry, separate from the v.24 group, because the Geneva text itself distinguishes him exactly as the KJV does: v.23 calls him 'my felowe prisoner in Christ Iesus,' a title distinct from 'my felowe helpers' (v.24, applied only to Marcus/Aristarchus/Demas/Luke). Id suffixed for translation and book since he recurs elsewhere in the NT with a possibly more distinct role.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:23",
+          "note": "Named alone, distinctly from the group in v.24: 'There salute thee Epaphras my felowe prisoner in Christ Iesus.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pauls_fellow_helpers_geneva_philemon",
+      "name": "Paul's Fellow Helpers (Marcus, Aristarchus, Demas, Luke)",
+      "role": "submanager",
+      "scribeTier": "The Aged Prisoner's Pen",
+      "parentManagerId": "paul_geneva_philemon",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Collective entry per rule 5 — the Geneva text lists these four names together in v.24 as 'my felowe helpers,' with no differentiated action given to any one of them here, so they are kept as one submanager. Deliberately kept SEPARATE from Epaphras (v.23), whom the text labels differently. REAL TRANSLATION DIFFERENCE: Geneva spells the name 'Luke' (not 'Lucas' as in the KJV) and uses 'felowe helpers' rather than 'fellowlabourers' for this group's title — same meaning, different word choice.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Philemon 1:24",
+          "note": "Named together, distinctly from Epaphras in the preceding verse: 'Marcus, Aristarchus, Demas and Luke, my felowe helpers.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "traditional_identifications_not_asserted": {
+      "ref": "n/a — post-biblical tradition, not the Geneva 1560 text",
+      "note": "The widespread tradition that Apphia is Philemon's wife and Archippus his son is NOT stated by the Geneva text and is not asserted as fact anywhere in this index — the text only places them together in one greeting (v.2), and the Geneva translation's use of 'sister' for Apphia is a real wording detail, not by itself confirmation of the marriage tradition."
+    },
+    "onesimus_status_note": {
+      "ref": "Philemon 1:15-16, 1:18 (Geneva)",
+      "note": "The Geneva text calls Onesimus a 'seruant' (v.16) and never 'slave'; it never states outright that he ran away, only that he 'departed for a season' (v.15) and 'hath hurt thee, or oweth thee ought' (v.18) — the same hedged pattern already established for the KJV rendering of this book."
+    }
+  }
+}

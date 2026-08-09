@@ -1,0 +1,1420 @@
+{
+  "book": "Acts",
+  "translation": "Ethiopian",
+  "canonicalOrder": 64,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the real Ethiopian translation text directly (Assets/Resources/Verses/Ethiopian/acts_64.json, all 28 chapters spot-verified plus a full-file name-occurrence sweep across every character/place name appearing in the already-completed KJV Character Index for this book). Content is verbatim-identical to the KJV Acts already indexed in this project (same Peter-then-Paul two-act structure, same 28 chapters/1007 verses, same wording on every spot-checked passage including Judas's field-purchase death in 1:18-19, Ananias/Sapphira in 5:1-10, Herod Agrippa I 'eaten of worms' in 12:20-23, and Agrippa II's 'almost thou persuadest me to be a Christian' in 26:28) - this Ethiopian translation shows none of the real structural/content divergences found elsewhere in this same source (e.g. its own distinct 1 Esdras-tradition Ezra). Structure is therefore adapted directly from the validated KJV Acts index (same tier count/shape, same manager promotions, same naming-collision flags and submanager assignments) rather than re-derived from scratch, per the task's own guidance for content-identical shared-canon books - every verse reference and character detail was re-verified against this translation's own extracted text, not copied blind. All ids are suffixed '_ethiopian' to keep this translation's roster namespace-isolated from the KJV set. No law/theme tiers, matching the KJV finding that Acts has no detached instructional sections - even the long speeches (Pentecost sermon, Stephen's defense, Paul's Areopagus speech) are personally-embodied moments logged as verse entries under their speaker. No standalone Jesus tier (he ascends in Acts 1 before the narrative proper begins); his one appearance to Saul on the Damascus road (9:3-9) is logged as a verse entry on Paul's tier. Naming collisions carried over unchanged, since the underlying names/events are identical: four men named Herod across Acts+Matthew's scope; three-to-four men named Simon; two James beyond the apostle-roster-only James son of Alphaeus; three men named Ananias; three men named Judas; the Ephesus-riot 'Gaius of Macedonia' vs. the travel-roster 'Gaius of Derbe' naming variance (kept unresolved in genealogyLists, not merged). Silas and Herod Agrippa II remain independently promoted past mere-companion status for the same reasons as the KJV draft (Silas's own personally-embodied Philippi ordeal; Agrippa II's two full chapters of personal judgment of Paul's case); Ananias of Damascus remains a submanager rather than a promoted manager, for the same single-episode-serving-Paul's-arc reasoning.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Simon Peter",
+      "managerId": "peter_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Stephen, Full of Faith",
+      "managerId": "stephen_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Philip the Evangelist",
+      "managerId": "philip_evangelist_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Barnabas, Son of Consolation",
+      "managerId": "barnabas_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Saul, Called Paul",
+      "managerId": "paul_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Cornelius the Centurion",
+      "managerId": "cornelius_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Herod, Eaten of Worms",
+      "managerId": "herod_agrippa_i_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "James of Jerusalem",
+      "managerId": "james_of_jerusalem_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Apollos, Mighty in the Scriptures",
+      "managerId": "apollos_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Silas the Prophet",
+      "managerId": "silas_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Herod Agrippa II, Almost Persuaded",
+      "managerId": "herod_agrippa_ii_ethiopian",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "peter_ethiopian",
+      "name": "Simon Peter",
+      "role": "manager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 1:15-26",
+          "note": "Leads the church in choosing Matthias to replace Judas among the twelve."
+        },
+        {
+          "ref": "Acts 2:14-41",
+          "note": "Preaches at Pentecost; about three thousand souls added that day."
+        },
+        {
+          "ref": "Acts 3:1-10",
+          "note": "Heals a man lame from birth at the temple's Beautiful gate, with John."
+        },
+        {
+          "ref": "Acts 4:1-22",
+          "note": "Arrested with John, testifies before the council, 'we cannot but speak the things which we have seen and heard.'"
+        },
+        {
+          "ref": "Acts 5:1-11",
+          "note": "Confronts Ananias and Sapphira over their lie to the Holy Ghost; both die."
+        },
+        {
+          "ref": "Acts 5:17-32",
+          "note": "Imprisoned with the apostles, freed by an angel, testifies before the council again."
+        },
+        {
+          "ref": "Acts 9:32-43",
+          "note": "Heals Aeneas at Lydda; raises Dorcas from the dead at Joppa; lodges with Simon a tanner."
+        },
+        {
+          "ref": "Acts 10:1-48",
+          "note": "Sees the vision of the sheet with unclean animals; preaches to Cornelius's household as the Holy Ghost falls on Gentiles."
+        },
+        {
+          "ref": "Acts 12:1-19",
+          "note": "Imprisoned by Herod, freed by an angel, comes to Mary's house where Rhoda answers the door."
+        },
+        {
+          "ref": "Acts 15:6-11",
+          "note": "Speaks at the Jerusalem council, affirming salvation by grace for Gentile believers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: lodges with 'Simon a tanner' (9:43, 10:6), a different man from Simon the sorcerer under Philip's tier; folded into Peter's own verses since he takes no independent action.",
+        "Text verified identical to KJV on every spot-checked passage, including verse numbering."
+      ]
+    },
+    {
+      "id": "john_apostle_ethiopian",
+      "name": "John (son of Zebedee)",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "zebedee — Matthew 4:21, not individually indexed in Acts",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 3:1-11",
+          "note": "Goes to the temple with Peter; present at the healing of the lame man."
+        },
+        {
+          "ref": "Acts 4:13-19",
+          "note": "Arrested and examined alongside Peter before the council."
+        },
+        {
+          "ref": "Acts 8:14-17",
+          "note": "Sent with Peter to Samaria; lays hands on believers to receive the Holy Ghost."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from John Mark (Barnabas's tier) and from the unnamed high-priestly-kindred 'John' at 4:6 (kept in genealogyLists)."
+      ]
+    },
+    {
+      "id": "matthias_ethiopian",
+      "name": "Matthias",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 1:23-26",
+          "note": "Put forward alongside Joseph called Barsabas; chosen by lot to replace Judas among the eleven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mary_mother_of_mark_ethiopian",
+      "name": "Mary, the mother of John Mark",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "john_mark_ethiopian"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:12",
+          "note": "Her house is where 'many were gathered together praying' the night the angel frees Peter."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ananias_sapphira_ethiopian",
+      "name": "Ananias and Sapphira",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "each other, a married couple — Acts 5:1"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 5:1-6",
+          "note": "Ananias sells land, keeps back part of the price, lies to Peter about it, and dies."
+        },
+        {
+          "ref": "Acts 5:7-10",
+          "note": "Sapphira, unaware, repeats the same lie about the price and dies as well."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Ananias of Damascus and Ananias the high priest, both indexed under Paul's tier below."
+      ]
+    },
+    {
+      "id": "gamaliel_ethiopian",
+      "name": "Gamaliel",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 5:34-39",
+          "note": "A Pharisee and doctor of the law, advises the council to leave the apostles alone, citing Theudas and Judas of Galilee as precedent."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "rhoda_ethiopian",
+      "name": "Rhoda",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:13-15",
+          "note": "A damsel who answers the gate when Peter knocks; too glad to open it, she runs to report he's there instead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "dorcas_tabitha_ethiopian",
+      "name": "Dorcas (Tabitha)",
+      "role": "submanager",
+      "scribeTier": "Simon Peter",
+      "parentManagerId": "peter_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 9:36-42",
+          "note": "A disciple at Joppa 'full of good works and almsdeeds'; dies, mourned by widows showing coats she made, raised by Peter."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her name is given in both Aramaic (Tabitha) and Greek (Dorcas) by the text itself."
+      ]
+    },
+    {
+      "id": "simon_zelotes_ethiopian",
+      "name": "Simon called Zelotes",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 1:13",
+          "note": "Named among the eleven remaining apostles gathered in the upper room; no further individual action."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Simon Peter, Simon the sorcerer, and Simon the tanner."
+      ]
+    },
+    {
+      "id": "stephen_ethiopian",
+      "name": "Stephen",
+      "role": "manager",
+      "scribeTier": "Stephen, Full of Faith",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 6:5-6",
+          "note": "Chosen as one of the seven to serve, 'full of faith and of the Holy Ghost.'"
+        },
+        {
+          "ref": "Acts 6:8-10",
+          "note": "Does great wonders among the people; opponents unable to resist his wisdom."
+        },
+        {
+          "ref": "Acts 6:11-15",
+          "note": "Falsely accused of blasphemy before the council; his face seen 'as it had been the face of an angel.'"
+        },
+        {
+          "ref": "Acts 7:1-53",
+          "note": "Delivers his defense, retelling Israel's history from Abraham through Solomon."
+        },
+        {
+          "ref": "Acts 7:54-60",
+          "note": "Stoned to death; sees the heavens opened and the Son of man at God's right hand; prays for his killers as Saul looks on."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The first Christian martyr recorded in scripture; his death provokes the great persecution that scatters the church (8:1)."
+      ]
+    },
+    {
+      "id": "other_five_deacons_ethiopian",
+      "name": "Prochorus, Nicanor, Timon, Parmenas, and Nicolas",
+      "role": "submanager",
+      "scribeTier": "Stephen, Full of Faith",
+      "parentManagerId": "stephen_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 6:5",
+          "note": "Named alongside Stephen and Philip as the seven chosen to serve tables; Nicolas specified as 'a proselyte of Antioch.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "philip_evangelist_ethiopian",
+      "name": "Philip the Evangelist",
+      "role": "manager",
+      "scribeTier": "Philip the Evangelist",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "four unnamed daughters, virgins, which did prophesy — Acts 21:9, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Acts 6:5",
+          "note": "Chosen as one of the seven deacons."
+        },
+        {
+          "ref": "Acts 8:5-8",
+          "note": "Preaches Christ in a city of Samaria; great joy results as unclean spirits and the sick are healed."
+        },
+        {
+          "ref": "Acts 8:9-13",
+          "note": "Simon the sorcerer believes his preaching and is baptized."
+        },
+        {
+          "ref": "Acts 8:26-39",
+          "note": "Led by an angel to the Gaza road; explains Isaiah's prophecy to an Ethiopian eunuch and baptizes him."
+        },
+        {
+          "ref": "Acts 8:40",
+          "note": "Caught away by the Spirit, found preaching from Azotus onward to Caesarea."
+        },
+        {
+          "ref": "Acts 21:8-9",
+          "note": "Now called 'Philip the evangelist,' hosts Paul at Caesarea; his four daughters prophesy."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Philip the Apostle, listed only in the roster of the twelve (1:13) with no further action.",
+        "Note: this book's own Ethiopian-translation text records this scene of Philip and an Ethiopian eunuch directly (8:26-39) — a real, notable point of resonance with the translation itself, though the text of the passage is identical to the KJV account, not altered or expanded."
+      ]
+    },
+    {
+      "id": "simon_the_sorcerer_ethiopian",
+      "name": "Simon the Sorcerer",
+      "role": "submanager",
+      "scribeTier": "Philip the Evangelist",
+      "parentManagerId": "philip_evangelist_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 8:9-13",
+          "note": "Had bewitched Samaria with sorcery, claiming to be 'some great one'; believes Philip's preaching and is baptized."
+        },
+        {
+          "ref": "Acts 8:18-24",
+          "note": "Offers Peter and John money to buy the power to bestow the Holy Ghost; is sharply rebuked and asks for prayer."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ethiopian_eunuch_ethiopian",
+      "name": "The Ethiopian Eunuch",
+      "role": "submanager",
+      "scribeTier": "Philip the Evangelist",
+      "parentManagerId": "philip_evangelist_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 8:27-28",
+          "note": "A man of Ethiopia, an officer of great authority under Candace queen of the Ethiopians, returning from worship at Jerusalem, reading Isaiah."
+        },
+        {
+          "ref": "Acts 8:34-39",
+          "note": "Asks Philip who the prophet means, is taught of Jesus, requests baptism, and goes on his way rejoicing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Left deliberately unnamed by the text itself in every translation checked, including this one; no name is asserted here."
+      ]
+    },
+    {
+      "id": "barnabas_ethiopian",
+      "name": "Barnabas",
+      "role": "manager",
+      "scribeTier": "Barnabas, Son of Consolation",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 4:36-37",
+          "note": "A Levite of Cyprus named Joses, sells land and lays the money at the apostles' feet; surnamed Barnabas, 'son of consolation.'"
+        },
+        {
+          "ref": "Acts 9:26-27",
+          "note": "Takes the newly-converted Saul and brings him to the apostles, vouching for him."
+        },
+        {
+          "ref": "Acts 11:22-24",
+          "note": "Sent to Antioch, exhorts the believers there, 'a good man, full of the Holy Ghost and of faith.'"
+        },
+        {
+          "ref": "Acts 11:25-26",
+          "note": "Goes to Tarsus to fetch Saul; together they teach at Antioch for a year."
+        },
+        {
+          "ref": "Acts 13:1-3",
+          "note": "Set apart with Saul for missionary work by the Holy Ghost."
+        },
+        {
+          "ref": "Acts 14:11-12",
+          "note": "Mistaken for the god Jupiter by the crowd at Lystra."
+        },
+        {
+          "ref": "Acts 15:1-2, 15:36-41",
+          "note": "Attends the Jerusalem council; later has sharp contention with Paul over John Mark and sails for Cyprus with Mark instead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His original name, Joses, is stated directly by the text (4:36)."
+      ]
+    },
+    {
+      "id": "john_mark_ethiopian",
+      "name": "John Mark",
+      "role": "submanager",
+      "scribeTier": "Barnabas, Son of Consolation",
+      "parentManagerId": "barnabas_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "mary_mother_of_mark_ethiopian",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:12, 25",
+          "note": "His mother Mary's house is the prayer meeting Peter comes to; taken along by Barnabas and Saul from Jerusalem."
+        },
+        {
+          "ref": "Acts 13:5, 13",
+          "note": "Attends Paul and Barnabas as their minister on Cyprus, then departs at Perga to return to Jerusalem."
+        },
+        {
+          "ref": "Acts 15:37-39",
+          "note": "Paul refuses to take him on the second journey; the disagreement causes Paul and Barnabas to part ways."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "paul_ethiopian",
+      "name": "Saul / Paul the Apostle",
+      "role": "manager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 7:58-8:3",
+          "note": "As Saul, keeps the clothes of Stephen's executioners and makes havoc of the church, dragging believers to prison."
+        },
+        {
+          "ref": "Acts 9:1-9",
+          "note": "Blinded by a light on the road to Damascus; hears the risen Christ's voice, 'Saul, Saul, why persecutest thou me?'"
+        },
+        {
+          "ref": "Acts 9:15-19",
+          "note": "Ananias of Damascus restores his sight and he is baptized."
+        },
+        {
+          "ref": "Acts 13:9",
+          "note": "First called by the name 'Paul': 'Saul, (who also is called Paul).'"
+        },
+        {
+          "ref": "Acts 13:1-14:28",
+          "note": "First missionary journey with Barnabas through Cyprus and Asia Minor."
+        },
+        {
+          "ref": "Acts 16:6-10",
+          "note": "Sees the vision of a man of Macedonia calling him over."
+        },
+        {
+          "ref": "Acts 17:16-34",
+          "note": "Preaches to the philosophers at the Areopagus in Athens on 'the unknown god.'"
+        },
+        {
+          "ref": "Acts 21:27-36",
+          "note": "Seized in the temple at Jerusalem; a riot breaks out and he is arrested."
+        },
+        {
+          "ref": "Acts 27:1-44",
+          "note": "Shipwrecked en route to Rome after appealing to Caesar."
+        },
+        {
+          "ref": "Acts 28:1-6",
+          "note": "Bitten by a viper on Malta and shakes it off unharmed."
+        },
+        {
+          "ref": "Acts 28:30-31",
+          "note": "Spends two years in his own hired house in Rome, preaching with all confidence, no man forbidding him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Acts 22:3 states he was born in Tarsus in Cilicia; 23:6 that he was 'a Pharisee, the son of a Pharisee'; 22:28 that he was 'free born,' a Roman citizen by birth."
+      ]
+    },
+    {
+      "id": "ananias_of_damascus_ethiopian",
+      "name": "Ananias of Damascus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 9:10-16",
+          "note": "A disciple at Damascus, initially fearful, told in a vision to go to Saul."
+        },
+        {
+          "ref": "Acts 9:17-19",
+          "note": "Lays hands on Saul, restoring his sight; Saul is baptized and receives food."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Ananias the husband of Sapphira (Peter's tier) and Ananias the high priest, indexed below.",
+        "Not promoted to a full manager tier — his action, however vivid, is confined to a single episode serving Paul's own arc, unlike Cornelius or Apollos."
+      ]
+    },
+    {
+      "id": "timothy_ethiopian",
+      "name": "Timothy",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 16:1-3",
+          "note": "A disciple at Lystra, son of a believing Jewish woman and a Greek father; Paul has him circumcised and takes him along."
+        },
+        {
+          "ref": "Acts 17:14-15",
+          "note": "Sent ahead with Silas while Paul goes to Athens."
+        },
+        {
+          "ref": "Acts 20:4",
+          "note": "Listed among Paul's traveling companions from Macedonia to Asia."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "priscilla_aquila_ethiopian",
+      "name": "Aquila and Priscilla",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 18:1-3",
+          "note": "Paul finds them at Corinth, recently come from Italy after Claudius commanded Jews to leave Rome; lodges and works with them as tentmakers."
+        },
+        {
+          "ref": "Acts 18:18-19",
+          "note": "Sail with Paul to Syria; left at Ephesus."
+        },
+        {
+          "ref": "Acts 18:24-26",
+          "note": "Hear Apollos speak boldly in the synagogue and take him aside to expound the way of God more perfectly."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elymas_bar_jesus_ethiopian",
+      "name": "Elymas (Bar-jesus)",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 13:6-12",
+          "note": "A Jewish sorcerer and false prophet on Cyprus who withstands Paul and Barnabas, seeking to turn the proconsul from the faith; Paul strikes him blind."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "sergius_paulus_ethiopian",
+      "name": "Sergius Paulus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 13:6-12",
+          "note": "The deputy (proconsul) of Cyprus, 'a prudent man,' desires to hear the word of God and believes after seeing Elymas struck blind."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "demetrius_silversmith_ethiopian",
+      "name": "Demetrius the Silversmith",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 19:23-27",
+          "note": "A silversmith who makes shrines for Diana of the Ephesians; incites fellow craftsmen against Paul's preaching, fearing loss of trade."
+        },
+        {
+          "ref": "Acts 19:28-41",
+          "note": "The resulting uproar fills the city's theatre until the townclerk quiets the crowd."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "eutychus_ethiopian",
+      "name": "Eutychus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 20:7-12",
+          "note": "A young man who falls asleep during Paul's long sermon at Troas, falls from a third-story window and is taken up dead; Paul restores him alive."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "publius_of_malta_ethiopian",
+      "name": "Publius",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 28:7-8",
+          "note": "The 'chief man of the island' of Malta, lodges the shipwrecked party three days; his father is healed by Paul."
+        },
+        {
+          "ref": "Acts 28:9-10",
+          "note": "Other diseased islanders come and are healed; the party is honored with many gifts."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "julius_centurion_ethiopian",
+      "name": "Julius the Centurion",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 27:1-3",
+          "note": "A centurion of Augustus's band charged with delivering Paul to Rome; courteously lets him visit friends at Sidon."
+        },
+        {
+          "ref": "Acts 27:42-44",
+          "note": "Prevents the soldiers from killing the prisoners during the shipwreck, 'willing to save Paul.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "felix_governor_ethiopian",
+      "name": "Felix",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 24:1-21",
+          "note": "The governor before whom the high priest Ananias and the orator Tertullus accuse Paul; Paul answers for himself."
+        },
+        {
+          "ref": "Acts 24:24-26",
+          "note": "Sends for Paul with his wife Drusilla to hear him on faith in Christ; trembles but hopes for a bribe and leaves Paul bound two years."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Drusilla is named as 'his wife, which was a Jewess' but takes no independent action, so is not given her own entry."
+      ]
+    },
+    {
+      "id": "festus_governor_ethiopian",
+      "name": "Festus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 25:1-12",
+          "note": "Succeeds Felix as governor; before him Paul appeals to Caesar rather than be tried at Jerusalem."
+        },
+        {
+          "ref": "Acts 25:13-22",
+          "note": "Lays Paul's case before the visiting Herod Agrippa II, unsure what charge to send with him to Rome."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gallio_proconsul_ethiopian",
+      "name": "Gallio",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 18:12-17",
+          "note": "Deputy of Achaia; dismisses the Jews' accusation against Paul as a matter of their own law, and 'cared for none of those things' when Sosthenes is beaten before his judgment seat."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "agabus_prophet_ethiopian",
+      "name": "Agabus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 11:27-28",
+          "note": "A prophet who signifies by the Spirit a great dearth throughout the world, which comes to pass in Claudius's day."
+        },
+        {
+          "ref": "Acts 21:10-11",
+          "note": "Takes Paul's girdle, binds his own hands and feet, and prophesies Paul will be bound at Jerusalem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "lydia_of_thyatira_ethiopian",
+      "name": "Lydia of Thyatira",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 16:14-15",
+          "note": "A seller of purple of Thyatira, a worshipper of God at Philippi; the Lord opens her heart, she and her household are baptized."
+        },
+        {
+          "ref": "Acts 16:40",
+          "note": "Paul and Silas return to her house after their release from prison."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "trophimus_ethiopian",
+      "name": "Trophimus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 20:4",
+          "note": "Listed among Paul's traveling companions, identified as 'of Asia.'"
+        },
+        {
+          "ref": "Acts 21:29",
+          "note": "Jews from Asia wrongly suppose Paul brought him into the temple — the accusation that sparks the riot leading to Paul's arrest."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "aristarchus_ethiopian",
+      "name": "Aristarchus",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 19:29",
+          "note": "A Macedonian, Paul's companion in travel, seized alongside Gaius and dragged into the Ephesus theatre during the riot."
+        },
+        {
+          "ref": "Acts 20:4",
+          "note": "Listed among Paul's company into Asia, identified as one 'of the Thessalonians.'"
+        },
+        {
+          "ref": "Acts 27:2",
+          "note": "Boards the ship to Rome with Paul, 'a Macedonian of Thessalonica.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Present with Paul across three separate scenes spanning roughly a decade of narrative time."
+      ]
+    },
+    {
+      "id": "ananias_high_priest_ethiopian",
+      "name": "Ananias the High Priest",
+      "role": "submanager",
+      "scribeTier": "Saul, Called Paul",
+      "parentManagerId": "paul_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 23:1-5",
+          "note": "Presiding as high priest at Paul's hearing, commands those standing by to smite him on the mouth; Paul rebukes him, then apologizes on learning he is the high priest."
+        },
+        {
+          "ref": "Acts 24:1-9",
+          "note": "Comes to Caesarea with the elders and the orator Tertullus to formally accuse Paul before Felix."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: a third distinct Ananias in this book, separate from Ananias of Damascus and Ananias husband of Sapphira."
+      ]
+    },
+    {
+      "id": "cornelius_ethiopian",
+      "name": "Cornelius the Centurion",
+      "role": "manager",
+      "scribeTier": "Cornelius the Centurion",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 10:1-8",
+          "note": "A centurion of the Italian band at Caesarea, devout, feared God with all his house, gave much alms, prayed always; an angel tells him to send for Peter."
+        },
+        {
+          "ref": "Acts 10:24-33",
+          "note": "Awaits Peter with his kinsmen and near friends gathered together."
+        },
+        {
+          "ref": "Acts 10:44-48",
+          "note": "The Holy Ghost falls on him and his household as Peter speaks; they are baptized, the first recorded Gentile converts."
+        },
+        {
+          "ref": "Acts 11:1-18",
+          "note": "His conversion is defended by Peter before the Jerusalem church as evidence God grants repentance unto life to the Gentiles also."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "herod_agrippa_i_ethiopian",
+      "name": "Herod (Agrippa I)",
+      "role": "manager",
+      "scribeTier": "Herod, Eaten of Worms",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:1-2",
+          "note": "Stretches forth his hand to vex certain of the church, and kills James (brother of John) with the sword."
+        },
+        {
+          "ref": "Acts 12:3-19",
+          "note": "Imprisons Peter also, intending to bring him forth after Easter; an angel frees Peter instead."
+        },
+        {
+          "ref": "Acts 12:20-23",
+          "note": "Gives a public oration; the people cry 'It is the voice of a god, and not of a man'; an angel of the Lord smites him because he gave not God the glory, and he is eaten of worms and dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: called simply 'Herod' throughout chapter 12 — one of four men named Herod across this book+Matthew's scope."
+      ]
+    },
+    {
+      "id": "james_son_of_zebedee_ethiopian",
+      "name": "James (son of Zebedee)",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "zebedee — Matthew 4:21, not individually indexed in Acts",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:2",
+          "note": "Killed with the sword by Herod Agrippa I — his death is reported in a single verse."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from James of Jerusalem and James son of Alphaeus (apostle roster only, 1:13)."
+      ]
+    },
+    {
+      "id": "james_of_jerusalem_ethiopian",
+      "name": "James of Jerusalem",
+      "role": "manager",
+      "scribeTier": "James of Jerusalem",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 12:17",
+          "note": "Peter, freed from prison, instructs the disciples to 'shew these things unto James, and to the brethren.'"
+        },
+        {
+          "ref": "Acts 15:13-21",
+          "note": "Presides at the Jerusalem council, rendering judgment that Gentile believers not be troubled with circumcision."
+        },
+        {
+          "ref": "Acts 21:18-25",
+          "note": "Paul reports to James and the elders at Jerusalem; they advise him to join four men under a vow."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "apollos_ethiopian",
+      "name": "Apollos",
+      "role": "manager",
+      "scribeTier": "Apollos, Mighty in the Scriptures",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 18:24-26",
+          "note": "A Jew born at Alexandria, eloquent, mighty in the scriptures, knowing only the baptism of John; Priscilla and Aquila expound the way of God to him more perfectly."
+        },
+        {
+          "ref": "Acts 18:27-28",
+          "note": "Helps the believers in Achaia much, mightily convincing the Jews publicly that Jesus was Christ."
+        },
+        {
+          "ref": "Acts 19:1",
+          "note": "Paul arrives at Ephesus while Apollos is at Corinth."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "silas_ethiopian",
+      "name": "Silas",
+      "role": "manager",
+      "scribeTier": "Silas the Prophet",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 15:22, 27, 32",
+          "note": "A chief man among the brethren, a prophet, sent with Judas Barsabas to carry the Jerusalem council's letter to Antioch."
+        },
+        {
+          "ref": "Acts 15:40",
+          "note": "Chosen by Paul to accompany him on the second missionary journey after the split with Barnabas."
+        },
+        {
+          "ref": "Acts 16:19-24",
+          "note": "Beaten with many stripes and cast into prison at Philippi alongside Paul."
+        },
+        {
+          "ref": "Acts 16:25-34",
+          "note": "Sings praises with Paul at midnight; an earthquake opens the prison doors and the jailor is converted."
+        },
+        {
+          "ref": "Acts 16:37",
+          "note": "Paul declares them both Roman citizens, uncondemned and beaten publicly."
+        },
+        {
+          "ref": "Acts 17:1-15",
+          "note": "Travels with Paul through Thessalonica and Berea."
+        },
+        {
+          "ref": "Acts 18:5",
+          "note": "Rejoins Paul at Corinth, coming from Macedonia."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "judas_barsabas_ethiopian",
+      "name": "Judas surnamed Barsabas",
+      "role": "submanager",
+      "scribeTier": "Silas the Prophet",
+      "parentManagerId": "silas_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 15:22, 27, 32",
+          "note": "Chosen with Silas, chief men among the brethren, to carry the Jerusalem council's letter to Antioch and exhort the brethren, being prophets themselves."
+        },
+        {
+          "ref": "Acts 15:33",
+          "note": "Sent away in peace back to the apostles after his work at Antioch is done."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Judas Iscariot and from the Judas of Damascus address marker (9:11)."
+      ]
+    },
+    {
+      "id": "philippian_jailor_ethiopian",
+      "name": "The Philippian Jailor",
+      "role": "submanager",
+      "scribeTier": "Silas the Prophet",
+      "parentManagerId": "silas_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 16:27-30",
+          "note": "Wakes to find the prison doors open after the earthquake and draws his sword to kill himself, until Paul cries out that all are present."
+        },
+        {
+          "ref": "Acts 16:31-34",
+          "note": "Asks 'what must I do to be saved,' believes on the Lord Jesus Christ, washes their stripes, and is baptized with his whole household."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Left unnamed by the text — called only 'the keeper of the prison.'"
+      ]
+    },
+    {
+      "id": "herod_agrippa_ii_ethiopian",
+      "name": "Herod Agrippa II",
+      "role": "manager",
+      "scribeTier": "Herod Agrippa II, Almost Persuaded",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Acts 25:13-22",
+          "note": "Arrives at Caesarea with Bernice to salute Festus; hears the perplexing case against Paul and says, 'I would also hear the man myself.'"
+        },
+        {
+          "ref": "Acts 25:23-27",
+          "note": "Paul is brought before him and Bernice 'with great pomp,' so Festus can have a charge to send with him to Rome."
+        },
+        {
+          "ref": "Acts 26:1-29",
+          "note": "Gives Paul leave to speak for himself and hears his full defense and testimony of the risen Christ."
+        },
+        {
+          "ref": "Acts 26:28",
+          "note": "Replies, 'Almost thou persuadest me to be a Christian.'"
+        },
+        {
+          "ref": "Acts 26:30-32",
+          "note": "Rises with Festus and Bernice, privately concludes Paul 'might have been set at liberty, if he had not appealed unto Caesar.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: son of Herod Agrippa I; one of four men named Herod across this book+Matthew's scope."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list because Acts does not differentiate their individual actions, or because a link to another named figure is genuinely uncertain from the text alone. Carried over from the validated KJV Acts index since this translation's own text is verbatim-identical on every checked passage.",
+    "sanhedrinMembers4_6": {
+      "ref": "Acts 4:6",
+      "note": "Annas the high priest, Caiaphas, John, and Alexander, and as many as were of the kindred of the high priest — present at Peter and John's hearing but given no individual action; this 'John' is a third distinct figure from John son of Zebedee and John Mark."
+    },
+    "theudasAndJudasOfGalilee": {
+      "ref": "Acts 5:36-37",
+      "note": "Two failed revolutionary leaders cited by Gamaliel as historical precedent — reported speech about the past, not acting characters."
+    },
+    "antiochProphetsAndTeachers": {
+      "ref": "Acts 13:1",
+      "note": "Simeon called Niger, Lucius of Cyrene, and Manaen (brought up with Herod the tetrarch) — named alongside Barnabas and Saul, no further individual action."
+    },
+    "sonsOfSceva": {
+      "ref": "Acts 19:14-16",
+      "note": "Seven sons of Sceva, a Jewish chief priest, attempt to exorcise a spirit by Paul's name and are overpowered; not individually named."
+    },
+    "alexanderOfEphesusRiot": {
+      "ref": "Acts 19:33",
+      "note": "A Jew put forward by the crowd during the Ephesus riot, shouted down before he can speak — likely distinct from the Alexander named at 4:6."
+    },
+    "tertullus": {
+      "ref": "Acts 24:1-2",
+      "note": "A professional orator hired to present the accusation against Paul before Felix — a one-scene legal figure."
+    },
+    "sosthenes": {
+      "ref": "Acts 18:17",
+      "note": "Ruler of the synagogue at Corinth, beaten before Gallio's judgment seat; possibly but not confirmed the same Sosthenes of 1 Corinthians 1:1."
+    },
+    "egyptianOf21_38": {
+      "ref": "Acts 21:38",
+      "note": "An unnamed Egyptian rebel leader the chief captain mistakes Paul for — a passing historical reference."
+    },
+    "act20TravelCompanions": {
+      "ref": "Acts 20:4",
+      "note": "'Sopater of Berea; and of the Thessalonians, Aristarchus and Secundus; and Gaius of Derbe, and Timotheus; and of Asia, Tychicus and Trophimus.' Timothy, Trophimus, and Aristarchus indexed individually above; Sopater, Secundus, Gaius, and Tychicus kept as one collective entry."
+    },
+    "gaiusNamingVariance": {
+      "ref": "Acts 19:29 vs Acts 20:4",
+      "note": "'Gaius... of Macedonia' (19:29) and 'Gaius of Derbe' (20:4) carry different location descriptors — possibly two different men; flagged as unresolved, not merged."
+    },
+    "judasOfDamascus": {
+      "ref": "Acts 9:11",
+      "note": "'The street which is called Straight... the house of Judas' — a pure address marker, not an acting character."
+    },
+    "judasIscariotDeathActs": {
+      "ref": "Acts 1:16-19",
+      "note": "Peter recounts Judas's betrayal and death, described here as falling headlong and bursting asunder in a field bought with the reward of iniquity — the same physical detail as this translation's own text, logged descriptively without reconciling against Matthew 27:5's differing account."
+    }
+  }
+}

@@ -18,7 +18,7 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.3.4** — pre-release, core loop implemented and playable. This build's headline change is content, not features: the full Old Testament (39 books) is now playable end-to-end, and all 27 New Testament books' scribe/manager data is imported and ready but **deliberately not exposed in gameplay yet** — a "New Testament — Coming Soon" row shows in the Books tab instead, while the Old Testament experience itself gets polished first (real bugs from mobile playtesting are still being triaged, see [Bug Tracker](#bug-tracker--known-issues)). No new release build has been cut for 0.3.4 yet — hold off if you're looking for a fresh download, the last published build is still v0.3.3 below.
+**Version 0.4.0** — pre-release, core loop implemented and playable. Headline change: a full **Achievement system** — 655 real achievements (headline milestones, per-book completion, per-manager unlocks, per-manager "household complete" submanager-group achievements, and section-groupings like "The Five Books of Moses") generated straight from the game's own live Scribes/Managers data, browsable in a tabbed card-grid Achievements screen with bronze/silver/gold difficulty tiers and spoiler-safe hidden achievements. Also in this build: real mobile-device layout fixes are underway after testing on a physical Android phone surfaced genuine portrait-layout bugs (list-row text overlap, wrong Canvas Scaler reference resolution) — the worst of these are fixed, a device-responsive orientation system is in progress, and a manual portrait/landscape Settings toggle is still to come. No new release build has been cut for 0.4.0 yet — this is a source commit checkpoint ahead of the next build pass; the last published build is still v0.3.3 below.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
@@ -70,12 +70,14 @@ All releases (including older versions and full changelogs) are on the [Releases
 - Managers are correctly locked until their own scribe tier is unlocked by verse progress, not just by player level — and that gating stays keyed to Genesis' progress specifically, so switching to a different active book never re-locks already-unlocked scribes/managers
 - **Full Old Testament, all 39 books playable**: every book from Genesis through Malachi has its own real scribe/manager/submanager roster (408 tiers total), computed against its real KJV verse positions, switchable via the Books tab in canonical order
 - **All 27 New Testament books' data imported** (276 more tiers — Matthew through Revelation, each Gospel's Jesus independently authored per book) but intentionally not switchable in-game yet — a "New Testament — Coming Soon" row shows in the Books tab instead, until the Old Testament experience is polished
+- **Save/load persistence**: local JSON save file (not in-memory-only), atomic temp-file-then-rename writes with a `.bak` fallback, light obfuscation, and graceful corruption recovery (falls back primary → backup → fresh save on any read failure) — verified via a real save → exit → reload round trip and both corruption-recovery paths
+- **Achievement system (new in 0.4.0)**: 655 real achievements generated from the game's own live data, not hand-typed — 25 hand-authored headline milestones, 66 per-book completion achievements (39 OT + 27 NT), 10 section-grouping/"ultimate" achievements (e.g. completing the Pentateuch, the Four Gospels, the full Bible), 386 per-manager unlock achievements, and 168 per-manager "household complete" achievements (hire every submanager under a given manager). Browsable via a Bloons-TD6-style tabbed card grid (category tabs + live search) with bronze/silver/gold difficulty-tier diamond frames and real category icon art. Spoiler-hidden achievements show "Hidden Achievement" until earned so discovering a new named character stays a surprise. Global persistence, independent of save slots, so progress is visible no matter which slot is active.
 
 ## Tech stack
 
 - **Engine:** Unity 6.5, URP 3D Core template
 - **Language:** C#, ScriptableObject-driven config (pricing curves, XP constants, scribe rosters — nothing gameplay-numeric is hardcoded, so it can be rebalanced after playtesting without touching code)
-- **UI:** TextMeshPro, a custom-generated Georgia font asset (flagged for a licensing swap before any commercial release — see [Open questions](#open-questions--roadmap))
+- **UI:** TextMeshPro, Ibarra Real Nova (openly licensed, replacing an earlier Georgia font asset that was flagged as a licensing risk for a shipped build)
 - **Tooling:** [Unity-MCP](https://github.com/IvanMurzak/Unity-MCP) for AI-assisted Editor/scene/Play-mode workflows during development
 - **Source control:** Git + Git LFS
 
@@ -117,12 +119,11 @@ Full tracker (kept in sync, includes fix descriptions and root causes): see the 
 ## Open questions / roadmap
 
 - Whether Psalms should be a starter-book option or gated behind prestige (needs real per-chapter verse-count analysis — already gathered, decision deferred)
-- Save/load persistence (currently in-memory-per-session only — explicitly deferred, not yet started)
 - Real narrative-accurate scribe/manager unlock thresholds beyond the current placeholder mechanism-testing values
-- A properly licensed serif font before any commercial release (Georgia is Windows-system-licensed, fine for prototyping only)
 - NIV/Amplified translations (on hold pending licensing review)
 - Real audio (volume slider, SFX/BGM, verse narration) — not started
-- Save/load, Psalms placement, and font licensing are the main blockers before any release build
+- Real mobile-device responsive layout — a physical Android device test surfaced genuine portrait-layout bugs (wrong Canvas Scaler reference resolution on several screens, list rows with real text-on-text overlap, the Skill Tree rendering as a tiny dot on a narrow screen). The worst of these are fixed and verified; still open: a true single-column phone reflow for the Clicker/Buy Verse screens (currently just the wide desktop layout scaled down), the Skill Tree's own zoom baseline (Bug #58), and a manual portrait/landscape toggle in Settings (the auto-rotate-following logic underneath it is already built)
+- Also actively in progress, not yet playable: a 3-save-slot system (replacing the earlier single implicit save), and a full Geneva Bible 1560 + Ethiopian Bible data layer (231 books' worth of scribe/manager content indexed alongside KJV's — extracted, validated, not yet wired into gameplay)
 
 ## Guiding principle
 

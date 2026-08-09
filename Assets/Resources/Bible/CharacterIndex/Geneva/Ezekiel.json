@@ -1,0 +1,825 @@
+{
+  "book": "Ezekiel",
+  "translation": "Geneva",
+  "canonicalOrder": 26,
+  "status": "drafted directly against the real extracted Geneva Bible 1560 verse text (Assets/Resources/Verses/Geneva/ezekiel_26.json), read across all 48 chapters (full read of ch.1-18, targeted verification reads/greps of ch.19,23,25-32,34-39,42-43,47-48), cross-checked against the existing validated KJV Ezekiel.json for tier-naming-style inspiration only",
+  "notes": "Structurally and narratively this Geneva translation of Ezekiel matches the KJV's Ezekiel almost exactly — same 48 chapters, same 17 major scenes/oracles in the same order, same named figures (Ezekiel son of Buzi; Nebuchad-nezzar; the prince/king of Tyrus; the unnamed Pharaoh; Gog of Magog; Aholah and Aholibah as Samaria/Jerusalem; Daniel/Noah/Job cited together at 14:14,20 and 28:3; the two distinct Jaazaniahs at 8:11 and 11:1; Pelatiah son of Benaiah dying at 11:13). No content/canon-structure divergence like the Ethiopian Ezra case was found here — this is the same book, only in 1560 English. Real, worth-preserving translation-specific differences found by reading the actual text rather than assuming KJV parity: (1) this Geneva text spells the Babylonian king 'Nebuchad-nezzar' (hyphenated, '-nezzar' with an n) at every occurrence (26:7, 29:18-19, 30:10) — genuinely different from the existing KJV Ezekiel.json's own finding that KJV Ezekiel specifically uses 'Nebuchadrezzar' (with an r); this Geneva text does not use the r-spelling anywhere in this book. (2) At 38:5, Gog's coalition is named 'Paras, ...Cush, and Phut' — transliterated Hebrew place-names — rather than the KJV's translated 'Persia... Ethiopia... Libya'; Gomer and 'the house of Togarmah of the North quarters' at 38:6 match KJV. (3) General 1560 archaic orthography throughout ('sonne' for son, 'worde'/'wordes', 'Ierusalem', 'Iaazaniah' for Jaazaniah, 'Dauid' for David, 'Iudah'/'Israel' etc. with I/J interchanged) — preserved verbatim in verse notes/quotes rather than modernized, per the project's scripture-is-never-altered rule. Aholah/Aholibah (23:4) are spelled identically to KJV. The 25:1-17 oracles against Ammon/Moab/Edom/Philistia, the ch.32 'nations in the pit' list (Asshur, Elam, Edom, princes of the North, Zidonians), and the ch.48:35 closing line ('the name of the citie from that day shalbe, The Lord is there') were all verified to match KJV content and order. Same two same-book naming collisions as the KJV index apply here and are flagged accordingly: two distinct men named Iaazaniah (8:11 son of Shaphan vs. 11:1 son of Azur), and the ambiguous 'Daniel' cited at 14:14/14:20/28:3 (possibly the prophet, possibly an unrelated ancient figure — this Geneva text does not resolve it either, so no claim is asserted). Pharaoh in ch.29-32 is left unnamed here too, matching KJV. The prince of Tyrus (28:1-10) and king of Tyrus (28:11-19) are kept together under one manager as the text presents them, without asserting whether they are the same ruler described two ways or two different figures — the text itself never states which.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Scroll",
+      "managerId": "ezekiel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Wheele Within a Wheele",
+      "managerId": "cherubims_and_wheeles_vision_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Watchman's Trumpet",
+      "managerId": "watchman_commission_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Bricke of Ierusalem",
+      "managerId": "siege_sign_acts_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Departing Glorie",
+      "managerId": "glorie_departs_temple_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Two Sisters' Allegorie",
+      "managerId": "aholah_and_aholibah_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Eagle and the Vine",
+      "managerId": "eagles_and_vine_parable_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Soule That Sinneth",
+      "managerId": "individual_responsibility_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Nations' Reckoning",
+      "managerId": "judgment_on_neighbor_nations_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Marchant Shippes of Tyrus",
+      "managerId": "tyre_lament_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Babel's Siege Engine",
+      "managerId": "nebuchadnezzar_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Sealer of the Summe",
+      "managerId": "prince_of_tyrus_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Great Dragon of the Riuers",
+      "managerId": "pharaoh_king_of_egypt_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "One Shepherd's Staffe",
+      "managerId": "shepherds_of_israel_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Valley of Drie Bones",
+      "managerId": "valley_of_dry_bones_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Gog's Warre Horde",
+      "managerId": "gog_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Riuer from the Threshold",
+      "managerId": "new_temple_vision_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "ezekiel_geneva",
+      "name": "Ezekiel",
+      "role": "manager",
+      "scribeTier": "Tier 1",
+      "genealogy": {
+        "father": "Buzi the Priest",
+        "mother": null,
+        "spouses": [
+          "unnamed wife, called only 'the desire of thine eyes,' whose sudden death (24:15-18) is itself a sign-act"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1:1-3",
+          "note": "'The worde of the Lord came vnto Ezekiel the Priest, the sonne of Buzi,' by the riuer Chebar among the Babylonian captiues, in the thirtieth year."
+        },
+        {
+          "ref": "2:9-3:3",
+          "note": "Given a roule (scroll) of Lamentations, mourning, and woe to eat; 'it was in my mouth as sweete as honie.'"
+        },
+        {
+          "ref": "3:17",
+          "note": "'I haue made thee a watchman vnto the house of Israel.'"
+        },
+        {
+          "ref": "3:26-27",
+          "note": "His tongue made to cleave to the roofe of his mouth, struck dumme except when the Lord gives him a message; lifted in 33:22."
+        },
+        {
+          "ref": "4:1-5:4",
+          "note": "Performs the siege sign-acts against Ierusalem: draws the city on a brick, lies bound on his side a set number of days, and shaves his head and beard with a sharp knife and barber's razor."
+        },
+        {
+          "ref": "24:15-18",
+          "note": "Told his wife will die suddenly as a sign to Israel; forbidden to mourn her outwardly."
+        },
+        {
+          "ref": "33:21-22",
+          "note": "His mouth is opened once a man that had escaped Ierusalem brings news the city is smitten."
+        },
+        {
+          "ref": "40:1-4",
+          "note": "Carried in a vision to a very high mountain to be shown the new temple."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'sonne of man' throughout the book, more than any other biblical figure.",
+        "This translation renders 'son' as 'sonne' and 'word' as 'worde' consistently, 1560 spelling preserved exactly as extracted."
+      ],
+      "perkFlavor": "loyalty-boost"
+    },
+    {
+      "id": "cherubims_and_wheeles_vision_geneva",
+      "name": "Vision of the Cherubims and Wheeles",
+      "role": "law",
+      "scribeTier": "Tier 2",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Reveals God's mobile throne-chariot of glory to Ezekiel by the riuer Chebar, teaching that God's presence is not confined to the Ierusalem temple even among exiles in a foreign land.",
+      "verses": [
+        {
+          "ref": "1:4-14",
+          "note": "Four beasts each with four faces (man, lion, bullock, eagle) and four wings come out of a whirlewind from the North."
+        },
+        {
+          "ref": "1:15-21",
+          "note": "A wheel beside each beast, 'as it were a wheele in another wheele,' full of eyes, moving wherever the spirit led."
+        },
+        {
+          "ref": "1:22-28",
+          "note": "A firmament like crystal, a throne like a saphir stone, and 'the appearance of the similitude of the glorie of the Lord'; Ezekiel falls on his face."
+        },
+        {
+          "ref": "10:1-22",
+          "note": "The vision recurs; the beasts are explicitly identified as Cherubims."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verse 1:16's 'one wheele in another wheele' is the source of the familiar English idiom, present in this Geneva wording as well as KJV's."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "watchman_commission_geneva",
+      "name": "The Watchman Commission",
+      "role": "law",
+      "scribeTier": "Tier 3",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Sets Ezekiel's personal accountability as a watchman: he must warn Israel of judgment or their blood is required at his hand; if he warns and is not heeded, he is guiltless.",
+      "verses": [
+        {
+          "ref": "3:17-21",
+          "note": "'Sonne of man, I haue made thee a watchman vnto the house of Israel': failing to warn the wicked makes their blood Ezekiel's own responsibility."
+        },
+        {
+          "ref": "33:1-9",
+          "note": "The watchman charge restated near the book's turning point after news of Ierusalem's fall."
+        },
+        {
+          "ref": "33:14-20",
+          "note": "Restates individual accounting: a wicked man who turns and does 'that which is lawfull and right' shall live; a righteous man who turns to iniquity dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The watchman image assumes a sentry whose sole duty is to sound the alarm, not personally repel the enemy."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "siege_sign_acts_geneva",
+      "name": "Siege Sign-Acts",
+      "role": "law",
+      "scribeTier": "Tier 4",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Dramatizes the coming siege and exile of Ierusalem so vividly that words alone could not, acting the judgment out before it happens.",
+      "verses": [
+        {
+          "ref": "4:1-3",
+          "note": "Ezekiel draws Ierusalem on a brick and lays siege engines against it, with an iron pan set as a wall between himself and the city."
+        },
+        {
+          "ref": "4:4-6",
+          "note": "Lies on his left side 390 days bearing Israel's iniquity, then his right side 40 days bearing Iudah's."
+        },
+        {
+          "ref": "4:9-15",
+          "note": "Bakes bread with rationed grain and water over man's dung, changed to bullock's dung after his protest, acting out siege famine."
+        },
+        {
+          "ref": "5:1-4",
+          "note": "Takes 'a sharpe knife, or a barbour's rasor' to his head and beard, dividing the hair into thirds — burned, smitten with the knife, and scattered in the wind — with a few bound in his skirts."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The sign-act's own explanation (5:5-12) makes clear the divided hair represents Ierusalem's people split between plague/famine, sword, and scattering among the nations."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "glorie_departs_temple_geneva",
+      "name": "The Glorie Departs the Temple",
+      "role": "law",
+      "scribeTier": "Tier 5",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Exposes idolatry inside the Ierusalem temple and shows its consequence: God's glory itself withdraws from the house before it is destroyed.",
+      "verses": [
+        {
+          "ref": "8:3-6",
+          "note": "The Spirit carries Ezekiel in vision to Ierusalem to see 'the idole of indignation' at the temple's North gate."
+        },
+        {
+          "ref": "8:10-11",
+          "note": "Seuentie of the Ancients of Israel, led by Iaazaniah the sonne of Shaphan, offer incense to idols painted on the wall in a dark chamber."
+        },
+        {
+          "ref": "8:14",
+          "note": "Women weeping for Tammuz at the temple's North gate."
+        },
+        {
+          "ref": "8:16",
+          "note": "About five and twentie men worship the sun with their backs to the temple."
+        },
+        {
+          "ref": "9:2-6",
+          "note": "A man clothed in linen with a writer's inkhorn marks the foreheads of those who sigh and cry over the abominations; the rest are struck down."
+        },
+        {
+          "ref": "10:4,18-19",
+          "note": "The glorie of the Lord rises from the Cherub to the doore of the house, then departs to the East gate."
+        },
+        {
+          "ref": "11:1,13",
+          "note": "Among the princes plotting evil counsel are Iaazaniah the sonne of Azur and Pelatiah the sonne of Benaiah — a different Iaazaniah than the elder at 8:11."
+        },
+        {
+          "ref": "11:13",
+          "note": "Pelatiah dies as Ezekiel prophesies, prompting him to cry, 'Ah Lord God, wilt thou then vtterly destroy all the remnant of Israel?'"
+        },
+        {
+          "ref": "11:23",
+          "note": "The glorie of the Lord finally departs the city, standing on the mountain on its East side."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Two different men named Iaazaniah appear in this single vision: son of Shaphan (8:11, an idolatrous elder) and son of Azur (11:1, a scheming prince) — not the same person."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "pelatiah_son_of_benaiah_geneva",
+      "name": "Pelatiah sonne of Benaiah",
+      "role": "submanager",
+      "parentManagerId": "glorie_departs_temple_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Benaiah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "11:1",
+          "note": "Named among 'the princes of the people' at the temple's East gate plotting evil counsel."
+        },
+        {
+          "ref": "11:13",
+          "note": "Dies suddenly as Ezekiel prophesies against the princes — the only one of the group whose individual fate is recorded."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His death is the direct on-the-page trigger for Ezekiel's anguished intercession for the remnant of Israel."
+      ]
+    },
+    {
+      "id": "aholah_and_aholibah_geneva",
+      "name": "Aholah and Aholibah",
+      "role": "law",
+      "scribeTier": "Tier 6",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Uses the allegory of two adulterous sisters to indict Samaria and Ierusalem for political and religious unfaithfulness, describing foreign alliances as harlotry.",
+      "verses": [
+        {
+          "ref": "23:4",
+          "note": "'The names of them were Aholah the elder, and Aholibah her sister... Samaria is Aholah, and Ierusalem Aholibah.'"
+        },
+        {
+          "ref": "23:5-10",
+          "note": "Aholah's harlotry with Asshur (Assyria) leads to her destruction by those same lovers."
+        },
+        {
+          "ref": "23:11-35",
+          "note": "Aholibah, more corrupt than her sister, dotes on Assyrians, Chaldeans, and Egyptians alike, and is judged accordingly."
+        },
+        {
+          "ref": "16:1-14",
+          "note": "An earlier related allegory: Ierusalem as an abandoned infant grown into a bride adorned by the Lord, before turning to harlotry from 16:15 onward."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text spells the names identically to the KJV — 'Aholah' and 'Aholibah,' with an initial A."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "eagles_and_vine_parable_geneva",
+      "name": "The Two Eagles and the Vine",
+      "role": "law",
+      "scribeTier": "Tier 7",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Explains Iudah's recent political history in coded imagery — Babel's deportation of a Iudean king, the installation and rebellion of a vassal king, and his doomed appeal to Egypt — as covenant-breaking God himself will judge.",
+      "verses": [
+        {
+          "ref": "17:3-4",
+          "note": "'The great eagle with great wings' takes the top of a cedar into 'the land of marchants' and sets it in 'a citie of marchants.'"
+        },
+        {
+          "ref": "17:5-6",
+          "note": "The eagle plants a seed that grows into a low, spreading vine."
+        },
+        {
+          "ref": "17:7-10",
+          "note": "The vine turns her roots toward a second great eagle instead, and is warned she shall wither."
+        },
+        {
+          "ref": "17:22-24",
+          "note": "The chapter closes with a contrasting promise: the Lord himself will plant a tender branch from the cedar's top on Israel's high mountain."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The parable never names any nation or ruler directly — it is told as a riddle, though 17:11-21 explains the outcome plainly."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "individual_responsibility_geneva",
+      "name": "The Soule That Sinneth",
+      "role": "law",
+      "scribeTier": "Tier 8",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Overturns the proverb of inherited guilt, teaching each person is judged for his own righteousness or sin, and that repentance genuinely changes a person's standing before God.",
+      "verses": [
+        {
+          "ref": "18:2-4",
+          "note": "Quotes and rejects the proverb 'The fathers haue eaten sowre grapes, and the childrens teeth are set on edge': 'the soule that sinneth, it shall die.'"
+        },
+        {
+          "ref": "18:20",
+          "note": "'The sonne shall not beare the iniquitie of the father, neyther shall the father beare the iniquitie of the sonne' (paraphrase of the chapter's teaching as given)."
+        },
+        {
+          "ref": "18:21-23",
+          "note": "A wicked man who turns from his sins 'shall surely liue, he shall not die.'"
+        },
+        {
+          "ref": "18:26-28",
+          "note": "Likewise a righteous man who turns to sin loses his prior righteousness before God."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of the clearest Old Testament statements against inherited/corporate guilt, directly addressing exiles who blamed captivity on earlier generations' sins."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "daniel_noah_job_geneva",
+      "name": "Noah, Daniel, and Iob (as cited in Ezekiel)",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "14:14",
+          "note": "'Though these three men, Noah, Daniel, and Iob, were among them, they shoulde deliuer but their owne soules by their righteousnes.'"
+        },
+        {
+          "ref": "14:20",
+          "note": "Repeated: their righteousness would deliver 'neither sonne nor daughter.'"
+        },
+        {
+          "ref": "28:3",
+          "note": "Spoken sarcastically to the prince of Tyrus: 'thou art wiser then Daniel: there is no secrete that they can hide from thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'Daniel' named here is a real, unresolved ambiguity in this text as well as KJV's — possibly the prophet Daniel (a contemporary of Ezekiel), possibly an ancient figure from earlier tradition grouped with Noah and Iob; this Geneva text does not settle which is meant."
+      ]
+    },
+    {
+      "id": "judgment_on_neighbor_nations_geneva",
+      "name": "Judgment on Ammon, Moab, Edom, and the Philistims",
+      "role": "law",
+      "scribeTier": "Tier 9",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Announces judgment on four nations that rejoiced over or exploited Iudah's fall, teaching that gloating over a covenant people's suffering brings judgment on the gloaters too.",
+      "verses": [
+        {
+          "ref": "25:1-7",
+          "note": "Ammon judged for saying 'Aha' over the temple's profaning and Iudah's captivity."
+        },
+        {
+          "ref": "25:8-11",
+          "note": "Moab judged alongside Seir for treating Iudah 'like all the heathen.'"
+        },
+        {
+          "ref": "25:12-14",
+          "note": "Edom judged for 'taking vengeance vpon the house of Iudah.'"
+        },
+        {
+          "ref": "25:15-17",
+          "note": "The Philistims judged for acting 'with a despitefull heart' out of old hatred."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "All four oracles are deliberately brief compared to the multi-chapter oracles against Tyrus and Egypt that follow."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "tyre_lament_geneva",
+      "name": "Lamentation for Tyrus",
+      "role": "law",
+      "scribeTier": "Tier 10",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Mourns and pronounces judgment on Tyrus as a proud maritime trading power, personified as a magnificent ship built and wrecked, warning that commercial wealth and beauty are not lasting security.",
+      "verses": [
+        {
+          "ref": "26:3-5",
+          "note": "Many nations will come against Tyrus 'as the sea mounteth vp with his waues'; it will become 'a spreading of nettes.'"
+        },
+        {
+          "ref": "26:7",
+          "note": "'Beholde, I will bring vpon Tyrus Nebuchad-nezzar King of Babel, a King of Kings from the North.'"
+        },
+        {
+          "ref": "27:5-9",
+          "note": "Tyrus described as a beautifully built ship, its boards, masts, and sails sourced from Shenir, Lebanon, Bashan, and the isles of Chittim."
+        },
+        {
+          "ref": "27:12-24",
+          "note": "An extensive trading-partner list — Tarshish, Iauan, Tubal, Meshech, Togarmah, Dedan, Aram, Iudah and Israel, Damascus, Arabia and Kedar, Sheba and Raamah — trading silver, iron, ivory, wine, and spices."
+        },
+        {
+          "ref": "27:26-36",
+          "note": "The ship of Tyrus is wrecked 'in the mids of the sea'; other merchants lament her fall."
+        },
+        {
+          "ref": "28:20-23",
+          "note": "A brief related oracle judges neighboring Zidon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of the most detailed trade-goods lists anywhere in the Old Testament, functioning almost as an ancient shipping manifest."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "nebuchadnezzar_geneva",
+      "name": "Nebuchad-nezzar",
+      "role": "manager",
+      "scribeTier": "Tier 11",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "26:7",
+          "note": "Named as the king the Lord will bring against Tyrus: 'a King of Kings, from the North, with horses, and with charets, and with horsemen.'"
+        },
+        {
+          "ref": "29:18-19",
+          "note": "His army labored hard against Tyrus ('euery head was made balde, and euery shoulder was made bare') and received no wages, so the Lord gives him Egypt as payment instead."
+        },
+        {
+          "ref": "30:10",
+          "note": "'I will also make the multitude of Egypt to cease by the hand of Nebuchad-nezzar King of Babel.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text spells the king's name 'Nebuchad-nezzar' (hyphenated, with an n) at every occurrence in this book — a real, worth-preserving spelling difference from the existing KJV Ezekiel index, which found KJV's own Ezekiel text consistently uses 'Nebuchadrezzar' (with an r) instead."
+      ],
+      "perkFlavor": "cost-cutter"
+    },
+    {
+      "id": "prince_of_tyrus_geneva",
+      "name": "Prince of Tyrus / King of Tyrus",
+      "role": "manager",
+      "scribeTier": "Tier 12",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "28:2",
+          "note": "Condemned for pride: 'thou hast said, I am a God, I sit in the seat of God... yet thou art but a man and not God.'"
+        },
+        {
+          "ref": "28:3",
+          "note": "Sarcastically told he is wiser than Daniel — see the Daniel naming note elsewhere in this book."
+        },
+        {
+          "ref": "28:5",
+          "note": "His riches, gained 'by thy great wisedome and by thine occupying,' are named as the root of his pride."
+        },
+        {
+          "ref": "28:12-13",
+          "note": "A lament for 'the King of Tyrus' shifts to different imagery: 'full of wisedome, and perfite in beautie... thou hast been in Eden the garden of God.'"
+        },
+        {
+          "ref": "28:14-15",
+          "note": "Called 'the anointed Cherub, that couereth,' 'perfite in thy wayes from the day that thou wast created, till iniquitie was found in thee.'"
+        },
+        {
+          "ref": "28:16-19",
+          "note": "Cast out of 'the holy mountaine of God' for violence and corrupted wisdom, brought to ashes 'in the sight of all them that beholde thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "As in KJV, this text addresses Tyrus's ruler in two distinct passages within ch.28 — a human 'prince' (28:1-10) and a lament for a 'king' in Eden/Cherub imagery (28:11-19) — without ever stating whether these describe one ruler two ways or two different figures."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "pharaoh_king_of_egypt_geneva",
+      "name": "Pharaoh, King of Egypt",
+      "role": "manager",
+      "scribeTier": "Tier 13",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "29:3",
+          "note": "Called 'the great dragon, that lieth in the middes of his riuers,' who claims 'The riuer is mine, and I haue made it for my selfe.'"
+        },
+        {
+          "ref": "29:6-7",
+          "note": "Egypt described as 'a staffe of reede' that broke and rent the shoulder of Israel when leaned upon."
+        },
+        {
+          "ref": "29:19-20",
+          "note": "Given to Nebuchad-nezzar as spoil, wages for his army's labor against Tyrus."
+        },
+        {
+          "ref": "31:2-9",
+          "note": "Egypt compared to Asshur, pictured as a cedar in Lebanon envied by every tree in Eden, before being cut down."
+        },
+        {
+          "ref": "32:2",
+          "note": "A lamentation calls him 'a yong lion of the nations' and likens him to a whale in the seas."
+        },
+        {
+          "ref": "32:22-30",
+          "note": "Egypt sent down to the pit alongside other fallen powers already there: Asshur, Elam, Edom, the princes of the North, and the Zidonians."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text never names Pharaoh personally, matching KJV — the oracles are placed by internal dating (e.g. 29:17's 'seuen and twentieth yeere') rather than a named ruler."
+      ],
+      "perkFlavor": "cost-cutter"
+    },
+    {
+      "id": "shepherds_of_israel_geneva",
+      "name": "The Shepherdes of Israel",
+      "role": "law",
+      "scribeTier": "Tier 14",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Condemns Israel's rulers, its 'shepherds,' for feeding themselves instead of the flock, and promises the Lord will personally shepherd His people and set up one righteous ruler, 'my seruant Dauid,' establishing a covenant of peace.",
+      "verses": [
+        {
+          "ref": "34:2-4",
+          "note": "'Wo be vnto the shepherds of Israel that feede them selues! should not the shepherds feede the flockes?' — condemned for not strengthening the weak, healing the sick, or seeking the lost."
+        },
+        {
+          "ref": "34:11-16",
+          "note": "The Lord says He himself will search for and gather the scattered sheep, feed them, and bind up the broken."
+        },
+        {
+          "ref": "34:23-24",
+          "note": "'I wil set vp a shepherd ouer them, and he shall feede them, euen my seruant Dauid... my seruant Dauid shalbe the prince amog them.'"
+        },
+        {
+          "ref": "34:25",
+          "note": "'I will make with them a couenant of peace.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'My seruant Dauid' does not literally mean the historical King Dauid, long dead by Ezekiel's time — this text elsewhere (37:24-25) repeats the identical promised-ruler phrase without further identifying who is meant."
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "valley_of_dry_bones_geneva",
+      "name": "The Valley of Drie Bones",
+      "role": "law",
+      "scribeTier": "Tier 15",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Pictures national restoration as resurrection, God breathing life back into Israel's dead hope of return, and reuniting the divided kingdoms of Iudah and Israel/Ioseph under one king.",
+      "verses": [
+        {
+          "ref": "37:1-3",
+          "note": "Set down in a valley 'full of bones,' very dry; asked, 'Sonne of man, can these bones liue?'"
+        },
+        {
+          "ref": "37:7-10",
+          "note": "At Ezekiel's prophesying, the bones come together, are covered with sinew, flesh, and skin, and 'breath came into them, and they liued, and stood vp vpon their feete, an exceeding great armie.'"
+        },
+        {
+          "ref": "37:11-14",
+          "note": "Interpreted plainly: 'these bones are the whole house of Israel,' with a promise the Lord will open their graves and bring them to their own land."
+        },
+        {
+          "ref": "37:16-19",
+          "note": "Two sticks, one for Iudah and one for Ioseph/Ephraim and Israel, joined into one stick in Ezekiel's hand, signifying the two kingdoms reunited."
+        },
+        {
+          "ref": "37:24-25",
+          "note": "Again promises 'Dauid my seruant shall be King ouer them,' echoing ch.34's shepherd oracle."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A related promise just before this vision, 36:26-27, pairs the same restoration hope with 'A newe heart also will I giue you, and a new spirit wil I put within you.'"
+      ],
+      "perkFlavor": null
+    },
+    {
+      "id": "gog_geneva",
+      "name": "Gog",
+      "role": "manager",
+      "scribeTier": "Tier 16",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "38:2-3",
+          "note": "Addressed as 'Gog, and against the lande of Magog, the chiefe prince of Meshech and Tubal.'"
+        },
+        {
+          "ref": "38:5-6",
+          "note": "His invading coalition includes 'Paras, of Cush, and Phut,' plus Gomer and 'the house of Togarmah of the North quarters' — this Geneva text uses the transliterated place-names Paras/Cush/Phut rather than KJV's translated Persia/Ethiopia/Libya."
+        },
+        {
+          "ref": "38:16",
+          "note": "Comes up 'against my people of Israel, as a cloude to couer the land.'"
+        },
+        {
+          "ref": "38:19-22",
+          "note": "Defeated by a great shaking, pestilence, blood, rain, hailstones, fire, and brimstone; his own soldiers turn swords against one another."
+        },
+        {
+          "ref": "39:17-20",
+          "note": "Birds and beasts summoned to feast on the slain of Gog's army, described as a great sacrificial 'supper.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Gog and Magog are picked up centuries later in Revelation, but that belongs to a different book — Ezekiel's own text situates this as a specific invasion oracle against Israel."
+      ],
+      "perkFlavor": "cost-cutter"
+    },
+    {
+      "id": "new_temple_vision_geneva",
+      "name": "The New Temple Vision",
+      "role": "law",
+      "scribeTier": "Tier 17",
+      "deliveredBy": "ezekiel_geneva",
+      "purpose": "Closes the book with a detailed vision of a rebuilt temple, the glory of the Lord returning to dwell in it, a life-giving river flowing from it, and the land re-divided among the twelve tribes — a hope of restored worship and presence after judgment.",
+      "verses": [
+        {
+          "ref": "40:1-4",
+          "note": "Ezekiel is set on 'a very high mountaine' and told to observe carefully all that he is shown, to declare it to the house of Israel."
+        },
+        {
+          "ref": "40:5-42:20",
+          "note": "Extensive measurement of gates, chambers, courts, and the temple building itself."
+        },
+        {
+          "ref": "43:2,4",
+          "note": "'The glorie of the God of Israel came from out of the East... and the glorie of the Lord came into the house by the way of the gate, whose prospect is towarde the East' — answering the glory's earlier departure in ch.10-11."
+        },
+        {
+          "ref": "47:1,9",
+          "note": "'These waters issue out towarde the East countrey'; 'euery thing shal liue whither the riuer commeth' (paraphrase per the actual text)."
+        },
+        {
+          "ref": "48:1-29",
+          "note": "The land is divided into portions for the twelve tribes."
+        },
+        {
+          "ref": "48:35",
+          "note": "The book's final words rename the city: 'the name of the citie from that day shalbe, The Lord is there.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This vision deliberately mirrors and reverses the ch.8-11 vision: idolatry defiling the temple and the glory departing is answered here by a purified temple and the glory's return."
+      ],
+      "perkFlavor": null
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above, quoted in this Geneva translation's own wording where available.",
+    "gogs_allies_ch38": [
+      "Paras (38:5) — Geneva's transliteration of Persia",
+      "Cush (38:5) — Geneva's transliteration of Ethiopia",
+      "Phut (38:5) — Geneva's transliteration of Libya",
+      "Gomer (38:6)",
+      "House of Togarmah of the North quarters (38:6)"
+    ],
+    "nations_in_the_pit_ch32": [
+      "Asshur (32:22)",
+      "Elam (32:24)",
+      "Meshech and Tubal (implied alongside Asshur/Elam per ch.32's structure, matching KJV)",
+      "Edom (32:29)",
+      "Princes of the North (32:30)",
+      "Zidonians (32:30)"
+    ],
+    "neighboring_nations_ch25": [
+      "Ammon (25:1-7)",
+      "Moab, alongside Seir (25:8-11)",
+      "Edom (25:12-14)",
+      "The Philistims (25:15-17)"
+    ],
+    "tyres_trading_partners_ch27": [
+      "Tarshish (27:12)",
+      "Iauan, Tubal, and Meshech (27:13)",
+      "Togarmah (27:14)",
+      "Dedan (27:15)",
+      "Aram (27:16)",
+      "Iudah and Israel (27:17)",
+      "Damascus (27:18)",
+      "Arabia and Kedar (27:21)",
+      "Sheba and Raamah (27:22)"
+    ],
+    "seventy_elders_ch8": [
+      "Seuentie of the Ancients of the house of Israel, led by Iaazaniah the sonne of Shaphan, seen offering incense to idols in a dark chamber (8:11) — a different Iaazaniah than the one named later at 11:1"
+    ]
+  }
+}

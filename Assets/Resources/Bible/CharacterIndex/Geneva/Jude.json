@@ -1,0 +1,458 @@
+{
+  "book": "Jude",
+  "translation": "Geneva",
+  "canonicalOrder": 77,
+  "status": "drafted directly per established methodology, grounded in the real extracted Geneva 1560 verse text; adversarially fact-checked and corrected, pending user review",
+  "notes": "Geneva's Jude is the same single 25-verse epistle as the already-indexed KJV Jude, in archaic 1560s English orthography (Iude/Iames/Iesus with I/J interchange, \"vngodly,\" \"seruaunt,\" \"sayd,\" \"Wo,\" etc.) rather than a genuinely different text — no canon/structure divergence like the Ethiopian \"Ezra\"/1 Esdras case was found here. Tier structure mirrors the KJV file's shape for the same reason: Jude is built almost entirely around one present-tense collective antagonist (the intruding false teachers, never individuated by name) and a rapid volley of OT/traditional allusions rather than on-page narrative, so only Jude himself and the collective intruders get person/manager tiers; the OT/traditional allusions (Exodus judgment, fallen angels, Sodom and Gomorrhe, Cain/Balaam/Core, Michael's dispute over Moses's body, Enoch's prophecy, the Apostles' earlier warning) are grouped into five law/theme tiers by rhetorical function, each carrying a deliveredBy pointing to whoever Jude is quoting or narrating for that block. Two real scholarly-tradition features carry over unchanged: v.9's dispute over Moses's body draws on material not present in the OT canon (associated with the largely-lost Assumption/Testament of Moses), and vv.14-15 directly quote material paralleling the non-canonical Book of Enoch (1 Enoch 1:9) as though authoritative -- both noted neutrally, no position taken on canonicity. Genuine Geneva-specific textual variant worth flagging: v.12 reads \"these are rockes in your feasts of charitie\" where KJV has \"spots\" -- reflecting the real spilades (\"hidden reefs/rocks\") vs spiloi (\"spots/blemishes\") manuscript-tradition difference behind this verse, not a translation slip. Data-quality flag: the extracted verse 25 text ends \"...both nowe and for euer, Am\" (cut off before \"en.\") -- quoted verbatim as extracted per the no-alteration rule rather than silently completed to \"Amen.\" Naming-collision and traditional-identification flags carried over identically from the KJV file: this Iude is distinct from Iudas Iscariot and from the apostle Iudas/Thaddaeus (his \"brother of Iames\" self-identification and v.17's third-person \"the Apostles\" are the only textual anchors -- his traditional identity as a half-brother of Jesus via Matthew 13:55/Mark 6:3 is flagged as tradition, not textually stated here); Cain's son Enoch (Genesis 4:17) is a different man from \"Enoch also the seuenth from Adam\" quoted in v.14 (Genesis 5); \"Core\" is Geneva's own spelling of Korah (Numbers 16), not a distinct person. Michael's tier-type judgment call (narratively active -- strives, disputes, speaks a line -- versus the \"pure transmission\" test used for the Enoch/Apostles law tiers) is flagged again here for the user's confirmation, unresolved in the KJV file too, kept as a law tier given the episode's single-verse scope.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Iude, Seruaunt of Christ",
+      "managerId": "jude_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Wandring Starres",
+      "managerId": "ungodly_intruders_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Chaines of Darkenesse",
+      "managerId": "law_ot_judgment_precedents_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Archangell's Rebuke",
+      "managerId": "law_michael_moses_body_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Way of Cain, the Deceit of Balaam, the Gainsaying of Core",
+      "managerId": "law_apostasy_examples_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Enoch's Prophecie of the Thousands",
+      "managerId": "law_enochs_prophecy_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Mockers in the Last Time",
+      "managerId": "law_apostles_prophecy_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jude_geneva",
+      "name": "Iude",
+      "role": "manager",
+      "scribeTier": "Iude, Seruaunt of Christ",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Unstated in Iude's own text (v.1 says only 'brother of Iames'); traditionally Ioseph the carpenter -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "mother": "Unstated in Iude's own text; traditionally Mary, mother of Iesus -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:1",
+          "note": "'IVde a seruaunt of Iesus Christ, and brother of Iames, to them which are called and sanctified of God the Father, and returned to Iesus Christ.'"
+        },
+        {
+          "ref": "Jude 1:2",
+          "note": "'Mercie vnto you, and peace and loue be multiplied.'"
+        },
+        {
+          "ref": "Jude 1:3",
+          "note": "Explains he meant to write 'of the common saluation' but felt it needful instead to exhort readers 'earnestly [to] contend for the maintenace of ye faith, which was once giuen vnto the Saintes.'"
+        },
+        {
+          "ref": "Jude 1:17",
+          "note": "'Yee beloued, remember the wordes which were spoken before of the Apostles of our Lord Iesus Christ' -- refers to the Apostles in the third person."
+        },
+        {
+          "ref": "Jude 1:20-23",
+          "note": "Closing exhortation: edify yourselves 'in your most holy faith,' pray in the holy Ghost, keep yourselves 'in the loue of God,' look for the Lord's mercy 'vnto eternall life'; have compassion on some, and save others 'with feare, pulling them out of the fire,' hating 'euen that garment which is spotted by the flesh.'"
+        },
+        {
+          "ref": "Jude 1:24-25",
+          "note": "Closing doxology: 'to him that is able to keepe you, that ye fall not, and to present you faultlesse before the presence of his glorie with ioy... to God only wise, our Sauiour, be glorie, and maiestie, and dominion, and power, both nowe and for euer.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: distinct from Iudas Iscariot and from the apostle Iudas/Thaddaeus (Matthew 10:3, Luke 6:16). V.17's third-person reference to 'the Apostles' textually distinguishes this Iude from that group, consistent with the traditional view he is the Lord's brother rather than one of the twelve.",
+        "Traditionally identified with the 'Iudas' listed among Iesus's brethren in Matthew 13:55/Mark 6:3 -- but this Geneva text (v.1) states only 'brother of Iames,' without further identification; flagged as traditional, not textually certain within this epistle."
+      ]
+    },
+    {
+      "id": "ungodly_intruders_geneva",
+      "name": "The Vngodly Intruders",
+      "role": "manager",
+      "scribeTier": "The Wandring Starres",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:4",
+          "note": "'Certaine men crept in, which were before of olde ordeined to this condemnation: vngodly men they are which turne the grace of our God into wantonnesse, and denie God the onely Lord, and our Lord Iesus Christ.'"
+        },
+        {
+          "ref": "Jude 1:8",
+          "note": "'These sleepers also defile the flesh, and despise gouernment, and speake euill of them that are in authoritie.'"
+        },
+        {
+          "ref": "Jude 1:10",
+          "note": "'These speake euill of those thinges, which they know not: and whatsoeuer things they know naturally, as beasts, which are without reason, in those things they corrupt them selues.'"
+        },
+        {
+          "ref": "Jude 1:12",
+          "note": "'These are rockes in your feasts of charitie... cloudes they are without water, caried about of windes, corrupt trees and without fruit, twise dead, and plucked vp by ye rootes.' Geneva's 'rockes' is a real translation variant from KJV's 'spots' -- see book notes."
+        },
+        {
+          "ref": "Jude 1:13",
+          "note": "'They are the raging waues of the sea, foming out their owne shame: they are wandring starres, to whome is reserued the blackenesse of darkenesse for euer.'"
+        },
+        {
+          "ref": "Jude 1:16",
+          "note": "'These are murmurers, complainers, walking after their owne lustes: Whose mouthes speake proud things, hauing mens persons in admiration, because of aduantage.'"
+        },
+        {
+          "ref": "Jude 1:18-19",
+          "note": "Identified as the foretold 'mockers... which should walke after their owne vngodly lustes'; 'separate them selues from other, naturall, hauing not the Spirit.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as a single collective entry -- the text never names or differentiates individuals within this group, describing them only through a rapid series of collective images."
+      ]
+    },
+    {
+      "id": "law_ot_judgment_precedents_geneva",
+      "name": "OT Iudgement Precedents",
+      "role": "law",
+      "scribeTier": "Chaines of Darkenesse",
+      "deliveredBy": "jude_geneva",
+      "purpose": "Three precedents of certain judgement despite prior favour or status: the Lord's own delivered people were destroyed after they beleeued not (v.5), the Angels who left their first estate are reserued in euerlasting chaines (v.6), and Sodom and Gomorrhe suffer as a public ensample of eternall fire's vengeance (v.7) -- each escalating the warning that the intruding false teachers face the same certain fate.",
+      "verses": [
+        {
+          "ref": "Jude 1:5",
+          "note": "'The Lord, after that he had deliuered the people out of Egypt, destroied them afterward which beleeued not.'"
+        },
+        {
+          "ref": "Jude 1:6",
+          "note": "'The Angels also which kept not their first estate, but left their owne habitation, hee hath reserued in euerlasting chaines vnder darkenesse vnto the iudgement of the great day.'"
+        },
+        {
+          "ref": "Jude 1:7",
+          "note": "'Sodom and Gomorrhe, and the cities about them, which in like maner as they did, committed fornication, and followed strange flesh, are set foorth for an ensample, and suffer the vengeance of eternall fire.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_michael_moses_body_geneva",
+      "name": "Michael and the Body of Moses",
+      "role": "law",
+      "scribeTier": "The Archangell's Rebuke",
+      "deliveredBy": "jude_geneva",
+      "purpose": "Contrasts the false teachers' bold speaking euil of authorities with the restraint of Michael the Archangell, who -- even striuing against the deuill and disputing about the body of Moses -- durst not blame him with cursed speaking but deferred to the Lord.",
+      "verses": [
+        {
+          "ref": "Jude 1:8",
+          "note": "'Likewise notwithstanding these sleepers also defile the flesh, and despise gouernment, and speake euill of them that are in authoritie.'"
+        },
+        {
+          "ref": "Jude 1:9",
+          "note": "'Yet Michael the Archangell, when hee stroue against the deuill, and disputed about the body of Moses, durst not blame him with cursed speaking, but sayd, The Lord rebuke thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "V.9 references a dispute over Moses's body not recorded anywhere in the OT canon -- widely associated by scholars with the largely-lost Assumption/Testament of Moses; noted descriptively, no claim made about that lost work's contents.",
+        "Tier-type flag carried over from the KJV file: Michael is narratively active (strives, restrains himself, speaks a line) here, closer to a 'personally embodied' figure than 'pure transmission' -- kept as a law tier given the episode's single-verse scope, flagged for the user to confirm."
+      ]
+    },
+    {
+      "id": "law_apostasy_examples_geneva",
+      "name": "The Apostasie Examples",
+      "role": "law",
+      "scribeTier": "The Way of Cain, the Deceit of Balaam, the Gainsaying of Core",
+      "deliveredBy": "jude_geneva",
+      "purpose": "A pronounced 'Wo' naming three OT figures whose sins model three distinct failures repeated in the false teachers: Cain's hatred toward a righteous brother, Balaam's greed for wages, and Core's rebellion against ordained authority.",
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "'Wo be vnto them: for they haue followed the way of Cain, and are cast away by the deceit of Balaams wages, and perish in the gainsaying of Core.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "law_enochs_prophecy_geneva",
+      "name": "Enoch's Prophecie",
+      "role": "law",
+      "scribeTier": "Enoch's Prophecie of the Thousands",
+      "deliveredBy": "enoch_jude_geneva",
+      "purpose": "Iude directly quotes a prophecie attributed to Enoch, 'the seuenth from Adam,' foretelling the Lord's coming 'with thousands of his Saints' to giue iudgement against al men and rebuke the vngodly for their wicked deeds and cruel speakings.",
+      "verses": [
+        {
+          "ref": "Jude 1:14",
+          "note": "'And Enoch also the seuenth from Adam, prophecied of such, saying, Beholde, the Lord commeth with thousands of his Saints.'"
+        },
+        {
+          "ref": "Jude 1:15",
+          "note": "'To giue iudgement against al men, and to rebuke all the vngodly among them of all their wicked deeds, which they haue vngodly committed, and of all their cruel speakings, which wicked sinners haue spoken against him.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's 'with thousands of his Saints' (v.14) is a milder wording than KJV's 'with ten thousands of his saints,' though the underlying quoted material still parallels the non-canonical Book of Enoch (1 Enoch 1:9) -- noted descriptively, no position taken on canonicity."
+      ]
+    },
+    {
+      "id": "law_apostles_prophecy_geneva",
+      "name": "The Apostles' Prophecie of Mockers",
+      "role": "law",
+      "scribeTier": "Mockers in the Last Time",
+      "deliveredBy": "the_apostles_jude_geneva",
+      "purpose": "Iude reminds readers of a prediction already made by 'the Apostles of our Lord Iesus Christ' -- that mockers walking after their owne vngodly lustes would arise in the last time -- and identifies the present false teachers as its fulfillment.",
+      "verses": [
+        {
+          "ref": "Jude 1:17",
+          "note": "'But, yee beloued, remember the wordes which were spoken before of the Apostles of our Lord Iesus Christ.'"
+        },
+        {
+          "ref": "Jude 1:18",
+          "note": "'How that they told you that there should be mockers in ye last time, which should walke after their owne vngodly lustes.'"
+        },
+        {
+          "ref": "Jude 1:19",
+          "note": "'These are they that separate them selues from other, naturall, hauing not the Spirit.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "V.17's third-person reference to 'the Apostles' (not 'we Apostles') is a textual clue supporting the traditional view that Iude was not himself one of the twelve."
+      ]
+    },
+    {
+      "id": "michael_archangel_jude_geneva",
+      "name": "Michael the Archangell",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:9",
+          "note": "Striues against the deuill in a dispute about the body of Moses; refuses to blame him 'with cursed speaking,' saying only 'The Lord rebuke thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Named elsewhere as 'the Archangell' and 'one of the chiefe princes' (Daniel 10:13, 21; 12:1) and as the one who fights the dragon in Revelation 12:7 -- this entry covers only his appearance in Jude 1:9.",
+        "The dispute over Moses's body is not itself narrated in the OT text (Deuteronomy 34:5-6 records only that the LORD buried Moses, and 'no man knoweth of his sepulchre') -- see the law tier's funFacts for the extra-biblical tradition this verse draws on."
+      ]
+    },
+    {
+      "id": "devil_jude_geneva",
+      "name": "The Deuill",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:9",
+          "note": "Disputes with Michael the Archangell over the body of Moses; Michael declines to blame him directly, deferring instead to the Lord."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called only 'the deuill' here, with no further identification within this epistle; the identification with 'that old serpent... the Deuill, and Satan' of Genesis 3 is made explicitly only in Revelation 12:9, flagged rather than assumed."
+      ]
+    },
+    {
+      "id": "cain_jude_geneva",
+      "name": "Cain",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Adam -- Genesis 4:1",
+        "mother": "Eue -- Genesis 4:1",
+        "spouses": [
+          "unnamed wife -- Genesis 4:17, not individually indexed here"
+        ],
+        "children": [
+          "Enoch (Cain's son -- Genesis 4:17; a different man from the Enoch quoted in Jude 1:14, see funFacts)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of 'the way of' murderous hatred toward a righteous brother; full narrative indexed under Genesis."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: not to be confused with 'Enoch also the seuenth from Adam' quoted three verses later (v.14) -- that Enoch descends through Seth's line (Genesis 5), a different, unrelated man than Cain's own son Enoch (Genesis 4:17)."
+      ]
+    },
+    {
+      "id": "balaam_jude_geneva",
+      "name": "Balaam",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Beor -- Numbers 22:5",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of the 'deceit of Balaams wages' -- greed for reward; full narrative indexed under Numbers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "core_jude_geneva",
+      "name": "Core",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Izhar -- Numbers 16:1",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:11",
+          "note": "Cited as the archetype of 'the gainsaying of' -- rebellion against Moses and Aaron's ordained authority; full narrative (and destruction) indexed under Numbers 16."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Core' is Geneva's (and KJV's) Greek-influenced transliteration of the Hebrew name rendered 'Korah' in the Old Testament -- same person, spelling difference only."
+      ]
+    },
+    {
+      "id": "enoch_jude_geneva",
+      "name": "Enoch",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iared -- Genesis 5:18",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Methuselah -- Genesis 5:21"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:14",
+          "note": "Identified as 'the seuenth from Adam' (Adam-Seth-Enos-Cainan-Mahalaleel-Iared-Enoch) and credited with prophecying the Lord's coming in iudgement."
+        },
+        {
+          "ref": "Jude 1:15",
+          "note": "Content of the quoted prophecie: iudgement against al men for their wicked deeds and cruel speakings."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: this is the Sethite Enoch of Genesis 5 (father of Methuselah) -- a different man from Cain's son Enoch in Genesis 4:17.",
+        "The quoted prophecie does not appear in the OT text itself; it closely parallels the non-canonical Book of Enoch (1 Enoch 1:9) -- see the law tier's funFacts."
+      ]
+    },
+    {
+      "id": "the_apostles_jude_geneva",
+      "name": "The Apostles",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:17-18",
+          "note": "Referenced collectively as having foretold that mockers walking after their owne vngodly lustes would arise in the last time."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as a single collective reference -- Iude does not name or differentiate any specific apostle, referring to them only as a group whose prior teaching he recalls."
+      ]
+    },
+    {
+      "id": "james_brother_of_jude_geneva",
+      "name": "Iames",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Unstated in Iude's own text; traditionally Ioseph the carpenter -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "mother": "Unstated in Iude's own text; traditionally Mary, mother of Iesus -- cf. Matthew 13:55/Mark 6:3 (see funFacts)",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jude 1:1",
+          "note": "Named only for Iude's self-identification -- 'Iude... brother of Iames.' Takes no action in this text."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given a standalone lightweight entry for consistency with how this file treats other single-mention named figures who take no action -- Cain, Balaam, Core, Michael the Archangell, and the deuill all receive the same treatment despite equally brief citations.",
+        "Naming-collision flag: the NT names multiple men called Iames -- Iames son of Zebedee (one of the twelve), Iames son of Alphaeus (another of the twelve), and this Iames. This entry makes no claim beyond what v.1 itself states.",
+        "Traditionally identified with Iames the author of the Epistle of Iames, traditionally called 'the Lord's brother' (Galatians 1:19), and traditionally with the 'Iames' listed among Iesus's brethren in Matthew 13:55/Mark 6:3 -- traditional linkages, not stated outright in Iude's own text."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above -- reserved for genuinely unnamed/anonymous collectives only.",
+    "israel_wilderness_generation": {
+      "ref": "Jude 1:5",
+      "note": "'The people' the Lord deliuered out of Egypt and afterward destroied for vnbeleefe -- a collective reference to the Exodus generation, not individuated by name; full narrative indexed under Exodus/Numbers."
+    },
+    "fallen_angels": {
+      "ref": "Jude 1:6",
+      "note": "'The Angels also which kept not their first estate' -- an unnamed collective, reserued in chaines vnder darkenesse; not individuated by name."
+    },
+    "sodom_and_gomorrhe": {
+      "ref": "Jude 1:7",
+      "note": "Cited as a public ensample of iudgement by eternall fire for fornication -- collective city-names, not individuated by name; full narrative indexed under Genesis 19."
+    }
+  }
+}

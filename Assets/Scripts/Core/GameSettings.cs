@@ -20,8 +20,31 @@ namespace ClickerGenesis.Core
         private const string RunInBackgroundKey = "ClickerGenesis.RunInBackground";
         private const string ManagerAutoBuyEnabledKey = "ClickerGenesis.ManagerAutoBuyEnabled";
         private const string ManagerAutoBuyReserveIndexKey = "ClickerGenesis.ManagerAutoBuyReserveIndex";
+        private const string OrientationKey = "ClickerGenesis.Orientation";
 
         public static event System.Action OnChanged;
+
+        /// <summary>Player's explicit portrait/landscape choice (2026-08-09, real mobile-device
+        /// layout fix). Default Auto - the game follows the device's live orientation, same as
+        /// most mobile apps, until the player explicitly locks one via Settings. Read live every
+        /// frame by ResponsiveCanvasController, not just at startup, so a mid-session change (or a
+        /// live device rotation while on Auto) takes effect immediately.</summary>
+        public static OrientationPreference Orientation
+        {
+            get => (OrientationPreference)PlayerPrefs.GetInt(OrientationKey, (int)OrientationPreference.Auto);
+            set
+            {
+                PlayerPrefs.SetInt(OrientationKey, (int)value);
+                PlayerPrefs.Save();
+                OnChanged?.Invoke();
+            }
+        }
+
+        /// <summary>Unity's Screen.orientation lock only does anything meaningful on mobile - on
+        /// desktop the OS window manager owns rotation, so ResponsiveCanvasController skips setting
+        /// it there (still recomputes the reference resolution live either way).</summary>
+        public static bool IsOrientationLockSupported =>
+            Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer;
 
         public static NumberNotation Notation
         {

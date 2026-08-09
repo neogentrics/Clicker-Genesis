@@ -1,0 +1,230 @@
+{
+  "book": "Zephaniah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 56,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian translation text (3 chapters, 53 verses) directly from zephaniah_56.json before drafting. Content is textually identical in substance and structure to the KJV Zephaniah (same superscription genealogy, same three-chapter arc: judgment/Day of the LORD in ch.1, oracles against the nations in ch.2, closing indictment-then-restoration in ch.3) - no Ethiopian-canon-specific additions or omissions were found (unlike this translation's Ezra, which genuinely differs). Adapted the already-completed KJV Zephaniah structure (4 tiers: 1 person + 3 law/theme) since the underlying content matches, re-verifying every verse/quote against this translation's own wording rather than copying KJV text. Same naming collisions carried over, re-confirmed against this text: (1) \"Hizkiah\" (1:1) vs. \"Hezekiah\" the reforming king - this Ethiopian text also spells it \"Hizkiah,\" distinct from \"Hezekiah,\" so the same scholarly-inference-not-certainty flag applies; (2) \"Amon\" (Josiah's father, a king, 1:1) vs. the unrelated Egyptian deity Amon (not mentioned in this book); (3) \"Cherethites\" (2:5, a Philistine coastal people) vs. the identically-named royal bodyguard corps elsewhere in the canon - likely related but not the same referent, not resolved by this book's own text. All character ids suffixed \"_ethiopian\" to avoid collision with the existing KJV index. No submanagers: every other genealogy-only name in 1:1 (Cushi, Gedaliah, Amariah, Hizkiah) takes no independent action in this book and is documented only in Zephaniah's own genealogy note.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Trumpet",
+      "managerId": "zephaniah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Day of Clouds and Thick Darkness",
+      "managerId": "day_of_the_lord_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Sword Against the Nations",
+      "managerId": "oracles_against_the_nations_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Song of Zion's Joy",
+      "managerId": "restoration_song_of_zion_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "zephaniah_ethiopian",
+      "name": "Zephaniah",
+      "role": "manager",
+      "scribeTier": "Watchman's Trumpet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Cushi",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Zephaniah 1:1 traces his line four generations back through Cushi, Gedaliah, and Amariah to 'Hizkiah' - this translation's own exact spelling here, deliberately distinct from 'Hezekiah,' the spelling used elsewhere for the reforming king of Judah. Many interpreters suspect this Hizkiah IS King Hezekiah (which would make Zephaniah a great-great-grandson of royalty, explaining the unusually long genealogy for a Minor Prophet), but the text never explicitly identifies him as the king - flagged as a naming collision, not a confirmed identity."
+      },
+      "verses": [
+        {
+          "ref": "Zephaniah 1:1",
+          "note": "Superscription: 'The word of the LORD which came unto Zephaniah the son of Cushi, the son of Gedaliah, the son of Amariah, the son of Hizkiah, in the days of Josiah the son of Amon, king of Judah.'"
+        },
+        {
+          "ref": "Zephaniah 1:7",
+          "note": "'Hold thy peace at the presence of the Lord GOD: for the day of the LORD is at hand' - opens the book's central warning."
+        },
+        {
+          "ref": "Zephaniah 3:17",
+          "note": "'The LORD thy God in the midst of thee is mighty: he will save, he will rejoice over thee with joy, he will rest in his love, he will joy over thee with singing' - the book's climactic promise."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name is commonly understood to mean 'The LORD has hidden' or 'The LORD treasures,' fitting a book that promises a hidden, protected remnant (2:3; 3:12-13).",
+        "His four-generation genealogy in 1:1 is the longest given for any of the twelve Minor Prophets.",
+        "Traditionally dated to the reign of King Josiah, likely prophesying before or during the early stages of Josiah's religious reforms."
+      ]
+    },
+    {
+      "id": "josiah_ethiopian",
+      "name": "Josiah",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Amon",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only as the reigning king of Judah, used to date the book (1:1: 'in the days of Josiah the son of Amon, king of Judah'). This text records no independent action by Josiah himself. Naming-collision flag: this 'Amon' is King Amon of Judah, not the Egyptian deity Amon referenced elsewhere among the Minor Prophets - same name, unrelated referent, and the deity is not mentioned in this book at all."
+      },
+      "verses": [
+        {
+          "ref": "Zephaniah 1:1",
+          "note": "Dates the prophecy to 'the days of Josiah the son of Amon, king of Judah.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "If Zephaniah's ancestor 'Hizkiah' (1:1) is King Hezekiah, then Josiah - Hezekiah's great-grandson through Manasseh and Amon - would have been a distant royal kinsman of the prophet delivering this book, though the text does not state this directly."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_ethiopian",
+      "name": "The Day of the LORD",
+      "role": "law",
+      "scribeTier": "Day of Clouds and Thick Darkness",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_ethiopian",
+      "purpose": "Warns Judah and Jerusalem - and by extension the whole earth - that a sweeping day of divine judgment is imminent ('near, it is near, and hasteth greatly,' 1:14), consuming idolatry, religious compromise, complacent indifference, and violence within the city; calls hearers to 'hold thy peace' before it arrives and, extended in chapter 2, to seek the LORD in meekness and righteousness in hope of being hidden from it (1:7; 2:1-3).",
+      "verses": [
+        {
+          "ref": "Zephaniah 1:2-3",
+          "note": "'I will utterly consume all things from off the land, saith the LORD' - the judgment's universal, un-creation-like scope."
+        },
+        {
+          "ref": "Zephaniah 1:4-6",
+          "note": "Judgment named specifically against Baal worship, the idolatrous 'Chemarims' priests, those who worship 'the host of heaven,' and those who swear both by the LORD and by 'Malcham.'"
+        },
+        {
+          "ref": "Zephaniah 1:8-9",
+          "note": "Judgment on 'the king's children' and all clothed with 'strange apparel,' and on those who 'leap on the threshold' and fill their masters' houses with violence and deceit."
+        },
+        {
+          "ref": "Zephaniah 1:10-11",
+          "note": "Judgment located at Jerusalem's fish gate, 'the second' quarter of the city, the hills, and the merchant district, Maktesh."
+        },
+        {
+          "ref": "Zephaniah 1:12",
+          "note": "Judgment on those who 'say in their heart, The LORD will not do good, neither will he do evil' - settled religious indifference."
+        },
+        {
+          "ref": "Zephaniah 1:14-16",
+          "note": "'The great day of the LORD is near, it is near, and hasteth greatly... a day of the trumpet and alarm' - the book's most quoted passage."
+        },
+        {
+          "ref": "Zephaniah 1:18",
+          "note": "'Neither their silver nor their gold shall be able to deliver them' in the day of the LORD's wrath - wealth offers no protection."
+        },
+        {
+          "ref": "Zephaniah 3:1-8",
+          "note": "The judgment theme returns to Jerusalem directly: 'Woe to her that is filthy and polluted, to the oppressing city!' - her princes, judges, prophets, and priests each named as guilty, immediately before the book pivots to restoration."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This chapter's language ('a day of wrath... a day of trouble and distress... a day of darkness and gloominess,' 1:15) is the scriptural basis for the medieval Latin hymn 'Dies Irae.'",
+        "'Chemarims' (1:4) is a rare word for idolatrous priests."
+      ]
+    },
+    {
+      "id": "oracles_against_the_nations_ethiopian",
+      "name": "Oracles Against the Nations",
+      "role": "law",
+      "scribeTier": "Sword Against the Nations",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_ethiopian",
+      "purpose": "A cycle of judgment oracles against Judah's surrounding nations - Philistia, Moab and Ammon, Ethiopia (Cush), and Assyria - showing that the coming Day of the LORD is not Judah's alone to fear but falls on the pride and violence of every nation; framed by a call for 'the meek of the earth' to seek the LORD, righteousness, and meekness before it arrives (2:1-3).",
+      "verses": [
+        {
+          "ref": "Zephaniah 2:1-3",
+          "note": "Opening call: 'Gather yourselves together... seek ye the LORD, all ye meek of the earth... seek righteousness, seek meekness: it may be ye shall be hid in the day of the LORD's anger.'"
+        },
+        {
+          "ref": "Zephaniah 2:4-7",
+          "note": "Judgment on Philistia - Gaza, Ashkelon, Ashdod, and Ekron named individually - and on 'the nation of the Cherethites'; the coastal land is promised instead to the remnant of the house of Judah."
+        },
+        {
+          "ref": "Zephaniah 2:8-11",
+          "note": "Judgment on Moab and Ammon for reproaching and magnifying themselves against God's people, likened to Sodom and Gomorrah - 'a perpetual desolation.'"
+        },
+        {
+          "ref": "Zephaniah 2:12",
+          "note": "'Ye Ethiopians also, ye shall be slain by my sword' - a brief oracle against Cush/Ethiopia."
+        },
+        {
+          "ref": "Zephaniah 2:13-15",
+          "note": "Judgment on Assyria - Nineveh made 'a desolation, and dry like a wilderness,' its proud boast ('I am, and there is none beside me') answered with ruin, the cormorant and the bittern lodging among its fallen pillars."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This oracle against Nineveh (2:13-15) prophesies the same Assyrian capital's fall that is the subject of the entire book of Nahum.",
+        "The four Philistine cities named in 2:4 (Gaza, Ashkelon, Ashdod, Ekron) are four of the traditional five-city Philistine Pentapolis - Gath, the fifth, is omitted.",
+        "Naming-collision flag: the 'Cherethites' of 2:5 (a Philistine coastal people) share their name with the 'Cherethites and Pelethites' who served as King David's personal bodyguard corps elsewhere in the canon - likely the same ethnic origin, but a distinct referent."
+      ]
+    },
+    {
+      "id": "restoration_song_of_zion_ethiopian",
+      "name": "Restoration and the Song of Zion",
+      "role": "law",
+      "scribeTier": "Song of Zion's Joy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_ethiopian",
+      "purpose": "Closes the book by reversing its own opening judgment - promising Judah 'a pure language' to call on the LORD together, a humble surviving remnant that 'shall not do iniquity, nor speak lies,' and the LORD himself dwelling in the midst of Zion, rejoicing over her with singing, before gathering the scattered home and turning their captivity.",
+      "verses": [
+        {
+          "ref": "Zephaniah 3:9",
+          "note": "'For then will I turn to the people a pure language, that they may all call upon the name of the LORD, to serve him with one consent.'"
+        },
+        {
+          "ref": "Zephaniah 3:10",
+          "note": "'From beyond the rivers of Ethiopia my suppliants, even the daughter of my dispersed, shall bring mine offering.'"
+        },
+        {
+          "ref": "Zephaniah 3:12-13",
+          "note": "'I will also leave in the midst of thee an afflicted and poor people, and they shall trust in the name of the LORD. The remnant of Israel shall not do iniquity, nor speak lies... for they shall feed and lie down, and none shall make them afraid.'"
+        },
+        {
+          "ref": "Zephaniah 3:14-15",
+          "note": "'Sing, O daughter of Zion; shout, O Israel... the king of Israel, even the LORD, is in the midst of thee: thou shalt not see evil any more.'"
+        },
+        {
+          "ref": "Zephaniah 3:16-17",
+          "note": "'Fear thou not... The LORD thy God in the midst of thee is mighty: he will save, he will rejoice over thee with joy... he will joy over thee with singing.' The book's best-known passage."
+        },
+        {
+          "ref": "Zephaniah 3:18-20",
+          "note": "Closing promise: the sorrowful gathered, the lame and outcasts saved, shame turned to praise, and captivity turned 'before your eyes, saith the LORD.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Zephaniah 3:17 ('he will rejoice over thee with joy... he will joy over thee with singing') is one of very few Old Testament verses that explicitly describe God singing.",
+        "The 'pure language' promised in 3:9 is often read alongside Genesis 11's account of Babel, as a reversal of the confusion of tongues."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "zephaniah_ancestor_chain": {
+      "ref": "Zephaniah 1:1",
+      "note": "Cushi, Gedaliah, and Amariah (Zephaniah's father, grandfather, and great-grandfather) take no independent action in this book and are documented only as links in the ancestor chain, not as separate character entries."
+    }
+  }
+}

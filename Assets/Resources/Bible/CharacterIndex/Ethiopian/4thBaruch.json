@@ -1,0 +1,349 @@
+{
+  "book": "4th Baruch",
+  "translation": "Ethiopian",
+  "canonicalOrder": 40,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "4th Baruch (also known as Paralipomena Jeremiou / \"The Rest of the Words of Baruch\") is a deuterocanonical narrative unique to the Ethiopian canon - it has no counterpart at all in the KJV index, unlike most other Ethiopian-only books which at least parallel a KJV book loosely. It is a tight 4-character narrative (Jeremiah, Baruch, Abimelech, and a talking eagle) bookended by a real theological set-piece: ch.7 is Jeremiah's trance-vision explicitly naming \"the son of God... messiah Jesus,\" making this an Old-Testament-setting book with an overt Christian prophecy climax - kept as its own law/theme tier (\"Vision of the Coming Messiah\") rather than folded into Jeremiah's person tier, since it's presented as revealed teaching content distinct from his narrative actions. NAMING-COLLISION FLAG: both \"Jeremiah\" and \"Baruch\" already exist as characters in the KJV Old Testament index (Jeremiah's own book; Baruch appears there and in the Ethiopian-canon book of Baruch) - every id here is suffixed \"_4baruch_ethiopian\" to avoid any merge; this is explicitly a different narrative work about the same named men, not the same character record. Abimelech in this book is widely identified by outside scholarly tradition with \"Ebed-melech\" from Jeremiah 38, but 4th Baruch's own text never uses that name or makes the link itself, so per rule 8 that identification is flagged only as an external note, not asserted as textual fact. The eagle is written as a genuinely speaking, reasoning character (addressed as \"steward of the faith,\" compared explicitly to Noah's raven/dove) and is treated as a full person-type manager rather than a prop, since removing it breaks the plot's entire Jerusalem-Babylon communication device. DATA-QUALITY FLAG (matches the project's known Ethiopian-extraction QA issue): the source JSON for this book contains a number of verse entries whose \"verseNumber\" is clearly a merged/misplaced marginal number rather than a real sequential verse (e.g. chapter 3 shows \"2\" then \"66\" then \"3\"; chapter 7 shows \"14\" then \"477\" then \"15\"/\"16\" - the \"66\" and \"477\" values are almost certainly the \"years\" figures from the surrounding sentence, not real verse numbers). This draft cites verses using the surrounding sequential numbering and does not attempt to resolve the anomaly - flagging it here rather than silently guessing, consistent with the project's extraction QA notes for this translation. No individuals were invented for the unnamed \"people\"/\"Babylonians\" collectives; they are logged in genealogyLists instead. CORRECTION (verified against the real extracted text, 4th Baruch 6:15-24): verse 6:19 is only \"they crossed the Jordan and came to Jerusalem\" - the joint declaration barring anyone joined to a Babylonian spouse from entering the city is verse 6:20, spoken together by Jeremiah, Baruch, AND Abimelech (not Jeremiah alone), and the actual founding of Samaria by the turned-away spouses happens in 6:21-24, not 6:19. Jeremiah's verse entry and the genealogyLists reference for the Samaria founding were both corrected to the real verse ranges.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Prophet's Sackcloth",
+      "managerId": "jeremiah_4baruch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Papyrus and Ink",
+      "managerId": "baruch_4baruch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Basket of Figs",
+      "managerId": "abimelech_4baruch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Eagle's Flight",
+      "managerId": "eagle_4baruch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Vision of the Coming Messiah",
+      "managerId": "messiah_prophecy_4baruch_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jeremiah_4baruch_ethiopian",
+      "name": "Jeremiah",
+      "role": "manager",
+      "scribeTier": "Prophet's Sackcloth",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 1:1",
+          "note": "God tells Jeremiah to leave Jerusalem with Baruch before He destroys it for the people's sins"
+        },
+        {
+          "ref": "4th Baruch 1:6-7",
+          "note": "Jeremiah pleads that if the city must fall, God destroy it Himself rather than let the Chaldean king boast of conquering it"
+        },
+        {
+          "ref": "4th Baruch 2:1",
+          "note": "Jeremiah tears his garments and puts dust on his head, then tells Baruch the city will be delivered to Babylon"
+        },
+        {
+          "ref": "4th Baruch 5:16-23",
+          "note": "In Babylon, Jeremiah gathers the captive people and reads them the letter the eagle brought from Baruch and Abimelech"
+        },
+        {
+          "ref": "4th Baruch 6:15-20",
+          "note": "Leads the people back toward Jerusalem across the Jordan, conveying God's instruction that those unwilling to leave their Babylonian spouses will not enter, then joins Baruch and Abimelech in jointly declaring that no one joined to a Babylonian may enter the city"
+        },
+        {
+          "ref": "4th Baruch 7:3-14",
+          "note": "Offers sacrifice, prays, falls into a death-like trance, and after three days his soul returns to his body"
+        },
+        {
+          "ref": "4th Baruch 7:14-20",
+          "note": "Prophesies the future coming of 'the son of God... messiah Jesus,' the renewal of creation, and the choosing of twelve apostles"
+        },
+        {
+          "ref": "4th Baruch 7:21-32",
+          "note": "The enraged crowd tries to stone him for the prophecy; a stone miraculously takes his appearance so he can finish teaching Baruch and Abimelech before he is finally stoned to death"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His three-day death-like trance and return mirrors the resurrection theme he himself prophesies.",
+        "Uses a self-substituting stone double to buy time to finish his final teaching before his martyrdom."
+      ]
+    },
+    {
+      "id": "baruch_4baruch_ethiopian",
+      "name": "Baruch",
+      "role": "manager",
+      "scribeTier": "Papyrus and Ink",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 2:2-6",
+          "note": "Sees Jeremiah's mourning and questions him, learning that Jerusalem will fall to Babylon"
+        },
+        {
+          "ref": "4th Baruch 4:2-4",
+          "note": "Finds Abimelech returned after his long sleep and sees the still-miraculously-fresh figs"
+        },
+        {
+          "ref": "4th Baruch 4:11-18",
+          "note": "Prays for guidance on how to reach Jeremiah in Babylon; an angel promises an eagle will carry the message"
+        },
+        {
+          "ref": "4th Baruch 4:19-25",
+          "note": "Writes a letter to Jeremiah in Babylon recounting God's compassion and the covenant with Abraham, Isaac, and Jacob"
+        },
+        {
+          "ref": "4th Baruch 5:1-11",
+          "note": "Commissions the eagle to carry the letter, explicitly contrasting it with Noah's raven that never returned"
+        },
+        {
+          "ref": "4th Baruch 7:8-13",
+          "note": "Weeps with Abimelech over Jeremiah's trance and keeps vigil by his body for three days"
+        },
+        {
+          "ref": "4th Baruch 7:29-32",
+          "note": "Receives Jeremiah's final mysteries, and together with Abimelech buries him and inscribes the stone that had stood in for him"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The book is his namesake even though Jeremiah is the one who receives the climactic prophecy - Baruch functions as the narrative's steady secretary/witness figure throughout."
+      ]
+    },
+    {
+      "id": "abimelech_4baruch_ethiopian",
+      "name": "Abimelech",
+      "role": "manager",
+      "scribeTier": "Basket of Figs",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 3:1-2",
+          "note": "Sent to gather figs for the sick, falls asleep in the shade of a tree resting his head on the basket"
+        },
+        {
+          "ref": "4th Baruch 3:15-19",
+          "note": "Wakes decades later, wanders the changed city, and an old man tells him the people have long since been taken captive to Babylon"
+        },
+        {
+          "ref": "4th Baruch 3:26-31",
+          "note": "Proves the trance was real by showing the old man the figs still dripping fresh milk, and by the unripened fields"
+        },
+        {
+          "ref": "4th Baruch 4:2-10",
+          "note": "An angel returns him to Baruch, and the incorruptible figs become a sign used to teach the promise of bodily resurrection"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His long sleep is framed as a divine mercy sparing a righteous man from witnessing Jerusalem's destruction.",
+        "Later Christian/Jewish tradition outside this text sometimes identifies him with Ebed-melech of Jeremiah 38, but 4th Baruch itself never makes or states that connection."
+      ]
+    },
+    {
+      "id": "eagle_4baruch_ethiopian",
+      "name": "The Eagle",
+      "role": "manager",
+      "scribeTier": "Eagle's Flight",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 5:2-6",
+          "note": "Speaks to Baruch in a human voice, greeting him as 'steward of the faith' and offering to carry any message he wishes"
+        },
+        {
+          "ref": "4th Baruch 5:7-14",
+          "note": "Baruch ties the letter and figs to its neck and charges it to fly straight to Jeremiah without turning aside"
+        },
+        {
+          "ref": "4th Baruch 5:15-19",
+          "note": "Arrives outside Babylon, cries out to Jeremiah by name, and lands on a corpse being carried out for burial, reviving it as a sign the letter should be believed"
+        },
+        {
+          "ref": "4th Baruch 6:10-11",
+          "note": "Carries Jeremiah's reply letter back across to Baruch in Jerusalem"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A talking, reasoning eagle explicitly contrasted with Noah's raven (which never returned) and his dove (which did) as the model messenger it should imitate.",
+        "Its revival of a corpse mid-flight is the book's proof-of-authenticity miracle for the letter it carries."
+      ]
+    },
+    {
+      "id": "messiah_prophecy_4baruch_ethiopian",
+      "name": "Vision of the Coming Messiah",
+      "role": "law",
+      "scribeTier": "Vision of the Coming Messiah",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "deliveredBy": "jeremiah_4baruch_ethiopian",
+      "purpose": "Jeremiah's trance-vision, received during his three-day death-like state, revealing the future coming of 'the son of God... messiah Jesus,' the tree of life renewing all creation, and the choosing of twelve apostles - the very prophecy that provokes the crowd to try to stone him.",
+      "verses": [
+        {
+          "ref": "4th Baruch 7:14",
+          "note": "Jeremiah's soul returns to his body and he cries out glorifying 'the son of God who awakens us - messiah Jesus - the light of all the ages'"
+        },
+        {
+          "ref": "4th Baruch 7:16-19",
+          "note": "The tree of life in paradise causes barren trees to bear fruit; crimson becomes white, snow blackens, and sweet and salty waters exchange - cosmic reversal imagery marking his coming"
+        },
+        {
+          "ref": "4th Baruch 7:20",
+          "note": "The Messiah will choose twelve apostles to proclaim the news among the nations and will appear on the Mount of Olives"
+        },
+        {
+          "ref": "4th Baruch 7:21-22",
+          "note": "The people accuse Jeremiah of repeating the vision of Isaiah son of Amos and, recalling that they killed Isaiah, plot to stone Jeremiah instead"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "An explicitly Christian prophecy (naming Jesus by name) embedded in an Old-Testament-setting narrative - a real content feature of this text, not an artifact of the translation."
+      ]
+    },
+    {
+      "id": "old_man_4baruch_ethiopian",
+      "name": "The Old Man",
+      "role": "submanager",
+      "scribeTier": "Basket of Figs",
+      "parentManagerId": "abimelech_4baruch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 3:15-19",
+          "note": "Tells the disoriented Abimelech that decades have passed and that Jeremiah and the people are captive in Babylon"
+        },
+        {
+          "ref": "4th Baruch 3:28-31",
+          "note": "Confirms the truth of the trance by pointing to the unripened crops in the field, matching the still-fresh figs"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nebuchadnezzar_4baruch_ethiopian",
+      "name": "Nebuchadnezzar",
+      "role": "submanager",
+      "scribeTier": "Prophet's Sackcloth",
+      "parentManagerId": "jeremiah_4baruch_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 5:14",
+          "note": "Grants Jeremiah's petition for a place to bury the captive people's dead"
+        },
+        {
+          "ref": "4th Baruch 6:5",
+          "note": "Some of the captive people are found hanged by his order, crying out for mercy"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His role in this book is limited to administrative/political actions affecting the captives - he never speaks directly to Jeremiah or Baruch on-page."
+      ]
+    },
+    {
+      "id": "stone_double_4baruch_ethiopian",
+      "name": "The Stone (Jeremiah's Likeness)",
+      "role": "submanager",
+      "scribeTier": "Prophet's Sackcloth",
+      "parentManagerId": "jeremiah_4baruch_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "4th Baruch 7:25-27",
+          "note": "At Jeremiah's command, a stone he sets up miraculously takes on his appearance"
+        },
+        {
+          "ref": "4th Baruch 7:28-32",
+          "note": "The crowd stones it in his place until it cries out revealing the deception; Baruch and Abimelech afterward inscribe it 'the stone that was the ally of Jeremiah' and set it on his tomb"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list, per the no-invented-individuals and text-must-explicitly-link rules.",
+    "isaiah_son_of_amos_reference": {
+      "ref": "4th Baruch 7:21-22",
+      "note": "Named only in the crowd's accusation that Jeremiah repeats Isaiah's vision ('I saw God and the son of God') and their recollection that they killed Isaiah - Isaiah never appears as an acting character in this book, so no separate entry was created."
+    },
+    "michael_archangel_reference": {
+      "ref": "4th Baruch 7:5",
+      "note": "Named only inside Jeremiah's prayer ('may Michael, archangel of righteousness, who opens the gates to the righteous, be my guardian') - does not appear or act as a character in this book."
+    },
+    "returning_captives_and_founders_of_samaria": {
+      "ref": "4th Baruch 6:21-24",
+      "note": "Collective group, not individually named - after Jeremiah, Baruch, and Abimelech jointly declare (6:20) that no one joined to a Babylonian spouse may enter Jerusalem, those unwilling to separate turn back toward Babylon, are refused entry there too, and found a new city partway between the two which they name Samaria."
+    }
+  }
+}

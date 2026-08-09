@@ -1,0 +1,575 @@
+{
+  "book": "1 Timothy",
+  "translation": "Geneva",
+  "canonicalOrder": 66,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly against the real Geneva 1560 text (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Geneva/1_timothy_66.json, all 6 chapters/113 verses): this book's actual content and structure match the standard canonical 1 Timothy exactly - same six chapters, same sequence of topics, no deuterocanonical/apocryphal material and no chapter/verse-count deviation of the kind found elsewhere in this translation project (e.g. the Ethiopian Ezra). The only real differences from the KJV rendering are archaic 1560 spelling/word-choice, not content: the letter's recipient is spelled \"Timotheus\" throughout (never \"Timothy\"), the vice-list at 1:10 uses \"buggerers\" and \"menstealers\" where KJV uses different phrasing for the same items, \"doctours of the Law\" (1:7) for KJV's \"teachers of the law,\" \"yong scholer\" (3:6) for KJV's \"novice,\" \"harberous\" (3:2) for \"given to hospitality,\" \"double tongued\" (3:8, same as KJV), and \"mousell\" (5:18) for \"muzzle.\" Per the same person/law split used for the KJV edition of this book: 1 Timothy is a personal pastoral letter, not a narrative, so only Paul (who personally recounts his own conversion/testimony at 1:12-17 and personally delivers Hymeneus and Alexander to Satan at 1:20) and Timotheus (the letter's real, individually addressed recipient, given personal charges about his youth, ordination, and even his health at 5:23) meet the \"personally embodied\" bar for a full person-tier. Everything else - fables and genealogies, prayer for kings, women's church conduct, bishop and deacon qualifications, the Mystery of Godliness creed, latter-day apostasy/doctrines of devils, widows, elders, servants under the yoke, and the love of money - is pure instructional/doctrinal transmission from Paul, indexed as law-type tiers with Paul as deliveredBy, matching the real shape of the text rather than inventing person-tiers to fill it out. No separate Jesus tier: Christ is referenced only doctrinally here (the one Mediator at 2:5-6, manifest in the flesh at 3:16, witnessing before Pontius Pilate at 6:13), never as a personally-acting character within this letter. Naming-collision flag, carried over from the KJV edition and equally true of this translation's own text: Hymeneus (1:20) is paired here with Alexander, but a Hymeneus also reappears paired with Philetus in 2 Timothy 2:17, and an Alexander the coppersmith appears separately in 2 Timothy 4:14 - this Geneva text of 1 Timothy never itself identifies either of those later men with the pair named here, so no cross-letter identity is asserted, only flagged. Pontius Pilate (6:13) is a historical reference point for Christ's own testimony, not an active character in this book, and is logged in genealogyLists rather than given a character entry, same treatment as the KJV edition. All ids in this file are suffixed \"_geneva_1tim\" specifically to avoid collision with both the existing KJV CharacterIndex ids for this book and any future Ethiopian-translation ids for the same letter.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paul the Apostle",
+      "managerId": "paul_geneva_1tim",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Timotheus",
+      "managerId": "timotheus_geneva_1tim",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Fables and Endlesse Genealogies",
+      "managerId": "fables_and_genealogies_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Supplications, Prayers, and Intercessions",
+      "managerId": "prayers_for_all_men_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Woman's Apparell and Silence",
+      "managerId": "womans_apparell_and_silence_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Bishop's Qualifications",
+      "managerId": "bishops_qualifications_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Deacon's Qualifications",
+      "managerId": "deacons_qualifications_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Mysterie of Godlinesse",
+      "managerId": "mystery_of_godliness_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Doctrines of Deuils in the Latter Times",
+      "managerId": "doctrines_of_devils_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Widow In Deede",
+      "managerId": "widow_indeed_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Elders That Rule Well",
+      "managerId": "elders_that_rule_well_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Seruants Vnder the Yoke",
+      "managerId": "servants_under_the_yoke_geneva_1tim",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Desire of Money",
+      "managerId": "love_of_money_geneva_1tim",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "paul_geneva_1tim",
+      "name": "Paul the Apostle",
+      "role": "manager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Timothy 1:1-2",
+          "note": "Pavl an Apostle of Iesvs Christ, by the commandement of God our Sauiour, writes to Timotheus, his 'naturall sonne in the faith,' wishing grace, mercy, and peace."
+        },
+        {
+          "ref": "1 Timothy 1:3-4",
+          "note": "Recounts that he besought Timotheus to abide still in Ephesus when Paul departed into Macedonia, so he might warn some to teach no other doctrine nor give heed to fables and endless genealogies."
+        },
+        {
+          "ref": "1 Timothy 1:12-16",
+          "note": "Paul's own testimony: gives thanks to Christ Iesus who counted him faithful and put him into service, though he was before a blasphemer, a persecuter, and an oppresser; received to mercy because he did it ignorantly through unbelief; the grace of the Lord was exceeding abundant; Christ Iesus came into the world to save sinners, of whom Paul calls himself chief, held up as an ensample of long-suffering to those who would believe."
+        },
+        {
+          "ref": "1 Timothy 1:17",
+          "note": "Immediately following doxology: 'Nowe vnto the King euerlasting, immortall, inuisible, vnto God onely wise, be honour and glorie, for euer, and euer, Amen.'"
+        },
+        {
+          "ref": "1 Timothy 1:18-20",
+          "note": "Commits this commandement to Timotheus according to the prophecies which went before upon him, that he might fight a good fight; names Hymeneus and Alexander, whom Paul says he has delivered vnto Satan, that they might learn not to blaspheme."
+        },
+        {
+          "ref": "1 Timothy 2:1,7",
+          "note": "Exhorts that supplications, prayers, and intercessions be made for all men; states he is ordained a preacher and an Apostle, a teacher of the Gentiles in faith and veritie."
+        },
+        {
+          "ref": "1 Timothy 3:14-15",
+          "note": "Writes these things trusting to come very shortly unto Timotheus, but in case he tarries long, so that Timotheus may know how to behave himself in the house of God, the Church of the living God, the pillar and ground of truth."
+        },
+        {
+          "ref": "1 Timothy 4:6,11,13",
+          "note": "Instructs that if Timotheus put the brethren in remembrance of these things, he shall be a good minister of Iesus Christ; charges him to warn and teach these things, and to give attendance to reading, exhortation, and doctrine till Paul comes."
+        },
+        {
+          "ref": "1 Timothy 6:20-21",
+          "note": "Final charge: 'O Timotheus, keepe that which is committed vnto thee, and auoide prophane and vaine babblings, and oppositios of science falsely so called,' closing with 'Grace be with thee, Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Calls himself 'chiefe' of sinners (1:15) in this Geneva rendering, matching the strength of the KJV's same self-description.",
+        "The Geneva text spells the letter's recipient 'Timotheus' throughout, never 'Timothy.'"
+      ]
+    },
+    {
+      "id": "timotheus_geneva_1tim",
+      "name": "Timotheus",
+      "role": "manager",
+      "scribeTier": "Timotheus",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "unnamed Greek father — not part of this letter's own text",
+        "mother": "not named within this letter's own text",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Timothy 1:2",
+          "note": "Addressed by Paul as 'my naturall sonne in the faith.'"
+        },
+        {
+          "ref": "1 Timothy 1:3",
+          "note": "Besought by Paul to abide still in Ephesus when Paul departed into Macedonia, to warn some to teach no other doctrine."
+        },
+        {
+          "ref": "1 Timothy 1:18",
+          "note": "This commandement is committed to Timotheus according to the prophecies which went before upon him, that he by them should fight a good fight."
+        },
+        {
+          "ref": "1 Timothy 4:12",
+          "note": "Told to let no man despise his youth, but to be unto believers an ensample in word, in conversation, in love, in spirit, in faith, and in pureness."
+        },
+        {
+          "ref": "1 Timothy 4:13-16",
+          "note": "Told to give attendance to reading, exhortation, and doctrine; not to despise the gift given him by prophecie with the laying on of the hands of the companie of the Eldership; to exercise himself in these things, taking heed to himself and to learning, that he may both save himself and them that hear him."
+        },
+        {
+          "ref": "1 Timothy 5:1-2",
+          "note": "Instructed not to rebuke an Elder but to exhort him as a father, the younger men as brethren, the elder women as mothers, the younger as sisters, with all pureness."
+        },
+        {
+          "ref": "1 Timothy 5:23",
+          "note": "Told to drink no longer water, but to use a little wine for his stomake's sake and his often infirmities."
+        },
+        {
+          "ref": "1 Timothy 6:11-16",
+          "note": "Called 'O man of God' and charged to flee covetous things and follow after righteousness, godlines, faith, love, patience, and meekness; to fight the good fight of faith and lay hold of eternal life, keeping the commandement without spot and unrebukeable until the appearing of our Lord Iesus Christ, closing with the doxology to Him 'who onely hath immortalitie, and dwelleth in the light that none can attaine vnto.'"
+        },
+        {
+          "ref": "1 Timothy 6:20",
+          "note": "Final personal address: 'O Timotheus, keepe that which is committed vnto thee.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "1 Timothy 4:14 in this Geneva rendering references 'the gift that is in thee...giuen thee by prophecie with the laying on of the hands of the companie of the Eldership' — his own ordination."
+      ]
+    },
+    {
+      "id": "hymeneus_alexander_geneva_1tim",
+      "name": "Hymeneus and Alexander",
+      "role": "submanager",
+      "scribeTier": "Paul the Apostle",
+      "parentManagerId": "paul_geneva_1tim",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "1 Timothy 1:19-20",
+          "note": "Named as those who, having put away faith and a good conscience, made shipwrack concerning the faith; Paul says he has delivered them vnto Satan, that they might learn not to blaspheme."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text groups them together without differentiating individual actions, indexed as one collective entry rather than split.",
+        "A Hymeneus also reappears (paired with Philetus) at 2 Timothy 2:17, and an Alexander the coppersmith appears separately at 2 Timothy 4:14 — this letter never itself identifies either later man as the same person named here, so no cross-letter identity is asserted."
+      ]
+    },
+    {
+      "id": "fables_and_genealogies_geneva_1tim",
+      "name": "Fables and Endlesse Genealogies",
+      "role": "law",
+      "scribeTier": "Fables and Endlesse Genealogies",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Warns against giving heed to fables and endless genealogies that breed questions rather than godly edifying, and against misuse of the Law by those who would be doctours of it without understanding what they speak.",
+      "verses": [
+        {
+          "ref": "1 Timothy 1:3-4",
+          "note": "Charge that some teach none other doctrine, neither give heede to fables and genealogies which are endless, which breed questions rather then godly edifying which is by faith."
+        },
+        {
+          "ref": "1 Timothy 1:5-7",
+          "note": "The end of the commandement is loue out of a pure heart, of a good conscience, and of faith unfained; some have erred and turned to vaine iangling, desiring to be doctours of the Law, yet understanding not what they speak nor whereof they affirm."
+        },
+        {
+          "ref": "1 Timothy 1:8-11",
+          "note": "The Law is good if a man use it lawfully, knowing it is not given unto a righteous man but unto the lawless and disobedient, to the ungodly and sinners, according to the glorious Gospel of the blessed God committed unto Paul."
+        },
+        {
+          "ref": "1 Timothy 6:20-21",
+          "note": "Closing echo: avoid prophane and vaine babblings, and oppositions of science falsely so called, which some professing have erred concerning the faith."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "prayers_for_all_men_geneva_1tim",
+      "name": "Supplications, Prayers, and Intercessions",
+      "role": "law",
+      "scribeTier": "Supplications, Prayers, and Intercessions",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Instructs that prayer be made for all men, including kings and those in authority, grounded in God's will that all men be saved and in Christ Iesus as the one Mediatour between God and man.",
+      "verses": [
+        {
+          "ref": "1 Timothy 2:1-2",
+          "note": "Exhorts that first of all supplications, prayers, intercessions, and giving of thanks be made for all men, for Kings and all in authoritie, that believers may lead a quiet and peaceable life in all godlinesse and honestie."
+        },
+        {
+          "ref": "1 Timothy 2:3-4",
+          "note": "This is good and acceptable in the sight of God our Sauiour, who will that all men shall be saved and come unto the acknowledging of the trueth."
+        },
+        {
+          "ref": "1 Timothy 2:5-6",
+          "note": "There is one God, and one Mediatour betweene God and man, the man Christ Iesus, who gave himself a ransome for all men."
+        },
+        {
+          "ref": "1 Timothy 2:7-8",
+          "note": "Paul states he is ordeined a preacher and an Apostle, a teacher of the Gentiles; men are to pray everywhere, lifting up pure hands without wrath or douting."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "womans_apparell_and_silence_geneva_1tim",
+      "name": "The Woman's Apparell and Silence",
+      "role": "law",
+      "scribeTier": "The Woman's Apparell and Silence",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Sets instructions for women's dress and conduct in the gathered church, grounding the teaching in the Genesis creation and fall order — Adam formed first, then Eue, and Eue deceived.",
+      "verses": [
+        {
+          "ref": "1 Timothy 2:9-10",
+          "note": "Women to array themselves in comely apparell with shamefastnes and modestie, not with broyded heare, gold, pearles, or costly apparell, but with good workes as becometh women that professe the feare of God."
+        },
+        {
+          "ref": "1 Timothy 2:11-12",
+          "note": "Let the woman learn in silence with all subiection; Paul does not permit a woman to teach nor to usurpe authoritie over the man, but to be in silence."
+        },
+        {
+          "ref": "1 Timothy 2:13-14",
+          "note": "For Adam was first formed, then Eue; Adam was not deceived, but the woman was deceived and was in the transgression."
+        },
+        {
+          "ref": "1 Timothy 2:15",
+          "note": "She shall be saved through bearing of children, if they continue in faith, and loue, and holines with modestie."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "bishops_qualifications_geneva_1tim",
+      "name": "The Bishop's Qualifications",
+      "role": "law",
+      "scribeTier": "The Bishop's Qualifications",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Lists the moral character and household qualifications required of any man who desires the office of a Bishop.",
+      "verses": [
+        {
+          "ref": "1 Timothy 3:1",
+          "note": "If any man desire the office of a Bishop, he desireth a worthie worke."
+        },
+        {
+          "ref": "1 Timothy 3:2-3",
+          "note": "A Bishop must be unreproueable, the husband of one wife, watching, temperate, modest, harberous, apt to teach; not given to wine, no striker, not given to filthy lucre, but gentle, no fighter, not couetous."
+        },
+        {
+          "ref": "1 Timothy 3:4-5",
+          "note": "One that can rule his own house honestly, having children under obedience with all honestie; for if any cannot rule his own house, how shall he care for the Church of God?"
+        },
+        {
+          "ref": "1 Timothy 3:6-7",
+          "note": "He may not be a yong scholer, lest being puffed up he fall into the condemnation of the deuill; must be well reported of, even of them which are without, lest he fall into rebuke and the snare of the deuill."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "deacons_qualifications_geneva_1tim",
+      "name": "The Deacon's Qualifications",
+      "role": "law",
+      "scribeTier": "The Deacon's Qualifications",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Sets equivalent moral qualifications for Deacons and their wives, the second recognized office of the church alongside the Bishop.",
+      "verses": [
+        {
+          "ref": "1 Timothy 3:8-9",
+          "note": "Deacons must be graue, not double tongued, not given to much wine, neither to filthy lucre, having the mysterie of the faith in pure conscience."
+        },
+        {
+          "ref": "1 Timothy 3:10",
+          "note": "Let them first be proued, then let them minister, if they be found blameles."
+        },
+        {
+          "ref": "1 Timothy 3:11",
+          "note": "Their wives must likewise be honest, not euill speakers, but sober, and faithfull in all things."
+        },
+        {
+          "ref": "1 Timothy 3:12-13",
+          "note": "Deacons to be husbands of one wife, ruling their children and their own housholdes well; those who have ministred well get themselves a good degree and great libertie in the faith."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mystery_of_godliness_geneva_1tim",
+      "name": "The Mysterie of Godlinesse",
+      "role": "law",
+      "scribeTier": "The Mysterie of Godlinesse",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "A short creedal statement summarizing the incarnation and proclamation of Christ, given as the theological center that the Church — 'the pillar and ground of trueth' — exists to uphold.",
+      "verses": [
+        {
+          "ref": "1 Timothy 3:14-15",
+          "note": "Paul writes trusting to come to Timotheus very shortly, but in case he tarries long, so Timotheus may know how he ought to behave himself in the house of God, the Church of the living God, the pillar and ground of trueth."
+        },
+        {
+          "ref": "1 Timothy 3:16",
+          "note": "Without controuersie, great is the mysterie of godlinesse: God is manifested in the flesh, iustified in the Spirit, seene of Angels, preached unto the Gentiles, beleeued on in the world, and receiued vp in glorie."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "doctrines_of_devils_geneva_1tim",
+      "name": "Doctrines of Deuils in the Latter Times",
+      "role": "law",
+      "scribeTier": "Doctrines of Deuils in the Latter Times",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Warns of a coming falling-away marked by false asceticism — forbidding marriage, forbidding meats — countered by the teaching that every creature of God is good, then by a direct charge to cast away prophane and olde wiues fables and exercise unto godlinesse instead, since godlinesse profits both the life present and that to come.",
+      "verses": [
+        {
+          "ref": "1 Timothy 4:1-2",
+          "note": "The Spirit speaketh evidently that in the latter times some shall depart from the faith, giving heede to spirits of errour and doctrines of deuils, speaking lies through hypocrisie, having their consciences burned with a hote yron."
+        },
+        {
+          "ref": "1 Timothy 4:3",
+          "note": "Forbidding to marrie, and commanding to abstaine from meates which God hath created to be receiued with giuing thankes of them which beleeue and know the trueth."
+        },
+        {
+          "ref": "1 Timothy 4:4-5",
+          "note": "Every creature of God is good, and nothing ought to be refused, if it be receiued with thankesgiuing, for it is sanctified by the worde of God and prayer."
+        },
+        {
+          "ref": "1 Timothy 4:7-10",
+          "note": "Charged to cast away prophane and olde wiues fables, and exercise himself unto godlinesse; bodily exercise profiteth litle, but godlinesse is profitable unto all things, having the promise of the life present and of that to come; a true saying, for Paul and his companions labour and are rebuked because they trust in the living God, the Sauiour of all men, specially of those that beleeue."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "widow_indeed_geneva_1tim",
+      "name": "The Widow In Deede",
+      "role": "law",
+      "scribeTier": "The Widow In Deede",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Sets criteria for the Church's care of widows and for enrolling certain widows into a recognized order of service, distinguishing a genuine 'widow in deede' from cases a widow's own family or remarriage should properly address.",
+      "verses": [
+        {
+          "ref": "1 Timothy 5:3",
+          "note": "Honour widowes, which are widowes in deede."
+        },
+        {
+          "ref": "1 Timothy 5:4",
+          "note": "If any widow have children or nephewes, let them learne first to shewe godlinesse towarde their owne house, and to recompense their kinred."
+        },
+        {
+          "ref": "1 Timothy 5:5-6",
+          "note": "She that is a widow in deede and left alone trusteth in God, and continueth in supplications and prayers night and day; but she that liueth in pleasure is dead while she liueth."
+        },
+        {
+          "ref": "1 Timothy 5:7",
+          "note": "These things therefore Timotheus is to warne them of, that they may be blamelesse."
+        },
+        {
+          "ref": "1 Timothy 5:8",
+          "note": "If any prouideth not for his owne, and namely for them of his housholde, he denieth the faith, and is worse then an infidell."
+        },
+        {
+          "ref": "1 Timothy 5:9-10",
+          "note": "A widow taken into the number should not be under three score yeere olde, having been the wife of one husband, well reported of for good workes — nourishing her children, lodging strangers, washing the Saintes feete, ministring to them in aduersitie, giuen to euery good worke."
+        },
+        {
+          "ref": "1 Timothy 5:11-13",
+          "note": "The younger widowes to be refused, for when they wax wanton against Christ they will marrie, having damnation because they have broken their first faith, and learn to be idle, going about from house to house as pratlers and busibodies."
+        },
+        {
+          "ref": "1 Timothy 5:14-15",
+          "note": "Paul's counsel that the younger women marrie, beare children, gouerne the house, and give no occasion to the aduersarie to speake euill, since certaine are already turned backe after Satan."
+        },
+        {
+          "ref": "1 Timothy 5:16",
+          "note": "If any faithfull man or woman have widowes, let them minister vnto them, and let not the Church be charged, that there may be sufficient for them that are widowes in deede."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elders_that_rule_well_geneva_1tim",
+      "name": "Elders That Rule Well",
+      "role": "law",
+      "scribeTier": "Elders That Rule Well",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Sets protocol for honouring, correcting, and ordaining Elders, guarding the process against partiality and hasty judgement.",
+      "verses": [
+        {
+          "ref": "1 Timothy 5:17",
+          "note": "Let the Elders that rule well be had in double honour, specially they which labour in the worde and doctrine."
+        },
+        {
+          "ref": "1 Timothy 5:18",
+          "note": "For the Scripture sayeth, Thou shalt not mousell the mouth of the oxe that treadeth out the corne, and, The labourer is worthie of his wages."
+        },
+        {
+          "ref": "1 Timothy 5:19",
+          "note": "Against an Elder receiue none accusation, but vnder two or three witnesses."
+        },
+        {
+          "ref": "1 Timothy 5:20",
+          "note": "Them that sinne, rebuke openly, that the rest also may feare."
+        },
+        {
+          "ref": "1 Timothy 5:21",
+          "note": "Charges Timotheus before God and the Lord Iesus Christ, and the elect Angels, that he observe these things without preferring one to another, doing nothing partially."
+        },
+        {
+          "ref": "1 Timothy 5:22",
+          "note": "Lay handes suddenly on no man, neither be partaker of other mens sinnes; keepe thy selfe pure."
+        },
+        {
+          "ref": "1 Timothy 5:24-25",
+          "note": "Some mens sinnes are open beforehand and go before vnto iudgement, but some mens follow after; likewise the good workes are manifest beforehand, and they that are otherwise cannot be hid."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "servants_under_the_yoke_geneva_1tim",
+      "name": "Seruants Vnder the Yoke",
+      "role": "law",
+      "scribeTier": "Seruants Vnder the Yoke",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Instructs Christian bondservants on honouring their masters, framed around protecting the Name of God and his doctrine from reproach, and rightly valuing a believing master as a brother rather than presuming on the relationship.",
+      "verses": [
+        {
+          "ref": "1 Timothy 6:1",
+          "note": "As many seruaunts as are vnder the yoke are to count their masters worthie of all honour, that the Name of God and his doctrine be not euill spoken of."
+        },
+        {
+          "ref": "1 Timothy 6:2",
+          "note": "Those which have believing masters are not to despise them because they are brethren, but rather doe seruice, because they are faithfull and beloued and partakers of the benefite."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "love_of_money_geneva_1tim",
+      "name": "The Desire of Money",
+      "role": "law",
+      "scribeTier": "The Desire of Money",
+      "parentManagerId": null,
+      "deliveredBy": "paul_geneva_1tim",
+      "purpose": "Warns against false teachers who think gaine is godlinesse, and instructs both the discontented — that godlinesse with contentment is great gaine — and the already-rich, to be riche in good workes rather than trust in vncertaine riches.",
+      "verses": [
+        {
+          "ref": "1 Timothy 6:3-5",
+          "note": "If any man teach otherwise, and consenteth not to the wholesome wordes of our Lord Iesus Christ and to the doctrine according to godlinesse, he is puft vp and knoweth nothing, but doteth about questions and strife of words, whereof commeth enuie, strife, railings, euill surmisings, and frowarde disputations of men of corrupt mindes who think that gaine is godlines."
+        },
+        {
+          "ref": "1 Timothy 6:6-8",
+          "note": "Godlinesse is great gaine, if a man be content with that he hath; we brought nothing into the world, and it is certaine we can carie nothing out; therefore having foode and raiment, let vs be content."
+        },
+        {
+          "ref": "1 Timothy 6:9-10",
+          "note": "They that will be rich fall into tentation and snares and many foolish and noysome lustes, which drowne men in perdition and destruction; the desire of money is the roote of all euill, which while some lusted after, they erred from the faith and pearced themselues through with many sorowes."
+        },
+        {
+          "ref": "1 Timothy 6:17",
+          "note": "Charge them that are rich in this world that they be not high minded, nor trust in vncertaine riches, but in the liuing God, who giueth vs aboundantly all things to enioy."
+        },
+        {
+          "ref": "1 Timothy 6:18-19",
+          "note": "That they doe good, and be riche in good woorkes, ready to distribute and comunicate, laying vp in store a good foundation against the time to come, that they may obteine eternall life."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "pontius_pilate_reference": {
+      "ref": "1 Timothy 6:13",
+      "note": "Christ Iesus is described as having 'vnder Pontius Pilate witnessed a good confession' — cited only as a historical reference point within Timotheus's 6:11-16 charge, not as an active character within this book, so no separate character entry is made for Pilate here."
+    },
+    "timotheus_family_background": {
+      "ref": "Acts 16:1-3 / 2 Timothy 1:5",
+      "note": "Timotheus's father (unnamed Greek), mother, and grandmother are described elsewhere in scripture but not within this letter's own text; noted here for completeness rather than indexed as separate characters in this book."
+    }
+  }
+}

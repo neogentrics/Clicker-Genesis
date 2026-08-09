@@ -1,0 +1,141 @@
+{
+  "book": "Nahum",
+  "translation": "Geneva",
+  "canonicalOrder": 34,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Geneva 1560's Nahum is content-identical to the already-completed KJV index (same 3 chapters, 47 verses, same single continuous oracle against Nineveh, no other named individuals) - only spelling/wording differs (archaic Geneva orthography: \"Nineueh,\" \"Elkeshite,\" \"Iudah,\" \"Iaakob,\" \"charets,\" \"loynes,\" \"sworde,\" etc.), so the KJV roster's shape (1 person tier + 2 law tiers) was reused rather than invented from scratch, per the task's guidance for content-matching books. Re-verified every verse reference and quote directly against this translation's own nahum_34.json text, not copied from KJV. NAMING COLLISION (same as KJV, re-flagged here): Geneva's own NT (Luke 3:25, not read for this pass but consistent with the KJV finding) lists the same underlying Hebrew name for a different, unrelated ancestor in Jesus's genealogy - documented in funFacts, not merged. Geneva 2:7's \"Huzzab the Queene\" is capitalized as a proper name (matching KJV's ambiguity) but again deliberately NOT given a character entry, since the underlying identification is genuinely disputed and the text alone doesn't settle it - same restraint as the KJV pass. Geneva 2:2 mentions \"Iaakob\" (Jacob) as a collective/national reference (\"the glorie of Iaakob, as the glorie of Israel\") parallel to KJV's \"Jacob\"/\"Israel\" in the same verse - not indexed as a character, consistent with the KJV version's treatment of it as national/collective language, not a person appearing in-scene. No content differences requiring structural changes were found (unlike this translation's own Ezra, which does differ substantively from the Masoretic text) - Nahum is a straightforward archaic-English rendering of the same underlying oracle. Schema hygiene: all three managerId/deliveredBy references (nahum_geneva) resolve to a real characters[] entry; law entries omit \"genealogy\" per methodology and carry \"deliveredBy\"/\"purpose\" instead; no submanagers exist in this book so every parentManagerId is null; genealogyLists omitted as unused (no bulk collective-name lists beyond the nation names already covered in funFacts/purpose).",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Herald's Feet",
+      "managerId": "nahum_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Overflowing Flood",
+      "managerId": "nineveh_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "No's Ramparts",
+      "managerId": "no_thebes_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "nahum_geneva",
+      "name": "Nahum",
+      "role": "manager",
+      "scribeTier": "Herald's Feet",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "The Geneva text gives no genealogy for Nahum, only his gentilic 'the Elkeshite' (Nahum 1:1) - identifying him by hometown, not lineage. Elkosh's real-world location is not stated anywhere in this translation's text and remains disputed, matching the KJV finding."
+      },
+      "deliveredBy": null,
+      "purpose": null,
+      "verses": [
+        {
+          "ref": "Nahum 1:1",
+          "note": "\"The burden of Nineueh. The booke of the vision of Nahum the Elkeshite.\" The only verse naming him; everything else is his oracle, spoken but never narrated as biography."
+        },
+        {
+          "ref": "Nahum 1:15",
+          "note": "\"Beholde vpon the mountaines the feete of him that declareth, and publisheth peace: O Iudah, keepe thy solemne feastes, perfourme thy vowes.\" Nahum's own herald-imagery for the good news his prophecy brings Judah, echoing Isaiah 52:7."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Nahum's name means 'comfort'/'consoler' in Hebrew - fitting, since his entire message comforts Judah by pronouncing the downfall of her oppressor, Nineveh.",
+        "NAMING COLLISION (carried over from the KJV index's finding, consistent with this translation): the same underlying Hebrew name appears elsewhere in Scripture (KJV Luke 3:25, 'Naum') as an unrelated ancestor in Jesus's genealogy through Heli/Mary - no textual connection to Nahum the prophet exists beyond the shared name.",
+        "Nahum is one of the few Minor Prophets whose entire book is a single continuous oracle against a foreign nation, with no call narrative and no oracle against Judah/Israel itself."
+      ]
+    },
+    {
+      "id": "nineveh_geneva",
+      "name": "Nineveh (the Burden of Nineueh)",
+      "role": "law",
+      "scribeTier": "Overflowing Flood",
+      "parentManagerId": null,
+      "deliveredBy": "nahum_geneva",
+      "purpose": "The book's central oracle: a formal doom-pronouncement ('burden') declaring Nineveh's total destruction as God's righteous judgment for the city's cruelty - explicitly recalling that Nineveh had 'afflicted' Judah (1:12) and describing it as a 'bloody citie' full of 'lyes, and robberie' (3:1) that sold nations through 'fornications'/'witchcraft' (3:4). It teaches that the Lord is 'slow to anger' yet 'will not surely cleare the wicked' (1:3) - no empire's cruelty escapes reckoning, however secure it looks.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Nahum 1:1",
+          "note": "The oracle's formal heading: \"The burden of Nineueh.\""
+        },
+        {
+          "ref": "Nahum 1:8",
+          "note": "\"But passing ouer as with a flood, he will vtterly destroy the place thereof, and darknesse shall pursue his enemies.\" Source of this tier's flood imagery."
+        },
+        {
+          "ref": "Nahum 1:14",
+          "note": "\"...out of the house of thy gods will I cut off the grauen, and the molten image: I will make it thy graue for thee, for thou art vile.\" Addressed to the king/gods of Assyria."
+        },
+        {
+          "ref": "Nahum 2:6-8",
+          "note": "The siege breaks: \"The gates of the riuers shalbe opened, and the palace shall melt... Nineueh is of olde like a poole of water: yet they shall flee away.\""
+        },
+        {
+          "ref": "Nahum 2:11-13",
+          "note": "Nineveh mocked as an emptied lions' den: \"Where is the dwelling of the lyons...? I come vnto thee, sayeth the Lord of hostes.\""
+        },
+        {
+          "ref": "Nahum 3:1-4",
+          "note": "\"O bloody citie, it is all full of lyes, and robberie... Because of the multitude of the fornications of the harlot that is beautifull, and is a mistresse of witchcraft, and selleth the people thorow her whoredome.\""
+        },
+        {
+          "ref": "Nahum 3:7",
+          "note": "\"...Nineueh is destroyed, who will haue pitie vpon her? where shall I seeke comforters for thee?\""
+        },
+        {
+          "ref": "Nahum 3:18-19",
+          "note": "Closing dirge to 'the King of Asshur' (left unnamed by the text): \"thy strong men lie downe... There is no healing of thy wounde: thy plague is grieuous.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The Geneva text's 'burden' (massa in Hebrew) is the standard doom-oracle term used against foreign nations elsewhere in the prophets - Nahum's whole book is structured as one such oracle, aimed entirely outward at Nineveh.",
+        "Geneva 2:7 capitalizes 'Huzzab' as though it were a proper name ('Huzzab the Queene shalbe led away captiue'), but the underlying identification is genuinely disputed among translators - this index does not treat Huzzab as a confirmed named individual, matching the KJV pass's restraint.",
+        "Nineveh had already repented once, generations earlier, in the book of Jonah. Nahum's oracle assumes that reprieve has run out, though this translation's text of Nahum itself never states the connection explicitly."
+      ]
+    },
+    {
+      "id": "no_thebes_geneva",
+      "name": "No (the city, cited as precedent)",
+      "role": "law",
+      "scribeTier": "No's Ramparts",
+      "parentManagerId": null,
+      "deliveredBy": "nahum_geneva",
+      "purpose": "A historical precedent cited within the oracle against Nineveh: the real Egyptian city of No, though defended by rivers, a sea-like rampart, and the combined strength of Ethiopia and Egypt (3:8-9), still fell to conquest and captivity - Nahum argues that if No could fall, Nineveh's own defenses will not save it either ('Art thou better then No, which was ful of people?', 3:8).",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Nahum 3:8",
+          "note": "\"Art thou better then No, which was ful of people? that lay in the riuers, and had the waters round about it? whose ditche was the sea, and her wall was from the sea?\""
+        },
+        {
+          "ref": "Nahum 3:9",
+          "note": "\"Ethiopia and Egypt were her strength, and there was none ende: Put and Lubim were her helpers.\""
+        },
+        {
+          "ref": "Nahum 3:10",
+          "note": "\"Yet was she caried awaye, and went into captiuitie: her young children also were dashed in pieces at the head of all the streetes: and they cast lottes for her noble men, and al her myghtie men were bound in chaines.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "No is the ancient Egyptian city more commonly known as Thebes/No-amon elsewhere in Scripture; Nahum 3:8 in this translation renders it simply 'No.'",
+        "Ethiopia, Egypt, Put, and Lubim (3:9) are named as allied nations supplying No's strength, not individuals - none receive personal character treatment; they establish how formidable No's defenses had been before its fall."
+      ]
+    }
+  ]
+}

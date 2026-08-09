@@ -1,0 +1,1938 @@
+{
+  "book": "2 Kings",
+  "translation": "Geneva",
+  "canonicalOrder": 12,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Grounded directly in E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Geneva/2_kings_12.json (all 25 chapters, 719 verses read in full) and cross-checked against the already-validated KJV 2Kings.json for tier-naming inspiration only, not copied structurally. CONTENT VERDICT: this Geneva text tells the exact same 25-chapter regnal narrative as KJV 2 Kings, in the same order, with no missing or added episodes — unlike the Ethiopian \"Ezra\" case, there is no structural/content divergence here, only orthographic and lexical ones. REAL LEXICAL DIFFERENCES FOUND (verified by reading, not assumed): (1) Geneva systematically renders \"Syria\"/\"Syrians\" as \"Aram\"/\"Aramites\" throughout every chapter (3, 5, 6, 7, 8, 9, 13, 16) — a genuine, consistent translation choice, not a one-off spelling. (2) \"Assyria\" is rendered \"Asshur\" throughout. (3) Elijah is spelled \"Eliiah\" (i/j interchangeable in 1560 English). (4) Jehu appears as \"Iehu\"; Jordan as \"Iorden\"; Jezebel as \"Iezebel\"; Jezreel as \"Izreel\"; chariot as \"charet.\" (5) Benhadad is hyphenated \"Ben-hadad\" (vs. KJV's one-word \"Benhadad\"). (6) \"Tiglath Pileser\" is printed as two words (vs. KJV's one-word \"Tiglathpileser\"). (7) Sennacherib is spelled \"Saneherib.\" (8) 2 Kings 20:12's Babylonian envoy's king is \"Berodach Baladan\" — TWO words in this Geneva text, a real difference from the KJV 2Kings.json's own documented note that KJV uses the one-word \"Berodachbaladan\" here. (9) \"Nebuchadnezzar\" is consistently hyphenated \"Nebuchad-nezzar.\" (10) 25:27's \"Evilmerodach\" is hyphenated \"Euil-merodach.\" (11) 23:29's \"Pharaohnechoh\" is printed as two words, \"Pharaoh Nechoh.\" (12) Azariah/Uzziah of Judah is called \"Vzziah\" at 15:13, 15:30, 15:32 and \"Azariah\" everywhere else in his own regnal notices (1, 6, 7, 17, 23, 27) — the same internal double-naming already flagged in the KJV file, confirmed present in Geneva too. NAMING COLLISIONS RE-VERIFIED AGAINST THIS SPECIFIC TEXT (all confirmed actually present in the Geneva wording, not assumed from KJV): two men named Ahaziah (king of Israel, ch.1; king of Judah, ch.8-9); \"Iehoram\"/\"Ioram\" used for both the king of Israel (ch.3) and his brother-in-law the king of Judah (ch.8), who are explicitly siblings-in-law via Athaliah; \"Iehoash\"/\"Ioash\" used interchangeably within the SAME king's own passages for both Judah's boy-king (11:21 \"Iehoash\" / 12:19 \"Ioash\") and, separately, Israel's later king (13:9 \"Ioash\" / 13:10 \"Iehoash\") — two different men, both called by both spellings; two men named Jehoahaz (Israel, 13:1, son of Jehu; Judah, 23:31, son of Josiah); \"Zachariah\" used for both Jeroboam II's son (15:8) and Hezekiah's maternal grandfather (18:2); Shallum the usurper-king (15:10) vs. Shallum husband of Huldah (22:14); \"Ieremiah of Libnah\" (23:31, 24:18, father of two queens) explicitly not the prophet Jeremiah. No role:\"law\" tier is used — like KJV, this book is regnal narrative genre throughout; the theological indictment of Israel's fall (17:7-23) and the rediscovered book of the law (22-23) are folded into the relevant kings' own manager entries as things they personally enact, not treated as a standalone law/theme tier. All character ids are suffixed \"_geneva\" to avoid collision with the existing KJV CharacterIndex.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Whirlwind Chariot",
+      "managerId": "eliiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Elisha's Mantle",
+      "managerId": "elisha_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Waters of Iorden",
+      "managerId": "naaman_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Valley Trenches",
+      "managerId": "iehoram_israel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Furious Charet",
+      "managerId": "iehu_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Athaliah's Diademe",
+      "managerId": "athaliah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Shields of Dauid",
+      "managerId": "iehoiada_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Offering Chest",
+      "managerId": "iehoash_iudah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Arrow of Deliuerance",
+      "managerId": "iehoash_israel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Rock of Sela",
+      "managerId": "amaziah_iudah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Damascus Signet",
+      "managerId": "hazael_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Groue Image",
+      "managerId": "manasseh_iudah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Broken Yoke",
+      "managerId": "hoshea_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Siege Wall of Samaria",
+      "managerId": "shalmaneser_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Damascus Altar",
+      "managerId": "ahaz_iudah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Diall of Ahaz",
+      "managerId": "hezekiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Assyrian Letter",
+      "managerId": "saneherib_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Fig Poultice",
+      "managerId": "isaiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Booke of the Lawe",
+      "managerId": "iosiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 20,
+      "scribeName": "Pharaoh's Tribute Siluer",
+      "managerId": "iehoiakim_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Temple Vessels",
+      "managerId": "iehoiachin_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 22,
+      "scribeName": "Siege Breach",
+      "managerId": "zedekiah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 23,
+      "scribeName": "Burning Torch",
+      "managerId": "nebuchadnezzar_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "eliiah_geneva",
+      "name": "Eliiah (Elijah)",
+      "role": "manager",
+      "scribeTier": "Whirlwind Chariot",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 1:9-12",
+          "note": "calls fire down from heaven on two captains of fifty sent by Ahaziah of Israel, per the Geneva text"
+        },
+        {
+          "ref": "2 Kings 2:8",
+          "note": "parts the Iorden by striking it with his rolled cloke"
+        },
+        {
+          "ref": "2 Kings 2:11",
+          "note": "taken up into heaven by a whirlwind in a charet of fire, witnessed by Elisha"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells his name 'Eliiah' throughout (i/j interchangeable in 1560 English typesetting) — genuinely distinct spelling from KJV's 'Elijah.'"
+      ]
+    },
+    {
+      "id": "ahaziah_israel_geneva",
+      "name": "Ahaziah, king of Israel",
+      "role": "submanager",
+      "parentManagerId": "eliiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Ahab (per 1 Kings, not restated in this chapter)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 1:2",
+          "note": "falls through the lattice window of his vpper chamber in Samaria and is hurt"
+        },
+        {
+          "ref": "2 Kings 1:16-17",
+          "note": "dies per Eliiah's word for enquiring of Baal-zebub the god of Ekron; succeeded by Iehoram, 'because he had no sonne'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: a wholly different Ahaziah, king of Judah, appears later in this same book (chs. 8-9)."
+      ]
+    },
+    {
+      "id": "elisha_geneva",
+      "name": "Elisha",
+      "role": "manager",
+      "scribeTier": "Elisha's Mantle",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Shaphat",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 2:9-14",
+          "note": "asks for a double portion of Eliiah's spirit and parts the Iorden with Eliiah's fallen cloke"
+        },
+        {
+          "ref": "2 Kings 4:1-7",
+          "note": "multiplies a widow's oyle to pay her debts"
+        },
+        {
+          "ref": "2 Kings 4:32-37",
+          "note": "raises the Shunammite woman's dead sonne"
+        },
+        {
+          "ref": "2 Kings 5:10-14",
+          "note": "instructs Naaman to wash seven times in Iorden"
+        },
+        {
+          "ref": "2 Kings 6:17",
+          "note": "prays open his servant's eyes to see the mountain full of horses and charets of fyre"
+        },
+        {
+          "ref": "2 Kings 13:20-21",
+          "note": "a dead man reuiues when his corpse touches Elisha's bones, after Elisha's own death"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Geneva text keeps 2 Kings 2:23-24 (mocking children mauled by two beares) intact, unedited."
+      ]
+    },
+    {
+      "id": "gehazi_geneva",
+      "name": "Gehazi",
+      "role": "submanager",
+      "parentManagerId": "elisha_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 5:20-27",
+          "note": "secretly pursues Naaman for siluer and rayments, lies to Elisha, and is struck with Naaman's leprosie"
+        },
+        {
+          "ref": "2 Kings 8:4-5",
+          "note": "recounts Elisha's great actes to the King, and identifies the Shunammite woman as she comes to plead for her house and land"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "shunammite_woman_geneva",
+      "name": "The woman of Shunem",
+      "role": "submanager",
+      "parentManagerId": "elisha_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "an unnamed sonne, born then raised from death (2 Kings 4:17, 4:34-35)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 4:8-10",
+          "note": "builds Elisha a litle chamber with walles so he can lodge when passing by"
+        },
+        {
+          "ref": "2 Kings 4:18-20, 32-37",
+          "note": "her sonne dies suddenly of a headache in the field and is raised by Elisha"
+        },
+        {
+          "ref": "2 Kings 8:1-6",
+          "note": "her land and house are restored by the King after a seven-year famine, on Gehazi's testimony"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called only 'a woman of great estimation' — never named in this Geneva text, same as KJV."
+      ]
+    },
+    {
+      "id": "widow_of_prophet_geneva",
+      "name": "The widow of a son of the prophets",
+      "role": "submanager",
+      "parentManagerId": "elisha_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "two unnamed sonnes, about to be taken as bondmen for debt"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 4:1-7",
+          "note": "Elisha multiplies her pitcher of oyle to fill borrowed vessels, so she can pay her creditour"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "benhadad_geneva",
+      "name": "Ben-hadad, king of Aram",
+      "role": "submanager",
+      "parentManagerId": "elisha_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 6:24",
+          "note": "besieges Samaria, causing a famine so sore an asse's head sold for fourscore pieces of siluer"
+        },
+        {
+          "ref": "2 Kings 8:7-9",
+          "note": "falls sicke in Damascus and sends Hazael to enquire of Elisha whether he shall recouer"
+        },
+        {
+          "ref": "2 Kings 8:15",
+          "note": "smothered to death by Hazael with a wet cloth spread on his face; Hazael reigns in his stead"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva hyphenates his name 'Ben-hadad' — KJV prints it as one word, 'Benhadad.'"
+      ]
+    },
+    {
+      "id": "four_leprous_men_geneva",
+      "name": "The foure leprous men at the gate",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 7:3-10",
+          "note": "during the Aramite siege of Samaria, find the enemy camp abandoned and bring word, ending the famine"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "An undifferentiated group of four in the text; kept together rather than inventing individual identities."
+      ]
+    },
+    {
+      "id": "naaman_geneva",
+      "name": "Naaman",
+      "role": "manager",
+      "scribeTier": "Waters of Iorden",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed wife (2 Kings 5:2-3)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 5:1",
+          "note": "introduced as 'a great man...honourable...but he was a leper'"
+        },
+        {
+          "ref": "2 Kings 5:14",
+          "note": "dips in Iorden seven times per Elisha's word and his flesh comes againe like a litle child's"
+        },
+        {
+          "ref": "2 Kings 5:15-19",
+          "note": "confesses there is no God in all the world but in Israel and departs with Elisha's blessing, 'Goe in peace'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His whole episode — healing, conversion, and Gehazi's punishment — resolves within ch. 5 alone."
+      ]
+    },
+    {
+      "id": "iehoram_israel_geneva",
+      "name": "Iehoram, king of Israel",
+      "role": "manager",
+      "scribeTier": "Valley Trenches",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahab",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 3:1-3",
+          "note": "begins to reign; puts away the image of Baal his father made, but cleaues to the sinnes of Ieroboam"
+        },
+        {
+          "ref": "2 Kings 3:9-20",
+          "note": "joins Iehoshaphat of Iudah and the King of Edom against rebelling Moab; Elisha provides water by trenches in the valley"
+        },
+        {
+          "ref": "2 Kings 9:24",
+          "note": "killed by Iehu, shot through the heart with an arrow, and falls down in his charet"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: 'Iehoram' is used for this king of Israel AND for his own brother-in-law, the contemporary king of Judah, later in this same book (ch. 8)."
+      ]
+    },
+    {
+      "id": "iehoram_iudah_geneva",
+      "name": "Iehoram, king of Iudah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoshaphat",
+        "mother": null,
+        "spouses": [
+          "Athaliah"
+        ],
+        "children": [
+          "Ahaziah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:16-18",
+          "note": "begins to reign; 'walked in the way of the kings of Israel...for the daughter of Ahab was his wife'"
+        },
+        {
+          "ref": "2 Kings 8:20-22",
+          "note": "Edom and Libnah rebel from Iudah in his dayes"
+        },
+        {
+          "ref": "2 Kings 8:24",
+          "note": "dies; succeeded by his sonne Ahaziah"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Distinct man from Iehoram/Ioram, king of Israel, his own brother-in-law and contemporary."
+      ]
+    },
+    {
+      "id": "mesha_moab_geneva",
+      "name": "Mesha, king of Moab",
+      "role": "submanager",
+      "parentManagerId": "iehoram_israel_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "his eldest sonne, offered as a burnt offering on the wall (2 Kings 3:27)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 3:4-5",
+          "note": "rendered tribute of lambs and wooll to Israel, then rebelled after Ahab died"
+        },
+        {
+          "ref": "2 Kings 3:26-27",
+          "note": "when the battel goes against him, offers his eldest sonne for a burnt offering vpon the wall, and Israel departs 'sore grieued'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iehoshaphat_iudah_geneva",
+      "name": "Iehoshaphat, king of Iudah",
+      "role": "submanager",
+      "parentManagerId": "iehoram_israel_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Asa (established in 1 Kings, not restated here)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Iehoram, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 3:7",
+          "note": "agrees to join Iehoram of Israel against Moab: 'I am, as thou art, my people, as thy people'"
+        },
+        {
+          "ref": "2 Kings 3:11-14",
+          "note": "asks for a prophet of the Lord, leading to Elisha's involvement"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: Iehu's own father is separately named 'Iehoshaphat the sonne of Nimshi' (9:2) — an unrelated man sharing this king's name."
+      ]
+    },
+    {
+      "id": "iehu_geneva",
+      "name": "Iehu, king of Israel",
+      "role": "manager",
+      "scribeTier": "Furious Charet",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoshaphat the sonne of Nimshi",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Iehoahaz, king of Israel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 9:6-10",
+          "note": "anointed King ouer Israel by a young prophet sent from Elisha, commissioned to smite the house of Ahab"
+        },
+        {
+          "ref": "2 Kings 9:20",
+          "note": "identified from a distance by his driving: 'the marching is like the marching of Iehu...he marcheth furiously'"
+        },
+        {
+          "ref": "2 Kings 10:28",
+          "note": "destroys Baal out of Israel"
+        },
+        {
+          "ref": "2 Kings 10:29,31",
+          "note": "yet departs not from the sinnes of Ieroboam"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: an earlier, unrelated prophet named Jehu (son of Hanani) appears in 1 Kings — a different book, different man."
+      ]
+    },
+    {
+      "id": "iezebel_geneva",
+      "name": "Iezebel",
+      "role": "submanager",
+      "parentManagerId": "iehu_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Ahab (established in 1 Kings)"
+        ],
+        "children": [
+          "Ahaziah, king of Israel",
+          "Iehoram, king of Israel",
+          "Athaliah, queen of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 9:30-33",
+          "note": "paints her face and tires her head; thrown down from her window by her own eunuches at Iehu's word, and trodden vnder foote"
+        },
+        {
+          "ref": "2 Kings 9:35-37",
+          "note": "only her skull, feet, and palms are found, per Eliiah's earlier word"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iehonadab_rechab_geneva",
+      "name": "Iehonadab, sonne of Rechab",
+      "role": "submanager",
+      "parentManagerId": "iehu_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Rechab",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 10:15-16",
+          "note": "meets Iehu, gives his hand, and rides with him in his charet 'to see my zeale for the Lord'"
+        },
+        {
+          "ref": "2 Kings 10:23",
+          "note": "present with Iehu inside the house of Baal during the purge"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahaziah_iudah_geneva",
+      "name": "Ahaziah, king of Iudah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoram, king of Iudah",
+        "mother": "Athaliah, daughter of Ahab",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:25-26",
+          "note": "begins to reign at two-and-twenty yeere olde, in Ierusalem"
+        },
+        {
+          "ref": "2 Kings 9:16",
+          "note": "goes downe to see his uncle-by-marriage Iehoram of Israel at Izreel while he recovers from wounds"
+        },
+        {
+          "ref": "2 Kings 9:27",
+          "note": "flees Iehu's purge, wounded at Gur near Ibleam, and dies at Megiddo"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: a wholly different Ahaziah, king of Israel, appears earlier in this same book (ch. 1)."
+      ]
+    },
+    {
+      "id": "athaliah_geneva",
+      "name": "Athaliah",
+      "role": "manager",
+      "scribeTier": "Athaliah's Diademe",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahab",
+        "mother": null,
+        "spouses": [
+          "Iehoram, king of Iudah"
+        ],
+        "children": [
+          "Ahaziah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:1",
+          "note": "upon her sonne Ahaziah's death, destroys all the King's seede to seize the throne herselfe"
+        },
+        {
+          "ref": "2 Kings 11:3",
+          "note": "reigns ouer the land sixe yeere while the infant Iehoash/Ioash is hidden"
+        },
+        {
+          "ref": "2 Kings 11:13-16",
+          "note": "cries 'Treason, treason' on discovering the coup, and is put to death outside the temple"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only woman to reign in her own right over either kingdom in these two books."
+      ]
+    },
+    {
+      "id": "iehoiada_geneva",
+      "name": "Iehoiada, the Priest",
+      "role": "manager",
+      "scribeTier": "Shields of Dauid",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:4",
+          "note": "makes a couenant with the captaines of hundreths to protect and crowne the hidden child"
+        },
+        {
+          "ref": "2 Kings 11:10-12",
+          "note": "arms the garde with speares and shields that were King Dauid's, kept in the house of the Lord, and crowns Iehoash"
+        },
+        {
+          "ref": "2 Kings 11:17",
+          "note": "makes a couenant betweene the Lord, the King, and the people"
+        },
+        {
+          "ref": "2 Kings 12:2",
+          "note": "Iehoash 'did that which was good...all his time that Iehoiada the Priest taught him'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iehosheba_geneva",
+      "name": "Iehosheba",
+      "role": "submanager",
+      "parentManagerId": "iehoiada_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "King Ioram (Iehoram of Iudah)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:2",
+          "note": "steals the infant Ioash from among the King's sonnes about to be slaine and hides him in the bed chamber sixe yeere"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called 'daughter of King Ioram, and sister to Ahaziah' — Geneva does not itself state she was Iehoiada's wife."
+      ]
+    },
+    {
+      "id": "iehoash_iudah_geneva",
+      "name": "Iehoash (Ioash), king of Iudah",
+      "role": "manager",
+      "scribeTier": "Offering Chest",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahaziah, king of Iudah",
+        "mother": "Zibiah of Beer-sheba",
+        "spouses": [],
+        "children": [
+          "Amaziah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:21, 12:1",
+          "note": "begins to reign at seuen yeere olde"
+        },
+        {
+          "ref": "2 Kings 12:9-13",
+          "note": "has a chest bored with a hole set beside the altar to gather money for repairing the Temple"
+        },
+        {
+          "ref": "2 Kings 12:17-18",
+          "note": "strips the Temple and his own treasures to pay off Hazael of Aram and turn him from Ierusalem"
+        },
+        {
+          "ref": "2 Kings 12:20-21",
+          "note": "slain by his own seruants, Iozachar and Iehozabad, in the house of Millo"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva itself alternates between 'Iehoash' (11:21, 12:1) and 'Ioash' (12:19-21) for this same king — an internal spelling inconsistency, not a collision with a different person, though it mirrors the interchange seen with Israel's later king of the same name."
+      ]
+    },
+    {
+      "id": "iozachar_geneva",
+      "name": "Iozachar, sonne of Shimeath",
+      "role": "submanager",
+      "parentManagerId": "iehoash_iudah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shimeath",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 12:21",
+          "note": "one of two seruants who smote and killed Iehoash of Iudah"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iehozabad_geneva",
+      "name": "Iehozabad, sonne of Shomer",
+      "role": "submanager",
+      "parentManagerId": "iehoash_iudah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shomer",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 12:21",
+          "note": "the second of two seruants who smote and killed Iehoash of Iudah"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "iehoahaz_israel_geneva",
+      "name": "Iehoahaz, king of Israel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehu",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Iehoash (Ioash), king of Israel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 13:1-3",
+          "note": "reigns seuenteene yeere; the Lord delivers Israel into the hand of Hazael and Ben-hadad because of Ieroboam's sinnes"
+        },
+        {
+          "ref": "2 Kings 13:4-5",
+          "note": "besought the Lord, who gave Israel a deliuerer (unnamed) so they escaped out from vnder the Aramites"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: a wholly different Iehoahaz, king of Iudah and son of Iosiah, appears far later in this same book (ch. 23), roughly eighty years afterward."
+      ]
+    },
+    {
+      "id": "iehoash_israel_geneva",
+      "name": "Iehoash (Ioash), king of Israel",
+      "role": "manager",
+      "scribeTier": "Arrow of Deliuerance",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoahaz, king of Israel",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Ieroboam (II), king of Israel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 13:14-19",
+          "note": "weeps ouer the dying Elisha, shoots an arrow of the Lord's deliuerance eastward, then smites the ground with arrows only thrise, limiting his future victories over Aram to three"
+        },
+        {
+          "ref": "2 Kings 13:25",
+          "note": "recovers the cities his father lost to Ben-hadad, beating him three times as Elisha foretold"
+        },
+        {
+          "ref": "2 Kings 14:8-14",
+          "note": "defeats Amaziah of Iudah at Beth-shemesh after Amaziah's provocation, breaks down part of Ierusalem's wall, and takes hostages and Temple treasure"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva itself calls him both 'Ioash' (13:9,13) and 'Iehoash' (13:10,25) within the same short passage — the same double-name pattern already flagged for Iudah's earlier king of the same name."
+      ]
+    },
+    {
+      "id": "amaziah_iudah_geneva",
+      "name": "Amaziah, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Rock of Sela",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoash (Ioash), king of Iudah",
+        "mother": "Iehoadan of Ierusalem",
+        "spouses": [],
+        "children": [
+          "Azariah (Vzziah), king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 14:5-6",
+          "note": "executes his father's assassins but spares their children, citing the booke of the Lawe of Moses"
+        },
+        {
+          "ref": "2 Kings 14:7",
+          "note": "slays ten thousand of Edom in the valley of salt and takes Sela, renaming it Ioktheel"
+        },
+        {
+          "ref": "2 Kings 14:8-14",
+          "note": "provokes Iehoash of Israel to battel and is defeated and humbled at Beth-shemesh"
+        },
+        {
+          "ref": "2 Kings 14:19-20",
+          "note": "killed in a conspiracy at Lachish; brought back to Ierusalem for burial"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 25,
+          "event": "began to reign",
+          "ref": "2 Kings 14:2"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "ieroboam_ii_geneva",
+      "name": "Ieroboam (II), king of Israel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoash (Ioash), king of Israel",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Zachariah, king of Israel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 14:23-25",
+          "note": "reigns one and fourtie yeere and restores Israel's coast, according to the word of the Lord spoken by Ionah the sonne of Amittai"
+        },
+        {
+          "ref": "2 Kings 14:28",
+          "note": "recovers Damascus and Hamath for Israel"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Text never numbers him 'II' — a scholarly convention, not the book's own wording."
+      ]
+    },
+    {
+      "id": "ionah_amittai_geneva",
+      "name": "Ionah, the sonne of Amittai",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Amittai",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 14:25",
+          "note": "his earlier word that Israel's coast would be restored is fulfilled through Ieroboam II — same patronymic as the prophet of the book of Ionah, an explicit textual link"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book only cites his prophecy of restoration; it does not narrate the events of the book of Ionah itself."
+      ]
+    },
+    {
+      "id": "zachariah_ben_ieroboam_geneva",
+      "name": "Zachariah, king of Israel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ieroboam (II), king of Israel",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:8-10",
+          "note": "reigns sixe moneths; killed by Shallum before the people, ending Iehu's dynasty in fulfillment of 10:30"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells this 'Zachariah' at both its occurrences in this book (here, and at 18:2) — a different person from either occurrence, and a different spelling from 'Zechariah' the writing prophet elsewhere in scripture."
+      ]
+    },
+    {
+      "id": "shallum_israel_geneva",
+      "name": "Shallum, the sonne of Iabesh",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iabesh",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:10",
+          "note": "conspires against and kills Zachariah, then reigns"
+        },
+        {
+          "ref": "2 Kings 15:13-14",
+          "note": "reigns the space of a moneth in Samaria before being killed by Menahem"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: a different Shallum, husband of Huldah the Prophetesse, appears later in this same book (22:14)."
+      ]
+    },
+    {
+      "id": "menahem_geneva",
+      "name": "Menahem, sonne of Gadi",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Gadi",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Pekahiah, king of Israel"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:14-16",
+          "note": "kills Shallum and reigns; destroys Tiphsah with great cruelty for not opening to him"
+        },
+        {
+          "ref": "2 Kings 15:19-20",
+          "note": "pays Pul, king of Asshur, a thousand talents of siluer, exacted of the wealthy of Israel, 'that his hand might be with him to confirme the kingdome'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pul_geneva",
+      "name": "Pul, king of Asshur",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:19",
+          "note": "receives a thousand talents of siluer tribute from Menahem"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A separate figure, Tiglath Pileser, is named a few verses later (15:29) and again in ch. 16; 1 Chronicles 5:26, a different book, identifies them as the same king — not asserted here as this book's own claim."
+      ]
+    },
+    {
+      "id": "tiglath_pileser_geneva",
+      "name": "Tiglath Pileser, king of Asshur",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:29",
+          "note": "takes Iion, Abel Beth-maachah, Ianoah, Kedesh, Hazor, Gilead, Galilah, and all Naphtali from Pekah, carrying the people captive to Asshur"
+        },
+        {
+          "ref": "2 Kings 16:7-9",
+          "note": "answers Ahaz of Iudah's appeal against Aram and Israel, takes Damascus, and slays Rezin"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva prints his name as two words, 'Tiglath Pileser' — KJV's 2Kings.json documents its own text as one word, 'Tiglathpileser.'"
+      ]
+    },
+    {
+      "id": "pekahiah_geneva",
+      "name": "Pekahiah, king of Israel",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Menahem",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:23-26",
+          "note": "reigns two yeere; killed in the King's palace at Samaria by his captaine Pekah, aided by Argob and Arieh and fiftie Gileadites"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pekah_geneva",
+      "name": "Pekah, sonne of Remaliah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Remaliah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:25",
+          "note": "a captaine of Pekahiah who conspires against and kills him, then reigns"
+        },
+        {
+          "ref": "2 Kings 15:29",
+          "note": "loses much of Israel's territory to Tiglath Pileser"
+        },
+        {
+          "ref": "2 Kings 15:30",
+          "note": "killed by Hoshea the sonne of Elah in a conspiracy"
+        },
+        {
+          "ref": "2 Kings 16:5",
+          "note": "joins Rezin of Aram in besieging Ahaz at Ierusalem"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "rezin_geneva",
+      "name": "Rezin, king of Aram",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 16:5",
+          "note": "joins Pekah in besieging Ahaz at Ierusalem, but they could not ouercome him"
+        },
+        {
+          "ref": "2 Kings 16:6",
+          "note": "restores Elath to Aram"
+        },
+        {
+          "ref": "2 Kings 16:9",
+          "note": "slain by the King of Asshur after Ahaz's appeal for help"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hoshea_geneva",
+      "name": "Hoshea, sonne of Elah",
+      "role": "manager",
+      "scribeTier": "Broken Yoke",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Elah (a different man from King Elah of Israel in 1 Kings 16, a separate book and earlier king)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:30",
+          "note": "conspires against, kills, and succeeds Pekah"
+        },
+        {
+          "ref": "2 Kings 17:3-4",
+          "note": "becomes seruant to Shalmaneser and pays tribute, then conspires with 'So king of Egypt' and withholds it"
+        },
+        {
+          "ref": "2 Kings 17:4",
+          "note": "the King of Asshur shuts him vp and binds him in prison"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The last king of the northern kingdom of Israel; his rebellion triggers the siege that ends the kingdom, though the siege itself is Shalmaneser's own act."
+      ]
+    },
+    {
+      "id": "shalmaneser_geneva",
+      "name": "Shalmaneser, king of Asshur",
+      "role": "manager",
+      "scribeTier": "Siege Wall of Samaria",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 17:3",
+          "note": "comes vp against Hoshea, who becomes his seruant and gives presents"
+        },
+        {
+          "ref": "2 Kings 17:4",
+          "note": "discovers Hoshea's conspiracy with Egypt and imprisons him"
+        },
+        {
+          "ref": "2 Kings 17:5-6",
+          "note": "besieges Samaria three yeere and personally takes it, carrying Israel away captive to Asshur — the event that ends the kingdom of Israel"
+        },
+        {
+          "ref": "2 Kings 18:9-10",
+          "note": "the fall of Samaria is retold within Hezekiah's own regnal account"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given a full manager tier, matching KJV's own precedent — the foreign king whose personal action ends the northern kingdom, weight comparable to Saneherib and Nebuchad-nezzar."
+      ]
+    },
+    {
+      "id": "ahaz_iudah_geneva",
+      "name": "Ahaz, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Damascus Altar",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iotham, king of Iudah",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Hezekiah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 16:3",
+          "note": "'made his sonne to go through the fire, after the abominations of the heathen' — the sonne is not named"
+        },
+        {
+          "ref": "2 Kings 16:7-9",
+          "note": "appeals to Tiglath Pileser for help, sending Temple and palace siluer and golde as a present"
+        },
+        {
+          "ref": "2 Kings 16:10-16",
+          "note": "sees an altar at Damascus, sends the pattern to Vriiah the Priest, and has a copy built in the Temple, replacing the brasen altar"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 20,
+          "event": "began to reign",
+          "ref": "2 Kings 16:2"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "uriiah_priest_geneva",
+      "name": "Vriiah, the Priest",
+      "role": "submanager",
+      "parentManagerId": "ahaz_iudah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 16:10-11",
+          "note": "builds Ahaz's Damascus-pattern altar exactly to specification, before the King himself returns from Damascus"
+        },
+        {
+          "ref": "2 Kings 16:15-16",
+          "note": "carries out Ahaz's full instructions for the new altar's use, displacing the old brasen altar"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hezekiah_geneva",
+      "name": "Hezekiah, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Diall of Ahaz",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahaz, king of Iudah",
+        "mother": "Abi, the daughter of Zachariah",
+        "spouses": [],
+        "children": [
+          "Manasseh, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:4",
+          "note": "takes away the hie places, breaks the brasen serpent Moses made ('Nehushtan'), which Israel had burnt incense to"
+        },
+        {
+          "ref": "2 Kings 18:13-16",
+          "note": "Saneherib invades and Hezekiah strips the Temple and his own treasury to pay tribute"
+        },
+        {
+          "ref": "2 Kings 19:14-19",
+          "note": "spreads Saneherib's letter before the Lord in the Temple and prays"
+        },
+        {
+          "ref": "2 Kings 20:1-11",
+          "note": "falls sicke, is granted fifteene more yeere of life, and given the sign of the shadowe going backe ten degrees on the diall of Ahaz"
+        },
+        {
+          "ref": "2 Kings 20:12-13",
+          "note": "shows all his treasures to envoys of Berodach Baladan, the sonne of Baladan, king of Babel"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 25,
+          "event": "began to reign",
+          "ref": "2 Kings 18:2"
+        }
+      ],
+      "funFacts": [
+        "'Zachariah' here (his mother's father) is a different man from Zachariah son of Ieroboam II (15:8), a naming echo worth flagging each time it recurs."
+      ]
+    },
+    {
+      "id": "berodach_baladan_geneva",
+      "name": "Berodach Baladan, sonne of Baladan",
+      "role": "submanager",
+      "parentManagerId": "hezekiah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Baladan",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 20:12-13",
+          "note": "king of Babel; sends letters and a present to Hezekiah upon hearing of his sickness, and Hezekiah shows his envoys the full treasure house"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva prints his name as TWO words, 'Berodach Baladan' — a real spelling difference from the KJV 2Kings.json's own documented one-word 'Berodachbaladan' at this same verse."
+      ]
+    },
+    {
+      "id": "saneherib_geneva",
+      "name": "Saneherib, king of Asshur",
+      "role": "manager",
+      "scribeTier": "Assyrian Letter",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Adramelech (assassin)",
+          "Sharezer (assassin)",
+          "Esarhaddon, successor"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:13",
+          "note": "inuades Iudah and takes its fenced cities"
+        },
+        {
+          "ref": "2 Kings 18:17",
+          "note": "sends Tartan, Rab-saris, and Rabshakeh with a great hoste against Ierusalem"
+        },
+        {
+          "ref": "2 Kings 19:35",
+          "note": "the Angel of the Lord smites 185,000 in the Assyrian camp in a single night"
+        },
+        {
+          "ref": "2 Kings 19:36-37",
+          "note": "returns to Nineueh and is later killed by his own sonnes while worshipping in the house of Nisroch his god"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva's spelling 'Saneherib' is a genuine, consistent variant of 'Sennacherib' throughout this text."
+      ]
+    },
+    {
+      "id": "rabshakeh_geneva",
+      "name": "Rabshakeh",
+      "role": "submanager",
+      "parentManagerId": "saneherib_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:19-35",
+          "note": "delivers a lengthy taunting speech to Hezekiah's officials and the people on the wall, in the Iewes tongue, mocking trust in the Lord and in Egypt"
+        },
+        {
+          "ref": "2 Kings 19:8",
+          "note": "returns to Saneherib, finding him warring against Libnah"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Rabshakeh,' like 'Tartan' and 'Rab-saris' beside him, is an Assyrian court title/office, not a personal name."
+      ]
+    },
+    {
+      "id": "isaiah_geneva",
+      "name": "Isaiah, the Prophet",
+      "role": "manager",
+      "scribeTier": "Fig Poultice",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Amoz",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 19:6-7",
+          "note": "tells Hezekiah's servants not to fear Saneherib's words and prophesies his downfall"
+        },
+        {
+          "ref": "2 Kings 19:20-34",
+          "note": "delivers a long oracle against Saneherib and a promise of deliverance for Ierusalem"
+        },
+        {
+          "ref": "2 Kings 20:1",
+          "note": "tells the sicke Hezekiah to set his house in order, for he shall die"
+        },
+        {
+          "ref": "2 Kings 20:7",
+          "note": "has a lumpe of dry figges laid on Hezekiah's boyle, and he recovers"
+        },
+        {
+          "ref": "2 Kings 20:16-18",
+          "note": "prophesies Hezekiah's treasures and descendants will be carried to Babel"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "manasseh_iudah_geneva",
+      "name": "Manasseh, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Groue Image",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Hezekiah, king of Iudah",
+        "mother": "Hephzi-bah",
+        "spouses": [],
+        "children": [
+          "Amon, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 21:2-3",
+          "note": "builds again the hie places Hezekiah destroyed, erects altars for Baal, makes a groue as did Ahab, and worships all the hoste of heauen"
+        },
+        {
+          "ref": "2 Kings 21:6",
+          "note": "causes his sonnes to passe through the fire and gives himself to witchcraft and sorcerie"
+        },
+        {
+          "ref": "2 Kings 21:16",
+          "note": "sheds innocent blood exceeding much, till he replenished Ierusalem from corner to corner"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 12,
+          "event": "began to reign",
+          "ref": "2 Kings 21:1"
+        }
+      ],
+      "funFacts": [
+        "His sins are cited by name in 24:3-4 as the Lord's own stated reason for Iudah's eventual fall, decades later."
+      ]
+    },
+    {
+      "id": "amon_iudah_geneva",
+      "name": "Amon, king of Iudah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Manasseh, king of Iudah",
+        "mother": "Meshullemeth, the daughter of Haruz of Iotbah",
+        "spouses": [],
+        "children": [
+          "Iosiah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 21:20-21",
+          "note": "does euill as his father Manasseh did, serving the idoles his father served"
+        },
+        {
+          "ref": "2 Kings 21:23-24",
+          "note": "his own seruants conspire and slay him in his house; the people of the land then slay the conspirators and crown Iosiah"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 22,
+          "event": "began to reign",
+          "ref": "2 Kings 21:19"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "iosiah_geneva",
+      "name": "Iosiah, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Booke of the Lawe",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Amon, king of Iudah",
+        "mother": "Iedidah, the daughter of Adaiah of Bozcath",
+        "spouses": [],
+        "children": [
+          "Iehoahaz, king of Iudah",
+          "Iehoiakim, king of Iudah",
+          "Zedekiah, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:3-7",
+          "note": "sends Shaphan to the Temple to have the gathered siluer paid out for repairs"
+        },
+        {
+          "ref": "2 Kings 22:11",
+          "note": "rents his clothes on hearing the newly found booke of the Lawe read aloud"
+        },
+        {
+          "ref": "2 Kings 23:2-3",
+          "note": "reads the booke of the covenant to all the people and renews the covenant, standing by the pillar"
+        },
+        {
+          "ref": "2 Kings 23:21-23",
+          "note": "commands the Passeouer be kept, 'like that from the dayes of the Iudges' none had been holden"
+        },
+        {
+          "ref": "2 Kings 23:29-30",
+          "note": "slain at Megiddo by Pharaoh Nechoh as he goes out against him"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 8,
+          "event": "began to reign",
+          "ref": "2 Kings 22:1"
+        }
+      ],
+      "funFacts": [
+        "'Like vnto him was there no King before him' (23:25) — the text's own superlative praise, matched only by Hezekiah's."
+      ]
+    },
+    {
+      "id": "hilkiah_geneva",
+      "name": "Hilkiah, the hie Priest",
+      "role": "submanager",
+      "parentManagerId": "iosiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:8",
+          "note": "finds the booke of the Lawe in the house of the Lord and gives it to Shaphan"
+        },
+        {
+          "ref": "2 Kings 23:4",
+          "note": "commanded by Iosiah to bring out of the Temple all vessels made for Baal, the groue, and the hoste of heauen, to be burnt"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "huldah_geneva",
+      "name": "Huldah, the Prophetesse",
+      "role": "submanager",
+      "parentManagerId": "iosiah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "Shallum, the sonne of Tikuah, keeper of the wardrobe"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:14-20",
+          "note": "confirms the booke's judgements against Ierusalem, but promises Iosiah he will be gathered to his fathers in peace before the evil comes, because his heart melted before the Lord"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "NAMING COLLISION FLAG: her husband Shallum is a different man from Shallum the usurper-king of Israel earlier in this same book (15:10)."
+      ]
+    },
+    {
+      "id": "iehoahaz_iudah_geneva",
+      "name": "Iehoahaz, king of Iudah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iosiah, king of Iudah",
+        "mother": "Hamutal, the daughter of Ieremiah of Libnah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 23:30-31",
+          "note": "anointed King by the people of the land after Iosiah's death; reigns three moneths"
+        },
+        {
+          "ref": "2 Kings 23:33-34",
+          "note": "put in bonds at Riblah by Pharaoh Nechoh, taken to Egypt, and dies there"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 23,
+          "event": "began to reign",
+          "ref": "2 Kings 23:31"
+        }
+      ],
+      "funFacts": [
+        "NAMING COLLISION FLAG: a wholly different Iehoahaz, king of Israel and son of Iehu, appears far earlier in this same book (13:1)."
+      ]
+    },
+    {
+      "id": "iehoiakim_geneva",
+      "name": "Iehoiakim, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Pharaoh's Tribute Siluer",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iosiah, king of Iudah (renamed from 'Eliakim' by Pharaoh Nechoh)",
+        "mother": "Zebudah, the daughter of Pedaiah of Rumah",
+        "spouses": [],
+        "children": [
+          "Iehoiachin, king of Iudah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 23:34-35",
+          "note": "set on the throne by Pharaoh Nechoh in place of Iehoahaz, and taxes the land to pay Pharaoh's demanded siluer and golde"
+        },
+        {
+          "ref": "2 Kings 24:1",
+          "note": "becomes seruant to Nebuchad-nezzar three yeere, then rebels against him"
+        },
+        {
+          "ref": "2 Kings 24:2",
+          "note": "the Lord sends bandes of Caldees, Aramites, Moabites, and Ammonites against him"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 25,
+          "event": "began to reign",
+          "ref": "2 Kings 23:36"
+        }
+      ],
+      "funFacts": [
+        "His own renaming by a foreign king (Eliakim → Iehoiakim) mirrors Zedekiah's later renaming by Nebuchad-nezzar (24:17) — a recurring device marking loss of sovereignty."
+      ]
+    },
+    {
+      "id": "iehoiachin_geneva",
+      "name": "Iehoiachin, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Temple Vessels",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iehoiakim, king of Iudah",
+        "mother": "Nehushta, the daughter of Elnathan of Ierusalem",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:8-9",
+          "note": "begins to reign at eighteene yeere olde; reigns three moneths"
+        },
+        {
+          "ref": "2 Kings 24:12",
+          "note": "comes out against the King of Babel with his mother, seruants, princes, and eunuches, and is taken"
+        },
+        {
+          "ref": "2 Kings 24:13-15",
+          "note": "the Temple treasures and golden vessels Salomon made are broken up and carried away with him to Babel"
+        },
+        {
+          "ref": "2 Kings 25:27-30",
+          "note": "in Euil-merodach's first yeere as king, his head is lifted vp out of prison; he eats bread continually before the King of Babel all his life"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His release closes the whole book on a note of unexpected mercy after 24 chapters of judgement."
+      ]
+    },
+    {
+      "id": "zedekiah_geneva",
+      "name": "Zedekiah, king of Iudah",
+      "role": "manager",
+      "scribeTier": "Siege Breach",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Iosiah, king of Iudah (uncle to Iehoiachin; renamed from 'Mattaniah' by Nebuchad-nezzar)",
+        "mother": "Hamutal, the daughter of Ieremiah of Libnah",
+        "spouses": [],
+        "children": [
+          "sonnes slain before his eyes at Riblah (2 Kings 25:7)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:17-18",
+          "note": "made King by Nebuchad-nezzar in Iehoiachin's stead, renamed from Mattaniah; reigns eleuen yeere"
+        },
+        {
+          "ref": "2 Kings 24:20-25:1",
+          "note": "rebels against the King of Babel, who besieges Ierusalem in the ninth yeere, tenth moneth"
+        },
+        {
+          "ref": "2 Kings 25:4-6",
+          "note": "flees by night when the citie is broken vp, is taken in the deserts of Iericho, and brought to Riblah for judgement"
+        },
+        {
+          "ref": "2 Kings 25:7",
+          "note": "his sonnes are slain before his eyes, then his own eyes are put out and he is bound in chaines and carried to Babel"
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 21,
+          "event": "began to reign",
+          "ref": "2 Kings 24:18"
+        }
+      ],
+      "funFacts": [
+        "The siege runs from the ninth yeere/tenth moneth to the eleuenth yeere (25:1-2) — roughly eighteen months, not the 'over two years' sometimes assumed."
+      ]
+    },
+    {
+      "id": "nebuchadnezzar_geneva",
+      "name": "Nebuchad-nezzar, king of Babel",
+      "role": "manager",
+      "scribeTier": "Burning Torch",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Euil-merodach, successor (25:27 does not itself state this parentage — hedged per this book's own silence)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:1",
+          "note": "Iehoiakim becomes his seruant, then rebels"
+        },
+        {
+          "ref": "2 Kings 24:10-12",
+          "note": "besieges Ierusalem and takes Iehoiachin captive in the eyght yeere of his own reign"
+        },
+        {
+          "ref": "2 Kings 25:1",
+          "note": "comes personally against Ierusalem with all his hoste and besieges it"
+        },
+        {
+          "ref": "2 Kings 25:8-9",
+          "note": "his chiefe steward Nebuzar-adan burns the house of the Lord, the King's house, and all the great houses of Ierusalem"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva hyphenates his name 'Nebuchad-nezzar' consistently, distinct from KJV's one-word 'Nebuchadnezzar.'"
+      ]
+    },
+    {
+      "id": "nebuzaradan_geneva",
+      "name": "Nebuzar-adan, chiefe stewarde",
+      "role": "submanager",
+      "parentManagerId": "nebuchadnezzar_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:8-10",
+          "note": "burns the Temple, the King's house, and Ierusalem's great houses, and breaks down the citie walles"
+        },
+        {
+          "ref": "2 Kings 25:18-21",
+          "note": "takes Seraiah the chiefe Priest and other officials to the King of Babel at Riblah, where they are slain"
+        },
+        {
+          "ref": "2 Kings 25:22",
+          "note": "leaves the poore of the land to dresse the vines and till the ground under Gedaliah's rule"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gedaliah_geneva",
+      "name": "Gedaliah, the sonne of Ahikam",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ahikam, the sonne of Shaphan",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:22-24",
+          "note": "made ruler over the poor left in the land; swears to the surviving captaines that they need not fear to serve the King of Babel"
+        },
+        {
+          "ref": "2 Kings 25:25",
+          "note": "smitten and slain at Mizpah by Ishmael, sonne of Nethaniah, of the King's seede, along with the Iewes and Caldees there with him"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His assassination triggers the final flight of the remaining people to Egypt (25:26), the book's last narrated event before the Euil-merodach epilogue."
+      ]
+    },
+    {
+      "id": "hazael_geneva",
+      "name": "Hazael",
+      "role": "manager",
+      "scribeTier": "Damascus Signet",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "benhadad_son_of_hazael_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:7-15",
+          "note": "Sent by Ben-hadad to ask Elisha if he will recover from sickness; Elisha weeps foreseeing the evil Hazael will do to Israel, then Hazael smothers Ben-hadad with a wet cloth and reigns in his place."
+        },
+        {
+          "ref": "2 Kings 13:22",
+          "note": "Oppresses Israel all the days of King Jehoahaz."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Elisha wept when he foresaw the cruelty Hazael would inflict on Israel (8:11-12) — a rare moment of a prophet mourning before the fact."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list above.",
+    "house_of_ahab": {
+      "ref": "2 Kings 10:1",
+      "note": "Ahab is said to have had seventy sonnes in Samaria at the time of Iehu's purge — an undifferentiated group, all slain (10:7), not individually indexed."
+    },
+    "brethren_of_ahaziah": {
+      "ref": "2 Kings 10:13-14",
+      "note": "forty-two unnamed 'brethren of Ahaziah' (kinsmen of the royal house of Iudah) met and slain by Iehu's men near the shearing-house — a collective group, not individually named in the text."
+    }
+  }
+}

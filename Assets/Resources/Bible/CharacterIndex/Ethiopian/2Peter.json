@@ -1,0 +1,286 @@
+{
+  "book": "2 Peter",
+  "translation": "Ethiopian",
+  "canonicalOrder": 80,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Verified this translation's own extracted text (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Ethiopian/2_peter_80.json, 3 chapters/61 verses) word-for-word against the already-completed KJV 2Peter.json index and found the wording content-identical across every verse checked (1:1 'Simon Peter, a servant and an apostle,' 1:5-7's virtue chain, 2:5's 'Noah the eighth person,' 2:15's 'Balaam the son of Bosor,' 3:8's 'one day...as a thousand years,' 3:15-16's Paul reference) - no Ethiopian-canon-specific expansion or divergent content in this particular epistle (unlike this same translation's Ezra, which does diverge). Adapted the KJV structure directly rather than inventing an unrelated one, per the task's own guidance for content-identical shared-canon books, re-verifying every verse reference and note against this translation's own file rather than copying blind. Structure preserved: Peter himself is the only figure who meets the personally-embodied test (eyewitness of the Transfiguration, speaks of his own approaching death, identifies this as his second epistle) and gets the sole person-type manager tier; the epistle's three dense teaching blocks (the virtue-ladder exhortation of 1:5-11, the extended denunciation of false teachers grounded in OT judgment/deliverance examples in ch.2, and the day-of-the-Lord/new-heavens-and-new-earth teaching of ch.3) are law/theme tiers delivered by Peter. Jesus Christ and Paul are both referenced but not personally embodied acting within this book's own scene, so both are logged as lightweight role:'named' entries, consistent with the KJV index's own reasoning - Jesus's own independent per-Gospel manager tiers belong to the Gospels, not this epistle. All ids suffixed '_ethiopian' to avoid collision with the existing KJV '_2peter' ids and any future Geneva '_geneva' ids for the same book. Naming-collision note carried over: this epistle's author is unambiguously Simon Peter the apostle (1:1), distinct from every other NT figure named Simon (Simon the Zealot, Simon the brother of Jesus, Simon of Cyrene, Simon the tanner, Simon Magus). Old Testament figures cited in chapter 2 purely as illustrative judgment/deliverance examples (the angels that sinned, Noah and the Flood, Sodom and Gomorrah, Lot, Balaam) are kept in genealogyLists rather than duplicated as full characters, matching the KJV index's approach - this book's own text states only that Noah was saved as 'the eighth person' without itself naming or enumerating the other seven, and gives Balaam's patronymic as 'son of Bosor' (2:15), a name-form variant against 'son of Beor' in Numbers, not a different person.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Eyewitness of the Holy Mount",
+      "managerId": "peter_2peter_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Add to Your Faith",
+      "managerId": "virtue_ladder_2peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Wells Without Water",
+      "managerId": "false_teachers_2peter_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "New Heavens and a New Earth",
+      "managerId": "day_of_the_lord_2peter_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "peter_2peter_ethiopian",
+      "name": "Simon Peter",
+      "role": "manager",
+      "scribeTier": "The Eyewitness of the Holy Mount",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Peter 1:1",
+          "note": "Simon Peter identifies himself as 'a servant and an apostle of Jesus Christ,' writing to those who have obtained like precious faith with him through the righteousness of God and our Saviour Jesus Christ."
+        },
+        {
+          "ref": "2 Peter 1:12-15",
+          "note": "Peter resolves to keep stirring up their remembrance while he remains 'in this tabernacle,' knowing his death is imminent 'even as our Lord Jesus Christ hath shewed me,' and endeavors that they be able to recall these things after his decease."
+        },
+        {
+          "ref": "2 Peter 1:16-18",
+          "note": "Peter grounds his teaching in personal eyewitness testimony rather than 'cunningly devised fables' - he was with Christ 'in the holy mount' and personally heard the voice from heaven declare, 'This is my beloved Son, in whom I am well pleased.'"
+        },
+        {
+          "ref": "2 Peter 1:19-21",
+          "note": "Peter points to 'a more sure word of prophecy,' teaching that no prophecy of scripture is of any private interpretation, since 'holy men of God spake as they were moved by the Holy Ghost.'"
+        },
+        {
+          "ref": "2 Peter 3:1-2",
+          "note": "Peter identifies this as his second epistle to them, written to stir up their pure minds by way of remembrance of the words spoken by the holy prophets and the commandment of the apostles."
+        },
+        {
+          "ref": "2 Peter 3:17-18",
+          "note": "Closing exhortation to beware being led away with the error of the wicked, and instead to 'grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ,' closing with a doxology."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Peter describes his approaching death as the putting off of 'this my tabernacle' (1:13-14), a temporary-dwelling image for the body.",
+        "2 Peter 1:16-18 is one of the clearest first-person eyewitness claims to the Transfiguration in the New Testament, spoken in Peter's own voice."
+      ]
+    },
+    {
+      "id": "virtue_ladder_2peter_ethiopian",
+      "name": "Add to Your Faith",
+      "role": "law",
+      "scribeTier": "Add to Your Faith",
+      "parentManagerId": null,
+      "deliveredBy": "peter_2peter_ethiopian",
+      "purpose": "Instructs believers to add to their faith a progressive chain of virtues (virtue, knowledge, temperance, patience, godliness, brotherly kindness, charity) so that they be neither barren nor unfruitful, and so make their calling and election sure; warns that lacking these things leaves one blind and forgetful of past cleansing from sin.",
+      "verses": [
+        {
+          "ref": "2 Peter 1:5-7",
+          "note": "The chain of virtues to be added one upon another: faith, virtue, knowledge, temperance, patience, godliness, brotherly kindness, charity."
+        },
+        {
+          "ref": "2 Peter 1:8-9",
+          "note": "Having these things in increasing measure keeps one fruitful in the knowledge of our Lord Jesus Christ; lacking them, one is blind, and has forgotten that he was purged from his old sins."
+        },
+        {
+          "ref": "2 Peter 1:10-11",
+          "note": "Exhortation to 'give diligence to make your calling and election sure,' promising an abundant entrance into the everlasting kingdom of our Lord and Saviour Jesus Christ to those who do these things."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "false_teachers_2peter_ethiopian",
+      "name": "Wells Without Water",
+      "role": "law",
+      "scribeTier": "Wells Without Water",
+      "parentManagerId": null,
+      "deliveredBy": "peter_2peter_ethiopian",
+      "purpose": "Warns the church that false teachers will rise among them just as false prophets rose among Israel, secretly bringing in damnable heresies and exploiting believers through feigned words and covetousness; establishes God's certain pattern of judging the unrighteous while delivering the godly, and vividly describes the false teachers' immorality, presumption, and inevitable destruction.",
+      "verses": [
+        {
+          "ref": "2 Peter 2:1-3",
+          "note": "False teachers foretold, secretly bringing in damnable heresies and denying the Lord that bought them; many will follow their pernicious ways, and through covetousness they will make merchandise of believers with feigned words."
+        },
+        {
+          "ref": "2 Peter 2:4",
+          "note": "God spared not the angels that sinned, but cast them down to hell and delivered them into chains of darkness, to be reserved unto judgment."
+        },
+        {
+          "ref": "2 Peter 2:5-6",
+          "note": "God spared not the old world, bringing the Flood upon the world of the ungodly while saving 'Noah the eighth person, a preacher of righteousness' - this book's own text gives only the number eight and does not itself name or enumerate the other seven. God condemned the cities of Sodom and Gomorrha to ashes, making them an example to those who would afterward live ungodly."
+        },
+        {
+          "ref": "2 Peter 2:7-9",
+          "note": "God delivered 'just Lot,' vexed day to day by the filthy conversation of the wicked, showing that the Lord knows how to deliver the godly out of temptation and to reserve the unjust unto the day of judgment to be punished."
+        },
+        {
+          "ref": "2 Peter 2:12-14",
+          "note": "Denunciation of the false teachers as natural brute beasts, spots and blemishes who feast with believers, having eyes full of adultery and an heart exercised with covetous practices."
+        },
+        {
+          "ref": "2 Peter 2:15-16",
+          "note": "Comparison to Balaam the son of Bosor, who loved the wages of unrighteousness but was rebuked for his iniquity by 'the dumb ass speaking with man's voice,' which forbade the madness of the prophet."
+        },
+        {
+          "ref": "2 Peter 2:17",
+          "note": "The false teachers called 'wells without water, clouds that are carried with a tempest,' for whom the mist of darkness is reserved for ever."
+        },
+        {
+          "ref": "2 Peter 2:20-22",
+          "note": "Warns that those who escape the pollutions of the world through Christ and are again entangled are worse off than before, illustrated by the proverbs 'the dog is turned to his own vomit again' and 'the sow that was washed to her wallowing in the mire.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "day_of_the_lord_2peter_ethiopian",
+      "name": "New Heavens and a New Earth",
+      "role": "law",
+      "scribeTier": "New Heavens and a New Earth",
+      "parentManagerId": null,
+      "deliveredBy": "peter_2peter_ethiopian",
+      "purpose": "Answers scoffers in the last days who doubt the promise of Christ's coming while walking after their own lusts, explains that with the Lord one day is as a thousand years and God's seeming slowness is longsuffering toward repentance, and describes the day of the Lord coming as a thief in the night in which the heavens and elements shall be dissolved with fire - grounding the promise of new heavens and a new earth 'wherein dwelleth righteousness' and exhorting believers to holy living and diligence to be found in peace, without spot, and blameless.",
+      "verses": [
+        {
+          "ref": "2 Peter 3:3-4",
+          "note": "Scoffers in the last days, walking after their own lusts, questioning 'Where is the promise of his coming?'"
+        },
+        {
+          "ref": "2 Peter 3:5-7",
+          "note": "Reminder that the world that then was, being overflowed with water, perished; the present heavens and earth are kept in store, reserved unto fire against the day of judgment."
+        },
+        {
+          "ref": "2 Peter 3:8-9",
+          "note": "'One day is with the Lord as a thousand years, and a thousand years as one day'; the Lord is not slack concerning his promise but longsuffering, not willing that any should perish but that all should come to repentance."
+        },
+        {
+          "ref": "2 Peter 3:10",
+          "note": "'The day of the Lord will come as a thief in the night,' in which the heavens shall pass away with a great noise, the elements melt with fervent heat, and the earth and the works therein burned up."
+        },
+        {
+          "ref": "2 Peter 3:11-13",
+          "note": "Exhortation to holy conversation and godliness while looking for and hasting unto the coming of the day of God, and the promise of 'new heavens and a new earth, wherein dwelleth righteousness.'"
+        },
+        {
+          "ref": "2 Peter 3:14",
+          "note": "Exhortation to be diligent to be found of him in peace, without spot, and blameless."
+        },
+        {
+          "ref": "2 Peter 3:15-16",
+          "note": "Notes that the longsuffering of the Lord is salvation, 'even as our beloved brother Paul also according to the wisdom given unto him hath written unto you,' acknowledging some things in Paul's epistles are hard to be understood, wrested by the unlearned and unstable as they do also the other scriptures, unto their own destruction."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jesus_2peter_ethiopian_ref",
+      "name": "Jesus Christ (referenced)",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Peter 1:1",
+          "note": "Peter identifies himself as 'a servant and an apostle of Jesus Christ,' writing to those who obtained faith through the righteousness of God and our Saviour Jesus Christ."
+        },
+        {
+          "ref": "2 Peter 1:8,11",
+          "note": "Fruitfulness is described as being 'in the knowledge of our Lord Jesus Christ,' with an abundant entrance promised into 'the everlasting kingdom of our Lord and Saviour Jesus Christ.'"
+        },
+        {
+          "ref": "2 Peter 1:14",
+          "note": "Peter says his approaching death was shown to him 'even as our Lord Jesus Christ hath shewed me.'"
+        },
+        {
+          "ref": "2 Peter 1:16-18",
+          "note": "Peter recalls being an eyewitness of Christ's majesty on the holy mount, where a voice from heaven declared, 'This is my beloved Son, in whom I am well pleased.'"
+        },
+        {
+          "ref": "2 Peter 2:1",
+          "note": "False teachers are described as 'denying the Lord that bought them.'"
+        },
+        {
+          "ref": "2 Peter 2:20",
+          "note": "Escape from the world's pollutions is described as coming 'through the knowledge of the Lord and Saviour Jesus Christ.'"
+        },
+        {
+          "ref": "2 Peter 3:2",
+          "note": "Referenced in 'the commandment of us the apostles of the Lord and Saviour.'"
+        },
+        {
+          "ref": "2 Peter 3:18",
+          "note": "Closing exhortation to 'grow in grace, and in the knowledge of our Lord and Saviour Jesus Christ,' followed by a doxology."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "paul_2peter_ethiopian_ref",
+      "name": "Paul (referenced)",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Peter 3:15-16",
+          "note": "Referred to as 'our beloved brother Paul,' who wrote to them 'according to the wisdom given unto him'; some of his writings are described as containing things hard to be understood, wrested by the unlearned and unstable as they do also the other scriptures."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "2 Peter 3:15-16 references Paul's writings alongside 'the other scriptures' without specifying which particular epistles are meant."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk references to already-indexed Old Testament figures/groups cited in 2 Peter chapter 2 purely as illustrative examples of divine judgment or deliverance - not new characters appearing in this book's own narrative, so not given full character entries here.",
+    "angels_that_sinned": {
+      "ref": "2 Peter 2:4",
+      "note": "Fallen angels cast down to hell and delivered into chains of darkness to be reserved unto judgment; the text does not name or individually differentiate them."
+    },
+    "the_flood_and_noah": {
+      "ref": "2 Peter 2:5",
+      "note": "References the Flood and 'Noah the eighth person, a preacher of righteousness,' preserved when God brought the Flood upon the world of the ungodly - see Noah's full entry in the Genesis index."
+    },
+    "sodom_and_gomorrha": {
+      "ref": "2 Peter 2:6",
+      "note": "The cities condemned to an overthrow and turned to ashes, made an example to those who would afterward live ungodly - see the Genesis index."
+    },
+    "lot": {
+      "ref": "2 Peter 2:7-9",
+      "note": "'Just Lot,' vexed with the filthy conversation of the wicked and delivered by God out of Sodom - see Lot's full entry in the Genesis index."
+    },
+    "balaam": {
+      "ref": "2 Peter 2:15-16",
+      "note": "Balaam, called 'the son of Bosor' here (2 Peter 2:15), the same figure indexed in Numbers as 'the son of Beor' - a name-form variant between the two books, not a different person; rebuked by the donkey speaking with a man's voice for loving the wages of unrighteousness. See Balaam's full entry in the Numbers index."
+    }
+  }
+}

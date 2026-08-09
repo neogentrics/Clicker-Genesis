@@ -1,0 +1,235 @@
+{
+  "book": "Obadiah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 52,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Read the full Ethiopian-translation text at Assets/Resources/Verses/Ethiopian/obadiah_52.json (1 chapter, 21 verses) and compared verse-by-verse against the already-completed KJV Character Index draft. The Ethiopian extraction of Obadiah is textually identical to KJV in every verse (same wording, same verse numbering, same 21-verse single-chapter structure, no additional/missing content) - this is one of the shared-canon books that came through unchanged, matching the pattern already confirmed for Genesis and Exodus in this translation. Structure therefore directly adapts the KJV draft's four-tier shape (prophet person-tier + three law/theme tiers covering Edom's pride/doom, violence against brother Jacob, and the Day of the LORD/restoration) with ids re-suffixed '_ethiopian' to keep this translation's roster scoped independently per the schema's collision-avoidance instruction. Jacob and Esau again appear only as personifications of Israel/Edom (never individually acting within this book) and are kept as 'named' cross-reference entries, flagging their identity as the same Genesis patriarchs. The naming-collision list of at least twelve other biblical 'Obadiah' figures (1 Kings 18, 1 Chronicles 3/7/8/9/12/27, 2 Chronicles 17/34, Ezra 8, Nehemiah 10/12) is preserved in genealogyLists since none is identified by the text as this book's prophet, same rule applied in the KJV pass. No real content differences from KJV found in this book - unlike Ezra or the deuterocanonical additions elsewhere in this Ethiopian Bible, Obadiah is not one of the books carrying unique Ethiopian-canon content.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Scroll",
+      "managerId": "obadiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Cleft of the Rock",
+      "managerId": "edom_pride_and_doom_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Brother's Betrayal",
+      "managerId": "violence_against_jacob_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Zion's Flame",
+      "managerId": "day_of_the_lord_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "obadiah_ethiopian",
+      "name": "Obadiah",
+      "role": "manager",
+      "scribeTier": "Watchman's Scroll",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogical, patronymic, or hometown information is given anywhere in the text - Obadiah 1:1 opens simply 'The vision of Obadiah,' naming nothing else about him. 'Obadiah' ('servant of the LORD') is shared by at least twelve other distinct Old Testament figures (see genealogyLists); the text does not identify or link this prophet with any of them."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:1",
+          "note": "The vision of Obadiah. Thus saith the Lord GOD concerning Edom - We have heard a rumour from the LORD, and an ambassador is sent among the heathen, Arise ye, and let us rise up against her in battle. The prophet's sole self-introduction; the entire 21-verse book is this one received vision concerning Edom."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Obadiah is the shortest book in the Old Testament in this translation too - a single chapter of 21 verses, textually identical to the KJV Obadiah.",
+        "The name Obadiah is shared by at least twelve other distinct Old Testament figures, none of whom scripture links to this prophet."
+      ]
+    },
+    {
+      "id": "edom_pride_and_doom_ethiopian",
+      "name": "Edom's Pride and Doom",
+      "role": "law",
+      "scribeTier": "Cleft of the Rock",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "obadiah_ethiopian",
+      "purpose": "Warns that Edom's pride in its secure rock-dwellings, its renowned wisdom, its allied confederates, and its mighty men of Teman will not spare it from total destruction - even a thief or grape-gatherer leaves something behind, but Edom's hidden things will be searched out and it will be stripped utterly bare.",
+      "verses": [
+        {
+          "ref": "Obadiah 1:3",
+          "note": "The pride of thine heart hath deceived thee, thou that dwellest in the clefts of the rock, whose habitation is high, that saith in his heart, Who shall bring me down to the ground?"
+        },
+        {
+          "ref": "Obadiah 1:4",
+          "note": "Though thou exalt thyself as the eagle, and though thou set thy nest among the stars, thence will I bring thee down, saith the LORD."
+        },
+        {
+          "ref": "Obadiah 1:5-6",
+          "note": "If thieves or robbers came to thee, would they not leave something? if grapegatherers came, would they not leave some grapes? Yet how are the things of Esau searched out, how are his hidden things sought up!"
+        },
+        {
+          "ref": "Obadiah 1:7",
+          "note": "All the men of thy confederacy have brought thee even to the border; the men that were at peace with thee have deceived thee and prevailed against thee."
+        },
+        {
+          "ref": "Obadiah 1:8-9",
+          "note": "Shall I not destroy the wise men out of Edom, and understanding out of the mount of Esau? Thy mighty men, O Teman, shall be dismayed, that every one of the mount of Esau may be cut off by slaughter."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verses 1-9 closely parallel Jeremiah 49:7-22's oracle against Edom, sharing several near-identical phrases.",
+        "Teman (v.9) was an Edomite clan/region named for a grandson of Esau (Genesis 36:11,15), proverbial in the ancient Near East for wisdom."
+      ]
+    },
+    {
+      "id": "violence_against_jacob_ethiopian",
+      "name": "Violence Against Jacob",
+      "role": "law",
+      "scribeTier": "Brother's Betrayal",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "obadiah_ethiopian",
+      "purpose": "Catalogs Edom's specific sins against its brother nation during Jerusalem's calamity: standing aloof while foreigners cast lots on Jerusalem, gloating over Judah's ruin, looting its substance, blocking the crossways to cut off refugees, and delivering survivors up to the enemy - teaching that violence against covenant kinship brings certain, lasting judgment.",
+      "verses": [
+        {
+          "ref": "Obadiah 1:10",
+          "note": "For thy violence against thy brother Jacob shame shall cover thee, and thou shalt be cut off for ever."
+        },
+        {
+          "ref": "Obadiah 1:11",
+          "note": "In the day that strangers carried away his forces captive, and foreigners entered his gates and cast lots upon Jerusalem, even thou wast as one of them."
+        },
+        {
+          "ref": "Obadiah 1:12-14",
+          "note": "An eight-fold chain of 'shouldest not have' rebukes: looking on the day of Judah's ruin, rejoicing over the children of Judah's destruction, speaking proudly in the day of distress, entering the gate of God's people in their calamity, looking on their affliction, laying hands on their substance, standing in the crossway to cut off those that escaped, and delivering up those that remained."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verses 12-14 form an eight-fold chain of 'shouldest not have' warnings - the most concentrated single list of specific wartime sins named against any one nation in the Minor Prophets.",
+        "The text does not name the specific historical sack of Jerusalem in view; it is variously connected to the Babylonian conquest (586 BC) or an earlier raid such as the Philistine/Arabian sack under Jehoram (2 Chronicles 21:16-17)."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_ethiopian",
+      "name": "The Day of the LORD",
+      "role": "law",
+      "scribeTier": "Zion's Flame",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "deliveredBy": "obadiah_ethiopian",
+      "purpose": "Promises that the day of the LORD is near upon all the heathen and that Edom's own treatment of Judah will be repaid on its own head, while deliverance and holiness rest on Mount Zion; the house of Jacob and house of Joseph become a consuming fire against the house of Esau, Israel's scattered territory and exiles are restored, and the book closes declaring the kingdom shall be the LORD's.",
+      "verses": [
+        {
+          "ref": "Obadiah 1:15-16",
+          "note": "For the day of the LORD is near upon all the heathen: as thou hast done, it shall be done unto thee: thy reward shall return upon thine own head."
+        },
+        {
+          "ref": "Obadiah 1:17-18",
+          "note": "Upon mount Zion shall be deliverance and holiness, and the house of Jacob shall possess their possessions. The house of Jacob shall be a fire, and the house of Joseph a flame, and the house of Esau for stubble; there shall not be any remaining of the house of Esau, for the LORD hath spoken it."
+        },
+        {
+          "ref": "Obadiah 1:19-20",
+          "note": "Restored possession of territory - the mount of Esau, the Philistine plain, the fields of Ephraim and Samaria, Gilead for Benjamin, and the captivity of Israel/Jerusalem possessing land unto Zarephath and the cities of the south, out of Sepharad."
+        },
+        {
+          "ref": "Obadiah 1:21",
+          "note": "And saviours shall come up on mount Zion to judge the mount of Esau; and the kingdom shall be the LORD's."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Verse 20's 'Sepharad' appears nowhere else in the Old Testament; later Jewish tradition (not stated by the text itself) identified it with Spain, giving rise to the term 'Sephardic Jews.'",
+        "Verse 21's closing line, 'the kingdom shall be the LORD's,' is the book's only explicit statement of ultimate divine kingship and its theological climax."
+      ]
+    },
+    {
+      "id": "jacob_ethiopian",
+      "name": "Jacob",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Isaac",
+        "mother": "Rebekah",
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogical detail belongs to the Genesis index; Obadiah never narrates Jacob acting as an individual. Every occurrence here ('thy brother Jacob' v.10; 'the house of Jacob' vv.17-18) personifies the nation of Israel/Judah collectively."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:10",
+          "note": "For thy violence against thy brother Jacob shame shall cover thee - Edom's guilt is grounded in the Esau/Jacob kinship from Genesis."
+        },
+        {
+          "ref": "Obadiah 1:17-18",
+          "note": "The house of Jacob, paired with the house of Joseph, is promised deliverance on Mount Zion and becomes a consuming fire against the house of Esau."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Used interchangeably with the covenant people/Israel throughout the book, never appearing as an individually-acting character within Obadiah itself.",
+        "Paired with 'house of Joseph' in verse 18 - the book's only mention of Joseph, by title only."
+      ]
+    },
+    {
+      "id": "esau_ethiopian",
+      "name": "Esau",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Isaac",
+        "mother": "Rebekah",
+        "spouses": [],
+        "children": [],
+        "note": "Full genealogical detail belongs to the Genesis index (Genesis 25-36). Obadiah never narrates Esau acting as an individual; every occurrence ('house of Esau,' 'mount of Esau') personifies the nation of Edom descended from him."
+      },
+      "verses": [
+        {
+          "ref": "Obadiah 1:6",
+          "note": "How are the things of Esau searched out! how are his hidden things sought up! - Edom's plundering, addressed via its ancestor's name."
+        },
+        {
+          "ref": "Obadiah 1:8-9",
+          "note": "Wise men out of Edom and understanding out of the mount of Esau destroyed; mighty men of Teman dismayed, all of the mount of Esau cut off by slaughter."
+        },
+        {
+          "ref": "Obadiah 1:18",
+          "note": "The house of Esau for stubble - consumed entirely by the fire and flame of Jacob and Joseph, none remaining."
+        },
+        {
+          "ref": "Obadiah 1:19-21",
+          "note": "The mount of Esau is repeatedly named as the territory/people to be possessed and judged by Israel's restored remnant and saviours."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Edom's territory was traditionally centered on Mount Seir, south/southeast of the Dead Sea, matching Obadiah's repeated 'mount Esau' language (vv.8,9,19,21).",
+        "Every reference to Esau in Obadiah names either the nation (Edom) or its territory/people via his name - no individual action by Esau himself appears in this book."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "otherObadiahsInScripture": {
+      "ref": "1 Kings 18:3-16; 1 Chronicles 3:21; 1 Chronicles 7:3; 1 Chronicles 8:38/9:44; 1 Chronicles 9:16; 1 Chronicles 12:9; 1 Chronicles 27:19; 2 Chronicles 17:7; 2 Chronicles 34:12; Ezra 8:9; Nehemiah 10:5; Nehemiah 12:25",
+      "note": "Naming-collision reference list: at least twelve other individuals named 'Obadiah' appear elsewhere in scripture, none identified by the text with the prophet of this book. Most prominent: Obadiah, governor of Ahab's house, who hid 100 prophets in caves during Jezebel's purge and met Elijah while searching for water (1 Kings 18:3-16) - real narrative action, but belongs to the 1 Kings index. The remainder are genealogical/administrative/census listings with little to no individual narrative action, not built out as full characters here."
+    }
+  }
+}

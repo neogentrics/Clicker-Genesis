@@ -1,0 +1,1012 @@
+{
+  "book": "Jeremiah",
+  "translation": "Ethiopian",
+  "canonicalOrder": 36,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "Spot-checked the real Ethiopian-translation source text (Assets/Resources/Verses/Ethiopian/jeremiah_36.json) across its opening eleven chapters (1:1 through 11:6+) verbatim against KJV Jeremiah — every verse matched word-for-word, chapter-for-chapter, confirming (as already found for this translation's Genesis and Exodus) that this Ethiopian Bible's own English rendering of standard-canon Jeremiah is content-identical to KJV, not a distinct textual tradition like its own Ezra (1 Esdras-pattern). Given that verbatim match and the file's confirmed 52-chapter/1364-verse count (matching KJV Jeremiah's real chapter/verse count exactly, unlike Ethiopian Ezra's real divergence), this draft adapts the already-built, schema-validated KJV Jeremiah.json structure (18 scribe tiers: 1 prophet-manager tier for Jeremiah himself, 5 law/theme tiers for the book's major sermons/sign-acts/oracle-blocks, and 12 further person tiers for named kings, officials, and rescuers) rather than re-deriving an unrelated structure from scratch — the full 52-chapter body was not re-read verse-by-verse beyond the sampled opening given the file's scale, but no divergent content was found anywhere in the sampled portion, and Jeremiah's real-world Ethiopian Orthodox canon status (a standard, non-apocryphal OT book, unlike Enoch/Jubilees/Meqabyan) supports this being straightforward KJV-congruent content. All character ids are suffixed '_ethiopian' to keep this translation's roster namespace-distinct from the existing KJV Jeremiah.json ids. NAMING-COLLISION RULE (carried over from the validated KJV draft, re-verified against the sampled text where it overlaps chapters 1-11): 'Shallum' (King Jehoahaz's throne name, 22:11, vs. Jeremiah's uncle/Hanameel's father, 32:7); 'Pashur' (Pashur son of Immer, 20:1-3, vs. Pashur son of Malchiah, 38:1); 'Malchiah' (Pashur son of Malchiah, 38:1, vs. Malchiah son of Hammelech, 38:6); 'Zedekiah' (the king vs. Zedekiah son of Hananiah at 36:12 vs. Zedekiah son of Maaseiah, the false prophet of 29:21-22); 'Hananiah' (Hananiah son of Azur, the false prophet of ch. 28, vs. the bare patronymic father of Zedekiah-the-prince at 36:12); 'Shemaiah' (Uriah's father Shemaiah of Kirjathjearim, 26:20, vs. Shemaiah the Nehelamite, the false prophet of ch. 29) — all flagged, none merged. Jehoiachin is called Jehoiachin/Coniah/Jeconiah across the book, one man, not normalized away. 'Nebuchadrezzar' spelling preserved as this book's own consistent form.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Almond Rod",
+      "managerId": "jeremiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Temple Sermon",
+      "managerId": "temple_sermon_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Potter's House",
+      "managerId": "potters_house_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Stocks of Benjamin's Gate",
+      "managerId": "pashur_son_of_immer_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Penknife Brazier",
+      "managerId": "jehoiakim_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Scroll and Inkhorn",
+      "managerId": "baruch_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Broken Yoke",
+      "managerId": "hananiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The New Covenant",
+      "managerId": "new_covenant_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Letter to the Exiles",
+      "managerId": "letter_to_exiles_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Signet Ring",
+      "managerId": "jehoiachin_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Secret Chamber",
+      "managerId": "zedekiah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Rotten Rags and Worn Cords",
+      "managerId": "ebedmelech_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Oracles Against the Nations",
+      "managerId": "oracles_against_nations_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Buried Pavement Stones",
+      "managerId": "nebuchadrezzar_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "The Governor's Table at Mizpah",
+      "managerId": "gedaliah_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Cistern of Mizpah",
+      "managerId": "ishmael_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "The Road to Egypt",
+      "managerId": "johanan_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Rechabites' Obedience",
+      "managerId": "rechabites_obedience_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "jeremiah_ethiopian",
+      "name": "Jeremiah",
+      "role": "manager",
+      "scribeTier": "The Almond Rod",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Hilkiah, one of the priests that were in Anathoth (1:1) — a different Hilkiah from the high priest who found the Book of the Law under Josiah, the text does not link them.",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 1:4-10",
+          "note": "His call and commission, told he was ordained a prophet before birth (verified verbatim in the real source text)."
+        },
+        {
+          "ref": "Jeremiah 20:7-9",
+          "note": "His anguished complaint that God's word is like a burning fire shut up in his bones."
+        },
+        {
+          "ref": "Jeremiah 32:6-15",
+          "note": "Buys the field at Anathoth from his cousin Hanameel as a sign of hope."
+        },
+        {
+          "ref": "Jeremiah 38:6",
+          "note": "Cast into the miry dungeon of Malchiah the son of Hammelech under Zedekiah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called as a prophet 'to the nations' while still young — 'Ah, Lord GOD! behold, I cannot speak: for I am a child' (1:6) — in the thirteenth year of King Josiah (1:2).",
+        "Commanded by the LORD not to take a wife or have sons or daughters, as a sign-act of the coming disaster (16:1-4).",
+        "His famous lament on the human heart: 'The heart is deceitful above all things, and desperately wicked: who can know it?' (17:9)."
+      ]
+    },
+    {
+      "id": "temple_sermon_ethiopian",
+      "name": "The Temple Sermon",
+      "role": "law",
+      "scribeTier": "The Temple Sermon",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_ethiopian",
+      "purpose": "Warns Judah that the temple building itself is no guarantee of safety — obedience, not the sanctuary's mere presence, is what God requires; delivered twice, once in chapter 7 and again, nearly costing Jeremiah his life, in chapter 26.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 7:1-15",
+          "note": "The original temple sermon at the gate of the LORD's house, verified verbatim in the real source text including the 'Trust ye not in lying words' triple rebuke (7:4)."
+        },
+        {
+          "ref": "Jeremiah 26:1-16",
+          "note": "The sermon repeated; Jeremiah is put on trial for his life over it."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Cites Shiloh, the earlier resting place of the ark, as proof God will abandon even his own sanctuary if the people persist in sin (7:12-14)."
+      ]
+    },
+    {
+      "id": "potters_house_ethiopian",
+      "name": "The Potter's House",
+      "role": "law",
+      "scribeTier": "The Potter's House",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_ethiopian",
+      "purpose": "Illustrates God's sovereign right, like a potter over clay, to reshape or irrevocably break the nation according to its response to his word.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 18:1-10",
+          "note": "The potter reworking marred clay on the wheel."
+        },
+        {
+          "ref": "Jeremiah 19:1-11",
+          "note": "The earthen bottle broken at the Valley of the son of Hinnom, a sign judgment cannot be undone."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The vessel 'was marred in the hand of the potter: so he made it again another vessel' (18:4)."
+      ]
+    },
+    {
+      "id": "pashur_son_of_immer_ethiopian",
+      "name": "Pashur the son of Immer",
+      "role": "manager",
+      "scribeTier": "The Stocks of Benjamin's Gate",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Immer",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 20:1-6",
+          "note": "Pashur beats Jeremiah, puts him in the stocks, and receives a new, ominous name in return."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A priest and 'chief governor in the house of the LORD' (20:1); a different man from Pashur the son of Malchiah, see book notes.",
+        "Jeremiah renamed him 'Magor-missabib' ('terror on every side') and prophesied he and his household would die in Babylonian captivity (20:3-6)."
+      ]
+    },
+    {
+      "id": "jehoiakim_ethiopian",
+      "name": "Jehoiakim",
+      "role": "manager",
+      "scribeTier": "The Penknife Brazier",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Josiah, king of Judah",
+        "mother": "Zebudah, daughter of Pedaiah",
+        "spouses": [],
+        "children": [
+          "Jehoiachin (also called Coniah and Jeconiah)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:21-23",
+          "note": "Burns Jeremiah's dictated scroll column by column."
+        },
+        {
+          "ref": "Jeremiah 22:13-19",
+          "note": "Denounced for building his house 'by unrighteousness,' given a donkey's-burial prophecy."
+        },
+        {
+          "ref": "Jeremiah 25:1-12",
+          "note": "The seventy-years-of-Babylon prophecy, dated to his fourth year."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Elder half-brother and successor of Jehoahaz (called Shallum, 22:11), placed on the throne by Pharaoh Necho.",
+        "Contrasted unfavorably by Jeremiah with his father Josiah, who 'did judgment and justice... he judged the cause of the poor and needy' (22:15-16).",
+        "Ordered the execution of the prophet Uriah the son of Shemaiah for prophesying against the city and land (26:20-23)."
+      ]
+    },
+    {
+      "id": "baruch_ethiopian",
+      "name": "Baruch",
+      "role": "manager",
+      "scribeTier": "The Scroll and Inkhorn",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Neriah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:4-8",
+          "note": "Writes and then reads Jeremiah's scroll aloud in the temple."
+        },
+        {
+          "ref": "Jeremiah 36:32",
+          "note": "Rewrites the scroll after the king destroys the first copy."
+        },
+        {
+          "ref": "Jeremiah 45:1-5",
+          "note": "Personal oracle to Baruch, promising his life as 'a prey' in the coming disaster."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Brother of Seraiah the quartermaster (51:59), covered as his own submanager below.",
+        "Wrote Jeremiah's words 'from the mouth of Jeremiah' onto a scroll at his dictation (36:4)."
+      ]
+    },
+    {
+      "id": "hananiah_ethiopian",
+      "name": "Hananiah",
+      "role": "manager",
+      "scribeTier": "The Broken Yoke",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Azur",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 28:10-11",
+          "note": "Breaks Jeremiah's yoke and prophesies Babylon's swift fall."
+        },
+        {
+          "ref": "Jeremiah 28:15-17",
+          "note": "Jeremiah's counter-prophecy and Hananiah's death within the year."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'The prophet, which was of Gibeon' (28:1); a different man from Zedekiah-the-prince's father, also named Hananiah at 36:12, see book notes.",
+        "Died two months later, exactly as Jeremiah had prophesied (28:17)."
+      ]
+    },
+    {
+      "id": "new_covenant_ethiopian",
+      "name": "The New Covenant",
+      "role": "law",
+      "scribeTier": "The New Covenant",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_ethiopian",
+      "purpose": "Promises a future covenant unlike the Sinai covenant Israel broke — God's law written on the heart and sins remembered no more — the theological high point of the book's restoration oracles.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 31:31-34",
+          "note": "The new covenant oracle, its law written on the heart and sins forgiven and forgotten."
+        },
+        {
+          "ref": "Jeremiah 33:14-16",
+          "note": "The 'righteous Branch' restoration promise, thematically paired with the new covenant."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Contains the explicit phrase 'new covenant' (31:31)."
+      ]
+    },
+    {
+      "id": "letter_to_exiles_ethiopian",
+      "name": "The Letter to the Exiles",
+      "role": "law",
+      "scribeTier": "The Letter to the Exiles",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_ethiopian",
+      "purpose": "Instructs the exiles to settle in for the long haul — build houses, plant gardens, seek the peace of the city — rather than trust the false prophets among them promising a swift return, grounding hope instead in a specific, dated promise of restoration.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 29:4-7",
+          "note": "Instructs the exiles to build houses, plant gardens, and seek Babylon's peace."
+        },
+        {
+          "ref": "Jeremiah 29:10-11",
+          "note": "The seventy-year promise and 'thoughts of peace, and not of evil.'"
+        },
+        {
+          "ref": "Jeremiah 29:21-23",
+          "note": "Condemns the false prophets Ahab son of Kolaiah and Zedekiah son of Maaseiah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Carried to Babylon by Elasah the son of Shaphan and Gemariah the son of Hilkiah (29:3)."
+      ]
+    },
+    {
+      "id": "jehoiachin_ethiopian",
+      "name": "Jehoiachin (also called Coniah and Jeconiah)",
+      "role": "manager",
+      "scribeTier": "The Signet Ring",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Jehoiakim",
+        "mother": "Nehushta, daughter of Elnathan",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 22:24-30",
+          "note": "The signet-ring rejection oracle and the 'childless' throne pronouncement."
+        },
+        {
+          "ref": "Jeremiah 24:1-10",
+          "note": "The two baskets of figs vision, dated to his captivity."
+        },
+        {
+          "ref": "Jeremiah 52:31-34",
+          "note": "His eventual release and honor at the Babylonian court, closing the book."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called by three names across the book, the same man throughout — Jehoiachin/Coniah/Jeconiah.",
+        "After thirty-seven years of captivity, the book closes with his release under Evil-merodach (52:31-34)."
+      ]
+    },
+    {
+      "id": "zedekiah_ethiopian",
+      "name": "Zedekiah",
+      "role": "manager",
+      "scribeTier": "The Secret Chamber",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Josiah, king of Judah",
+        "mother": "Hamutal, daughter of Jeremiah of Libnah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 37:17",
+          "note": "Secretly asks the imprisoned Jeremiah whether there is any word from the LORD."
+        },
+        {
+          "ref": "Jeremiah 38:14-16",
+          "note": "A second secret consultation, with an oath to protect Jeremiah's life."
+        },
+        {
+          "ref": "Jeremiah 39:5-7",
+          "note": "His capture, the slaughter of his sons, and his blinding."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Judah's last king, installed by Nebuchadrezzar in Jehoiachin's place (37:1); distinct from two other men named Zedekiah in this book, see book notes."
+      ]
+    },
+    {
+      "id": "ebedmelech_ethiopian",
+      "name": "Ebedmelech",
+      "role": "manager",
+      "scribeTier": "Rotten Rags and Worn Cords",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:7-13",
+          "note": "Rescues Jeremiah from the miry dungeon using worn rags to cushion the ropes."
+        },
+        {
+          "ref": "Jeremiah 39:15-18",
+          "note": "Receives a personal promise of deliverance for his act of trust and kindness."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'The Ethiopian, one of the eunuchs which was in the king's house' (38:7) — notably a figure explicitly identified as Ethiopian within the source text itself, fitting for this translation's own indexing."
+      ]
+    },
+    {
+      "id": "oracles_against_nations_ethiopian",
+      "name": "The Oracles Against the Nations",
+      "role": "law",
+      "scribeTier": "The Oracles Against the Nations",
+      "parentManagerId": null,
+      "deliveredBy": "jeremiah_ethiopian",
+      "purpose": "Extends Jeremiah's message beyond Judah — judgment oracles against Egypt, Philistia, Moab, Ammon, Edom, Damascus, Kedar and Hazor, Elam, and finally Babylon itself.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 25:15-29",
+          "note": "The cup of fury passed to all the nations, opening the oracle block."
+        },
+        {
+          "ref": "Jeremiah 46:1-2",
+          "note": "The oracle against Egypt, first in the sequence."
+        },
+        {
+          "ref": "Jeremiah 50:1-51:64",
+          "note": "The long closing oracle against Babylon itself."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The scroll of judgment against Babylon was bound to a stone and sunk in the Euphrates by Seraiah, Baruch's brother (51:59-64)."
+      ]
+    },
+    {
+      "id": "nebuchadrezzar_ethiopian",
+      "name": "Nebuchadrezzar",
+      "role": "manager",
+      "scribeTier": "The Buried Pavement Stones",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 27:6",
+          "note": "Called God's 'servant,' given dominion over the nations."
+        },
+        {
+          "ref": "Jeremiah 43:8-13",
+          "note": "Sign-act at Tahpanhes predicting his throne set over buried pavement stones."
+        },
+        {
+          "ref": "Jeremiah 52:12-23",
+          "note": "The temple's destruction and detailed inventory of its vessels taken to Babylon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "King of Babylon; this book's own consistent spelling is 'Nebuchadrezzar,' not normalized to 'Nebuchadnezzar.'"
+      ]
+    },
+    {
+      "id": "gedaliah_ethiopian",
+      "name": "Gedaliah",
+      "role": "manager",
+      "scribeTier": "The Governor's Table at Mizpah",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Ahikam",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 40:5-7",
+          "note": "Appointed governor over the remnant of Judah."
+        },
+        {
+          "ref": "Jeremiah 40:13-16",
+          "note": "Warned of the assassination plot and refuses to believe it."
+        },
+        {
+          "ref": "Jeremiah 41:1-3",
+          "note": "Assassinated by Ishmael during a shared meal at Mizpah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Grandson of Shaphan the scribe; his father Ahikam is the same man who protects Jeremiah at 26:24."
+      ]
+    },
+    {
+      "id": "ishmael_ethiopian",
+      "name": "Ishmael the son of Nethaniah",
+      "role": "manager",
+      "scribeTier": "The Cistern of Mizpah",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Nethaniah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 41:1-3",
+          "note": "Assassinates Gedaliah and those with him at Mizpah."
+        },
+        {
+          "ref": "Jeremiah 41:4-9",
+          "note": "Massacres seventy pilgrims and casts their bodies into an old cistern."
+        },
+        {
+          "ref": "Jeremiah 41:10-16",
+          "note": "Takes captives toward Ammon before Johanan intervenes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Of the seed royal,' one of the king's princes (41:1)."
+      ]
+    },
+    {
+      "id": "johanan_ethiopian",
+      "name": "Johanan the son of Kareah",
+      "role": "manager",
+      "scribeTier": "The Road to Egypt",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Kareah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 42:1-6",
+          "note": "Asks Jeremiah for guidance and swears in advance to obey it."
+        },
+        {
+          "ref": "Jeremiah 43:1-7",
+          "note": "Rejects the answer he swore to obey and leads the remnant to Egypt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of 'the captains of the forces' who had remained scattered in the field after Jerusalem's fall (40:7-8)."
+      ]
+    },
+    {
+      "id": "rechabites_obedience_ethiopian",
+      "name": "The Rechabites' Obedience",
+      "role": "law",
+      "scribeTier": "The Rechabites' Obedience",
+      "parentManagerId": null,
+      "deliveredBy": null,
+      "purpose": "The Rechabites' unbroken obedience to a mere human ancestor's command — never drink wine, never build houses, live in tents — shames Judah's refusal to obey the living God.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 35:1-11",
+          "note": "The Rechabites refuse wine, citing their ancestor Jonadab's command."
+        },
+        {
+          "ref": "Jeremiah 35:18-19",
+          "note": "God's reward of enduring faithfulness in response to their obedience."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jonadab the son of Rechab's generations-old command is still kept by his descendants 'unto this day.'"
+      ]
+    },
+    {
+      "id": "ahikam_son_of_shaphan_ethiopian",
+      "name": "Ahikam the son of Shaphan",
+      "role": "submanager",
+      "scribeTier": "The Almond Rod",
+      "parentManagerId": "jeremiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Shaphan the scribe",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Gedaliah, later governor of Judah"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 26:24",
+          "note": "Protects Jeremiah from being handed over for execution."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His son Gedaliah later becomes governor of the remnant after Jerusalem's fall (40:5)."
+      ]
+    },
+    {
+      "id": "hanameel_ethiopian",
+      "name": "Hanameel",
+      "role": "submanager",
+      "scribeTier": "The Almond Rod",
+      "parentManagerId": "jeremiah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shallum, Jeremiah's uncle (32:7) — a different man from King Jehoahaz, who was also called Shallum (22:11)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 32:6-12",
+          "note": "Sells his field at Anathoth to Jeremiah under the redemption right."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Jeremiah's cousin, called his 'uncle's son' (32:12)."
+      ]
+    },
+    {
+      "id": "zephaniah_the_priest_ethiopian",
+      "name": "Zephaniah the priest",
+      "role": "submanager",
+      "scribeTier": "The Secret Chamber",
+      "parentManagerId": "zedekiah_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 21:1-2",
+          "note": "Sent by Zedekiah to ask Jeremiah to inquire of the LORD."
+        },
+        {
+          "ref": "Jeremiah 37:3",
+          "note": "Sent a second time on a similar errand during the siege."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A priest sent as royal messenger; distinct from the prophet Zephaniah, author of a separate OT book."
+      ]
+    },
+    {
+      "id": "the_four_princes_ethiopian",
+      "name": "The Four Princes (Shephatiah, Gedaliah son of Pashur, Jucal, and Pashur son of Malchiah)",
+      "role": "submanager",
+      "scribeTier": "The Secret Chamber",
+      "parentManagerId": "zedekiah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:1-6",
+          "note": "The four princes accuse Jeremiah and have him cast into the dungeon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "An undifferentiated group of four royal officials named together at 38:1, kept as one collective entry per the naming-collision rule."
+      ]
+    },
+    {
+      "id": "malchiah_son_of_hammelech_ethiopian",
+      "name": "Malchiah the son of Hammelech",
+      "role": "submanager",
+      "scribeTier": "The Secret Chamber",
+      "parentManagerId": "zedekiah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Hammelech (possibly a royal title rather than a strict personal name)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 38:6",
+          "note": "Jeremiah is cast into his dungeon and sinks into the mire."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Owner or namesake of the dungeon/cistern used as a prison; a different man from Pashur the son of Malchiah, see book notes."
+      ]
+    },
+    {
+      "id": "irijah_the_captain_ethiopian",
+      "name": "Irijah",
+      "role": "submanager",
+      "scribeTier": "The Secret Chamber",
+      "parentManagerId": "zedekiah_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shelemiah, the son of Hananiah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 37:13-16",
+          "note": "Arrests Jeremiah on a false charge of desertion."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'A captain of the ward' at the gate of Benjamin (37:13)."
+      ]
+    },
+    {
+      "id": "jehoahaz_shallum_ethiopian",
+      "name": "Jehoahaz (Shallum)",
+      "role": "submanager",
+      "scribeTier": "The Penknife Brazier",
+      "parentManagerId": "jehoiakim_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Josiah, king of Judah",
+        "mother": "Hamutal, daughter of Jeremiah of Libnah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 22:10-12",
+          "note": "Prophecy that Shallum/Jehoahaz will die in exile, never to return."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Reigned briefly under his throne name Shallum before being deposed by Pharaoh Necho."
+      ]
+    },
+    {
+      "id": "uriah_son_of_shemaiah_ethiopian",
+      "name": "Uriah the son of Shemaiah",
+      "role": "submanager",
+      "scribeTier": "The Penknife Brazier",
+      "parentManagerId": "jehoiakim_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Shemaiah of Kirjathjearim — a different Shemaiah from Shemaiah the Nehelamite (ch. 29)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 26:20-23",
+          "note": "Prophesies like Jeremiah, flees to Egypt, is brought back and executed."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Prophesied 'according to all the words of Jeremiah' against the city and land (26:20)."
+      ]
+    },
+    {
+      "id": "elnathan_son_of_achbor_ethiopian",
+      "name": "Elnathan the son of Achbor",
+      "role": "submanager",
+      "scribeTier": "The Penknife Brazier",
+      "parentManagerId": "jehoiakim_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Achbor",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:25",
+          "note": "Pleads unsuccessfully with Jehoiakim not to burn Jeremiah's scroll."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Also sent to Egypt to bring back the prophet Uriah for execution (26:22-23)."
+      ]
+    },
+    {
+      "id": "jehudi_ethiopian",
+      "name": "Jehudi",
+      "role": "submanager",
+      "scribeTier": "The Penknife Brazier",
+      "parentManagerId": "jehoiakim_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Nethaniah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 36:21-23",
+          "note": "Reads the scroll aloud to Jehoiakim, who burns it section by section."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Court official sent to fetch and read Baruch's scroll (36:14)."
+      ]
+    },
+    {
+      "id": "seraiah_son_of_neriah_ethiopian",
+      "name": "Seraiah the son of Neriah",
+      "role": "submanager",
+      "scribeTier": "The Scroll and Inkhorn",
+      "parentManagerId": "baruch_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Neriah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 51:59-64",
+          "note": "Carries and sinks the scroll of judgment against Babylon in the Euphrates."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Baruch's brother, a 'quiet prince' who went to Babylon with King Zedekiah (51:59)."
+      ]
+    },
+    {
+      "id": "nebuzaradan_ethiopian",
+      "name": "Nebuzaradan",
+      "role": "submanager",
+      "scribeTier": "The Buried Pavement Stones",
+      "parentManagerId": "nebuchadrezzar_ethiopian",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 39:8-10",
+          "note": "Oversees the burning of Jerusalem and deportation of the people."
+        },
+        {
+          "ref": "Jeremiah 40:1-5",
+          "note": "Personally frees Jeremiah and gives him a choice of where to go."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Captain of the guard,' Nebuchadrezzar's chief officer over the destruction of Jerusalem (39:9-10)."
+      ]
+    },
+    {
+      "id": "azariah_son_of_hoshaiah_ethiopian",
+      "name": "Azariah the son of Hoshaiah",
+      "role": "submanager",
+      "scribeTier": "The Road to Egypt",
+      "parentManagerId": "johanan_ethiopian",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Hoshaiah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Jeremiah 43:2-3",
+          "note": "Accuses Jeremiah of lying and refuses his instruction to remain in the land."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "One of 'the proud men' who stood with Johanan against Jeremiah's word (43:2)."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list, carried over from the validated KJV structure and consistent with the verbatim-matching source text sampled.",
+    "babylonian_officials_at_the_siege": {
+      "ref": "Jeremiah 39:3",
+      "note": "Named Babylonian officers present at the breach of Jerusalem, listed together with no individual narrative action beyond their titles: Nergalsharezer of Samgar, Nebosarsekim, Sarsechim, Rabsaris, Nergalsharezer Rabmag, and the residue of the princes of the king of Babylon."
+    },
+    "temple_vessels_carried_to_babylon": {
+      "ref": "Jeremiah 52:17-23",
+      "note": "Detailed inventory of the bronze, silver, and gold temple furnishings taken to Babylon at the fall of Jerusalem — no individual actor named."
+    }
+  }
+}

@@ -1,0 +1,2714 @@
+{
+  "book": "Genesis",
+  "translation": "Geneva",
+  "canonicalOrder": 1,
+  "status": "drafted via direct read-through of the real extracted Geneva 1560 verse text (Assets/Resources/Verses/Geneva/genesis_1.json, all 50 chapters), cross-checked tier-naming style against the existing KJV Genesis.json but built independently from the Geneva text itself",
+  "notes": "Content/structural verdict: this Geneva Genesis is narratively IDENTICAL to the familiar 50-chapter/Protestant-canon Genesis — same episodes in the same chapter order (Creation, Fall, Cain and Habel, the Flood, Babel, the patriarchs Abraham/Izhak/Iaakob, the Joseph novella) — so the KJV Genesis.json's 19-manager-tier shape was a valid starting template, not force-fit; every tier below was independently re-verified against the real Geneva verse text, not copied blind. The real differences are orthographic (Elizabethan/Geneva spelling, predating and diverging from the 1611 KJV's own spelling choices in ~50 years' worth of small ways) plus a handful of genuinely Geneva-specific proper-noun quirks: 'Iaakob' (Jacob), 'Izhak' (Isaac), 'Ioseph' (Joseph), 'Iudah' (Judah), 'Beniamin' (Benjamin), 'Rahel' (Rachel), 'Kain'/'Habel'/'Sheth' (Cain/Abel/Seth), 'Heuah' (Eve, Gen 3:20), 'Henoch' (both the Cainite city-namesake AND the 'walked with God' patriarch — Geneva spells them identically, same collision KJV has as 'Enoch'), 'Enosh' (KJV 'Enos'), 'Kenan' (KJV 'Cainan'), 'Iered' (KJV 'Jared'), 'Methushelah'/'Methushael'/'Mehuiael' (KJV Methuselah/Methusael/Mehujael), 'Melchi-zedek King of Shalem' (Gen 14:18 — Geneva spells the city 'Shalem', not 'Salem'), 'Iehouah-ijreh' (Gen 22:14), 'Zaphnath-paaneah' and 'Poti-pherah' (Joseph's Egyptian name and his father-in-law, Gen 41:45). REAL NAMING-COLLISION FOUND, Geneva-specific and worth flagging distinctly from the KJV file: Geneva spells BOTH the pre-Flood patriarch in Shem's line (Arpachshad's son, Eber's father, Gen 10:24/11:14-15) AND Judah's third son (Gen 38:5) as 'Shelah' — KJV disambiguates these two men by spelling the elder one 'Salah', but Geneva uses the identical spelling for both; flagged here with distinct ids (shelah_ancestor_geneva / shelah_iudahson_geneva) so they are never conflated. Minor textual quirk, not a new character: Gen 31:53 spells Nahor's name 'Nabor' once ('The God of Abraham, and the God of Nabor...') where every other occurrence in this same text is 'Nahor' — treated as an internal Geneva print/spelling inconsistency, not a distinct person. All other naming collisions already known from the KJV pass carry over unchanged since the underlying people/events are the same: two Henochs (as above), two Lamechs (Kain's line, Gen 4:18-24, vs Noah's father, Gen 5:28-31 — both 'Lamech' in Geneva too), two Nahors (Serug's son/Terah's father vs Terah's son/Abram's brother — both 'Nahor', see the 'Nabor' quirk above), and Potiphar (captain of Pharaoh's guard who buys Ioseph, Gen 37:36/39:1) vs Poti-pherah (priest of On, Ioseph's father-in-law, Gen 41:45) — two distinct men the text itself keeps separate by spelling, not a collision to resolve.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Reed Pen",
+      "managerId": "adam_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Forbidden Fruit",
+      "managerId": "heuah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Kain's City Wall",
+      "managerId": "kain_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Shepherd's Crook",
+      "managerId": "habel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Henoch's Walking Staff",
+      "managerId": "henoch_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Ark's Manifest",
+      "managerId": "noah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Shem's Tent",
+      "managerId": "shem_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Mighty Hunter's Bow",
+      "managerId": "nimrod_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Covenant Seal",
+      "managerId": "abraham_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Sarah's Kneading Bowl",
+      "managerId": "sarah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Pillar of Salt",
+      "managerId": "lot_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Izhak's Well",
+      "managerId": "izhak_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Iaakob's Ladder",
+      "managerId": "iaakob_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Esau's Red Pottage",
+      "managerId": "esau_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Rahel's Well",
+      "managerId": "rahel_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "Leah's Mandrakes",
+      "managerId": "leah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Ioseph's Storehouse",
+      "managerId": "ioseph_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Iudah's Signet",
+      "managerId": "iudah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Silver Cup",
+      "managerId": "beniamin_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "adam_geneva",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Reed Pen",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "heuah_geneva"
+        ],
+        "children": [
+          "kain_geneva",
+          "habel_geneva",
+          "sheth_geneva"
+        ],
+        "note": "Genesis 5:4 — additional unnamed sonnes and daughters"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 1:26-27",
+          "note": "Made in God's image ('let vs make man in our image')"
+        },
+        {
+          "ref": "Genesis 2:7",
+          "note": "'The Lord God also made the man of the dust of the grounde, and breathed in his face breath of life'"
+        },
+        {
+          "ref": "Genesis 2:19-20",
+          "note": "Names euery liuing creature"
+        },
+        {
+          "ref": "Genesis 2:21-23",
+          "note": "Heuah formed from his ribbe"
+        },
+        {
+          "ref": "Genesis 3:6-19",
+          "note": "The Fall and its curse — 'in the sweate of thy face shalt thou eate bread'"
+        },
+        {
+          "ref": "Genesis 5:5",
+          "note": "Death at 930 yeeres"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Sheth",
+          "age": 130,
+          "ref": "Genesis 5:3"
+        },
+        {
+          "event": "Died",
+          "age": 930,
+          "ref": "Genesis 5:5"
+        }
+      ],
+      "funFacts": [
+        "Geneva spells his wife's name 'Heuah' rather than 'Eue'/'Eve' — she is not given that name at all until Genesis 3:20, called simply 'the woman' before the Fall."
+      ]
+    },
+    {
+      "id": "heuah_geneva",
+      "name": "Heuah (Eve)",
+      "role": "manager",
+      "scribeTier": "Forbidden Fruit",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "adam_geneva"
+        ],
+        "children": [
+          "kain_geneva",
+          "habel_geneva",
+          "sheth_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 2:21-23",
+          "note": "Formed from Adam's ribbe"
+        },
+        {
+          "ref": "Genesis 3:1-6",
+          "note": "Beguiled by the serpent, eats the fruite, gives also to her husband"
+        },
+        {
+          "ref": "Genesis 3:20",
+          "note": "'The man called his wiues name Heuah, because she was the mother of all liuing'"
+        },
+        {
+          "ref": "Genesis 4:1-2",
+          "note": "Bears Kain and Habel"
+        },
+        {
+          "ref": "Genesis 4:25",
+          "note": "Bears Sheth, 'another seede for Habel'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'Heuah' is the Geneva spelling of the name later standardized as 'Eve'."
+      ]
+    },
+    {
+      "id": "kain_geneva",
+      "name": "Kain (Cain)",
+      "role": "manager",
+      "scribeTier": "Kain's City Wall",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "adam_geneva",
+        "mother": "heuah_geneva",
+        "spouses": [
+          "unnamed — 'Kain knewe his wife', Genesis 4:17"
+        ],
+        "children": [
+          "henoch_kainite_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:1",
+          "note": "Birth — 'I haue obteined a man by the Lord'"
+        },
+        {
+          "ref": "Genesis 4:3-5",
+          "note": "His oblation of the fruite of the ground has 'no regarde'"
+        },
+        {
+          "ref": "Genesis 4:8",
+          "note": "Slays Habel in the fielde"
+        },
+        {
+          "ref": "Genesis 4:9-15",
+          "note": "Cursed and marked — 'a vagabond and a runnagate'"
+        },
+        {
+          "ref": "Genesis 4:16-17",
+          "note": "Dwells in Nod, builds a citie named for his sonne Henoch"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Builder of the first citie named in scripture, named after his own sonne Henoch — a different Henoch from the patriarch who 'walked with God' five generations later, though Geneva spells both identically."
+      ]
+    },
+    {
+      "id": "habel_geneva",
+      "name": "Habel (Abel)",
+      "role": "manager",
+      "scribeTier": "Shepherd's Crook",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "adam_geneva",
+        "mother": "heuah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:2",
+          "note": "'A keeper of sheepe'"
+        },
+        {
+          "ref": "Genesis 4:4",
+          "note": "'The Lord had respect vnto Habel, and to his offering'"
+        },
+        {
+          "ref": "Genesis 4:8",
+          "note": "Slain by Kain"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "First shepherd and first death recorded in this text."
+      ]
+    },
+    {
+      "id": "sheth_geneva",
+      "name": "Sheth (Seth)",
+      "role": "submanager",
+      "scribeTier": "Shepherd's Crook",
+      "parentManagerId": "habel_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "'God, saide she, hath appointed me another seede for Habel' — thematically boosts Habel's own manager bonus.",
+      "genealogy": {
+        "father": "adam_geneva",
+        "mother": "heuah_geneva",
+        "spouses": [],
+        "children": [
+          "enosh_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:25",
+          "note": "'God hath appointed me another seede for Habel, because Kain slewe him'"
+        },
+        {
+          "ref": "Genesis 4:26",
+          "note": "In his sonne Enosh's dayes 'beganne men to call vpon the name of the Lord'"
+        },
+        {
+          "ref": "Genesis 5:3-8",
+          "note": "Genealogy entry, dies at 912"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Enosh",
+          "age": 105,
+          "ref": "Genesis 5:6"
+        },
+        {
+          "event": "Died",
+          "age": 912,
+          "ref": "Genesis 5:8"
+        }
+      ]
+    },
+    {
+      "id": "henoch_geneva",
+      "name": "Henoch (Enoch, who walked with God)",
+      "role": "manager",
+      "scribeTier": "Henoch's Walking Staff",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "iered_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "methushelah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:21-24",
+          "note": "'Henoch walked with God, and he was no more seene: for God tooke him away'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Methushelah",
+          "age": 65,
+          "ref": "Genesis 5:21"
+        },
+        {
+          "event": "Taken by God",
+          "age": 365,
+          "ref": "Genesis 5:23"
+        }
+      ],
+      "funFacts": [
+        "Naming-collision flag: Geneva spells this patriarch's name identically to Kain's son who has a city named after him (Genesis 4:17) — 'Henoch' — though they are unrelated men five generations apart in different lines."
+      ]
+    },
+    {
+      "id": "methushelah_geneva",
+      "name": "Methushelah (Methuselah)",
+      "role": "submanager",
+      "scribeTier": "Henoch's Walking Staff",
+      "parentManagerId": "henoch_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Longevity flavor — reduces Henoch's Walking Staff scribe cost.",
+      "genealogy": {
+        "father": "henoch_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lamech_noahsfather_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:25-27",
+          "note": "Genealogy entry — dies at 969, longest lifespan recorded in this text"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Lamech",
+          "age": 187,
+          "ref": "Genesis 5:25"
+        },
+        {
+          "event": "Died",
+          "age": 969,
+          "ref": "Genesis 5:27"
+        }
+      ]
+    },
+    {
+      "id": "noah_geneva",
+      "name": "Noah",
+      "role": "manager",
+      "scribeTier": "Ark's Manifest",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "lamech_noahsfather_geneva",
+        "mother": null,
+        "spouses": [
+          "unnamed — 'Noahs wife'"
+        ],
+        "children": [
+          "shem_geneva",
+          "ham_geneva",
+          "iapheth_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:28-29",
+          "note": "Birth and naming — 'this same shall comfort vs concerning our worke and sorowe of our hands'"
+        },
+        {
+          "ref": "Genesis 6:8-9",
+          "note": "'Noah found grace in the eyes of the Lord... a iust and vpright man in his time'"
+        },
+        {
+          "ref": "Genesis 6:14-22",
+          "note": "Instructions for the Arke of pine trees"
+        },
+        {
+          "ref": "Genesis 7:6",
+          "note": "'Six hundreth yeeres olde, when the flood of waters was vpon the earth'"
+        },
+        {
+          "ref": "Genesis 9:1",
+          "note": "Blessed after the Flood, 'bring foorth fruite and multiplie'"
+        },
+        {
+          "ref": "Genesis 9:28-29",
+          "note": "Lived 950 yeeres total"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Shem, Ham, Iapheth",
+          "age": 500,
+          "ref": "Genesis 5:32"
+        },
+        {
+          "event": "The Flood begins",
+          "age": 600,
+          "ref": "Genesis 7:6"
+        },
+        {
+          "event": "Died",
+          "age": 950,
+          "ref": "Genesis 9:29"
+        }
+      ]
+    },
+    {
+      "id": "lamech_noahsfather_geneva",
+      "name": "Lamech (father of Noah)",
+      "role": "submanager",
+      "scribeTier": "Ark's Manifest",
+      "parentManagerId": "noah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Names and prophesies over Noah directly — boosts Noah's manager bonus.",
+      "genealogy": {
+        "father": "methushelah_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "noah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:28-31",
+          "note": "Names Noah, prophesies comfort 'concerning our worke and sorowe of our hands'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Noah",
+          "age": 182,
+          "ref": "Genesis 5:28"
+        },
+        {
+          "event": "Died",
+          "age": 777,
+          "ref": "Genesis 5:31"
+        }
+      ],
+      "funFacts": [
+        "Naming-collision flag: a DIFFERENT man from the Lamech in Kain's line (Genesis 4:18-24) — both spelled 'Lamech' in Geneva, five generations apart, do not merge."
+      ]
+    },
+    {
+      "id": "ham_geneva",
+      "name": "Ham",
+      "role": "submanager",
+      "scribeTier": "Ark's Manifest",
+      "parentManagerId": "noah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "noah_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Cush, Mizraim, Put, Canaan — Genesis 10:6, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:22-25",
+          "note": "Sees Noah's nakedness; the curse falls on his sonne Canaan"
+        },
+        {
+          "ref": "Genesis 10:6-20",
+          "note": "Table of Nations — his line includes Cush, father of Nimrod"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iapheth_geneva",
+      "name": "Iapheth (Japheth)",
+      "role": "submanager",
+      "scribeTier": "Ark's Manifest",
+      "parentManagerId": "noah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "noah_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:23",
+          "note": "Covers Noah's nakedness with Shem"
+        },
+        {
+          "ref": "Genesis 9:27",
+          "note": "'God perswade Iapheth, that he may dwell in the tentes of Shem'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shem_geneva",
+      "name": "Shem",
+      "role": "manager",
+      "scribeTier": "Shem's Tent",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "noah_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "arpachshad_geneva"
+        ],
+        "note": "Direct ancestral line to Abraham runs Shem-Arpachshad-Shelah-Eber-Peleg-Reu-Serug-Nahor-Terah-Abram (Genesis 11:10-26)"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 9:23",
+          "note": "Covers Noah's nakedness with Iapheth"
+        },
+        {
+          "ref": "Genesis 9:26",
+          "note": "'Blessed be the Lord God of Shem'"
+        },
+        {
+          "ref": "Genesis 11:10-11",
+          "note": "Genealogy toward Abraham begins, 'begate Arpachshad two yeere after the flood'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Arpachshad",
+          "age": 100,
+          "ref": "Genesis 11:10"
+        }
+      ],
+      "funFacts": [
+        "Ten generations from Shem to Abram (Genesis 11:10-26), mirroring the ten generations from Adam to Noah in Genesis 5."
+      ]
+    },
+    {
+      "id": "nimrod_geneva",
+      "name": "Nimrod",
+      "role": "manager",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Cush — Genesis 10:8, sonne of Ham, not indexed as a full entry",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:8-10",
+          "note": "'Began to be mightie in the earth... a mightie hunter before the Lord... the beginning of his kingdome was Babel'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'As Nimrod the mightie hunter before the Lord' (Genesis 10:9) became a proverbial phrase in this text.",
+        "His kingdom's founding cities include Babel — the same city where language is confounded two chapters later."
+      ]
+    },
+    {
+      "id": "peleg_geneva",
+      "name": "Peleg",
+      "role": "submanager",
+      "scribeTier": "Mighty Hunter's Bow",
+      "parentManagerId": "nimrod_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Gameplay-attached to Nimrod's tier for the Babel/dispersion theme — his true genealogical line is through Shem (father Eber), not Ham/Nimrod's line; flagged for the future genealogy tree to draw correctly.",
+      "genealogy": {
+        "father": "eber_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:25",
+          "note": "'In his dayes was the earth diuided'"
+        },
+        {
+          "ref": "Genesis 11:16-19",
+          "note": "Genealogy entry, Shem's line toward Abraham"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abraham_geneva",
+      "name": "Abraham (Abram)",
+      "role": "manager",
+      "scribeTier": "Covenant Seal",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "terah_geneva",
+        "mother": null,
+        "spouses": [
+          "sarah_geneva",
+          "hagar_geneva",
+          "Keturah — Genesis 25:1, not individually indexed"
+        ],
+        "children": [
+          "ishmael_geneva",
+          "izhak_geneva"
+        ],
+        "note": "Six more sonnes by Keturah after Sarah's death — see genealogyLists.keturahSons"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 12:1-4",
+          "note": "The call — 'Get thee out of thy countrey, and from thy kindred'"
+        },
+        {
+          "ref": "Genesis 15:6",
+          "note": "'Abram beleeued the Lord, and he counted that to him for righteousnesse'"
+        },
+        {
+          "ref": "Genesis 17:5",
+          "note": "Renamed from Abram to Abraham"
+        },
+        {
+          "ref": "Genesis 22",
+          "note": "Bindes Izhak on the altar at Moriah"
+        },
+        {
+          "ref": "Genesis 25:7-8",
+          "note": "Death — 'yeelded the spirit, and dyed in a good age'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Left Haran",
+          "age": 75,
+          "ref": "Genesis 12:4"
+        },
+        {
+          "event": "Fathered Ishmael",
+          "age": 86,
+          "ref": "Genesis 16:16"
+        },
+        {
+          "event": "Renamed and circumcised",
+          "age": 99,
+          "ref": "Genesis 17:1, 17:24"
+        },
+        {
+          "event": "Fathered Izhak",
+          "age": 100,
+          "ref": "Genesis 21:5"
+        },
+        {
+          "event": "Died",
+          "age": 175,
+          "ref": "Genesis 25:7"
+        }
+      ]
+    },
+    {
+      "id": "sarah_geneva",
+      "name": "Sarah (Sarai)",
+      "role": "manager",
+      "scribeTier": "Sarah's Kneading Bowl",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "abraham_geneva"
+        ],
+        "children": [
+          "izhak_geneva"
+        ],
+        "note": "Genesis 20:12 — also Abraham's half-sister, same father, different mother"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 17:15-16",
+          "note": "Renamed from Sarai, promised a sonne"
+        },
+        {
+          "ref": "Genesis 18:12",
+          "note": "Laughs within her selfe at the promise"
+        },
+        {
+          "ref": "Genesis 21:1-7",
+          "note": "Izhak's birth — 'God hath made me to reioyce'"
+        },
+        {
+          "ref": "Genesis 23:1-2",
+          "note": "Death at 127"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Bore Izhak",
+          "age": 90,
+          "ref": "Genesis 17:17"
+        },
+        {
+          "event": "Died",
+          "age": 127,
+          "ref": "Genesis 23:1"
+        }
+      ],
+      "funFacts": [
+        "The only woman in this text whose exact age at death is recorded (Genesis 23:1)."
+      ]
+    },
+    {
+      "id": "hagar_geneva",
+      "name": "Hagar",
+      "role": "submanager",
+      "scribeTier": "Covenant Seal",
+      "parentManagerId": "abraham_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "abraham_geneva"
+        ],
+        "children": [
+          "ishmael_geneva"
+        ],
+        "note": "'A maide, an Egyptian, Hagar by name', Genesis 16:1"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 16:1-4",
+          "note": "Giuen to Abram by Sarai"
+        },
+        {
+          "ref": "Genesis 16:7-13",
+          "note": "Meets the Angel of the Lord at a fountaine; names God 'Thou God lookest on me'"
+        },
+        {
+          "ref": "Genesis 21:9-21",
+          "note": "Cast out with Ishmael; provided for in the wildernesse of Beer-sheba"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ishmael_geneva",
+      "name": "Ishmael",
+      "role": "submanager",
+      "scribeTier": "Covenant Seal",
+      "parentManagerId": "abraham_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "abraham_geneva",
+        "mother": "hagar_geneva",
+        "spouses": [],
+        "children": [
+          "twelue princes — Genesis 25:13-16, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 16:15",
+          "note": "Birth"
+        },
+        {
+          "ref": "Genesis 17:20",
+          "note": "Blessed — 'twelue princes shall he beget'"
+        },
+        {
+          "ref": "Genesis 25:12-18",
+          "note": "Genealogy and death at 137"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Died",
+          "age": 137,
+          "ref": "Genesis 25:17"
+        }
+      ]
+    },
+    {
+      "id": "melchizedek_geneva",
+      "name": "Melchi-zedek",
+      "role": "submanager",
+      "scribeTier": "Covenant Seal",
+      "parentManagerId": "abraham_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "No genealogy given in this text — a real textual gap, not a design choice.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 14:18-20",
+          "note": "'Melchi-zedek King of Shalem brought foorth bread and wine: and he was a Priest of the most high God' — blesses Abram, receives a tythe"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Geneva spells the city 'Shalem', not 'Salem'."
+      ]
+    },
+    {
+      "id": "eliezer_geneva",
+      "name": "Eliezer of Damascus",
+      "role": "submanager",
+      "scribeTier": "Covenant Seal",
+      "parentManagerId": "abraham_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "Accuracy flag: Genesis 15:2 names Abram's steward 'Eliezer of Damascus.' The unnamed seruant sent to fetch Rebekah in Genesis 24 is traditionally assumed the same man, but the chapter itself never names him — treat as likely, not textually certain.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 15:2",
+          "note": "Named as Abram's steward and, at the time, his heire"
+        },
+        {
+          "ref": "Genesis 24 (traditional identification only)",
+          "note": "The unnamed seruant sent to finde a wife for Izhak"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lot_geneva",
+      "name": "Lot",
+      "role": "manager",
+      "scribeTier": "Pillar of Salt",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "haran_geneva",
+        "mother": null,
+        "spouses": [
+          "unnamed — 'his wife'"
+        ],
+        "children": [
+          "two unnamed daughters"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 13:8-11",
+          "note": "Separates from Abram, chooses the plaine of Iorden"
+        },
+        {
+          "ref": "Genesis 14:12",
+          "note": "Taken captiue; rescued by Abram"
+        },
+        {
+          "ref": "Genesis 19:24-26",
+          "note": "Sodom's destruction; his wife becomes a pillar of salt for looking backe"
+        },
+        {
+          "ref": "Genesis 19:30-38",
+          "note": "His daughters become mothers of Moab and Ammon"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'His wife behind him looked backe, and she became a pillar of salt' (Genesis 19:26) is the only detail this text gives about her at all."
+      ]
+    },
+    {
+      "id": "izhak_geneva",
+      "name": "Izhak (Isaac)",
+      "role": "manager",
+      "scribeTier": "Izhak's Well",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "abraham_geneva",
+        "mother": "sarah_geneva",
+        "spouses": [
+          "rebekah_geneva"
+        ],
+        "children": [
+          "esau_geneva",
+          "iaakob_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 21:1-3",
+          "note": "Birth"
+        },
+        {
+          "ref": "Genesis 22:9-13",
+          "note": "Bound on the altar, spared by the Angel of the Lord"
+        },
+        {
+          "ref": "Genesis 24:67",
+          "note": "Marries Rebekah"
+        },
+        {
+          "ref": "Genesis 25:21-26",
+          "note": "Esau and Iaakob born"
+        },
+        {
+          "ref": "Genesis 26:20-22",
+          "note": "Redigs his father's welles, names them Esek, Sitnah, and Rehoboth"
+        },
+        {
+          "ref": "Genesis 35:28-29",
+          "note": "Death at 180"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Married Rebekah",
+          "age": 40,
+          "ref": "Genesis 25:20"
+        },
+        {
+          "event": "Fathered Esau and Iaakob",
+          "age": 60,
+          "ref": "Genesis 25:26"
+        },
+        {
+          "event": "Died",
+          "age": 180,
+          "ref": "Genesis 35:28"
+        }
+      ],
+      "funFacts": [
+        "Longest-lived of the three patriarchs at 180 yeeres."
+      ]
+    },
+    {
+      "id": "rebekah_geneva",
+      "name": "Rebekah",
+      "role": "submanager",
+      "scribeTier": "Izhak's Well",
+      "parentManagerId": "izhak_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "bethuel_geneva",
+        "mother": null,
+        "spouses": [
+          "izhak_geneva"
+        ],
+        "children": [
+          "esau_geneva",
+          "iaakob_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 24",
+          "note": "Whole chapter — meets Abraham's seruant at a well, agrees to marry Izhak"
+        },
+        {
+          "ref": "Genesis 25:20-26",
+          "note": "Mother of Esau and Iaakob"
+        },
+        {
+          "ref": "Genesis 27:5-17",
+          "note": "Helps Iaakob deceive Izhak into giuing him the blessing"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iaakob_geneva",
+      "name": "Iaakob (Jacob)",
+      "role": "manager",
+      "scribeTier": "Iaakob's Ladder",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "izhak_geneva",
+        "mother": "rebekah_geneva",
+        "spouses": [
+          "leah_geneva",
+          "rahel_geneva",
+          "bilhah_geneva",
+          "zilpah_geneva"
+        ],
+        "children": [
+          "reuben_geneva",
+          "simeon_geneva",
+          "levi_geneva",
+          "iudah_geneva",
+          "dan_geneva",
+          "naphtali_geneva",
+          "gad_geneva",
+          "asher_geneva",
+          "issachar_geneva",
+          "zebulun_geneva",
+          "dinah_geneva",
+          "ioseph_geneva",
+          "beniamin_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 25:26",
+          "note": "Birth, grasping Esau's heele"
+        },
+        {
+          "ref": "Genesis 27:18-29",
+          "note": "Receiues the blessing by deception"
+        },
+        {
+          "ref": "Genesis 28:12-17",
+          "note": "The ladder dreame at Beth-el"
+        },
+        {
+          "ref": "Genesis 32:24-28",
+          "note": "Wrestles with a man till daybreak, renamed Israel"
+        },
+        {
+          "ref": "Genesis 47:9",
+          "note": "'The whole time of my pilgrimage is an hundreth and thirtie yeeres'"
+        },
+        {
+          "ref": "Genesis 49",
+          "note": "Blesses his twelue sonnes before death"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Stood before Pharaoh",
+          "age": 130,
+          "ref": "Genesis 47:9"
+        },
+        {
+          "event": "Died",
+          "age": 147,
+          "ref": "Genesis 47:28"
+        }
+      ]
+    },
+    {
+      "id": "laban_geneva",
+      "name": "Laban",
+      "role": "submanager",
+      "scribeTier": "Iaakob's Ladder",
+      "parentManagerId": "iaakob_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "bethuel_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "leah_geneva",
+          "rahel_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:15-30",
+          "note": "Iaakob serues 7 yeeres for Rahel, is giuen Leah instead, serues 7 more"
+        },
+        {
+          "ref": "Genesis 31:22-30",
+          "note": "Pursues Iaakob after he flees with his family and flockes"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "esau_geneva",
+      "name": "Esau",
+      "role": "manager",
+      "scribeTier": "Esau's Red Pottage",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "izhak_geneva",
+        "mother": "rebekah_geneva",
+        "spouses": [
+          "Iudith, Bashemath, Aholibamah, Mahalath — Genesis 26:34, 28:9, 36:2-3, not fully reconciled/indexed"
+        ],
+        "children": [
+          "Edomite line — Genesis 36, not indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 25:25",
+          "note": "Birth — 'red, all ouer as a rough garment'"
+        },
+        {
+          "ref": "Genesis 25:29-34",
+          "note": "Sells his birthright for bread and pottage of lentiles"
+        },
+        {
+          "ref": "Genesis 27:34-38",
+          "note": "Loses the blessing to Iaakob, weeps aloud"
+        },
+        {
+          "ref": "Genesis 33:4",
+          "note": "Reconciles with Iaakob, runs to meete him and embraces him"
+        },
+        {
+          "ref": "Genesis 36",
+          "note": "Genealogy of Edom"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Took his first wiues",
+          "age": 40,
+          "ref": "Genesis 26:34"
+        }
+      ],
+      "funFacts": [
+        "'Therefore was his name called Edom' (Genesis 25:30) — Geneva directly ties the by-name to the red pottage he traded his birthright for."
+      ]
+    },
+    {
+      "id": "rahel_geneva",
+      "name": "Rahel (Rachel)",
+      "role": "manager",
+      "scribeTier": "Rahel's Well",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "laban_geneva",
+        "mother": null,
+        "spouses": [
+          "iaakob_geneva"
+        ],
+        "children": [
+          "ioseph_geneva",
+          "beniamin_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:9-11",
+          "note": "Meets Iaakob at the well, he kisses her and weeps"
+        },
+        {
+          "ref": "Genesis 29:18-20",
+          "note": "Iaakob serues seuen yeeres for her"
+        },
+        {
+          "ref": "Genesis 30:1",
+          "note": "Enuies Leah's fertilitie — 'giue me children, or els I dye'"
+        },
+        {
+          "ref": "Genesis 30:22-24",
+          "note": "Ioseph's birth"
+        },
+        {
+          "ref": "Genesis 35:16-19",
+          "note": "Dies bearing Beniamin — 'as she was about to yeelde vp the Ghost, she called his name Ben-oni'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Buried on the road to Ephrath/Beth-lehem, not in the family caue at Machpelah (Genesis 35:19-20)."
+      ]
+    },
+    {
+      "id": "bilhah_geneva",
+      "name": "Bilhah",
+      "role": "submanager",
+      "scribeTier": "Rahel's Well",
+      "parentManagerId": "rahel_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "iaakob_geneva"
+        ],
+        "children": [
+          "dan_geneva",
+          "naphtali_geneva"
+        ],
+        "note": "Rahel's mayde, giuen her by Laban (Genesis 29:29)"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:3-8",
+          "note": "Bears Dan and Naphtali on Rahel's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "leah_geneva",
+      "name": "Leah",
+      "role": "manager",
+      "scribeTier": "Leah's Mandrakes",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "laban_geneva",
+        "mother": null,
+        "spouses": [
+          "iaakob_geneva"
+        ],
+        "children": [
+          "reuben_geneva",
+          "simeon_geneva",
+          "levi_geneva",
+          "iudah_geneva",
+          "issachar_geneva",
+          "zebulun_geneva",
+          "dinah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:17",
+          "note": "Described as 'tender eyed'"
+        },
+        {
+          "ref": "Genesis 29:23-25",
+          "note": "Substituted for Rahel on the wedding night"
+        },
+        {
+          "ref": "Genesis 29:31-35",
+          "note": "Bears the first foure sonnes"
+        },
+        {
+          "ref": "Genesis 30:14-16",
+          "note": "Trades mandrakes with Rahel for a night with Iaakob"
+        },
+        {
+          "ref": "Genesis 49:31",
+          "note": "Buried at Machpelah alongside Abraham, Sarah, Izhak, and Rebekah"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mother of Iudah, from whose line the sceptre blessing of Genesis 49:10 comes."
+      ]
+    },
+    {
+      "id": "zilpah_geneva",
+      "name": "Zilpah",
+      "role": "submanager",
+      "scribeTier": "Leah's Mandrakes",
+      "parentManagerId": "leah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "iaakob_geneva"
+        ],
+        "children": [
+          "gad_geneva",
+          "asher_geneva"
+        ],
+        "note": "Leah's mayde, giuen her by Laban (Genesis 29:24)"
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:9-13",
+          "note": "Bears Gad and Asher on Leah's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dinah_geneva",
+      "name": "Dinah",
+      "role": "submanager",
+      "scribeTier": "Leah's Mandrakes",
+      "parentManagerId": "leah_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 34",
+          "note": "Whole chapter — defiled by Shechem, the vengeance of Simeon and Leui"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ioseph_geneva",
+      "name": "Ioseph (Joseph)",
+      "role": "manager",
+      "scribeTier": "Ioseph's Storehouse",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "rahel_geneva",
+        "spouses": [
+          "Asenath — Genesis 41:45, not individually indexed"
+        ],
+        "children": [
+          "manasseh_geneva",
+          "ephraim_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 37:3",
+          "note": "Given the particoloured coate"
+        },
+        {
+          "ref": "Genesis 37:28",
+          "note": "Solde into slauery for twentie pieces of siluer"
+        },
+        {
+          "ref": "Genesis 39:2-6",
+          "note": "Prospers in Potiphar's house"
+        },
+        {
+          "ref": "Genesis 41:40-41",
+          "note": "Made ruler ouer Egypt, only Pharaoh aboue him"
+        },
+        {
+          "ref": "Genesis 45:4",
+          "note": "Reueals himselfe to his brethren"
+        },
+        {
+          "ref": "Genesis 50:26",
+          "note": "Death at 110"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Solde into slauery",
+          "age": 17,
+          "ref": "Genesis 37:2"
+        },
+        {
+          "event": "Stood before Pharaoh",
+          "age": 30,
+          "ref": "Genesis 41:46"
+        },
+        {
+          "event": "Died",
+          "age": 110,
+          "ref": "Genesis 50:26"
+        }
+      ],
+      "funFacts": [
+        "Pharaoh renames him 'Zaphnath-paaneah' (Genesis 41:45), an Egyptian name Geneva preserves as-given."
+      ]
+    },
+    {
+      "id": "reuben_geneva",
+      "name": "Reuben",
+      "role": "submanager",
+      "scribeTier": "Ioseph's Storehouse",
+      "parentManagerId": "ioseph_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 37:21-22",
+          "note": "Pleads to spare Ioseph's life rather than kill him"
+        },
+        {
+          "ref": "Genesis 37:29-30",
+          "note": "Returns to the pit and finds it emptie"
+        },
+        {
+          "ref": "Genesis 42:37",
+          "note": "Offers his own two sonnes' liues as pledge to bring back Beniamin"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "potiphar_geneva",
+      "name": "Potiphar",
+      "role": "submanager",
+      "scribeTier": "Ioseph's Storehouse",
+      "parentManagerId": "ioseph_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Distinct from Poti-pherah, priest of On and Ioseph's later father-in-law (Genesis 41:45) — the text itself keeps these two spelled and titled separately.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed — 'his masters wife'"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 37:36, 39:1",
+          "note": "'An Eunuche of Pharaohs, and his chiefe stewarde' — buys Ioseph from the Ishmeelites"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "pharaoh_ioseph_geneva",
+      "name": "Pharaoh (of Ioseph's rise)",
+      "role": "submanager",
+      "scribeTier": "Ioseph's Storehouse",
+      "parentManagerId": "ioseph_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "This text never names this Pharaoh — a distinct figure from any 'Pharaoh' that may appear when Exodus is indexed.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:14-44",
+          "note": "Elevates Ioseph to rule ouer Egypt after his dreames are interpreted"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iudah_geneva",
+      "name": "Iudah (Judah)",
+      "role": "manager",
+      "scribeTier": "Iudah's Signet",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [
+          "unnamed — daughter of Suah, Genesis 38:2",
+          "tamar_geneva"
+        ],
+        "children": [
+          "er_geneva",
+          "onan_geneva",
+          "shelah_iudahson_geneva",
+          "pharez_geneva",
+          "zarah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 37:26-27",
+          "note": "Suggests selling Ioseph rather than killing him"
+        },
+        {
+          "ref": "Genesis 38",
+          "note": "Whole chapter — Tamar, the pledge of his signet, cloke, and staffe"
+        },
+        {
+          "ref": "Genesis 43:8-9",
+          "note": "Pledges himselfe suretie for Beniamin"
+        },
+        {
+          "ref": "Genesis 44:18-34",
+          "note": "Offers himselfe as a slaue in Beniamin's place"
+        },
+        {
+          "ref": "Genesis 49:8-10",
+          "note": "Iaakob's blessing — 'the scepter shall not depart from Iudah'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "'The scepter shall not depart from Iudah, nor a Lawegiuer from betweene his feete, vntill Shiloh come' (Genesis 49:10)."
+      ]
+    },
+    {
+      "id": "tamar_geneva",
+      "name": "Tamar",
+      "role": "submanager",
+      "scribeTier": "Iudah's Signet",
+      "parentManagerId": "iudah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "er_geneva",
+          "onan_geneva (by leuirate custom)",
+          "iudah_geneva"
+        ],
+        "children": [
+          "pharez_geneva",
+          "zarah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38",
+          "note": "Whole chapter — denied Shelah in marriage, disguises herselfe, conceiues twinnes by Iudah, 'she is more righteous then I'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "beniamin_geneva",
+      "name": "Beniamin (Benjamin)",
+      "role": "manager",
+      "scribeTier": "Silver Cup",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "rahel_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 35:18",
+          "note": "Born as Rahel dies; she names him Ben-oni ('son of my sorrow'), his father calls him Beniamin"
+        },
+        {
+          "ref": "Genesis 42:4",
+          "note": "Iaakob refuses to send him to Egypt"
+        },
+        {
+          "ref": "Genesis 44:2",
+          "note": "Ioseph's siluer cup planted in his sacke"
+        },
+        {
+          "ref": "Genesis 45:14",
+          "note": "Ioseph falls on his necke first, of all the brethren, and weeps"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The only one of Iaakob's twelue sonnes born in Canaan — all his brethren were born in Padan Aram.",
+        "The only sonne whose birth directly caused his mother's death."
+      ]
+    },
+    {
+      "id": "henoch_kainite_geneva",
+      "name": "Henoch (Kain's son)",
+      "role": "named",
+      "genealogy": {
+        "father": "kain_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "irad_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:17",
+          "note": "Kain builds a citie and names it after him"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not the same Henoch who 'walked with God' (Genesis 5) — different lineage, five generations apart, though Geneva spells both identically."
+      ]
+    },
+    {
+      "id": "irad_geneva",
+      "name": "Irad",
+      "role": "named",
+      "genealogy": {
+        "father": "henoch_kainite_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "mehuiael_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Genealogy entry only"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "mehuiael_geneva",
+      "name": "Mehuiael (Mehujael)",
+      "role": "named",
+      "genealogy": {
+        "father": "irad_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "methushael_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Genealogy entry only"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "methushael_geneva",
+      "name": "Methushael (Methusael)",
+      "role": "named",
+      "genealogy": {
+        "father": "mehuiael_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lamech_kainite_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:18",
+          "note": "Genealogy entry only"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "lamech_kainite_geneva",
+      "name": "Lamech (Kain's line)",
+      "role": "named",
+      "genealogy": {
+        "father": "methushael_geneva",
+        "mother": null,
+        "spouses": [
+          "adah_geneva",
+          "zillah_geneva"
+        ],
+        "children": [
+          "iabal_geneva",
+          "iubal_geneva",
+          "tubalkain_geneva",
+          "naamah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19-24",
+          "note": "First recorded polygamist; boasts of vengeance to his wiues, 'if Kain shalbe auenged seuen folde, truely Lamech, seuentie times seuen folde'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag: a DIFFERENT man from Lamech, Noah's father (Genesis 5:28-31) — same Geneva spelling, unrelated lines."
+      ]
+    },
+    {
+      "id": "adah_geneva",
+      "name": "Adah",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "lamech_kainite_geneva"
+        ],
+        "children": [
+          "iabal_geneva",
+          "iubal_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19-20",
+          "note": "One of Lamech's two wiues"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zillah_geneva",
+      "name": "Zillah",
+      "role": "named",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "lamech_kainite_geneva"
+        ],
+        "children": [
+          "tubalkain_geneva",
+          "naamah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:19, 22",
+          "note": "One of Lamech's two wiues"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iabal_geneva",
+      "name": "Iabal (Jabal)",
+      "role": "submanager",
+      "scribeTier": "Kain's City Wall",
+      "parentManagerId": "kain_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_kainite_geneva",
+        "mother": "adah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:20",
+          "note": "'The father of such as dwell in the tents, and of such as haue cattell'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iubal_geneva",
+      "name": "Iubal (Jubal)",
+      "role": "submanager",
+      "scribeTier": "Kain's City Wall",
+      "parentManagerId": "kain_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_kainite_geneva",
+        "mother": "adah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:21",
+          "note": "'The father of all that play on the harpe and organes'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "tubalkain_geneva",
+      "name": "Tubal-kain",
+      "role": "submanager",
+      "scribeTier": "Kain's City Wall",
+      "parentManagerId": "kain_geneva",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "lamech_kainite_geneva",
+        "mother": "zillah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:22",
+          "note": "'Wrought cunningly euery craft of brasse and of yron'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "naamah_geneva",
+      "name": "Naamah",
+      "role": "named",
+      "genealogy": {
+        "father": "lamech_kainite_geneva",
+        "mother": "zillah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:22",
+          "note": "Named alongside her brothers, 'the sister of Tubal-kain' — no further role described"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "enosh_geneva",
+      "name": "Enosh (Enos)",
+      "role": "named",
+      "genealogy": {
+        "father": "sheth_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "kenan_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 4:26",
+          "note": "'Then beganne men to call vpon the name of the Lord'"
+        },
+        {
+          "ref": "Genesis 5:6-11",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Kenan",
+          "age": 90,
+          "ref": "Genesis 5:9"
+        },
+        {
+          "event": "Died",
+          "age": 905,
+          "ref": "Genesis 5:11"
+        }
+      ]
+    },
+    {
+      "id": "kenan_geneva",
+      "name": "Kenan (Cainan)",
+      "role": "named",
+      "genealogy": {
+        "father": "enosh_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "mahalaleel_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:12-14",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Mahalaleel",
+          "age": 70,
+          "ref": "Genesis 5:12"
+        },
+        {
+          "event": "Died",
+          "age": 910,
+          "ref": "Genesis 5:14"
+        }
+      ]
+    },
+    {
+      "id": "mahalaleel_geneva",
+      "name": "Mahalaleel",
+      "role": "named",
+      "genealogy": {
+        "father": "kenan_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "iered_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:15-17",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Iered",
+          "age": 65,
+          "ref": "Genesis 5:15"
+        },
+        {
+          "event": "Died",
+          "age": 895,
+          "ref": "Genesis 5:17"
+        }
+      ]
+    },
+    {
+      "id": "iered_geneva",
+      "name": "Iered (Jared)",
+      "role": "named",
+      "genealogy": {
+        "father": "mahalaleel_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "henoch_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 5:18-20",
+          "note": "Genealogy entry — father of Henoch, who 'walked with God'"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Henoch",
+          "age": 162,
+          "ref": "Genesis 5:18"
+        },
+        {
+          "event": "Died",
+          "age": 962,
+          "ref": "Genesis 5:20"
+        }
+      ]
+    },
+    {
+      "id": "arpachshad_geneva",
+      "name": "Arpachshad",
+      "role": "named",
+      "genealogy": {
+        "father": "shem_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "shelah_ancestor_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:10-13",
+          "note": "Genealogy entry, born two yeeres after the Flood"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Shelah",
+          "age": 35,
+          "ref": "Genesis 11:12"
+        },
+        {
+          "event": "Died",
+          "age": 438,
+          "ref": "Genesis 11:13"
+        }
+      ]
+    },
+    {
+      "id": "shelah_ancestor_geneva",
+      "name": "Shelah (Shem's line, Eber's father)",
+      "role": "named",
+      "genealogy": {
+        "father": "arpachshad_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "eber_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:14-15",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Eber",
+          "age": 30,
+          "ref": "Genesis 11:14"
+        },
+        {
+          "event": "Died",
+          "age": 433,
+          "ref": "Genesis 11:15"
+        }
+      ],
+      "funFacts": [
+        "Naming-collision flag, Geneva-specific: Judah's third son (Genesis 38:5) is ALSO spelled 'Shelah' in this translation — KJV disambiguates this ancestor as 'Salah', but Geneva does not. Kept as a separate id (shelah_iudahson_geneva) here; do not merge."
+      ]
+    },
+    {
+      "id": "eber_geneva",
+      "name": "Eber",
+      "role": "named",
+      "genealogy": {
+        "father": "shelah_ancestor_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "peleg_geneva",
+          "Ioktan — Genesis 10:25, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 10:21",
+          "note": "'The father of all the sonnes of Eber' — the eponym behind the word 'Ebrew'"
+        },
+        {
+          "ref": "Genesis 11:16-17",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Peleg",
+          "age": 34,
+          "ref": "Genesis 11:16"
+        },
+        {
+          "event": "Died",
+          "age": 464,
+          "ref": "Genesis 11:17"
+        }
+      ]
+    },
+    {
+      "id": "reu_geneva",
+      "name": "Reu",
+      "role": "named",
+      "genealogy": {
+        "father": "peleg_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "serug_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:20-21",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Serug",
+          "age": 30,
+          "ref": "Genesis 11:20"
+        },
+        {
+          "event": "Died",
+          "age": 239,
+          "ref": "Genesis 11:21"
+        }
+      ]
+    },
+    {
+      "id": "serug_geneva",
+      "name": "Serug",
+      "role": "named",
+      "genealogy": {
+        "father": "reu_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "nahor_elder_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:22-23",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Nahor",
+          "age": 30,
+          "ref": "Genesis 11:22"
+        },
+        {
+          "event": "Died",
+          "age": 230,
+          "ref": "Genesis 11:23"
+        }
+      ]
+    },
+    {
+      "id": "nahor_elder_geneva",
+      "name": "Nahor (Terah's father)",
+      "role": "named",
+      "genealogy": {
+        "father": "serug_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "terah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:24-25",
+          "note": "Genealogy entry"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Fathered Terah",
+          "age": 29,
+          "ref": "Genesis 11:24"
+        },
+        {
+          "event": "Died",
+          "age": 148,
+          "ref": "Genesis 11:25"
+        }
+      ],
+      "funFacts": [
+        "Naming-collision flag: TWO men named Nahor in this book — this one (Terah's father, Abraham's grandfather) and his own grandson (Terah's son, Abram's brother, see 'nahor_brother_geneva'). Geneva spells this name 'Nahor' consistently except once, 'Nabor' at Genesis 31:53 — treated as an internal print variant, not a third person."
+      ]
+    },
+    {
+      "id": "terah_geneva",
+      "name": "Terah",
+      "role": "named",
+      "genealogy": {
+        "father": "nahor_elder_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "abraham_geneva",
+          "nahor_brother_geneva",
+          "haran_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:26-32",
+          "note": "Leaves Vr with his family, dies in Haran"
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Died",
+          "age": 205,
+          "ref": "Genesis 11:32"
+        }
+      ]
+    },
+    {
+      "id": "haran_geneva",
+      "name": "Haran",
+      "role": "named",
+      "genealogy": {
+        "father": "terah_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "lot_geneva",
+          "milcah_geneva",
+          "iscah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:27-28",
+          "note": "Father of Lot, Milcah, and Iscah; dies before his father Terah, in Vr of the Caldees"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "nahor_brother_geneva",
+      "name": "Nahor (Abraham's brother)",
+      "role": "named",
+      "genealogy": {
+        "father": "terah_geneva",
+        "mother": null,
+        "spouses": [
+          "milcah_geneva"
+        ],
+        "children": [
+          "bethuel_geneva",
+          "seuen other sonnes — Genesis 22:20-24, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Marries Milcah, his niece (Haran's daughter)"
+        },
+        {
+          "ref": "Genesis 22:20-24",
+          "note": "His descendants listed, including Bethuel"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "milcah_geneva",
+      "name": "Milcah",
+      "role": "named",
+      "genealogy": {
+        "father": "haran_geneva",
+        "mother": null,
+        "spouses": [
+          "nahor_brother_geneva"
+        ],
+        "children": [
+          "bethuel_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Marries her vncle Nahor"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "iscah_geneva",
+      "name": "Iscah",
+      "role": "named",
+      "genealogy": {
+        "father": "haran_geneva",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 11:29",
+          "note": "Named only, no further narratiue given"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "bethuel_geneva",
+      "name": "Bethuel",
+      "role": "named",
+      "genealogy": {
+        "father": "nahor_brother_geneva",
+        "mother": "milcah_geneva",
+        "spouses": [],
+        "children": [
+          "laban_geneva",
+          "rebekah_geneva"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 22:23",
+          "note": "Named as Milcah's youngest sonne"
+        },
+        {
+          "ref": "Genesis 24:50",
+          "note": "Consents (with Laban) to Rebekah's betrothal"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "simeon_geneva",
+      "name": "Simeon",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:33",
+          "note": "Birth"
+        },
+        {
+          "ref": "Genesis 34:25-26",
+          "note": "Auenges Dinah, with Leui"
+        },
+        {
+          "ref": "Genesis 42:24",
+          "note": "Held hostage in Egypt by Ioseph"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "levi_geneva",
+      "name": "Leui (Levi)",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 29:34",
+          "note": "Birth"
+        },
+        {
+          "ref": "Genesis 34:25-26",
+          "note": "Auenges Dinah, with Simeon"
+        },
+        {
+          "ref": "Genesis 49:5-7",
+          "note": "Iaakob's blessing rebukes his and Simeon's crueltie"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "issachar_geneva",
+      "name": "Issachar",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:17-18",
+          "note": "Birth, named for Leah's mandrake-traded 'reward'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zebulun_geneva",
+      "name": "Zebulun",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "leah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:19-20",
+          "note": "Birth"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "dan_geneva",
+      "name": "Dan",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "bilhah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:5-6",
+          "note": "Birth, borne by Bilhah on Rahel's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "naphtali_geneva",
+      "name": "Naphtali",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "bilhah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:7-8",
+          "note": "Birth, borne by Bilhah on Rahel's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "gad_geneva",
+      "name": "Gad",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "zilpah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:10-11",
+          "note": "Birth, borne by Zilpah on Leah's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "asher_geneva",
+      "name": "Asher",
+      "role": "named",
+      "genealogy": {
+        "father": "iaakob_geneva",
+        "mother": "zilpah_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 30:12-13",
+          "note": "Birth, borne by Zilpah on Leah's behalfe"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "er_geneva",
+      "name": "Er",
+      "role": "named",
+      "genealogy": {
+        "father": "iudah_geneva",
+        "mother": "unnamed — daughter of Suah",
+        "spouses": [
+          "tamar_geneva"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:3, 7",
+          "note": "'Wicked in the sight of the Lord'; slaine"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "onan_geneva",
+      "name": "Onan",
+      "role": "named",
+      "genealogy": {
+        "father": "iudah_geneva",
+        "mother": "unnamed — daughter of Suah",
+        "spouses": [
+          "tamar_geneva (by leuirate custom)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:4, 8-10",
+          "note": "Refuses his leuirate duty to Tamar; slaine"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shelah_iudahson_geneva",
+      "name": "Shelah (Iudah's son)",
+      "role": "named",
+      "genealogy": {
+        "father": "iudah_geneva",
+        "mother": "unnamed — daughter of Suah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:5, 11, 14, 26",
+          "note": "Withheld from Tamar by Iudah, out of feare"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming-collision flag, Geneva-specific: shares the exact spelling 'Shelah' with the pre-Flood ancestor in Shem's line (Genesis 11:14, Eber's father) — see shelah_ancestor_geneva; the two are unrelated men, do not merge."
+      ]
+    },
+    {
+      "id": "pharez_geneva",
+      "name": "Pharez",
+      "role": "named",
+      "genealogy": {
+        "father": "iudah_geneva",
+        "mother": "tamar_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:29",
+          "note": "Birth — 'how hast thou broken the breach vpon thee?'"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "zarah_geneva",
+      "name": "Zarah",
+      "role": "named",
+      "genealogy": {
+        "father": "iudah_geneva",
+        "mother": "tamar_geneva",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 38:30",
+          "note": "Birth — the red threde tied on his hand"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "manasseh_geneva",
+      "name": "Manasseh",
+      "role": "named",
+      "genealogy": {
+        "father": "ioseph_geneva",
+        "mother": "unnamed — Asenath",
+        "spouses": [],
+        "children": [
+          "Machir — Genesis 50:23, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:51",
+          "note": "Birth — 'God hath made me forget all my labour'"
+        },
+        {
+          "ref": "Genesis 48:14-19",
+          "note": "Iaakob crosses his hands, blessing Ephraim above him"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ephraim_geneva",
+      "name": "Ephraim",
+      "role": "named",
+      "genealogy": {
+        "father": "ioseph_geneva",
+        "mother": "unnamed — Asenath",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Genesis 41:52",
+          "note": "Birth — 'God hath made me fruitfull in the land of mine affliction'"
+        },
+        {
+          "ref": "Genesis 48:14-20",
+          "note": "Receiues the greater blessing despite being younger"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk genealogical rosters with no individual narratiue action attached — named in full in this Geneva text but not given individual character entries above.",
+    "tableOfNations": {
+      "ref": "Genesis 10",
+      "note": "~70 names across Iapheth's, Ham's, and Shem's lines — only direct sonnes listed here",
+      "iaphethSons": [
+        "Gomer",
+        "Magog",
+        "Madai",
+        "Iauan",
+        "Tubal",
+        "Meshech",
+        "Tiras"
+      ],
+      "hamSons": [
+        "Cush (Nimrod's father)",
+        "Mizraim",
+        "Put",
+        "Canaan"
+      ],
+      "shemSons": [
+        "Elam",
+        "Asshur",
+        "Arpachshad",
+        "Lud",
+        "Aram"
+      ]
+    },
+    "ishmaelSons": {
+      "ref": "Genesis 25:13-15",
+      "names": [
+        "Nebaioth",
+        "Kedar",
+        "Adbeel",
+        "Mibsam",
+        "Mishma",
+        "Dumah",
+        "Massa",
+        "Hadar",
+        "Tema",
+        "Ietur",
+        "Naphish",
+        "Kedemah"
+      ]
+    },
+    "keturahSons": {
+      "ref": "Genesis 25:2",
+      "names": [
+        "Zimran",
+        "Iokshan",
+        "Medan",
+        "Midian",
+        "Ishbak",
+        "Shuah"
+      ]
+    },
+    "nahorSonsViaMilcah": {
+      "ref": "Genesis 22:20-24",
+      "names": [
+        "Vz",
+        "Buz",
+        "Kemuel",
+        "Chesed",
+        "Hazo",
+        "Pildash",
+        "Iidlaph",
+        "Bethuel"
+      ]
+    },
+    "nahorSonsViaReumah": {
+      "ref": "Genesis 22:24",
+      "names": [
+        "Tebah",
+        "Gahan",
+        "Thahash",
+        "Maachah"
+      ]
+    },
+    "edomGenealogy": {
+      "ref": "Genesis 36",
+      "note": "Esau's line — sonnes, grandsonnes, the eight Kings who reigned in Edom before Israel had a king, and the Dukes are all listed in full in Genesis 36 but not itemized as individual entries here",
+      "esauSons": [
+        "Eliphaz",
+        "Reuel",
+        "Ieush",
+        "Iaalam",
+        "Korah"
+      ],
+      "eliphazSons": [
+        "Teman",
+        "Omar",
+        "Zepho",
+        "Gatam",
+        "Kenaz",
+        "Amalek (via the concubine Timna)"
+      ]
+    }
+  }
+}

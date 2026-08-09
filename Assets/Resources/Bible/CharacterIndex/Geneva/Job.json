@@ -1,0 +1,497 @@
+{
+  "book": "Job",
+  "translation": "Geneva",
+  "canonicalOrder": 18,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Structurally and narratively, the Geneva Bible's Job is the SAME book as the KJV's — same 42 chapters, same cast, same episodes (prologue wager, three-cycle dialogue, Elihu's speech, the two whirlwind speeches, epilogue restoration), unlike the real content divergence already found elsewhere in this project's Ethiopian-translation work (e.g. Ezra/1 Esdras). Differences here are translation-layer only: Early Modern English orthography (\"Iob\" for Job, \"the lande of Vz\" for Uz, \"Shabeans\"/\"Caldeans\" for Sabeans/Chaldeans, \"potsharde,\" \"whirle winde,\" \"vnicorne,\" \"Liuiathan\"), and small wording choices distinct from KJV phrasing (e.g. Elihu is \"of the familie of Ram\" in Geneva vs. KJV's \"kindred of Ram\"; Job's wife's rebuke reads \"Doest thou continue yet in thine vprightnes? Blaspheme God, and dye\" rather than KJV's \"curse God, and die\" — same beat, different word choice). Tier motifs are kept aligned with the KJV Job draft (Potsherd, Broken Hedge, Whispering Spirit, Withering Rush, Measuring Line, New Bottles, Whirlwind, Horn of Eye-paint) since the same objects/images anchor the same scenes in this translation's own text, verified against the real extracted Geneva verses rather than assumed. Two source-file data-quality issues were encountered and flagged rather than silently smoothed over: (1) Geneva chapter 39 (verses 5, 12, 13, 16, 19, 23) contains a repeated garbled token \"pieth\" standing in for what are evidently different original words (context — wild goats calving, the ostrich, the hawk — makes clear these are OCR/extraction corruptions of the source file, not real Geneva Bible readings); no invented replacement text is asserted for these tokens, they are simply not quoted as scripture in this draft. (2) The tail of chapter 39 (v.30), chapter 40 (v.24), and the run into chapter 41 show several original verses merged into single JSON entries with stray '(Job )' placeholder markers where verse-number cross-references apparently failed to extract — verse boundaries for the ostrich/eagle passage (39:27-30), the Behemoth-to-Leviathan transition (40:24-41:1), and the LORD's brief interjection before Job's final answer (40:1-2, 42:1) are therefore cited as approximate ranges rather than exact single verses in a few places below. Naming-collision sweep (same rule applied in the existing KJV Job index, re-verified against this translation's own spellings): 'Iob' the protagonist is a different person from Issachar's son Job/Jashub (Genesis 46:13, rendered 'Jashub' in the Numbers 26:24 parallel) — not asserted as the Geneva Bible's own exact Genesis wording since that book wasn't read for this pass, only flagged as the same underlying textual collision every translation of the Hebrew text carries. Eliphaz the Temanite is distinct from Esau's son Eliphaz (Genesis 36). Elihu the Buzite is distinct from at least three other Elihus elsewhere in scripture. Zophar, Bildad, and the three daughters' names show no collisions. No real-world identification is asserted for Behemoth or Leviathan beyond this text's own account. Job's wife is not stated by the text to be the mother of the second, restored set of children — not asserted as fact, matching the same hedge in the KJV draft. Elihu's 'familie of Ram' is left unidentified, per the same open-identification hedge as the KJV draft.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Potsherd",
+      "managerId": "job_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Broken Hedge",
+      "managerId": "satan_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Whispering Spirit",
+      "managerId": "eliphaz_temanite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Withering Rush",
+      "managerId": "bildad_shuhite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Measuring Line",
+      "managerId": "zophar_naamathite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "New Bottles",
+      "managerId": "elihu_buzite_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Whirlwind",
+      "managerId": "the_lord_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Horn of Eye-paint",
+      "managerId": "iemimah_geneva",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "job_geneva",
+      "name": "Job (Iob)",
+      "role": "manager",
+      "scribeTier": "Potsherd",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "steadfast-endurance",
+      "perkNote": "Endures total loss of possessions, children, and health without cursing God (Geneva 1:20-22, 2:10) and is restored twofold in the epilogue (42:10-17) — the book's central figure in this translation exactly as in the KJV.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "No ancestry given; introduced only by land of residence ('the lande of Vz') and character ('an vpright and iust man, one that feared God, and eschewed euill,' 1:1). NAMING COLLISION FLAG: the name 'Job' is shared elsewhere in scripture by a son of Issachar (Genesis 46:13), rendered 'Jashub' in the Numbers 26:24 parallel list — a different individual, flagged per this project's standing collision rule though Geneva Genesis itself was not read for this pass.",
+        "spouses": [
+          "Job's wife (unnamed in the text)"
+        ],
+        "children": [
+          "Seven unnamed sons and three unnamed daughters, first set, all deceased (1:2, 18-19)",
+          "Seven unnamed sons, second set, born after restoration (42:13)",
+          "Iemimah (42:14)",
+          "Keziah (42:14)",
+          "Keren-happuch (42:14)"
+        ]
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 1:1-3",
+          "note": "Introduced as a blameless, wealthy man of Uz — 'the greatest of all the men of the East.'"
+        },
+        {
+          "ref": "Job 1:20-22",
+          "note": "'The Lord hath giuen, and the Lord hath taken it: blessed be the Name of the Lord... In all this did not Iob sinne, nor charge God foolishly.'"
+        },
+        {
+          "ref": "Job 2:7-10",
+          "note": "Struck with sore boils; rebukes his wife's counsel — 'shall we receiue good at the hand of God, and not receiue euill?'"
+        },
+        {
+          "ref": "Job 3:1-3",
+          "note": "Opens his mouth and curses his day, breaking the seven days of silence."
+        },
+        {
+          "ref": "Job 29-31",
+          "note": "Closing self-defense and oath of innocence before the whirlwind speeches."
+        },
+        {
+          "ref": "Job 42:5-6",
+          "note": "'I haue heard of thee by the hearing of the eare, but now mine eye seeth thee. Therefore I abhorre my selfe, and repent in dust and ashes.'"
+        },
+        {
+          "ref": "Job 42:16-17",
+          "note": "Lives 140 years after restoration, sees four generations, 'dyed, being old, and full of dayes.'"
+        }
+      ],
+      "funFacts": [
+        "His possessions exactly double after restoration: 7,000 sheep to 14,000, 3,000 camels to 6,000, 500 yoke of oxen to 1,000, 500 she-asses to 1,000 (1:3 vs 42:12)."
+      ]
+    },
+    {
+      "id": "job_wife_geneva",
+      "name": "Job's wife (unnamed)",
+      "role": "submanager",
+      "scribeTier": "Potsherd",
+      "parentManagerId": "job_geneva",
+      "perkFlavor": "cost-cutter",
+      "perkNote": "Her one recorded scene is oppositional, not supportive — 'Doest thou continue yet in thine vprightnes? Blaspheme God, and dye' (2:9), prompting Job's rebuke — flavored as opposing/incidental despite being family, matching the KJV draft's action-based flavor rule.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "Never named. The text does not state whether she is also mother of the second, restored set of children (42:13-14) — not asserted as fact.",
+        "spouses": [
+          "Job"
+        ],
+        "children": [
+          "Same first set of children as Job (1:2); relation to the second, restored set is not explicitly stated"
+        ]
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 2:9-10",
+          "note": "'Blaspheme God, and dye' — Job rebukes her as speaking 'like a foolish woman.'"
+        },
+        {
+          "ref": "Job 19:17",
+          "note": "Job later laments, 'My breath is strange to my wife, though I intreated for the childrens sake of mine owne body.'"
+        }
+      ],
+      "funFacts": [
+        "Never given a name in this translation's text of Job, same as the KJV."
+      ]
+    },
+    {
+      "id": "satan_geneva",
+      "name": "Satan",
+      "role": "manager",
+      "scribeTier": "Broken Hedge",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "accuser",
+      "perkNote": "Instigates both stages of the wager permitted by God (1:9-12, 2:4-6) — the narrative engine behind Job's affliction.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "Not a human figure — one of 'the children of God' who present themselves before the Lord (1:6, 2:1); no human ancestry applies.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 1:6-9",
+          "note": "Appears among 'the children of God' before the Lord; asks 'Doeth Iob feare God for nought?'"
+        },
+        {
+          "ref": "Job 1:10-12",
+          "note": "'Hast thou not made an hedge about him...?' — granted power over Job's possessions and children, not his person."
+        },
+        {
+          "ref": "Job 2:1-6",
+          "note": "'Skin for skin, and all that euer a man hath, will he giue for his life' — granted power to strike Job's body, but 'saue his life.'"
+        },
+        {
+          "ref": "Job 2:7",
+          "note": "'Smote Iob with sore boyles, from the sole of his foote vnto his crowne.'"
+        }
+      ],
+      "funFacts": [
+        "Never referenced again after chapter 2 — absent from the epilogue entirely, same as the KJV."
+      ]
+    },
+    {
+      "id": "eliphaz_temanite_geneva",
+      "name": "Eliphaz the Temanite",
+      "role": "manager",
+      "scribeTier": "Whispering Spirit",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "elder-voice",
+      "perkNote": "First and most frequent of the three friends to speak (chs. 4-5, 15, 22); named directly in God's rebuke (42:7).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "No ancestry given beyond 'the Temanite.' NAMING COLLISION FLAG: 'Eliphaz' is also Esau's firstborn son (Genesis 36:4,10-12,15-16) — a distinct individual; no genealogical link is asserted by Job's own text.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 4:7",
+          "note": "First speech: 'Remember, I pray thee: who euer perished, being an innocent?'"
+        },
+        {
+          "ref": "Job 4:12-16",
+          "note": "Recounts a night vision: 'the wind passed before me... an image was before mine eyes,' hears a voice in silence."
+        },
+        {
+          "ref": "Job 15:1-6",
+          "note": "Second speech, sharper in tone, accuses Job of arrogance against God."
+        },
+        {
+          "ref": "Job 22:5-9",
+          "note": "Third speech, levels specific unproven accusations against Job."
+        },
+        {
+          "ref": "Job 42:7-9",
+          "note": "Named directly in the Lord's rebuke and commanded, with Bildad and Zophar, to offer seven bullocks and seven rams while Job prays for them."
+        }
+      ],
+      "funFacts": [
+        "Given three separate speeches (chs. 4-5, 15, 22) — more than any other friend."
+      ]
+    },
+    {
+      "id": "bildad_shuhite_geneva",
+      "name": "Bildad the Shuhite",
+      "role": "manager",
+      "scribeTier": "Withering Rush",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "traditionalist",
+      "perkNote": "Argues from the accumulated wisdom of 'the former age' (8:8-10) across three speeches (chs. 8, 18, 25).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "No ancestry given beyond 'the Shuhite.' No naming collision found elsewhere in scripture for 'Bildad.'",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 8:8-11",
+          "note": "'Can a rush grow without myre? or can ye grasse growe without water?'"
+        },
+        {
+          "ref": "Job 18:1-21",
+          "note": "Second speech, on the fate and fear of the wicked."
+        },
+        {
+          "ref": "Job 25:1-6",
+          "note": "Third speech — markedly short, only six verses."
+        },
+        {
+          "ref": "Job 42:9",
+          "note": "Named among the three friends who obey the Lord's command and receive Job's intercession."
+        }
+      ],
+      "funFacts": [
+        "His third-cycle speech (ch. 25) is the shortest of any friend's speech in the book — six verses."
+      ]
+    },
+    {
+      "id": "zophar_naamathite_geneva",
+      "name": "Zophar the Naamathite",
+      "role": "manager",
+      "scribeTier": "Measuring Line",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "blunt-rebuke",
+      "perkNote": "Sharpest and most direct of the three friends across his two recorded speeches (chs. 11, 20).",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "No ancestry given beyond 'the Naamathite.' No direct naming collision found for 'Zophar.'",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 11:7-9",
+          "note": "'Canst thou by searching finde out God?... The measure thereof is longer then the earth, and it is broader then the sea.'"
+        },
+        {
+          "ref": "Job 20:1-29",
+          "note": "Second speech, on the brief triumph and downfall of the wicked."
+        },
+        {
+          "ref": "Job 42:9",
+          "note": "Named among the three friends who obey the Lord's command and receive Job's intercession."
+        }
+      ],
+      "funFacts": [
+        "Unlike Eliphaz and Bildad, no third-cycle speech is recorded for Zophar — chapters 26-27 are explicitly attributed to Job himself (26:1, 27:1), so no 'missing' Zophar speech is asserted as fact."
+      ]
+    },
+    {
+      "id": "elihu_buzite_geneva",
+      "name": "Elihu the Buzite",
+      "role": "manager",
+      "scribeTier": "New Bottles",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "young-challenger",
+      "perkNote": "Speaks last among the human interlocutors (chs. 32-37), claiming fresh insight because of his youth (32:6-7) — his speech leads directly into the whirlwind.",
+      "genealogy": {
+        "father": "Barachel the Buzite",
+        "mother": null,
+        "note": "The only human interlocutor given an explicit genealogy: 'Elihu the sonne of Barachel the Buzite, of the familie of Ram' (32:2) — note Geneva's 'familie of Ram' vs. the more commonly known 'kindred of Ram' wording; the specific 'Ram' is not identified with any other Ram named elsewhere in scripture, an open identification. NAMING COLLISION FLAG: 'Elihu' is reused for at least three other persons elsewhere in scripture (an ancestor of Samuel; a Korahite Levite gatekeeper's kinsman; a ruler over Judah sometimes disputedly linked to Eliab, David's brother) — none of these is this book's Elihu.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 32:1-5",
+          "note": "Introduced; his wrath is kindled against Job for justifying himself rather than God, and against the three friends for condemning Job without answering him."
+        },
+        {
+          "ref": "Job 32:6-7",
+          "note": "'I am yong in yeres, and ye are ancient: therefore I doubted, and was afraide to shewe you mine opinion.'"
+        },
+        {
+          "ref": "Job 32:18-19",
+          "note": "'I am full of matter, and the spirite within me compelleth me... like the new bottels that brast.'"
+        },
+        {
+          "ref": "Job 33:14-18",
+          "note": "Argues God speaks to men through dreams and visions of the night to turn them from their purpose."
+        },
+        {
+          "ref": "Job 37:14",
+          "note": "'Hearken vnto this, O Iob: stand and consider the wonderous workes of God' — closing appeal, immediately preceding the Lord's own speech."
+        }
+      ],
+      "funFacts": [
+        "The only human speaker given a full genealogy in the text (32:2).",
+        "Never mentioned again after chapter 37, and not named among the friends addressed in the Lord's rebuke (42:7-9) — the text is silent on why."
+      ]
+    },
+    {
+      "id": "the_lord_geneva",
+      "name": "The Lord",
+      "role": "manager",
+      "scribeTier": "Whirlwind",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "whirlwind-answer",
+      "perkNote": "Speaks directly to Job out of the whirlwind across two speeches (38:1, 40:1) — the book's climactic event, emphasizing creation and the limits of human understanding rather than a direct explanation of Job's suffering.",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "note": "Not applicable — appears and speaks directly in the narrative (38:1) rather than being described genealogically.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 38:1-4",
+          "note": "'Then the Lord answered Iob out of the whirle winde... Where wast thou when I layd the foundations of the earth?'"
+        },
+        {
+          "ref": "Job 38:39-39:30",
+          "note": "Continues, questioning Job about wild animals: the lion, raven, wild goat, wild ass, the unicorn, the horse, the hawk, and the eagle (note: several verses in this range are affected by the source-file 'pieth' extraction artifact flagged above)."
+        },
+        {
+          "ref": "Job 40:1-2",
+          "note": "First pause: 'Wilt thou disanul my iudgement? or wilt thou condemne me, that thou mayst be iustified?'"
+        },
+        {
+          "ref": "Job 40:10-19",
+          "note": "Second speech begins by describing Behemoth, 'whom I made with thee... which eateth grasse as an oxe' — no specific real-world animal is identified by the text itself."
+        },
+        {
+          "ref": "Job 40:20-41:25",
+          "note": "Describes Liuiathan (Leviathan): 'Canst thou drawe out Liuiathan with an hooke...?' — likewise not identified with any specific real-world creature."
+        },
+        {
+          "ref": "Job 42:7-8",
+          "note": "After Job's response, the Lord rebukes the three friends by name (Eliphaz first) and instructs them to offer sacrifice through Job's intercession."
+        }
+      ],
+      "funFacts": [
+        "Answers entirely through rhetorical questions across both speeches, never directly stating why Job suffered."
+      ]
+    },
+    {
+      "id": "iemimah_geneva",
+      "name": "Iemimah",
+      "role": "manager",
+      "scribeTier": "Horn of Eye-paint",
+      "parentManagerId": null,
+      "purpose": "",
+      "deliveredBy": "",
+      "perkFlavor": "restored-inheritance",
+      "perkNote": "Named first of Job's three restored daughters, granted an inheritance alongside her seven brothers (42:15) — an explicitly unusual arrangement for the custom of the time.",
+      "genealogy": {
+        "father": "Job",
+        "mother": null,
+        "note": "Mother not named. Named first among the three daughters born after Job's restoration (42:14); the text gives no differentiated action between the three sisters beyond birth order and their shared inheritance (42:15). No naming collision found elsewhere in scripture for 'Iemimah.'",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 42:13-14",
+          "note": "'He had also seue sonnes, and three daughters. And he called the name of one Iemimah.'"
+        },
+        {
+          "ref": "Job 42:15",
+          "note": "'In all the lande were no women found so faire as the daughters of Iob: and their father gaue them inheritaunce among their brethren.'"
+        }
+      ],
+      "funFacts": [
+        "Job's grant of inheritance to his daughters alongside seven living sons runs counter to the ordinary practice reflected in Numbers 27:8, where daughters inherit only absent sons — the text itself flags this as remarkable."
+      ]
+    },
+    {
+      "id": "keziah_geneva",
+      "name": "Keziah",
+      "role": "submanager",
+      "scribeTier": "Horn of Eye-paint",
+      "parentManagerId": "iemimah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A sister sharing equally in Job's restored household and its unusual inheritance — boosts Iemimah's tier as a direct family supporter.",
+      "genealogy": {
+        "father": "Job",
+        "mother": null,
+        "note": "Second of the three daughters named in 42:14; text does not differentiate her individual actions from her sisters beyond the shared inheritance note in 42:15. No naming collision found elsewhere in scripture.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 42:14",
+          "note": "Named second among Job's three post-restoration daughters."
+        }
+      ],
+      "funFacts": [
+        "Her name means 'cassia,' a fragrant spice — like her sisters' names, evocative rather than narratively differentiating."
+      ]
+    },
+    {
+      "id": "keren_happuch_geneva",
+      "name": "Keren-happuch",
+      "role": "submanager",
+      "scribeTier": "Horn of Eye-paint",
+      "parentManagerId": "iemimah_geneva",
+      "perkFlavor": "loyalty-boost",
+      "perkNote": "A sister sharing equally in Job's restored household and its unusual inheritance — boosts Iemimah's tier as a direct family supporter.",
+      "genealogy": {
+        "father": "Job",
+        "mother": null,
+        "note": "Third and last of the three daughters named in 42:14; text does not differentiate her individual actions from her sisters beyond the shared inheritance note in 42:15. No naming collision found elsewhere in scripture.",
+        "spouses": [],
+        "children": []
+      },
+      "ageEvents": [],
+      "verses": [
+        {
+          "ref": "Job 42:14",
+          "note": "Named third and last among Job's three post-restoration daughters; her name ('horn of eye-paint,' a cosmetic-pigment container) is this tier's namesake."
+        }
+      ],
+      "funFacts": [
+        "Her name references a horn-shaped container for cosmetic eye-paint (antimony), a real object of the period."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "job_first_children": "Seven sons and three daughters, all unnamed, born to Job before his trials (Job 1:2); all ten die together when 'there came a great wind from beyonde the wildernesse' and struck the house where they were feasting (1:18-19).",
+    "job_second_sons": "Seven sons born to Job after his restoration (42:13), left unnamed in the text — only the three daughters (Iemimah, Keziah, Keren-happuch) are individually named (42:14).",
+    "job_mourners": "Job's brethren, sisters, and 'all they that had bene of his acquaintance before' who come and eat bread with him after his restoration, each giving him 'a piece of money' and 'an earing of golde' (42:11) — none named individually.",
+    "messengers_of_calamity": "Four unnamed messengers arrive in succession reporting the loss of the oxen/asses to the Shabeans (1:14-15), the sheep to 'the fire of God' from heaven (1:16), the camels to the Caldeans (1:17), and finally Job's children to a great wind (1:18-19); each closes with 'I onely am escaped alone to tell thee.'",
+    "land_of_uz": "Job's homeland, 'the lande of Vz' (1:1) — noted, as in the KJV draft, only that the name 'Uz' is elsewhere used as a personal name in scripture (a son of Aram, a son of Nahor, a Horite/Edomite chief), though in Job 1:1 it functions strictly as a place name."
+  }
+}

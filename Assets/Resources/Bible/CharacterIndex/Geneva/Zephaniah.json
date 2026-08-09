@@ -1,0 +1,227 @@
+{
+  "book": "Zephaniah",
+  "translation": "Geneva",
+  "canonicalOrder": 36,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read directly from Assets/Resources/Verses/Geneva/zephaniah_36.json (3 chapters, 18+15+20 = 53 verses, matching the stated count exactly). Structurally this book is IDENTICAL to the standard/KJV canon of Zephaniah - same three-chapter arc (universal judgment on Judah/Jerusalem in ch.1, a call to seek the Lord followed by oracles against Philistia/Moab-Ammon/Cush/Assyria in ch.2, a closing indictment-then-restoration of Jerusalem in ch.3), same superscription genealogy (Zephaniah son of Cushi, son of Gedaliah, son of Amariah, son of Hizkiah, in the days of Iosiah son of Amon, king of Iudah), no missing or added verses/pericopes versus the KJV version. This translation's real, worth-flagging differences are vocabulary/orthography, not content: 1560s Geneva spelling substitutes i/j and u/v freely ('Iosiah' for Josiah, 'Iudah' for Judah, 'Ierusalem' for Jerusalem, 'vpon' for upon, 'haue' for have) - not a textual variant, just period English typesetting convention; and at 2:12 Geneva renders the Cushites/Ethiopians as 'Ye Morians' ('Morian' being archaic English for a dark-skinned African/Moor), while the same underlying people are rendered plainly as 'Ethiopia' three verses later at 3:10 ('the riuers of Ethiopia') - an internal Geneva translation inconsistency in vocabulary for the same nation, not a discrepancy in who is meant. Two naming collisions carried over from the same verses as the KJV draft, re-verified against this translation's own spellings: 'Hizkiah' (1:1, Zephaniah's great-great-grandfather) is spelled identically to how this translation would render King Hezekiah elsewhere, and the two are widely suspected but never textually confirmed to be the same man - flagged, not asserted. 'Cherethims' (2:5, a Philistine coastal people, Geneva's own spelling of what KJV renders 'Cherethites') likely shares an ethnic root with the identically-rooted 'Cherethites and Pelethites' who later served as King David's bodyguard corps, but that is a separate book/context not present in this text, so the two are kept as a flagged possible-collision rather than merged. No submanagers apply to this book: Cushi, Gedaliah, and Amariah in the superscription (1:1) take zero independent narrative action anywhere in the text and are documented only in Zephaniah's own genealogy note, per the zero-action rule, rather than spun into individual entries.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Watchman's Trumpet",
+      "managerId": "zephaniah_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Day of Clouds and Blackenesse",
+      "managerId": "day_of_the_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Sword Against the Nations",
+      "managerId": "oracles_against_the_nations_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Song of Zion's Ioy",
+      "managerId": "restoration_song_of_zion_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "zephaniah_geneva",
+      "name": "Zephaniah",
+      "role": "manager",
+      "scribeTier": "Watchman's Trumpet",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Cushi",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Zephaniah 1:1 traces his line four generations back through Cushi, Gedaliah, and Amariah to 'Hizkiah' - this Geneva text's own exact spelling in this verse, identical to how this translation would be expected to render King Hezekiah of Judah elsewhere. Many interpreters suspect this Hizkiah IS King Hezekiah, which would make Zephaniah a great-great-grandson of royalty and would explain the unusually long four-generation genealogy given here for a Minor Prophet - but the text never explicitly identifies him as the king, so this stays a flagged naming collision, not a confirmed identity."
+      },
+      "verses": [
+        {
+          "ref": "Zephaniah 1:1",
+          "note": "Superscription: 'The word of the Lord, which came vnto Zephaniah ye sonne of Cushi, the sonne of Gedaliah, the sonne of Amariah, the sonne of Hizkiah, in the dayes of Iosiah, the sonne of Amon King of Iudah.'"
+        },
+        {
+          "ref": "Zephaniah 1:7",
+          "note": "'Be stil at the presence of the Lord God: for the day of the Lord is at hand' - opens the book's central warning, in this translation's own wording."
+        },
+        {
+          "ref": "Zephaniah 3:17",
+          "note": "'The Lord thy God in the middes of thee is mightie: hee will saue, hee will reioyce ouer thee with ioye... he will reioyce ouer thee with ioy' - the book's climactic promise."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name is traditionally understood to mean 'The LORD has hidden/treasured,' fitting a book that promises a hidden, protected remnant (2:3; 3:12-13).",
+        "His four-generation genealogy in 1:1 is the longest given for any of the twelve Minor Prophets.",
+        "Traditionally dated to the reign of King Iosiah (c. 640-609 BC), likely prophesying before or during Iosiah's own religious reforms."
+      ]
+    },
+    {
+      "id": "josiah_geneva",
+      "name": "Iosiah",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Amon",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Named only as the reigning king of Iudah, used to date the book (1:1: 'in the dayes of Iosiah, the sonne of Amon King of Iudah'). This text records no independent action by Iosiah himself - his reign and reforms lie outside this book. 'Iosiah'/'Iudah' reflect this translation's own i/j spelling convention, not a different name from the modern 'Josiah'/'Judah.'"
+      },
+      "verses": [
+        {
+          "ref": "Zephaniah 1:1",
+          "note": "Dates Zephaniah's prophecy to 'the dayes of Iosiah, the sonne of Amon King of Iudah.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Became king of Iudah as a child after his father Amon's assassination, later leading a major religious reform - narrated outside this book.",
+        "If Zephaniah's ancestor 'Hizkiah' (1:1) is King Hezekiah, Iosiah - his great-grandson through Manasseh and Amon - would have been a distant royal kinsman of the prophet delivering this book, though the text does not state this directly."
+      ]
+    },
+    {
+      "id": "day_of_the_lord_geneva",
+      "name": "The Day of the Lord",
+      "role": "law",
+      "scribeTier": "Day of Clouds and Blackenesse",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_geneva",
+      "purpose": "Warns Iudah and Ierusalem - and by extension all the land - that a sweeping day of divine judgment is imminent ('neere, and hasteth greatly,' 1:14), consuming idolatry, religious compromise (swearing both by the Lord and by 'Malcham'), settled indifference, and violence within the city; calls hearers to 'be stil' before it arrives and, carried into chapter 2, to seek the Lord in meeknesse and righteousnesse in hope of being hid from it (1:7; 2:1-3).",
+      "verses": [
+        {
+          "ref": "Zephaniah 1:2-3",
+          "note": "'I will surely destroy all things from off the land, saith the Lord' - the judgment's universal scope, echoed in un-creation-like language over man, beast, foule, and fish."
+        },
+        {
+          "ref": "Zephaniah 1:4-6",
+          "note": "Judgment named specifically against the remnant of Baal, the idolatrous priests ('Chemarims'), those who worship 'the hoste of heauen,' and those who sweare both by the Lord and by 'Malcham' (the Ammonite god)."
+        },
+        {
+          "ref": "Zephaniah 1:8-9",
+          "note": "Judgment on 'the princes and the Kings children' and all clothed with 'strange apparell,' and on those who 'dance vpon the threshold so proudly,' filling their masters' houses by crueltie and deceite."
+        },
+        {
+          "ref": "Zephaniah 1:10-11",
+          "note": "Judgment located at Ierusalem's fishgate, 'the second gate,' the hilles, and 'the lowe place' where the marchants dwell."
+        },
+        {
+          "ref": "Zephaniah 1:12",
+          "note": "Judgment on those 'frosen in their dregges' who say in their hearts, 'The Lord will neither doe good nor doe euill' - settled religious indifference."
+        },
+        {
+          "ref": "Zephaniah 1:14-16",
+          "note": "'The great day of the Lord is neere: it is neere, and hasteth greatly... a day of the trumpet and alarme' - the book's most quoted passage."
+        },
+        {
+          "ref": "Zephaniah 1:18",
+          "note": "'Neither their siluer nor their golde shalbe able to deliuer them in ye day of the Lords wrath' - wealth offers no protection against 'the fire of his ielousie.'"
+        },
+        {
+          "ref": "Zephaniah 3:1-8",
+          "note": "The judgment theme returns directly to Ierusalem: 'Woe to her that is filthie and polluted, to the robbing citie' - her princes, iudges, prophets, and priests each named as guilty, immediately before the book pivots to restoration."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This chapter's language ('a day of wrath, a day of trouble and heauinesse... a day of obscuritie and darkenesse,' 1:15) is the scriptural basis for the medieval Latin hymn 'Dies Irae.'",
+        "'Chemarims' (1:4) is a rare loanword for idolatrous priests, kept untranslated in this Geneva text much as later English Bibles also do."
+      ]
+    },
+    {
+      "id": "oracles_against_the_nations_geneva",
+      "name": "Oracles Against the Nations",
+      "role": "law",
+      "scribeTier": "Sword Against the Nations",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_geneva",
+      "purpose": "A cycle of judgment oracles against the nations surrounding Iudah - the Philistims, Moab and Ammon, the Morians (Cush/Ethiopia), and Asshur - showing that the coming day of the Lord is not Iudah's alone to fear but falls on the pride and crueltie of every nation; framed by a call for 'all the meeke of the earth' to seeke the Lord, righteousnesse, and lowlinesse before it arrives (2:1-3).",
+      "verses": [
+        {
+          "ref": "Zephaniah 2:1-3",
+          "note": "Opening call: 'Gather your selues, euen gather you, O nation not worthie to be loued... seeke yee the Lord all the meeke of the earth... seeke righteousnesse, seeke lowlinesse, if so bee that ye may be hid in the day of the Lords wrath.'"
+        },
+        {
+          "ref": "Zephaniah 2:4-7",
+          "note": "Judgment on the Philistims - Azzah (Gaza), Ashkelon, Ashdod, and Ekron named individually - and on 'the nation of the Cherethims'; the sea coast is promised instead to the remnant of the house of Iudah."
+        },
+        {
+          "ref": "Zephaniah 2:8-11",
+          "note": "Judgment on Moab and the children of Ammon for reprochE and magnifying themselues against the Lord's people, likened to Sodom and Gomorah - 'a perpetuall desolation.'"
+        },
+        {
+          "ref": "Zephaniah 2:12",
+          "note": "'Ye Morians also shalbe slaine by my sword with them' - a brief oracle against Cush, using this translation's own archaic term for the Ethiopian/Cushite peoples."
+        },
+        {
+          "ref": "Zephaniah 2:13-15",
+          "note": "Judgment on Asshur - Nineueh made 'desolate, and waste like a wildernesse,' its proud boast ('I am, and there is none besides me') answered with ruin, the pelicane and the owle lodging in its vpper postes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Zephaniah's oracle against Nineueh (2:13-15) prophesies the same city's fall that is the whole subject of the book of Nahum.",
+        "The four Philistine cities named in 2:4 (Azzah, Ashkelon, Ashdod, Ekron) are four of the traditional five-city Philistine Pentapolis - Gath, the fifth, is omitted.",
+        "Real translation-specific vocabulary note: this same nation is called 'Morians' here at 2:12 but plainly 'Ethiopia' three verses later at 3:10 within this same Geneva text - an internal inconsistency in this translation's own word choice, not a difference in which people is meant."
+      ]
+    },
+    {
+      "id": "restoration_song_of_zion_geneva",
+      "name": "Restoration and the Song of Zion",
+      "role": "law",
+      "scribeTier": "Song of Zion's Ioy",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "deliveredBy": "zephaniah_geneva",
+      "purpose": "Closes the book by reversing its own opening judgment - promising Iudah 'a pure language' to call vpon the Lord together, a humble surviving remnant that 'shall do none iniquitie, nor speake lies,' and the Lord himself in the middes of Zion, reioycing ouer her with ioy, before gathering the scattered home and turning their captiuitie.",
+      "verses": [
+        {
+          "ref": "Zephaniah 3:9",
+          "note": "'Surely then will I turne to the people a pure language, that they may all call vpon the Name of the Lord, to serue him with one consent.'"
+        },
+        {
+          "ref": "Zephaniah 3:10",
+          "note": "'From beyonde the riuers of Ethiopia, the daughter of my dispersed, praying vnto me, shall bring me an offering.'"
+        },
+        {
+          "ref": "Zephaniah 3:12-13",
+          "note": "'Then will I leaue in the middes of thee an humble and poore people: and they shall trust in the Name of the Lord. The remnant of Israel shall do none iniquitie, nor speake lies... for they shalbe fed, and lie downe, and none shall make them afraide.'"
+        },
+        {
+          "ref": "Zephaniah 3:14-15",
+          "note": "'Reioyce, O daughter Zion: be ye ioyfull, O Israel... the King of Israel, euen the Lord is in the middes of thee: thou shalt see no more euill.'"
+        },
+        {
+          "ref": "Zephaniah 3:16-17",
+          "note": "'Feare thou not, O Zion... The Lord thy God in the middes of thee is mightie: hee will saue, hee will reioyce ouer thee with ioye: he will quiet himselfe in his loue.' The book's best-known passage."
+        },
+        {
+          "ref": "Zephaniah 3:18-20",
+          "note": "Closing promise: the afflicted gathered, 'her that halteth' saved, shame turned to praise and fame, and captiuitie turned 'before your eyes, saith the Lord.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Zephaniah 3:17 ('he will reioyce ouer thee with ioye... he will quiet himselfe in his loue') is one of very few Old Testament verses that explicitly describe God rejoicing with a kind of singing/joy over his people.",
+        "The 'pure language' promised in 3:9 is often read alongside Genesis 11's account of Babel, as a reversal of the confusion of tongues."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "No bulk/unresolved genealogy references beyond what's captured in Zephaniah's and Iosiah's own genealogy notes above - this is a short 3-chapter prophetic book with a single superscription genealogy, not a narrative book with extended family lists."
+  }
+}

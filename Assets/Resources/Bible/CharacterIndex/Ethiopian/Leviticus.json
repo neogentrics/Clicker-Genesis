@@ -1,0 +1,566 @@
+{
+  "book": "Leviticus",
+  "translation": "Ethiopian",
+  "canonicalOrder": 3,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read the full 27-chapter, 859-verse Ethiopian-translation text of Leviticus directly from Assets/Resources/Verses/Ethiopian/leviticus_3.json before drafting. Real finding, worth flagging per this project's \"verify, don't assume\" rule: unlike some other books in this Ethiopian Bible collection (which contain genuinely distinct content, e.g. this same translation's 9-chapter \"Ezra\"), this translation's Leviticus is textually identical in content, chapter count, and verse-by-verse wording to the standard Masoretic-tradition 27-chapter Leviticus most readers expect — no deuterocanonical material, no structural divergence, no added/removed chapters found anywhere in the text. So this book's scribe/manager structure closely parallels the existing KJV Leviticus index in shape (a law/theme-tier-heavy book, same \"Aaron is personally embodied, Moses is pure transmission\" test result), but every id, note, and tier description here was independently written from this translation's own text, not copied from the KJV file. One real structural improvement over the existing KJV index: chapter 17 (the blood-is-life prohibition and the single-central-altar rule) is substantial and distinct enough from the surrounding sacrificial-law and purity-law tiers to warrant its own tier (\"Life's Blood\") rather than being silently folded elsewhere, as it effectively was in the KJV version's tier list. Also, unlike the KJV file (which left every law tier's \"deliveredBy\":\"moses\" as a dangling reference with no matching Moses character entry), this file adds a real minimal \"named\" entry for Moses so every deliveredBy resolves — he is deliberately NOT a manager/scribe-tier (no scribe tier of his own), since apart from personally performing Aaron's ordination in chapter 8 his role here is almost entirely \"the LORD spake unto Moses, saying\" — pure transmission, per this book's own established person-vs-transmission test. Naming-collision note: Aaron, Moses, and the four sons of Aaron reappear across many books/translations in this project's Character Index, so every id here is suffixed \"_ethiopian_leviticus\" to avoid any collision. Shelomith's unnamed son (24:10-23) is kept exactly as thinly documented as the text itself allows — the text never names him, only his mother and his Egyptian father, which is itself part of the episode's point during the dispute that leads to his blasphemy and stoning.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Scapegoat",
+      "managerId": "aaron_ethiopian_leviticus",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Kindling Altar",
+      "managerId": "burnt_offering_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Fine Flour Basket",
+      "managerId": "grain_offering_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Fellowship Table",
+      "managerId": "peace_offering_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Blood Basin",
+      "managerId": "sin_offering_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Restitution Scale",
+      "managerId": "trespass_offering_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Cloven Hoof",
+      "managerId": "clean_unclean_animals_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Leprosy Cloth",
+      "managerId": "purity_laws_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Life's Blood",
+      "managerId": "blood_sanctity_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Holiness Tablet",
+      "managerId": "holiness_code_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Golden Lampstand",
+      "managerId": "priestly_regulations_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Feast Scroll",
+      "managerId": "seven_feasts_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Jubilee Trumpet",
+      "managerId": "jubilee_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Covenant Ledger",
+      "managerId": "blessings_curses_ethiopian_leviticus",
+      "type": "law"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Vow Tablet",
+      "managerId": "vows_tithes_ethiopian_leviticus",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "aaron_ethiopian_leviticus",
+      "name": "Aaron",
+      "role": "manager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — not individually indexed in this book",
+        "mother": "jochebed — not individually indexed in this book",
+        "spouses": [
+          "elisheba — not individually indexed in this book"
+        ],
+        "children": [
+          "nadab_ethiopian_leviticus",
+          "abihu_ethiopian_leviticus",
+          "eleazar_ethiopian_leviticus",
+          "ithamar_ethiopian_leviticus"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 8:1-9:24",
+          "note": "Washed, robed, and anointed by Moses as high priest; personally offers the first sin, burnt, and peace offerings before the whole congregation, and fire comes out from before the LORD to consume the offering"
+        },
+        {
+          "ref": "Leviticus 10:1-3",
+          "note": "Nadab and Abihu, his two elder sons, are consumed by fire from the LORD for offering unauthorized ('strange') fire; Aaron's only recorded response is silence"
+        },
+        {
+          "ref": "Leviticus 16:1-34",
+          "note": "Performs the Day of Atonement — enters the Most Holy Place behind the veil, sacrifices for himself and the people, and sends the live goat bearing the people's iniquities into the wilderness"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His entire reaction to watching two of his sons die minutes after his own ordination is a single line: 'and Aaron held his peace.'"
+      ]
+    },
+    {
+      "id": "moses_ethiopian_leviticus",
+      "name": "Moses",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "amram — not individually indexed in this book",
+        "mother": "jochebed — not individually indexed in this book",
+        "spouses": [
+          "zipporah — not individually indexed in this book"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 1:1",
+          "note": "The LORD calls to him out of the tabernacle to begin dictating the sacrificial laws — the book's opening line and its recurring pattern throughout"
+        },
+        {
+          "ref": "Leviticus 8:1-36",
+          "note": "Personally conducts Aaron and his sons' seven-day ordination ceremony, acting as priest himself until Aaron is fully consecrated"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Given a real character entry here (unlike a prior draft of this book's KJV counterpart, which left law-tier attributions unresolved) purely so every law tier's 'deliveredBy' resolves to someone real — he deliberately has no scribe tier of his own in this book, since apart from ordaining Aaron he is almost entirely pure transmission: 'the LORD spake unto Moses, saying.'"
+      ]
+    },
+    {
+      "id": "nadab_ethiopian_leviticus",
+      "name": "Nadab",
+      "role": "submanager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": "aaron_ethiopian_leviticus",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "aaron_ethiopian_leviticus",
+        "mother": "elisheba — not individually indexed in this book",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:1-2",
+          "note": "Offers 'strange fire' before the LORD with his censer, 'which he commanded them not' — fire goes out from the LORD and consumes him"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "abihu_ethiopian_leviticus",
+      "name": "Abihu",
+      "role": "submanager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": "aaron_ethiopian_leviticus",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "aaron_ethiopian_leviticus",
+        "mother": "elisheba — not individually indexed in this book",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:1-2",
+          "note": "Dies alongside Nadab in the same act of unauthorized fire"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "eleazar_ethiopian_leviticus",
+      "name": "Eleazar",
+      "role": "submanager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": "aaron_ethiopian_leviticus",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "aaron_ethiopian_leviticus",
+        "mother": "elisheba — not individually indexed in this book",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:6",
+          "note": "Told by Moses, alongside Ithamar, not to publicly mourn his brothers' deaths, lest wrath fall on the whole camp"
+        },
+        {
+          "ref": "Leviticus 10:16-20",
+          "note": "Questioned by Moses over the handling of a sin offering; Aaron answers on his and Ithamar's behalf"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "ithamar_ethiopian_leviticus",
+      "name": "Ithamar",
+      "role": "submanager",
+      "scribeTier": "Scapegoat",
+      "parentManagerId": "aaron_ethiopian_leviticus",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "aaron_ethiopian_leviticus",
+        "mother": "elisheba — not individually indexed in this book",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 10:6, 16-20",
+          "note": "Shares the same episodes as Eleazar — one of the two surviving sons who continue serving as priests"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "shelomith_ethiopian_leviticus",
+      "name": "Shelomith",
+      "role": "named",
+      "scribeTier": null,
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "dibri — not individually indexed in this book",
+        "mother": null,
+        "spouses": [
+          "unnamed Egyptian man"
+        ],
+        "children": [
+          "unnamed son"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Leviticus 24:10-11",
+          "note": "Named as the mother of a man of mixed Israelite-Egyptian parentage who blasphemes the LORD's name during a fight in the camp"
+        },
+        {
+          "ref": "Leviticus 24:12-23",
+          "note": "Her son is held pending judgment, then stoned by the whole congregation per the LORD's explicit command to Moses"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Of the tribe of Dan. Her son is never named in the text — only she and his Egyptian father are, which is itself part of the episode's point, since his mixed lineage is raised during the very dispute that leads to the blasphemy."
+      ]
+    },
+    {
+      "id": "burnt_offering_ethiopian_leviticus",
+      "name": "The Burnt Offering",
+      "role": "law",
+      "scribeTier": "Kindling Altar",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Wholly consumed on the altar with nothing kept back — from herd, flock, or fowl depending on what the offerer can afford. Establishes total, unreserved surrender as the basic posture for approaching a holy God, and (per its restatement in 6:8-13) requires the altar fire to be kept burning continually, never allowed to go out.",
+      "verses": [
+        {
+          "ref": "Leviticus 1:1-17",
+          "note": "Procedure for burnt offerings from the herd, the flock, or fowls, by the hand that gave it"
+        },
+        {
+          "ref": "Leviticus 6:8-13",
+          "note": "Restated as an ongoing priestly duty — the altar fire must never go out, day or night"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "grain_offering_ethiopian_leviticus",
+      "name": "The Grain Offering",
+      "role": "law",
+      "scribeTier": "Fine Flour Basket",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "The one bloodless offering — fine flour, oil, and frankincense, explicitly forbidden to contain leaven or honey but required to contain salt ('the salt of the covenant'). Represents the fruit of ordinary daily labor given back to God, not just dramatic animal sacrifice; what isn't burnt on the altar becomes food for Aaron and his sons.",
+      "verses": [
+        {
+          "ref": "Leviticus 2:1-16",
+          "note": "Procedure and ingredient rules for the grain offering, in its several baked forms"
+        },
+        {
+          "ref": "Leviticus 6:14-23",
+          "note": "Restated — the priests' portion, and the special daily grain offering Aaron himself must offer at his anointing, wholly burnt and never eaten"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "peace_offering_ethiopian_leviticus",
+      "name": "The Peace Offering",
+      "role": "law",
+      "scribeTier": "Fellowship Table",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "The only offering where the offerer eats part of the meat themselves, alongside the priest's portion and the LORD's own portion (the fat, burnt on the altar) — a shared meal picturing restored fellowship, not just atonement. Strict same-day/next-day eating rules keep it from becoming stale ritual.",
+      "verses": [
+        {
+          "ref": "Leviticus 3:1-17",
+          "note": "Procedure for peace offerings from the herd or the flock, male or female"
+        },
+        {
+          "ref": "Leviticus 7:11-34",
+          "note": "Restated with the thanksgiving/vow/freewill distinctions, and the wave breast and heave shoulder reserved for Aaron and his sons"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "sin_offering_ethiopian_leviticus",
+      "name": "The Sin Offering",
+      "role": "law",
+      "scribeTier": "Blood Basin",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Addresses unintentional sin, with the required animal scaled to who sinned — the anointed priest, the whole congregation, a ruler, or a common person — teaching that sin carries real weight regardless of intent, while also being graded to what each offerer can actually bring (down to a handful of flour for the truly poor).",
+      "verses": [
+        {
+          "ref": "Leviticus 4:1-5:13",
+          "note": "Procedures scaled by who sinned — priest, congregation, ruler, or common person — down to the poorest allowed offering"
+        },
+        {
+          "ref": "Leviticus 6:24-30",
+          "note": "Restated — where and how it is slain, who may eat it, and that any sin offering whose blood enters the tabernacle must be burnt, never eaten"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "trespass_offering_ethiopian_leviticus",
+      "name": "The Trespass Offering",
+      "role": "law",
+      "scribeTier": "Restitution Scale",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "For sins involving real damage or deception against God's holy things or against a neighbor — requires literal restitution plus an added fifth on top of the sacrifice itself. Teaches that wronging someone isn't fixed by ritual alone; the actual harm has to be repaid, in full and then some.",
+      "verses": [
+        {
+          "ref": "Leviticus 5:14-6:7",
+          "note": "Trespass against holy things, and against a neighbor through deceit or false swearing — restitution plus a fifth part, then the offering itself"
+        },
+        {
+          "ref": "Leviticus 7:1-10",
+          "note": "Restated procedure — killed where the burnt offering is killed, most holy, eaten only by the males among the priests"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "clean_unclean_animals_ethiopian_leviticus",
+      "name": "Clean & Unclean Animals",
+      "role": "law",
+      "scribeTier": "Cloven Hoof",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Dietary law given to Moses and Aaron together — land animals must both chew the cud and part the hoof to be clean; detailed lists cover water creatures, birds, and swarming things. Functions as a constant, daily, embodied reminder that Israel is set apart, woven into something as ordinary as every meal.",
+      "verses": [
+        {
+          "ref": "Leviticus 11:1-47",
+          "note": "Clean and unclean land animals, water creatures, birds, and swarming/creeping things, with contamination rules for carcasses"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "purity_laws_ethiopian_leviticus",
+      "name": "Purity Laws",
+      "role": "law",
+      "scribeTier": "Leprosy Cloth",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Covers childbirth, skin disease, mold or fretting decay in clothing and houses, and bodily discharges — the common thread is anything touching blood, death, or decay disrupting the boundary that holiness requires guarding, extending even to the walls of a house.",
+      "verses": [
+        {
+          "ref": "Leviticus 12:1-8",
+          "note": "Purification for a woman after childbirth, longer for a daughter than a son"
+        },
+        {
+          "ref": "Leviticus 13:1-59",
+          "note": "Diagnosing leprosy in skin, and in woolen, linen, or leather garments"
+        },
+        {
+          "ref": "Leviticus 14:1-57",
+          "note": "The cleansing ritual for a healed leper, and for leprosy found in the walls of a house in the land of Canaan"
+        },
+        {
+          "ref": "Leviticus 15:1-33",
+          "note": "Bodily discharges, in both men and women"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blood_sanctity_ethiopian_leviticus",
+      "name": "The Sanctity of Blood & the One Altar",
+      "role": "law",
+      "scribeTier": "Life's Blood",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Forbids eating blood outright ('for the life of the flesh is in the blood') and requires every sacrifice to be brought to the one central altar rather than offered anywhere in the open field — the text ties this directly to Israel's prior habit of sacrificing 'unto devils, after whom they have gone a whoring.' Grounds the whole sacrificial system in one stated reason: the blood itself is what God has given to make atonement.",
+      "verses": [
+        {
+          "ref": "Leviticus 17:1-16",
+          "note": "Bans sacrifice outside the tabernacle door, forbids eating blood of any kind, and requires hunted game's blood to be poured out and covered with dust"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "holiness_code_ethiopian_leviticus",
+      "name": "\"Ye Shall Be Holy\" — the Holiness Code",
+      "role": "law",
+      "scribeTier": "Holiness Tablet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Extends holiness from ritual into everyday ethics — sexual morality, honest business dealing, care for the poor and the stranger, honoring the aged — explicitly grounded in one repeated line: 'Ye shall be holy: for I the LORD your God am holy.' Holiness isn't only what happens at the altar.",
+      "verses": [
+        {
+          "ref": "Leviticus 18:1-30",
+          "note": "Sexual morality laws, framed as what set Israel apart from Egypt and Canaan"
+        },
+        {
+          "ref": "Leviticus 19:1-37",
+          "note": "Broad ethical laws, including 'thou shalt love thy neighbour as thyself' (19:18)"
+        },
+        {
+          "ref": "Leviticus 20:1-27",
+          "note": "Penalties for violating the preceding chapters' laws"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "priestly_regulations_ethiopian_leviticus",
+      "name": "Priestly Regulations & the Sacred Lamp",
+      "role": "law",
+      "scribeTier": "Golden Lampstand",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Sets stricter purity and marriage standards for priests than for ordinary Israelites, and bars any priest with a physical blemish from serving at the altar (though he may still eat the priestly food) — since they mediate directly at God's altar. Also covers the tabernacle's ongoing upkeep (the lamp, the showbread), closing with the one narrative episode in this stretch: Shelomith's son's blasphemy and stoning, a real test of how these holiness laws apply even to a man of mixed Israelite-Egyptian parentage.",
+      "verses": [
+        {
+          "ref": "Leviticus 21:1-24",
+          "note": "Priestly mourning restrictions, marriage rules, and physical-blemish disqualification from altar service"
+        },
+        {
+          "ref": "Leviticus 22:1-33",
+          "note": "Who may eat the holy offerings, and blemish rules for acceptable sacrificial animals"
+        },
+        {
+          "ref": "Leviticus 24:1-9",
+          "note": "The tabernacle lamp and showbread, maintained continually by Aaron"
+        },
+        {
+          "ref": "Leviticus 24:10-23",
+          "note": "Shelomith's son blasphemes during a camp fight and is stoned per the LORD's judgment to Moses"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "seven_feasts_ethiopian_leviticus",
+      "name": "The Seven Feasts",
+      "role": "law",
+      "scribeTier": "Feast Scroll",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "A full annual calendar binding the nation's sense of time to God's actions — deliverance (Passover, Unleavened Bread), harvest and provision (Firstfruits, Weeks), and a run of autumn feasts (Trumpets, the Day of Atonement, Tabernacles) closing the year by re-centering the community on God rather than the harvest alone.",
+      "verses": [
+        {
+          "ref": "Leviticus 23:1-44",
+          "note": "The full annual feast calendar, declared by Moses to the children of Israel"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "jubilee_ethiopian_leviticus",
+      "name": "The Year of Jubilee",
+      "role": "law",
+      "scribeTier": "Jubilee Trumpet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Every 50th year, land returns to its original family and debt-servants go free — a hard economic reset built into the calendar itself. Teaches that the land ultimately belongs to God ('the land is mine,' 25:23), not to whoever has accumulated it, and that no family's poverty is meant to become permanent and inherited.",
+      "verses": [
+        {
+          "ref": "Leviticus 25:1-55",
+          "note": "The sabbath year of rest for the land, and the year of Jubilee — land redemption, and release of Israelite bondservants"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "blessings_curses_ethiopian_leviticus",
+      "name": "Blessings & Curses",
+      "role": "law",
+      "scribeTier": "Covenant Ledger",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "Closes the legal core of the book by tying the whole nation's future — not just individual behavior — to covenant faithfulness, with real, escalating consequences laid out either direction, and an explicit promise that even in exile God will remember His covenant with Abraham, Isaac, and Jacob.",
+      "verses": [
+        {
+          "ref": "Leviticus 26:1-46",
+          "note": "Blessings for obedience, escalating curses for disobedience, and a promise of eventual restoration upon confession"
+        }
+      ],
+      "ageEvents": []
+    },
+    {
+      "id": "vows_tithes_ethiopian_leviticus",
+      "name": "Vows & Tithes",
+      "role": "law",
+      "scribeTier": "Vow Tablet",
+      "parentManagerId": null,
+      "deliveredBy": "moses_ethiopian_leviticus",
+      "purpose": "The closing chapter — valuations for vowed persons (scaled by age and sex), animals, houses, and land, plus the tithe. Ends the book on what is voluntarily and formally devoted to God, a deliberate counterpart to the involuntary, required offerings that opened the book in chapter 1.",
+      "verses": [
+        {
+          "ref": "Leviticus 27:1-34",
+          "note": "Valuations for vowed persons, beasts, houses, and fields; the tithe of the land and flock"
+        }
+      ],
+      "ageEvents": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Nothing bulk to list — this book's own text names no genealogical rosters; every named figure appears above."
+  }
+}

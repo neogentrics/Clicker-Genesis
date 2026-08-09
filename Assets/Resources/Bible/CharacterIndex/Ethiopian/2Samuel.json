@@ -1,0 +1,1360 @@
+{
+  "book": "2 Samuel",
+  "translation": "Ethiopian",
+  "canonicalOrder": 10,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Read the full 24-chapter/695-verse Ethiopian translation text directly (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Ethiopian/2_samuel_10.json) before drafting. Real finding: this book's content and structure are IDENTICAL to the standard Masoretic/KJV-tradition 2 Samuel — same 24 chapters, same episodes in the same order, same wording throughout every verse checked (e.g. \"How are the mighty fallen,\" \"Thou art the man,\" \"neither will I offer... of that which doth cost me nothing\"). No deuterocanonical or structural variance was found here, unlike this same Ethiopian translation's Ezra (a genuinely different 9-chapter \"1 Esdras\"-tradition text) — 2 Samuel is a case where the Ethiopian canon and the standard Protestant canon simply agree. Structure mirrors the established KJV CharacterIndex pattern for this book (consulted only for tier-naming style, not copied blindly) but every id is independently suffixed \"_eth\" to avoid any cross-translation collision, and every verse note was re-derived from the actual text read. Naming collisions flagged, matching what the real text shows: two men named Mephibosheth (Jonathan's son, shown mercy by David in ch.4/9/16/19, vs. Rizpah's son by Saul, handed to the Gibeonites in ch.21); two women named Abigail (David's own wife, formerly Nabal's widow, vs. Amasa's mother, called \"sister to Zeruiah\"); two women named Ahinoam (David's wife the Jezreelitess vs. Saul's wife, not in this book); two women named Tamar (David's daughter vs. Absalom's own daughter, 14:27); at least two men named Nathan (the prophet vs. David's own son, 5:14); two men named Abinadab (Uzzah's father vs. Saul's son, not in this book); \"Maacah\" flagged as a scripture-wide repeat name; Araunah/Ornan noted as a spelling variant from a different book, not two people; Shimei son of Gera flagged as a very common name not to be merged with other Shimeis. Undifferentiated pairs (Rechab and Baanah) kept as one combined submanager entry since the text never distinguishes their individual actions. Law-tier attribution follows the \"personally embodied vs. pure transmission\" test: David is the acting/embodied figure for the lament, the Gibeonite reckoning, and the mighty-men roster (his own composed words in each case); Nathan is the true deliverer of the Davidic Covenant (he receives and relays the LORD's word, a real speaking role, not just transmission); Gad the prophet (added as a new submanager under David, since he has real personally-embodied prophetic action across two scenes) is the deliverer of the threshingfloor-altar instruction.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Song of the Bow",
+      "managerId": "lament_for_saul_and_jonathan_eth",
+      "type": "law"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Shepherd's Crown",
+      "managerId": "david_eth",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Israel's General",
+      "managerId": "abner_eth",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Rival Throne",
+      "managerId": "ishbosheth_eth",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The King's Sword",
+      "managerId": "joab_eth",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Everlasting House",
+      "managerId": "davidic_covenant_eth",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Loyal Soldier",
+      "managerId": "uriah_eth",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Bathsheba's House",
+      "managerId": "bathsheba_eth",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "The Prophet's Voice",
+      "managerId": "nathan_eth",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Firstborn's Fall",
+      "managerId": "amnon_eth",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "Tamar's Silence",
+      "managerId": "tamar_eth",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "The Prince's Rebellion",
+      "managerId": "absalom_eth",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "The Counselor's Betrayal",
+      "managerId": "ahithophel_eth",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "The Crippled Prince",
+      "managerId": "mephibosheth_jonathans_son_eth",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "The Usurped Command",
+      "managerId": "amasa_eth",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Trumpet of Revolt",
+      "managerId": "sheba_ben_bichri_eth",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "Blood for the Broken Oath",
+      "managerId": "gibeonite_reckoning_eth",
+      "type": "law"
+    },
+    {
+      "tier": 18,
+      "scribeName": "The Mighty Men",
+      "managerId": "mighty_men_roster_eth",
+      "type": "law"
+    },
+    {
+      "tier": 19,
+      "scribeName": "The Threshingfloor Altar",
+      "managerId": "threshingfloor_altar_eth",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "lament_for_saul_and_jonathan_eth",
+      "name": "The Song of the Bow (Lament for Saul and Jonathan)",
+      "role": "law",
+      "scribeTier": "The Song of the Bow",
+      "deliveredBy": "david_eth",
+      "purpose": "David's formal elegy for Saul and Jonathan after Gilboa, which he personally composes and orders taught to the men of Judah (\"he bade them teach the children of Judah the use of the bow: behold, it is written in the book of Jasher,\" 1:18). Models honoring a fallen king and covenant-friend despite personal rivalry, and formal, preserved public mourning rather than private grief alone.",
+      "verses": [
+        {
+          "ref": "2 Samuel 1:1-16",
+          "note": "An Amalekite young man brings David Saul's crown and bracelet, claiming to have killed Saul at Saul's own request; David has him executed on the strength of his own confession."
+        },
+        {
+          "ref": "2 Samuel 1:17-27",
+          "note": "David's lament for Saul and Jonathan, with the refrain \"How are the mighty fallen,\" praising Jonathan's love as \"passing the love of women\" (v.26)."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The instruction that the lament be taught and preserved in \"the book of Jasher\" (a now-lost source cited elsewhere in scripture) is a rare cross-reference to an external text within this book."
+      ]
+    },
+    {
+      "id": "amalekite_messenger_eth",
+      "name": "The Amalekite Messenger",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed; identifies himself only as \"the son of a stranger, an Amalekite\" (1:13)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 1:1-16",
+          "note": "Reports Saul's death, presents the crown and bracelet, claims to have slain Saul; David judges him by his own testimony (\"thy blood be upon thy head; for thy mouth hath testified against thee,\" v.16) and has him killed."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His account of killing Saul is not independently confirmed anywhere else in this book — the text never resolves whether his story was true or an opportunistic lie; David executes him for claiming to have destroyed \"the LORD's anointed\" either way."
+      ]
+    },
+    {
+      "id": "david_eth",
+      "name": "David",
+      "role": "manager",
+      "scribeTier": "The Shepherd's Crown",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jesse (established outside this book)",
+        "mother": null,
+        "spouses": [
+          "michal_eth",
+          "ahinoam_jezreelitess_eth",
+          "abigail_davids_wife_eth",
+          "maacah_davids_wife_eth",
+          "bathsheba_eth"
+        ],
+        "children": [
+          "amnon_eth",
+          "absalom_eth",
+          "tamar_eth",
+          "solomon_eth"
+        ],
+        "note": "Additional wives (Haggith, Abital, Eglah) and further sons born at Hebron/Jerusalem are bulk-listed in genealogyLists, since the text gives them no individual action in this book."
+      },
+      "ageEvents": [
+        {
+          "age": 30,
+          "event": "Began to reign over Judah at Hebron; reigned 40 years total (2:11, 5:4-5)",
+          "ref": "2 Samuel 5:4-5"
+        }
+      ],
+      "verses": [
+        {
+          "ref": "2 Samuel 2:1-4",
+          "note": "Anointed king over the house of Judah at Hebron."
+        },
+        {
+          "ref": "2 Samuel 5:1-5",
+          "note": "Anointed king over all Israel; reigns 40 years (7 years, 6 months in Hebron; 33 years in Jerusalem)."
+        },
+        {
+          "ref": "2 Samuel 5:6-9",
+          "note": "Takes the stronghold of Zion from the Jebusites and makes it the city of David."
+        },
+        {
+          "ref": "2 Samuel 6:1-19",
+          "note": "Brings the ark of God to Jerusalem; dances before it with all his might; Uzzah dies touching it en route; Michal despises him for it."
+        },
+        {
+          "ref": "2 Samuel 24:1-25",
+          "note": "Orders a census against Joab's objection; a pestilence follows, killing 70,000; buys Araunah's threshingfloor and builds an altar there."
+        }
+      ],
+      "ageEvents2": [],
+      "funFacts": [
+        "David's own son born in Jerusalem is also named Nathan (5:14) — a different person from Nathan the prophet."
+      ]
+    },
+    {
+      "id": "michal_eth",
+      "name": "Michal",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Saul",
+        "mother": null,
+        "spouses": [
+          "david_eth"
+        ],
+        "children": [],
+        "note": "Briefly given to Phaltiel son of Laish before David reclaims her (3:14-16); 6:23 states she \"had no child unto the day of her death.\""
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 3:13-16",
+          "note": "David demands her return from Phaltiel as a condition of alliance with Abner; Phaltiel weeps following after her."
+        },
+        {
+          "ref": "2 Samuel 6:16-23",
+          "note": "Watches David dance before the ark from a window and despises him in her heart; confronts him afterward; the text notes she remained childless."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahinoam_jezreelitess_eth",
+      "name": "Ahinoam the Jezreelitess",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "david_eth"
+        ],
+        "children": [
+          "amnon_eth"
+        ],
+        "note": "No further genealogy given in this book."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 3:2",
+          "note": "Named as David's wife and mother of Amnon, his firstborn, born at Hebron."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abigail_davids_wife_eth",
+      "name": "Abigail (David's wife, formerly Nabal's widow)",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "david_eth"
+        ],
+        "children": [],
+        "note": "Mother of Chileab (3:3), David's second son born at Hebron."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 3:3",
+          "note": "Named as David's wife, \"Abigail Nabal's wife the Carmelite,\" and mother of Chileab, born at Hebron."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "A DIFFERENT Abigail from Amasa's mother, also called Abigail and \"sister to Zeruiah\" (17:25) — two distinct women named Abigail connected to David's household."
+      ]
+    },
+    {
+      "id": "maacah_davids_wife_eth",
+      "name": "Maacah",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Talmai king of Geshur",
+        "mother": null,
+        "spouses": [
+          "david_eth"
+        ],
+        "children": [
+          "absalom_eth",
+          "tamar_eth"
+        ],
+        "note": "No further genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 3:3",
+          "note": "Named as daughter of Talmai king of Geshur, David's wife, and mother of Absalom, born at Hebron."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "\"Maacah\" is a name reused elsewhere in scripture for other figures — flagged as a repeat name, not assumed identical to any other Maacah."
+      ]
+    },
+    {
+      "id": "hushai_eth",
+      "name": "Hushai the Archite",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 15:32-37",
+          "note": "Meets David at the top of the Mount of Olives with his coat rent and earth on his head; David sends him back to Jerusalem to feign loyalty to Absalom and \"defeat the counsel of Ahithophel.\""
+        },
+        {
+          "ref": "2 Samuel 17:5-14",
+          "note": "Persuades Absalom to reject Ahithophel's fast-strike plan in favor of a slower muster, buying David time to escape."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "shimei_son_of_gera_eth",
+      "name": "Shimei son of Gera",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Gera",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "\"Of the family of the house of Saul\" (16:5)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 16:5-13",
+          "note": "Curses David as a \"bloody man\" and \"man of Belial,\" casting stones and dust as David flees Absalom; David restrains Abishai from killing him."
+        },
+        {
+          "ref": "2 Samuel 19:16-23",
+          "note": "Begs David's forgiveness on his return; David swears an oath he shall not die."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "\"Shimei\" is a common name in scripture; this Shimei son of Gera should not be assumed identical to any other Shimei."
+      ]
+    },
+    {
+      "id": "barzillai_eth",
+      "name": "Barzillai the Gileadite",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Whether Chimham, whom Barzillai asks David to take in his place, is literally his son is not stated outright (19:37-38 simply says \"thy servant Chimham\")."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 17:27-29",
+          "note": "Brings beds, basins, wheat, barley, flour, honey, butter, sheep, and cheese to David's hungry camp at Mahanaim, alongside Shobi and Machir."
+        },
+        {
+          "ref": "2 Samuel 19:31-39",
+          "note": "Escorts David over the Jordan; declines reward at court, being \"fourscore years old,\" and asks that Chimham go in his place instead."
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 80,
+          "event": "Escorts David home, declines a place at court due to old age",
+          "ref": "2 Samuel 19:32-35"
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "gad_the_prophet_eth",
+      "name": "Gad the Prophet",
+      "role": "submanager",
+      "parentManagerId": "david_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called \"the prophet Gad, David's seer\" (24:11); no further genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 24:11-14",
+          "note": "Brings David the LORD's word offering three choices of judgment for the census; David chooses to fall into the LORD's hand."
+        },
+        {
+          "ref": "2 Samuel 24:18-19",
+          "note": "Instructs David to build an altar on Araunah's threshingfloor."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abner_eth",
+      "name": "Abner",
+      "role": "manager",
+      "scribeTier": "Israel's General",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ner",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Called captain of Saul's host (2:8); exact kinship to Saul is not spelled out in this book."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 2:8-10",
+          "note": "Takes Ish-bosheth, Saul's son, and makes him king over Israel at Mahanaim after Saul's death."
+        },
+        {
+          "ref": "2 Samuel 2:12-32",
+          "note": "Leads Ish-bosheth's forces against Joab's men at the pool of Gibeon; kills Asahel in the retreat, running him through with the hinder end of his spear."
+        },
+        {
+          "ref": "2 Samuel 3:6-21",
+          "note": "Quarrels with Ish-bosheth over Rizpah, defects to David, and negotiates bringing all Israel to him."
+        },
+        {
+          "ref": "2 Samuel 3:26-30",
+          "note": "Recalled from the well of Sirah and murdered by Joab at the gate of Hebron in revenge for Asahel; David publicly mourns him and follows the bier."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ishbosheth_eth",
+      "name": "Ish-bosheth",
+      "role": "manager",
+      "scribeTier": "The Rival Throne",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Saul",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No further genealogy given in this book."
+      },
+      "ageEvents": [
+        {
+          "age": 40,
+          "event": "Began to reign over Israel at Mahanaim; reigned two years",
+          "ref": "2 Samuel 2:10"
+        }
+      ],
+      "verses": [
+        {
+          "ref": "2 Samuel 2:8-10",
+          "note": "Made king over Gilead, the Ashurites, Jezreel, Ephraim, Benjamin, and all Israel by Abner, while David reigns only over Judah."
+        },
+        {
+          "ref": "2 Samuel 3:7-11",
+          "note": "Accuses Abner of going in to Rizpah, his father's concubine; Abner reacts furiously and defects to David; Ish-bosheth cannot answer him a word, fearing him."
+        },
+        {
+          "ref": "2 Samuel 4:5-8",
+          "note": "Assassinated in his own bed at noon by Rechab and Baanah, his own captains, who behead him."
+        }
+      ],
+      "ageEvents2": [],
+      "funFacts": []
+    },
+    {
+      "id": "rechab_and_baanah_eth",
+      "name": "Rechab and Baanah",
+      "role": "submanager",
+      "parentManagerId": "ishbosheth_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Rimmon the Beerothite (father of both, as brothers)",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "The text does not differentiate their individual actions — kept as a single combined entry."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 4:2-7",
+          "note": "Captains of Ish-bosheth's raiding bands; enter his house on the pretense of fetching wheat, smite him in the fifth rib, behead him, and flee through the plain all night."
+        },
+        {
+          "ref": "2 Samuel 4:8-12",
+          "note": "Bring the head to David expecting reward; David instead has them executed and their hands and feet cut off, hung over the pool in Hebron, for the murder of \"a righteous person... in his own house upon his bed.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joab_eth",
+      "name": "Joab",
+      "role": "manager",
+      "scribeTier": "The King's Sword",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah",
+        "spouses": [],
+        "children": [],
+        "note": "Consistently called \"the son of Zeruiah\" throughout (2:13, 3:39)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 2:12-32",
+          "note": "Commands David's forces at Gibeon against Abner; loses his brother Asahel in the fighting; blows the trumpet to end the pursuit."
+        },
+        {
+          "ref": "2 Samuel 3:22-30",
+          "note": "Rebukes David for letting Abner go in peace, then kills Abner himself under the fifth rib at the gate of Hebron, in revenge for Asahel."
+        },
+        {
+          "ref": "2 Samuel 11:1, 14-25",
+          "note": "Besieges Rabbah; carries out David's letter ordering Uriah set in the hottest part of the battle so he will be smitten and die."
+        },
+        {
+          "ref": "2 Samuel 14:1-23",
+          "note": "Sends the wise woman of Tekoah to move David toward recalling the banished Absalom."
+        },
+        {
+          "ref": "2 Samuel 18:9-15",
+          "note": "Finds Absalom hanging alive in an oak by his hair and thrusts three darts through his heart, against David's explicit charge to deal gently with him."
+        },
+        {
+          "ref": "2 Samuel 19:5-7",
+          "note": "Rebukes David sharply for mourning Absalom over the servants who saved his life that day."
+        },
+        {
+          "ref": "2 Samuel 20:8-10",
+          "note": "Kills Amasa, David's newly appointed commander, at the great stone in Gibeon, feigning a kiss while striking him under the fifth rib."
+        },
+        {
+          "ref": "2 Samuel 24:2-9",
+          "note": "Objects to David's census (\"why doth my lord the king delight in this thing?\") but carries it out and reports the totals."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "asahel_eth",
+      "name": "Asahel",
+      "role": "submanager",
+      "parentManagerId": "joab_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah",
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Joab and Abishai."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 2:18-23",
+          "note": "\"As light of foot as a wild roe,\" pursues Abner in the retreat from Gibeon without turning aside; killed by Abner's backward spear-thrust; buried in his father's sepulchre in Bethlehem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "abishai_eth",
+      "name": "Abishai",
+      "role": "submanager",
+      "parentManagerId": "joab_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": "Zeruiah",
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Joab and Asahel."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 16:9-11",
+          "note": "Offers to take off Shimei's head for cursing David; David restrains him."
+        },
+        {
+          "ref": "2 Samuel 18:2",
+          "note": "Commands a third of David's army against Absalom's forces."
+        },
+        {
+          "ref": "2 Samuel 20:6-10",
+          "note": "Pursues Sheba ben Bichri alongside Joab after Amasa's death."
+        },
+        {
+          "ref": "2 Samuel 23:18-19",
+          "note": "Chief among \"the three mighty men,\" credited with lifting his spear against three hundred and slaying them."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wise_woman_of_tekoa_eth",
+      "name": "The Wise Woman of Tekoah",
+      "role": "submanager",
+      "parentManagerId": "joab_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed; fetched by Joab from Tekoah."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 14:1-20",
+          "note": "At Joab's direction, presents David with a fictional case of two feuding brothers, drawing him into a ruling he then applies to Absalom's own exile."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "wise_woman_of_abel_eth",
+      "name": "The Wise Woman of Abel",
+      "role": "submanager",
+      "parentManagerId": "joab_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Unnamed; calls out from the besieged city of Abel of Beth-maachah."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 20:16-22",
+          "note": "Calls Joab to the wall, negotiates in her wisdom, and persuades the city to cut off Sheba ben Bichri's head and throw it over the wall, ending the siege."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "davidic_covenant_eth",
+      "name": "The Davidic Covenant",
+      "role": "law",
+      "scribeTier": "The Everlasting House",
+      "deliveredBy": "nathan_eth",
+      "purpose": "God's promise, spoken through Nathan, that David's house, kingdom, and throne will be established forever, and that David's own son (not David) will build the house for the LORD's name. Establishes the theological foundation of an enduring royal line; this book records only the promise, not its fulfillment.",
+      "verses": [
+        {
+          "ref": "2 Samuel 7:1-3",
+          "note": "David tells Nathan he dwells in a house of cedar while the ark dwells within curtains; Nathan initially tells him to do all that is in his heart."
+        },
+        {
+          "ref": "2 Samuel 7:4-17",
+          "note": "That night the word of the LORD corrects Nathan: David will not build God a house, but God will build David a house; his seed's throne shall be established forever."
+        },
+        {
+          "ref": "2 Samuel 7:18-29",
+          "note": "David's prayer of humble acceptance: \"Who am I, O Lord GOD?\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nathan_eth",
+      "name": "Nathan the Prophet",
+      "role": "manager",
+      "scribeTier": "The Prophet's Voice",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "No genealogy given for Nathan himself."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 7:1-17",
+          "note": "Relays the Davidic Covenant to David."
+        },
+        {
+          "ref": "2 Samuel 12:1-15",
+          "note": "Confronts David after the Bathsheba/Uriah affair with the parable of the poor man's one ewe lamb; pronounces \"Thou art the man,\" and judgment; receives David's confession \"I have sinned against the LORD.\""
+        },
+        {
+          "ref": "2 Samuel 12:24-25",
+          "note": "Sent by the LORD to name the newborn Solomon \"Jedidiah, because of the LORD.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "At least one other, unrelated Nathan appears elsewhere in this book — David's own son, born in Jerusalem (5:14) — not this Nathan."
+      ]
+    },
+    {
+      "id": "uriah_eth",
+      "name": "Uriah the Hittite",
+      "role": "manager",
+      "scribeTier": "The Loyal Soldier",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "bathsheba_eth"
+        ],
+        "children": [],
+        "note": "The child conceived during David's affair with Bathsheba was David's biological son, not Uriah's, despite the marriage."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 11:6-13",
+          "note": "Recalled from the siege of Rabbah; refuses to go down to his own house and lie with his wife out of loyalty to the ark, Israel, Judah, and Joab's men encamped in the open fields, even when David makes him drunk."
+        },
+        {
+          "ref": "2 Samuel 11:14-17",
+          "note": "Sent back carrying his own death-letter; killed when Joab, on David's order, sets him where the fighting is fiercest."
+        },
+        {
+          "ref": "2 Samuel 23:39",
+          "note": "Listed as the closing name in the roster of David's mighty men: \"Uriah the Hittite: thirty and seven in all.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Called \"the Hittite\" throughout, marking him as a non-Israelite serving loyally in David's own guard."
+      ]
+    },
+    {
+      "id": "bathsheba_eth",
+      "name": "Bathsheba",
+      "role": "manager",
+      "scribeTier": "Bathsheba's House",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Eliam",
+        "mother": null,
+        "spouses": [
+          "uriah_eth",
+          "david_eth"
+        ],
+        "children": [
+          "solomon_eth"
+        ],
+        "note": "23:34 separately names \"Eliam the son of Ahithophel\" among the mighty men — whether this is the same Eliam is never stated by the text itself and is hedged, not asserted."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 11:2-5",
+          "note": "Seen washing herself from the palace roof by David; sent for and lain with while Uriah is at war; conceives and sends word."
+        },
+        {
+          "ref": "2 Samuel 11:26-27",
+          "note": "Mourns Uriah, then becomes David's wife and bears a son; the thing David had done displeases the LORD."
+        },
+        {
+          "ref": "2 Samuel 12:15-23",
+          "note": "The child born of the affair sickens and dies on the seventh day, per Nathan's judgment; David fasts and prays for the child while he lives, then rises and eats once he is dead."
+        },
+        {
+          "ref": "2 Samuel 12:24-25",
+          "note": "Comforted by David; bears Solomon, whom the LORD loves and names Jedidiah through Nathan."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The first child of this union is never named in the text — he lives only seven days."
+      ]
+    },
+    {
+      "id": "solomon_eth",
+      "name": "Solomon (Jedidiah)",
+      "role": "submanager",
+      "parentManagerId": "bathsheba_eth",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "david_eth",
+        "mother": "bathsheba_eth",
+        "spouses": [],
+        "children": [],
+        "note": "No further genealogy given within this book."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 12:24-25",
+          "note": "Born to David and Bathsheba; named Jedidiah by Nathan at the LORD's instruction, alongside his given name Solomon, because the LORD loved him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Not to be confused with David's other son also named Nathan (5:14), his own brother."
+      ]
+    },
+    {
+      "id": "amnon_eth",
+      "name": "Amnon",
+      "role": "manager",
+      "scribeTier": "The Firstborn's Fall",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "david_eth",
+        "mother": "ahinoam_jezreelitess_eth",
+        "spouses": [],
+        "children": [],
+        "note": "David's firstborn son, born at Hebron."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 13:1-14",
+          "note": "Feigns sickness on his friend Jonadab's advice to lure his half-sister Tamar to his house, then forces her despite her explicit protest."
+        },
+        {
+          "ref": "2 Samuel 13:15-17",
+          "note": "Immediately hates Tamar \"exceedingly,\" with a hatred greater than his former love, and has her put out and the door bolted."
+        },
+        {
+          "ref": "2 Samuel 13:23-29",
+          "note": "Killed two full years later at Absalom's sheepshearing feast in Baal-hazor, on Absalom's explicit order, in revenge for Tamar."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Amnon is Tamar's half-brother but shares no mother with Absalom either — Tamar and Absalom share their mother Maacah; Amnon does not."
+      ]
+    },
+    {
+      "id": "tamar_eth",
+      "name": "Tamar",
+      "role": "manager",
+      "scribeTier": "Tamar's Silence",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "david_eth",
+        "mother": "maacah_davids_wife_eth",
+        "spouses": [],
+        "children": [],
+        "note": "Full sister of Absalom (13:1); the text states she \"remained desolate\" in Absalom's house afterward and records no marriage for her."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 13:1-14",
+          "note": "Sent by David, at Amnon's request, to nurse and bake cakes for the feigning-ill Amnon; forced by him despite her plea that he ask the king for her properly instead, calling it \"folly\" not done in Israel."
+        },
+        {
+          "ref": "2 Samuel 13:19-20",
+          "note": "Puts ashes on her head and tears her garment of divers colours (worn by the king's virgin daughters), going on crying; taken into Absalom's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Absalom later names his own daughter Tamar as well (14:27) — a second, different Tamar in the same family within this book."
+      ]
+    },
+    {
+      "id": "absalom_eth",
+      "name": "Absalom",
+      "role": "manager",
+      "scribeTier": "The Prince's Rebellion",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "david_eth",
+        "mother": "maacah_davids_wife_eth",
+        "spouses": [],
+        "children": [],
+        "note": "14:27 states Absalom had three sons and one daughter, Tamar; 18:18 has Absalom himself say \"I have no son to keep my name in remembrance\" — an internal tension the text does not reconcile, hedged rather than resolved here."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 13:23-29",
+          "note": "Avenges Tamar by having his servants murder Amnon at a feast; flees to his grandfather Talmai, king of Geshur, for three years."
+        },
+        {
+          "ref": "2 Samuel 14:1-24",
+          "note": "Recalled to Jerusalem through Joab's scheme with the wise woman of Tekoah, though kept from David's own face two years more."
+        },
+        {
+          "ref": "2 Samuel 15:1-12",
+          "note": "Steals the hearts of the men of Israel at the gate, then openly rebels from Hebron, sending for Ahithophel."
+        },
+        {
+          "ref": "2 Samuel 16:20-22",
+          "note": "On Ahithophel's counsel, goes in to David's concubines in a tent upon the roof in the sight of all Israel."
+        },
+        {
+          "ref": "2 Samuel 18:9-15",
+          "note": "His head catches in the boughs of a great oak while fleeing on his mule; killed by Joab's three darts despite David's charge to deal gently with him."
+        },
+        {
+          "ref": "2 Samuel 18:33-19:4",
+          "note": "David's grief: \"O my son Absalom, my son, my son Absalom! would God I had died for thee.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahithophel_eth",
+      "name": "Ahithophel",
+      "role": "manager",
+      "scribeTier": "The Counselor's Betrayal",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "\"Ahithophel the Gilonite\" (15:12); a possible link to Eliam, Bathsheba's father, via 23:34 is unstated by the text and hedged."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 15:12",
+          "note": "David's counselor, joins Absalom's conspiracy from Giloh while offering sacrifices; his counsel \"was as if a man had inquired at the oracle of God.\""
+        },
+        {
+          "ref": "2 Samuel 16:20-23",
+          "note": "Advises Absalom to lie with David's concubines publicly, to make all Israel know Absalom is abhorred of his father."
+        },
+        {
+          "ref": "2 Samuel 17:1-4",
+          "note": "Advises striking David immediately that night with 12,000 chosen men while he is weary and weak-handed."
+        },
+        {
+          "ref": "2 Samuel 17:14, 23",
+          "note": "His counsel is rejected for Hushai's; seeing this, he saddles his ass, sets his house in order, and hangs himself, and is buried in his father's sepulchre."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mephibosheth_jonathans_son_eth",
+      "name": "Mephibosheth (son of Jonathan)",
+      "role": "manager",
+      "scribeTier": "The Crippled Prince",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jonathan, son of Saul",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Micha"
+        ],
+        "note": "Lamed in both feet at age five when his nurse fled and dropped him upon hearing of Saul and Jonathan's deaths (4:4)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 4:4",
+          "note": "Introduced: lamed in both feet from a fall in infancy while fleeing news from Jezreel."
+        },
+        {
+          "ref": "2 Samuel 9:1-13",
+          "note": "Sought out and shown kindness by David \"for Jonathan's sake\"; restored all Saul's land and given a place at the king's table continually, though he calls himself \"a dead dog.\""
+        },
+        {
+          "ref": "2 Samuel 16:1-4",
+          "note": "His servant Ziba tells David, during Absalom's revolt, that Mephibosheth stayed behind hoping Israel would restore Saul's kingdom to him; David gives Ziba all that pertained to Mephibosheth."
+        },
+        {
+          "ref": "2 Samuel 19:24-30",
+          "note": "On David's return, disputes Ziba's account, saying his servant deceived him since he is lame; David splits the land between them rather than ruling definitively."
+        }
+      ],
+      "ageEvents": [
+        {
+          "age": 5,
+          "event": "Lamed in both feet when his nurse fled with him upon news of Saul and Jonathan's deaths",
+          "ref": "2 Samuel 4:4"
+        }
+      ],
+      "funFacts": [
+        "CRITICAL naming collision: a different Mephibosheth, one of Rizpah's two sons by Saul, is later handed to the Gibeonites and put to death (21:8) — see rizpah_eth."
+      ]
+    },
+    {
+      "id": "ziba_eth",
+      "name": "Ziba",
+      "role": "submanager",
+      "parentManagerId": "mephibosheth_jonathans_son_eth",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "fifteen sons (2 Samuel 9:10, unnamed)"
+        ],
+        "note": "A former servant of Saul's house, with fifteen sons and twenty servants of his own (9:10)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 9:2-12",
+          "note": "Identified by David as a former servant of Saul's house; put in charge of tilling Mephibosheth's restored land."
+        },
+        {
+          "ref": "2 Samuel 16:1-4",
+          "note": "Meets David with asses, bread, raisins, summer fruit, and wine during the flight from Absalom, and accuses Mephibosheth of hoping to reclaim the kingdom; is rewarded with Mephibosheth's land."
+        },
+        {
+          "ref": "2 Samuel 19:24-30",
+          "note": "His account is disputed by Mephibosheth on David's return; the text never resolves whose version is accurate."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "amasa_eth",
+      "name": "Amasa",
+      "role": "manager",
+      "scribeTier": "The Usurped Command",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Ithra an Israelite (17:25)",
+        "mother": "Abigail",
+        "spouses": [],
+        "children": [],
+        "note": "17:25 calls Amasa's mother Abigail \"sister to Zeruiah Joab's mother,\" and \"the daughter of Nahash\" — the text does not itself state she was David's own sister; hedged rather than asserted."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 17:25",
+          "note": "Appointed by Absalom captain of his army in Joab's place during the rebellion."
+        },
+        {
+          "ref": "2 Samuel 19:13",
+          "note": "After the rebellion collapses, David offers Amasa command of his own army in Joab's place, swearing \"Art thou not of my bone, and of my flesh?\""
+        },
+        {
+          "ref": "2 Samuel 20:8-10",
+          "note": "Murdered by Joab at the great stone in Gibeon during the pursuit of Sheba ben Bichri; Joab takes him by the beard to kiss him, then strikes him under the fifth rib with a fallen sword."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This Abigail, Amasa's mother, is a DIFFERENT woman from David's own wife Abigail (3:3) — two distinct Abigails connected to David's household."
+      ]
+    },
+    {
+      "id": "sheba_ben_bichri_eth",
+      "name": "Sheba (son of Bichri)",
+      "role": "manager",
+      "scribeTier": "The Trumpet of Revolt",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Bichri",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "\"A man of Belial,\" a Benjamite (20:1)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 20:1-2",
+          "note": "Blows a trumpet and calls Israel away from David (\"every man to his tents, O Israel\"), a second major revolt right on the heels of Absalom's."
+        },
+        {
+          "ref": "2 Samuel 20:14-22",
+          "note": "Besieged by Joab within Abel of Beth-maachah; beheaded by the city's inhabitants at the wise woman of Abel's urging, his head thrown over the wall to end the siege."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hanun_eth",
+      "name": "Hanun",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Nahash, king of the Ammonites",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Succeeds his father Nahash as king of the children of Ammon."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 10:1-5",
+          "note": "On his princes' suspicion that David's comforters are actually spies, shaves off half the beards of David's servants and cuts their garments off in the middle to their buttocks before sending them away, shaming them badly."
+        },
+        {
+          "ref": "2 Samuel 10:6-19",
+          "note": "Hires Syrian mercenaries from Beth-rehob, Zoba, Maacah, and Ish-tob against David; Joab and Abishai rout them in a two-front battle, and the Syrians later make peace with Israel rather than help Ammon further."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The war his insult ignites is the direct backdrop for the Bathsheba affair — David \"tarried still at Jerusalem\" (11:1) while Joab besieged Rabbah, Ammon's capital."
+      ]
+    },
+    {
+      "id": "uzzah_eth",
+      "name": "Uzzah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Abinadab",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Brother of Ahio (6:3-4)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 6:3-7",
+          "note": "Drives the new cart carrying the ark from Abinadab's house; puts forth his hand to steady it when the oxen shake it at Nachon's threshingfloor; struck dead by God there for his error."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "David names the place Perez-uzzah (\"the breach of Uzzah\") afterward, and is afraid of the LORD that day, carrying the ark instead into Obed-edom's house for three months."
+      ]
+    },
+    {
+      "id": "rizpah_eth",
+      "name": "Rizpah",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Aiah",
+        "mother": null,
+        "spouses": [
+          "Saul (concubine)"
+        ],
+        "children": [
+          "Mephibosheth (Rizpah's son, distinct from Jonathan's son)",
+          "Armoni"
+        ],
+        "note": "No further genealogy given."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 3:7",
+          "note": "Named as Saul's concubine; Ish-bosheth's accusation that Abner went in unto her sparks Abner's break with the house of Saul."
+        },
+        {
+          "ref": "2 Samuel 21:8-11",
+          "note": "Her two sons, Armoni and Mephibosheth, are among the seven descendants of Saul handed to the Gibeonites and hanged; she spreads sackcloth on the rock and guards their bodies from birds by day and beasts by night, from the start of barley harvest until water drops from heaven."
+        },
+        {
+          "ref": "2 Samuel 21:12-14",
+          "note": "Her vigil prompts David to retrieve Saul and Jonathan's bones from Jabesh-gilead and bury them, with the seven, in Kish's sepulchre in Zelah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her son here, also named Mephibosheth, is a DIFFERENT person from Mephibosheth the son of Jonathan (ch. 4, 9, 16, 19) — see mephibosheth_jonathans_son_eth."
+      ]
+    },
+    {
+      "id": "gibeonite_reckoning_eth",
+      "name": "The Gibeonite Reckoning",
+      "role": "law",
+      "scribeTier": "Blood for the Broken Oath",
+      "deliveredBy": "david_eth",
+      "purpose": "A three-year famine is revealed to be judgment for Saul's bloodguilt against the Gibeonites, an ancient sworn oath violated in his zeal for Israel and Judah. David personally inquires of the LORD, personally negotiates terms with the Gibeonites, and personally hands over the men — teaching that an oath sworn in the LORD's name binds even later generations, and that unaddressed bloodguilt has national consequences.",
+      "verses": [
+        {
+          "ref": "2 Samuel 21:1-6",
+          "note": "David inquires of the LORD about the famine and is told it is \"for Saul, and for his bloody house, because he slew the Gibeonites\"; the Gibeonites, given the choice, ask for seven of Saul's sons rather than silver or gold."
+        },
+        {
+          "ref": "2 Samuel 21:7-9",
+          "note": "David spares Mephibosheth (Jonathan's son) for the LORD's oath's sake, but delivers Armoni, Mephibosheth (Rizpah's son), and five sons of Michal's line to the Gibeonites, who hang them before the LORD in the days of barley harvest."
+        },
+        {
+          "ref": "2 Samuel 21:14",
+          "note": "\"After that God was intreated for the land\" — the famine lifts once Saul and Jonathan's bones and the seven bodies are properly buried."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mighty_men_roster_eth",
+      "name": "The Mighty Men",
+      "role": "law",
+      "scribeTier": "The Mighty Men",
+      "deliveredBy": "david_eth",
+      "purpose": "A formal, named honor-roll of David's elite warriors and their individual feats, appended directly after \"the last words of David\" himself (23:1-7) to close out the book's account of his reign — preserving individual valor and loyalty by name rather than advancing plot.",
+      "verses": [
+        {
+          "ref": "2 Samuel 23:8",
+          "note": "The Tachmonite that sat in the seat, chief among the captains — Adino the Eznite — lifts up his spear against eight hundred men at one time."
+        },
+        {
+          "ref": "2 Samuel 23:9-10",
+          "note": "Eleazar the son of Dodo stands alone against the Philistines when the men of Israel are gone away, until his hand cleaves to the sword."
+        },
+        {
+          "ref": "2 Samuel 23:11-12",
+          "note": "Shammah the son of Agee defends a piece of ground full of lentiles alone after the people flee the Philistines."
+        },
+        {
+          "ref": "2 Samuel 23:13-17",
+          "note": "Three of the thirty break through the Philistine host to draw water from the well of Bethlehem for David, who will not drink it and pours it out unto the LORD instead, calling it the blood of men who went in jeopardy of their lives."
+        },
+        {
+          "ref": "2 Samuel 23:37-39",
+          "note": "The roster's closing names include Uriah the Hittite — \"thirty and seven in all.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "benaiah_eth",
+      "name": "Benaiah son of Jehoiada",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": "Jehoiada",
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "\"Of Kabzeel, who had done many acts\" (23:20)."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 23:20-23",
+          "note": "Slays two lionlike men of Moab; goes down into a pit in time of snow and kills a lion there; kills a goodly Egyptian, plucking the spear from the Egyptian's own hand and slaying him with it. More honourable than the thirty, though he attains not to the first three; David sets him over his guard."
+        },
+        {
+          "ref": "2 Samuel 8:18",
+          "note": "Named as over both the Cherethites and the Pelethites among David's officials."
+        },
+        {
+          "ref": "2 Samuel 20:23",
+          "note": "Confirmed again over the Cherethites and Pelethites in the officials list at the close of Sheba's revolt."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "araunah_eth",
+      "name": "Araunah the Jebusite",
+      "role": "named",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "Also spelled \"Ornan\" in a different book — a spelling variant, not a different person."
+      },
+      "verses": [
+        {
+          "ref": "2 Samuel 24:18-24",
+          "note": "Owns the threshingfloor David buys as an altar site; bows himself before the king and offers the floor, his oxen for sacrifice, and the threshing instruments for wood freely, \"as a king\"; David refuses, insisting on paying full price — fifty shekels of silver — rather than offering the LORD \"that which doth cost me nothing.\""
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "threshingfloor_altar_eth",
+      "name": "The Threshingfloor Altar",
+      "role": "law",
+      "scribeTier": "The Threshingfloor Altar",
+      "deliveredBy": "gad_the_prophet_eth",
+      "purpose": "After David's census against Joab's counsel brings a pestilence that kills 70,000, Gad the prophet gives David his choice of judgment; once the destroying angel is stayed at Araunah's threshingfloor, Gad instructs David to build an altar there. Establishes that acceptable sacrifice must cost the giver something (\"neither will I offer burnt offerings... of that which doth cost me nothing,\" 24:24) and marks the ground where a future temple would rise.",
+      "verses": [
+        {
+          "ref": "2 Samuel 24:11-14",
+          "note": "Gad offers David a choice of seven years' famine, three months fleeing his enemies, or three days' pestilence; David chooses to fall into the LORD's hand rather than man's."
+        },
+        {
+          "ref": "2 Samuel 24:15-17",
+          "note": "The LORD sends pestilence, killing 70,000 from Dan to Beer-sheba; when the angel stretches his hand toward Jerusalem, the LORD repents of the evil and stays it at Araunah's threshingfloor; David sees the angel and asks judgment fall on himself and his father's house instead of \"these sheep.\""
+        },
+        {
+          "ref": "2 Samuel 24:18-25",
+          "note": "Gad instructs David to raise an altar there; David buys the threshingfloor and oxen for fifty shekels of silver, builds the altar, offers burnt and peace offerings, and the plague is stayed from Israel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "david_sons_born_at_hebron": {
+      "ref": "2 Samuel 3:2-5",
+      "note": "Amnon (Ahinoam), Chileab (Abigail), Absalom (Maacah), Adonijah (Haggith), Shephatiah (Abital), Ithream (Eglah) — only Amnon and Absalom have individual narrative action within this book itself; the rest are bulk genealogy only."
+    },
+    "david_sons_born_at_jerusalem": {
+      "ref": "2 Samuel 5:14-16",
+      "note": "Shammua, Shobab, Nathan, Solomon, Ibhar, Elishua, Nepheg, Japhia, Elishama, Eliada, Eliphalet — bulk list; Solomon and the different Nathan are the only two with any individual mention elsewhere in this book."
+    },
+    "provisioners_of_davids_camp_at_mahanaim": {
+      "ref": "2 Samuel 17:27-29",
+      "note": "Shobi son of Nahash of Rabbah, Machir son of Ammiel of Lo-debar, and Barzillai the Gileadite bring provisions to David at Mahanaim; only Barzillai has further individual action later in the book."
+    },
+    "officials_of_davids_reign": {
+      "ref": "2 Samuel 8:16-18 and 20:23-26",
+      "note": "Joab (host), Jehoshaphat son of Ahilud (recorder), Zadok and Ahimelech/Abiathar (priests), Seraiah/Sheva (scribe), Benaiah (Cherethites/Pelethites), Adoram (tribute), Ira the Jairite (chief ruler) — an administrative list; only Joab and Benaiah have individual scenes elsewhere in this book."
+    },
+    "thirty_mighty_men_bulk_roster": {
+      "ref": "2 Samuel 23:24-39",
+      "note": "The remaining names in the roster of thirty and the closing names (Asahel, Elhanan, Shammah the Harodite, Elika, Helez, Ira, Abiezer, Mebunnai, Zalmon, Maharai, Heleb, Ittai, the Pirathonite Benaiah, Hiddai, Abi-albon, Azmaveth, Eliahba, Jonathan, Shammah the Hararite, Ahiam, Eliphelet, Eliam the son of Ahithophel, Hezrai, Paarai, Igal, Bani, Zelek, Naharai, Ira an Ithrite, Gareb, and Uriah the Hittite) are bulk-listed here except where an individual (Asahel under Joab, Uriah as his own manager) already has a full entry elsewhere."
+    }
+  }
+}

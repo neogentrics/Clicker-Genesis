@@ -1,0 +1,306 @@
+{
+  "book": "Malachi",
+  "translation": "Geneva",
+  "canonicalOrder": 39,
+  "status": "drafted via multi-agent workflow grounded in the real extracted verse text, adversarially fact-checked and corrected",
+  "notes": "Malachi in the Geneva 1560 translation is structurally and thematically identical to the already-indexed KJV Malachi: 4 chapters, one named human speaker (Malachi himself), and a chain of prophetic disputation-oracles rather than a character-driven narrative. No new persons or minor supporting characters appear in this translation's text -- every other proper name used (Jacob, Esau, Levi, Moses, Eliiah/Elijah) is a cross-reference to a figure whose own story belongs to an earlier book (Genesis; Exodus/Leviticus/Deuteronomy; 1-2 Kings), so none of them was given a character card, managerId, or parentManagerId here, matching the KJV index's own treatment. Ids are suffixed \"_geneva\" throughout specifically to avoid collision with the existing KJV CharacterIndex ids for this same book. Geneva's archaic 1560 English spelling (\"hostes\", \"Iaakob\", \"trueth\", \"seruant\", \"Eliiah\") is preserved verbatim in every quoted verse note, per the guiding principle that translation text is never modernized or paraphrased. Real extraction-artifact flag, not a content difference: the source file Assets/Resources/Verses/Geneva/malachi_39.json has the string \"ORIGINAL APOCRYPHA BOOKS OF THE GENEVA BIBLE 1560\" appended directly onto the end of Malachi 4:6's verse text with no separator -- this is plainly a leftover section-header artifact from the source document's own layout (the Apocrypha section that follows Malachi in the 1560 Geneva Bible's canonical ordering), not actual scripture content, and it has been excluded from the verse 4:6 quote used in this index. No other real content differences from the KJV's version of this book were found after reading the full text -- unlike the Ethiopian Ezra case, Geneva's Malachi does not diverge structurally from the standard Masoretic/KJV text. Naming-collision check performed: \"Malachi\" carries the same \"name vs. title\" ambiguity noted in the KJV index (Hebrew \"my messenger\", echoed in 3:1's \"my messenger\"); Jacob/Esau/Levi/Moses/Eliiah carry no collision risk distinct from their well-known identities elsewhere and are not asserted to be anyone other than those figures, nor is any later New Testament identification (e.g. of the \"messenger\" or \"Eliiah\" with John the Baptist) asserted as part of this book's own text.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Closing Scroll",
+      "managerId": "malachi_geneva",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Love Oracle",
+      "managerId": "jacob_have_i_loved_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Priest's Portion",
+      "managerId": "covenant_of_levi_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Marriage Covenant",
+      "managerId": "treachery_against_wives_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 5,
+      "scribeName": "The Refiner's Fire",
+      "managerId": "messenger_of_the_covenant_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 6,
+      "scribeName": "The Storehouse",
+      "managerId": "rob_god_tithe_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 7,
+      "scribeName": "The Book of Remembrance",
+      "managerId": "book_of_remembrance_day_of_the_lord_geneva",
+      "type": "law"
+    },
+    {
+      "tier": 8,
+      "scribeName": "The Prophet's Promise",
+      "managerId": "promise_of_elijah_geneva",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "malachi_geneva",
+      "name": "Malachi",
+      "role": "manager",
+      "scribeTier": "The Closing Scroll",
+      "parentManagerId": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [],
+        "note": "The Geneva text gives no genealogical information for Malachi at all -- no father's name, no hometown, no tribal line -- exactly as in the KJV rendering of this same superscription. This index asserts no identification of Malachi with any other biblical or traditional figure."
+      },
+      "verses": [
+        {
+          "ref": "Malachi 1:1",
+          "note": "Superscription: 'The burden of the woorde of the Lord to Israel by the ministerie of Malachi.'"
+        },
+        {
+          "ref": "Malachi 4:4-6",
+          "note": "Closing charge to remember 'the lawe of Moses my seruant' and the promise of 'Eliiah the Prophet' before 'the great and fearefull day of the Lord.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His name means 'my messenger' -- the same phrase rendered 'my messenger' in Malachi 3:1, the source of long-running debate over whether 'Malachi' is a personal name or a prophetic title.",
+        "The book contains no vision and no narrated call story; it is built entirely as a chain of question-and-answer disputations between the Lord and the people/priests, phrased throughout as 'yet yee say... wherein...'"
+      ]
+    },
+    {
+      "id": "jacob_have_i_loved_geneva",
+      "name": "Jacob Have I Loved",
+      "role": "law",
+      "scribeTier": "The Love Oracle",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Opens the book by answering Israel's doubt of God's love ('Wherein hast thou loued vs?') by contrasting the Lord's covenant choice of Iaakob (Israel) against Esau, whose mountains and heritage the text says were made 'a wildernes for dragons.' Used to reassure a discouraged post-exilic community of the Lord's continued covenant love toward the nation, not to relitigate Jacob and Esau as individuals.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 1:2-3",
+          "note": "'Was not Esau Iaakobs brother? saith the Lord: yet I loued Iaakob, And I hated Esau, and made his mountaines wast, and his heritage a wildernes for dragons.'"
+        },
+        {
+          "ref": "Malachi 1:4-5",
+          "note": "Edom's proposed rebuilding will be destroyed again; Israel will say 'The Lord will be magnified vpon the border of Israel.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Iaakob and Esau are the patriarchs of Genesis 25-36; here their names stand for their descendant nations, Israel and Edom -- their own individual narratives belong to Genesis, not this book."
+      ]
+    },
+    {
+      "id": "covenant_of_levi_geneva",
+      "name": "The Covenant of Levi",
+      "role": "law",
+      "scribeTier": "The Priest's Portion",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Rebukes the priests for offering 'vncleane bread' and blind, lame, and sick animals upon the altar, and for treating the Lord's table as 'not to be regarded,' then holds up a described covenant with Levi -- 'the lawe of trueth was in his mouth' -- as the standard the current corrupt priesthood has abandoned.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 1:6-8",
+          "note": "'Ye offer vncleane bread vpon mine altar... if yee offer the blinde for sacrifice, it is not euill: and if ye offer the lame and sicke, it is not euill.'"
+        },
+        {
+          "ref": "Malachi 1:10",
+          "note": "'Who is there euen among you, that would shut the doores?... I haue no pleasure in you, sayeth the Lord of hostes.'"
+        },
+        {
+          "ref": "Malachi 2:1-3",
+          "note": "Judgment pronounced on the Priestes if they will not lay the commandement to heart."
+        },
+        {
+          "ref": "Malachi 2:4-6",
+          "note": "Describes the Lord's covenant with Levi as the ideal priestly standard: 'The lawe of trueth was in his mouth, and there was no iniquitie founde in his lippes.'"
+        },
+        {
+          "ref": "Malachi 2:8-9",
+          "note": "'Yee are gone out of the way... yee haue broken the couenant of Leui, sayeth the Lord of hostes.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Levi, ancestor of the priestly tribe, is referenced only as the model covenant partner contrasted with the failing priesthood of Malachi's own day; no individual priest of that day is named -- the rebuke addresses 'O Priestes' collectively."
+      ]
+    },
+    {
+      "id": "treachery_against_wives_geneva",
+      "name": "Treachery Against Wives",
+      "role": "law",
+      "scribeTier": "The Marriage Covenant",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Rebukes the men of Judah for marrying 'the daughter of a strange God' and for treacherously dealing with 'the wife of thy youth,' grounding the charge in shared covenant kinship ('Haue we not all one father?') and stating that the Lord 'hateth putting away.'",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 2:10-11",
+          "note": "'Iudah hath transgressed... and hath maried the daughter of a strange God.'"
+        },
+        {
+          "ref": "Malachi 2:13-14",
+          "note": "The Lord no longer regards their offerings 'because the Lord hath beene witnesse betweene thee and the wife of thy youth... yet is shee thy companion, and the wife of thy couenant.'"
+        },
+        {
+          "ref": "Malachi 2:15-16",
+          "note": "'If thou hatest her, put her away, sayeth the Lord God of Israel... therefore keepe your selues in your spirite, and transgresse not.' Geneva's rendering of these two verses is, like the KJV's, among the most syntactically difficult passages in the book; the translation is given as-is without resolving the underlying interpretive debate."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "messenger_of_the_covenant_geneva",
+      "name": "The Messenger of the Covenant",
+      "role": "law",
+      "scribeTier": "The Refiner's Fire",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Answers the people's weary complaint ('Or where is the God of iudgement?') with the announcement that the Lord will send 'my messenger' to prepare the way, followed by the sudden coming of 'the messenger of the couenant' to His Temple, whose purifying work is likened to 'a purging fire, and like fullers sope,' refining the sonnes of Leui. This entry records only the book's own promise of a coming messenger and purified worship; no later identification of either messenger figure is asserted.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 2:17",
+          "note": "'Yee haue wearied the Lord with your woordes... Or where is the God of iudgement?'"
+        },
+        {
+          "ref": "Malachi 3:1",
+          "note": "'Behold, I will send my messenger, and he shall prepare the way before me: and the Lord whom ye seeke, shall speedely come to his Temple: euen the messenger of the couenant whom ye desire.'"
+        },
+        {
+          "ref": "Malachi 3:2-3",
+          "note": "'Who may abide the day of his comming?... he is like a purging fire, and like fullers sope: and he shall...fine the sonnes of Leui.'"
+        },
+        {
+          "ref": "Malachi 3:4-5",
+          "note": "Offerings of Iudah and Ierusalem will again be acceptable 'as in old time'; the Lord will be 'a swift witnesse' against sorcerers, adulterers, false swearers, and oppressors of hirelings, widows, orphans, and strangers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Malachi 3:1's 'messenger' and chapter 4's 'Eliiah the Prophet' are popularly connected to each other and, in later New Testament usage, to John the Baptist -- but this book's own Geneva text does not make either identification explicit."
+      ]
+    },
+    {
+      "id": "rob_god_tithe_geneva",
+      "name": "Will a Man Spoyle His Gods?",
+      "role": "law",
+      "scribeTier": "The Storehouse",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Charges Israel with spoiling (robbing) God through withheld tithes and offerings ('Will a man spoyle his gods? yet haue ye spoyled me... In tithes, and offerings'), and issues a direct challenge to bring the whole tithe into the storehouse and test whether the Lord will not open 'the windowes of heauen' in blessing.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 3:6-7",
+          "note": "'I am the Lord: I change not... returne vnto me, and I will returne vnto you, saith the Lord of hostes.'"
+        },
+        {
+          "ref": "Malachi 3:8-9",
+          "note": "'Will a man spoyle his gods? yet haue ye spoyled me... In tithes, and offerings. Ye are cursed with a curse.'"
+        },
+        {
+          "ref": "Malachi 3:10",
+          "note": "'Bring ye all the tythes into the storehouse that there may be meate in mine House, and proue me nowe herewith... if I will not open the windowes of heauen vnto you, and powre you out a blessing without measure.'"
+        },
+        {
+          "ref": "Malachi 3:11-12",
+          "note": "Promise to rebuke 'the deuourer' for their sakes; 'all nations shall call you blessed: for ye shall be a pleasant lande.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "book_of_remembrance_day_of_the_lord_geneva",
+      "name": "The Book of Remembrance and the Day of the LORD",
+      "role": "law",
+      "scribeTier": "The Book of Remembrance",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Addresses the complaint that serving God is 'in vaine' while the proud prosper, answered first by 'a booke of remembrance' written before the Lord for those who feared Him, and then by the promise of a coming day that 'shall burne as an ouen' consuming the wicked as stubble, while for those who fear the Lord's Name 'the sunne of righteousnesse' will arise 'with health...vnder his wings.'",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 3:13-15",
+          "note": "The people's complaint: 'It is in vaine to serue God... we count the proude blessed: euen they that worke wickednesse, are set vp.'"
+        },
+        {
+          "ref": "Malachi 3:16",
+          "note": "'Then spake they that feared the Lord, euery one to his neighbour, and the Lord hearkened and heard it, and a booke of remembrance was written before him for them that feared the Lord.'"
+        },
+        {
+          "ref": "Malachi 3:17-18",
+          "note": "Promise that the Lord will spare them 'as a man spareth his owne sonne that serueth him,' and the righteous and wicked will again be discerned apart."
+        },
+        {
+          "ref": "Malachi 4:1",
+          "note": "'The day commeth that shall burne as an ouen, and all the proude, yea, and all that doe wickedly, shall be stubble... and shall leaue them neither roote nor branche.'"
+        },
+        {
+          "ref": "Malachi 4:2-3",
+          "note": "'Vnto you that feare my Name, shall the sunne of righteousnesse arise, and health shall be vnder his wings... and ye shall treade downe the wicked.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "promise_of_elijah_geneva",
+      "name": "The Promise of Elijah",
+      "role": "law",
+      "scribeTier": "The Prophet's Promise",
+      "parentManagerId": null,
+      "deliveredBy": "malachi_geneva",
+      "purpose": "Closes the book -- and, in the Protestant canonical ordering, the Old Testament as a whole -- with a charge to remember 'the lawe of Moses my seruant' and a promise that the Lord will send 'Eliiah the Prophet before the comming of the great and fearefull day of the Lord,' who will 'turne the heart of the fathers to the children, and the heart of the children to their fathers,' lest the Lord 'come and smite the earth with cursing.' Recorded here only as the book's own closing promise, without asserting any later fulfillment claim.",
+      "genealogy": null,
+      "verses": [
+        {
+          "ref": "Malachi 4:4",
+          "note": "'Remember the lawe of Moses my seruant, which I commanded vnto him in Horeb for all Israel with the statutes and iudgements.'"
+        },
+        {
+          "ref": "Malachi 4:5",
+          "note": "'Beholde, I will sende you Eliiah the Prophet before the comming of the great and fearefull day of the Lord.'"
+        },
+        {
+          "ref": "Malachi 4:6",
+          "note": "'And he shall turne the heart of the fathers to the children, and the heart of the children to their fathers, lest I come and smite the earth with cursing.' (The source file appends an unrelated section-header string, 'ORIGINAL APOCRYPHA BOOKS OF THE GENEVA BIBLE 1560,' directly onto this verse with no separator -- a document-layout extraction artifact, not scripture text, and excluded from this quote.)"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'Eliiah' named here is given no further description in this book; the Old Testament's only prophet of that name is Elijah the Tishbite of 1 and 2 Kings, but Malachi's own text does not narrate or re-describe his life here.",
+        "Moses is referenced only by the title 'my seruant' and the law given at Horeb (Sinai); his own narrative belongs to Exodus through Deuteronomy, not this book."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "cross_book_references": {
+      "ref": "Malachi 1:2-3, 2:4-9, 4:4-6",
+      "note": "Iaakob, Esau, Leui (Levi), Moses, and Eliiah are each named only as cross-references to figures whose full narratives are told in earlier books (Genesis; Exodus/Leviticus/Deuteronomy; 1-2 Kings). None is given a character card or used as a managerId/parentManagerId in this book's index, matching the already-completed KJV Malachi index's treatment of the same names."
+    }
+  }
+}

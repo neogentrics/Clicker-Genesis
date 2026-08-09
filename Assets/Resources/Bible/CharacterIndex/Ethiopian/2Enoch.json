@@ -1,0 +1,642 @@
+{
+  "book": "2 Enoch",
+  "translation": "Ethiopian",
+  "canonicalOrder": 27,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "2 Enoch does not exist in the KJV Character Index - it is unique to the Ethiopian Bible's broader canon and was drafted fresh from the real 68-chapter/327-verse text at Assets/Resources/Verses/Ethiopian/2_enoch_27.json. Structure: the book is almost entirely a first-person visionary/testamentary narrative (Enoch's ten-heaven ascent, his audience before God, his return to dictate 366 books, then his final exhortation and translation), so most tiers are person-type (the handful of named figures who actually act), with two law/theme tiers for the book's two sustained teaching blocks (the six-days creation account in chs. 25-30, and the paired blessing/cursing sayings in chs. 42-63) rather than forcing those onto a person. NAMING/IDENTITY NOTES (flagged per the collision rule, not silently resolved): (1) the two unnamed \"men\" who first appear to Enoch in ch.1 and lead him through the heavens ARE later explicitly named by the text itself at 33:7 (\"I give you Samuil and Raguil, who led you up\") - a legitimate text-internal link, not an invented one, so they are indexed as a single paired character rather than two separate late-appearing tiers, since the text never distinguishes their individual actions from each other. (2) There appear to be TWO separate groups of fallen/imprisoned beings that should not be merged: the unnamed \"God's apostates\" bound in darkness on the SECOND heaven (ch.7, tortured, \"took counsel with their own will... turned away with their prince\") and the Grigori proper on the FIFTH heaven (ch.18, silent and withered, \"with their prince Satanail rejected the Lord of light\" - three of whom descended to Mt. Ermon and fathered giants). The text's own wording (\"also fastened on the fifth heaven\" at 7:2) suggests the second-heaven group's prince may be the same Satanail figure named on the fifth heaven, but the text never says the two imprisoned groups are the same beings, so both are kept as distinct genealogyLists entries rather than merged into one. (3) A THIRD, likely separate angelic-fall account appears in ch.29 (an unnamed angel \"from out the order of angels\" who sought a throne above the clouds and was cast out) - flagged as possibly a doctrinal restatement of the same Satanail fall or a genuinely separate throne-room vision; not asserted as identical to either group above. Real content note: Enoch's father is explicitly named in-text at 33:11 as Jared, and his sons Mathusal (Methuselah), Regim, Gaidad, Riman, Uchan, and Chermion are all explicitly named (1:2, 1:11, 57:2) - genealogy fields below are grounded in these direct textual statements, not invented. The primordial personified beings Adoil and Archas (God's own agents of creation, chs.25-26) and the unnamed \"God's apostates\" collective are logged in genealogyLists rather than given full character/manager entries, since they are single-scene cosmic figures/undifferentiated groups, not recurring individuals. Source file has some known verse-numbering artifacts (stray high verse numbers like 62/64/65/69/73/74 mid-chapter, a documented pre-existing extraction quirk noted elsewhere in this project) - verse references below cite chapter and the surrounding normally-numbered verses rather than the anomalous numbers, to avoid propagating a numbering error. CORRECTED (post-review): Enoch's own 33:6-11 verse note previously claimed the Lord gave him \"Samuil and Raguil (named for the first time) and Michael as escort\" back to earth - the actual text (33:7) only names Samuil and Raguil as escort (\"I give you Samuil and Raguil, who led you up, and the books, and go down to earth\"); Michael's role at 33:11 is a separate grant, made Enoch's intercessor for the handwritings of his forefathers Adam/Seth/Enos/Cainan/Mahaleleel/Jared, not part of the earthbound escort. Enoch's note has been split into two entries to reflect this accurately. Also corrected: the Six Days law tier's citation for \"the Lord tells Enoch he has never told even his own angels this secret\" is 2 Enoch 24:3 specifically (not 24:2, which is about Enoch bowing down to the Lord) - the verse range has been split into its two real components.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "The Wise Artificer's Ascent",
+      "managerId": "enoch_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "The Twin Heavenly Guides",
+      "managerId": "twin_guides_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Pravuil's Quick-Writing Reed",
+      "managerId": "pravuil_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Michael's Anointing Oil",
+      "managerId": "michael_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Gabriel's Sudden Wind",
+      "managerId": "gabriel_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Methuselah's Nightlong Vigil",
+      "managerId": "methuselah_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Satanail's Broken Throne",
+      "managerId": "satanail_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Adam of Seven Substances",
+      "managerId": "adam_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Eve, Called Mother",
+      "managerId": "eve_ethiopian_2enoch",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "The Six Days from Adoil's Light",
+      "managerId": "six_days_creation_ethiopian_2enoch",
+      "type": "law"
+    },
+    {
+      "tier": 11,
+      "scribeName": "The Weighing-Scales of Blessing and Curse",
+      "managerId": "blessings_curses_ethiopian_2enoch",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "enoch_ethiopian_2enoch",
+      "name": "Enoch",
+      "role": "manager",
+      "scribeTier": "The Wise Artificer's Ascent",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "jared_ethiopian_2enoch_unindexed",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "methuselah_ethiopian_2enoch",
+          "regim_ethiopian_2enoch",
+          "gaidad_ethiopian_2enoch",
+          "riman_ethiopian_2enoch",
+          "uchan_ethiopian_2enoch",
+          "chermion_ethiopian_2enoch"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 1:1-11",
+          "note": "A 'wise man, a great artificer' whom the Lord loves; at 165 he begets Mathusal (Methuselah); two shining men wake him and summon him to heaven, and he charges his sons to keep his household while he is gone."
+        },
+        {
+          "ref": "2 Enoch 3:1",
+          "note": "Borne up on angels' wings onto the first heaven and shown a great sea."
+        },
+        {
+          "ref": "2 Enoch 21:2-6",
+          "note": "His two guides leave him alone at the edge of the seventh heaven, terrified, until Gabriel is sent for him."
+        },
+        {
+          "ref": "2 Enoch 22:6-10",
+          "note": "Michael strips him of his earthly garments, anoints him with the Lord's ointment, and dresses him in glory; Pravuil is summoned to give him writing materials."
+        },
+        {
+          "ref": "2 Enoch 23:1-3",
+          "note": "Dictates and writes 366 books of all created things over 30 days and nights at Pravuil's side."
+        },
+        {
+          "ref": "2 Enoch 33:7",
+          "note": "The Lord personally commissions him to carry his handwriting to his sons and gives him Samuil and Raguil as escort back down to earth."
+        },
+        {
+          "ref": "2 Enoch 33:11",
+          "note": "The Lord separately gives Enoch Michael as intercessor for the handwritings of his forefathers Adam, Seth, Enos, Cainan, Mahaleleel, and Jared - not part of the earthbound escort."
+        },
+        {
+          "ref": "2 Enoch 38:1-3",
+          "note": "Returns to earth by night; Methuselah, who has kept watch, is filled with awe."
+        },
+        {
+          "ref": "2 Enoch 55:1-4 & 64:1-5",
+          "note": "Announces his coming departure; the elders and 2,000 people gather at Achuzan to be blessed by him."
+        },
+        {
+          "ref": "2 Enoch 67:1-2",
+          "note": "Taken up permanently in a covering darkness; the people find a book titled 'The Invisible God' afterward."
+        },
+        {
+          "ref": "2 Enoch 68:1-3",
+          "note": "Born 6th of Tsivan, lived 365 years, translated for good on the same calendar day/hour he was born."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Begets Methuselah",
+          "age": 165
+        },
+        {
+          "event": "Total years of earthly life at the time of his ascent",
+          "age": 365
+        }
+      ],
+      "funFacts": [
+        "His 365-year lifespan mirrors the days of the solar year that his heavenly tour is largely devoted to explaining.",
+        "He is said to have written exactly 366 books - one more than the days of the year he measured."
+      ]
+    },
+    {
+      "id": "twin_guides_ethiopian_2enoch",
+      "name": "Samuil and Raguil",
+      "role": "manager",
+      "scribeTier": "The Twin Heavenly Guides",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 1:6-11",
+          "note": "Two enormous shining men with fire on their lips wake Enoch and summon him by name; he is never told their names at this point."
+        },
+        {
+          "ref": "2 Enoch 3:1 - 21:1",
+          "note": "They personally carry Enoch through the first six heavens and to the edge of the seventh, narrating each wonder and horror."
+        },
+        {
+          "ref": "2 Enoch 21:2",
+          "note": "Tell Enoch 'thus far is it commanded us to journey with you' and depart, leaving him alone in terror."
+        },
+        {
+          "ref": "2 Enoch 33:7",
+          "note": "The Lord names them for the first and only time: 'I give you Samuil and Raguil, who led you up.'"
+        },
+        {
+          "ref": "2 Enoch 38:1",
+          "note": "The Lord instructs them to escort Enoch back down to earth and wait for him there."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Their names are withheld from the reader for over 30 chapters - the text only identifies them by name well after their guiding work is finished."
+      ]
+    },
+    {
+      "id": "pravuil_ethiopian_2enoch",
+      "name": "Pravuil",
+      "role": "manager",
+      "scribeTier": "Pravuil's Quick-Writing Reed",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 22:10",
+          "note": "Named as the archangel 'whose knowledge was quicker in wisdom than the other archangels'; the Lord orders him to bring Enoch the books and a fast-writing reed."
+        },
+        {
+          "ref": "2 Enoch 23:1-3",
+          "note": "Personally tells Enoch all the workings of heaven, earth, and sea, then has him sit and write for 30 days/nights, producing 366 books."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "He is the keeper of the Lord's own store-houses of books - the archive Enoch draws directly from."
+      ]
+    },
+    {
+      "id": "michael_ethiopian_2enoch",
+      "name": "Michael",
+      "role": "manager",
+      "scribeTier": "Michael's Anointing Oil",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 22:6-9",
+          "note": "The 'archistratege Michael' lifts Enoch before the Lord's face, then strips off his earthly garments and anoints him with glorious, sun-bright ointment at the Lord's command."
+        },
+        {
+          "ref": "2 Enoch 33:11",
+          "note": "The Lord gives Michael to Enoch as 'intercessor' for the handwritings of his fathers Adam, Seth, Enos, Cainan, Mahaleleel, and Jared."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The ointment he anoints Enoch with is described as smelling 'like sweet dew' and shining like a sunray."
+      ]
+    },
+    {
+      "id": "gabriel_ethiopian_2enoch",
+      "name": "Gabriel",
+      "role": "manager",
+      "scribeTier": "Gabriel's Sudden Wind",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 21:4-6",
+          "note": "Sent by the Lord to fetch a terrified, abandoned Enoch; tells him 'have courage,' catches him up 'as a leaf caught up by the wind,' and sets him before the Lord."
+        },
+        {
+          "ref": "2 Enoch 24:1",
+          "note": "The Lord seats Enoch beside himself on his left, next to Gabriel, before revealing the secrets of creation."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "methuselah_ethiopian_2enoch",
+      "name": "Methuselah (Mathusal)",
+      "role": "manager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 1:2",
+          "note": "Born when Enoch was 165 years old."
+        },
+        {
+          "ref": "2 Enoch 1:11",
+          "note": "Summoned first among Enoch's sons to hear of the two men's marvels."
+        },
+        {
+          "ref": "2 Enoch 38:3",
+          "note": "Keeps watch by his father's bed day and night awaiting his return, and is filled with awe when Enoch reappears."
+        },
+        {
+          "ref": "2 Enoch 56:1-2",
+          "note": "Asks his father what he wishes done so his household and people may be blessed before his departure."
+        },
+        {
+          "ref": "2 Enoch 57:1-2",
+          "note": "Gathers his brethren (Regim, Riman, Uchan, Chermion, Gaidad) and the elders of the people at his father's command."
+        },
+        {
+          "ref": "2 Enoch 68:3,6",
+          "note": "Receives Enoch's completed books and, with his brothers, erects the memorial altar at Achuzan where Enoch was taken up."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "regim_ethiopian_2enoch",
+      "name": "Regim",
+      "role": "submanager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": "methuselah_ethiopian_2enoch",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 1:11 & 57:2",
+          "note": "Named among the sons of Enoch summoned to hear the marvels, and again among Methuselah's brethren gathered for the final blessing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "gaidad_ethiopian_2enoch",
+      "name": "Gaidad",
+      "role": "submanager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": "methuselah_ethiopian_2enoch",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 1:11 & 57:2",
+          "note": "Named among the sons of Enoch summoned to hear the marvels, and again among Methuselah's brethren gathered for the final blessing."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "riman_ethiopian_2enoch",
+      "name": "Riman",
+      "role": "submanager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": "methuselah_ethiopian_2enoch",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 57:2",
+          "note": "Named among Methuselah's brethren gathered before Enoch for the final blessing; not mentioned in the earlier ch.1 list."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "uchan_ethiopian_2enoch",
+      "name": "Uchan",
+      "role": "submanager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": "methuselah_ethiopian_2enoch",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 57:2",
+          "note": "Named among Methuselah's brethren gathered before Enoch for the final blessing; not mentioned in the earlier ch.1 list."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "chermion_ethiopian_2enoch",
+      "name": "Chermion",
+      "role": "submanager",
+      "scribeTier": "Methuselah's Nightlong Vigil",
+      "parentManagerId": "methuselah_ethiopian_2enoch",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "enoch_ethiopian_2enoch",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 57:2",
+          "note": "Named among Methuselah's brethren gathered before Enoch for the final blessing; not mentioned in the earlier ch.1 list."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "satanail_ethiopian_2enoch",
+      "name": "Satanail (Sotona)",
+      "role": "manager",
+      "scribeTier": "Satanail's Broken Throne",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 18:3",
+          "note": "Named as prince of the Grigori (Watchers), who with him 'rejected the Lord of light'; three of his Grigori descended to Mt. Ermon and fathered giants with human wives."
+        },
+        {
+          "ref": "2 Enoch 31:3-5",
+          "note": "Called 'the devil,' 'the evil spirit of the lower places,' a fugitive angel whose name became Satanail; understood Adam was made lord of a new world, envied him, and seduced Eve without touching Adam."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text is explicit that his nature/intelligence did not change when he fell - only his standing among the angels did."
+      ]
+    },
+    {
+      "id": "adam_ethiopian_2enoch",
+      "name": "Adam",
+      "role": "manager",
+      "scribeTier": "Adam of Seven Substances",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "eve_ethiopian_2enoch"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 30:10-13",
+          "note": "Formed by the Lord's wisdom from seven substances (flesh from earth, blood from dew, eyes from the sun, bones from stone, intelligence from angelic swiftness and cloud, veins/hair from grass, soul from God's breath) and given seven senses; made ruler of earth, 'a second angel.'"
+        },
+        {
+          "ref": "2 Enoch 30:13",
+          "note": "Named 'Adam' from the four compass directions and given four guiding stars; shown the two ways, light and darkness."
+        },
+        {
+          "ref": "2 Enoch 31:1-3",
+          "note": "Placed in the garden in Eden to keep the Lord's testament and command; permitted to see the angels singing."
+        },
+        {
+          "ref": "2 Enoch 32:3-4",
+          "note": "Spent five and a half hours in paradise before the Lord blessed the seventh day, the Sabbath, on which He rested."
+        },
+        {
+          "ref": "2 Enoch 41:1",
+          "note": "Seen by Enoch among 'all forefathers from all time,' with Eve, mourning humanity's dishonor."
+        }
+      ],
+      "ageEvents": [
+        {
+          "event": "Time spent in Paradise before the Fall",
+          "age": "5.5 hours"
+        }
+      ],
+      "funFacts": [
+        "Uniquely among ancient creation accounts, this text lists his exact bodily 'ingredients' - seven named substances - rather than a single act of forming from dust."
+      ]
+    },
+    {
+      "id": "eve_ethiopian_2enoch",
+      "name": "Eve (Eva)",
+      "role": "manager",
+      "scribeTier": "Eve, Called Mother",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "adam_ethiopian_2enoch"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Enoch 30:16",
+          "note": "Formed from Adam's rib while he slept, so that death would come to him through his wife; named 'mother' (Eva) from Adam's last spoken word."
+        },
+        {
+          "ref": "2 Enoch 31:5",
+          "note": "Seduced by the devil, who entered and deceived her specifically - the text is explicit that he 'did not touch Adam.'"
+        },
+        {
+          "ref": "2 Enoch 41:1",
+          "note": "Seen by Enoch among 'all forefathers from all time,' with Adam, mourning humanity's dishonor."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Her name is explained in-text as coming directly from the last word Adam spoke before her creation."
+      ]
+    },
+    {
+      "id": "six_days_creation_ethiopian_2enoch",
+      "name": "The Six Days from Adoil's Light",
+      "role": "law",
+      "scribeTier": "The Six Days from Adoil's Light",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "enoch_ethiopian_2enoch",
+      "purpose": "The Lord's own first-person account, told to Enoch alone (chs. 24-30) and never before revealed even to the angels, of bringing the visible world out of the invisible: commanding the shining being Adoil to release light and the dark being Archas to release the lower foundations, separating light/darkness, firming the waters and heavens, forming earth and sea, creating the ten angelic orders (and the one rebel cast out of them), planting Paradise, setting the sun/moon/stars, filling sea and air with life, and finally forming Adam from seven substances on the sixth day - given to Enoch to write down and hand to his sons so that all generations would know there is no other God.",
+      "verses": [
+        {
+          "ref": "2 Enoch 24:3",
+          "note": "The Lord tells Enoch he has never told even his own angels this secret."
+        },
+        {
+          "ref": "2 Enoch 25:1",
+          "note": "The Lord commands the visible to come forth from the invisible."
+        },
+        {
+          "ref": "2 Enoch 25:1-6",
+          "note": "Adoil, full of great light, is commanded to 'become undone'; the light that pours out becomes the foundation set above the Lord's throne."
+        },
+        {
+          "ref": "2 Enoch 26:1-4",
+          "note": "Archas, hard and dark, is commanded to become undone in turn, becoming the foundation for all lower things."
+        },
+        {
+          "ref": "2 Enoch 27:1-2 & 28:1-4",
+          "note": "Light and darkness are separated into day and night on 'the first-created' day; the waters are gathered and the dry land, named earth, appears."
+        },
+        {
+          "ref": "2 Enoch 29:1-4",
+          "note": "The ten troops of incorporeal angels are created from rock and fire; one angel's order rebels, seeking a throne above the clouds, and is cast out."
+        },
+        {
+          "ref": "2 Enoch 30:1-16",
+          "note": "Paradise is planted and guarded by flaming angels; the sun, moon, and stars are set in their circles; sea creatures, birds, and land animals are made; finally Adam is formed from seven substances and named."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Adoil and Archas are unique to this account - personified beings of pure light and pure darkness who are each individually commanded to 'become undone' to release creation, rather than creation simply being spoken into existence."
+      ]
+    },
+    {
+      "id": "blessings_curses_ethiopian_2enoch",
+      "name": "The Weighing-Scales of Blessing and Curse",
+      "role": "law",
+      "scribeTier": "The Weighing-Scales of Blessing and Curse",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "deliveredBy": "enoch_ethiopian_2enoch",
+      "purpose": "Enoch's own extended moral instruction to his sons and household (chs. 42-63), delivered as the words the Lord himself spoke to him, warning that every man's work, word, and even unspoken thought is already written down and will be set on 'weighing-scales' at the great judgment - paired blessing/cursing sayings (open lips to bless vs. to curse, help the fallen vs. desire another's ruin, give in patience vs. give while the heart murmurs) meant to prepare his household to be judged fairly, since 'no work is hidden before the Lord.'",
+      "verses": [
+        {
+          "ref": "2 Enoch 44:2-3",
+          "note": "Whoever reviles another's face reviles the Lord's own face; the merciful and the malicious alike will be measured 'as in the market' on judgment day."
+        },
+        {
+          "ref": "2 Enoch 45:1-3",
+          "note": "The Lord desires pure hearts over sacrifices of bread, candles, or flesh - offerings are only ever a test of the heart."
+        },
+        {
+          "ref": "2 Enoch 50:3-7",
+          "note": "Enoch instructs endurance of every wound without vengeance, generosity toward a brother, and protection of widows, orphans, and strangers."
+        },
+        {
+          "ref": "2 Enoch 52:1-15",
+          "note": "A structured sequence of paired sayings - 'Blessed is he who...' answered by 'Cursed is he who...' - covering praise, contempt, mercy, cruelty, peacemaking, and hypocrisy."
+        },
+        {
+          "ref": "2 Enoch 62:1-3 & 63:1-4",
+          "note": "Warns that a gift given while the heart murmurs, or a vow broken before its time, brings no reward, and that pride and false speech will be 'thrown into the fire' at judgment."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references kept out of the character list.",
+    "primordialCreationAgents": {
+      "ref": "2 Enoch 25:1 - 26:4",
+      "note": "Adoil (a being of pure light) and Archas (a being of pure darkness/hardness) are each individually commanded by God to 'become undone' to release the visible creation. Single-scene cosmic agents of creation, not recurring characters, so not given manager entries."
+    },
+    "secondHeavenApostates": {
+      "ref": "2 Enoch 7:1-3",
+      "note": "An unnamed group of dark, weeping 'apostates' imprisoned on the second heaven, 'who obeyed not God's commands... and turned away with their prince, who also (is) fastened on the fifth heaven' - possibly linked to the fifth-heaven Grigori/Satanail but never explicitly equated by the text, so kept as its own unresolved collective rather than merged."
+    },
+    "fifthHeavenGrigori": {
+      "ref": "2 Enoch 18:1-7",
+      "note": "The Grigori proper: countless silent, withered angelic 'soldiers' on the fifth heaven who fell with prince Satanail; three of them descended to Mt. Ermon, broke their vows, took human wives, and fathered giants. A collective, not individually named."
+    },
+    "caston-outAngelOfChapter29": {
+      "ref": "2 Enoch 29:3-4",
+      "note": "An unnamed angel who sought a throne higher than the clouds and was cast out with his order - possibly a doctrinal restatement of Satanail's fall or a separate throne-room vision; deliberately not asserted identical to either group above."
+    },
+    "forefathersSeenByEnoch": {
+      "ref": "2 Enoch 41:1",
+      "note": "Enoch sees 'all forefathers from all time' with Adam and Eve and weeps over humanity's dishonor - a collective vision, not a list of individually named ancestors beyond Adam and Eve, who already have their own entries."
+    }
+  }
+}

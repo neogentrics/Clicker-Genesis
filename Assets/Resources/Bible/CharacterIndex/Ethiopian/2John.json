@@ -1,0 +1,200 @@
+{
+  "book": "2 John",
+  "translation": "Ethiopian",
+  "canonicalOrder": 82,
+  "status": "drafted via lean single-pass workflow grounded in the real extracted verse text",
+  "notes": "This Ethiopian translation's text of 2 John is word-for-word identical in content and structure to the already-completed KJV index (same 13 verses, one chapter, same phrasing throughout - 'the elder,' 'the elect lady and her children,' the old commandment to love one another, the warning against deceivers who deny Christ came in the flesh, and the closing greeting from 'the children of thy elect sister'). No real content or structural differences from KJV were found after reading the actual extracted text - unlike this Ethiopian Bible's 1 Esdras-style Ezra, 2 John shows no canonical divergence here. Structure adapted directly from the KJV index (4 tiers: 2 person + 2 law), all ids re-scoped with an '_ethiopian' suffix per the cross-translation collision rule even though no name actually collides within this book, to keep every translation's character ids globally unique across the project. Same two honest ambiguities preserved as flags rather than resolved: (1) the identity of 'the elect lady' (individual woman vs. figurative address to a local church, with 'thine elect sister' then a sister congregation) is a genuine open question the text itself does not resolve; (2) the letter's traditional attribution to John the Apostle is church tradition inferred from stylistic overlap with the Gospel/1 John, never stated in the text itself, which only ever says 'the elder' - no identity is asserted, per the later/traditional-name rule. The 'many deceivers' of v.7 stay a single collective law-tier entry, not invented individuals, since the text names none and draws no distinction between them. Neither the elect lady's own unnamed children (v.1, 4) nor her sister's unnamed children (v.13) get individual character entries - both are textually undifferentiated household collectives, handled identically per the KJV index's own internal-consistency correction, logged in genealogyLists instead.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Paper and Ink",
+      "managerId": "elder_2john_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Walking in Truth",
+      "managerId": "elect_lady_ethiopian",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "The Old Commandment",
+      "managerId": "old_commandment_2john_ethiopian",
+      "type": "law"
+    },
+    {
+      "tier": 4,
+      "scribeName": "The Closed Door",
+      "managerId": "warning_against_deceivers_2john_ethiopian",
+      "type": "law"
+    }
+  ],
+  "characters": [
+    {
+      "id": "elder_2john_ethiopian",
+      "name": "The Elder",
+      "role": "manager",
+      "scribeTier": "Paper and Ink",
+      "parentManagerId": null,
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 John 1:1",
+          "note": "Identifies himself only as 'the elder,' writing to 'the elect lady and her children,' whom he loves in the truth, as do all who have known the truth."
+        },
+        {
+          "ref": "2 John 1:4",
+          "note": "Rejoices greatly that he found of her children walking in truth, as they received a commandment from the Father."
+        },
+        {
+          "ref": "2 John 1:5",
+          "note": "Beseeches the lady - not writing a new commandment, but that which they had from the beginning - that they love one another."
+        },
+        {
+          "ref": "2 John 1:12",
+          "note": "Has many things to write but would not do it with paper and ink; trusts instead to come and speak face to face, that their joy may be full."
+        },
+        {
+          "ref": "2 John 1:13",
+          "note": "Closes the letter: 'The children of thy elect sister greet thee. Amen.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The phrase 'I would not write with paper and ink' (v.12) is the only place in the letter where writing materials are named - the basis for this tier's motif.",
+        "Never named in the text - traditionally identified with the Apostle John on grounds of shared language/theme with the Gospel and First Epistle of John, but this is church tradition, not a textual assertion."
+      ]
+    },
+    {
+      "id": "elect_lady_ethiopian",
+      "name": "The Elect Lady and Her Children",
+      "role": "manager",
+      "scribeTier": "Walking in Truth",
+      "parentManagerId": null,
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "unnamed children - 2 John 1:1, 4, not individually indexed"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 John 1:1",
+          "note": "Addressed by the elder as 'the elect lady and her children,' loved in the truth by him and by all who have known the truth."
+        },
+        {
+          "ref": "2 John 1:2",
+          "note": "Loved for the truth's sake, which dwelleth in us and shall be with us forever."
+        },
+        {
+          "ref": "2 John 1:3",
+          "note": "Receives the elder's greeting of grace, mercy, and peace from God the Father and the Lord Jesus Christ, the Son of the Father, in truth and love."
+        },
+        {
+          "ref": "2 John 1:4",
+          "note": "The elder reports finding some of her children walking in truth, exactly as commanded by the Father."
+        },
+        {
+          "ref": "2 John 1:5",
+          "note": "Beseeched by the elder to walk in love, keeping the commandment held from the beginning."
+        },
+        {
+          "ref": "2 John 1:8",
+          "note": "The elder joins himself with the household in this warning - to look to themselves, that they lose not what they have wrought, but receive a full reward - a risk and hope shared between him and them."
+        },
+        {
+          "ref": "2 John 1:10-11",
+          "note": "Instructed that if anyone comes not bringing 'this doctrine' of Christ, they are not to be received into the house nor bidden God speed, since doing so makes one a partaker of his evil deeds."
+        },
+        {
+          "ref": "2 John 1:13",
+          "note": "Greeted at the letter's close by 'the children of thy elect sister' - an unnamed sister and her equally unnamed children, mentioned only here and not individually indexed."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Whether 'the elect lady' names a real individual woman and household, or is a figurative address to a local church (with her 'elect sister' then a sister congregation), is a genuine open question the text does not resolve."
+      ]
+    },
+    {
+      "id": "old_commandment_2john_ethiopian",
+      "name": "The Old Commandment",
+      "role": "law",
+      "scribeTier": "The Old Commandment",
+      "parentManagerId": null,
+      "deliveredBy": "elder_2john_ethiopian",
+      "purpose": "Reaffirms mutual love as the church's defining, original commandment - not a new commandment but that which was held from the beginning - framing obedient love for one another as inseparable from walking in truth.",
+      "verses": [
+        {
+          "ref": "2 John 1:5",
+          "note": "The elder beseeches the lady - not writing a new commandment, but the one held from the beginning - that we love one another."
+        },
+        {
+          "ref": "2 John 1:6",
+          "note": "'This is love, that we walk after his commandments. This is the commandment, That, as ye have heard from the beginning, ye should walk in it.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Echoes near-identical wording elsewhere in the Johannine letters' 'old commandment... which ye had from the beginning' - a recurring phrase, not unique to this letter."
+      ]
+    },
+    {
+      "id": "warning_against_deceivers_2john_ethiopian",
+      "name": "The Warning Against Deceivers",
+      "role": "law",
+      "scribeTier": "The Closed Door",
+      "parentManagerId": null,
+      "deliveredBy": "elder_2john_ethiopian",
+      "purpose": "Sets a doctrinal test - confessing that Jesus Christ is come in the flesh - for identifying false teachers ('deceivers,' 'antichrist'), paired with a concrete instruction to withhold house and greeting so the church does not become partaker in spreading that denial.",
+      "verses": [
+        {
+          "ref": "2 John 1:7",
+          "note": "'For many deceivers are entered into the world, who confess not that Jesus Christ is come in the flesh. This is a deceiver and an antichrist.'"
+        },
+        {
+          "ref": "2 John 1:8",
+          "note": "Warns - inclusively, of the elder and the household together - that we lose not those things which we have wrought, but that we receive a full reward."
+        },
+        {
+          "ref": "2 John 1:9",
+          "note": "'Whosoever transgresseth, and abideth not in the doctrine of Christ, hath not God. He that abideth in the doctrine of Christ, he hath both the Father and the Son.'"
+        },
+        {
+          "ref": "2 John 1:10-11",
+          "note": "'If there come any unto you, and bring not this doctrine, receive him not into your house, neither bid him God speed: For he that biddeth him God speed is partaker of his evil deeds.'"
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The 'many deceivers' and 'this is a deceiver' language is deliberately collective in the text - no individual false teacher is named - so this tier is kept as a single warning rather than split into invented individual antagonists."
+      ]
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk or deliberately-unresolved references, kept out of the character list above.",
+    "elect_lady_identity": {
+      "ref": "2 John 1:1",
+      "note": "The address to 'the elect lady' is read two ways: a literal individual woman and her literal children, or a figurative address to a local church and its members - with 'thine elect sister' (v.13) then read as a sister congregation rather than a literal sibling. The text itself does not resolve which reading is correct.",
+      "note2": "Whichever reading is correct, 'the elect sister' and her children (v.13) are kept out of the character roster as their own entry for the same reason the elect lady's own children are: neither collective is individually named or textually distinguished from the household/congregation it belongs to."
+    },
+    "unnamed_household": {
+      "ref": "2 John 1:1, 4, 13",
+      "note": "None of the elect lady's children, her sister, nor her sister's children are individually named anywhere in the text."
+    },
+    "author_identity": {
+      "ref": "2 John 1:1",
+      "note": "The author identifies himself only as 'the elder.' Tradition identifies him with the Apostle John based on stylistic and thematic overlap with the Gospel of John and 1 John, but this is not stated in the text itself and is flagged as tradition, not fact."
+    }
+  }
+}

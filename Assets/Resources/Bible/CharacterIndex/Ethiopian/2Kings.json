@@ -1,0 +1,2162 @@
+{
+  "book": "2 Kings",
+  "translation": "Ethiopian",
+  "canonicalOrder": 12,
+  "status": "drafted via direct reading of the real extracted verse text (E:/Unity/Clicker_Genesis/Assets/Resources/Verses/Ethiopian/2_kings_12.json), cross-checked against the existing KJV 2Kings.json for naming-collision precedent, not copied from it",
+  "notes": "2 Kings in this Ethiopian-translation extraction is, word-for-word, essentially the same King-James-style English text as the standard KJV 2 Kings -- confirmed by direct reading of the full extracted source, chapters 1-25. Unlike some other books in this Ethiopian collection, no structural/canonical content differences from the familiar KJV 2 Kings were found. One real, significant DATA-QUALITY gap was found and is flagged rather than silently patched: chapter 20 in this extracted source file contains only a single truncated sentence (\"In those days was Hezekiah sick unto death. And the\") where the standard text has 21 verses covering Hezekiah's illness/recovery, the sign of the sundial, the Babylonian envoys, and Isaiah's prophecy of exile. This reads as a source-extraction cutoff (the same class of PDF/docx extraction gap already documented elsewhere in this project), not evidence this translation's own 2 Kings genuinely lacks the content -- but per the never-invent rule, none of that missing narrative was used to build any tier or character beat; Hezekiah's tier is built entirely from chapters 18-19 (the Assyrian/Sennacherib crisis), which ARE fully present. This gap should be flagged for re-extraction. 2 Kings is regnal-narrative genre cover-to-cover (accession, a verdict on the king's faithfulness, a signature act or two, \"the rest of his acts... in the book of the chronicles,\" death, succession) -- no role:\"law\" tier was used, matching the same judgment independently reached for the existing KJV version of this book. NAMING COLLISIONS FOUND AND KEPT SEPARATE (never merged): (1) \"Jehoram\"/\"Joram\" names both the king of Israel (Ahab's son, chs 1,3,6-9) and the king of Judah (Jehoshaphat's son, ch 8). (2) \"Ahaziah\" names both the king of Israel (Ahab's son, ch1) and the king of Judah (Jehoram of Judah's son, chs 8-9). (3) \"Jehoahaz\" names both the king of Israel (Jehu's son, 13:1-9) and, decades later, the king of Judah (Josiah's son, 23:31-34). (4) \"Joash\"/\"Jehoash\" names both the king of Judah (Ahaziah's son, chs 11-12) and the king of Israel (Jehoahaz's son, chs 13-14). (5) \"Zachariah\" names both the king of Israel (Jeroboam II's son, 15:8-12) and, separately, Hezekiah's own maternal grandfather (18:2). (6) \"Shallum\" names both the usurper king of Israel (15:10-15) and, separately, Huldah the prophetess's husband (22:14). (7) \"Ben-hadad\" names both the king of Syria whom Hazael murders (chs 6-8) and, a generation later, \"Ben-hadad the son of Hazael\" (13:3,24-25) -- two different men reusing a dynastic throne-name, no \"II\" numbering asserted since the text itself never numbers them. (8) The \"Jehoshaphat\" in \"Jehu the son of Jehoshaphat the son of Nimshi\" (9:2) is explicitly NOT King Jehoshaphat of Judah. (9) \"Jeremiah of Libnah\" (23:31, 24:18, father of queens Hamutal) is explicitly NOT the prophet Jeremiah. (10) The Egyptian king named only \"So\" (17:4) is a separate, distinctly-named figure from the later \"Pharaoh-nechoh\" (ch23) -- both are \"king of Egypt\" but different men. Real genealogy was captured directly wherever the book itself states it -- most Judean kings' mothers' names are given verbatim (Zibiah of Beer-sheba, Jehoaddan, Jecholiah, Jerusha daughter of Zadok, Abi daughter of Zachariah, Hephzi-bah, Meshullemeth, Jedidah, Hamutal daughter of Jeremiah of Libnah, Nehushta, Zebudah) -- a genuinely rich book-native genealogical seam. Zedekiah and Jehoahaz of Judah share the identical stated mother (both \"Hamutal the daughter of Jeremiah of Libnah,\" 23:31 and 24:18), confirming them as full brothers, both sons of Josiah. Given the sheer number of kings this book covers across roughly 300 years and two kingdoms, several minor/brief-formula kings were curated as submanagers of a nearby major figure rather than given their own thin tier, per the project's standing \"promote only if removing them changes the scene\" test -- most notably Shallum/Pekahiah/Pekah, three rapid-succession kings of Israel grouped as submanagers under Menahem's tier as a single \"succession crisis\" narrative unit (their own genealogy fields still state their real, non-Menahem parentage accurately; the grouping is a curatorial/gameplay attachment, not an assertion of blood relation to Menahem). Seraiah and Zephaniah (25:18) are kept as one collective submanager since the text gives them zero differentiated action beyond being executed together, distinct from cases elsewhere in this project where named group members act individually.",
+  "scribeTiers": [
+    {
+      "tier": 1,
+      "scribeName": "Chariot of Fire",
+      "managerId": "elijah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 2,
+      "scribeName": "Double Portion Mantle",
+      "managerId": "elisha_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 3,
+      "scribeName": "Valley of Ditches",
+      "managerId": "jehoram_israel_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 4,
+      "scribeName": "Jordan's Seven Dips",
+      "managerId": "naaman_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 5,
+      "scribeName": "Thick Wet Cloth",
+      "managerId": "hazael_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 6,
+      "scribeName": "Edom's Revolt",
+      "managerId": "jehoram_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 7,
+      "scribeName": "Garden House Flight",
+      "managerId": "ahaziah_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 8,
+      "scribeName": "Furious Driving",
+      "managerId": "jehu_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 9,
+      "scribeName": "Painted Window",
+      "managerId": "jezebel_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 10,
+      "scribeName": "Seed Royal's Ruin",
+      "managerId": "athaliah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 11,
+      "scribeName": "David's Spears and Shields",
+      "managerId": "jehoiada_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 12,
+      "scribeName": "Bored Chest Lid",
+      "managerId": "joash_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 13,
+      "scribeName": "Arrow Through the Window",
+      "managerId": "jehoash_israel_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 14,
+      "scribeName": "Valley of Salt",
+      "managerId": "amaziah_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 15,
+      "scribeName": "Restored Border",
+      "managerId": "jeroboam_ii_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 16,
+      "scribeName": "The Several House",
+      "managerId": "azariah_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 17,
+      "scribeName": "A Thousand Talents",
+      "managerId": "menahem_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 18,
+      "scribeName": "Bonds of Prison",
+      "managerId": "hoshea_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 19,
+      "scribeName": "Damascus Pattern Altar",
+      "managerId": "ahaz_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 20,
+      "scribeName": "Rent Sackcloth",
+      "managerId": "hezekiah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 21,
+      "scribeName": "Blasphemer's Letter",
+      "managerId": "sennacherib_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 22,
+      "scribeName": "Word Against Assyria",
+      "managerId": "isaiah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 23,
+      "scribeName": "Graven Grove Image",
+      "managerId": "manasseh_judah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 24,
+      "scribeName": "Scroll from the Temple Wall",
+      "managerId": "josiah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 25,
+      "scribeName": "Megiddo's Chariot",
+      "managerId": "pharaoh_necho_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 26,
+      "scribeName": "Exacted Silver",
+      "managerId": "jehoiakim_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 27,
+      "scribeName": "Siege Forts of Jerusalem",
+      "managerId": "nebuchadnezzar_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 28,
+      "scribeName": "Lifted from Prison",
+      "managerId": "jehoiachin_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 29,
+      "scribeName": "Blinded Eyes",
+      "managerId": "zedekiah_eth2kgs",
+      "type": "person"
+    },
+    {
+      "tier": 30,
+      "scribeName": "Mizpah's Broken Oath",
+      "managerId": "gedaliah_eth2kgs",
+      "type": "person"
+    }
+  ],
+  "characters": [
+    {
+      "id": "elijah_eth2kgs",
+      "name": "Elijah the Tishbite",
+      "role": "manager",
+      "scribeTier": "Chariot of Fire",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 1:3",
+          "note": "The angel of the LORD sends him to meet Ahaziah's messengers and pronounce the king will die for inquiring of Baal-zebub."
+        },
+        {
+          "ref": "2 Kings 1:10",
+          "note": "Fire from heaven consumes two captains of fifty sent to fetch him."
+        },
+        {
+          "ref": "2 Kings 2:8",
+          "note": "Smites the Jordan with his mantle; the waters part and he and Elisha cross on dry ground."
+        },
+        {
+          "ref": "2 Kings 2:11",
+          "note": "A chariot of fire and horses of fire appear and he goes up by a whirlwind into heaven."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "The text explicitly identifies him to Ahaziah's messengers by description alone -- \"an hairy man, and girt with a girdle of leather about his loins\" -- before his name is even said."
+      ]
+    },
+    {
+      "id": "ahaziah_israel_eth2kgs",
+      "name": "Ahaziah king of Israel",
+      "role": "submanager",
+      "scribeTier": "Chariot of Fire",
+      "parentManagerId": "elijah_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "ahab (unindexed reference, 1 Kings)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 1:2",
+          "note": "Falls through a lattice in his upper chamber in Samaria and is injured."
+        },
+        {
+          "ref": "2 Kings 1:16",
+          "note": "Elijah tells him directly he will not recover, for inquiring of Baal-zebub instead of the God of Israel."
+        },
+        {
+          "ref": "2 Kings 1:17",
+          "note": "Dies according to the word of the LORD; since he had no son, his brother Jehoram reigns in his stead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "elisha_eth2kgs",
+      "name": "Elisha",
+      "role": "manager",
+      "scribeTier": "Double Portion Mantle",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Shaphat",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 2:9",
+          "note": "Asks Elijah for a double portion of his spirit before he is taken away."
+        },
+        {
+          "ref": "2 Kings 4:34",
+          "note": "Stretches himself upon the Shunammite's dead son and revives him."
+        },
+        {
+          "ref": "2 Kings 5:14",
+          "note": "Naaman dips seven times in Jordan at his word and is cleansed."
+        },
+        {
+          "ref": "2 Kings 6:17",
+          "note": "Prays that his servant's eyes be opened to see the mountain full of horses and chariots of fire."
+        },
+        {
+          "ref": "2 Kings 13:20-21",
+          "note": "Dies; a dead man cast into his sepulchre revives on touching his bones."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Mocked as \"bald head\" by children at Bethel (2:23), after which two she-bears maul forty-two of them (2:24) -- one of the book's most disturbing single verses."
+      ]
+    },
+    {
+      "id": "gehazi_eth2kgs",
+      "name": "Gehazi",
+      "role": "submanager",
+      "scribeTier": "Double Portion Mantle",
+      "parentManagerId": "elisha_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 4:12",
+          "note": "Elisha's servant, sent to call the Shunammite woman."
+        },
+        {
+          "ref": "2 Kings 5:20",
+          "note": "Runs after Naaman in secret to take silver and garments Elisha refused."
+        },
+        {
+          "ref": "2 Kings 5:27",
+          "note": "Naaman's leprosy cleaves to him and his descendants forever as judgment for the lie."
+        },
+        {
+          "ref": "2 Kings 8:4",
+          "note": "Later tells king Jehoram of Israel of Elisha's great works, including the Shunammite's son."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "shunammite_woman_eth2kgs",
+      "name": "The Shunammite Woman",
+      "role": "submanager",
+      "scribeTier": "Double Portion Mantle",
+      "parentManagerId": "elisha_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "unnamed husband, 2 Kings 4:9"
+        ],
+        "children": [
+          "unnamed son, 2 Kings 4:17"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 4:10",
+          "note": "Proposes building Elisha a small furnished chamber on the wall so he can turn in whenever he passes."
+        },
+        {
+          "ref": "2 Kings 4:20",
+          "note": "Her son dies on her knees at noon."
+        },
+        {
+          "ref": "2 Kings 4:37",
+          "note": "Falls at Elisha's feet and takes up her revived son."
+        },
+        {
+          "ref": "2 Kings 8:3-6",
+          "note": "Returns from seven years' sojourn in Philistia and the king restores her land and its fruits."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Never given a personal name by the text -- always \"the Shunammite\" or \"a great woman\"; called \"the Shunammite\" as an identifier, not left anonymous by accident."
+      ]
+    },
+    {
+      "id": "jehoram_israel_eth2kgs",
+      "name": "Jehoram (Joram) king of Israel",
+      "role": "manager",
+      "scribeTier": "Valley of Ditches",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "ahab (unindexed reference, 1 Kings)",
+        "mother": "jezebel_eth2kgs",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 3:1-3",
+          "note": "Begins to reign over Israel; puts away the image of Baal his father made but keeps the sins of Jeroboam."
+        },
+        {
+          "ref": "2 Kings 3:9-25",
+          "note": "Marches with Jehoshaphat and the king of Edom against Moab; Elisha fills the valley with water and Israel routs Moab."
+        },
+        {
+          "ref": "2 Kings 6:28-29",
+          "note": "During the Syrian siege of Samaria hears a woman confess she and another boiled and ate her own son."
+        },
+        {
+          "ref": "2 Kings 9:24",
+          "note": "Killed by Jehu's arrow between his arms; his body cast into Naboth's field."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "mesha_moab_eth2kgs",
+      "name": "Mesha king of Moab",
+      "role": "submanager",
+      "scribeTier": "Valley of Ditches",
+      "parentManagerId": "jehoram_israel_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "eldest son, unnamed, 2 Kings 3:27"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 3:4",
+          "note": "A sheepmaster who rendered vast tribute of lambs and rams to Israel."
+        },
+        {
+          "ref": "2 Kings 3:5",
+          "note": "Rebels against Israel after Ahab's death."
+        },
+        {
+          "ref": "2 Kings 3:27",
+          "note": "Offers his own eldest son, who should have reigned in his stead, as a burnt offering on the wall when the battle turns against him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "naaman_eth2kgs",
+      "name": "Naaman",
+      "role": "manager",
+      "scribeTier": "Jordan's Seven Dips",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 5:1",
+          "note": "Captain of the host of Syria, a mighty man in valour, but a leper."
+        },
+        {
+          "ref": "2 Kings 5:11-12",
+          "note": "Wroth at Elisha's instruction to simply wash in Jordan, preferring Damascus's rivers."
+        },
+        {
+          "ref": "2 Kings 5:14",
+          "note": "Dips seven times in Jordan and his flesh is restored like a little child's."
+        },
+        {
+          "ref": "2 Kings 5:17-18",
+          "note": "Asks for two mules' burden of earth and pardon in advance for bowing in the house of Rimmon with his master."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hazael_eth2kgs",
+      "name": "Hazael",
+      "role": "manager",
+      "scribeTier": "Thick Wet Cloth",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "benhadad_syria_ii, 2 Kings 13:3,24 (throne-name only, not indexed as a separate full character)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:9-13",
+          "note": "Sent by Ben-hadad to ask Elisha if he will recover; Elisha weeps and tells him he will become king over Syria and do great evil to Israel."
+        },
+        {
+          "ref": "2 Kings 8:15",
+          "note": "Smothers Ben-hadad with a wet cloth and reigns in his stead."
+        },
+        {
+          "ref": "2 Kings 10:32",
+          "note": "The LORD begins to cut Israel short through him, striking all its coasts."
+        },
+        {
+          "ref": "2 Kings 13:22",
+          "note": "Oppresses Israel all the days of Jehoahaz."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "benhadad_syria_eth2kgs",
+      "name": "Ben-hadad king of Syria",
+      "role": "submanager",
+      "scribeTier": "Thick Wet Cloth",
+      "parentManagerId": "hazael_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "ben-hadad the son of Hazael, 2 Kings 13:3 -- a different, later Ben-hadad, not this king's own son"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 5:5",
+          "note": "Sends Naaman to the king of Israel with a letter and rich gifts to be cured."
+        },
+        {
+          "ref": "2 Kings 6:24",
+          "note": "Gathers his host and besieges Samaria, causing a severe famine."
+        },
+        {
+          "ref": "2 Kings 8:7",
+          "note": "Sick in Damascus; sends Hazael to inquire of the LORD through Elisha whether he will recover."
+        },
+        {
+          "ref": "2 Kings 8:15",
+          "note": "Smothered to death by Hazael."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jehoram_judah_eth2kgs",
+      "name": "Jehoram (Joram) king of Judah",
+      "role": "manager",
+      "scribeTier": "Edom's Revolt",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Jehoshaphat",
+        "mother": null,
+        "spouses": [
+          "athaliah_eth2kgs (implied: \"the daughter of Ahab was his wife,\" 8:18, linked within this book to Athaliah as mother of his son Ahaziah, 11:1)"
+        ],
+        "children": [
+          "ahaziah_judah_eth2kgs",
+          "jehosheba_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:16-18",
+          "note": "Begins to reign; walks in the way of the kings of Israel because the daughter of Ahab was his wife, and does evil in the LORD's sight."
+        },
+        {
+          "ref": "2 Kings 8:19",
+          "note": "The LORD would not destroy Judah for David's sake."
+        },
+        {
+          "ref": "2 Kings 8:20-22",
+          "note": "Edom revolts from under Judah's hand in his days and is not recovered."
+        },
+        {
+          "ref": "2 Kings 8:24",
+          "note": "Sleeps with his fathers; Ahaziah his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "ahaziah_judah_eth2kgs",
+      "name": "Ahaziah king of Judah",
+      "role": "manager",
+      "scribeTier": "Garden House Flight",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "jehoram_judah_eth2kgs",
+        "mother": "athaliah_eth2kgs",
+        "spouses": [],
+        "children": [
+          "joash_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 8:25-27",
+          "note": "Begins to reign at twenty-two; walks in the way of the house of Ahab, being son-in-law to that house."
+        },
+        {
+          "ref": "2 Kings 8:29",
+          "note": "Goes down to Jezreel to see the wounded Jehoram of Israel."
+        },
+        {
+          "ref": "2 Kings 9:27",
+          "note": "Flees Jehu by way of the garden house; wounded at the going up to Gur, dies at Megiddo."
+        },
+        {
+          "ref": "2 Kings 9:28",
+          "note": "Carried to Jerusalem and buried with his fathers in the city of David."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 8:26",
+          "note": "Twenty and two years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jehu_eth2kgs",
+      "name": "Jehu",
+      "role": "manager",
+      "scribeTier": "Furious Driving",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Jehoshaphat (a private man of this name, explicitly NOT King Jehoshaphat of Judah)",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jehoahaz_israel_eth2kgs (as forefather, 13:1)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 9:6",
+          "note": "Anointed king over Israel by a young prophet sent from Elisha, charged to avenge the LORD's servants on the house of Ahab."
+        },
+        {
+          "ref": "2 Kings 9:20",
+          "note": "Identified from a distance by his furious driving."
+        },
+        {
+          "ref": "2 Kings 9:24",
+          "note": "Kills Jehoram of Israel with a full-strength arrow."
+        },
+        {
+          "ref": "2 Kings 10:11",
+          "note": "Slays all that remained of the house of Ahab in Jezreel."
+        },
+        {
+          "ref": "2 Kings 10:28",
+          "note": "Destroys Baal out of Israel by subtilty, though he keeps the golden calves of Jeroboam."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jehonadab_eth2kgs",
+      "name": "Jehonadab son of Rechab",
+      "role": "submanager",
+      "scribeTier": "Furious Driving",
+      "parentManagerId": "jehu_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "Rechab",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 10:15",
+          "note": "Meets Jehu, gives him his hand, and rides with him in his chariot."
+        },
+        {
+          "ref": "2 Kings 10:16",
+          "note": "Invited to come see Jehu's zeal for the LORD."
+        },
+        {
+          "ref": "2 Kings 10:23",
+          "note": "Goes with Jehu into the house of Baal to help clear it of any servant of the LORD before the slaughter of Baal's worshippers."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "zachariah_israel_eth2kgs",
+      "name": "Zachariah king of Israel",
+      "role": "submanager",
+      "scribeTier": "Furious Driving",
+      "parentManagerId": "jehu_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "jeroboam_ii_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:8",
+          "note": "Reigns over Israel in Samaria six months, doing evil as his fathers had done."
+        },
+        {
+          "ref": "2 Kings 15:10",
+          "note": "Shallum the son of Jabesh conspires against him, smites him before the people, and reigns in his stead."
+        },
+        {
+          "ref": "2 Kings 15:12",
+          "note": "His brief reign explicitly fulfills the LORD's word to Jehu that his sons would sit on Israel's throne to the fourth generation."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: a different \"Zachariah\" is named later in this same book as Hezekiah's own maternal grandfather (18:2) -- not this king, kept as a separate person."
+      ]
+    },
+    {
+      "id": "jezebel_eth2kgs",
+      "name": "Jezebel",
+      "role": "manager",
+      "scribeTier": "Painted Window",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "ahab (unindexed reference, 1 Kings, implied by 9:22 \"the whoredoms of thy mother Jezebel\")"
+        ],
+        "children": [
+          "jehoram_israel_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 9:22",
+          "note": "Jehu calls out her whoredoms and witchcrafts as he confronts her son Joram."
+        },
+        {
+          "ref": "2 Kings 9:30",
+          "note": "Paints her face, tires her head, and looks out at a window as Jehu arrives."
+        },
+        {
+          "ref": "2 Kings 9:31",
+          "note": "Taunts Jehu by comparing him to Zimri, \"who slew his master.\""
+        },
+        {
+          "ref": "2 Kings 9:33",
+          "note": "Thrown down at Jehu's command; trodden underfoot."
+        },
+        {
+          "ref": "2 Kings 9:35-37",
+          "note": "Only her skull, feet, and palms are found -- fulfilling Elijah's word that dogs would eat her flesh in the portion of Jezreel."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "athaliah_eth2kgs",
+      "name": "Athaliah",
+      "role": "manager",
+      "scribeTier": "Seed Royal's Ruin",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "ahab (unindexed reference, 1 Kings, implied by \"the daughter of Ahab,\" 8:18)",
+        "mother": null,
+        "spouses": [
+          "jehoram_judah_eth2kgs"
+        ],
+        "children": [
+          "ahaziah_judah_eth2kgs",
+          "jehosheba_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:1",
+          "note": "On seeing her son Ahaziah is dead, arises and destroys all the seed royal."
+        },
+        {
+          "ref": "2 Kings 11:3",
+          "note": "Reigns over the land for six years while the infant Joash is hidden."
+        },
+        {
+          "ref": "2 Kings 11:14",
+          "note": "Rends her clothes and cries \"Treason, Treason\" on seeing Joash crowned."
+        },
+        {
+          "ref": "2 Kings 11:16",
+          "note": "Slain by the way the horses enter the king's house, per Jehoiada's order that she not be slain in the LORD's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jehoiada_eth2kgs",
+      "name": "Jehoiada the priest",
+      "role": "manager",
+      "scribeTier": "David's Spears and Shields",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:4",
+          "note": "In the seventh year, fetches the captains and guard, brings them into the temple, and shows them the hidden king's son."
+        },
+        {
+          "ref": "2 Kings 11:10",
+          "note": "Arms the captains with David's own spears and shields kept in the temple."
+        },
+        {
+          "ref": "2 Kings 11:12",
+          "note": "Brings forth the king's son, crowns and anoints him."
+        },
+        {
+          "ref": "2 Kings 11:17",
+          "note": "Makes a covenant between the LORD, the king, and the people."
+        },
+        {
+          "ref": "2 Kings 12:2",
+          "note": "Instructs Jehoash all the days that Jehoash does right in the LORD's sight."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "jehosheba_eth2kgs",
+      "name": "Jehosheba",
+      "role": "submanager",
+      "scribeTier": "Bored Chest Lid",
+      "parentManagerId": "joash_judah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "jehoram_judah_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:2",
+          "note": "Daughter of king Joram, sister of Ahaziah; steals the infant Joash from among the king's sons being slain and hides him with his nurse."
+        },
+        {
+          "ref": "2 Kings 11:3",
+          "note": "Keeps him hidden in the house of the LORD six years."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "joash_judah_eth2kgs",
+      "name": "Jehoash (Joash) king of Judah",
+      "role": "manager",
+      "scribeTier": "Bored Chest Lid",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "ahaziah_judah_eth2kgs",
+        "mother": "Zibiah of Beer-sheba",
+        "spouses": [],
+        "children": [
+          "amaziah_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 11:21",
+          "note": "Seven years old when he began to reign."
+        },
+        {
+          "ref": "2 Kings 12:2",
+          "note": "Does right in the LORD's sight all the days Jehoiada instructed him."
+        },
+        {
+          "ref": "2 Kings 12:9",
+          "note": "Jehoiada bores a hole in the lid of a chest set beside the altar to collect money for repairing the temple."
+        },
+        {
+          "ref": "2 Kings 12:18",
+          "note": "Strips the temple and his own treasures to buy off Hazael from Jerusalem."
+        },
+        {
+          "ref": "2 Kings 12:20-21",
+          "note": "His own servants conspire and slay him in the house of Millo."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 11:21",
+          "note": "Seven years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jehoahaz_israel_eth2kgs",
+      "name": "Jehoahaz king of Israel",
+      "role": "submanager",
+      "scribeTier": "Thick Wet Cloth",
+      "parentManagerId": "hazael_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "jehu_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jehoash_israel_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 13:1-2",
+          "note": "Reigns seventeen years over Israel in Samaria, doing evil, following the sins of Jeroboam."
+        },
+        {
+          "ref": "2 Kings 13:4",
+          "note": "Besought the LORD, who hearkened because of Israel's oppression by Syria."
+        },
+        {
+          "ref": "2 Kings 13:7",
+          "note": "Left with only fifty horsemen, ten chariots, and ten thousand footmen after Syria's destruction of his forces."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: a completely different Jehoahaz, son of Josiah, appears far later in this same book (23:31-34) as a king of Judah -- unrelated, roughly eighty years apart."
+      ]
+    },
+    {
+      "id": "jehoash_israel_eth2kgs",
+      "name": "Jehoash (Joash) king of Israel",
+      "role": "manager",
+      "scribeTier": "Arrow Through the Window",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "jehoahaz_israel_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "jeroboam_ii_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 13:14",
+          "note": "Comes to the dying Elisha, weeping over his face and calling him \"the chariot of Israel, and the horsemen thereof.\""
+        },
+        {
+          "ref": "2 Kings 13:17-19",
+          "note": "Shoots an arrow of the LORD's deliverance at Elisha's direction, then strikes the ground only three times, provoking Elisha's anger that he did not smite five or six times."
+        },
+        {
+          "ref": "2 Kings 13:25",
+          "note": "Recovers Israel's cities from Ben-hadad son of Hazael three times, as Elisha's dying act foretold."
+        },
+        {
+          "ref": "2 Kings 14:13-14",
+          "note": "Defeats Amaziah of Judah at Beth-shemesh, breaks down Jerusalem's wall, and takes the temple's gold and silver."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: shares the name \"Joash\"/\"Jehoash\" with the unrelated contemporary king of Judah (chs 11-12) -- two different men, same throne-name, different kingdoms."
+      ]
+    },
+    {
+      "id": "amaziah_judah_eth2kgs",
+      "name": "Amaziah king of Judah",
+      "role": "manager",
+      "scribeTier": "Valley of Salt",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "joash_judah_eth2kgs",
+        "mother": "Jehoaddan of Jerusalem",
+        "spouses": [],
+        "children": [
+          "azariah_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 14:5-6",
+          "note": "Slays his father's murderers but spares their children, per the law of Moses that children not be put to death for their fathers' sin."
+        },
+        {
+          "ref": "2 Kings 14:7",
+          "note": "Slays ten thousand of Edom in the valley of salt and takes Selah, renaming it Joktheel."
+        },
+        {
+          "ref": "2 Kings 14:9-10",
+          "note": "Warned by Jehoash of Israel with the parable of the thistle and the cedar not to provoke war, but will not hear."
+        },
+        {
+          "ref": "2 Kings 14:19-20",
+          "note": "A conspiracy forces him to flee to Lachish, where he is slain and brought back to Jerusalem for burial."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 14:2",
+          "note": "Twenty and five years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "jeroboam_ii_eth2kgs",
+      "name": "Jeroboam (son of Joash) king of Israel",
+      "role": "manager",
+      "scribeTier": "Restored Border",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "jehoash_israel_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "zachariah_israel_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 14:23",
+          "note": "Begins a forty-one-year reign in Samaria."
+        },
+        {
+          "ref": "2 Kings 14:25",
+          "note": "Restores Israel's coast from Hamath to the sea of the plain, according to the word of the LORD spoken by Jonah the son of Amittai."
+        },
+        {
+          "ref": "2 Kings 14:27",
+          "note": "The LORD saves Israel by his hand rather than blotting out its name."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: this Jeroboam is not the same man as Jeroboam the son of Nebat, the first king of the northern kingdom, whose sins are invoked as a recurring formula across nearly every king of Israel in this book, including this one's own father."
+      ]
+    },
+    {
+      "id": "azariah_judah_eth2kgs",
+      "name": "Azariah king of Judah",
+      "role": "manager",
+      "scribeTier": "The Several House",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "amaziah_judah_eth2kgs",
+        "mother": "Jecholiah of Jerusalem",
+        "spouses": [],
+        "children": [
+          "jotham_regent_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:2-3",
+          "note": "Reigns fifty-two years in Jerusalem, doing right as his father Amaziah had done."
+        },
+        {
+          "ref": "2 Kings 15:5",
+          "note": "The LORD smites him with leprosy for life; he dwells in a several (separate) house while Jotham his son judges the people."
+        },
+        {
+          "ref": "2 Kings 15:7",
+          "note": "Sleeps with his fathers; Jotham his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 15:2",
+          "note": "Sixteen years old when he began to reign."
+        }
+      ],
+      "funFacts": [
+        "This book calls him \"Azariah\" throughout; he is known elsewhere in scripture by the name Uzziah, but this text itself never uses that spelling, so \"Azariah\" is kept as the primary form here."
+      ]
+    },
+    {
+      "id": "jotham_regent_eth2kgs",
+      "name": "Jotham (as regent, then king)",
+      "role": "submanager",
+      "scribeTier": "The Several House",
+      "parentManagerId": "azariah_judah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "azariah_judah_eth2kgs",
+        "mother": "Jerusha the daughter of Zadok",
+        "spouses": [],
+        "children": [
+          "ahaz_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:5",
+          "note": "Judges the people of the land while his leprous father Azariah dwells apart."
+        },
+        {
+          "ref": "2 Kings 15:34-35",
+          "note": "Later reigns in his own right sixteen years, doing right in the LORD's sight; builds the higher gate of the temple."
+        },
+        {
+          "ref": "2 Kings 15:38",
+          "note": "Sleeps with his fathers; Ahaz his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 15:33",
+          "note": "Twenty and five years old when he began to reign in his own right."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "menahem_eth2kgs",
+      "name": "Menahem king of Israel",
+      "role": "manager",
+      "scribeTier": "A Thousand Talents",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Gadi",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "pekahiah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:14",
+          "note": "Comes up from Tirzah to Samaria, smites Shallum, and reigns in his stead."
+        },
+        {
+          "ref": "2 Kings 15:16",
+          "note": "Smites Tiphsah and rips up all the women with child there for not opening to him."
+        },
+        {
+          "ref": "2 Kings 15:19-20",
+          "note": "Pays Pul king of Assyria a thousand talents of silver, exacted from Israel's wealthy men, to confirm his own hold on the kingdom."
+        },
+        {
+          "ref": "2 Kings 15:22",
+          "note": "Sleeps with his fathers; Pekahiah his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "shallum_israel_eth2kgs",
+      "name": "Shallum son of Jabesh",
+      "role": "submanager",
+      "scribeTier": "A Thousand Talents",
+      "parentManagerId": "menahem_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Jabesh",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:10",
+          "note": "Conspires against Zachariah, smites him before the people, and reigns in his stead."
+        },
+        {
+          "ref": "2 Kings 15:13",
+          "note": "Reigns a full month in Samaria in the thirty-ninth year of Uzziah/Azariah."
+        },
+        {
+          "ref": "2 Kings 15:14",
+          "note": "Smitten and slain in turn by Menahem."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: a different Shallum is named later in this book as Huldah the prophetess's husband (22:14) -- unrelated person, same name."
+      ]
+    },
+    {
+      "id": "pekahiah_eth2kgs",
+      "name": "Pekahiah king of Israel",
+      "role": "submanager",
+      "scribeTier": "A Thousand Talents",
+      "parentManagerId": "menahem_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "menahem_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:23",
+          "note": "Reigns two years over Israel in Samaria, doing evil as his fathers had done."
+        },
+        {
+          "ref": "2 Kings 15:25",
+          "note": "Slain in the palace by his own captain Pekah, with fifty Gileadites, and Argob and Arieh."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "pekah_eth2kgs",
+      "name": "Pekah son of Remaliah",
+      "role": "submanager",
+      "scribeTier": "A Thousand Talents",
+      "parentManagerId": "menahem_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Remaliah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 15:25",
+          "note": "A captain of Pekahiah who conspires against and kills him, reigning in his room."
+        },
+        {
+          "ref": "2 Kings 15:29",
+          "note": "In his days Tiglath-pileser of Assyria takes Gilead, Galilee, and all Naphtali captive."
+        },
+        {
+          "ref": "2 Kings 15:30",
+          "note": "Hoshea son of Elah conspires against him, smites and slays him, and reigns in his stead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Attached here as a submanager of Menahem's tier as part of a single curated \"succession crisis\" unit (Shallum-Pekahiah-Pekah); his real genealogy above correctly shows no blood relation to Menahem, unlike Pekahiah, who is Menahem's actual son."
+      ]
+    },
+    {
+      "id": "hoshea_eth2kgs",
+      "name": "Hoshea king of Israel",
+      "role": "manager",
+      "scribeTier": "Bonds of Prison",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Elah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 17:1-2",
+          "note": "Begins a nine-year reign, doing evil but not as the kings of Israel before him."
+        },
+        {
+          "ref": "2 Kings 17:4",
+          "note": "Found in conspiracy with So king of Egypt; Shalmaneser shuts him up and binds him in prison."
+        },
+        {
+          "ref": "2 Kings 17:6",
+          "note": "In his ninth year, Assyria takes Samaria and carries Israel away captive to Halah, Habor, and the cities of the Medes -- the end of the northern kingdom."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "\"So king of Egypt\" (17:4) is a distinctly named figure, separate from Pharaoh-nechoh who appears far later in this book (ch23) -- not to be conflated just because both are called king of Egypt."
+      ]
+    },
+    {
+      "id": "ahaz_judah_eth2kgs",
+      "name": "Ahaz king of Judah",
+      "role": "manager",
+      "scribeTier": "Damascus Pattern Altar",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "jotham_regent_eth2kgs",
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "hezekiah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 16:3",
+          "note": "Makes his son pass through the fire, after the abominations of the heathen."
+        },
+        {
+          "ref": "2 Kings 16:7-8",
+          "note": "Sends silver and gold from the temple to Tiglath-pileser of Assyria, calling himself his servant, to be saved from Syria and Israel."
+        },
+        {
+          "ref": "2 Kings 16:10",
+          "note": "Sees an altar at Damascus and sends its pattern to Urijah the priest to be built in Jerusalem."
+        },
+        {
+          "ref": "2 Kings 16:17-18",
+          "note": "Cuts off the bases' borders, removes the laver, and alters temple fittings for the king of Assyria's sake."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 16:2",
+          "note": "Twenty years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "urijah_priest_eth2kgs",
+      "name": "Urijah the priest",
+      "role": "submanager",
+      "scribeTier": "Damascus Pattern Altar",
+      "parentManagerId": "ahaz_judah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 16:10-11",
+          "note": "Builds the Damascus-pattern altar exactly as king Ahaz commanded, having it ready before the king's return."
+        },
+        {
+          "ref": "2 Kings 16:15-16",
+          "note": "Carries out Ahaz's full instructions for offerings on the new altar."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hezekiah_eth2kgs",
+      "name": "Hezekiah king of Judah",
+      "role": "manager",
+      "scribeTier": "Rent Sackcloth",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "ahaz_judah_eth2kgs",
+        "mother": "Abi the daughter of Zachariah",
+        "spouses": [],
+        "children": [
+          "manasseh_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:4",
+          "note": "Removes the high places, breaks the images, cuts down the groves, and breaks in pieces the brasen serpent Moses had made, calling it Nehushtan."
+        },
+        {
+          "ref": "2 Kings 18:7",
+          "note": "Rebels against the king of Assyria and does not serve him."
+        },
+        {
+          "ref": "2 Kings 19:1",
+          "note": "Rends his clothes, covers himself with sackcloth, and goes into the house of the LORD on hearing Rab-shakeh's words."
+        },
+        {
+          "ref": "2 Kings 19:14-15",
+          "note": "Spreads Sennacherib's threatening letter before the LORD in the temple and prays for deliverance."
+        },
+        {
+          "ref": "2 Kings 19:35",
+          "note": "The angel of the LORD smites 185,000 in the Assyrian camp overnight, delivering Jerusalem."
+        },
+        {
+          "ref": "2 Kings 20:1",
+          "note": "\"In those days was Hezekiah sick unto death. And the\" -- this translation's extracted source text is truncated mid-sentence here; chapter 20's full content (illness/recovery, the sundial sign, the Babylonian envoys, Isaiah's prophecy of exile) is not present in this file and is flagged as a data-extraction gap, not omitted or invented content."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 18:2",
+          "note": "Twenty and five years old when he began to reign."
+        }
+      ],
+      "funFacts": [
+        "\"None like him among all the kings of Judah\" for trust in the LORD (18:5) -- one of the strongest single-verse commendations given any king in this book."
+      ]
+    },
+    {
+      "id": "sennacherib_eth2kgs",
+      "name": "Sennacherib king of Assyria",
+      "role": "manager",
+      "scribeTier": "Blasphemer's Letter",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Adrammelech (2 Kings 19:37)",
+          "Sharezer (2 Kings 19:37)",
+          "Esar-haddon (2 Kings 19:37)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:13",
+          "note": "Comes up against all the fenced cities of Judah in Hezekiah's fourteenth year and takes them."
+        },
+        {
+          "ref": "2 Kings 18:14",
+          "note": "Accepts Hezekiah's submission and a heavy tribute of silver and gold."
+        },
+        {
+          "ref": "2 Kings 19:14",
+          "note": "Sends a letter to Hezekiah reproaching the living God, which Hezekiah spreads before the LORD."
+        },
+        {
+          "ref": "2 Kings 19:37",
+          "note": "While worshipping in the house of Nisroch his god, smitten with the sword by his own sons Adrammelech and Sharezer, who flee to Armenia; Esar-haddon his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "rabshakeh_eth2kgs",
+      "name": "Rab-shakeh",
+      "role": "submanager",
+      "scribeTier": "Blasphemer's Letter",
+      "parentManagerId": "sennacherib_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:19",
+          "note": "Sent with Tartan and Rabsaris to demand Hezekiah's surrender, questioning where his confidence lies."
+        },
+        {
+          "ref": "2 Kings 18:28-29",
+          "note": "Cries in the Jews' language before the people on the wall, telling them not to let Hezekiah deceive them."
+        },
+        {
+          "ref": "2 Kings 19:8",
+          "note": "Returns and finds the king of Assyria warring against Libnah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "hezekiah_officials_eth2kgs",
+      "name": "Eliakim, Shebna, and Joah",
+      "role": "submanager",
+      "scribeTier": "Rent Sackcloth",
+      "parentManagerId": "hezekiah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 18:18",
+          "note": "Come out to Rab-shakeh: Eliakim son of Hilkiah, over the household; Shebna the scribe; and Joah son of Asaph, the recorder."
+        },
+        {
+          "ref": "2 Kings 18:26",
+          "note": "Ask Rab-shakeh to speak in Syrian rather than the Jews' language, so the people on the wall will not understand."
+        },
+        {
+          "ref": "2 Kings 19:2",
+          "note": "Sent by Hezekiah, with their clothes rent, to Isaiah the prophet."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as a single collective entry per the project's rule for named individuals the text never differentiates by separate action -- they always speak and act together as one delegation."
+      ]
+    },
+    {
+      "id": "isaiah_eth2kgs",
+      "name": "Isaiah the prophet",
+      "role": "manager",
+      "scribeTier": "Word Against Assyria",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Amoz",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 19:2",
+          "note": "Hezekiah's officials, covered with sackcloth, are sent to him."
+        },
+        {
+          "ref": "2 Kings 19:6-7",
+          "note": "Tells them not to be afraid of Sennacherib's servants' words; the LORD will send a blast and cause him to fall by the sword in his own land."
+        },
+        {
+          "ref": "2 Kings 19:20",
+          "note": "Sends word to Hezekiah that the LORD has heard his prayer against Sennacherib."
+        },
+        {
+          "ref": "2 Kings 19:34",
+          "note": "Delivers the LORD's promise to defend Jerusalem for His own sake and for David's sake."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "manasseh_judah_eth2kgs",
+      "name": "Manasseh king of Judah",
+      "role": "manager",
+      "scribeTier": "Graven Grove Image",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "hezekiah_eth2kgs",
+        "mother": "Hephzi-bah",
+        "spouses": [],
+        "children": [
+          "amon_judah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 21:3",
+          "note": "Rebuilds the high places Hezekiah destroyed, rears altars for Baal, and worships all the host of heaven."
+        },
+        {
+          "ref": "2 Kings 21:6",
+          "note": "Makes his son pass through the fire, observes times, uses enchantments, deals with familiar spirits and wizards."
+        },
+        {
+          "ref": "2 Kings 21:7",
+          "note": "Sets a graven image of the grove he made in the very house where the LORD said He would put His name forever."
+        },
+        {
+          "ref": "2 Kings 21:16",
+          "note": "Sheds innocent blood very much, filling Jerusalem from one end to another."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 21:1",
+          "note": "Twelve years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "amon_judah_eth2kgs",
+      "name": "Amon king of Judah",
+      "role": "submanager",
+      "scribeTier": "Graven Grove Image",
+      "parentManagerId": "manasseh_judah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": "manasseh_judah_eth2kgs",
+        "mother": "Meshullemeth the daughter of Haruz of Jotbah",
+        "spouses": [],
+        "children": [
+          "josiah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 21:20-21",
+          "note": "Does evil as his father Manasseh did, walking in all his ways and serving the same idols."
+        },
+        {
+          "ref": "2 Kings 21:23",
+          "note": "His own servants conspire against him and slay him in his own house."
+        },
+        {
+          "ref": "2 Kings 21:24",
+          "note": "The people of the land slay the conspirators and make his son Josiah king."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 21:19",
+          "note": "Twenty and two years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "josiah_eth2kgs",
+      "name": "Josiah king of Judah",
+      "role": "manager",
+      "scribeTier": "Scroll from the Temple Wall",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "amon_judah_eth2kgs",
+        "mother": "Jedidah the daughter of Adaiah of Boscath",
+        "spouses": [],
+        "children": [
+          "jehoahaz_judah_eth2kgs",
+          "jehoiakim_eth2kgs",
+          "zedekiah_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:3-7",
+          "note": "In his eighteenth year sends Shaphan the scribe to have the temple's collected silver paid out to repair the house of the LORD."
+        },
+        {
+          "ref": "2 Kings 22:11",
+          "note": "Rends his clothes on hearing the rediscovered book of the law read to him."
+        },
+        {
+          "ref": "2 Kings 23:3",
+          "note": "Stands by a pillar and makes a covenant before the LORD to keep His commandments with all his heart and soul; all the people stand to the covenant."
+        },
+        {
+          "ref": "2 Kings 23:21-23",
+          "note": "Commands the greatest passover kept since the days of the judges."
+        },
+        {
+          "ref": "2 Kings 23:29-30",
+          "note": "Goes against Pharaoh-nechoh at Megiddo and is slain; his servants carry him dead to Jerusalem."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 22:1",
+          "note": "Eight years old when he began to reign."
+        }
+      ],
+      "funFacts": [
+        "\"Like unto him was there no king before him... neither after him arose there any like him\" (23:25) -- the single strongest personal commendation of any king in the whole book."
+      ]
+    },
+    {
+      "id": "hilkiah_eth2kgs",
+      "name": "Hilkiah the high priest",
+      "role": "submanager",
+      "scribeTier": "Scroll from the Temple Wall",
+      "parentManagerId": "josiah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:8",
+          "note": "Tells Shaphan the scribe he has found the book of the law in the house of the LORD, and gives it to him."
+        },
+        {
+          "ref": "2 Kings 22:14",
+          "note": "Goes with Ahikam, Achbor, Shaphan, and Asahiah to consult Huldah the prophetess."
+        },
+        {
+          "ref": "2 Kings 23:4",
+          "note": "Commanded by Josiah to bring out of the temple all the vessels made for Baal and the grove."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "shaphan_scribe_eth2kgs",
+      "name": "Shaphan the scribe",
+      "role": "submanager",
+      "scribeTier": "Scroll from the Temple Wall",
+      "parentManagerId": "josiah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": [
+          "Ahikam (2 Kings 22:12, 25:22)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:9",
+          "note": "Reports to the king that the money has been delivered to the workmen."
+        },
+        {
+          "ref": "2 Kings 22:10",
+          "note": "Reads the newly found book aloud before the king."
+        },
+        {
+          "ref": "2 Kings 22:12",
+          "note": "Sent with Hilkiah, Ahikam, Achbor, and Asahiah to inquire of the LORD concerning the book's words."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His son Ahikam later fathers Gedaliah, the governor appointed over Judah's remnant after Jerusalem's fall (25:22) -- a real, book-internal three-generation link."
+      ]
+    },
+    {
+      "id": "huldah_eth2kgs",
+      "name": "Huldah the prophetess",
+      "role": "submanager",
+      "scribeTier": "Scroll from the Temple Wall",
+      "parentManagerId": "josiah_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [
+          "shallum_husband_of_huldah (2 Kings 22:14, an unindexed reference distinct from Shallum son of Jabesh)"
+        ],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 22:14",
+          "note": "Dwells in Jerusalem in the college; the priest's delegation comes to consult her."
+        },
+        {
+          "ref": "2 Kings 22:16-17",
+          "note": "Pronounces the LORD's coming evil upon Jerusalem for its idolatry."
+        },
+        {
+          "ref": "2 Kings 22:19-20",
+          "note": "Because Josiah's heart was tender and he humbled himself, tells him he will be gathered to his grave in peace before the evil comes."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Naming collision: her husband Shallum (22:14) is a different man from Shallum son of Jabesh, the usurper king of Israel named earlier in this same book (15:10)."
+      ]
+    },
+    {
+      "id": "pharaoh_necho_eth2kgs",
+      "name": "Pharaoh-nechoh king of Egypt",
+      "role": "manager",
+      "scribeTier": "Megiddo's Chariot",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 23:29",
+          "note": "Marches against the king of Assyria toward the Euphrates; Josiah goes against him and is slain at Megiddo."
+        },
+        {
+          "ref": "2 Kings 23:33",
+          "note": "Puts Jehoahaz in bands at Riblah and taxes the land a hundred talents of silver and a talent of gold."
+        },
+        {
+          "ref": "2 Kings 23:34",
+          "note": "Makes Eliakim king in Josiah's place, renaming him Jehoiakim, and takes Jehoahaz to Egypt, where he dies."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Distinctly named from the earlier, separate Egyptian king called only \"So\" in 17:4 -- both \"king of Egypt,\" different men."
+      ]
+    },
+    {
+      "id": "jehoahaz_judah_eth2kgs",
+      "name": "Jehoahaz king of Judah",
+      "role": "submanager",
+      "scribeTier": "Scroll from the Temple Wall",
+      "parentManagerId": "pharaoh_necho_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "josiah_eth2kgs",
+        "mother": "Hamutal the daughter of Jeremiah of Libnah",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 23:31",
+          "note": "Reigns three months in Jerusalem, doing evil as his fathers had done."
+        },
+        {
+          "ref": "2 Kings 23:33-34",
+          "note": "Put in bands by Pharaoh-nechoh at Riblah and taken captive to Egypt, where he dies."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 23:31",
+          "note": "Twenty and three years old when he began to reign."
+        }
+      ],
+      "funFacts": [
+        "Naming collision: an unrelated, much earlier Jehoahaz (13:1-9) is a king of Israel, Jehu's own son -- roughly eighty years apart, no relation."
+      ]
+    },
+    {
+      "id": "jehoiakim_eth2kgs",
+      "name": "Jehoiakim king of Judah",
+      "role": "manager",
+      "scribeTier": "Exacted Silver",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "josiah_eth2kgs",
+        "mother": "Zebudah the daughter of Pedaiah of Rumah",
+        "spouses": [],
+        "children": [
+          "jehoiachin_eth2kgs"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 23:34",
+          "note": "Renamed from Eliakim by Pharaoh-nechoh and made king in his father's place."
+        },
+        {
+          "ref": "2 Kings 23:35",
+          "note": "Taxes the land to pay the tribute Pharaoh-nechoh demands."
+        },
+        {
+          "ref": "2 Kings 24:1",
+          "note": "Becomes Nebuchadnezzar's servant three years, then rebels."
+        },
+        {
+          "ref": "2 Kings 24:6",
+          "note": "Sleeps with his fathers; Jehoiachin his son reigns in his stead."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 23:36",
+          "note": "Twenty and five years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "nebuchadnezzar_eth2kgs",
+      "name": "Nebuchadnezzar king of Babylon",
+      "role": "manager",
+      "scribeTier": "Siege Forts of Jerusalem",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:1",
+          "note": "Jehoiakim becomes his servant, then rebels against him."
+        },
+        {
+          "ref": "2 Kings 24:10-12",
+          "note": "His servants besiege Jerusalem; Jehoiachin surrenders to him in the eighth year of his own reign."
+        },
+        {
+          "ref": "2 Kings 24:17",
+          "note": "Makes Mattaniah, Jehoiachin's uncle, king in his stead and renames him Zedekiah."
+        },
+        {
+          "ref": "2 Kings 25:1",
+          "note": "In the ninth year of Zedekiah's reign comes with all his host against Jerusalem and builds forts against it."
+        },
+        {
+          "ref": "2 Kings 25:8-9",
+          "note": "Sends Nebuzar-adan, who burns the temple, the king's house, and every great man's house."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "nebuzaradan_eth2kgs",
+      "name": "Nebuzar-adan, captain of the guard",
+      "role": "submanager",
+      "scribeTier": "Siege Forts of Jerusalem",
+      "parentManagerId": "nebuchadnezzar_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:8-9",
+          "note": "Comes to Jerusalem as a servant of the king of Babylon and burns the temple, palace, and every great house."
+        },
+        {
+          "ref": "2 Kings 25:11",
+          "note": "Carries away the rest of the people left in the city, along with fugitives and the remnant of the multitude."
+        },
+        {
+          "ref": "2 Kings 25:18-20",
+          "note": "Takes Seraiah the chief priest, Zephaniah the second priest, and others, bringing them to the king of Babylon at Riblah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    },
+    {
+      "id": "seraiah_zephaniah_eth2kgs",
+      "name": "Seraiah and Zephaniah",
+      "role": "submanager",
+      "scribeTier": "Siege Forts of Jerusalem",
+      "parentManagerId": "nebuchadnezzar_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:18",
+          "note": "Seraiah the chief priest and Zephaniah the second priest, taken by Nebuzar-adan along with the three keepers of the door."
+        },
+        {
+          "ref": "2 Kings 25:21",
+          "note": "Both slain by the king of Babylon at Riblah."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "Kept as one collective entry: the text gives them identical, undifferentiated treatment throughout -- named together, captured together, executed together, with no individual action distinguishing either man."
+      ]
+    },
+    {
+      "id": "jehoiachin_eth2kgs",
+      "name": "Jehoiachin king of Judah",
+      "role": "manager",
+      "scribeTier": "Lifted from Prison",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "jehoiakim_eth2kgs",
+        "mother": "Nehushta the daughter of Elnathan of Jerusalem",
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:8-9",
+          "note": "Reigns three months in Jerusalem, doing evil as his father had done."
+        },
+        {
+          "ref": "2 Kings 24:12",
+          "note": "Goes out to the king of Babylon himself, with his mother, servants, princes, and officers, and is taken captive in the eighth year of Nebuchadnezzar's reign."
+        },
+        {
+          "ref": "2 Kings 25:27",
+          "note": "In the thirty-seventh year of his captivity, Evil-merodach lifts up his head out of prison."
+        },
+        {
+          "ref": "2 Kings 25:29-30",
+          "note": "His prison garments are changed, and he eats bread continually before the king of Babylon all the days of his life, with a daily allowance."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 24:8",
+          "note": "Eighteen years old when he began to reign."
+        }
+      ],
+      "funFacts": []
+    },
+    {
+      "id": "evilmerodach_eth2kgs",
+      "name": "Evil-merodach king of Babylon",
+      "role": "submanager",
+      "scribeTier": "Lifted from Prison",
+      "parentManagerId": "jehoiachin_eth2kgs",
+      "perkFlavor": "loyalty-boost",
+      "genealogy": {
+        "father": null,
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:27",
+          "note": "In the year he begins to reign, lifts up the head of Jehoiachin king of Judah out of prison."
+        },
+        {
+          "ref": "2 Kings 25:28",
+          "note": "Speaks kindly to him and sets his throne above the other captive kings in Babylon."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "This book never states Evil-merodach is Nebuchadnezzar's son; that parentage is not asserted here, kept as an open/unstated fact rather than invented."
+      ]
+    },
+    {
+      "id": "zedekiah_eth2kgs",
+      "name": "Zedekiah king of Judah",
+      "role": "manager",
+      "scribeTier": "Blinded Eyes",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "josiah_eth2kgs",
+        "mother": "Hamutal the daughter of Jeremiah of Libnah",
+        "spouses": [],
+        "children": [
+          "sons of Zedekiah, unnamed collectively, 2 Kings 25:7"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 24:17",
+          "note": "Made king by Nebuchadnezzar in his nephew Jehoiachin's stead, renamed from Mattaniah."
+        },
+        {
+          "ref": "2 Kings 24:20",
+          "note": "Rebels against the king of Babylon."
+        },
+        {
+          "ref": "2 Kings 25:4-5",
+          "note": "Flees the besieged city by night but is overtaken and captured in the plains of Jericho."
+        },
+        {
+          "ref": "2 Kings 25:7",
+          "note": "His sons are slain before his eyes; his own eyes are then put out and he is bound and carried to Babylon."
+        }
+      ],
+      "ageEvents": [
+        {
+          "ref": "2 Kings 24:18",
+          "note": "Twenty and one years old when he began to reign."
+        }
+      ],
+      "funFacts": [
+        "Shares an identical stated mother, Hamutal the daughter of Jeremiah of Libnah, with Jehoahaz king of Judah (23:31) -- confirming the two as full brothers, both sons of Josiah."
+      ]
+    },
+    {
+      "id": "gedaliah_eth2kgs",
+      "name": "Gedaliah",
+      "role": "manager",
+      "scribeTier": "Mizpah's Broken Oath",
+      "parentManagerId": null,
+      "perkFlavor": null,
+      "genealogy": {
+        "father": "Ahikam (2 Kings 22:12, 25:22)",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:22",
+          "note": "Made ruler over the remaining people of Judah by Nebuchadnezzar, as son of Ahikam, son of Shaphan the scribe."
+        },
+        {
+          "ref": "2 Kings 25:23",
+          "note": "The remaining captains and their men come to him at Mizpah."
+        },
+        {
+          "ref": "2 Kings 25:24",
+          "note": "Swears to them not to fear serving the Chaldees, promising it will be well with them."
+        },
+        {
+          "ref": "2 Kings 25:25",
+          "note": "Slain by Ishmael son of Nethaniah at Mizpah, along with the Jews and Chaldees who were with him."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": [
+        "His grandfather Shaphan the scribe and his father Ahikam both appear earlier in this same book (22:9-14) as part of Josiah's delegation to Huldah -- a real three-generation family thread within a single book."
+      ]
+    },
+    {
+      "id": "ishmael_nethaniah_eth2kgs",
+      "name": "Ishmael son of Nethaniah",
+      "role": "submanager",
+      "scribeTier": "Mizpah's Broken Oath",
+      "parentManagerId": "gedaliah_eth2kgs",
+      "perkFlavor": "cost-cutter",
+      "genealogy": {
+        "father": "Nethaniah",
+        "mother": null,
+        "spouses": [],
+        "children": []
+      },
+      "verses": [
+        {
+          "ref": "2 Kings 25:25",
+          "note": "Of the seed royal; comes with ten men and smites Gedaliah, killing him along with the Jews and Chaldees at Mizpah."
+        },
+        {
+          "ref": "2 Kings 25:26",
+          "note": "His act drives all the remaining people, small and great, to flee to Egypt for fear of the Chaldees."
+        }
+      ],
+      "ageEvents": [],
+      "funFacts": []
+    }
+  ],
+  "genealogyLists": {
+    "note": "Bulk/unresolved references, kept out of the character list above.",
+    "jonahSonOfAmittai": {
+      "ref": "2 Kings 14:25",
+      "note": "Referenced only as the prophet through whom the LORD spoke the word that Jeroboam (son of Joash) fulfilled by restoring Israel's border. Not a scene character in this book -- no action of his own is narrated here, only his prior spoken word."
+    },
+    "sonsOfTheProphets": {
+      "ref": "2 Kings 2:3-7,15-18; 4:1,38-44; 6:1-7; 9:1",
+      "note": "A recurring unnamed prophetic-guild collective appearing across many of Elisha's scenes at Bethel, Jericho, Gilgal, and Jordan. Never individually named or differentiated by the text; kept as a group reference rather than invented into individuals, per the project's collective-entry rule."
+    },
+    "threeKeepersOfTheDoor": {
+      "ref": "2 Kings 25:18",
+      "note": "Named alongside Seraiah and Zephaniah as taken by Nebuzar-adan, but given no names or individual actions at all -- purely a numeric group mention, not indexed as characters."
+    }
+  }
+}
