@@ -87,7 +87,11 @@ namespace ClickerGenesis.Progression.SkillTreeV2
             canvasGroup.blocksRaycasts = true;
 
             if (shapeImage != null) shapeImage.color = Node.accentColor;
-            if (iconImage != null) iconImage.enabled = true;
+            if (iconImage != null)
+            {
+                iconImage.sprite = Node.icon;
+                iconImage.enabled = Node.icon != null;
+            }
 
             if (rankText != null)
             {

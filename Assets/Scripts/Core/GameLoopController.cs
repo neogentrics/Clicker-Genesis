@@ -73,6 +73,15 @@ namespace ClickerGenesis.Core
         public PrestigeSystem Prestige { get; private set; }
         public PrestigeSkillSystem Skills { get; private set; }
 
+        [Header("Skill Tree V2 (2026-08-09 integration - real economy, real per-book Grace tree content is separate future work)")]
+        [SerializeField] private ClickerGenesis.Progression.SkillTreeV2.SkillTreeDatabase skillTreeV2Database;
+
+        /// <summary>The redesigned constellation-style tree's runtime state - real Grace balance
+        /// (via Prestige), real save/load. Additive alongside the still-live old Skills tree (see
+        /// EffectiveInkPerSecond/EffectiveTapAmount/etc.) rather than replacing it outright, so
+        /// nothing regresses for a save that already has old-tree ranks.</summary>
+        public ClickerGenesis.Progression.SkillTreeV2.SkillTreeRuntimeState SkillsV2 { get; private set; }
+
         /// <summary>The book the player originally started this slot in (2026-08-08, Skill Tree
         /// redesign) - distinct from activeBookResourceId, which moves as the player switches
         /// books. The Book Progression branch is anchored to THIS and never re-anchors on a later
@@ -293,13 +302,13 @@ namespace ClickerGenesis.Core
 
         public double EffectiveTapAmount =>
             tapAmount * (1.0 + ClickPowerPerLevelGrowth * ClickPowerLevel) * MilestoneCurve.GetMultiplier(ClickPowerLevel)
-            * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
+            * (1.0 + (Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier) + SkillsV2.GetTotalEffect(SkillEffectType.ClickPowerMultiplier)));
 
         /// <summary>What EffectiveTapAmount becomes after the next Click Power purchase — used to
         /// preview the upgrade's payoff on its button label instead of showing only its cost.</summary>
         public double NextEffectiveTapAmount =>
             tapAmount * (1.0 + ClickPowerPerLevelGrowth * (ClickPowerLevel + 1)) * MilestoneCurve.GetMultiplier(ClickPowerLevel + 1)
-            * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
+            * (1.0 + (Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier) + SkillsV2.GetTotalEffect(SkillEffectType.ClickPowerMultiplier)));
 
         [Header("Bulk buy")]
         private static readonly int[] VerseMultiplierTiers = { 1, 5, 10, 20, MaxBuyMultiplier };
@@ -437,7 +446,7 @@ namespace ClickerGenesis.Core
             {
                 int afterLevel = ClickPowerLevel + ClickPowerBuyMultiplier;
                 return tapAmount * (1.0 + ClickPowerPerLevelGrowth * afterLevel) * MilestoneCurve.GetMultiplier(afterLevel)
-                    * (1.0 + Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier));
+                    * (1.0 + (Skills.GetTotalEffect(SkillEffectType.ClickPowerMultiplier) + SkillsV2.GetTotalEffect(SkillEffectType.ClickPowerMultiplier)));
             }
         }
 
@@ -535,6 +544,7 @@ namespace ClickerGenesis.Core
                 if (entry.config != null && !string.IsNullOrEmpty(entry.bookResourceId))
                     scribeSystemsByBook[entry.bookResourceId] = new ScribeSystem(entry.config);
             Prestige = new PrestigeSystem();
+            SkillsV2 = new ClickerGenesis.Progression.SkillTreeV2.SkillTreeRuntimeState(Prestige, skillTreeV2Database);
 
             // Genesis is the DEFAULT starting book (2026-08-06), but the New Game setup screen
             // (2026-08-08, save-slot system) can override this via PendingNewGameStartingBookResourceId
@@ -546,6 +556,12 @@ namespace ClickerGenesis.Core
                 ? GenesisResourceId
                 : PendingNewGameStartingBookResourceId;
             PendingNewGameStartingBookResourceId = null;
+
+            // The player's starting book is always free in the V2 tree too (2026-08-09) - seeded
+            // directly rather than requiring a Book Progression purchase; ApplySaveData's own
+            // LoadUnlockedBooks call is additive, not replacing, so this seed survives loading an
+            // existing save.
+            SkillsV2.LoadUnlockedBooks(new[] { chosenStartingBookResourceId });
 
             activeBookResourceId = chosenStartingBookResourceId;
             bool startingIsGenesis = chosenStartingBookResourceId == GenesisResourceId;
@@ -736,6 +752,9 @@ namespace ClickerGenesis.Core
                 data.prestige.skillRanks.Add(new SkillRankEntry { nodeId = kvp.Key, rank = kvp.Value });
             foreach (var kvp in Skills.ExportBookChoices())
                 data.prestige.bookChoices.Add(new BookChoiceEntry { nodeId = kvp.Key, bookResourceId = kvp.Value });
+            foreach (var kvp in SkillsV2.ExportRanks())
+                data.prestige.skillV2Ranks.Add(new SkillRankEntry { nodeId = kvp.Key, rank = kvp.Value });
+            data.prestige.skillV2UnlockedBooks.AddRange(SkillsV2.ExportUnlockedBooks());
 
             foreach (var kvp in bookProgress)
             {
@@ -792,6 +811,8 @@ namespace ClickerGenesis.Core
                 data.prestige.freePrestigeCount, data.prestige.resetPrestigeCount);
             Skills.LoadState(data.prestige.skillRanks.Select(e => new KeyValuePair<string, int>(e.nodeId, e.rank)));
             Skills.LoadBookChoices(data.prestige.bookChoices.Select(e => new KeyValuePair<string, string>(e.nodeId, e.bookResourceId)));
+            SkillsV2.LoadState(data.prestige.skillV2Ranks.Select(e => new KeyValuePair<string, int>(e.nodeId, e.rank)));
+            SkillsV2.LoadUnlockedBooks(data.prestige.skillV2UnlockedBooks);
 
             foreach (var entry in data.books)
             {
@@ -845,7 +866,7 @@ namespace ClickerGenesis.Core
         /// "Manager's Calling" branch lowers the effective requirement (never below 1), rather than
         /// raising the player's real level.</summary>
         public int EffectiveManagerLevel =>
-            Math.Max(1, Levels.CurrentLevel + (int)Skills.GetTotalEffect(SkillEffectType.ManagerUnlockLevelDiscount));
+            Math.Max(1, Levels.CurrentLevel + (int)(Skills.GetTotalEffect(SkillEffectType.ManagerUnlockLevelDiscount) + SkillsV2.GetTotalEffect(SkillEffectType.ManagerUnlockLevelDiscount)));
 
         public bool BuyManager(int tierIndex)
         {
@@ -951,7 +972,7 @@ namespace ClickerGenesis.Core
         /// <summary>Grace skill tree "Swift Unlock" branch discount, clamped so verse/chapter cost
         /// can never drop below 20% of its base value - keeps the core loop meaningful even at
         /// max investment in this branch.</summary>
-        private double VersePricingMultiplier => 1.0 - Math.Min(0.8, Skills.GetTotalEffect(SkillEffectType.PricingDiscount));
+        private double VersePricingMultiplier => 1.0 - Math.Min(0.8, (Skills.GetTotalEffect(SkillEffectType.PricingDiscount) + SkillsV2.GetTotalEffect(SkillEffectType.PricingDiscount)));
 
         public double NextVerseCost => pricingConfig != null
             ? PricingCurve.VerseCost(pricingConfig, NextVerseIndex) * VersePricingMultiplier
@@ -1059,10 +1080,10 @@ namespace ClickerGenesis.Core
             {
                 if (scribeSystemsByBook.Count == 0) return 0;
                 double skillIncomeBoost = 1.0
-                    + Skills.GetTotalEffect(SkillEffectType.IncomeMultiplier)
-                    + Skills.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost)
-                    + Skills.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost);
-                double managerBonusBoost = Skills.GetTotalEffect(SkillEffectType.ManagerBonusBoost);
+                    + (Skills.GetTotalEffect(SkillEffectType.IncomeMultiplier) + SkillsV2.GetTotalEffect(SkillEffectType.IncomeMultiplier))
+                    + (Skills.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost) + SkillsV2.GetTotalEffect(SkillEffectType.ProgressMultiplierBoost))
+                    + (Skills.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost) + SkillsV2.GetTotalEffect(SkillEffectType.ScribeMilestoneBoost));
+                double managerBonusBoost = (Skills.GetTotalEffect(SkillEffectType.ManagerBonusBoost) + SkillsV2.GetTotalEffect(SkillEffectType.ManagerBonusBoost));
                 // Sums every registered book's roster (2026-08-08, multi-book economy), not just
                 // the active one - a book's scribes keep earning Ink in the background after
                 // switching away, explicit user decision.
@@ -1133,7 +1154,7 @@ namespace ClickerGenesis.Core
         /// spendable Balance - per the confirmed Grace formula.</summary>
         public double PrestigeGracePreview =>
             PrestigeSystem.CalculateGraceReward(Wallet.LifetimeEarned, NextVerseIndex, ChaptersCompletedCount, BooksCompletedCount)
-            * (1.0 + Skills.GetTotalEffect(SkillEffectType.GraceGainBonus));
+            * (1.0 + (Skills.GetTotalEffect(SkillEffectType.GraceGainBonus) + SkillsV2.GetTotalEffect(SkillEffectType.GraceGainBonus)));
 
         /// <summary>Grace reward including the opt-in reset path's 2.5x multiplier - shown as the
         /// "with reset" preview alongside the plain PrestigeGracePreview.</summary>

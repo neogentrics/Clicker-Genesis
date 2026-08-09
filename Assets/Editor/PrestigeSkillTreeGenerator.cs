@@ -6,8 +6,19 @@ using ClickerGenesis.Progression;
 namespace ClickerGenesis.EditorTools
 {
     /// <summary>
-    /// One-off generator for the Grace skill tree data asset - procedural, not hand-authored row
-    /// by row in the Inspector, same pattern used for GenesisScribes.asset. Re-running this
+    /// DEPRECATED (2026-08-09) - the old Grace Skill Tree (PrestigeSkillTreeConfig/
+    /// PrestigeSkillSystem/PrestigeScreenUI) has been superseded by the constellation-style
+    /// Progression/SkillTreeV2 system, now wired into the live game (PrestigeScreen.unity's old UI
+    /// is disabled, not deleted - see the deprecation note there). Do NOT re-run this generator
+    /// against a live save; the old tree's PrestigeSkillSystem/GameLoopController.Skills plumbing
+    /// is left in place on purpose (its GetTotalEffect(...) calls still execute, additively
+    /// alongside the new tree's SkillsV2.GetTotalEffect(...), so a save with pre-existing old-tree
+    /// ranks doesn't silently lose that progress) but no new UI path can spend against it anymore.
+    /// Kept only as a reference/fallback, not permanently deleted per the user's explicit "just in
+    /// case" instruction.
+    ///
+    /// One-off generator for the OLD Grace skill tree data asset - procedural, not hand-authored
+    /// row by row in the Inspector, same pattern used for GenesisScribes.asset. Re-running this
     /// overwrites the existing asset with freshly-generated nodes (ranks are stored on the
     /// runtime PrestigeSkillSystem, not on this config, so regenerating the config never touches
     /// a save - there's no save system yet anyway).
@@ -25,7 +36,7 @@ namespace ClickerGenesis.EditorTools
             public double[] baseCost;
         }
 
-        [MenuItem("Clicker Genesis/Generate Prestige Skill Tree")]
+        [MenuItem("Clicker Genesis/(DEPRECATED - see SkillTreeV2) Generate Prestige Skill Tree")]
         public static void Generate()
         {
             var config = ScriptableObject.CreateInstance<PrestigeSkillTreeConfig>();

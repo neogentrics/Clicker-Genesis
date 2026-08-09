@@ -18,10 +18,6 @@ namespace ClickerGenesis.Progression.SkillTreeV2
     /// </summary>
     public class SkillTreeUIManager : MonoBehaviour
     {
-        [Header("Data")]
-        [SerializeField] private SkillTreeDatabase database;
-        [SerializeField] private double startingGrace = 500;
-
         [Header("Main Tree (Rule 1: lives inside a ScrollRect)")]
         [SerializeField] private ScrollRect scrollRect;
         [SerializeField] private RectTransform content;
@@ -48,6 +44,13 @@ namespace ClickerGenesis.Progression.SkillTreeV2
         [SerializeField] private TMP_Text graceReadoutLabel;
 
         private SkillTreeRuntimeState runtime;
+
+        /// <summary>Read from the runtime state, not a separate [SerializeField] (2026-08-09 fix) -
+        /// two independently-wired "the database" references was a real bug: an authoring pass
+        /// updated GameLoopController's copy but not this scene's own copy, and the tree silently
+        /// kept rendering stale content with no error. Single source of truth now.</summary>
+        private SkillTreeDatabase database => runtime?.Database;
+
         private readonly Dictionary<SkillNodeData, SkillNodeUI> nodeUIByData = new Dictionary<SkillNodeData, SkillNodeUI>();
         private readonly List<UIConnectorLine> mainLines = new List<UIConnectorLine>();
         private readonly List<SkillNodeUI> masteryNodeUIs = new List<SkillNodeUI>();
@@ -55,7 +58,13 @@ namespace ClickerGenesis.Progression.SkillTreeV2
 
         private void Awake()
         {
-            runtime = new SkillTreeRuntimeState(startingGrace);
+            // Real-economy integration (2026-08-09, Phase 3) - the sandbox's own local Grace
+            // double is gone. GameLoopController is the persistent singleton that owns the actual
+            // save state; it must already be bootstrapped (spawned from MainMenu) before this
+            // screen can do anything real, same rule every other screen in the project follows.
+            if (!ClickerGenesis.Core.GameLoopController.EnsureBootstrapped()) return;
+            runtime = ClickerGenesis.Core.GameLoopController.Instance.SkillsV2;
+
             BuildMainTree();
             if (masteryRoot != null) masteryRoot.SetActive(false);
             if (bookMenuPanel != null) bookMenuPanel.SetActive(false);

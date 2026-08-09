@@ -38,11 +38,14 @@ namespace ClickerGenesis.Progression.SkillTreeV2
         /// "{Book} Mastery" label rather than inventing lore here.</summary>
         public string thematicTitle;
 
-        [Header("Unlock cost (Book Progression slot)")]
-        /// <summary>Which slot in the Book Progression sequence this book occupies once unlocked -
-        /// 1-based, matching the real round(30 x 1.22^(n-1)) formula's own "n". Set at authoring
-        /// time per book's canonical order; a book with slotIndex 0 is treated as free/always-
-        /// available (Genesis, the free starting book, never needs a Grace purchase to access).</summary>
+        [Header("Canonical order (display/authoring only - see note)")]
+        /// <summary>1-based canonical position, used for sorting the book list in the UI. NOT the
+        /// runtime unlock cost source (2026-08-09 correction) - the real design (Grace-Skill-Tree.
+        /// html) prices Book Progression as 38 generic, interchangeable slots where cost climbs
+        /// with how many books the PLAYER has already bought, not with which book they pick each
+        /// time; that logic now lives in SkillTreeRuntimeState.NextBookUnlockCost. GetUnlockCost()
+        /// below is kept only as authoring-time reference for "what would this cost if it were
+        /// bought in canonical order."</summary>
         public int slotIndex;
 
         public const double SlotCostBase = 30.0;

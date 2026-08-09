@@ -47,6 +47,10 @@ namespace ClickerGenesis.Core
         public Button RunInBackgroundToggleButton;
         public TMP_Text RunInBackgroundLabel;
 
+        [Header("Orientation (2026-08-09, task #25) - mobile-only lever, hidden on desktop where the OS window manager owns rotation")]
+        public Button OrientationCycleButton;
+        public TMP_Text OrientationLabel;
+
         [Header("Back to Game (2026-08-04) - only shown when reached from actual gameplay, not from MainMenu")]
         public GameObject BackToGameButton;
 
@@ -79,6 +83,8 @@ namespace ClickerGenesis.Core
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
             if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
+            if (OrientationCycleButton != null) OrientationCycleButton.onClick.AddListener(CycleOrientation);
+            if (!GameSettings.IsOrientationLockSupported) OrientationCycleButton?.gameObject.SetActive(false);
             if (DeleteSaveButton != null) DeleteSaveButton.onClick.AddListener(ShowDeleteConfirm);
             if (DeleteConfirmYesButton != null) DeleteConfirmYesButton.onClick.AddListener(HandleDeleteConfirmYes);
             if (DeleteConfirmNoButton != null) DeleteConfirmNoButton.onClick.AddListener(HandleDeleteConfirmNo);
@@ -186,6 +192,28 @@ namespace ClickerGenesis.Core
             RefreshRunInBackground();
         }
 
+        /// <summary>Auto -> Portrait -> Landscape -> Auto. Auto is the sensible default (task #25's
+        /// "auto-rotate default") - the game follows the device's live orientation like most mobile
+        /// apps until the player explicitly locks one; ResponsiveCanvasController.Apply() (already
+        /// built) reads GameSettings.Orientation live via GameSettings.OnChanged, so this takes
+        /// effect immediately with no extra wiring here.</summary>
+        private void CycleOrientation()
+        {
+            GameSettings.Orientation = (OrientationPreference)(((int)GameSettings.Orientation + 1) % 3);
+            RefreshOrientation();
+        }
+
+        private void RefreshOrientation()
+        {
+            if (OrientationLabel == null) return;
+            OrientationLabel.text = "Orientation: " + GameSettings.Orientation switch
+            {
+                OrientationPreference.Portrait => "Portrait",
+                OrientationPreference.Landscape => "Landscape",
+                _ => "Auto",
+            };
+        }
+
         private void RefreshAll()
         {
             RefreshSound();
@@ -195,6 +223,7 @@ namespace ClickerGenesis.Core
             RefreshResolution();
             RefreshBatterySaver();
             RefreshRunInBackground();
+            RefreshOrientation();
         }
 
         private void RefreshSound()

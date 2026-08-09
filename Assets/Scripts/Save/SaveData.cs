@@ -85,6 +85,19 @@ namespace ClickerGenesis.Save
         /// (2026-08-09, player-choice book unlocking redesign) - list-of-pairs, same reason as
         /// skillRanks above.</summary>
         public List<BookChoiceEntry> bookChoices = new List<BookChoiceEntry>();
+
+        /// <summary>SkillTreeV2 (the new constellation-style tree, Progression/SkillTreeV2)
+        /// purchased ranks, keyed by SkillNodeData.Id - separate list from the old tree's
+        /// skillRanks above since node identity works differently (asset reference + stable Id
+        /// string, not a runtime-generated string id) and the two trees' nodes are never the same
+        /// objects. Both trees' Grace comes out of the same `grace` balance above; only the
+        /// per-node ownership bookkeeping is kept apart.</summary>
+        public List<SkillRankEntry> skillV2Ranks = new List<SkillRankEntry>();
+
+        /// <summary>SkillTreeV2 books unlocked via its Convergence panel - just bookResourceId
+        /// strings, since (unlike the old tree's generic "Unlock New Book" slots) a V2 book unlock
+        /// isn't tied to a specific node needing its own choice recorded.</summary>
+        public List<string> skillV2UnlockedBooks = new List<string>();
     }
 
     [Serializable]

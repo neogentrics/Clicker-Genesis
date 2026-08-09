@@ -36,7 +36,7 @@ namespace ClickerGenesis.Progression.SkillTreeV2
             if (nameText != null) nameText.text = book.displayName;
 
             bool unlocked = runtime.IsBookUnlocked(book.bookResourceId);
-            double cost = book.GetUnlockCost();
+            double cost = runtime.NextBookUnlockCost;
 
             if (statusText != null)
                 statusText.text = unlocked ? "Enter Mastery" : $"[Cost {cost:0} Grace]";

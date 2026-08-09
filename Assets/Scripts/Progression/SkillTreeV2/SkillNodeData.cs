@@ -26,8 +26,18 @@ namespace ClickerGenesis.Progression.SkillTreeV2
     public class SkillNodeData : ScriptableObject
     {
         [Header("Identity")]
+        /// <summary>Stable save-key (2026-08-09, real-economy integration). Optional in the
+        /// Inspector - falls back to displayName via the Id property below, since every dummy/test
+        /// node authored so far already has a unique displayName and forcing this field on every
+        /// existing asset isn't worth the busywork. Set it explicitly once a node's displayName
+        /// might ever be renamed for content/flavor reasons without wanting to orphan players'
+        /// saved ranks.</summary>
+        public string id;
         public string displayName;
         [TextArea(2, 4)] public string description;
+
+        /// <summary>The key SkillTreeRuntimeState's save export/import actually uses.</summary>
+        public string Id => string.IsNullOrEmpty(id) ? displayName : id;
 
         /// <summary>Freeform grouping label for editor/UI organization - e.g. "Ink Flow",
         /// "Book Progression", "Genesis Mastery". Not used for gameplay logic (prerequisites are
@@ -82,6 +92,12 @@ namespace ClickerGenesis.Progression.SkillTreeV2
 
         [Header("Visual")]
         public SkillNodeShape shape = SkillNodeShape.Circle;
+
+        /// <summary>Real icon art (2026-08-09) - SkillNodeUI draws this over the shape when the
+        /// node is Owned/Frontier. Null is fine (falls back to the flat shape alone), matching the
+        /// existing project rule of leaving a node icon-less rather than forcing a mismatched
+        /// placeholder onto it.</summary>
+        public Sprite icon;
 
         /// <summary>Accent color for this node's rendered state (owned/frontier) - a plain data
         /// hint for the UI layer to consume, not a rendering implementation itself. Left at a
