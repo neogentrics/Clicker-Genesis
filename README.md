@@ -18,19 +18,19 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.4.1 Beta** — pre-release, core loop implemented and playable. This is the first release under a new versioning convention: everything before 0.4.1 is retroactively **Alpha**, and 0.4.1 onward is **Beta**. Headline changes this version: a redesigned **Grace Skill Tree V2** — a fog-of-war constellation UI (nodes and their connector lines stay hidden until a prerequisite is owned, not just dimmed) wired to the real Grace economy, with all 146 nodes of real Old Testament content authored in; and a **Settings orientation toggle** (Auto/Portrait/Landscape) completing the mobile-responsiveness work from 0.4.0. 0.4.0 itself shipped a full **Achievement system** — 655 real achievements generated straight from the game's own live Scribes/Managers data, browsable in a tabbed card-grid screen with bronze/silver/gold difficulty tiers and spoiler-safe hidden achievements — plus the first real mobile-device layout fixes (list-row text overlap, wrong Canvas Scaler reference resolution) after testing on a physical Android phone. No new release build has been cut for 0.4.1 yet — this is a source commit checkpoint ahead of the next build pass, which will add **Android** as a release platform for the first time alongside Windows and macOS; the last published build is still v0.3.3 below.
+**Version 0.4.1 Beta** — pre-release, core loop implemented and playable. This is the first release under a new versioning convention: everything before 0.4.1 is retroactively **Alpha**, and 0.4.1 onward is **Beta**. Headline changes this version: a redesigned **Grace Skill Tree V2** — a fog-of-war constellation UI (nodes and their connector lines stay hidden until a prerequisite is owned, not just dimmed) wired to the real Grace economy, with all 146 nodes of real Old Testament content authored in; and a **Settings orientation toggle** (Auto/Portrait/Landscape) completing the mobile-responsiveness work from 0.4.0. 0.4.0 itself shipped a full **Achievement system** — 655 real achievements generated straight from the game's own live Scribes/Managers data, browsable in a tabbed card-grid screen with bronze/silver/gold difficulty tiers and spoiler-safe hidden achievements — plus the first real mobile-device layout fixes (list-row text overlap, wrong Canvas Scaler reference resolution) after testing on a physical Android phone.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
 ## Download
 
-Three platforms — pick yours (still on v0.3.3, the last cut release; v0.3.4 is source-only until mobile bugs are triaged):
+Three platforms — pick yours (now on v0.4.1 Beta, the first release to ship all three platforms in one pass):
 
 | Platform | Download | Minimum version |
 |---|---|---|
-| 🪟 Windows | [ClickerGenesis-Windows-v0.3.3.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Windows-v0.3.3.zip) | Windows 10 64-bit or later |
-| 🍎 macOS | [ClickerGenesis-Mac-v0.3.3.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Mac-v0.3.3.zip) | macOS 12.0 (Monterey) or later |
-| 🤖 Android | [ClickerGenesis-Android-v0.3.3.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.3.3/ClickerGenesis-Android-v0.3.3.apk) | Android 8.0 (Oreo, API 26) or later |
+| 🪟 Windows | [ClickerGenesis-Windows-v0.4.1.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Windows-v0.4.1.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.4.1.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Mac-v0.4.1.zip) | macOS 12.0 (Monterey) or later |
+| 🤖 Android | [ClickerGenesis-Android-v0.4.1.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Android-v0.4.1.apk) | Android 8.0 (Oreo, API 26) or later |
 
 - **Windows:** unzip and run `ClickerGenesis.exe`.
 - **macOS:** unzip, then right-click `ClickerGenesis.app` → **Open** the first time (the build is unsigned/unnotarized — no Apple Developer account in this pipeline yet — so Gatekeeper blocks a plain double-click on first launch; this is expected for an indie unsigned build, not broken packaging).
