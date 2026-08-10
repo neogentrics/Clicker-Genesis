@@ -231,10 +231,102 @@ namespace ClickerGenesis.Core
             if (FilterButton != null)
                 FilterButton.onClick.AddListener(() =>
                 {
-                    if (FilterDropdownPanel != null) FilterDropdownPanel.SetActive(!FilterDropdownPanel.activeSelf);
+                    if (FilterDropdownPanel == null) return;
+                    bool willOpen = !FilterDropdownPanel.activeSelf;
+                    if (willOpen) PositionDropdownUnderFilterButton();
+                    FilterDropdownPanel.SetActive(willOpen);
                 });
 
             BuildFilterDropdown();
+            ThemeFilterRow();
+
+            // Draw on top of the card grid regardless of scene sibling order.
+            if (FilterDropdownPanel != null) FilterDropdownPanel.transform.SetAsLastSibling();
+        }
+
+        /// <summary>Real user correction (2026-08-10): the dropdown's anchored position was a
+        /// leftover fixed value from before the tab row got centered, so it opened floating over
+        /// the "All" button instead of under "Filter". Buttons live several layout groups deep
+        /// (TabScrollView/.../TabContainer/FilterButton), so a fixed local offset can't track it -
+        /// convert the button's actual world-space bottom-center into the panel's parent's local
+        /// space instead, which stays correct regardless of how the row above gets laid out.
+        ///
+        /// Second real user correction (same day): even with the math fixed, a left-aligned panel
+        /// with an 8px gap still read as "a separate floating card", not something that visibly
+        /// belongs to the Filter button. Now centers under the button (panelRt pivot is (0.5,1) to
+        /// match), sits flush against it (no gap), and PositionPointerTail() draws a small diamond
+        /// "speech bubble tail" bridging the two, the standard visual cue for "this dropdown came
+        /// from this button".</summary>
+        private void PositionDropdownUnderFilterButton()
+        {
+            if (FilterButton == null || FilterDropdownPanel == null) return;
+            var filterRt = FilterButton.GetComponent<RectTransform>();
+            var panelRt = FilterDropdownPanel.GetComponent<RectTransform>();
+            var parentRt = panelRt.parent as RectTransform;
+            if (filterRt == null || panelRt == null || parentRt == null) return;
+
+            var corners = new Vector3[4];
+            filterRt.GetWorldCorners(corners); // 0=bl 1=tl 2=tr 3=br
+            Vector3 bottomCenter = (corners[0] + corners[3]) * 0.5f;
+
+            var canvas = parentRt.GetComponentInParent<Canvas>();
+            var cam = (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay) ? canvas.worldCamera : null;
+            Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(cam, bottomCenter);
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(parentRt, screenPoint, cam, out var localPoint))
+            {
+                // panelRt is pivoted top-center (0.5,1); localPoint is relative to parentRt's own
+                // pivot, so re-base it onto the parent's top-left corner to get a valid
+                // anchoredPosition for whatever the panel's pivot actually is.
+                float parentTopLeftX = -parentRt.pivot.x * parentRt.rect.width;
+                float parentTopLeftY = (1f - parentRt.pivot.y) * parentRt.rect.height;
+                panelRt.anchoredPosition = new Vector2(localPoint.x - parentTopLeftX, localPoint.y - parentTopLeftY);
+            }
+        }
+
+        /// <summary>Real user correction (2026-08-10): the All/Achieved/Filter row previously used
+        /// a flat MetallicUI tab skin that didn't match the rest of the app, and sat left-anchored
+        /// instead of centered. Re-skins all three buttons with the exact same wooden sprite the
+        /// Back button uses (so they "fit the theme of the entire application") with distinct tints
+        /// - All matches Back exactly ("the regular... dark brown color"), Filter is lighter ("since
+        /// it has to have filters selected to be useful"), Achieved is green ("because it's already
+        /// been achieved") - and centers the row horizontally instead of left-anchoring it.</summary>
+        private void ThemeFilterRow()
+        {
+            var backImg = BackButton != null ? BackButton.GetComponent<Image>() : null;
+            var wooden = backImg != null ? backImg.sprite : null;
+            var allColor = new Color(0.85f, 0.75f, 0.55f, 1f); // matches BackButton exactly
+            var filterColor = new Color(0.95f, 0.9f, 0.74f, 1f); // lighter tan
+            var achievedColor = new Color(0.42f, 0.62f, 0.34f, 1f); // green
+
+            SkinFilterRowButton(AllTabButton, wooden, allColor);
+            SkinFilterRowButton(FilterButton, wooden, filterColor);
+            SkinFilterRowButton(AchievedTabButton, wooden, achievedColor);
+
+            if (TabContainer is RectTransform tabRt)
+            {
+                var anchorMin = tabRt.anchorMin;
+                var anchorMax = tabRt.anchorMax;
+                var pivot = tabRt.pivot;
+                var pos = tabRt.anchoredPosition;
+                anchorMin.x = 0.5f;
+                anchorMax.x = 0.5f;
+                pivot.x = 0.5f;
+                pos.x = 0f;
+                tabRt.anchorMin = anchorMin;
+                tabRt.anchorMax = anchorMax;
+                tabRt.pivot = pivot;
+                tabRt.anchoredPosition = pos;
+            }
+        }
+
+        private static void SkinFilterRowButton(Button btn, Sprite sprite, Color tint)
+        {
+            if (btn == null) return;
+            var img = btn.GetComponent<Image>();
+            if (img == null) return;
+            if (sprite != null) img.sprite = sprite;
+            img.type = Image.Type.Sliced;
+            img.color = tint;
         }
 
         /// <summary>One checkbox row per category that actually has at least one achievement.
@@ -352,7 +444,7 @@ namespace ClickerGenesis.Core
                     // square corners out past the visible diamond window at all four points). Same
                     // pivot-aware centering formula as the frame above, just shrinking inward instead
                     // of growing outward, so the icon stays centered in the original slot.
-                    var iconSize = slotSize * 0.56f;
+                    var iconSize = slotSize * 0.4f;
                     iconRt.sizeDelta = iconSize;
                     iconRt.anchoredPosition -= (iconSize - slotSize) * (new Vector2(0.5f, 0.5f) - iconRt.pivot);
                 }
