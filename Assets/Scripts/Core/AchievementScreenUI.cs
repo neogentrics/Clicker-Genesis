@@ -126,10 +126,24 @@ namespace ClickerGenesis.Core
         private static readonly Color TabActiveColor = new Color(0.85f, 0.65f, 0.25f, 1f);
         private static readonly Color TabInactiveColor = new Color(0.55f, 0.45f, 0.32f, 1f);
 
+        /// <summary>Filter dropdown (2026-08-10, real user redesign ask - "the buttons go off the
+        /// screen to the right for every tab... have there be an all button and a filter button,
+        /// something that has a drop down with checkboxes in it"). Replaces the old one-tab-per-
+        /// category row (which relied on an invisible horizontal-drag ScrollRect the player had no
+        /// way to know existed) with a fixed All/Achieved/Filter button row plus a checkbox
+        /// dropdown - multi-select, OR'd together, so several categories can be viewed at once.</summary>
+        [Header("Filter dropdown (2026-08-10 redesign)")]
+        public Button AllTabButton;
+        public Button AchievedTabButton;
+        public Button FilterButton;
+        public GameObject FilterDropdownPanel;
+        public Transform FilterDropdownContent;
+        public GameObject FilterCheckboxTemplate;
+
         private readonly List<Card> cards = new List<Card>();
         private readonly List<Button> tabButtons = new List<Button>();
-        private AchievementCategory? activeCategory; // null = "All" or "Unlocked" (see unlockedOnlyFilter)
-        private bool unlockedOnlyFilter; // true only while the "Unlocked" tab is active
+        private readonly HashSet<AchievementCategory> selectedCategories = new HashSet<AchievementCategory>(); // empty = "All"
+        private bool unlockedOnlyFilter; // true only while the "Achieved" tab is active
         private string searchText = "";
 
         private GameLoopController Controller => GameLoopController.Instance;
@@ -172,54 +186,6 @@ namespace ClickerGenesis.Core
                 .ThenBy(d => d.displayName)
                 .ToList();
 
-        /// <summary>One tab per category that actually has at least one achievement, plus "All"
-        /// first - categories with zero entries (e.g. Minigame, Meta - nothing built there yet)
-        /// don't get a dead tab. Generated at runtime from real data rather than hand-placing 9
-        /// tab buttons in the scene, same reasoning as every other data-driven UI in this project.</summary>
-        private void BuildTabs()
-        {
-            if (Controller?.Achievements == null || TabContainer == null || TabButtonTemplate == null) return;
-
-            var categoriesPresent = Controller.Achievements.AllDefinitions
-                .Select(d => d.category)
-                .Distinct()
-                .OrderBy(c => c)
-                .ToList();
-
-            AddTab("All", null);
-            AddUnlockedTab();
-            foreach (var cat in categoriesPresent)
-                AddTab(SplitCategoryName(cat), cat);
-
-            SetActiveTab(0);
-        }
-
-        /// <summary>"Achieved" filter (2026-08-09, user's explicit ask - "there's no button for
-        /// unlocked achievements already"; renamed from "Unlocked" to "Achieved" 2026-08-09 per the
-        /// user's follow-up correction to match the project's own "Achieved"/"Achievements"
-        /// terminology) - orthogonal to category, so it gets its own tab rather than being folded
-        /// into the category enum.</summary>
-        private void AddUnlockedTab()
-        {
-            var tabGo = Instantiate(TabButtonTemplate, TabContainer);
-            tabGo.SetActive(true);
-            tabGo.name = "Tab_Achieved";
-
-            var text = tabGo.GetComponentInChildren<TMP_Text>();
-            if (text != null) text.text = "Achieved";
-
-            var button = tabGo.GetComponent<Button>();
-            int index = tabButtons.Count;
-            tabButtons.Add(button);
-            button.onClick.AddListener(() =>
-            {
-                activeCategory = null;
-                unlockedOnlyFilter = true;
-                SetActiveTab(index);
-                ApplyFilter();
-            });
-        }
-
         private static string SplitCategoryName(AchievementCategory cat)
         {
             // "BookProgress" -> "Book Progress" - simple insert-space-before-capital, avoids
@@ -234,42 +200,99 @@ namespace ClickerGenesis.Core
             return sb.ToString();
         }
 
-        private void AddTab(string label, AchievementCategory? category)
+        /// <summary>Real user redesign (2026-08-10): the old one-tab-per-category row overflowed
+        /// off-screen with no visible way to reach the hidden tabs (it technically scrolled via
+        /// drag, but nothing signaled that). Replaced with a fixed All/Achieved/Filter row - Filter
+        /// opens a checkbox dropdown (multi-select, OR'd together) built once from whichever
+        /// categories actually have achievements, same "don't build a dead row for empty
+        /// categories" rule the old tab-builder used.</summary>
+        private void BuildTabs()
         {
-            var tabGo = Instantiate(TabButtonTemplate, TabContainer);
-            tabGo.SetActive(true);
-            tabGo.name = "Tab_" + label;
+            if (Controller?.Achievements == null) return;
 
-            var text = tabGo.GetComponentInChildren<TMP_Text>();
-            if (text != null) text.text = label;
+            if (AllTabButton != null)
+                AllTabButton.onClick.AddListener(() =>
+                {
+                    selectedCategories.Clear();
+                    unlockedOnlyFilter = false;
+                    if (FilterDropdownPanel != null) FilterDropdownPanel.SetActive(false);
+                    RefreshFilterButtonLabel();
+                    ApplyFilter();
+                });
 
-            var button = tabGo.GetComponent<Button>();
-            int index = tabButtons.Count;
-            tabButtons.Add(button);
-            button.onClick.AddListener(() =>
-            {
-                activeCategory = category;
-                unlockedOnlyFilter = false;
-                SetActiveTab(index);
-                ApplyFilter();
-            });
+            if (AchievedTabButton != null)
+                AchievedTabButton.onClick.AddListener(() =>
+                {
+                    unlockedOnlyFilter = true;
+                    if (FilterDropdownPanel != null) FilterDropdownPanel.SetActive(false);
+                    ApplyFilter();
+                });
+
+            if (FilterButton != null)
+                FilterButton.onClick.AddListener(() =>
+                {
+                    if (FilterDropdownPanel != null) FilterDropdownPanel.SetActive(!FilterDropdownPanel.activeSelf);
+                });
+
+            BuildFilterDropdown();
         }
 
-        private void SetActiveTab(int index)
+        /// <summary>One checkbox row per category that actually has at least one achievement.
+        /// Reuses the same small-square checkbox visual language as the Settings screen redesign
+        /// (2026-08-09) instead of introducing a new control style.</summary>
+        private void BuildFilterDropdown()
         {
-            for (int i = 0; i < tabButtons.Count; i++)
+            if (FilterDropdownContent == null || FilterCheckboxTemplate == null) return;
+
+            var categoriesPresent = Controller.Achievements.AllDefinitions
+                .Select(d => d.category)
+                .Distinct()
+                .OrderBy(c => c)
+                .ToList();
+
+            foreach (var cat in categoriesPresent)
             {
-                var img = tabButtons[i].GetComponent<Image>();
-                if (img == null) continue;
-                // Metallic tab body (2026-08-09) instead of a flat solid-color square - active vs
-                // inactive is still a tint on the same shaped sprite, just no longer a bare rect.
-                if (TabBackgroundSprite != null && img.sprite != TabBackgroundSprite)
+                var rowGo = Instantiate(FilterCheckboxTemplate, FilterDropdownContent);
+                rowGo.SetActive(true);
+                rowGo.name = "FilterRow_" + cat;
+
+                var label = rowGo.transform.Find("Label")?.GetComponent<TMP_Text>();
+                if (label != null) label.text = SplitCategoryName(cat);
+
+                var checkbox = rowGo.transform.Find("Checkbox")?.GetComponent<Button>();
+                var checkboxImg = checkbox?.GetComponent<Image>();
+                if (checkbox != null)
                 {
-                    img.sprite = TabBackgroundSprite;
-                    img.type = Image.Type.Simple;
+                    checkbox.onClick.AddListener(() =>
+                    {
+                        if (!selectedCategories.Remove(cat)) selectedCategories.Add(cat);
+                        unlockedOnlyFilter = false;
+                        RefreshFilterCheckboxVisuals();
+                        RefreshFilterButtonLabel();
+                        ApplyFilter();
+                    });
                 }
-                img.color = i == index ? TabActiveColor : TabInactiveColor;
+                filterCheckboxes.Add((cat, checkboxImg));
             }
+            RefreshFilterCheckboxVisuals();
+        }
+
+        private readonly List<(AchievementCategory cat, Image checkboxImg)> filterCheckboxes = new List<(AchievementCategory, Image)>();
+        private static readonly Color CheckboxOnColor = new Color(0.35f, 0.55f, 0.3f, 1f);
+        private static readonly Color CheckboxOffColor = new Color(0.3f, 0.27f, 0.2f, 1f);
+
+        private void RefreshFilterCheckboxVisuals()
+        {
+            foreach (var (cat, img) in filterCheckboxes)
+                if (img != null) img.color = selectedCategories.Contains(cat) ? CheckboxOnColor : CheckboxOffColor;
+        }
+
+        private void RefreshFilterButtonLabel()
+        {
+            if (FilterButton == null) return;
+            var text = FilterButton.GetComponentInChildren<TMP_Text>();
+            if (text == null) return;
+            text.text = selectedCategories.Count == 0 ? "Filter ▾" : $"Filter ({selectedCategories.Count}) ▾";
         }
 
         private void BuildCards()
@@ -364,7 +387,7 @@ namespace ClickerGenesis.Core
                 bool unlocked = Controller.Achievements.IsUnlocked(card.Def.id);
                 bool categoryMatch = unlockedOnlyFilter
                     ? unlocked
-                    : (activeCategory == null || card.Def.category == activeCategory.Value);
+                    : (selectedCategories.Count == 0 || selectedCategories.Contains(card.Def.category));
 
                 bool reveal = unlocked || !card.Def.spoiler;
                 string visibleName = reveal ? card.Def.displayName : HiddenAchievementName;
