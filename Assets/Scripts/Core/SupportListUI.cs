@@ -183,7 +183,10 @@ namespace ClickerGenesis.Core
                 bool parentReady = parentDef.HasManager
                     ? scribes.IsManagerUnlocked(row.TierIndex)
                     : scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
-                bool verseReached = Controller.NextVerseIndex >= subDef.unlockAtVerseIndex;
+                // Strictly greater-than (2026-08-09, same real fix as ScribeSystem.IsManagerVerseReached):
+                // NextVerseIndex is a count of verses already bought, so ">=" treated a verse as
+                // "reached" the instant the cursor arrived at it, before it was actually purchased.
+                bool verseReached = Controller.NextVerseIndex > subDef.unlockAtVerseIndex;
                 bool allRequirementsMet = parentReady && verseReached;
 
                 if (owned)

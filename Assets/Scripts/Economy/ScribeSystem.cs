@@ -55,9 +55,20 @@ namespace ClickerGenesis.Economy
 
         public int GetOwned(int tierIndex) => owned[tierIndex];
 
-        /// <summary>Whether the player has bought enough verses to unlock this tier for purchase.</summary>
-        public bool IsUnlocked(int tierIndex, int currentVerseIndex) =>
-            currentVerseIndex >= config.tiers[tierIndex].unlockAtVerseIndex;
+        /// <summary>Whether the player has bought enough verses to unlock this tier for purchase.
+        /// Tier 0 is always this book's bootstrap scribe - it stays available with ZERO verses
+        /// purchased, since scribe income is how a player affords to buy any verse at all (real
+        /// user correction 2026-08-09: "the only thing that needs to be unlocked is the first
+        /// item in scribes because you can't earn the ink if you don't have ink"). Every other
+        /// tier requires the trigger verse to be ACTUALLY BOUGHT, not merely "reached" -
+        /// currentVerseIndex is a count of verses already owned (the index of the next unbought
+        /// verse), so the old `>=` check treated verse N as done the instant the cursor arrived
+        /// at N, before it was actually purchased. Real fix: strictly greater-than.</summary>
+        public bool IsUnlocked(int tierIndex, int currentVerseIndex)
+        {
+            if (tierIndex == 0) return true;
+            return currentVerseIndex > config.tiers[tierIndex].unlockAtVerseIndex;
+        }
 
         public float GetOwnedMilestoneMultiplier(int tierIndex) => MilestoneCurve.GetMultiplier(owned[tierIndex]);
 
@@ -120,7 +131,8 @@ namespace ClickerGenesis.Economy
             bool parentReady = def.HasManager ? managerUnlocked[tierIndex] : IsUnlocked(tierIndex, currentVerseIndex);
             if (!parentReady) return false;
             var sub = def.submanagers[subIndex];
-            return currentVerseIndex >= sub.unlockAtVerseIndex;
+            // Strictly greater-than (2026-08-09) - same real fix as IsManagerVerseReached.
+            return currentVerseIndex > sub.unlockAtVerseIndex;
         }
 
         /// <summary>Marks a submanager as hired. Caller is responsible for spending Ink first (same
@@ -192,8 +204,14 @@ namespace ClickerGenesis.Economy
         /// itself is still buyable long before its manager's real narrative moment arrives (a real
         /// bug: using the same field for both meant Reed Pen, the starter scribe, couldn't be
         /// bought until verse 26, since that's Adam's own first mention).</summary>
+        /// <summary>No bootstrap exception here, unlike IsUnlocked - real user correction
+        /// 2026-08-09: "it doesn't matter if they're unlockable at the first verse... it doesn't
+        /// matter if they bought the book, if they haven't paid for the first verse, it's
+        /// locked." Even tier 0's own manager (e.g. Cyrus in Ezra, whose real first mention is
+        /// Ezra 1:1) must wait for that verse to be actually purchased - only the tier's own
+        /// scribe production slot gets the bootstrap pass.</summary>
         public bool IsManagerVerseReached(int tierIndex, int currentVerseIndex) =>
-            currentVerseIndex >= config.tiers[tierIndex].managerUnlockAtVerseIndex;
+            currentVerseIndex > config.tiers[tierIndex].managerUnlockAtVerseIndex;
 
         public bool CanUnlockManager(int tierIndex, int playerLevel, int currentVerseIndex) =>
             IsManagerLevelEligible(tierIndex, playerLevel) && !managerUnlocked[tierIndex]

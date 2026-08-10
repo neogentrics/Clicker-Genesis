@@ -247,21 +247,28 @@ namespace ClickerGenesis.Core
             bookProgress.TryGetValue(resourceId, out var b) && b.IsComplete;
 
         /// <summary>True if resourceId can become the active book right now: unlocked via the
-        /// Grace tree (or it's Genesis, always free). The old "immediately-preceding canonical book
-        /// must be complete" gate is GONE (2026-08-09, player-choice book unlocking redesign) -
-        /// once the Book Progression branch's generic slots let a player unlock books in whatever
-        /// order they actually want (see BookProgressionTreeBuilder), a fixed canonical-neighbor
-        /// completion requirement no longer describes a coherent chain - the "neighbor" might not
-        /// even be a book the player has touched yet. Spending real Grace on the unlock slot is
-        /// itself the gate now; once a book is unlocked, it's freely switchable.</summary>
+        /// Grace tree (or it's Genesis, always free) AND the player's CURRENTLY ACTIVE book is
+        /// already complete. RESTORED 2026-08-09 (real user correction, reverses the "player-choice
+        /// book unlocking redesign" note below): the Book Progression branch letting a player
+        /// unlock books out of canonical order does NOT mean they can freely bounce between books
+        /// mid-progress - "you open Genesis, but you unlock Exodus mid play, you can't just switch
+        /// to Exodus and not finish Genesis... this is for economy's sake." The gate is on the
+        /// ACTIVE book specifically (not a fixed canonical neighbor), so it still works regardless
+        /// of unlock order: whichever book you're currently in must be finished before switching to
+        /// any other one. Switching back to the already-active book is always allowed (no-op).</summary>
         public bool CanSwitchToBook(string resourceId)
         {
             if (string.IsNullOrEmpty(resourceId)) return false;
+            if (resourceId == activeBookResourceId) return true;
             // Gates on SkillsV2 only (2026-08-09) - the old tree is deprecated and no longer the
             // source of truth for book unlocks. Books already unlocked via the old tree are
             // migrated into SkillsV2's own unlockedBookIds once, in ApplySaveData, so existing
             // progress isn't lost even though this check no longer reads the old system directly.
-            return resourceId == startingBookResourceId || (SkillsV2 != null && SkillsV2.IsBookUnlocked(resourceId));
+            bool unlocked = resourceId == startingBookResourceId || (SkillsV2 != null && SkillsV2.IsBookUnlocked(resourceId));
+            if (!unlocked) return false;
+            // A book never switched to yet has no BookProgress record - IsBookComplete correctly
+            // returns false for it, same as "not started" being treated as "not finished."
+            return string.IsNullOrEmpty(activeBookResourceId) || IsBookComplete(activeBookResourceId);
         }
 
         /// <summary>Switches the active book to resourceId, lazy-loading its VerseDatabase on
