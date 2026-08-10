@@ -30,6 +30,9 @@ namespace ClickerGenesis.Economy
 
         [Tooltip("Ink cost to hire this submanager once their verse is reached.")]
         public double unlockCost;
+
+        [Tooltip("2026-08-09, user's explicit design call (Leviticus - Aaron moved here from being his own manager): true only for a submanager whose perkAmount applies book-wide, to every Law-type manager tier in this same book, rather than just boosting their own parent tier (the usual \"loyalty-boost\" behavior). Independent of perkFlavor - set both isBookWidePatron=true AND perkFlavor=\"book-wide-boost\" together.")]
+        public bool isBookWidePatron;
     }
 
     /// <summary>
@@ -90,6 +93,9 @@ namespace ClickerGenesis.Economy
 
         [Tooltip("Output multiplier bonus while the manager is active, e.g. 0.25 = +25%.")]
         public float managerBonusMultiplier = 0.25f;
+
+        [Tooltip("2026-08-09, user's explicit design call (Leviticus): true only for a manager who is the sole person actually WRITING/administering a whole set of sibling Law tiers (e.g. Aaron for Leviticus's offerings), rather than managing their own tier's own production. While active, this manager's managerBonusMultiplier applies ADDITIONALLY to every OTHER tier in the same book's roster, on top of each tier's own manager bonus - see ScribeSystem.GetTierInkPerSecond.")]
+        public bool isBookWidePatron;
 
         [Tooltip("Ink cost to unlock this manager once the level threshold is reached (REVISED 2026-08-04 - managers no longer auto-unlock by level alone). 0 = free (Adam, the first manager, per the personalization-hook pattern used for the free starting book).")]
         public double managerUnlockCost;

@@ -51,6 +51,10 @@ namespace ClickerGenesis.Core
         public Button OrientationCycleButton;
         public TMP_Text OrientationLabel;
 
+        [Header("Scroll Speed (2026-08-09, bug #86) - real cross-platform control, applies to every scrollable list via ScrollSpeedApplier")]
+        public Button ScrollSpeedCycleButton;
+        public TMP_Text ScrollSpeedLabel;
+
         [Header("Back to Game (2026-08-04) - only shown when reached from actual gameplay, not from MainMenu")]
         public GameObject BackToGameButton;
 
@@ -85,6 +89,7 @@ namespace ClickerGenesis.Core
             if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
             if (OrientationCycleButton != null) OrientationCycleButton.onClick.AddListener(CycleOrientation);
             if (!GameSettings.IsOrientationLockSupported) OrientationCycleButton?.gameObject.SetActive(false);
+            if (ScrollSpeedCycleButton != null) ScrollSpeedCycleButton.onClick.AddListener(CycleScrollSpeed);
             if (DeleteSaveButton != null) DeleteSaveButton.onClick.AddListener(ShowDeleteConfirm);
             if (DeleteConfirmYesButton != null) DeleteConfirmYesButton.onClick.AddListener(HandleDeleteConfirmYes);
             if (DeleteConfirmNoButton != null) DeleteConfirmNoButton.onClick.AddListener(HandleDeleteConfirmNo);
@@ -214,6 +219,33 @@ namespace ClickerGenesis.Core
             };
         }
 
+        // Slow/Normal/Fast/Very Fast - concrete scrollSensitivity values a player can cycle
+        // through without needing to understand what "sensitivity" means numerically. 25 (Normal)
+        // matches the value hand-picked for the Active Upgrades panel fix (bug #79), so a player
+        // who never touches this setting gets that same baseline everywhere.
+        private static readonly (string label, float value)[] ScrollSpeedSteps =
+        {
+            ("Slow", 12f), ("Normal", 25f), ("Fast", 40f), ("Very Fast", 60f),
+        };
+
+        private void CycleScrollSpeed()
+        {
+            int current = 0;
+            for (int i = 0; i < ScrollSpeedSteps.Length; i++)
+                if (Mathf.Approximately(ScrollSpeedSteps[i].value, GameSettings.ScrollSpeed)) { current = i; break; }
+            GameSettings.ScrollSpeed = ScrollSpeedSteps[(current + 1) % ScrollSpeedSteps.Length].value;
+            RefreshScrollSpeed();
+        }
+
+        private void RefreshScrollSpeed()
+        {
+            if (ScrollSpeedLabel == null) return;
+            string label = "Normal";
+            foreach (var step in ScrollSpeedSteps)
+                if (Mathf.Approximately(step.value, GameSettings.ScrollSpeed)) { label = step.label; break; }
+            ScrollSpeedLabel.text = "Scroll Speed: " + label;
+        }
+
         private void RefreshAll()
         {
             RefreshSound();
@@ -224,6 +256,7 @@ namespace ClickerGenesis.Core
             RefreshBatterySaver();
             RefreshRunInBackground();
             RefreshOrientation();
+            RefreshScrollSpeed();
         }
 
         private void RefreshSound()

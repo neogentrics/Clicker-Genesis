@@ -1442,6 +1442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952047649}
   - component: {fileID: 952047650}
+  - component: {fileID: 952047651}
   m_Layer: 0
   m_Name: TabScrollView
   m_TagString: Untagged
@@ -1499,6 +1500,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &952047651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952047648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eadeb5d722c7f044ea515ff2aa54ea02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ScrollSpeedApplier
 --- !u!1 &955264985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1151652488}
   - component: {fileID: 1151652489}
+  - component: {fileID: 1151652490}
   m_Layer: 0
   m_Name: AchievementScrollView
   m_TagString: Untagged
@@ -2152,6 +2166,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1151652490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151652487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eadeb5d722c7f044ea515ff2aa54ea02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ScrollSpeedApplier
 --- !u!1 &1161856351
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,15 +3017,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15, g: 0.1, b: 0.06, a: 0.4}
+  m_Color: {r: 0.55, g: 0.42, b: 0.25, a: 0.55}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 6cc7a94ec8aa0dc469a482a88d507d37, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -3300,7 +3326,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1860, y: 90}
+  m_SizeDelta: {x: 0, y: 90}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1941451295
 MonoBehaviour:

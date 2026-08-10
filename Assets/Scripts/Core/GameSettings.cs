@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ClickerGenesis.Core
@@ -21,6 +22,7 @@ namespace ClickerGenesis.Core
         private const string ManagerAutoBuyEnabledKey = "ClickerGenesis.ManagerAutoBuyEnabled";
         private const string ManagerAutoBuyReserveIndexKey = "ClickerGenesis.ManagerAutoBuyReserveIndex";
         private const string OrientationKey = "ClickerGenesis.Orientation";
+        private const string ScrollSpeedKey = "ClickerGenesis.ScrollSpeed";
 
         public static event System.Action OnChanged;
 
@@ -45,6 +47,26 @@ namespace ClickerGenesis.Core
         /// it there (still recomputes the reference resolution live either way).</summary>
         public static bool IsOrientationLockSupported =>
             Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer;
+
+        /// <summary>Real cross-platform ScrollRect.scrollSensitivity control (2026-08-09, bug #86 -
+        /// the user's explicit ask after the Active Upgrades panel's own scroll-too-slow bug turned
+        /// out to be a layout defect, not something this setting alone could have fixed, but a real
+        /// in-game speed control was still missing entirely). One shared value applied to every
+        /// scrollable list in the game (Scribes/Managers/Support, Verses/Chapters/Books, the Skill
+        /// Tree's pan, Stats, Achievements, Active Upgrades) via ScrollSpeedApplier, rather than a
+        /// per-screen setting - a player who finds scrolling too slow/fast almost certainly means it
+        /// everywhere, not on one specific list. Default 25 matches the value hand-picked for the
+        /// Active Upgrades panel fix; range clamped to keep it usable at either extreme.</summary>
+        public static float ScrollSpeed
+        {
+            get => PlayerPrefs.GetFloat(ScrollSpeedKey, 25f);
+            set
+            {
+                PlayerPrefs.SetFloat(ScrollSpeedKey, Mathf.Clamp(value, 5f, 80f));
+                PlayerPrefs.Save();
+                OnChanged?.Invoke();
+            }
+        }
 
         public static NumberNotation Notation
         {
@@ -183,23 +205,44 @@ namespace ClickerGenesis.Core
         /// wallet to zero when the player is trying to save up for something else. Index-based
         /// (not a raw float) since Ink balances run into the hundreds of millions and PlayerPrefs
         /// floats lose precision there - same reasoning as the multiplier-tier arrays elsewhere.
-        /// Extended past 1M (2026-08-06, real user report - the old 5-tier list capped out and
-        /// wrapped back to 0 the moment a real playthrough's Ink balance grew past it). Still a
-        /// fixed preset list, not the "scale relative to lifetime-max Ink held" version noted in
-        /// the Roadmap as a future Statistics-screen-driven feature - this just gives it real
-        /// headroom in the meantime.</summary>
-        public static readonly double[] ManagerAutoBuyReserveTiers =
+        /// Extended past 1M (2026-08-06), then to a fixed 1e36 ladder (2026-08-09) after a real
+        /// endgame save outgrew the old 1T ceiling - both superseded same-day by this dynamic
+        /// generator, per the user's explicit correction: the tier list should track the player's
+        /// own real lifetime Ink earned (the same figure the Stats screen shows), not an arbitrary
+        /// fixed ceiling picked in advance. Steps in a repeating [1, 10, 50, 100, 500] pattern per
+        /// order-of-magnitude "decade" (0-500, then 1K-500K, then 1M-500M, ...), stopping at the
+        /// highest step that does not exceed lifetimeInkEarned - e.g. a player who has earned
+        /// 166Qa lifetime sees tiers only up to 100Qa (500Qa would exceed it), matching the user's
+        /// own worked example exactly. Recomputed live off InkWallet.LifetimeEarned rather than
+        /// cached, so the available tiers grow automatically as the player's lifetime total
+        /// grows - see GameLoopController.ManagerAutoBuyReserve/CycleManagerAutoBuyReserve for the
+        /// call sites that supply the live lifetimeInkEarned value.</summary>
+        public static double[] GenerateReserveTiers(double lifetimeInkEarned)
         {
-            0, 1_000, 10_000, 100_000, 1_000_000, 10_000_000, 100_000_000,
-            1_000_000_000, 10_000_000_000, 100_000_000_000, 1_000_000_000_000
-        };
+            var tiers = new List<double> { 0 };
+            double magnitude = 1;
+            double[] stepsInDecade = { 1, 10, 50, 100, 500 };
+
+            while (magnitude <= 1e300)
+            {
+                bool addedAny = false;
+                foreach (var step in stepsInDecade)
+                {
+                    double value = step * magnitude;
+                    if (value > lifetimeInkEarned) return tiers.ToArray();
+                    tiers.Add(value);
+                    addedAny = true;
+                }
+                if (!addedAny) break;
+                magnitude *= 1000;
+            }
+            return tiers.ToArray();
+        }
 
         public static int ManagerAutoBuyReserveIndex
         {
-            get => Mathf.Clamp(PlayerPrefs.GetInt(ManagerAutoBuyReserveIndexKey, 0), 0, ManagerAutoBuyReserveTiers.Length - 1);
+            get => Mathf.Max(0, PlayerPrefs.GetInt(ManagerAutoBuyReserveIndexKey, 0));
             set { PlayerPrefs.SetInt(ManagerAutoBuyReserveIndexKey, value); PlayerPrefs.Save(); }
         }
-
-        public static double ManagerAutoBuyReserve => ManagerAutoBuyReserveTiers[ManagerAutoBuyReserveIndex];
     }
 }

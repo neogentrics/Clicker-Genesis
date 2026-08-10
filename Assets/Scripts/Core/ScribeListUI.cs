@@ -258,11 +258,19 @@ namespace ClickerGenesis.Core
                 // (2026-08-08) - frees room here as more bonus lines get appended.
                 if (row.OwnedBadgeText != null) row.OwnedBadgeText.text = owned.ToString();
                 row.OwnedText.text = $"{NumberFormatter.Format(scribes.GetTierInkPerSecond(i, level, Controller.ProgressMultiplier, managerBonusBoost))} Ink/s";
-                string quantityPrefix = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
-                    ? "Max  "
-                    : Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
-                row.CostText.text = $"{quantityPrefix}{NumberFormatter.Format(cost)} Ink";
-                row.BuyButton.interactable = Controller.Wallet.Balance >= cost;
+                if (owned >= ClickerGenesis.Economy.MilestoneCurve.MaxOwned)
+                {
+                    row.CostText.text = "MAXED";
+                    row.BuyButton.interactable = false;
+                }
+                else
+                {
+                    string quantityPrefix = Controller.ScribeBuyMultiplier == GameLoopController.MaxBuyMultiplier
+                        ? "Max  "
+                        : Controller.ScribeBuyMultiplier > 1 ? $"x{Controller.ScribeBuyMultiplier}  " : "";
+                    row.CostText.text = $"{quantityPrefix}{NumberFormatter.Format(cost)} Ink";
+                    row.BuyButton.interactable = Controller.Wallet.Balance >= cost;
+                }
             }
 
             // NOT calling UiRefreshUtil.ForceFullRefresh here on purpose - Refresh() runs every

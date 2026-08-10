@@ -28,18 +28,19 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 0.4
     unlockAtVerseIndex: 0
-    managerName: Aaron
+    managerName: 
     managerFlavorText: A goat sent into the wilderness bearing the sins of the people
       on the Day of Atonement.
-    managerUnlockLevel: 3
-    managerUnlockAtVerseIndex: 172
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 150
+    isBookWidePatron: 0
+    managerUnlockCost: 0
     submanagers: []
   - id: altar_flame
     displayName: Altar Flame
     flavorText: The burnt offering - herd, flock, or fowl, wholly consumed.
-    tierType: 1
+    tierType: 0
     purpose: Wholly consumed on the altar - nothing kept back for the offerer. Teaches
       total, unreserved surrender/devotion to God as the starting posture for approaching
       a holy God at all.
@@ -51,17 +52,26 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 0.84
     unlockAtVerseIndex: 0
-    managerName: 
+    managerName: Altar Flame
     managerFlavorText: 
-    managerUnlockLevel: 0
+    managerUnlockLevel: 1
     managerUnlockAtVerseIndex: 0
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
-    submanagers: []
+    isBookWidePatron: 0
+    managerUnlockCost: 50.4
+    submanagers:
+    - id: aaron
+      displayName: Aaron
+      icon: {fileID: 0}
+      perkFlavor: book-wide-boost
+      perkAmount: 0.25
+      unlockAtVerseIndex: 172
+      unlockCost: 201.6
+      isBookWidePatron: 1
   - id: fine_flour
     displayName: Fine Flour
     flavorText: The grain offering - fine flour, oil, and frankincense.
-    tierType: 1
+    tierType: 0
     purpose: The one bloodless offering - fine flour, oil, and frankincense. Represents
       the fruit of ordinary daily labor being given back to God, not just dramatic
       sacrifice.
@@ -73,17 +83,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 1.76
     unlockAtVerseIndex: 17
-    managerName: 
+    managerName: Fine Flour
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 17
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 105.3
     submanagers: []
   - id: fellowship_portion
     displayName: Fellowship Portion
     flavorText: The peace offering - a shared meal representing restored fellowship.
-    tierType: 1
+    tierType: 0
     purpose: The only offering where the offerer eats part of the meat themselves,
       alongside the priest's portion and God's portion (the fat, burnt on the altar)
       - a shared meal representing restored fellowship, not just atonement.
@@ -95,17 +106,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 3.68
     unlockAtVerseIndex: 33
-    managerName: 
+    managerName: Fellowship Portion
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 33
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 220.8
     submanagers: []
   - id: blood_basin
     displayName: Blood Basin
     flavorText: The sin offering - scaled to the offender's own status.
-    tierType: 1
+    tierType: 0
     purpose: Addresses unintentional sin, with the required animal scaled to the
       offender's status (priest, whole congregation, ruler, or common person) - teaches
       that sin has real weight regardless of intent, but also that provision for
@@ -118,17 +130,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 7.71
     unlockAtVerseIndex: 50
-    managerName: 
+    managerName: Blood Basin
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 50
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 462.6
     submanagers: []
   - id: restitution_scale
     displayName: Restitution Scale
     flavorText: The trespass offering - restitution plus a fifth part added.
-    tierType: 1
+    tierType: 0
     purpose: Specifically for sins involving damage or deception against God or a
       neighbor - requires restitution PLUS a fifth added on top, not just a sacrifice.
       Teaches that wronging someone isn't fixed by ritual alone; the actual harm
@@ -141,17 +154,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 16.15
     unlockAtVerseIndex: 98
-    managerName: 
+    managerName: Restitution Scale
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 2
+    managerUnlockAtVerseIndex: 98
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 969.3
     submanagers: []
   - id: cloven_hoof
     displayName: Cloven Hoof
     flavorText: Clean and unclean animals - a daily reminder woven into every meal.
-    tierType: 1
+    tierType: 0
     purpose: Dietary law - animals that both chew the cud and part the hoof are clean.
       Functions as a constant, daily, embodied reminder that Israel is set apart
       from the surrounding nations, woven into something as ordinary as every meal.
@@ -163,17 +177,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 33.84
     unlockAtVerseIndex: 252
-    managerName: 
+    managerName: Cloven Hoof
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 252
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 2030.7
     submanagers: []
   - id: leprosy_cloth
     displayName: Leprosy Cloth
     flavorText: Purity laws - childbirth, skin disease, mold, and bodily discharges.
-    tierType: 1
+    tierType: 0
     purpose: Covers childbirth, skin disease, mold in clothing/houses, and bodily
       discharges - the common thread is anything involving blood, death, or decay
       disrupting the boundary between life and death that holiness requires guarding.
@@ -185,17 +200,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 70.91
     unlockAtVerseIndex: 299
-    managerName: 
+    managerName: Leprosy Cloth
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 299
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 4254.9
     submanagers: []
   - id: holiness_tablet
     displayName: Holiness Tablet
     flavorText: The Holiness Code - "thou shalt love thy neighbour as thyself."
-    tierType: 1
+    tierType: 0
     purpose: 'Extends holiness from ritual into ethics - sexual morality, honesty
       in business, care for the poor and the stranger, honoring the elderly. Explicitly
       grounds all of it in one repeated line: ''Ye shall be holy: for I the LORD
@@ -208,17 +224,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 148.58
     unlockAtVerseIndex: 506
-    managerName: 
+    managerName: Holiness Tablet
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 506
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 8914.8
     submanagers: []
   - id: golden_lampstand
     displayName: Golden Lampstand
     flavorText: Priestly regulations and the tabernacle's ever-burning lamp.
-    tierType: 1
+    tierType: 0
     purpose: Sets stricter purity standards for priests than for ordinary Israelites
       since they mediate directly at the altar, then turns to the tabernacle's ongoing
       daily/weekly maintenance (the lamp, the showbread) - closing with a real test
@@ -231,17 +248,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 311.32
     unlockAtVerseIndex: 600
-    managerName: 
+    managerName: Golden Lampstand
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 600
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 18678.9
     submanagers: []
   - id: feast_scroll
     displayName: Feast Scroll
     flavorText: The seven feasts - Israel's year bound to the LORD's own acts.
-    tierType: 1
+    tierType: 0
     purpose: A full annual calendar binding the nation's sense of time itself to
       God's actions - deliverance (Passover, Unleavened Bread), harvest and provision
       (Firstfruits, Weeks), and a run of autumn feasts (Trumpets, Atonement, Tabernacles)
@@ -255,17 +273,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 652.29
     unlockAtVerseIndex: 657
-    managerName: 
+    managerName: Feast Scroll
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 657
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 39137.1
     submanagers: []
   - id: jubilee_trumpet
     displayName: Jubilee Trumpet
     flavorText: The Year of Jubilee - land and liberty restored every fiftieth year.
-    tierType: 1
+    tierType: 0
     purpose: Every 50th year, land returns to its original family and debt-slaves
       go free - a hard economic reset built into the calendar itself. Teaches that
       the land ultimately belongs to God ('the land is mine,' 25:23), not to whoever
@@ -279,17 +298,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 1366.71
     unlockAtVerseIndex: 724
-    managerName: 
+    managerName: Jubilee Trumpet
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 724
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 82002.6
     submanagers: []
   - id: covenant_ledger
     displayName: Covenant Ledger
     flavorText: Blessings and curses - the nation's future tied to covenant faithfulness.
-    tierType: 1
+    tierType: 0
     purpose: Closes the legal core of the book by tying the WHOLE nation's future
       - not just individual behavior - to covenant faithfulness, with real, escalating
       consequences laid out either direction. Functions as the book's own built-in
@@ -302,17 +322,18 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 2863.61
     unlockAtVerseIndex: 779
-    managerName: 
+    managerName: Covenant Ledger
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 779
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 171816.3
     submanagers: []
   - id: vow_tablet
     displayName: Vow Tablet
     flavorText: Vows and tithes - what is voluntarily devoted to God.
-    tierType: 1
+    tierType: 0
     purpose: The valuation of vowed persons, animals, houses, and land, and the tithe.
       Ends the book on the theme of what's voluntarily and formally devoted to God,
       as a deliberate counterpart to the involuntary, required offerings that opened
@@ -325,10 +346,11 @@ MonoBehaviour:
     costGrowthRate: 1.15
     baseInkPerSecond: 6000
     unlockAtVerseIndex: 825
-    managerName: 
+    managerName: Vow Tablet
     managerFlavorText: 
-    managerUnlockLevel: 0
-    managerUnlockAtVerseIndex: 0
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 825
     managerBonusMultiplier: 0.25
-    managerUnlockCost: 0
+    isBookWidePatron: 0
+    managerUnlockCost: 360000
     submanagers: []

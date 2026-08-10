@@ -257,7 +257,11 @@ namespace ClickerGenesis.Core
         public bool CanSwitchToBook(string resourceId)
         {
             if (string.IsNullOrEmpty(resourceId)) return false;
-            return resourceId == startingBookResourceId || (Skills != null && Skills.IsBookUnlocked(resourceId));
+            // Gates on SkillsV2 only (2026-08-09) - the old tree is deprecated and no longer the
+            // source of truth for book unlocks. Books already unlocked via the old tree are
+            // migrated into SkillsV2's own unlockedBookIds once, in ApplySaveData, so existing
+            // progress isn't lost even though this check no longer reads the old system directly.
+            return resourceId == startingBookResourceId || (SkillsV2 != null && SkillsV2.IsBookUnlocked(resourceId));
         }
 
         /// <summary>Switches the active book to resourceId, lazy-loading its VerseDatabase on
@@ -343,11 +347,26 @@ namespace ClickerGenesis.Core
             OnStateChanged?.Invoke();
         }
 
-        public double ManagerAutoBuyReserve => GameSettings.ManagerAutoBuyReserve;
+        /// <summary>Dynamic tier list scaled to the player's own real lifetime Ink earned (2026-08-09,
+        /// user's explicit correction to the earlier fixed 1e36 ladder) - see
+        /// GameSettings.GenerateReserveTiers for the [1,10,50,100,500]-per-decade pattern and why.</summary>
+        private double[] ReserveTiers => GameSettings.GenerateReserveTiers(Wallet.LifetimeEarned);
+
+        public double ManagerAutoBuyReserve
+        {
+            get
+            {
+                var tiers = ReserveTiers;
+                int idx = Mathf.Clamp(GameSettings.ManagerAutoBuyReserveIndex, 0, tiers.Length - 1);
+                return tiers[idx];
+            }
+        }
 
         public void CycleManagerAutoBuyReserve()
         {
-            int next = (GameSettings.ManagerAutoBuyReserveIndex + 1) % GameSettings.ManagerAutoBuyReserveTiers.Length;
+            var tiers = ReserveTiers;
+            int current = Mathf.Clamp(GameSettings.ManagerAutoBuyReserveIndex, 0, tiers.Length - 1);
+            int next = (current + 1) % tiers.Length;
             GameSettings.ManagerAutoBuyReserveIndex = next;
             OnStateChanged?.Invoke();
         }
@@ -620,9 +639,16 @@ namespace ClickerGenesis.Core
             // Loops every registered book's roster (2026-08-08, multi-book economy), not just the
             // active one - a manager keeps auto-buying for a book you've switched away from, same
             // "scribes keep working in the background" rule EffectiveInkPerSecond follows.
+            // Real bug fix (2026-08-09, user report - "this hasn't been the case in any of the
+            // last four iterations"): this loop bought exactly one unit per tier per tick no
+            // matter what ScribeBuyMultiplier was set to, so a x5 multiplier with a large reserve
+            // still only ever bought 1 at a time. Now buys up to the multiplier per tier per tick
+            // (or as many as the reserve allows, for the Max multiplier), same semantics as a
+            // manual BuyScribeBulk click.
             if (GameSettings.ManagerAutoBuyEnabled)
             {
-                double reserve = GameSettings.ManagerAutoBuyReserve;
+                double reserve = ManagerAutoBuyReserve;
+                int perTierLimit = ScribeBuyMultiplier == MaxBuyMultiplier ? int.MaxValue : ScribeBuyMultiplier;
                 foreach (var kvp in scribeSystemsByBook)
                 {
                     var sys = kvp.Value;
@@ -632,13 +658,19 @@ namespace ClickerGenesis.Core
                         if (!sys.IsManagerUnlocked(i)) continue;
                         if (!sys.IsUnlocked(i, verseIndex)) continue;
 
-                        double cost = sys.GetNextCost(i);
-                        if (Wallet.Balance - cost < reserve) continue;
-                        if (!Wallet.TrySpend(cost)) continue;
+                        int boughtThisTier = 0;
+                        while (boughtThisTier < perTierLimit && sys.GetOwned(i) < MilestoneCurve.MaxOwned)
+                        {
+                            double cost = sys.GetNextCost(i);
+                            if (Wallet.Balance - cost < reserve) break;
+                            if (!Wallet.TrySpend(cost)) break;
 
-                        sys.Buy(i);
-                        changed = true;
-                        Achievements.EvaluateStat(TrackedStat.ScribesOwned, TotalScribesOwnedAcrossAllBooks);
+                            sys.Buy(i);
+                            boughtThisTier++;
+                            changed = true;
+                        }
+                        if (boughtThisTier > 0)
+                            Achievements.EvaluateStat(TrackedStat.ScribesOwned, TotalScribesOwnedAcrossAllBooks);
                     }
                 }
             }
@@ -814,6 +846,15 @@ namespace ClickerGenesis.Core
             SkillsV2.LoadState(data.prestige.skillV2Ranks.Select(e => new KeyValuePair<string, int>(e.nodeId, e.rank)));
             SkillsV2.LoadUnlockedBooks(data.prestige.skillV2UnlockedBooks);
 
+            // One-time migration (2026-08-09): CanSwitchToBook now gates on SkillsV2 exclusively,
+            // not the old (deprecated) tree - but books already unlocked via the old tree on a
+            // real save must keep working without being re-bought. Union, not replace, so this is
+            // safe to run on every load (already-migrated books are no-ops).
+            var oldTreeUnlockedBooks = CanonicalBookOrder.Books
+                .Select(b => b.resourceId)
+                .Where(id => Skills != null && Skills.IsBookUnlocked(id));
+            SkillsV2.LoadUnlockedBooks(oldTreeUnlockedBooks);
+
             foreach (var entry in data.books)
             {
                 if (!bookProgress.TryGetValue(entry.resourceId, out var bp))
@@ -843,6 +884,7 @@ namespace ClickerGenesis.Core
         {
             if (Scribes == null) return false;
             if (!Scribes.IsUnlocked(tierIndex, NextVerseIndex)) return false;
+            if (Scribes.GetOwned(tierIndex) >= MilestoneCurve.MaxOwned) return false;
 
             double cost = Scribes.GetNextCost(tierIndex);
             if (!Wallet.TrySpend(cost)) return false;
@@ -915,7 +957,7 @@ namespace ClickerGenesis.Core
             int owned = Scribes.GetOwned(tierIndex);
             double remaining = Wallet.Balance;
             int count = 0;
-            while (true)
+            while (owned + count < MilestoneCurve.MaxOwned)
             {
                 double cost = def.baseCost * Math.Pow(def.costGrowthRate, owned + count);
                 if (cost > remaining) break;
@@ -951,6 +993,7 @@ namespace ClickerGenesis.Core
             int bought = 0;
             for (int i = 0; i < target; i++)
             {
+                if (Scribes.GetOwned(tierIndex) >= MilestoneCurve.MaxOwned) break;
                 double cost = Scribes.GetNextCost(tierIndex);
                 if (!Wallet.TrySpend(cost)) break;
                 Scribes.Buy(tierIndex);
@@ -1011,10 +1054,6 @@ namespace ClickerGenesis.Core
             Wallet.Add(EffectiveTapAmount);
             Achievements.Unlock("first_tap");
             Achievements.EvaluateStat(TrackedStat.LifetimeInk, (float)Wallet.LifetimeEarned);
-            // Tapping grants 0 XP normally - only starts granting XP once the player has
-            // performed at least one Reset-Prestige (2026-08-06, user's explicit ask).
-            if (xpConfig != null && Prestige.ResetPrestigeCount > 0)
-                Levels.AddXp(xpConfig.XpPerTapAfterReset);
             OnStateChanged?.Invoke();
         }
 
@@ -1149,16 +1188,24 @@ namespace ClickerGenesis.Core
             return true;
         }
 
-        /// <summary>Grace reward for prestiging right now, before the opt-in reset's 2.5x
-        /// multiplier. Uses Wallet.LifetimeEarned (never decreases on spend), not the current
-        /// spendable Balance - per the confirmed Grace formula.</summary>
-        public double PrestigeGracePreview =>
+        /// <summary>Base Grace reward before either path's multiplier is applied. Uses
+        /// Wallet.LifetimeEarned (never decreases on spend), not the current spendable Balance -
+        /// per the confirmed Grace formula.</summary>
+        private double BaseGraceReward =>
             PrestigeSystem.CalculateGraceReward(Wallet.LifetimeEarned, NextVerseIndex, ChaptersCompletedCount, BooksCompletedCount)
             * (1.0 + (Skills.GetTotalEffect(SkillEffectType.GraceGainBonus) + SkillsV2.GetTotalEffect(SkillEffectType.GraceGainBonus)));
 
         /// <summary>Grace reward including the opt-in reset path's 2.5x multiplier - shown as the
-        /// "with reset" preview alongside the plain PrestigeGracePreview.</summary>
-        public double PrestigeGracePreviewWithReset => PrestigeGracePreview * 2.5;
+        /// "with reset" preview.</summary>
+        public double PrestigeGracePreviewWithReset => BaseGraceReward * 2.5;
+
+        /// <summary>Grace reward for the free (no-reset) prestige path - deliberately just 1/4 of
+        /// what the same stats would earn via Reset-Prestige (2026-08-09, explicit user design
+        /// call: the free path must stay usable so nobody's locked out, but should be low enough
+        /// to push players toward resetting rather than casually grinding free prestiges forever -
+        /// "I want it to be low enough that it incentivizes doing the reset, but doesn't stop them
+        /// if they choose to still grind"). Supersedes the old plain-BaseGraceReward free amount.</summary>
+        public double PrestigeGracePreview => PrestigeGracePreviewWithReset / 4.0;
 
         /// <summary>
         /// Performs a prestige cycle. The free path only awards Grace - Level/XP, Ink, Click

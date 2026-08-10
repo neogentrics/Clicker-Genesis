@@ -82,8 +82,12 @@ namespace ClickerGenesis.Economy
         }
 
         /// <summary>Sum of every owned "loyalty-boost" submanager's perkAmount on this tier - added
-        /// on top of the tier's own managerBonusMultiplier in GetTierInkPerSecond (2026-08-06).</summary>
-        private double GetLoyaltyBoost(int tierIndex)
+        /// on top of the tier's own managerBonusMultiplier in GetTierInkPerSecond (2026-08-06).
+        /// Public (2026-08-09, real user report) so ManagerListUI can show the manager's real total
+        /// output bonus (base + loyalty-boost submanagers) on its own row, not just the base
+        /// managerBonusMultiplier - the row was silently under-reporting once a loyalty-boost
+        /// submanager was hired, e.g. showing "+25%" when the real total paid out was "+30%".</summary>
+        public double GetLoyaltyBoost(int tierIndex)
         {
             var def = config.tiers[tierIndex];
             if (def.submanagers == null) return 0;
@@ -102,13 +106,20 @@ namespace ClickerGenesis.Economy
         public bool IsSubmanagerOwned(int tierIndex, int subIndex) => submanagerOwned[tierIndex][subIndex];
 
         /// <summary>A submanager can only be hired once their own character's verse is reached AND
-        /// this tier's own manager is already active - a submanager assisting a manager who isn't
-        /// there yet doesn't make sense (2026-08-06).</summary>
+        /// their parent tier is "ready" - for a Person tier that means the manager itself has
+        /// been bought (2026-08-06); for a Law tier there is no manager to buy at all, so
+        /// "ready" instead means the law tier itself has been reached by verse progress
+        /// (2026-08-09, real bug fix - submanagers attached to a Law tier, e.g. Jezrahiah under
+        /// Nehemiah's "The Wall Dedication", previously required managerUnlocked[tierIndex],
+        /// which a Law tier NEVER sets true since it has no purchase step - this permanently
+        /// soft-locked every Law-tier submanager, never hireable regardless of verse progress).</summary>
         public bool CanBuySubmanager(int tierIndex, int subIndex, int currentVerseIndex, int playerLevel)
         {
             if (submanagerOwned[tierIndex][subIndex]) return false;
-            if (!managerUnlocked[tierIndex]) return false;
-            var sub = config.tiers[tierIndex].submanagers[subIndex];
+            var def = config.tiers[tierIndex];
+            bool parentReady = def.HasManager ? managerUnlocked[tierIndex] : IsUnlocked(tierIndex, currentVerseIndex);
+            if (!parentReady) return false;
+            var sub = def.submanagers[subIndex];
             return currentVerseIndex >= sub.unlockAtVerseIndex;
         }
 
@@ -220,9 +231,31 @@ namespace ClickerGenesis.Economy
         {
             var def = config.tiers[tierIndex];
             double output = def.baseInkPerSecond * owned[tierIndex] * GetOwnedMilestoneMultiplier(tierIndex) * progressMultiplier;
+            double bonus = 0;
             if (IsManagerActive(tierIndex, playerLevel))
-                output *= 1.0 + def.managerBonusMultiplier + managerBonusBoost + GetLoyaltyBoost(tierIndex);
+                bonus += def.managerBonusMultiplier + managerBonusBoost + GetLoyaltyBoost(tierIndex);
+            bonus += GetPatronBonus(tierIndex, playerLevel);
+            if (bonus > 0) output *= 1.0 + bonus;
             return output;
+        }
+
+        /// <summary>Sum of every owned "book-wide-patron" submanager's perkAmount anywhere in this
+        /// book's roster (2026-08-09, Leviticus redesign - Aaron writes down every law as a hired
+        /// submanager, not a manager of his own, so his bonus applies to every law tier at once).
+        /// Deliberately does NOT gate on the patron's own parent tier's manager being active -
+        /// hiring the submanager (CanBuySubmanager) already required that at purchase time; the
+        /// bonus itself should keep applying afterward even if playerLevel/state changes.</summary>
+        private double GetPatronBonus(int tierIndex, int playerLevel)
+        {
+            double total = 0;
+            for (int i = 0; i < config.tiers.Count; i++)
+            {
+                var subs = config.tiers[i].submanagers;
+                if (subs == null) continue;
+                for (int j = 0; j < subs.Count; j++)
+                    if (submanagerOwned[i][j] && subs[j].isBookWidePatron) total += subs[j].perkAmount;
+            }
+            return total;
         }
 
         public double TotalInkPerSecond(int playerLevel, float progressMultiplier = 1f, double managerBonusBoost = 0)

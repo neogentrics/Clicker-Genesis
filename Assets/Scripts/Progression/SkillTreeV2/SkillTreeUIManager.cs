@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using ClickerGenesis.Core;
 
 namespace ClickerGenesis.Progression.SkillTreeV2
 {
@@ -43,6 +45,33 @@ namespace ClickerGenesis.Progression.SkillTreeV2
         [SerializeField] private TMP_Text descriptionBodyLabel;
         [SerializeField] private TMP_Text graceReadoutLabel;
 
+        // 2026-08-09, bug #87: HandleNodeHoverExit was a no-op, so the description box kept
+        // showing whatever was last hovered even after the mouse left every node - and a purchase
+        // made while still hovering the same node (the confirm popup never moves the mouse off it)
+        // never re-triggered a fresh OnPointerEnter, so the rank/cost line went stale the instant
+        // you bought something. Track the currently-hovered node so both cases can be handled for
+        // real: hover-exit clears back to the idle prompt, and a successful purchase re-runs the
+        // hover-enter formatting against the node the player is still sitting on.
+        private const string IdleDescriptionTitle = "";
+        private const string IdleDescriptionBody = "Hover a node";
+        private SkillNodeUI hoveredNode;
+
+        [Header("Pan/Zoom (2026-08-09 - ScrollRect can't drive an externally-scaled Content, same")]
+        [Header("lesson as the deprecated tree's PannableArea rewrite - hand-rolled here instead)")]
+        [SerializeField] private Button zoomInButton;
+        [SerializeField] private Button zoomOutButton;
+        private const float MinZoom = 0.4f;
+        private const float MaxZoom = 1.5f;
+        private const float ZoomStep = 0.15f;
+
+        [Header("Purchase confirmation (2026-08-09 - the deprecated tree had a Yes/No popup")]
+        [Header("before spending Grace; ported over here since it was never re-added in V2)")]
+        [SerializeField] private GameObject confirmPanel;
+        [SerializeField] private TMP_Text confirmMessageLabel;
+        [SerializeField] private Button confirmYesButton;
+        [SerializeField] private Button confirmNoButton;
+        private SkillNodeData pendingPurchaseNode;
+
         private SkillTreeRuntimeState runtime;
 
         /// <summary>Read from the runtime state, not a separate [SerializeField] (2026-08-09 fix) -
@@ -66,9 +95,62 @@ namespace ClickerGenesis.Progression.SkillTreeV2
             runtime = ClickerGenesis.Core.GameLoopController.Instance.SkillsV2;
 
             BuildMainTree();
+            SetupPanZoom();
             if (masteryRoot != null) masteryRoot.SetActive(false);
             if (bookMenuPanel != null) bookMenuPanel.SetActive(false);
             RefreshAll();
+        }
+
+        // ================= Pan/Zoom =================
+        //
+        // ScrollRect's own bounds enforcement fights an externally-driven Content.localScale zoom
+        // (same failure mode already documented on the deprecated tree's PannableArea.cs) - rather
+        // than fight ScrollRect, disable it here and hand-roll drag-to-pan + scroll-wheel zoom as
+        // two independent systems, same fix that was already proven out there.
+
+        private void SetupPanZoom()
+        {
+            if (scrollRect != null) scrollRect.enabled = false;
+
+            if (content != null && content.parent != null)
+            {
+                var viewport = content.parent as RectTransform;
+                if (viewport != null)
+                {
+                    var image = viewport.GetComponent<Image>();
+                    if (image == null)
+                    {
+                        image = viewport.gameObject.AddComponent<Image>();
+                        image.color = new Color(0f, 0f, 0f, 0f); // fully transparent, still raycastable
+                    }
+                    image.raycastTarget = true;
+
+                    var pannable = viewport.GetComponent<PannableArea>();
+                    if (pannable == null) pannable = viewport.gameObject.AddComponent<PannableArea>();
+                    pannable.Content = content;
+                }
+            }
+
+            if (zoomInButton != null) zoomInButton.onClick.AddListener(() => Zoom(ZoomStep));
+            if (zoomOutButton != null) zoomOutButton.onClick.AddListener(() => Zoom(-ZoomStep));
+
+            if (confirmYesButton != null) confirmYesButton.onClick.AddListener(HandleConfirmYes);
+            if (confirmNoButton != null) confirmNoButton.onClick.AddListener(HandleConfirmNo);
+            if (confirmPanel != null) confirmPanel.SetActive(false);
+        }
+
+        private void Update()
+        {
+            if (Mouse.current == null) return;
+            float scroll = Mouse.current.scroll.ReadValue().y;
+            if (scroll != 0f) Zoom(Mathf.Sign(scroll) * ZoomStep);
+        }
+
+        private void Zoom(float delta)
+        {
+            if (content == null) return;
+            float newScale = Mathf.Clamp(content.localScale.x + delta, MinZoom, MaxZoom);
+            content.localScale = new Vector3(newScale, newScale, 1f);
         }
 
         // ================= Main tree construction =================
@@ -151,8 +233,41 @@ namespace ClickerGenesis.Progression.SkillTreeV2
                 return;
             }
 
-            if (!runtime.TryBuy(node)) return; // CanvasGroup already blocks unreachable nodes; this only silently no-ops on insufficient Grace
+            if (!runtime.CanBuy(node)) return; // CanvasGroup already blocks unreachable nodes; silently no-op rather than pop a confirm for an impossible purchase
+
+            if (confirmPanel == null) { BuyNodeNow(node); return; }
+
+            pendingPurchaseNode = node;
+            int rank = runtime.GetRank(node);
+            double cost = node.GetNextCost(rank);
+            if (confirmMessageLabel != null)
+                confirmMessageLabel.text = $"Buy {node.displayName} (rank {rank + 1}/{node.maxRank}) for {cost:0} Grace?";
+            confirmPanel.SetActive(true);
+        }
+
+        private void HandleConfirmYes()
+        {
+            if (confirmPanel != null) confirmPanel.SetActive(false);
+            var node = pendingPurchaseNode;
+            pendingPurchaseNode = null;
+            if (node != null) BuyNodeNow(node);
+        }
+
+        private void HandleConfirmNo()
+        {
+            if (confirmPanel != null) confirmPanel.SetActive(false);
+            pendingPurchaseNode = null;
+        }
+
+        private void BuyNodeNow(SkillNodeData node)
+        {
+            if (!runtime.TryBuy(node)) return;
             RefreshAll();
+
+            // Re-run the hover formatting against whatever node the player is still sitting on -
+            // a purchase never moves the mouse, so without this the rank/cost line stays frozen
+            // at its pre-purchase values until the player moves off and back on (bug #87).
+            if (hoveredNode != null) HandleNodeHoverEnter(hoveredNode);
 
             if (node == database.convergence && runtime.IsMaxed(node))
                 OpenBookMenu();
@@ -160,11 +275,33 @@ namespace ClickerGenesis.Progression.SkillTreeV2
 
         public void HandleNodeHoverEnter(SkillNodeUI nodeUI)
         {
-            if (descriptionTitleLabel != null) descriptionTitleLabel.text = nodeUI.Node.displayName;
-            if (descriptionBodyLabel != null) descriptionBodyLabel.text = nodeUI.Node.description;
+            hoveredNode = nodeUI;
+            var node = nodeUI.Node;
+            if (descriptionTitleLabel != null) descriptionTitleLabel.text = node.displayName;
+            if (descriptionBodyLabel == null) return;
+
+            int rank = runtime.GetRank(node);
+            bool maxed = runtime.IsMaxed(node);
+
+            // Rank/cost line appended below the flavor description - the popup already asked
+            // "buy this?" at click time, but hover is the only place a player can check a node's
+            // cost/progress WITHOUT committing to a purchase, so it needs the same numbers.
+            string rankLine = node.maxRank > 1 ? $"Rank {rank}/{node.maxRank}" : (rank > 0 ? "Owned" : "Not owned");
+            string costLine = maxed ? "MAXED" : $"Next rank: {node.GetNextCost(rank):0} Grace";
+
+            descriptionBodyLabel.text = $"{node.description}\n\n{rankLine}\n{costLine}";
         }
 
-        public void HandleNodeHoverExit(SkillNodeUI nodeUI) { }
+        public void HandleNodeHoverExit(SkillNodeUI nodeUI)
+        {
+            // Guard against a stale exit event firing after the pointer already moved straight
+            // onto a different node (a fresh HandleNodeHoverEnter for the new node) - only clear
+            // if the node losing hover is still the one currently tracked as active.
+            if (hoveredNode != nodeUI) return;
+            hoveredNode = null;
+            if (descriptionTitleLabel != null) descriptionTitleLabel.text = IdleDescriptionTitle;
+            if (descriptionBodyLabel != null) descriptionBodyLabel.text = IdleDescriptionBody;
+        }
 
         // ================= Rule 4: Convergence Gateway Menu =================
 

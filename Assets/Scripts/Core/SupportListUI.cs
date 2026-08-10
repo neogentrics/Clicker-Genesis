@@ -170,24 +170,36 @@ namespace ClickerGenesis.Core
                 var parentDef = scribes.GetDefinition(row.TierIndex);
                 bool owned = scribes.IsSubmanagerOwned(row.TierIndex, row.SubIndex);
 
-                row.NameText.text = $"{subDef.displayName} ({parentDef.managerName})";
+                // 2026-08-09, real bug fix: a Law tier never has a managerName (there's no
+                // person to name), so a submanager attached to one (e.g. Jezrahiah under
+                // Nehemiah's "The Wall Dedication") rendered as "Jezrahiah ()" - fall back to
+                // the tier's own displayName, which always exists.
+                string parentLabel = parentDef.HasManager ? parentDef.managerName : parentDef.displayName;
+                row.NameText.text = $"{subDef.displayName} ({parentLabel})";
 
-                bool parentOwned = scribes.IsManagerUnlocked(row.TierIndex);
+                // Parent-ready condition mirrors ScribeSystem.CanBuySubmanager (2026-08-09):
+                // a Person-tier parent must have its manager bought; a Law-tier parent has no
+                // such purchase step, so "ready" means the law tier itself has been reached.
+                bool parentReady = parentDef.HasManager
+                    ? scribes.IsManagerUnlocked(row.TierIndex)
+                    : scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
                 bool verseReached = Controller.NextVerseIndex >= subDef.unlockAtVerseIndex;
-                bool allRequirementsMet = parentOwned && verseReached;
+                bool allRequirementsMet = parentReady && verseReached;
 
                 if (owned)
                 {
-                    string perkLabel = subDef.perkFlavor == "cost-cutter"
-                        ? $"-{subDef.perkAmount * 100:F0}% {parentDef.displayName} cost"
-                        : $"+{subDef.perkAmount * 100:F0}% {parentDef.managerName}'s bonus";
+                    string perkLabel = subDef.isBookWidePatron
+                        ? $"+{subDef.perkAmount * 100:F0}% output to every law tier in this book"
+                        : subDef.perkFlavor == "cost-cutter"
+                            ? $"-{subDef.perkAmount * 100:F0}% {parentDef.displayName} cost"
+                            : $"+{subDef.perkAmount * 100:F0}% {parentLabel}'s bonus";
                     row.DescText.text = perkLabel;
                 }
                 else if (!allRequirementsMet)
                 {
                     var lines = new List<string>
                     {
-                        ReqLine(parentOwned, $"{parentDef.managerName} hired", $"Requires {parentDef.managerName}"),
+                        ReqLine(parentReady, $"{parentLabel} ready", $"Requires {parentLabel}"),
                         ReqLine(verseReached,
                             $"{DescribeVerse(subDef.unlockAtVerseIndex)} reached",
                             $"Reach {DescribeVerse(subDef.unlockAtVerseIndex)}")
@@ -204,11 +216,17 @@ namespace ClickerGenesis.Core
                     row.CostText.text = "Hired";
                     row.BuyButton.interactable = false;
                 }
+                else if (!allRequirementsMet)
+                {
+                    // 2026-08-09, same real fix as ManagerListUI - never show a real price until
+                    // every requirement line above it is actually satisfied.
+                    row.CostText.text = "Locked";
+                    row.BuyButton.interactable = false;
+                }
                 else
                 {
                     row.CostText.text = subDef.unlockCost <= 0 ? "Free" : $"{NumberFormatter.Format(subDef.unlockCost)} Ink";
-                    row.BuyButton.interactable = allRequirementsMet
-                        && (subDef.unlockCost <= 0 || Controller.Wallet.Balance >= subDef.unlockCost);
+                    row.BuyButton.interactable = subDef.unlockCost <= 0 || Controller.Wallet.Balance >= subDef.unlockCost;
                 }
             }
         }

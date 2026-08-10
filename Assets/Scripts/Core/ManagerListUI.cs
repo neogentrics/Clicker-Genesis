@@ -205,13 +205,19 @@ namespace ClickerGenesis.Core
                                 deliveredByLine = $"\n<i>as taught by {deliveredByName}</i>";
                         }
                         row.DescText.text = def.purpose + deliveredByLine;
+                        // Law tiers have no Ink purchase step - "—" here means "nothing to buy,"
+                        // not "locked," so it's only correct once the tier is actually reachable.
+                        row.CostText.text = "—";
                     }
                     else
                     {
+                        // 2026-08-09, real user report: an unreached Law tier was showing the same
+                        // "—" as a reachable one, reading as available when it wasn't - must match
+                        // every other row type's "Locked" convention while genuinely unreachable.
                         row.DescText.text = ReqLine(false, "", $"Reach {DescribeVerse(def.unlockAtVerseIndex)}");
+                        row.CostText.text = "Locked";
                     }
 
-                    row.CostText.text = "—";
                     row.BuyButton.interactable = false;
                     continue;
                 }
@@ -245,7 +251,16 @@ namespace ClickerGenesis.Core
                 // supposed to be here is cost" instruction (fixes bug #54's overflow as a byproduct).
                 if (active)
                 {
-                    string desc = $"+{def.managerBonusMultiplier * 100:F0}% {def.displayName} output";
+                    // 2026-08-09, real user report: this line only ever showed the manager's own
+                    // base managerBonusMultiplier, silently ignoring any owned "loyalty-boost"
+                    // submanager on the same tier - e.g. a manager giving 25% base + 5% from a
+                    // hired Support submanager was still only showing "+25%" here, when the real
+                    // total paid out by GetTierInkPerSecond was 30%. Show the real total.
+                    double loyaltyBoost = scribes.GetLoyaltyBoost(row.TierIndex);
+                    double totalBonus = def.managerBonusMultiplier + loyaltyBoost;
+                    string desc = $"+{totalBonus * 100:F0}% {def.displayName} output";
+                    if (loyaltyBoost > 0)
+                        desc += $"\n<color=#2E7D46>includes +{loyaltyBoost * 100:F0}% from Support</color>";
                     if (skillBonusBoost > 0)
                         desc += $"\n<color=#2E7D46>+{skillBonusBoost * 100:F0}% from Overseer's Wisdom</color>";
                     row.DescText.text = desc;
@@ -272,13 +287,21 @@ namespace ClickerGenesis.Core
                     row.CostText.text = "Owned";
                     row.BuyButton.interactable = false;
                 }
+                else if (!allRequirementsMet)
+                {
+                    // 2026-08-09, real user report (Deuteronomy's Managers tab): the button was
+                    // showing a real Ink price even while requirement lines above it were still
+                    // red/unmet - reading as "buyable right now" when it wasn't. The button must
+                    // never show a price until every requirement is actually satisfied.
+                    row.CostText.text = "Locked";
+                    row.BuyButton.interactable = false;
+                }
                 else
                 {
                     row.CostText.text = def.managerUnlockCost <= 0
                         ? "Free"
                         : $"{NumberFormatter.Format(def.managerUnlockCost)} Ink";
-                    row.BuyButton.interactable = allRequirementsMet
-                        && (def.managerUnlockCost <= 0 || Controller.Wallet.Balance >= def.managerUnlockCost);
+                    row.BuyButton.interactable = def.managerUnlockCost <= 0 || Controller.Wallet.Balance >= def.managerUnlockCost;
                 }
             }
         }
