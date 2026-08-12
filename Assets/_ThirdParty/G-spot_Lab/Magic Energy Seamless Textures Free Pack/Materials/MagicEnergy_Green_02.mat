@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MagicEnergy_Green_02
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 5c22573409ca25645a8f15c1df6eba81, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -86,6 +86,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: ce26764ec23faec49b01dde8ef6334da, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SwirlTex:
+        m_Texture: {fileID: 2800000, guid: bee662cae2ea5fc41a813d556550d41d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -123,6 +127,8 @@ Material:
     - _Metallic: 0.704
     - _OcclusionStrength: 1
     - _Parallax: 0.01
+    - _PulseAmount: 0.3
+    - _PulseSpeed: 1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SampleGI: 0
@@ -145,6 +151,8 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0.122010574, g: 2.395844, b: 0.32166424, a: 1}
+    - _ScrollSpeed: {r: 0.04, g: 0.025, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SwirlColor: {r: 1.15, g: 1.15, b: 1.1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -4024,6 +4024,9 @@ MonoBehaviour:
   GoldFrame: {fileID: 21300000, guid: da4de1e2ce417e64899b58a6a5c29934, type: 3}
   SilverFrame: {fileID: 21300000, guid: 33acd898cb63dfd47bd64e453ece824f, type: 3}
   CopperFrame: {fileID: 21300000, guid: d32cf21710e12e74e86ea8c429bcbb89, type: 3}
+  CardBorderSprite: {fileID: 21300000, guid: 3e0288c98c3da214e8237e7ef86b3228, type: 3}
+  UnlockBurst: {fileID: 1876767985}
+  BurstFallbackAnchor: {fileID: 2102864550}
   TabBackgroundSprite: {fileID: 21300000, guid: 5299184eb7fe3094383bdc3579adda4c, type: 3}
   BookProgressIcon: {fileID: 21300000, guid: ce52596dcf36a334f983ef43a62dfd9c, type: 3}
   ChapterProgressIcon: {fileID: 21300000, guid: 66304532cdab97f4f8b8892aae96a11f, type: 3}
@@ -4139,6 +4142,7 @@ RectTransform:
   - {fileID: 273267179}
   - {fileID: 1914400197}
   - {fileID: 1780284041}
+  - {fileID: 1564047837}
   - {fileID: 1778910609}
   - {fileID: 701625967}
   - {fileID: 1277046723}
@@ -4148,6 +4152,7 @@ RectTransform:
   - {fileID: 1159824664}
   - {fileID: 493017509}
   - {fileID: 1162514179}
+  - {fileID: 1876767986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6183,6 +6188,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546352559}
   m_CullTransparentMesh: 1
+--- !u!1 &1564047836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1564047837}
+  - component: {fileID: 1564047840}
+  - component: {fileID: 1564047839}
+  - component: {fileID: 1564047838}
+  m_Layer: 0
+  m_Name: AmbientJewelGlow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1564047837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564047836}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1078694446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -141}
+  m_SizeDelta: {x: 2400, y: 2400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1564047838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564047836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc14057790bdccd48a3cdce8d7f71272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.JewelGlowCycler
+  Target: {fileID: 1564047839}
+  CycleDuration: 6
+  MaxAlpha: 0.35
+  MinAlpha: 0.12
+  PulseSpeed: 0.6
+--- !u!114 &1564047839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564047836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.35, g: 0.55, b: 1, a: 0.2}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: f139b4896003ad64bb917ab8d68371a5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1564047840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564047836}
+  m_CullTransparentMesh: 1
 --- !u!1 &1608499669
 GameObject:
   m_ObjectHideFlags: 0
@@ -6602,6 +6700,8 @@ GameObject:
   - component: {fileID: 1778910609}
   - component: {fileID: 1778910611}
   - component: {fileID: 1778910610}
+  - component: {fileID: 1778910613}
+  - component: {fileID: 1778910612}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -6668,6 +6768,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778910608}
   m_CullTransparentMesh: 1
+--- !u!114 &1778910612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778910608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37e6c1aaea13204a839af9bec3b4ee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ScreenEntranceAnimator
+  Group: {fileID: 1778910613}
+  Target: {fileID: 1778910609}
+  Duration: 0.45
+  StartScale: 0.85
+--- !u!225 &1778910613
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778910608}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1780284038
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,6 +7231,62 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848274519}
   m_CullTransparentMesh: 1
+--- !u!1 &1876767984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1876767986}
+  - component: {fileID: 1876767985}
+  m_Layer: 0
+  m_Name: UnlockBurstPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1876767985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876767984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484f0c973a5861645b985e92e664e1e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.AchievementUnlockBurst
+  Frames:
+  - {fileID: 21300000, guid: 5e7901e71333f3c46939ee89d156e3ef, type: 3}
+  - {fileID: 21300000, guid: cf3bb60419ae3634d821672620cc1a50, type: 3}
+  - {fileID: 21300000, guid: 5ca55a98e5570b348b7914c1ca608f93, type: 3}
+  - {fileID: 21300000, guid: cfbaf1586c077af499757d5a611c3cbc, type: 3}
+  - {fileID: 21300000, guid: 220f258b1f9f9394a8df92b5aa6bc5b8, type: 3}
+  - {fileID: 21300000, guid: 8a94650383052db4ea6d7ba127e199c5, type: 3}
+  - {fileID: 21300000, guid: 749fb2c81f962814baa22cf14ade9fd0, type: 3}
+  - {fileID: 21300000, guid: 11da642e6fe15b24db4be0b9d52c556d, type: 3}
+  - {fileID: 21300000, guid: 12d0406b1dd0cbd4f89d2361ac3d1056, type: 3}
+  FrameDuration: 0.045
+  SpriteSize: 320
+--- !u!4 &1876767986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876767984}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1078694446}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1886932081
 GameObject:
   m_ObjectHideFlags: 0

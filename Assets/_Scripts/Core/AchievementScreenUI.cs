@@ -38,6 +38,7 @@ namespace ClickerGenesis.Core
             public Image CardBackground;
             public Image Icon;
             public Image Frame;
+            public Image CardBorder;
             public TMP_Text NameText;
             public TMP_Text DescText;
             public TMP_Text ProgressLabel;
@@ -115,6 +116,23 @@ namespace ClickerGenesis.Core
         public Sprite GoldFrame;
         public Sprite SilverFrame;
         public Sprite CopperFrame;
+
+        /// <summary>Real card-panel border (2026-08-12, user correction - the shimmer treatment
+        /// was only reaching the small tier-rank diamond, not "the achievement screen" itself; this
+        /// is the actual card-sized frame the user meant). A Sliced-mode ornate border sitting on
+        /// top of the whole card, hollow in the middle by the source art's own design, so it frames
+        /// the card's edges without ever covering the Name/Desc/ProgressBar text sitting behind it.</summary>
+        [Header("Card panel border (Kenney Fantasy UI Borders)")]
+        public Sprite CardBorderSprite;
+
+        /// <summary>Real celebration on actual unlock (2026-08-12), not just a static color swap -
+        /// plays at the unlocking card's own position when it's currently visible under the active
+        /// scope/filter, or at BurstFallbackAnchor (meant to be the scroll Viewport's own center, so
+        /// it's always on-screen) when it isn't - e.g. the achievement unlocked while the player was
+        /// viewing a different book or had it filtered out.</summary>
+        [Header("Unlock celebration burst")]
+        public AchievementUnlockBurst UnlockBurst;
+        public RectTransform BurstFallbackAnchor;
 
         private Sprite FrameFor(AchievementTier tier)
         {
@@ -332,11 +350,29 @@ namespace ClickerGenesis.Core
             Refresh();
 
             if (Controller != null) Controller.OnStateChanged += Refresh;
+            if (Controller?.Achievements != null) Controller.Achievements.OnAchievementUnlocked += HandleAchievementUnlocked;
         }
 
         private void OnDestroy()
         {
             if (Controller != null) Controller.OnStateChanged -= Refresh;
+            if (Controller?.Achievements != null) Controller.Achievements.OnAchievementUnlocked -= HandleAchievementUnlocked;
+        }
+
+        private void HandleAchievementUnlocked(AchievementDefinition def)
+        {
+            if (UnlockBurst == null) return;
+
+            var card = cards.Find(c => c.Def.id == def.id);
+            if (card != null && card.Root != null && card.Root.activeInHierarchy)
+            {
+                var cardRt = card.Root.GetComponent<RectTransform>();
+                UnlockBurst.PlayAt(cardRt, Vector2.zero);
+            }
+            else if (BurstFallbackAnchor != null)
+            {
+                UnlockBurst.PlayAt(BurstFallbackAnchor, Vector2.zero);
+            }
         }
 
         /// <summary>Real user correction (2026-08-10, extended same day for bug #104): Back is a
@@ -792,6 +828,31 @@ namespace ClickerGenesis.Core
                     iconRt.anchoredPosition -= (iconSize - slotSize) * (new Vector2(0.5f, 0.5f) - iconRt.pivot);
                 }
 
+                // Card-sized shimmer border (2026-08-12) - drawn as the LAST sibling so it sits on
+                // top of every other element, but its own art is hollow in the middle (real border
+                // data, not a full fill), so it only ever contributes a framing ring around the
+                // card's edge - text underneath stays fully legible.
+                Image cardBorder = null;
+                if (CardBorderSprite != null)
+                {
+                    var cardRt = cardGo.GetComponent<RectTransform>();
+                    var borderGo = new GameObject("CardBorder", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
+                    borderGo.transform.SetParent(cardGo.transform, false);
+                    var borderRt = borderGo.GetComponent<RectTransform>();
+                    borderRt.anchorMin = Vector2.zero;
+                    borderRt.anchorMax = Vector2.one;
+                    borderRt.offsetMin = Vector2.zero;
+                    borderRt.offsetMax = Vector2.zero;
+                    cardBorder = borderGo.GetComponent<Image>();
+                    cardBorder.sprite = CardBorderSprite;
+                    cardBorder.type = Image.Type.Sliced;
+                    cardBorder.raycastTarget = false;
+                    // Default multiplier renders this border thinly enough to nearly disappear at
+                    // card scale - thickened so the ornate corners and shimmer actually read.
+                    cardBorder.pixelsPerUnitMultiplier = 0.45f;
+                    borderGo.transform.SetAsLastSibling();
+                }
+
                 var card = new Card
                 {
                     Def = def,
@@ -799,6 +860,7 @@ namespace ClickerGenesis.Core
                     CardBackground = cardGo.GetComponent<Image>(),
                     Icon = icon,
                     Frame = frame,
+                    CardBorder = cardBorder,
                     NameText = cardGo.transform.Find("Name")?.GetComponent<TMP_Text>(),
                     DescText = cardGo.transform.Find("Description")?.GetComponent<TMP_Text>(),
                     ProgressLabel = cardGo.transform.Find("ProgressBar/ProgressLabel")?.GetComponent<TMP_Text>(),
@@ -1154,12 +1216,15 @@ namespace ClickerGenesis.Core
                     }
                 }
 
-                // Shader-driven card backdrop (2026-08-10, real user redesign) - category picks the
-                // color family, unlock state picks light vs. dark within it.
-                if (card.Frame != null)
+                // Shader-driven shimmer (2026-08-10, extended 2026-08-12 to the actual card panel
+                // border per user correction - "the background frames, not the metallic frames
+                // around the icons"). Same category+lock-state material on both: the small tier-rank
+                // diamond AND the full card's own border ring.
+                var cardMat = CategoryCardMaterial(def.category, unlocked);
+                if (cardMat != null)
                 {
-                    var cardMat = CategoryCardMaterial(def.category, unlocked);
-                    if (cardMat != null) card.Frame.material = cardMat;
+                    if (card.Frame != null) card.Frame.material = cardMat;
+                    if (card.CardBorder != null) card.CardBorder.material = cardMat;
                 }
             }
 
