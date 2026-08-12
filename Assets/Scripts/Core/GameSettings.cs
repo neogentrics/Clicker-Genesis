@@ -23,8 +23,69 @@ namespace ClickerGenesis.Core
         private const string ManagerAutoBuyReserveIndexKey = "ClickerGenesis.ManagerAutoBuyReserveIndex";
         private const string OrientationKey = "ClickerGenesis.Orientation";
         private const string ScrollSpeedKey = "ClickerGenesis.ScrollSpeed";
+        private const string MasterVolumeKey = "ClickerGenesis.MasterVolume";
+        private const string SfxVolumeKey = "ClickerGenesis.SfxVolume";
+        private const string MusicVolumeKey = "ClickerGenesis.MusicVolume";
+        private const string VoiceVolumeKey = "ClickerGenesis.VoiceVolume";
+        private const string MasterMutedKey = "ClickerGenesis.MasterMuted";
+        private const string SoundMigratedKey = "ClickerGenesis.SoundMigrated";
+        private const string LegacySoundEnabledKey = "ClickerGenesis.SoundEnabled";
 
         public static event System.Action OnChanged;
+
+        /// <summary>0-1 linear, converted to dB (Mathf.Log10(v) * 20) when applied to
+        /// MasterMixer's exposed "MasterVolume"/"SfxVolume"/"MusicVolume"/"VoiceVolume" params
+        /// (2026-08-11, Sound System build). Music defaults lower than the others ("medium-low"
+        /// per the design doc) so it never competes with SFX/voice out of the box.</summary>
+        public static float MasterVolume
+        {
+            get => PlayerPrefs.GetFloat(MasterVolumeKey, 1f);
+            set { PlayerPrefs.SetFloat(MasterVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
+        }
+
+        public static float SfxVolume
+        {
+            get => PlayerPrefs.GetFloat(SfxVolumeKey, 1f);
+            set { PlayerPrefs.SetFloat(SfxVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
+        }
+
+        public static float MusicVolume
+        {
+            get => PlayerPrefs.GetFloat(MusicVolumeKey, 0.35f);
+            set { PlayerPrefs.SetFloat(MusicVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
+        }
+
+        public static float VoiceVolume
+        {
+            get => PlayerPrefs.GetFloat(VoiceVolumeKey, 1f);
+            set { PlayerPrefs.SetFloat(VoiceVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
+        }
+
+        /// <summary>Independent of the four slider values, so un-muting restores exactly where
+        /// the player left off rather than needing to remember/re-enter a volume.</summary>
+        public static bool MasterMuted
+        {
+            get => PlayerPrefs.GetInt(MasterMutedKey, 0) == 1;
+            set { PlayerPrefs.SetInt(MasterMutedKey, value ? 1 : 0); PlayerPrefs.Save(); OnChanged?.Invoke(); }
+        }
+
+        /// <summary>One-time migration from the old binary "Sound: On/Off" toggle (SettingsScreenUI's
+        /// SoundPrefKey, which just zeroed AudioListener.volume) to the new mixer-based system.
+        /// Old "off" -> MasterMuted=true; old "on"/never-set -> no change (new defaults already
+        /// unmuted). Guarded by SoundMigratedKey so it only ever runs once - otherwise a player who
+        /// explicitly un-mutes after migration would get re-muted on the next launch by the same
+        /// stale legacy key. Call once at bootstrap (GameLoopController.Awake), same pattern as
+        /// ApplyDisplaySettings.</summary>
+        public static void MigrateLegacySoundSetting()
+        {
+            if (PlayerPrefs.GetInt(SoundMigratedKey, 0) == 1) return;
+
+            if (PlayerPrefs.HasKey(LegacySoundEnabledKey) && PlayerPrefs.GetInt(LegacySoundEnabledKey, 1) == 0)
+                MasterMuted = true;
+
+            PlayerPrefs.SetInt(SoundMigratedKey, 1);
+            PlayerPrefs.Save();
+        }
 
         /// <summary>Player's explicit portrait/landscape choice (2026-08-09, real mobile-device
         /// layout fix). Default Auto - the game follows the device's live orientation, same as

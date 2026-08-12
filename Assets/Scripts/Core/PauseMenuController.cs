@@ -84,7 +84,38 @@ namespace ClickerGenesis.Core
                 AchievementsButton.onClick.AddListener(GoToAchievements);
             }
 
+            ApplyCompactModeIfMobile();
+
             if (OverlayRoot != null) OverlayRoot.SetActive(false);
+        }
+
+        /// <summary>2026-08-11, user's ask: on mobile, buttons don't need room for both an icon and a
+        /// label - the player can learn what each icon means, same as most mobile game HUDs. Desktop
+        /// keeps icon+text. Same Application.platform gating pattern already used by
+        /// GameSettings.IsResolutionSelectionSupported/IsOrientationLockSupported - not a new
+        /// pattern for this project. Runs once at Awake (button layout doesn't change mid-session).</summary>
+        private void ApplyCompactModeIfMobile()
+        {
+            bool isMobile = Application.platform == RuntimePlatform.Android ||
+                             Application.platform == RuntimePlatform.IPhonePlayer;
+            if (!isMobile || MainPanel == null) return;
+
+            var panel = MainPanel.transform.Find("Panel");
+            if (panel == null) return;
+
+            foreach (Transform btn in panel)
+            {
+                var text = btn.Find("Text");
+                var icon = btn.Find("Icon");
+                if (text == null || icon == null) continue; // buttons without both stay as-is
+
+                text.gameObject.SetActive(false);
+                var iconRt = icon.GetComponent<RectTransform>();
+                iconRt.anchorMin = new Vector2(0.5f, 0.5f);
+                iconRt.anchorMax = new Vector2(0.5f, 0.5f);
+                iconRt.pivot = new Vector2(0.5f, 0.5f);
+                iconRt.anchoredPosition = Vector2.zero;
+            }
         }
 
         public void Show()
@@ -109,14 +140,28 @@ namespace ClickerGenesis.Core
             else Show();
         }
 
-        /// <summary>Real session stats (2026-08-06), replacing the old disabled "Stats (Coming
-        /// Soon)" stub - swaps the main button list for a read-only stats panel over the same
-        /// footprint, same overlay, rather than a separate scene.</summary>
+        /// <summary>Real session stats (2026-08-06, in-overlay panel; REVISED 2026-08-10, Phase 6
+        /// of the v2 redesign - now a real dedicated scene instead of a panel swap, so it can carry
+        /// more than a single popup's worth of content). Captures which scene to return to (Pause
+        /// can be opened from any of the 5 main screens) and closes the pause overlay before
+        /// navigating, since StatsScreen is now a genuinely separate scene, not a panel floating
+        /// inside this one.</summary>
+        private string statsReturnSceneName = "ClickerScreen";
+
         private void OpenStats()
         {
-            RefreshStats();
-            if (MainPanel != null) MainPanel.SetActive(false);
-            if (StatsPanel != null) StatsPanel.SetActive(true);
+            statsReturnSceneName = SceneManager.GetActiveScene().name;
+            Hide();
+            SceneManager.LoadScene("StatsScreen", LoadSceneMode.Single);
+        }
+
+        /// <summary>Consumed once by StatsScreenUI's Back button - returns to whichever scene Pause
+        /// was actually opened from, defaulting to ClickerScreen if somehow unset.</summary>
+        public string ConsumeStatsReturnScene()
+        {
+            string s = string.IsNullOrEmpty(statsReturnSceneName) ? "ClickerScreen" : statsReturnSceneName;
+            statsReturnSceneName = "ClickerScreen";
+            return s;
         }
 
         private void CloseStats()
@@ -128,45 +173,78 @@ namespace ClickerGenesis.Core
         private void RefreshStats()
         {
             if (StatsContentLabel == null) return;
-            var c = GameLoopController.Instance;
-            if (c == null)
-            {
-                StatsContentLabel.text = "No active session.";
-                return;
-            }
+            StatsContentLabel.text = BuildStatsText(GameLoopController.Instance);
+        }
+
+        /// <summary>Legacy single-string version - kept only for the now-inert old in-overlay
+        /// StatsPanel (OpenStats navigates to the real StatsScreen scene instead of using this
+        /// panel now). Prefer BuildStatsSections for anything new.</summary>
+        public static string BuildStatsText(GameLoopController c)
+        {
+            if (c == null) return "No active session.";
+            var sb = new System.Text.StringBuilder();
+            foreach (var (title, body) in BuildStatsSections(c))
+                sb.Append($"<b>{title}</b>\n{body}\n\n");
+            return sb.ToString();
+        }
+
+        /// <summary>Stats broken into discrete named sections (2026-08-10, real user redesign ask
+        /// mid-build - "different panels... you can scroll through them" instead of one continuous
+        /// text blob), matching how every other list in this project already presents content as
+        /// individual bordered cards (Scribe/Manager/Support rows, achievement cards), not a single
+        /// wall of text. StatsScreenUI builds one visual panel per entry.</summary>
+        public static (string Title, string Body)[] BuildStatsSections(GameLoopController c)
+        {
+            if (c == null) return new[] { ("Stats", "No active session.") };
 
             // Grace ever earned isn't tracked as its own field - current balance plus everything
             // ever spent is mathematically identical and avoids a second counter that could drift
             // out of sync with the real one.
             double graceEverEarned = c.Prestige.Grace + c.Prestige.GraceEverSpent;
 
-            StatsContentLabel.text =
-                $"<b>Ink</b>\n" +
+            string ink =
                 $"Balance: {NumberFormatter.FormatWhole(c.Wallet.Balance)}\n" +
                 $"Lifetime earned: {NumberFormatter.FormatWhole(c.Wallet.LifetimeEarned)}\n" +
-                $"Lifetime spent: {NumberFormatter.FormatWhole(c.Wallet.TotalSpent)}\n" +
-                $"\n<b>Grace</b>\n" +
+                $"Lifetime spent: {NumberFormatter.FormatWhole(c.Wallet.TotalSpent)}";
+
+            string grace =
                 $"Balance: {NumberFormatter.FormatWhole(c.Prestige.Grace)}\n" +
                 $"Lifetime earned: {NumberFormatter.FormatWhole(graceEverEarned)}\n" +
                 $"Lifetime spent: {NumberFormatter.FormatWhole(c.Prestige.GraceEverSpent)}\n" +
                 $"Free Prestiges: {c.Prestige.FreePrestigeCount}\n" +
-                $"Reset Prestiges: {c.Prestige.ResetPrestigeCount}\n" +
-                $"\n<b>Progress</b>\n" +
+                $"Reset Prestiges: {c.Prestige.ResetPrestigeCount}";
+
+            string progress =
                 $"Skills bought: {c.Skills.PurchasedNodeCount()}\n" +
                 $"Managers bought: {c.Scribes.UnlockedManagerCount()}\n" +
                 $"Verses unlocked: {c.NextVerseIndex}\n" +
                 $"Chapters completed: {c.ChaptersCompletedCount}\n" +
-                $"Books completed: {c.BooksCompletedCount}\n" +
-                BuildBonusBreakdown(c) +
-                $"\n<b>Store</b>\n" +
-                $"Boosts used: N/A (Store not built yet)";
+                $"Books completed: {c.BooksCompletedCount}";
+
+            string output =
+                $"Clicking Power: {NumberFormatter.Format(c.EffectiveTapAmount)} Ink/tap\n" +
+                $"Passive Income: {NumberFormatter.Format(c.EffectiveInkPerSecond)} Ink/sec";
+
+            string store = "Boosts used: N/A (Store not built yet)";
+
+            return new[]
+            {
+                ("Ink", ink),
+                ("Grace", grace),
+                ("Progress", progress),
+                ("Current Output", output),
+                ("Active Bonuses", BuildBonusBreakdown(c)),
+                ("Store", store),
+            };
         }
 
         /// <summary>Real current-output breakdown (2026-08-06, user's explicit ask - "shows what
         /// the current clicking power is plus all the bonuses that are being applied"). Every
         /// bonus line only appears when it's actually non-zero, matching the "don't show inert
-        /// stats" pattern already used on the Managers/Scribes rows.</summary>
-        private static string BuildBonusBreakdown(GameLoopController c)
+        /// stats" pattern already used on the Managers/Scribes rows. Returns just the bonus-list
+        /// body now (2026-08-10) - the section header/Current Output split moved to
+        /// BuildStatsSections above.</summary>
+        public static string BuildBonusBreakdown(GameLoopController c)
         {
             double clickPowerBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.ClickPowerMultiplier);
             double incomeBoost = c.Skills.GetTotalEffect(ClickerGenesis.Progression.SkillEffectType.IncomeMultiplier);
@@ -181,11 +259,6 @@ namespace ClickerGenesis.Core
             double bookCompletionMultiplier = (c.BooksCompletedCount > 0 && resetCount > 0) ? 1 + resetCount : 1.0;
 
             var sb = new System.Text.StringBuilder();
-            sb.Append("\n<b>Current Output</b>\n");
-            sb.Append($"Clicking Power: {NumberFormatter.Format(c.EffectiveTapAmount)} Ink/tap\n");
-            sb.Append($"Passive Income: {NumberFormatter.Format(c.EffectiveInkPerSecond)} Ink/sec\n");
-
-            sb.Append("\n<b>Active Bonuses</b>\n");
             bool any = false;
             if (clickPowerBoost > 0) { sb.Append($"Click Power (skills): +{clickPowerBoost * 100:F0}%\n"); any = true; }
             if (incomeBoost > 0) { sb.Append($"Ink Income (skills): +{incomeBoost * 100:F0}%\n"); any = true; }
@@ -200,53 +273,49 @@ namespace ClickerGenesis.Core
             if (bookCompletionMultiplier > 1.0) { sb.Append($"Book Completion Multiplier: ×{bookCompletionMultiplier:F0}\n"); any = true; }
             if (!any) sb.Append("None yet.\n");
 
-            return sb.ToString();
+            return sb.ToString().TrimEnd('\n');
         }
 
-        // Set when Credits was opened directly from the Main Menu's own info button (no paused
-        // game to return to), rather than via the in-game Pause overlay's Credits button - tells
-        // CloseCredits() whether "back" means "show the pause list again" or "close entirely".
-        private bool _creditsOpenedStandalone;
+        /// <summary>2026-08-11 - Credits promoted to its own standalone scene (CreditsScreenUI),
+        /// same "own scene, not a cramped overlay" move already made for Stats. Captures which
+        /// scene to return to, same pattern as statsReturnSceneName/OpenStats above.</summary>
+        private string creditsReturnSceneName = "MainMenu";
 
-        /// <summary>Real third-party attribution (2026-08-07) - the user's explicit call that
-        /// credits can no longer wait for a later build now that pre-release testers are
-        /// downloading real GitHub releases. Static text, not data-driven - this list only grows
-        /// when a new asset actually gets wired into something, same "log it when it's used, not
-        /// when it's imported" rule as the CLAUDE.md Assets &amp; Credits tracking section.</summary>
         private void OpenCredits()
         {
-            if (CreditsContentLabel != null) CreditsContentLabel.text = BuildCreditsText();
-            if (MainPanel != null) MainPanel.SetActive(false);
-            if (CreditsPanel != null) CreditsPanel.SetActive(true);
+            creditsReturnSceneName = SceneManager.GetActiveScene().name;
+            Hide();
+            SceneManager.LoadScene("CreditsScreen", LoadSceneMode.Single);
+        }
+
+        /// <summary>Consumed once by CreditsScreenUI's Back button - returns to whichever scene
+        /// Credits was actually opened from, defaulting to MainMenu if somehow unset.</summary>
+        public string ConsumeCreditsReturnScene()
+        {
+            string s = string.IsNullOrEmpty(creditsReturnSceneName) ? "MainMenu" : creditsReturnSceneName;
+            creditsReturnSceneName = "MainMenu";
+            return s;
         }
 
         /// <summary>Main Menu's own info/Credits button calls this directly - there is no paused
-        /// game to resume from the menu, so this opens the overlay straight into the Credits
-        /// panel (skipping the Resume/Settings/Stats list) and closes it entirely on Back,
-        /// instead of falling through to that list. Replaces the old ComingSoonButton stub
-        /// (2026-08-07) now that real Credits content exists.</summary>
+        /// game to resume from the menu, so this just navigates straight to CreditsScreen with
+        /// MainMenu as the return scene. Replaces the old in-overlay-panel version now that
+        /// Credits is a real standalone scene.</summary>
         public void ShowCreditsStandalone()
         {
-            _creditsOpenedStandalone = true;
-            Show();
             OpenCredits();
         }
 
+        /// <summary>Legacy - kept only for the now-inert old in-overlay CreditsPanel (OpenCredits
+        /// navigates to the real CreditsScreen scene instead of using this panel now), same
+        /// pattern as CloseStats/the old StatsPanel above.</summary>
         private void CloseCredits()
         {
             if (CreditsPanel != null) CreditsPanel.SetActive(false);
-            if (_creditsOpenedStandalone)
-            {
-                _creditsOpenedStandalone = false;
-                Hide();
-            }
-            else if (MainPanel != null)
-            {
-                MainPanel.SetActive(true);
-            }
+            if (MainPanel != null) MainPanel.SetActive(true);
         }
 
-        private static string BuildCreditsText()
+        public static string BuildCreditsText()
         {
             return
                 "<b>Scripture</b>\n" +
@@ -258,7 +327,7 @@ namespace ClickerGenesis.Core
                 "40 Free Skill/Ability Icons Volume 1 - CaptainCatSparrow\n" +
                 "FREE - RPG Fantasy Spell Icons - Blink\n" +
                 "RPG Item Icons - Concept Hamster\n" +
-                "Modern RPG - Free icons pack - JenniferBertaggia\n" +
+                "Modern GDR - Free icons pack - Jennifer Bertaggia\n" +
                 "SpellBook. Preface - Rexard\n" +
                 "Animal Icons 2D Pack - Ferro Entertainment\n" +
                 "Skybox backdrops - AssetProviderForAll\n" +

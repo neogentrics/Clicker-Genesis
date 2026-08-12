@@ -6,30 +6,40 @@ using UnityEngine;
 namespace ClickerGenesis.Save
 {
     /// <summary>
-    /// Local JSON file at Application.persistentDataPath, separate from save.json - the GLOBAL
-    /// achievement ledger (2026-08-08). Deliberately its own file rather than a section of
-    /// SaveData: achievement unlocks must persist across every save slot, so they can't live
-    /// inside any one slot's save file. Same atomic-write/.bak-fallback/light-obfuscation
-    /// discipline as LocalFileSaveStorage - a second, independent instance of that same pattern,
-    /// not a new one invented from scratch. Not deleted by the Settings screen's "Delete Saved
-    /// Game" reset (that only touches save.json via ISaveStorage.DeleteSave) - achievements are
-    /// meta-progression, same as a console's platform achievements surviving a local save wipe.
+    /// Local JSON file at Application.persistentDataPath, separate from save.json - one file PER
+    /// SAVE SLOT (REVISED 2026-08-10, was a single global ledger shared across every slot - real
+    /// user reversal: a global ledger made "start over" impossible, since a fresh slot or a
+    /// deleted save would still show every achievement already earned on another slot. Achievement
+    /// unlocks are now bound to the slot they were earned on, same as everything else in that
+    /// slot's save). Still deliberately its own file rather than a section of SaveData (keeps the
+    /// achievement ledger's own versioning/migration chain independent), just no longer a SINGLE
+    /// shared file - see the slotIndex constructor parameter, same pattern as
+    /// LocalFileSaveStorage. Same atomic-write/.bak-fallback/light-obfuscation discipline as
+    /// LocalFileSaveStorage - a second, independent instance of that same pattern, not a new one
+    /// invented from scratch.
     /// </summary>
     public class AchievementFileStorage : IAchievementStorage
     {
-        private const string FileName = "achievements.json";
+        // Slot-aware (2026-08-10, mirrors LocalFileSaveStorage exactly) - slot 0 keeps the legacy
+        // "achievements.json" filename specifically so achievements earned before the per-slot
+        // reversal keep loading as Slot 1's ledger instead of silently vanishing.
+        private readonly string fileName;
 
         // Deliberately not a secret worth protecting - same posture as LocalFileSaveStorage's key.
         private static readonly byte[] ObfuscationKey = Encoding.UTF8.GetBytes("ClickerGenesisAchievements-NotRealEncryption-2026");
 
         private readonly string saveDirectory;
-        private string DataPath => Path.Combine(saveDirectory, FileName);
+        private string DataPath => Path.Combine(saveDirectory, fileName);
         private string BackupPath => DataPath + ".bak";
         private string TempPath => DataPath + ".tmp";
 
-        public AchievementFileStorage(string directory = null)
+        /// <param name="slotIndex">Which of the SaveSlotManager.SlotCount slots this instance
+        /// reads/writes. Defaults to 0 (== "achievements.json", the pre-reversal filename) so any
+        /// existing caller that doesn't pass a slot keeps working unchanged.</param>
+        public AchievementFileStorage(int slotIndex = 0, string directory = null)
         {
             saveDirectory = string.IsNullOrEmpty(directory) ? Application.persistentDataPath : directory;
+            fileName = slotIndex <= 0 ? "achievements.json" : $"achievements_slot{slotIndex}.json";
         }
 
         public AchievementData Load()
@@ -97,6 +107,23 @@ namespace ClickerGenesis.Save
                 if (File.Exists(DataPath)) File.Delete(DataPath);
                 File.Move(TempPath, DataPath);
             }
+        }
+
+        /// <summary>Deletes this slot's achievements.json/.bak/.tmp if present (2026-08-10) - the
+        /// per-slot achievement-reversal counterpart to LocalFileSaveStorage.DeleteSave(), called
+        /// alongside it from Settings' "Delete Saved Game" reset so earned achievements are wiped
+        /// too, matching the "starting over really starts over" goal.</summary>
+        public void DeleteSave()
+        {
+            DeleteIfExists(DataPath);
+            DeleteIfExists(BackupPath);
+            DeleteIfExists(TempPath);
+        }
+
+        private static void DeleteIfExists(string path)
+        {
+            try { if (File.Exists(path)) File.Delete(path); }
+            catch (Exception e) { Debug.LogWarning($"AchievementSystem: failed to delete '{path}': {e.Message}"); }
         }
 
         private static string Obfuscate(string plainJson)

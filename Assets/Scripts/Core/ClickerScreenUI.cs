@@ -113,6 +113,7 @@ namespace ClickerGenesis.Core
         {
             yield return null;
             if (button != null) { button.enabled = false; button.enabled = true; }
+            UiRefreshUtil.RehoverIfPointerStillOver(button);
         }
 
         /// <summary>Same pattern as BuyVerseScreenUI.SetTab for Verses/Chapters. Extended to a

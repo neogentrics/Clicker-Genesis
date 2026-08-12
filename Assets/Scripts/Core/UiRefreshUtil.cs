@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace ClickerGenesis.Core
@@ -45,6 +46,29 @@ namespace ClickerGenesis.Core
             yield return new WaitForEndOfFrame();
             yield return new WaitForEndOfFrame();
             ForceFullRefresh(root);
+        }
+
+        /// <summary>Bug #236 fix (2026-08-11): toggling a Button's `enabled` off/on (the existing
+        /// stuck-highlight fix used by Auto-Buy/Reserve/Multiplier buttons) forces Selectable's own
+        /// OnEnable, which unconditionally clears its internal isPointerInside tracking - so if the
+        /// mouse is still resting on the button at that moment, it silently drops to the untinted
+        /// Normal color and stays there until the pointer physically moves off and back on again.
+        /// Since EventSystem only fires Enter/Exit on a raycast-target CHANGE (not continuously),
+        /// a player who clicks and then holds the mouse still sees no hover glow at all. Re-check
+        /// whether the pointer is still over the button immediately after the reset and, if so,
+        /// re-fire a synthetic PointerEnter so the Selectable's visual state matches reality again.</summary>
+        public static void RehoverIfPointerStillOver(Button button)
+        {
+            if (button == null || !button.isActiveAndEnabled || EventSystem.current == null) return;
+            var rt = button.transform as RectTransform;
+            if (rt == null) return;
+
+            var canvas = button.GetComponentInParent<Canvas>();
+            Camera cam = (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay) ? canvas.worldCamera : null;
+            if (!RectTransformUtility.RectangleContainsScreenPoint(rt, Input.mousePosition, cam)) return;
+
+            var ped = new PointerEventData(EventSystem.current) { position = Input.mousePosition };
+            ExecuteEvents.Execute(button.gameObject, ped, ExecuteEvents.pointerEnterHandler);
         }
     }
 }

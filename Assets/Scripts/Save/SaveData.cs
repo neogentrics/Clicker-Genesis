@@ -39,6 +39,11 @@ namespace ClickerGenesis.Save
         public double inkTotalSpent;
         public int clickPowerLevel;
         public float progressMultiplier = 1f;
+
+        /// <summary>Lifetime tap count (2026-08-10) - for the gameplay achievement ladder's total-taps
+        /// family. long, not int, since a dedicated idle-clicker player can plausibly exceed int range
+        /// over a long enough playthrough.</summary>
+        public long totalTaps;
         public List<BookScribeState> scribeBooks = new List<BookScribeState>();
     }
 

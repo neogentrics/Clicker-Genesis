@@ -10,5 +10,10 @@ namespace ClickerGenesis.Save
     {
         AchievementData Load();
         void Save(AchievementData data);
+
+        /// <summary>Removes this storage's achievement ledger (2026-08-10 - achievements moved
+        /// from a global ledger to per-save-slot, so a "Delete Saved Game" reset on a slot now
+        /// wipes that slot's earned achievements too, same as it wipes everything else).</summary>
+        void DeleteSave();
     }
 }

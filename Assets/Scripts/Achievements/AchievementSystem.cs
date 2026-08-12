@@ -12,18 +12,25 @@ namespace ClickerGenesis.Achievements
     /// exactly where that event already happens in GameLoopController - matching the XP-award
     /// call-site pattern already used throughout that class.
     ///
-    /// GLOBAL, not per-save-slot (2026-08-08, explicit user design correction): this class is
-    /// constructed once per app session and its state persists independently of whichever save
-    /// slot is active - see Achievement-System-Design.html's "Persistence: a GLOBAL ledger" section
-    /// for why (completing a translation on one save slot must be visible from a fresh slot too).
-    /// GameLoopController must NOT reconstruct this in BuildFreshState() the way it does every
-    /// per-slot system.
+    /// PER-SAVE-SLOT (REVISED 2026-08-10, was GLOBAL): originally built as a single ledger shared
+    /// across every save slot so progress carried between slots. Real user reversal - a global
+    /// ledger meant starting a new game, or deleting the current one, could never actually "start
+    /// over," since already-earned achievements would still show. GameLoopController now
+    /// reconstructs this instance on every slot switch (SwitchToSlot), same as every other
+    /// per-slot system - it is NOT exempt from that the way it used to be.
     /// </summary>
     public class AchievementSystem
     {
         private readonly Dictionary<string, AchievementDefinition> definitions = new Dictionary<string, AchievementDefinition>();
         private readonly Dictionary<string, bool> unlocked = new Dictionary<string, bool>();
         private readonly Dictionary<string, float> progress = new Dictionary<string, float>();
+
+        /// <summary>Real UTC unlock timestamp per achievement id ("o"-format ISO 8601 string, same
+        /// convention as SaveData/AchievementData's own savedAtUtc), added 2026-08-10 for the
+        /// planned trophy-case gallery's "when earned" display. Only populated for ids actually
+        /// present in `unlocked` - never invented for a migrated pre-timestamp entry (see
+        /// AchievementDataMigrator).</summary>
+        private readonly Dictionary<string, string> unlockedAtUtc = new Dictionary<string, string>();
 
         /// <summary>Every bookResourceId ever reported complete via EvaluateBookComplete - local
         /// state (not persisted directly; re-derived by GameLoopController replaying
@@ -79,8 +86,13 @@ namespace ClickerGenesis.Achievements
             if (!definitions.TryGetValue(id, out var def) || IsUnlocked(id)) return;
             unlocked[id] = true;
             progress[id] = def.type == AchievementType.Progress ? Math.Max(def.progressGoal, 1f) : 1f;
+            unlockedAtUtc[id] = DateTime.UtcNow.ToString("o");
             OnAchievementUnlocked?.Invoke(def);
         }
+
+        /// <summary>Real unlock moment for an already-unlocked achievement, or null if unknown
+        /// (never unlocked, or migrated from a save written before timestamps existed).</summary>
+        public string GetUnlockedAtUtc(string id) => unlockedAtUtc.TryGetValue(id, out var t) ? t : null;
 
         /// <summary>Sets a Progress-type achievement's value directly, clamped to its goal and
         /// never allowed to regress (a save-load or a stat recompute should never un-progress an
@@ -172,17 +184,28 @@ namespace ClickerGenesis.Achievements
 
         public IEnumerable<KeyValuePair<string, float>> ExportProgress() => progress.Where(kvp => kvp.Value > 0f);
 
-        /// <summary>Restores unlocked ids + progress values from AchievementData. Unknown ids
-        /// (e.g. an achievement removed from config since the data was saved) are silently
-        /// skipped rather than throwing - same "load whatever still applies" rule ScribeSystem's
-        /// ImportState follows for a roster that's grown/shrunk since the save was written.</summary>
-        public void ImportState(IEnumerable<string> savedUnlockedIds, IEnumerable<KeyValuePair<string, float>> savedProgress)
+        /// <summary>Every unlocked id's real UTC timestamp, for persisting alongside
+        /// ExportUnlockedIds() (2026-08-10).</summary>
+        public IEnumerable<KeyValuePair<string, string>> ExportUnlockTimestamps() => unlockedAtUtc;
+
+        /// <summary>Restores unlocked ids + progress values + unlock timestamps from
+        /// AchievementData. Unknown ids (e.g. an achievement removed from config since the data
+        /// was saved) are silently skipped rather than throwing - same "load whatever still
+        /// applies" rule ScribeSystem's ImportState follows for a roster that's grown/shrunk since
+        /// the save was written. savedTimestamps is optional so older call sites/tests that don't
+        /// track timestamps still compile.</summary>
+        public void ImportState(IEnumerable<string> savedUnlockedIds, IEnumerable<KeyValuePair<string, float>> savedProgress,
+            IEnumerable<KeyValuePair<string, string>> savedTimestamps = null)
         {
             foreach (var id in savedUnlockedIds)
                 if (definitions.ContainsKey(id)) unlocked[id] = true;
 
             foreach (var kvp in savedProgress)
                 if (definitions.ContainsKey(kvp.Key)) progress[kvp.Key] = kvp.Value;
+
+            if (savedTimestamps != null)
+                foreach (var kvp in savedTimestamps)
+                    if (definitions.ContainsKey(kvp.Key) && !string.IsNullOrEmpty(kvp.Value)) unlockedAtUtc[kvp.Key] = kvp.Value;
         }
     }
 }

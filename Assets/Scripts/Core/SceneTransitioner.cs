@@ -63,6 +63,9 @@ namespace ClickerGenesis.Core
         public void LoadScene(string sceneName)
         {
             if (isLoading) return; // ignore extra clicks while a load is already in flight
+            // Fire the music-zone crossfade in parallel with the load, not after it finishes -
+            // the target scene name is already known synchronously here.
+            if (AudioManager.Instance != null) AudioManager.Instance.NotifySceneChanging(sceneName);
             StartCoroutine(LoadSceneAsyncRoutine(sceneName));
         }
 

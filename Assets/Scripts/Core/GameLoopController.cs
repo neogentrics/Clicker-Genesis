@@ -37,6 +37,14 @@ namespace ClickerGenesis.Core
         [SerializeField] private double tapAmount = 1;
         [SerializeField] private double startingInk = 0;
 
+        [Header("Sound (2026-08-11) - empty clip = silence, safe to leave blank until content exists")]
+        [SerializeField] private AudioClip verseUnlockSfx;
+        [SerializeField] private AudioClip chapterCompleteSfx;
+        [SerializeField] private AudioClip bookCompleteSfx;
+        [SerializeField] private AudioClip achievementBronzeSfx;
+        [SerializeField] private AudioClip achievementSilverSfx;
+        [SerializeField] private AudioClip achievementGoldSfx;
+
         [Header("Click Power upgrade")]
         [SerializeField] private double clickPowerBaseCost = 25;
         [SerializeField] private double clickPowerCostGrowthRate = 1.15;
@@ -153,6 +161,30 @@ namespace ClickerGenesis.Core
         /// being read once.</summary>
         public static bool PendingIsNewGame;
 
+        /// <summary>Constructs a fresh per-slot AchievementSystem and wires the achievement-unlock
+        /// SFX subscription onto it (2026-08-11, Sound System build) - every one of the 4 call
+        /// sites that used to write "Achievements = new AchievementSystem(achievementConfigs)"
+        /// directly now goes through here instead, so the SFX hook survives every slot
+        /// switch/reset (each of which replaces the Achievements instance with a brand new one).</summary>
+        private AchievementSystem CreateAchievementSystem()
+        {
+            var system = new AchievementSystem(achievementConfigs);
+            system.OnAchievementUnlocked += HandleAchievementUnlockedSfx;
+            return system;
+        }
+
+        private void HandleAchievementUnlockedSfx(AchievementDefinition def)
+        {
+            if (AudioManager.Instance == null) return;
+            AudioClip clip = def.tier switch
+            {
+                AchievementTier.Gold => achievementGoldSfx,
+                AchievementTier.Silver => achievementSilverSfx,
+                _ => achievementBronzeSfx,
+            };
+            AudioManager.Instance.PlaySfx(clip);
+        }
+
         /// <summary>Real entry point for the save-slot system's Continue/New-Game flows
         /// (2026-08-08) - called DIRECTLY by SaveSlotScreenUI/NewGameSetupScreenUI right before
         /// navigating to ClickerScreen, rather than relying on Awake() to consume static pending
@@ -164,11 +196,15 @@ namespace ClickerGenesis.Core
         {
             saveStorage = new LocalFileSaveStorage(slotIndex);
             SaveSlotManager.CurrentSlot = slotIndex;
+            // Achievements switch slots alongside the save (2026-08-10 reversal) - a fresh slot
+            // gets a fresh, empty AchievementSystem; an existing slot loads its own earned ones.
+            achievementStorage = new AchievementFileStorage(slotIndex);
 
             if (isNewGame)
             {
                 PendingNewGameStartingBookResourceId = startingBookResourceId;
                 BuildFreshState();
+                Achievements = CreateAchievementSystem();
                 autoSaveTimer = 0f;
                 // Establish the file immediately - otherwise the slot picker would show this as
                 // "Empty" again if the player backs out before the next autosave/pause/quit tick.
@@ -177,6 +213,9 @@ namespace ClickerGenesis.Core
             else
             {
                 LoadGame();
+                Achievements = CreateAchievementSystem();
+                LoadAchievements();
+                ReplayCompletedBooksForAchievements();
             }
 
             OnStateChanged?.Invoke();
@@ -246,6 +285,19 @@ namespace ClickerGenesis.Core
         public bool IsBookComplete(string resourceId) =>
             bookProgress.TryGetValue(resourceId, out var b) && b.IsComplete;
 
+        /// <summary>True if resourceId has been unlocked via the Grace tree (or is this slot's
+        /// starting book) - REGARDLESS of whether the player's currently active book is finished.
+        /// Unlike CanSwitchToBook, this doesn't imply the player can switch into it right now; it
+        /// only answers "has this book's content been earned." Added 2026-08-10 for the Achievement
+        /// screen's book picker, which needs to list every unlocked book a player can browse
+        /// achievements for, not just the one they could switch to this instant.</summary>
+        public bool IsBookUnlocked(string resourceId)
+        {
+            if (string.IsNullOrEmpty(resourceId)) return false;
+            if (resourceId == activeBookResourceId) return true;
+            return resourceId == startingBookResourceId || (SkillsV2 != null && SkillsV2.IsBookUnlocked(resourceId));
+        }
+
         /// <summary>True if resourceId can become the active book right now: unlocked via the
         /// Grace tree (or it's Genesis, always free) AND the player's CURRENTLY ACTIVE book is
         /// already complete. RESTORED 2026-08-09 (real user correction, reverses the "player-choice
@@ -264,8 +316,7 @@ namespace ClickerGenesis.Core
             // source of truth for book unlocks. Books already unlocked via the old tree are
             // migrated into SkillsV2's own unlockedBookIds once, in ApplySaveData, so existing
             // progress isn't lost even though this check no longer reads the old system directly.
-            bool unlocked = resourceId == startingBookResourceId || (SkillsV2 != null && SkillsV2.IsBookUnlocked(resourceId));
-            if (!unlocked) return false;
+            if (!IsBookUnlocked(resourceId)) return false;
             // A book never switched to yet has no BookProgress record - IsBookComplete correctly
             // returns false for it, same as "not started" being treated as "not finished."
             return string.IsNullOrEmpty(activeBookResourceId) || IsBookComplete(activeBookResourceId);
@@ -299,6 +350,10 @@ namespace ClickerGenesis.Core
         /// as originally requested. Placeholder cost numbers, pending playtesting.
         /// </summary>
         public int ClickPowerLevel { get; private set; }
+
+        /// <summary>Lifetime tap count (2026-08-10) - drives the gameplay achievement ladder's
+        /// total-taps family via TrackedStat.TotalTaps.</summary>
+        public long TotalTaps { get; private set; }
 
         public double ClickPowerCost => clickPowerBaseCost * Math.Pow(clickPowerCostGrowthRate, ClickPowerLevel);
 
@@ -513,15 +568,19 @@ namespace ClickerGenesis.Core
             // Play mode actually starts, so this still persists correctly at runtime.
             if (Application.isPlaying) DontDestroyOnLoad(gameObject);
 
-            // Achievements are GLOBAL (2026-08-08) - constructed once here, NOT inside
-            // BuildFreshState(), so a "Delete Saved Game" reset (which calls BuildFreshState()
-            // again mid-session) never touches unlock/progress state. Built unconditionally
-            // (like every other system below) so it's never null, even at editor-time.
-            Achievements = new AchievementSystem(achievementConfigs);
+            // Achievements are PER-SAVE-SLOT (REVISED 2026-08-10, was GLOBAL) - built here just so
+            // the field is never null, even at editor-time, but this initial instance gets
+            // replaced by the real slot-specific one below (Play mode) or by SwitchToSlot() on a
+            // later slot change. See AchievementSystem's doc comment for why this reversed.
+            Achievements = CreateAchievementSystem();
 
             BuildFreshState();
 
-            if (Application.isPlaying) GameSettings.ApplyDisplaySettings();
+            if (Application.isPlaying)
+            {
+                GameSettings.ApplyDisplaySettings();
+                GameSettings.MigrateLegacySoundSetting();
+            }
 
             // Save/load (2026-08-08, per Save-System-Design.md) - LoadGame() overwrites the
             // just-built default/fresh state above ONLY if a real save exists on disk; a fresh
@@ -535,20 +594,25 @@ namespace ClickerGenesis.Core
                 if (!PendingIsNewGame) LoadGame();
                 PendingIsNewGame = false;
 
-                // Separate file, separate load - deliberately independent of the save-slot system
-                // above (see Achievements property doc comment).
-                achievementStorage = new AchievementFileStorage();
+                // Achievements now use the SAME slot index as the save above (2026-08-10 reversal -
+                // was its own always-slot-0 file regardless of which slot was active).
+                achievementStorage = new AchievementFileStorage(SaveSlotManager.CurrentSlot);
                 LoadAchievements();
-
-                // Replay EvaluateBookComplete for every book already complete on this slot
-                // (2026-08-09) - AchievementSystem.completedBooks is in-memory-only, not part of
-                // AchievementData, so a section-grouping achievement whose books were all finished
-                // in a PRIOR session needs this replay to know that on a fresh load. Harmless for
-                // already-unlocked achievements (Unlock() no-ops) and for books completed this
-                // session (EvaluateBookComplete already gets called at the real completion moment).
-                foreach (var bp in bookProgress.Values)
-                    if (bp.IsComplete) Achievements.EvaluateBookComplete(bp.ResourceId);
+                ReplayCompletedBooksForAchievements();
             }
+        }
+
+        /// <summary>Replays EvaluateBookComplete for every book already complete on the current
+        /// slot (2026-08-09, factored into its own method 2026-08-10 so SwitchToSlot can call it
+        /// too) - AchievementSystem.completedBooks is in-memory-only, not part of AchievementData,
+        /// so a section-grouping achievement whose books were all finished in a PRIOR session
+        /// needs this replay to know that on a fresh load. Harmless for already-unlocked
+        /// achievements (Unlock() no-ops) and for books completed this session (EvaluateBookComplete
+        /// already gets called at the real completion moment).</summary>
+        private void ReplayCompletedBooksForAchievements()
+        {
+            foreach (var bp in bookProgress.Values)
+                if (bp.IsComplete) Achievements.EvaluateBookComplete(bp.ResourceId);
         }
 
         /// <summary>Builds the same brand-new-player default state Awake() has always built -
@@ -604,6 +668,7 @@ namespace ClickerGenesis.Core
 
             ClickPowerLevel = 0;
             ProgressMultiplier = 1f;
+            TotalTaps = 0;
         }
 
         /// <summary>Settings screen's "Delete Saved Game" option (2026-08-08, explicit user ask -
@@ -615,7 +680,12 @@ namespace ClickerGenesis.Core
         public void ResetGameAndDeleteSave()
         {
             saveStorage?.DeleteSave();
+            // Achievements are wiped alongside the save (2026-08-10 reversal) - the whole point of
+            // moving them to per-slot storage was so a real reset genuinely starts over, earned
+            // achievements included, not just Ink/scribes/level.
+            achievementStorage?.DeleteSave();
             BuildFreshState();
+            Achievements = CreateAchievementSystem();
             autoSaveTimer = 0f;
             OnStateChanged?.Invoke();
         }
@@ -636,6 +706,14 @@ namespace ClickerGenesis.Core
                 // AchievementSystem.EvaluateStat's doc comment.
                 Achievements.EvaluateStat(TrackedStat.LifetimeInk, (float)Wallet.LifetimeEarned);
             }
+            // Reported every frame regardless of whether Ink is currently flowing (2026-08-10,
+            // Phase 2 gameplay ladders) - InkSpent/InkPerSecond/Grace only change on a purchase or
+            // prestige, but the check itself is cheap (same handful-of-achievements comparison as
+            // LifetimeInk above), and reporting here avoids needing a matching EvaluateStat call at
+            // every single Buy*/Prestige call site individually.
+            Achievements.EvaluateStat(TrackedStat.InkSpent, (float)Wallet.TotalSpent);
+            Achievements.EvaluateStat(TrackedStat.InkPerSecond, (float)inkPerSecond);
+            Achievements.EvaluateStat(TrackedStat.Grace, (float)Prestige.Grace);
 
             // Manager auto-buy (2026-08-04): a manager doesn't just boost its tier's output — once
             // bought, it also auto-purchases that tier itself whenever affordable, same as
@@ -735,16 +813,20 @@ namespace ClickerGenesis.Core
             OnStateChanged?.Invoke();
         }
 
-        /// <summary>Writes the global achievement ledger to its own file - deliberately separate
-        /// from SaveGame()'s per-slot save, though currently triggered alongside it (same
-        /// pause/quit/30s-autosave call sites) since there's no reason to save it on a different
-        /// cadence yet. Safe to call anytime after Awake(); no-ops if achievementStorage hasn't
-        /// been set up (e.g. an editor-time context outside Play mode).</summary>
+        /// <summary>Writes the current slot's achievement ledger to its own file - still separate
+        /// from SaveGame()'s SaveData (keeps the achievement ledger's own versioning/migration
+        /// chain independent), just no longer a single file shared across every slot (2026-08-10
+        /// reversal). Triggered alongside SaveGame() (same pause/quit/30s-autosave call sites)
+        /// since there's no reason to save it on a different cadence. Safe to call anytime after
+        /// Awake(); no-ops if achievementStorage hasn't been set up (e.g. an editor-time context
+        /// outside Play mode).</summary>
         public void SaveAchievements()
         {
             if (achievementStorage == null) return;
             var data = new AchievementData();
-            data.unlockedIds.AddRange(Achievements.ExportUnlockedIds());
+            var timestamps = Achievements.ExportUnlockTimestamps().ToDictionary(kv => kv.Key, kv => kv.Value);
+            foreach (var id in Achievements.ExportUnlockedIds())
+                data.unlocks.Add(new AchievementUnlockEntry { id = id, unlockedAtUtc = timestamps.TryGetValue(id, out var t) ? t : "" });
             foreach (var kvp in Achievements.ExportProgress())
                 data.progress.Add(new AchievementProgressEntry { id = kvp.Key, value = kvp.Value });
             achievementStorage.Save(data);
@@ -754,7 +836,10 @@ namespace ClickerGenesis.Core
         {
             if (achievementStorage == null) return;
             var data = achievementStorage.Load();
-            Achievements.ImportState(data.unlockedIds, data.progress.Select(p => new KeyValuePair<string, float>(p.id, p.value)));
+            Achievements.ImportState(
+                data.unlocks.Select(u => u.id),
+                data.progress.Select(p => new KeyValuePair<string, float>(p.id, p.value)),
+                data.unlocks.Select(u => new KeyValuePair<string, string>(u.id, u.unlockedAtUtc)));
         }
 
         /// <summary>Builds a SaveData snapshot of the current live state - the save-file
@@ -768,6 +853,7 @@ namespace ClickerGenesis.Core
             data.economy.inkLifetimeEarned = Wallet.LifetimeEarned;
             data.economy.inkTotalSpent = Wallet.TotalSpent;
             data.economy.clickPowerLevel = ClickPowerLevel;
+            data.economy.totalTaps = TotalTaps;
             data.economy.progressMultiplier = ProgressMultiplier;
             foreach (var kvp in scribeSystemsByBook)
             {
@@ -820,6 +906,7 @@ namespace ClickerGenesis.Core
         {
             Wallet.LoadState(data.economy.inkBalance, data.economy.inkLifetimeEarned, data.economy.inkTotalSpent);
             ClickPowerLevel = data.economy.clickPowerLevel;
+            TotalTaps = data.economy.totalTaps;
             ProgressMultiplier = data.economy.progressMultiplier;
 
             foreach (var bookState in data.economy.scribeBooks)
@@ -1059,8 +1146,10 @@ namespace ClickerGenesis.Core
         public void TapForInk()
         {
             Wallet.Add(EffectiveTapAmount);
+            TotalTaps++;
             Achievements.Unlock("first_tap");
             Achievements.EvaluateStat(TrackedStat.LifetimeInk, (float)Wallet.LifetimeEarned);
+            Achievements.EvaluateStat(TrackedStat.TotalTaps, TotalTaps);
             OnStateChanged?.Invoke();
         }
 
@@ -1156,6 +1245,8 @@ namespace ClickerGenesis.Core
 
             if (NextVerseIndex % 5 == 0) ProgressMultiplier += 0.1f;
 
+            if (AudioManager.Instance != null) AudioManager.Instance.PlaySfx(verseUnlockSfx);
+
             bool chapterComplete = !Verses.HasVerse(NextVerseIndex) ||
                 Verses.GetVerse(NextVerseIndex).ChapterNumber != purchasedVerse.ChapterNumber;
             if (chapterComplete)
@@ -1163,6 +1254,7 @@ namespace ClickerGenesis.Core
                 activeBook.ChaptersCompletedInBook++;
                 ProgressMultiplier *= 2f;
                 Achievements.EvaluateStat(TrackedStat.ChaptersCompleted, ChaptersCompletedCount);
+                if (AudioManager.Instance != null) AudioManager.Instance.PlaySfx(chapterCompleteSfx);
             }
             // BooksCompletedCount is now computed from BookProgress.IsComplete - no increment
             // needed here, it just becomes true once NextVerseIndex runs past the book's last verse.
@@ -1170,6 +1262,7 @@ namespace ClickerGenesis.Core
             {
                 Achievements.EvaluateBookComplete(activeBookResourceId);
                 Achievements.EvaluateStat(TrackedStat.BooksCompletedOT, BooksCompletedCount);
+                if (AudioManager.Instance != null) AudioManager.Instance.PlaySfx(bookCompleteSfx);
             }
 
             if (xpConfig != null)

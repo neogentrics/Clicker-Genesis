@@ -6,21 +6,44 @@ using UnityEngine.UI;
 namespace ClickerGenesis.Core
 {
     /// <summary>
-    /// Consolidated Settings screen: sound (was SoundSettingsUI, folded in here), font size,
-    /// number notation, fullscreen, resolution, and a battery-saver toggle. Every option here is
-    /// a genuinely working feature (backed by GameSettings/PlayerPrefs), not a stub - display
-    /// settings apply immediately via Screen/QualitySettings, not just cosmetically.
+    /// Consolidated, tabbed Settings screen (Sound-System-Design.html retab, 2026-08-11 - supersedes
+    /// the earlier single-panel layout). Four tabs - Audio/Display/Gameplay/Data - same
+    /// SetTab(int)/ActiveTabColor pattern already used by ClickerScreenUI's Scribes/Managers/Support
+    /// tabs and BuyVerseScreenUI's Verses/Chapters/Books tabs. Every option here is a genuinely
+    /// working feature (backed by GameSettings/PlayerPrefs or the MasterMixer), not a stub.
     /// </summary>
     public class SettingsScreenUI : MonoBehaviour
     {
-        private const string SoundPrefKey = "ClickerGenesis.SoundEnabled";
+        private static readonly Color ActiveTabColor = new Color(0.957f, 0.925f, 0.847f, 1f);
+        private static readonly Color InactiveTabColor = new Color(0.72f, 0.65f, 0.53f, 1f);
 
-        [Header("Sound")]
-        public Button SoundToggleButton;
-        public TMP_Text SoundToggleLabel;
-        public Image SoundIconImage;
-        public Sprite SoundOnIcon;
-        public Sprite SoundOffIcon;
+        [Header("Tabs (0=Audio, 1=Display, 2=Gameplay, 3=Data)")]
+        public Button AudioTabButton;
+        public Button DisplayTabButton;
+        public Button GameplayTabButton;
+        public Button DataTabButton;
+        public GameObject AudioTabRoot;
+        public GameObject DisplayTabRoot;
+        public GameObject GameplayTabRoot;
+        public GameObject DataTabRoot;
+
+        [Header("Audio - master mute")]
+        public Button MasterMuteButton;
+        public TMP_Text MasterMuteLabel;
+
+        [Header("Audio - volume rows (Minus/Plus steppers, same pattern as Font Size)")]
+        public Button MasterVolumeMinusButton;
+        public Button MasterVolumePlusButton;
+        public TMP_Text MasterVolumeLabel;
+        public Button SfxVolumeMinusButton;
+        public Button SfxVolumePlusButton;
+        public TMP_Text SfxVolumeLabel;
+        public Button MusicVolumeMinusButton;
+        public Button MusicVolumePlusButton;
+        public TMP_Text MusicVolumeLabel;
+        public Button VoiceVolumeMinusButton;
+        public Button VoiceVolumePlusButton;
+        public TMP_Text VoiceVolumeLabel;
 
         [Header("Font size")]
         public Button FontSizeDownButton;
@@ -67,6 +90,23 @@ namespace ClickerGenesis.Core
         public Button DeleteConfirmYesButton;
         public Button DeleteConfirmNoButton;
 
+        [Header("Check for Updates (2026-08-10, revised same day) - desktop-only" +
+            " (AppUpdateManager.IsSupportedPlatform). ONE button that relabels itself: reads" +
+            " 'Check for Updates' normally (also the manual re-check the user still gets if the" +
+            " automatic background check found nothing, or hasn't run yet), 'Install' once an update" +
+            " is found. The label shows the current version and, when relevant, the found version -" +
+            " it's a version readout, not an instruction. Still opt-in for the download/install step" +
+            " itself: clicking only downloads+installs when the button is already in Install mode -" +
+            " nothing happens automatically beyond the read-only check. Lives on the Data tab.")]
+        public GameObject UpdateSectionRoot;
+        public Button UpdateActionButton;
+        public TMP_Text UpdateActionButtonLabel;
+        public TMP_Text UpdateStatusLabel;
+
+        // Computed once in Awake (desktop-only gate) - SetTab combines this with "is Data tab active"
+        // so UpdateSectionRoot is never shown on mobile even while the Data tab itself is open.
+        private bool updatesSupported;
+
         private void Awake()
         {
             if (!GameLoopController.EnsureBootstrapped()) return;
@@ -80,7 +120,21 @@ namespace ClickerGenesis.Core
                 BackToGameButton.SetActive(cameFromGameplay);
             }
 
-            if (SoundToggleButton != null) SoundToggleButton.onClick.AddListener(ToggleSound);
+            if (AudioTabButton != null) AudioTabButton.onClick.AddListener(() => SetTab(0));
+            if (DisplayTabButton != null) DisplayTabButton.onClick.AddListener(() => SetTab(1));
+            if (GameplayTabButton != null) GameplayTabButton.onClick.AddListener(() => SetTab(2));
+            if (DataTabButton != null) DataTabButton.onClick.AddListener(() => SetTab(3));
+
+            if (MasterMuteButton != null) MasterMuteButton.onClick.AddListener(ToggleMasterMute);
+            if (MasterVolumeMinusButton != null) MasterVolumeMinusButton.onClick.AddListener(() => { GameSettings.MasterVolume -= 0.1f; RefreshMasterVolume(); });
+            if (MasterVolumePlusButton != null) MasterVolumePlusButton.onClick.AddListener(() => { GameSettings.MasterVolume += 0.1f; RefreshMasterVolume(); });
+            if (SfxVolumeMinusButton != null) SfxVolumeMinusButton.onClick.AddListener(() => { GameSettings.SfxVolume -= 0.1f; RefreshSfxVolume(); });
+            if (SfxVolumePlusButton != null) SfxVolumePlusButton.onClick.AddListener(() => { GameSettings.SfxVolume += 0.1f; RefreshSfxVolume(); });
+            if (MusicVolumeMinusButton != null) MusicVolumeMinusButton.onClick.AddListener(() => { GameSettings.MusicVolume -= 0.1f; RefreshMusicVolume(); });
+            if (MusicVolumePlusButton != null) MusicVolumePlusButton.onClick.AddListener(() => { GameSettings.MusicVolume += 0.1f; RefreshMusicVolume(); });
+            if (VoiceVolumeMinusButton != null) VoiceVolumeMinusButton.onClick.AddListener(() => { GameSettings.VoiceVolume -= 0.1f; RefreshVoiceVolume(); });
+            if (VoiceVolumePlusButton != null) VoiceVolumePlusButton.onClick.AddListener(() => { GameSettings.VoiceVolume += 0.1f; RefreshVoiceVolume(); });
+
             if (FontSizeDownButton != null) FontSizeDownButton.onClick.AddListener(() => AdjustFontScale(-0.1f));
             if (FontSizeUpButton != null) FontSizeUpButton.onClick.AddListener(() => AdjustFontScale(0.1f));
             if (NotationCycleButton != null) NotationCycleButton.onClick.AddListener(CycleNotation);
@@ -95,6 +149,14 @@ namespace ClickerGenesis.Core
             if (DeleteConfirmNoButton != null) DeleteConfirmNoButton.onClick.AddListener(HandleDeleteConfirmNo);
             if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(false);
 
+            updatesSupported = AppUpdateManager.Instance != null && AppUpdateManager.Instance.IsSupportedPlatform;
+            if (updatesSupported)
+            {
+                if (UpdateActionButton != null) UpdateActionButton.onClick.AddListener(HandleUpdateAction);
+                AppUpdateManager.Instance.OnStateChanged += RefreshUpdateStatus;
+                RefreshUpdateStatus();
+            }
+
             // Same button/label slot does double duty: exact resolution picking only makes sense
             // on desktop (windowed mode, arbitrary monitor sizes) - mobile has no windowing to
             // resize, so it gets a Quality tier cycle instead. See GameSettings.
@@ -102,19 +164,70 @@ namespace ClickerGenesis.Core
                 ResolutionCycleButton.onClick.AddListener(GameSettings.IsResolutionSelectionSupported ? CycleResolution : CycleQuality);
             if (!GameSettings.IsResolutionSelectionSupported) FullscreenToggleButton?.gameObject.SetActive(false);
 
+            SetTab(0);
             RefreshAll();
         }
 
-        private static bool IsSoundEnabled() => PlayerPrefs.GetInt(SoundPrefKey, 1) == 1;
-
-        private void ToggleSound()
+        /// <summary>Same pattern as ClickerScreenUI/BuyVerseScreenUI's SetTab - toggles which tab
+        /// root is active and tints the tab buttons' own Image (they ARE their background, no
+        /// separate background object). UpdateSectionRoot lives outside the four tab roots (it's a
+        /// non-scrolling section docked at the bottom of Panel, see SettingsScreen.unity) so it
+        /// gets its own combined visibility check here rather than being a normal tab-root child.</summary>
+        private void SetTab(int tab)
         {
-            bool newState = !IsSoundEnabled();
-            PlayerPrefs.SetInt(SoundPrefKey, newState ? 1 : 0);
-            PlayerPrefs.Save();
-            AudioListener.volume = newState ? 1f : 0f;
-            RefreshSound();
+            if (AudioTabRoot != null) AudioTabRoot.SetActive(tab == 0);
+            if (DisplayTabRoot != null) DisplayTabRoot.SetActive(tab == 1);
+            if (GameplayTabRoot != null) GameplayTabRoot.SetActive(tab == 2);
+            if (DataTabRoot != null) DataTabRoot.SetActive(tab == 3);
+            if (UpdateSectionRoot != null) UpdateSectionRoot.SetActive(tab == 3 && updatesSupported);
+
+            SetTabButtonColor(AudioTabButton, tab == 0);
+            SetTabButtonColor(DisplayTabButton, tab == 1);
+            SetTabButtonColor(GameplayTabButton, tab == 2);
+            SetTabButtonColor(DataTabButton, tab == 3);
         }
+
+        private static void SetTabButtonColor(Button button, bool active)
+        {
+            if (button == null) return;
+            var image = button.GetComponent<Image>();
+            if (image != null) image.color = active ? ActiveTabColor : InactiveTabColor;
+        }
+
+        // ---- Audio tab ----
+
+        private void ToggleMasterMute()
+        {
+            GameSettings.MasterMuted = !GameSettings.MasterMuted;
+            RefreshMasterMute();
+        }
+
+        private void RefreshMasterMute()
+        {
+            if (MasterMuteLabel != null) MasterMuteLabel.text = GameSettings.MasterMuted ? "Mute: On" : "Mute: Off";
+        }
+
+        private void RefreshMasterVolume()
+        {
+            if (MasterVolumeLabel != null) MasterVolumeLabel.text = $"Master Volume: {GameSettings.MasterVolume * 100f:F0}%";
+        }
+
+        private void RefreshSfxVolume()
+        {
+            if (SfxVolumeLabel != null) SfxVolumeLabel.text = $"SFX Volume: {GameSettings.SfxVolume * 100f:F0}%";
+        }
+
+        private void RefreshMusicVolume()
+        {
+            if (MusicVolumeLabel != null) MusicVolumeLabel.text = $"Music Volume: {GameSettings.MusicVolume * 100f:F0}%";
+        }
+
+        private void RefreshVoiceVolume()
+        {
+            if (VoiceVolumeLabel != null) VoiceVolumeLabel.text = $"Voice Volume: {GameSettings.VoiceVolume * 100f:F0}%";
+        }
+
+        // ---- Display / Gameplay / Data (unchanged from the pre-retab single-panel build) ----
 
         private void AdjustFontScale(float delta)
         {
@@ -248,7 +361,11 @@ namespace ClickerGenesis.Core
 
         private void RefreshAll()
         {
-            RefreshSound();
+            RefreshMasterMute();
+            RefreshMasterVolume();
+            RefreshSfxVolume();
+            RefreshMusicVolume();
+            RefreshVoiceVolume();
             RefreshFontSize();
             RefreshNotation();
             RefreshFullscreen();
@@ -257,13 +374,6 @@ namespace ClickerGenesis.Core
             RefreshRunInBackground();
             RefreshOrientation();
             RefreshScrollSpeed();
-        }
-
-        private void RefreshSound()
-        {
-            bool enabled = IsSoundEnabled();
-            if (SoundToggleLabel != null) SoundToggleLabel.text = enabled ? "Sound: On" : "Sound: Off";
-            if (SoundIconImage != null) SoundIconImage.sprite = enabled ? SoundOnIcon : SoundOffIcon;
         }
 
         private void RefreshFontSize()
@@ -346,6 +456,48 @@ namespace ClickerGenesis.Core
         private void HandleDeleteConfirmNo()
         {
             if (DeleteConfirmPanel != null) DeleteConfirmPanel.SetActive(false);
+        }
+
+        private void OnDestroy()
+        {
+            if (AppUpdateManager.Instance != null) AppUpdateManager.Instance.OnStateChanged -= RefreshUpdateStatus;
+        }
+
+        /// <summary>The button does double duty by design (2026-08-10 revision) - if an update is
+        /// already known (mgr.UpdateAvailable), this click is the real "download and install"
+        /// confirmation; otherwise it's just a manual re-check. Nothing downloads/installs unless
+        /// the button was already showing "Install" when clicked - the opt-in rule still holds.</summary>
+        private void HandleUpdateAction()
+        {
+            var mgr = AppUpdateManager.Instance;
+            if (mgr == null) return;
+            if (mgr.UpdateAvailable) mgr.DownloadAndApplyUpdate();
+            else mgr.CheckForUpdates();
+        }
+
+        private void RefreshUpdateStatus()
+        {
+            var mgr = AppUpdateManager.Instance;
+            if (mgr == null) return;
+
+            if (UpdateStatusLabel != null)
+            {
+                string text = $"Version: v{mgr.CurrentVersionDisplay} Beta";
+                if (mgr.UpdateAvailable) text += $" (Update Found: v{mgr.AvailableVersion} Beta)";
+                else if (mgr.IsCheckingForUpdate) text += " (Checking for updates...)";
+                else if (!string.IsNullOrEmpty(mgr.StatusMessage)) text += $" ({mgr.StatusMessage})";
+                UpdateStatusLabel.text = text;
+            }
+
+            if (UpdateActionButtonLabel != null)
+            {
+                UpdateActionButtonLabel.text = mgr.IsDownloading ? "Installing..."
+                    : mgr.IsCheckingForUpdate ? "Checking..."
+                    : mgr.UpdateAvailable ? "Install"
+                    : "Check for Updates";
+            }
+
+            if (UpdateActionButton != null) UpdateActionButton.interactable = !mgr.IsCheckingForUpdate && !mgr.IsDownloading;
         }
     }
 }

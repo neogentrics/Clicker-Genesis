@@ -55,11 +55,20 @@ namespace ClickerGenesis.Core
         /// <summary>Same fix as ClickerScreenUI's Auto-Buy/Reserve buttons - clicking Multiplier
         /// fires an immediate Refresh() close enough to the click that the button's Selectable can
         /// get stuck reporting the Pressed/Highlighted visual state on later hovers. Toggling the
-        /// component forces Selectable's own OnEnable reset, snapping it back to Normal.</summary>
+        /// component forces Selectable's own OnEnable reset, snapping it back to Normal.
+        /// Real follow-up fix (bug #236, 2026-08-11): Selectable.OnEnable unconditionally clears
+        /// its internal isPointerInside flag, so if the mouse is still resting on the button when
+        /// this fires, it silently drops back to the un-tinted Normal color and stays that way
+        /// until the pointer physically moves off and back on - reads as "hover glow doesn't
+        /// work" even though the button is otherwise fine (a separate ButtonHoverScale component
+        /// tracks real OnPointerEnter/Exit independently, so the scale-grow still happens, making
+        /// the missing tint look even more like a real bug). Fix: after the reset, check whether
+        /// the pointer is still over the button and re-fire a synthetic PointerEnter if so.</summary>
         private IEnumerator ResetSelectionStateNextFrame(Button button)
         {
             yield return null;
             if (button != null) { button.enabled = false; button.enabled = true; }
+            UiRefreshUtil.RehoverIfPointerStillOver(button);
         }
 
         /// <summary>Destroys any existing rows and rebuilds from the active book's current roster

@@ -32,7 +32,17 @@ namespace ClickerGenesis.Achievements
     /// bookResourceId, not a single number. None = this achievement is unlocked directly via
     /// Achievement System.Unlock(id) at a one-shot event (first tap, first prestige, etc.),
     /// not tracked against a running stat at all.</summary>
-    public enum TrackedStat { None, LifetimeInk, ScribesOwned, ChaptersCompleted, BooksCompletedOT, ManagersUnlocked, SubmanagersUnlocked, PlayerLevel, FreePrestigeCount, ResetPrestigeCount }
+    public enum TrackedStat
+    {
+        None, LifetimeInk, ScribesOwned, ChaptersCompleted, BooksCompletedOT, ManagersUnlocked, SubmanagersUnlocked, PlayerLevel, FreePrestigeCount, ResetPrestigeCount,
+        // Added 2026-08-10 for the v2 gameplay-achievement ladders (Phase 2) - TotalTaps/InkSpent
+        // are lifetime cumulative counters (never regress); InkPerSecond/Grace report the current
+        // live value each frame, but since EvaluateStat/SetProgress are already monotonic (a
+        // Progress-type achievement's stored progress never decreases even if the reported value
+        // does), reporting a live value that can naturally dip (e.g. Grace after spending it) still
+        // correctly latches "highest value ever reached" - no separate lifetime-peak field needed.
+        TotalTaps, InkSpent, InkPerSecond, Grace
+    }
 
     /// <summary>One achievement. Data-only, same shape/role as ScribeDefinition - held in a list
     /// inside an AchievementSetConfig ScriptableObject, not a ScriptableObject itself. Runtime
