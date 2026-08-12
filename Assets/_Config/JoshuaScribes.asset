@@ -1,0 +1,332 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: JoshuaScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Joshua
+  tiers:
+  - id: twelve_stones
+    displayName: Twelve Stones
+    flavorText: Twelve stones set up at Gilgal, one for each tribe that crossed the
+      Jordan on dry ground.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: joshua
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Joshua
+    managerFlavorText: Twelve stones set up at Gilgal, one for each tribe that crossed
+      the Jordan on dry ground.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: scarlet_cord
+    displayName: Scarlet Cord
+    flavorText: Hides the two spies, hangs a scarlet cord from her window per their
+      agreement.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: rahab
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 26.6
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.33
+    unlockAtVerseIndex: 12
+    managerName: Rahab
+    managerFlavorText: Hides the two spies, hangs a scarlet cord from her window
+      per their agreement.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 18
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 400
+    submanagers: []
+  - id: achans_wedge
+    displayName: Achan's Wedge of Gold
+    flavorText: Takes a Babylonish garment, silver, and a wedge of gold from Jericho's
+      forbidden spoil.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: achan
+    icon: {fileID: 21300000, guid: c91549598fba0f647a4cffccd47cd1c6, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 71
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.55
+    unlockAtVerseIndex: 25
+    managerName: Achan
+    managerFlavorText: Takes a Babylonish garment, silver, and a wedge of gold from
+      Jericho's forbidden spoil.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 125
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 800
+    submanagers: []
+  - id: gibeons_ruse
+    displayName: Gibeon's Ruse
+    flavorText: Disguise themselves as distant travelers to trick Israel into a covenant
+      of peace.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gibeonites
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 189.1
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9.45
+    unlockAtVerseIndex: 45
+    managerName: The Gibeonites
+    managerFlavorText: Disguise themselves as distant travelers to trick Israel into
+      a covenant of peace.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 188
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2000
+    submanagers: []
+  - id: five_kings
+    displayName: Five Kings of the Amorites
+    flavorText: Organizes a five-king coalition against Gibeon for making peace with
+      Israel.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: adonizedek_king_of_jerusalem
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 503.6
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25.18
+    unlockAtVerseIndex: 75
+    managerName: Adonizedek
+    managerFlavorText: Organizes a five-king coalition against Gibeon for making
+      peace with Israel.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 213
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 5000
+    submanagers:
+    - id: hoham
+      displayName: Hoham
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 215
+      unlockCost: 4000
+    - id: piram
+      displayName: Piram
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 215
+      unlockCost: 4000
+    - id: japhia
+      displayName: Japhia
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 215
+      unlockCost: 4000
+    - id: debir_king
+      displayName: Debir
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 215
+      unlockCost: 4000
+  - id: waters_of_merom
+    displayName: Waters of Merom
+    flavorText: Assembles a northern coalition at the waters of Merom; Hazor alone
+      is burned.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jabin_king_of_hazor
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1341.6
+    costGrowthRate: 1.15
+    baseInkPerSecond: 67.08
+    unlockAtVerseIndex: 120
+    managerName: Jabin
+    managerFlavorText: Assembles a northern coalition at the waters of Merom; Hazor
+      alone is burned.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 256
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12000
+    submanagers: []
+  - id: nether_springs
+    displayName: Nether Springs
+    flavorText: Claims Hebron at 85, citing Moses' oath forty-five years after spying
+      out the land.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: caleb
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3574.1
+    costGrowthRate: 1.15
+    baseInkPerSecond: 178.7
+    unlockAtVerseIndex: 180
+    managerName: Caleb
+    managerFlavorText: Claims Hebron at 85, citing Moses' oath forty-five years after
+      spying out the land.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 341
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 30000
+    submanagers:
+    - id: achsah
+      displayName: Achsah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 366
+      unlockCost: 25000
+    - id: othniel
+      displayName: Othniel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 367
+      unlockCost: 25000
+  - id: portion_among_brethren
+    displayName: Portion Among the Brethren
+    flavorText: Comes with her sisters to claim the inheritance the LORD had already
+      promised through Moses.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: mahlah_daughter_of_zelophehad
+    icon: {fileID: 21300000, guid: 47d7b9c5d45e9784c9c0060d4bb93f0e, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 9521.2
+    costGrowthRate: 1.15
+    baseInkPerSecond: 476.06
+    unlockAtVerseIndex: 260
+    managerName: Mahlah
+    managerFlavorText: Comes with her sisters to claim the inheritance the LORD had
+      already promised through Moses.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 426
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 80000
+    submanagers:
+    - id: noah_d
+      displayName: Noah (Zelophehad's daughter)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 426
+      unlockCost: 60000
+    - id: hoglah_d
+      displayName: Hoglah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 426
+      unlockCost: 60000
+    - id: milcah_d
+      displayName: Milcah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 426
+      unlockCost: 60000
+    - id: tirzah_d
+      displayName: Tirzah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 426
+      unlockCost: 60000
+  - id: cities_of_refuge
+    displayName: Cities of Refuge
+    flavorText: Six cities where one who kills unawares may flee the avenger of blood.
+    tierType: 1
+    purpose: Establishes six cities where a person who kills another 'unawares and
+      unwittingly' may flee from the avenger of blood and receive a fair hearing
+      - teaching that unintentional killing is judged differently from murder, and
+      that justice requires due process rather than immediate vengeance.
+    deliveredByManagerId: joshua
+    managerId: cities_of_refuge_law
+    icon: {fileID: 21300000, guid: 0528d350afc4b3a45b82cb411b355e0d, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 25364
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1268.2
+    unlockAtVerseIndex: 260
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: levites_portion
+    displayName: Levites' Portion
+    flavorText: Forty-eight cities with pasture lands, since the Levites received
+      no land inheritance of their own.
+    tierType: 1
+    purpose: Assigns the Levites forty-eight cities with surrounding pasture lands
+      out of the other tribes' inheritances, since the Levites received no territorial
+      inheritance of their own - teaching that the priestly calling is itself their
+      portion, with the LORD as their inheritance, while still providing practically
+      for their material needs.
+    deliveredByManagerId: joshua
+    managerId: levitical_cities_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 67568.7
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3378.43
+    unlockAtVerseIndex: 360
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: altar_of_witness
+    displayName: Altar of Witness
+    flavorText: Sent to confront the eastern tribes over an altar meant as a witness,
+      not for sacrifice.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: phinehas
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 180000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9000
+    unlockAtVerseIndex: 460
+    managerName: Phinehas
+    managerFlavorText: Satisfied the altar was a witness, not for sacrifice - reports
+      back, and war is averted.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 587
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 400000
+    submanagers: []

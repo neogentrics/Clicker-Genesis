@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: JonahScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Jonah
+  tiers:
+  - id: jonah
+    displayName: Jonah, the Reluctant Prophet
+    flavorText: Flees from the presence of the LORD toward Tarshish rather than carry
+      his message to Nineveh.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jonah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 2
+    managerName: Jonah
+    managerFlavorText: Flees from the presence of the LORD toward Tarshish rather
+      than carry his message to Nineveh.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 2
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: the_mariners
+      displayName: The Mariners
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 14
+      unlockCost: 105
+    - id: king_of_nineveh
+      displayName: The King of Nineveh
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 32
+      unlockCost: 105
+  - id: great_fish
+    displayName: The Great Fish
+    flavorText: The LORD prepares a great fish to swallow Jonah, who remains in its
+      belly three days and three nights.
+    tierType: 1
+    purpose: 'God''s appointed instrument of both judgment and rescue: it swallows
+      Jonah to save him from drowning after he is cast into the sea, then delivers
+      him safely back to dry land, teaching that the LORD''s sovereignty and mercy
+      extend even over the sea and its creatures.'
+    deliveredByManagerId: 
+    managerId: great_fish
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 246.62120743304698
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.331060371652349
+    unlockAtVerseIndex: 16
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: jonahs_prayer
+    displayName: Jonah's Prayer
+    flavorText: Jonah cries out to the LORD from within the fish's belly, vowing
+      thanksgiving and declaring that salvation is of the LORD.
+    tierType: 1
+    purpose: "A psalm of thanksgiving offered in distress, recounting Jonah's descent
+      into the deep and affirming that 'salvation is of the LORD' (Jonah 2:9) \u2014
+      modeling repentant prayer offered from the depths of consequence, rather than
+      a petition to be spared them."
+    deliveredByManagerId: jonah
+    managerId: jonahs_prayer
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6082.201995573398
+    costGrowthRate: 1.15
+    baseInkPerSecond: 304.1100997786699
+    unlockAtVerseIndex: 17
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: gourd_worm_wind
+    displayName: The Gourd, the Worm, and the Wind
+    flavorText: The LORD prepares a gourd to shade Jonah, then a worm to wither it,
+      then a scorching east wind to afflict him.
+    tierType: 1
+    purpose: "Three things God 'prepares' in succession to teach Jonah about misplaced
+      pity \u2014 a plant that shades and pleases him, a worm that destroys it, and
+      a scorching wind that afflicts him \u2014 exposing Jonah's greater concern
+      for his own comfort than for the many souls of Nineveh."
+    deliveredByManagerId: 
+    managerId: gourd_worm_wind
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 149999.99999999994
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7499.999999999997
+    unlockAtVerseIndex: 42
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

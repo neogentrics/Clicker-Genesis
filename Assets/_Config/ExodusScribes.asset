@@ -1,0 +1,286 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: ExodusScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Exodus
+  tiers:
+  - id: burning_bush
+    displayName: Burning Bush
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: moses
+    icon: {fileID: 21300000, guid: 85ae0e13f0e40384abe70893b3eb46c2, type: 3}
+    managerIcon: {fileID: 21300000, guid: 85ae0e13f0e40384abe70893b3eb46c2, type: 3}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Moses
+    managerFlavorText: 
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 22
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers:
+    - id: amram
+      displayName: Amram
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 142
+      unlockCost: 50
+    - id: jochebed
+      displayName: Jochebed
+      icon: {fileID: 0}
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 23
+      unlockCost: 40
+    - id: gershom
+      displayName: Gershom
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.03
+      unlockAtVerseIndex: 43
+      unlockCost: 90
+    - id: eliezer_moses
+      displayName: Eliezer (Moses' son)
+      icon: {fileID: 21300000, guid: e725eadf9b18b3b43b40689f98b7aff3, type: 3}
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 470
+      unlockCost: 500
+  - id: aarons_rod
+    displayName: Aaron's Rod
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: aaron
+    icon: {fileID: 21300000, guid: 2cc24942bc3f02740bc093a742f1308a, type: 3}
+    managerIcon: {fileID: 21300000, guid: 2cc24942bc3f02740bc093a742f1308a, type: 3}
+    baseCost: 28
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.4
+    unlockAtVerseIndex: 10
+    managerName: Aaron
+    managerFlavorText: 
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 82
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: nadab
+      displayName: Nadab
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.04
+      unlockAtVerseIndex: 645
+      unlockCost: 1200
+    - id: abihu
+      displayName: Abihu
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.04
+      unlockAtVerseIndex: 645
+      unlockCost: 1200
+  - id: sharp_stone
+    displayName: Sharp Stone
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zipporah
+    icon: {fileID: 21300000, guid: 4a990a0f43bc4f84fbdaff2e857608e4, type: 3}
+    managerIcon: {fileID: 21300000, guid: 4a990a0f43bc4f84fbdaff2e857608e4, type: 3}
+    baseCost: 78
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.9
+    unlockAtVerseIndex: 20
+    managerName: Zipporah
+    managerFlavorText: 
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 36
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 450
+    submanagers: []
+  - id: chariot_wheel
+    displayName: Chariot Wheel
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pharaoh_exodus
+    icon: {fileID: 21300000, guid: aec5162bf61b66449bed24390f009947, type: 3}
+    managerIcon: {fileID: 21300000, guid: aec5162bf61b66449bed24390f009947, type: 3}
+    baseCost: 220
+    costGrowthRate: 1.15
+    baseInkPerSecond: 11
+    unlockAtVerseIndex: 30
+    managerName: Pharaoh
+    managerFlavorText: 
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 7
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1200
+    submanagers:
+    - id: shiphrah
+      displayName: Shiphrah
+      icon: {fileID: 21300000, guid: 12af14bfcad882e459dd6dee8769dcb4, type: 3}
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 14
+      unlockCost: 80
+    - id: puah
+      displayName: Puah
+      icon: {fileID: 21300000, guid: 36d12f1f665130d4aad4bdcdb595288d, type: 3}
+      perkFlavor: cost-cutter
+      perkAmount: 0.05
+      unlockAtVerseIndex: 14
+      unlockCost: 80
+    - id: jannes
+      displayName: Jannes
+      icon: {fileID: 21300000, guid: 75564088e20e6ca44b40843a4c3aa456, type: 3}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.03
+      unlockAtVerseIndex: 163
+      unlockCost: 900
+    - id: jambres
+      displayName: Jambres
+      icon: {fileID: 21300000, guid: a1eb44a1ade8e684898b33b6bd25b6d4, type: 3}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.03
+      unlockAtVerseIndex: 163
+      unlockCost: 900
+  - id: miriams_timbrel
+    displayName: Miriam's Timbrel
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: miriam
+    icon: {fileID: 21300000, guid: ebf45a71a7f30894c863e0005d4b73da, type: 3}
+    managerIcon: {fileID: 21300000, guid: ebf45a71a7f30894c863e0005d4b73da, type: 3}
+    baseCost: 615
+    costGrowthRate: 1.15
+    baseInkPerSecond: 31
+    unlockAtVerseIndex: 45
+    managerName: Miriam
+    managerFlavorText: 
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 25
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3200
+    submanagers: []
+  - id: amalek_banner
+    displayName: Amalek Banner
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: joshua
+    icon: {fileID: 21300000, guid: aab76e94c5fef6b4aa2980b1f7eac7f0, type: 3}
+    managerIcon: {fileID: 21300000, guid: aab76e94c5fef6b4aa2980b1f7eac7f0, type: 3}
+    baseCost: 1722
+    costGrowthRate: 1.15
+    baseInkPerSecond: 86
+    unlockAtVerseIndex: 100
+    managerName: Joshua
+    managerFlavorText: 
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 459
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 8500
+    submanagers: []
+  - id: steadied_stone
+    displayName: Steadied Stone
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: hur
+    icon: {fileID: 21300000, guid: c71af0c6f6a11d849a2777abee3e1ef2, type: 3}
+    managerIcon: {fileID: 21300000, guid: c71af0c6f6a11d849a2777abee3e1ef2, type: 3}
+    baseCost: 4820
+    costGrowthRate: 1.15
+    baseInkPerSecond: 241
+    unlockAtVerseIndex: 150
+    managerName: Hur
+    managerFlavorText: 
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 460
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 22000
+    submanagers: []
+  - id: midian_well
+    displayName: Midian Well
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jethro
+    icon: {fileID: 21300000, guid: 6b2475309564c7c48809f78f2e328144, type: 3}
+    managerIcon: {fileID: 21300000, guid: 6b2475309564c7c48809f78f2e328144, type: 3}
+    baseCost: 13500
+    costGrowthRate: 1.15
+    baseInkPerSecond: 675
+    unlockAtVerseIndex: 250
+    managerName: Jethro
+    managerFlavorText: 
+    managerUnlockLevel: 16
+    managerUnlockAtVerseIndex: 37
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 58000
+    submanagers: []
+  - id: craftsmans_chisel
+    displayName: Craftsman's Chisel
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: bezaleel
+    icon: {fileID: 21300000, guid: dd0d69e664275f54eb9aaac1eece3b17, type: 3}
+    managerIcon: {fileID: 21300000, guid: dd0d69e664275f54eb9aaac1eece3b17, type: 3}
+    baseCost: 37800
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1890
+    unlockAtVerseIndex: 400
+    managerName: Bezaleel
+    managerFlavorText: 
+    managerUnlockLevel: 18
+    managerUnlockAtVerseIndex: 889
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150000
+    submanagers: []
+  - id: embroiderers_needle
+    displayName: Embroiderer's Needle
+    flavorText: 
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: aholiab
+    icon: {fileID: 21300000, guid: 4b4d73aeb12877443babc34084948e34, type: 3}
+    managerIcon: {fileID: 21300000, guid: 4b4d73aeb12877443babc34084948e34, type: 3}
+    baseCost: 105800
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5290
+    unlockAtVerseIndex: 600
+    managerName: Aholiab
+    managerFlavorText: 
+    managerUnlockLevel: 20
+    managerUnlockAtVerseIndex: 893
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 400000
+    submanagers: []

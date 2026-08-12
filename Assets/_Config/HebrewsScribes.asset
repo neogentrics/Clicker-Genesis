@@ -1,0 +1,291 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: HebrewsScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Hebrews
+  tiers:
+  - id: jesus_christ_the_great_high_priest
+    displayName: Jesus Christ, the Great High Priest
+    flavorText: Having passed into the heavens as a merciful and faithful high priest,
+      Jesus now sits at the right hand of the Majesty on high, ever living to make
+      intercession for those who draw near through him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jesus_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Jesus Christ
+    managerFlavorText: Having passed into the heavens as a merciful and faithful
+      high priest, Jesus now sits at the right hand of the Majesty on high, ever
+      living to make intercession for those who draw near through him.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 64
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: moses_the_faithful_servant
+    displayName: Moses, the Faithful Servant
+    flavorText: Moses proves faithful in all God's house as a servant, a pattern
+      the author holds up and then declares Christ surpasses as a faithful Son over
+      that same house.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: moses_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 31.438217715318217
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.5719108857659108
+    unlockAtVerseIndex: 28
+    managerName: Moses
+    managerFlavorText: Moses proves faithful in all God's house as a servant, a pattern
+      the author holds up and then declares Christ surpasses as a faithful Son over
+      that same house.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 33
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 471
+    submanagers: []
+  - id: the_rest_that_remaineth
+    displayName: The Rest That Remaineth
+    flavorText: God swears in his wrath that the unbelieving wilderness generation
+      will never enter his rest, and the author warns his readers today not to harden
+      their hearts the same way.
+    tierType: 1
+    purpose: Warns readers, using the wilderness generation's failure as a cautionary
+      type, not to let unbelief keep them from entering God's promised rest the way
+      hardened hearts kept that generation out of Canaan, and holds out a rest that
+      still remains open to be entered by faith.
+    deliveredByManagerId: 
+    managerId: wilderness_rest_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 98.8361533115748
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4.94180766557874
+    unlockAtVerseIndex: 57
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: melchizedek_priest_of_the_most_high_god
+    displayName: Melchizedek, Priest of the Most High God
+    flavorText: Melchizedek, king of Salem and priest of the most high God, meets
+      Abraham returning from the slaughter of the kings and blesses him, receiving
+      a tenth of the spoils as a priesthood the argument makes greater than Levi's
+      own.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: melchizedek_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 310.7232505953858
+    costGrowthRate: 1.15
+    baseInkPerSecond: 15.53616252976929
+    unlockAtVerseIndex: 85
+    managerName: Melchizedek
+    managerFlavorText: Melchizedek, king of Salem and priest of the most high God,
+      meets Abraham returning from the slaughter of the kings and blesses him, receiving
+      a tenth of the spoils as a priesthood the argument makes greater than Levi's
+      own.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 101
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4660
+    submanagers: []
+  - id: the_levitical_priesthood
+    displayName: The Levitical Priesthood
+    flavorText: Every high priest is taken from among men and called of God as Aaron
+      was, yet the Levitical priests die one after another and must keep offering
+      the same sacrifices that can never take away sins.
+    tierType: 1
+    purpose: Argues that the Levitical/Aaronic priestly system, however divinely
+      instituted, could not itself bring perfection or a clear conscience, since
+      its priests died and had to be replaced, it required repeated sacrifices, and
+      the law under it required a change once the priesthood changed, so it always
+      pointed beyond itself to a permanent priest after the order of Melchisedec.
+    deliveredByManagerId: 
+    managerId: levitical_priesthood_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 976.858520142912
+    costGrowthRate: 1.15
+    baseInkPerSecond: 48.8429260071456
+    unlockAtVerseIndex: 114
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: abraham_father_of_faith
+    displayName: Abraham, Father of Faith
+    flavorText: Tried by God, Abraham offers up Isaac, accounting that God is able
+      to raise him even from the dead, and receives him back in a figure.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: abraham_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3071.069083331643
+    costGrowthRate: 1.15
+    baseInkPerSecond: 153.55345416658216
+    unlockAtVerseIndex: 142
+    managerName: Abraham
+    managerFlavorText: Tried by God, Abraham offers up Isaac, accounting that God
+      is able to raise him even from the dead, and receives him back in a figure.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 225
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 46066
+    submanagers:
+    - id: sarah_hebrews
+      displayName: Sarah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 219
+      unlockCost: 32246
+    - id: isaac_hebrews
+      displayName: Isaac
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 228
+      unlockCost: 32246
+    - id: jacob_hebrews
+      displayName: Jacob
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 229
+      unlockCost: 32246
+    - id: joseph_hebrews
+      displayName: Joseph
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 230
+      unlockCost: 32246
+  - id: the_greater_tabernacle
+    displayName: The Greater Tabernacle
+    flavorText: Christ obtains a more excellent ministry as mediator of a better
+      covenant, one grounded in Jeremiah's own promise of a new covenant written
+      not on tablets but on the heart.
+    tierType: 1
+    purpose: Contrasts the earthly tabernacle's repeated animal sacrifices, which
+      could only cleanse the flesh, with Christ's single once-for-all self-offering
+      in the heavenly sanctuary, and grounds the new covenant in Jeremiah's own prophecy
+      of a covenant written on the heart rather than on tablets.
+    deliveredByManagerId: 
+    managerId: greater_tabernacle_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9654.893846056293
+    costGrowthRate: 1.15
+    baseInkPerSecond: 482.74469230281466
+    unlockAtVerseIndex: 171
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_great_cloud_of_witnesses
+    displayName: The Great Cloud of Witnesses
+    flavorText: Faith is the substance of things hoped for and the evidence of things
+      not seen, and by it the elders of old obtained a good report though most of
+      them never lived to see the promise fulfilled.
+    tierType: 1
+    purpose: Catalogues Old Testament figures whose faith held onto God's promises
+      without seeing them fulfilled, encouraging a persecuted audience to keep faith
+      and endurance despite their own unfulfilled hope, closing on the point that
+      these witnesses are, in a real sense, still waiting alongside the readers.
+    deliveredByManagerId: 
+    managerId: cloud_of_witnesses_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 30353.265475060376
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1517.6632737530188
+    unlockAtVerseIndex: 199
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: mount_sinai_and_mount_zion
+    displayName: Mount Sinai and Mount Zion
+    flavorText: Rather than the untouchable, tempest-wrapped mountain that made even
+      Moses tremble, believers have come instead to mount Sion, the heavenly Jerusalem,
+      and to Jesus the mediator of a new covenant.
+    tierType: 1
+    purpose: Contrasts the terrifying, untouchable mountain of the law's giving at
+      Sinai with the joyful, accessible mount Sion of the new covenant, reinforcing
+      a warning against turning back with a real cautionary example in Esau and the
+      theme of divine discipline as evidence of true sonship.
+    deliveredByManagerId: 
+    managerId: mount_zion_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 95425.25683757997
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4771.262841878999
+    unlockAtVerseIndex: 228
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: let_brotherly_love_continue
+    displayName: Let Brotherly Love Continue
+    flavorText: The letter closes by urging its readers to let brotherly love continue
+      and not neglect showing hospitality to strangers, for some have entertained
+      angels unawares.
+    tierType: 1
+    purpose: Closes the epistle with practical instructions for communal life, including
+      hospitality, care for prisoners, marriage, freedom from covetousness, and submission
+      to church leaders, along with a final benediction and greeting that grounds
+      the letter's high doctrinal argument in ordinary conduct.
+    deliveredByManagerId: 
+    managerId: brotherly_love_hebrews
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 299999.99999999977
+    costGrowthRate: 1.15
+    baseInkPerSecond: 14999.999999999989
+    unlockAtVerseIndex: 257
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

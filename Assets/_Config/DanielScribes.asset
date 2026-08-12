@@ -1,0 +1,275 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: DanielScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Daniel
+  tiers:
+  - id: daniels_window
+    displayName: Daniel's Window
+    flavorText: Continues praying toward Jerusalem three times a day with his windows
+      open in defiance of the king's decree, then survives a night in the lions'
+      den unharmed.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: daniel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Daniel
+    managerFlavorText: Continues praying toward Jerusalem three times a day with
+      his windows open in defiance of the king's decree, then survives a night in
+      the lions' den unharmed.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 177
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: ashpenaz
+      displayName: Ashpenaz
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 6
+      unlockCost: 105
+    - id: melzar
+      displayName: Melzar
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 15
+      unlockCost: 105
+  - id: the_fiery_furnace
+    displayName: The Fiery Furnace
+    flavorText: Refuse to worship Nebuchadnezzar's golden image and are cast into
+      a furnace heated seven times hotter than usual, yet walk unharmed with a fourth
+      figure beside them.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: shadrach_meshach_abednego
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 31.438217715318217
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.5719108857659108
+    unlockAtVerseIndex: 33
+    managerName: Shadrach, Meshach, and Abednego
+    managerFlavorText: Refuse to worship Nebuchadnezzar's golden image and are cast
+      into a furnace heated seven times hotter than usual, yet walk unharmed with
+      a fourth figure beside them.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 94
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 471
+    submanagers: []
+  - id: the_kings_portion
+    displayName: The King's Portion
+    flavorText: Daniel proposes a ten-day trial of pulse and water instead of the
+      king's rich food, and the four youths emerge fairer and fatter than everyone
+      else.
+    tierType: 1
+    purpose: Tests whether faithfulness to God's dietary conviction can be maintained
+      under royal pressure to defile oneself with the king's rich food and wine;
+      demonstrates that trust in God's provision outperforms the king's own fare.
+    deliveredByManagerId: daniel
+    managerId: kings_portion_test
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 98.8361533115748
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4.94180766557874
+    unlockAtVerseIndex: 67
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_dream_image_of_gold_and_clay
+    displayName: The Dream-Image of Gold and Clay
+    flavorText: Dreams of a great image with a head of gold and feet of iron and
+      clay, then falls on his face before Daniel once the dream and its interpretation
+      are correctly revealed.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: nebuchadnezzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 310.7232505953858
+    costGrowthRate: 1.15
+    baseInkPerSecond: 15.53616252976929
+    unlockAtVerseIndex: 101
+    managerName: Nebuchadnezzar
+    managerFlavorText: Dreams of a great image with a head of gold and feet of iron
+      and clay, then falls on his face before Daniel once the dream and its interpretation
+      are correctly revealed.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 66
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4660
+    submanagers:
+    - id: arioch
+      displayName: Arioch
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 45
+      unlockCost: 3262
+  - id: the_golden_image_of_dura
+    displayName: The Golden Image of Dura
+    flavorText: Nebuchadnezzar sets up a ninety-foot golden image on the plain of
+      Dura and commands every people, nation, and language to worship it at the sound
+      of music, on pain of death by fire.
+    tierType: 1
+    purpose: Demands universal worship of a ninety-foot golden image at the sound
+      of royal music, on pain of death by fire; becomes the test of the three Hebrews'
+      exclusive loyalty to God.
+    deliveredByManagerId: nebuchadnezzar
+    managerId: golden_image_of_dura
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 976.858520142912
+    costGrowthRate: 1.15
+    baseInkPerSecond: 48.8429260071456
+    unlockAtVerseIndex: 134
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_temple_vessels
+    displayName: The Temple Vessels
+    flavorText: Belshazzar drinks wine from the sacred vessels his father Nebuchadnezzar
+      looted from the Jerusalem temple, then watches a hand write his doom on the
+      wall.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: belshazzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3071.069083331643
+    costGrowthRate: 1.15
+    baseInkPerSecond: 153.55345416658216
+    unlockAtVerseIndex: 168
+    managerName: Belshazzar
+    managerFlavorText: Belshazzar drinks wine from the sacred vessels his father
+      Nebuchadnezzar looted from the Jerusalem temple, then watches a hand write
+      his doom on the wall.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 137
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 46066
+    submanagers: []
+  - id: the_handwriting_on_the_wall
+    displayName: The Handwriting on the Wall
+    flavorText: A hand appears and writes MENE, MENE, TEKEL, UPHARSIN on the palace
+      wall; Daniel interprets it as Belshazzar's kingdom numbered, weighed, and divided
+      that very night.
+    tierType: 1
+    purpose: Pronounces immediate divine judgment on Belshazzar for profaning the
+      temple vessels and exalting himself against the God of heaven, announcing the
+      fall of Babylon that very night.
+    deliveredByManagerId: daniel
+    managerId: handwriting_on_the_wall
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9654.893846056293
+    costGrowthRate: 1.15
+    baseInkPerSecond: 482.74469230281466
+    unlockAtVerseIndex: 202
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_signet_ring
+    displayName: The Signet Ring
+    flavorText: Darius the Mede seals Daniel's lions' den with his own signet ring,
+      then rushes back at dawn crying out to know if Daniel's God was able to deliver
+      him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: darius_the_mede
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 30353.265475060376
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1517.6632737530188
+    unlockAtVerseIndex: 235
+    managerName: Darius the Mede
+    managerFlavorText: Darius the Mede seals Daniel's lions' den with his own signet
+      ring, then rushes back at dawn crying out to know if Daniel's God was able
+      to deliver him.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 183
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 455298
+    submanagers: []
+  - id: the_ram_and_the_he_goat
+    displayName: The Ram and the He-Goat
+    flavorText: Gabriel appears to Daniel to interpret the vision of the ram and
+      the he-goat, leaving him fainting and sick for days at the sight of him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gabriel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 95425.25683757997
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4771.262841878999
+    unlockAtVerseIndex: 269
+    managerName: Gabriel
+    managerFlavorText: Gabriel appears to Daniel to interpret the vision of the ram
+      and the he-goat, leaving him fainting and sick for days at the sight of him.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 239
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1431378
+    submanagers: []
+  - id: the_seventy_weeks
+    displayName: The Seventy Weeks
+    flavorText: Gabriel delivers Daniel a prophetic timetable of seventy weeks determined
+      upon his people and holy city, to finish transgression, end sin, and anoint
+      the most holy.
+    tierType: 1
+    purpose: "Lays out a specific prophetic timetable \u2014 seventy weeks determined
+      upon Daniel's people and holy city \u2014 to finish transgression, make an
+      end of sins, bring in everlasting righteousness, and anoint the most holy."
+    deliveredByManagerId: gabriel
+    managerId: seventy_weeks_prophecy
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 299999.99999999977
+    costGrowthRate: 1.15
+    baseInkPerSecond: 14999.999999999989
+    unlockAtVerseIndex: 303
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

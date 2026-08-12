@@ -1,0 +1,356 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: LeviticusScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Leviticus
+  tiers:
+  - id: scapegoat
+    displayName: Scapegoat
+    flavorText: A goat sent into the wilderness bearing the sins of the people on
+      the Day of Atonement.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: aaron
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 8
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.4
+    unlockAtVerseIndex: 0
+    managerName: 
+    managerFlavorText: A goat sent into the wilderness bearing the sins of the people
+      on the Day of Atonement.
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 0
+    submanagers: []
+  - id: altar_flame
+    displayName: Altar Flame
+    flavorText: The burnt offering - herd, flock, or fowl, wholly consumed.
+    tierType: 0
+    purpose: Wholly consumed on the altar - nothing kept back for the offerer. Teaches
+      total, unreserved surrender/devotion to God as the starting posture for approaching
+      a holy God at all.
+    deliveredByManagerId: moses
+    managerId: burnt_offering
+    icon: {fileID: 21300000, guid: 40c3b95e1df8141418f11fc33ebc63ff, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 16.8
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.84
+    unlockAtVerseIndex: 0
+    managerName: Altar Flame
+    managerFlavorText: 
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 50.4
+    submanagers:
+    - id: aaron
+      displayName: Aaron
+      icon: {fileID: 0}
+      perkFlavor: book-wide-boost
+      perkAmount: 0.25
+      unlockAtVerseIndex: 172
+      unlockCost: 201.6
+      isBookWidePatron: 1
+  - id: fine_flour
+    displayName: Fine Flour
+    flavorText: The grain offering - fine flour, oil, and frankincense.
+    tierType: 0
+    purpose: The one bloodless offering - fine flour, oil, and frankincense. Represents
+      the fruit of ordinary daily labor being given back to God, not just dramatic
+      sacrifice.
+    deliveredByManagerId: moses
+    managerId: grain_offering
+    icon: {fileID: 21300000, guid: 6db6d8f707149764ea4e5934790c56fb, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 35.1
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.76
+    unlockAtVerseIndex: 17
+    managerName: Fine Flour
+    managerFlavorText: 
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 17
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 105.3
+    submanagers: []
+  - id: fellowship_portion
+    displayName: Fellowship Portion
+    flavorText: The peace offering - a shared meal representing restored fellowship.
+    tierType: 0
+    purpose: The only offering where the offerer eats part of the meat themselves,
+      alongside the priest's portion and God's portion (the fat, burnt on the altar)
+      - a shared meal representing restored fellowship, not just atonement.
+    deliveredByManagerId: moses
+    managerId: peace_offering
+    icon: {fileID: 21300000, guid: c6c123e4d01616548a61a57830f67a07, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 73.6
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.68
+    unlockAtVerseIndex: 33
+    managerName: Fellowship Portion
+    managerFlavorText: 
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 33
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 220.8
+    submanagers: []
+  - id: blood_basin
+    displayName: Blood Basin
+    flavorText: The sin offering - scaled to the offender's own status.
+    tierType: 0
+    purpose: Addresses unintentional sin, with the required animal scaled to the
+      offender's status (priest, whole congregation, ruler, or common person) - teaches
+      that sin has real weight regardless of intent, but also that provision for
+      it is graded to what each person can actually bring.
+    deliveredByManagerId: moses
+    managerId: sin_offering
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 154.2
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7.71
+    unlockAtVerseIndex: 50
+    managerName: Blood Basin
+    managerFlavorText: 
+    managerUnlockLevel: 1
+    managerUnlockAtVerseIndex: 50
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 462.6
+    submanagers: []
+  - id: restitution_scale
+    displayName: Restitution Scale
+    flavorText: The trespass offering - restitution plus a fifth part added.
+    tierType: 0
+    purpose: Specifically for sins involving damage or deception against God or a
+      neighbor - requires restitution PLUS a fifth added on top, not just a sacrifice.
+      Teaches that wronging someone isn't fixed by ritual alone; the actual harm
+      has to be repaid.
+    deliveredByManagerId: moses
+    managerId: trespass_offering
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 323.1
+    costGrowthRate: 1.15
+    baseInkPerSecond: 16.15
+    unlockAtVerseIndex: 98
+    managerName: Restitution Scale
+    managerFlavorText: 
+    managerUnlockLevel: 2
+    managerUnlockAtVerseIndex: 98
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 969.3
+    submanagers: []
+  - id: cloven_hoof
+    displayName: Cloven Hoof
+    flavorText: Clean and unclean animals - a daily reminder woven into every meal.
+    tierType: 0
+    purpose: Dietary law - animals that both chew the cud and part the hoof are clean.
+      Functions as a constant, daily, embodied reminder that Israel is set apart
+      from the surrounding nations, woven into something as ordinary as every meal.
+    deliveredByManagerId: moses
+    managerId: clean_unclean_animals
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 676.9
+    costGrowthRate: 1.15
+    baseInkPerSecond: 33.84
+    unlockAtVerseIndex: 252
+    managerName: Cloven Hoof
+    managerFlavorText: 
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 252
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 2030.7
+    submanagers: []
+  - id: leprosy_cloth
+    displayName: Leprosy Cloth
+    flavorText: Purity laws - childbirth, skin disease, mold, and bodily discharges.
+    tierType: 0
+    purpose: Covers childbirth, skin disease, mold in clothing/houses, and bodily
+      discharges - the common thread is anything involving blood, death, or decay
+      disrupting the boundary between life and death that holiness requires guarding.
+    deliveredByManagerId: moses
+    managerId: purity_laws
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1418.3
+    costGrowthRate: 1.15
+    baseInkPerSecond: 70.91
+    unlockAtVerseIndex: 299
+    managerName: Leprosy Cloth
+    managerFlavorText: 
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 299
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 4254.9
+    submanagers: []
+  - id: holiness_tablet
+    displayName: Holiness Tablet
+    flavorText: The Holiness Code - "thou shalt love thy neighbour as thyself."
+    tierType: 0
+    purpose: 'Extends holiness from ritual into ethics - sexual morality, honesty
+      in business, care for the poor and the stranger, honoring the elderly. Explicitly
+      grounds all of it in one repeated line: ''Ye shall be holy: for I the LORD
+      your God am holy'' (19:2) - holiness isn''t only what happens at the altar.'
+    deliveredByManagerId: moses
+    managerId: holiness_code
+    icon: {fileID: 21300000, guid: 43fe0cf1aa4553a4ea9980ea6b464600, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 2971.6
+    costGrowthRate: 1.15
+    baseInkPerSecond: 148.58
+    unlockAtVerseIndex: 506
+    managerName: Holiness Tablet
+    managerFlavorText: 
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 506
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 8914.8
+    submanagers: []
+  - id: golden_lampstand
+    displayName: Golden Lampstand
+    flavorText: Priestly regulations and the tabernacle's ever-burning lamp.
+    tierType: 0
+    purpose: Sets stricter purity standards for priests than for ordinary Israelites
+      since they mediate directly at the altar, then turns to the tabernacle's ongoing
+      daily/weekly maintenance (the lamp, the showbread) - closing with a real test
+      of how the holiness laws apply even to a mixed-heritage member of the camp.
+    deliveredByManagerId: moses
+    managerId: priestly_regulations
+    icon: {fileID: 21300000, guid: 436d4f3d224723240b3d522638853155, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 6226.3
+    costGrowthRate: 1.15
+    baseInkPerSecond: 311.32
+    unlockAtVerseIndex: 600
+    managerName: Golden Lampstand
+    managerFlavorText: 
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 600
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 18678.9
+    submanagers: []
+  - id: feast_scroll
+    displayName: Feast Scroll
+    flavorText: The seven feasts - Israel's year bound to the LORD's own acts.
+    tierType: 0
+    purpose: A full annual calendar binding the nation's sense of time itself to
+      God's actions - deliverance (Passover, Unleavened Bread), harvest and provision
+      (Firstfruits, Weeks), and a run of autumn feasts (Trumpets, Atonement, Tabernacles)
+      closing the year by re-centering the whole community on God rather than the
+      harvest alone.
+    deliveredByManagerId: moses
+    managerId: seven_feasts
+    icon: {fileID: 21300000, guid: 1690703e7befc87448bdeb9224bd3d97, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 13045.7
+    costGrowthRate: 1.15
+    baseInkPerSecond: 652.29
+    unlockAtVerseIndex: 657
+    managerName: Feast Scroll
+    managerFlavorText: 
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 657
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 39137.1
+    submanagers: []
+  - id: jubilee_trumpet
+    displayName: Jubilee Trumpet
+    flavorText: The Year of Jubilee - land and liberty restored every fiftieth year.
+    tierType: 0
+    purpose: Every 50th year, land returns to its original family and debt-slaves
+      go free - a hard economic reset built into the calendar itself. Teaches that
+      the land ultimately belongs to God ('the land is mine,' 25:23), not to whoever
+      has accumulated it, and that no family's poverty is meant to become permanent
+      and inherited.
+    deliveredByManagerId: moses
+    managerId: jubilee
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 27334.2
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1366.71
+    unlockAtVerseIndex: 724
+    managerName: Jubilee Trumpet
+    managerFlavorText: 
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 724
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 82002.6
+    submanagers: []
+  - id: covenant_ledger
+    displayName: Covenant Ledger
+    flavorText: Blessings and curses - the nation's future tied to covenant faithfulness.
+    tierType: 0
+    purpose: Closes the legal core of the book by tying the WHOLE nation's future
+      - not just individual behavior - to covenant faithfulness, with real, escalating
+      consequences laid out either direction. Functions as the book's own built-in
+      stakes statement.
+    deliveredByManagerId: moses
+    managerId: blessings_curses
+    icon: {fileID: 21300000, guid: 166b0fad31272664f8e2dd0876d7af6f, type: 3}
+    managerIcon: {fileID: 0}
+    baseCost: 57272.1
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2863.61
+    unlockAtVerseIndex: 779
+    managerName: Covenant Ledger
+    managerFlavorText: 
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 779
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 171816.3
+    submanagers: []
+  - id: vow_tablet
+    displayName: Vow Tablet
+    flavorText: Vows and tithes - what is voluntarily devoted to God.
+    tierType: 0
+    purpose: The valuation of vowed persons, animals, houses, and land, and the tithe.
+      Ends the book on the theme of what's voluntarily and formally devoted to God,
+      as a deliberate counterpart to the involuntary, required offerings that opened
+      it in chapter 1.
+    deliveredByManagerId: moses
+    managerId: vows_tithes
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 120000
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6000
+    unlockAtVerseIndex: 825
+    managerName: Vow Tablet
+    managerFlavorText: 
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 825
+    managerBonusMultiplier: 0.25
+    isBookWidePatron: 0
+    managerUnlockCost: 360000
+    submanagers: []

@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: EzraScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Ezra
+  tiers:
+  - id: the_kings_proclamation
+    displayName: The King's Proclamation
+    flavorText: Moved by the LORD to stir his spirit, King Cyrus proclaims that any
+      of God's people may return to Jerusalem and rebuild the temple.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: cyrus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Cyrus
+    managerFlavorText: Moved by the LORD to stir his spirit, King Cyrus proclaims
+      that any of God's people may return to Jerusalem and rebuild the temple.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: mithredath_treasurer
+      displayName: Mithredath the Treasurer
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 7
+      unlockCost: 105
+  - id: the_temple_vessels
+    displayName: The Temple Vessels
+    flavorText: Sheshbazzar carries the 5,400 gold and silver vessels of the temple
+      back to Jerusalem with the returning captives.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: sheshbazzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 42.24199911264493
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.112099955632247
+    unlockAtVerseIndex: 34
+    managerName: Sheshbazzar
+    managerFlavorText: Sheshbazzar carries the 5,400 gold and silver vessels of the
+      temple back to Jerusalem with the returning captives.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 10
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 633
+    submanagers: []
+  - id: the_governors_foundation
+    displayName: The Governor's Foundation
+    flavorText: Zerubbabel lays the foundation of the LORD's temple alongside Jeshua,
+      restoring worship on the ruined site.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zerubbabel
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 178.43864890326955
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.921932445163478
+    unlockAtVerseIndex: 68
+    managerName: Zerubbabel
+    managerFlavorText: Zerubbabel lays the foundation of the LORD's temple alongside
+      Jeshua, restoring worship on the ruined site.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 88
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2676
+    submanagers: []
+  - id: the_altar_restored
+    displayName: The Altar Restored
+    flavorText: Jeshua the high priest builds the altar of the God of Israel with
+      Zerubbabel, resuming sacrifice before the temple itself is rebuilt.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jeshua
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 753.7605248633474
+    costGrowthRate: 1.15
+    baseInkPerSecond: 37.68802624316737
+    unlockAtVerseIndex: 102
+    managerName: Jeshua
+    managerFlavorText: Jeshua the high priest builds the altar of the God of Israel
+      with Zerubbabel, resuming sacrifice before the temple itself is rebuilt.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 82
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 11306
+    submanagers:
+    - id: kadmiel
+      displayName: Kadmiel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 89
+      unlockCost: 7914
+  - id: the_adversaries_letter
+    displayName: The Adversaries' Letter
+    flavorText: Rehum the chancellor and Shimshai the scribe write to King Artaxerxes
+      accusing Jerusalem of rebellion, halting the rebuilding work by force.
+    tierType: 1
+    purpose: To falsely accuse Jerusalem of a history of rebellion and persuade Artaxerxes
+      to halt the rebuilding of the city and the temple work already resumed.
+    deliveredByManagerId: 
+    managerId: opposition_letter
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3184.0351422424305
+    costGrowthRate: 1.15
+    baseInkPerSecond: 159.20175711212153
+    unlockAtVerseIndex: 136
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_prophets_word
+    displayName: The Prophets' Word
+    flavorText: Haggai and Zechariah son of Iddo prophesy to the discouraged exiles,
+      stirring Zerubbabel and Jeshua to resume the halted temple work.
+    tierType: 1
+    purpose: To stir up and encourage the returned exiles, and their leaders Zerubbabel
+      and Jeshua, to resume the temple work after it had been forcibly halted by
+      opposition.
+    deliveredByManagerId: 
+    managerId: prophetic_exhortation
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 13450.000965323505
+    costGrowthRate: 1.15
+    baseInkPerSecond: 672.5000482661752
+    unlockAtVerseIndex: 170
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_kings_confirmation
+    displayName: The King's Confirmation
+    flavorText: King Darius searches the archives, confirms Cyrus's original decree,
+      and funds the temple's completion, leading to its dedication and the keeping
+      of the Passover.
+    tierType: 1
+    purpose: To legally confirm Cyrus's original decree, fund the temple's completion
+      from royal resources, restore the vessels' use, and protect the ongoing work
+      with a curse against anyone who alters it.
+    deliveredByManagerId: 
+    managerId: darius_decree
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 56815.4928842269
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2840.774644211345
+    unlockAtVerseIndex: 204
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_scribes_return
+    displayName: The Scribe's Return
+    flavorText: Ezra, a ready scribe in the law of Moses, leads a second return to
+      Jerusalem and confronts the people's intermarriage with a great prayer of confession.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ezra
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 239999.99999999974
+    costGrowthRate: 1.15
+    baseInkPerSecond: 11999.999999999987
+    unlockAtVerseIndex: 238
+    managerName: Ezra
+    managerFlavorText: Ezra, a ready scribe in the law of Moses, leads a second return
+      to Jerusalem and confronts the people's intermarriage with a great prayer of
+      confession.
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 157
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3599999
+    submanagers:
+    - id: shechaniah
+      displayName: Shechaniah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 237
+      unlockCost: 2519999
+    - id: iddo_of_casiphia
+      displayName: Iddo the Chief at Casiphia
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 201
+      unlockCost: 2519999
+    - id: sherebiah
+      displayName: Sherebiah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 208
+      unlockCost: 2519999
+    - id: hashabiah
+      displayName: Hashabiah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 208
+      unlockCost: 2519999

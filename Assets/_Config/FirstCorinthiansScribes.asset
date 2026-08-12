@@ -1,0 +1,331 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: FirstCorinthiansScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 1 Corinthians
+  tiers:
+  - id: paul_apostle_to_the_corinthians
+    displayName: Paul, Apostle to the Corinthians
+    flavorText: Paul writes as an apostle called by God's will, later recounting
+      that he personally saw the risen Christ and calling himself the least of the
+      apostles by grace.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: paul
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Paul
+    managerFlavorText: Paul writes as an apostle called by God's will, later recounting
+      that he personally saw the risen Christ and calling himself the least of the
+      apostles by grace.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 362
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: sosthenes_1corinthians
+      displayName: Sosthenes
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 0
+      unlockCost: 105
+    - id: chloes_household
+      displayName: The Household of Chloe
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 10
+      unlockCost: 105
+    - id: apollos_1corinthians
+      displayName: Apollos
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 52
+      unlockCost: 105
+    - id: cephas_1corinthians
+      displayName: Cephas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 359
+      unlockCost: 105
+    - id: timothy_1corinthians
+      displayName: Timothy
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 86
+      unlockCost: 105
+    - id: stephanas_household
+      displayName: The Household of Stephanas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 427
+      unlockCost: 105
+    - id: aquila_and_priscilla_1corinthians
+      displayName: Aquila and Priscilla
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 431
+      unlockCost: 105
+  - id: contentions_among_you
+    displayName: Contentions Among You
+    flavorText: Paul rebukes the Corinthians for splitting into factions around Paul,
+      Apollos, and Cephas, insisting the apostles are only servants and stewards,
+      not figures to be exalted.
+    tierType: 1
+    purpose: Addresses the report that the Corinthian church had split into rival
+      factions around Paul, Apollos, Cephas, and Christ; reframes the apostles as
+      mere servants and stewards of God's mysteries rather than figures to be exalted
+      over one another.
+    deliveredByManagerId: paul
+    managerId: church_divisions
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 28.304233215207116
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.4152116607603558
+    unlockAtVerseIndex: 37
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: one_should_have_his_fathers_wife
+    displayName: One Should Have His Father's Wife
+    flavorText: Paul confronts a case of sexual immorality the church had tolerated
+      rather than mourned, directing that the unrepentant man be removed from fellowship
+      for his own eventual restoration.
+    tierType: 1
+    purpose: 'Addresses a reported case of sexual immorality within the church that
+      the congregation had tolerated rather than mourned, establishing a principle
+      of church discipline: removing the unrepentant offender from fellowship both
+      to protect the body and for the offender''s own restoration.'
+    deliveredByManagerId: paul
+    managerId: unrepentant_brother
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 80.11296179008338
+    costGrowthRate: 1.15
+    baseInkPerSecond: 4.005648089504168
+    unlockAtVerseIndex: 74
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: ye_are_bought_with_a_price
+    displayName: Ye Are Bought With a Price
+    flavorText: Paul rebukes believers for suing one another before unbelieving judges
+      and calls the body a temple of the Holy Ghost, purchased at a price and not
+      to be given to fornication.
+    tierType: 1
+    purpose: Covers believers taking legal disputes against one another before secular
+      judges instead of resolving them within the church, and warns against sexual
+      immorality on the grounds that the believer's body is a member of Christ and
+      a temple of the Holy Ghost.
+    deliveredByManagerId: paul
+    managerId: lawsuits_and_the_temple
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 226.7535954067496
+    costGrowthRate: 1.15
+    baseInkPerSecond: 11.33767977033748
+    unlockAtVerseIndex: 111
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: instructions_on_marriage
+    displayName: Instructions on Marriage
+    flavorText: Paul answers the Corinthians' written questions on marriage, celibacy,
+      and mixed marriages, teaching that each believer should remain content in whatever
+      state they were called.
+    tierType: 1
+    purpose: Answers questions the Corinthians had written to Paul about marriage,
+      celibacy, divorce, and marriages between believers and unbelievers, teaching
+      that both marriage and singleness are legitimate callings and each should remain
+      content in the state in which they were called.
+    deliveredByManagerId: paul
+    managerId: marriage_instructions
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 641.8086646779358
+    costGrowthRate: 1.15
+    baseInkPerSecond: 32.09043323389679
+    unlockAtVerseIndex: 148
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: meat_offered_unto_idols
+    displayName: Meat Offered Unto Idols
+    flavorText: Paul teaches that an idol is nothing in itself, yet urges the strong
+      to restrain their liberty out of love for a weaker believer's conscience.
+    tierType: 1
+    purpose: Works through the disputed question of eating meat sacrificed to idols,
+      teaching that love for a weaker believer's conscience should restrain a stronger
+      believer's liberty, and contrasting the Lord's table with pagan sacrificial
+      meals.
+    deliveredByManagerId: paul
+    managerId: meat_offered_to_idols
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1816.5902124584957
+    costGrowthRate: 1.15
+    baseInkPerSecond: 90.82951062292479
+    unlockAtVerseIndex: 185
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: head_coverings_and_the_lords_table
+    displayName: Head Coverings and the Lord's Table
+    flavorText: Paul restates the Lord's Supper as tradition received directly from
+      the Lord and rebukes divisions at the shared meal where some go hungry while
+      others are drunken.
+    tierType: 1
+    purpose: Addresses propriety regarding head-covering when praying or prophesying
+      and serious abuses at the meal accompanying the Lord's Supper, restating the
+      Supper's institution as tradition received directly of the Lord.
+    deliveredByManagerId: paul
+    managerId: head_covering_and_lords_table
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5141.71930298879
+    costGrowthRate: 1.15
+    baseInkPerSecond: 257.0859651494395
+    unlockAtVerseIndex: 222
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: one_body_many_members
+    displayName: One Body, Many Members
+    flavorText: Paul describes the diverse gifts given by the one Spirit and likens
+      the church to a body of many necessary members, none greater than another.
+    tierType: 1
+    purpose: Explains that spiritual gifts, though diverse, come from the one Spirit
+      for the common good, using the human body as a metaphor for the church so that
+      no gift or member regards itself as unnecessary or superior.
+    deliveredByManagerId: paul
+    managerId: spiritual_gifts_one_body
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 14553.24222789269
+    costGrowthRate: 1.15
+    baseInkPerSecond: 727.6621113946345
+    unlockAtVerseIndex: 259
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: charity_tier
+    displayName: Charity
+    flavorText: "Paul declares that love is patient and kind, never fails, and outlasts
+      every spiritual gift \u2014 'the greatest of these is charity.'"
+    tierType: 1
+    purpose: Argues that love ('charity') is the necessary quality that gives any
+      spiritual gift meaning, describing love's character and contrasting it with
+      the partial, temporary nature of gifts like prophecy and tongues.
+    deliveredByManagerId: paul
+    managerId: charity
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 41191.83620556751
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2059.5918102783753
+    unlockAtVerseIndex: 296
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: order_in_the_assembly
+    displayName: Order in the Assembly
+    flavorText: Paul regulates tongues and prophecy in the gathered church, insisting
+      all things be done 'decently and in order' for the edification of everyone
+      present.
+    tierType: 1
+    purpose: Regulates speaking in tongues and prophesying when the church gathers,
+      prioritizing intelligible edification of the whole church over unintelligible
+      individual experience and setting practical limits for orderly worship.
+    deliveredByManagerId: paul
+    managerId: order_in_the_assembly
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 116590.33385249948
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5829.516692624974
+    unlockAtVerseIndex: 333
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_resurrection_of_the_dead
+    displayName: The Resurrection of the Dead
+    flavorText: Paul lists the eyewitnesses of the risen Christ and declares that
+      the dead will be raised incorruptible, changed 'in a moment, in the twinkling
+      of an eye.'
+    tierType: 1
+    purpose: Defends the bodily resurrection of Christ as the foundation of the gospel,
+      lists the eyewitnesses to the risen Christ, and explains the nature of the
+      resurrection body, closing with the promise of victory over death.
+    deliveredByManagerId: paul
+    managerId: resurrection_of_the_dead
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 330000.00000000023
+    costGrowthRate: 1.15
+    baseInkPerSecond: 16500.00000000001
+    unlockAtVerseIndex: 371
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

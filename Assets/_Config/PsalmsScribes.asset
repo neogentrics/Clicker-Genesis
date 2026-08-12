@@ -1,0 +1,349 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: PsalmsScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Psalms
+  tiers:
+  - id: five_books_of_psalms
+    displayName: The Five Books
+    flavorText: Organizes the entire Psalter into five books, each closing with its
+      own doxology, mirroring the five books of the Torah.
+    tierType: 1
+    purpose: "The Psalter is organized into five books (1-41, 42-72, 73-89, 90-106,
+      107-150), each closing with a doxology, mirroring the five books of the Torah
+      \u2014 framing Israel's whole worship-book as a structured response to God's
+      law."
+    deliveredByManagerId: 
+    managerId: five_books_of_psalms
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: royal_and_messianic_psalms
+    displayName: Anointed King's Song
+    flavorText: Gathers the psalms written for and about Israel's anointed king,
+      later read by the apostles as pointing to the Messiah.
+    tierType: 1
+    purpose: A recurring cluster of psalms written for or about Israel's anointed
+      king, read by New Testament writers as pointing beyond any earthly king to
+      the Messiah.
+    deliveredByManagerId: 
+    managerId: royal_and_messianic_psalms
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 24.131744431604677
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.2065872215802338
+    unlockAtVerseIndex: 12
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: david
+    displayName: Shepherd's Harp
+    flavorText: Composes over half the Psalter's songs, from cries of fear while
+      fleeing his enemies to hymns of quiet trust, styled 'the sweet psalmist of
+      Israel.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: david
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 58.23410893122833
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.9117054465614163
+    unlockAtVerseIndex: 296
+    managerName: David
+    managerFlavorText: Composes over half the Psalter's songs, from cries of fear
+      while fleeing his enemies to hymns of quiet trust, styled 'the sweet psalmist
+      of Israel.'
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 296
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 873
+    submanagers:
+    - id: jeduthun
+      displayName: Jeduthun
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 573
+      unlockCost: 611
+    - id: nathan_the_prophet
+      displayName: Nathan the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 752
+      unlockCost: 611
+    - id: doeg_the_edomite
+      displayName: Doeg the Edomite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 771
+      unlockCost: 611
+    - id: cush_the_benjamite
+      displayName: Cush the Benjamite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 56
+      unlockCost: 611
+  - id: psalm_23_the_shepherd_psalm
+    displayName: The Shepherd's Psalm
+    flavorText: Portrays the LORD as a shepherd who guides, provides, and prepares
+      a table even 'in the presence of mine enemies.'
+    tierType: 1
+    purpose: "A short psalm of trust portraying the LORD as a shepherd who provides,
+      guides, and protects, and as a host who welcomes the psalmist to a table even
+      'in the presence of mine enemies' \u2014 likely the single most widely memorized
+      passage in the entire Bible, central to this game's mission."
+    deliveredByManagerId: david
+    managerId: psalm_23_the_shepherd_psalm
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 140.52906339306293
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7.026453169653147
+    unlockAtVerseIndex: 296
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: imprecatory_psalms
+    displayName: Cry for Justice
+    flavorText: Cries out for God's justice against enemies in raw, unfiltered prayers
+      of lament rather than personal vengeance.
+    tierType: 1
+    purpose: "A recurring category of psalms in which the psalmist openly asks God
+      to judge and punish enemies \u2014 raw, unfiltered prayers of lament and appeal
+      to divine justice rather than an endorsement of personal vengeance."
+    deliveredByManagerId: 
+    managerId: imprecatory_psalms
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 339.12114430141673
+    costGrowthRate: 1.15
+    baseInkPerSecond: 16.956057215070835
+    unlockAtVerseIndex: 471
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: sons_of_korah
+    displayName: Korahite Choir
+    flavorText: A Levitical guild descended from Korah's surviving sons, composing
+      songs of longing and refuge that open the Psalter's second book.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: sons_of_korah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 818.3584785635118
+    costGrowthRate: 1.15
+    baseInkPerSecond: 40.91792392817559
+    unlockAtVerseIndex: 616
+    managerName: The Sons of Korah
+    managerFlavorText: A Levitical guild descended from Korah's surviving sons, composing
+      songs of longing and refuge that open the Psalter's second book.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 616
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12275
+    submanagers:
+    - id: heman_the_ezrahite
+      displayName: Heman the Ezrahite
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1369
+      unlockCost: 8592
+  - id: asaph
+    displayName: Asaph's Cymbals
+    flavorText: A chief temple musician appointed by David, credited with twelve
+      psalms including a vivid courtroom vision of God summoning the earth to judgment.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: asaph
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1974.8417658131502
+    costGrowthRate: 1.15
+    baseInkPerSecond: 98.7420882906575
+    unlockAtVerseIndex: 729
+    managerName: Asaph
+    managerFlavorText: A chief temple musician appointed by David, credited with
+      twelve psalms including a vivid courtroom vision of God summoning the earth
+      to judgment.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 729
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 29622
+    submanagers: []
+  - id: solomon
+    displayName: Cedar Song Scroll
+    flavorText: Israel's king credited with two psalms, including a coronation prayer
+      asking God's righteousness for 'the king's son.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: solomon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 4765.6376785461825
+    costGrowthRate: 1.15
+    baseInkPerSecond: 238.28188392730914
+    unlockAtVerseIndex: 1061
+    managerName: Solomon
+    managerFlavorText: Israel's king credited with two psalms, including a coronation
+      prayer asking God's righteousness for 'the king's son.'
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 1061
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 71484
+    submanagers: []
+  - id: ethan_the_ezrahite
+    displayName: Covenant Harp
+    flavorText: Declares God's unbreakable covenant with David's throne in Psalm
+      89, then turns to lament an apparent breach of that very promise.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ethan_the_ezrahite
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 11500.315051230227
+    costGrowthRate: 1.15
+    baseInkPerSecond: 575.0157525615114
+    unlockAtVerseIndex: 1389
+    managerName: Ethan the Ezrahite
+    managerFlavorText: Declares God's unbreakable covenant with David's throne in
+      Psalm 89, then turns to lament an apparent breach of that very promise.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 1389
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 172504
+    submanagers: []
+  - id: moses
+    displayName: Tent of the Dwelling Place
+    flavorText: Writes the Psalter's oldest psalm, declaring the LORD as Israel's
+      dwelling place 'from everlasting to everlasting.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: moses
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 27752.26636992245
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1387.6133184961225
+    unlockAtVerseIndex: 1439
+    managerName: Moses
+    managerFlavorText: Writes the Psalter's oldest psalm, declaring the LORD as Israel's
+      dwelling place 'from everlasting to everlasting.'
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 1439
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 416283
+    submanagers: []
+  - id: psalm_119_the_great_acrostic
+    displayName: The Great Acrostic
+    flavorText: A 176-verse acrostic through the Hebrew alphabet, pleading sustained
+      devotion to God's law and word.
+    tierType: 1
+    purpose: "A sustained, 176-verse meditation praising and pleading for devotion
+      to God's law, word, statutes, and commandments \u2014 structured as an acrostic
+      with 22 eight-verse stanzas, one per letter of the Hebrew alphabet."
+    deliveredByManagerId: 
+    managerId: psalm_119_the_great_acrostic
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 66971.05994367859
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3348.552997183929
+    unlockAtVerseIndex: 1959
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: songs_of_ascent
+    displayName: Pilgrim's Ascent
+    flavorText: Fifteen short pilgrim songs traditionally sung by worshippers ascending
+      to Jerusalem for Israel's annual feasts.
+    tierType: 1
+    purpose: A collection of fifteen short psalms (120-134), each titled 'A Song
+      of degrees,' traditionally understood as pilgrim songs sung while going up
+      to Jerusalem for Israel's annual feasts.
+    deliveredByManagerId: 
+    managerId: songs_of_ascent
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 161612.85028745286
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8080.642514372643
+    unlockAtVerseIndex: 2135
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_hallel_closing_praise
+    displayName: Closing Hallel
+    flavorText: The Psalter's final five psalms build to a crescendo of praise, each
+      opening and closing with 'Praise ye the LORD.'
+    tierType: 1
+    purpose: The Psalter's final five psalms (146-150), each opening and closing
+      with 'Praise ye the LORD' (Hallelujah), building to a crescendo of praise that
+      closes the entire book.
+    deliveredByManagerId: 
+    managerId: the_hallel_closing_praise
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 390000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 19500.000000000004
+    unlockAtVerseIndex: 2402
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

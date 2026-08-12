@@ -1,0 +1,258 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: SecondCorinthiansScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 2 Corinthians
+  tiers:
+  - id: the_earthen_vessel
+    displayName: The Earthen Vessel
+    flavorText: "Paul carries the treasure of the gospel in a frail, battered body
+      \u2014 beaten, shipwrecked, lowered from a wall in a basket, and given a thorn
+      in the flesh \u2014 so that the surpassing power is plainly God's, not his
+      own."
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: paul_2cor
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Paul
+    managerFlavorText: "Paul carries the treasure of the gospel in a frail, battered
+      body \u2014 beaten, shipwrecked, lowered from a wall in a basket, and given
+      a thorn in the flesh \u2014 so that the surpassing power is plainly God's,
+      not his own."
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 65
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: timothy_2cor
+      displayName: Timothy
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 0
+      unlockCost: 105
+    - id: silvanus_2cor
+      displayName: Silvanus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 18
+      unlockCost: 105
+  - id: the_comfort_of_his_coming
+    displayName: The Comfort of His Coming
+    flavorText: Titus's safe arrival with good news from Corinth turns Paul's anxious
+      search at Troas into relief, comforting him amid his own affliction.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: titus_2cor
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 35.8030867271064
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.7901543363553198
+    unlockAtVerseIndex: 27
+    managerName: Titus
+    managerFlavorText: Titus's safe arrival with good news from Corinth turns Paul's
+      anxious search at Troas into relief, comforting him amid his own affliction.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 121
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 537
+    submanagers:
+    - id: brother_renowned_in_gospel_2cor
+      displayName: The Brother Renowned in the Gospel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 149
+      unlockCost: 375
+    - id: brother_often_proved_diligent_2cor
+      displayName: The Brother Often Proved Diligent
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 153
+      unlockCost: 375
+  - id: the_god_of_all_comfort
+    displayName: The God of All Comfort
+    flavorText: Paul blesses God as the Father of mercies who comforts believers
+      in every tribulation so that they can pass that same comfort on to others in
+      trouble.
+    tierType: 1
+    purpose: God comforts believers in their tribulation specifically so they can
+      comfort others in trouble, framing affliction as purposeful rather than meaningless.
+    deliveredByManagerId: paul_2cor
+    managerId: comfort_in_affliction_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 128.18610191887024
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6.409305095943512
+    unlockAtVerseIndex: 54
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: touch_not_the_unclean_thing
+    displayName: Touch Not the Unclean Thing
+    flavorText: Paul warns believers not to be unequally yoked with unbelievers and
+      calls the church to come out and be separate, perfecting holiness out of reverence
+      for God.
+    tierType: 1
+    purpose: Believers should not be unequally yoked with unbelievers, since righteousness
+      and unrighteousness cannot genuinely partner together; the church is called
+      to separate itself and perfect holiness.
+    deliveredByManagerId: paul_2cor
+    managerId: unequally_yoked_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 458.9458124211011
+    costGrowthRate: 1.15
+    baseInkPerSecond: 22.947290621055053
+    unlockAtVerseIndex: 81
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: lest_he_be_swallowed_up
+    displayName: Lest He Be Swallowed Up
+    flavorText: Paul declares the church's punishment of the offender sufficient
+      and urges them to forgive and comfort him, lest he be swallowed up by overmuch
+      sorrow.
+    tierType: 1
+    purpose: "Balances church discipline with restoration for a member who caused
+      grief \u2014 the punishment already given is sufficient, and forgiveness and
+      comfort should follow so godly sorrow leads to repentance, not despair."
+    deliveredByManagerId: paul_2cor
+    managerId: offender_discipline_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1643.1676725154985
+    costGrowthRate: 1.15
+    baseInkPerSecond: 82.15838362577492
+    unlockAtVerseIndex: 109
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_veil_taken_away
+    displayName: The Veil Taken Away
+    flavorText: Paul contrasts Moses' fading, veiled glory under the old covenant
+      with the unveiled and ever-increasing glory of the new covenant of the Spirit.
+    tierType: 1
+    purpose: Contrasts the old covenant's fading, veiled glory with the new covenant
+      of the Spirit's unveiled and increasing glory, explaining how suffering apostles
+      still carry surpassing power that is of God, not of themselves.
+    deliveredByManagerId: paul_2cor
+    managerId: new_covenant_unveiled_glory_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5883.047468624995
+    costGrowthRate: 1.15
+    baseInkPerSecond: 294.15237343124977
+    unlockAtVerseIndex: 136
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: ambassadors_for_christ
+    displayName: Ambassadors for Christ
+    flavorText: Paul declares that God has given believers the ministry of reconciliation,
+      making them ambassadors for Christ who plead with the world to be reconciled
+      to God.
+    tierType: 1
+    purpose: Teaches the apostolic calling to carry God's message of reconciliation
+      to the world, grounded in hope beyond the earthly body and the truth that anyone
+      in Christ is a new creature.
+    deliveredByManagerId: paul_2cor
+    managerId: ministry_of_reconciliation_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 21063.12587388645
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1053.1562936943224
+    unlockAtVerseIndex: 163
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_cheerful_giver
+    displayName: The Cheerful Giver
+    flavorText: Paul appeals for the Corinthians to complete their gift for the Jerusalem
+      church, insisting that God loves a cheerful giver who gives from a willing
+      mind.
+    tierType: 1
+    purpose: Appeals for the Corinthians to complete their promised gift for the
+      Jerusalem church, using Macedonia's generosity and Christ's own voluntary poverty
+      as models, insisting giving must be willing and cheerful, not compelled.
+    deliveredByManagerId: paul_2cor
+    managerId: jerusalem_collection_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 75412.4922406715
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3770.6246120335754
+    unlockAtVerseIndex: 190
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: angels_of_light
+    displayName: Angels of Light
+    flavorText: Paul warns that Satan himself is transformed into an angel of light,
+      so it is no surprise that false apostles disguise themselves as ministers of
+      righteousness.
+    tierType: 1
+    purpose: Warns the Corinthian church against rival teachers preaching another
+      Jesus and commending themselves, exposing their self-commendation as counterfeit
+      ministry since true apostleship is marked by suffering and weakness, not self-promotion.
+    deliveredByManagerId: paul_2cor
+    managerId: false_apostles_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 270000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 13500.000000000004
+    unlockAtVerseIndex: 218
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

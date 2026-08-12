@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d991f4c6b0cf04cbb6576b7f697999, type: 3}
+  m_Name: SteadyHandCapstone
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Progression.SkillTreeV2.SkillNodeData
+  displayName: "Steady Hand \u2014 Capstone"
+  description: +15% tap value.
+  branchCategory: Steady Hand
+  baseCost: 50
+  costMultiplier: 1
+  maxRank: 1
+  effectType: 1
+  effectPerRank: 0.15
+  prerequisites:
+  - node: {fileID: 11400000, guid: 192a8e2c04d916146ade8e0aebaae24a, type: 2}
+    rankRequired: 2
+  unlockBookResourceId: 
+  requiresBookResourceId: 
+  requiresResetPrestige: 0
+  shape: 2
+  accentColor: {r: 0.88, g: 0.36, b: 0.4, a: 1}
+  isCapstone: 1

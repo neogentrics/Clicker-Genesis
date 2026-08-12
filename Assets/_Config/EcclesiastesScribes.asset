@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: EcclesiastesScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Ecclesiastes
+  tiers:
+  - id: the_preachers_scroll
+    displayName: The Preacher's Scroll
+    flavorText: Identifies himself only as 'the Preacher, son of David, king in Jerusalem,'
+      and sets out to seek and search out by wisdom all that is done under heaven.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: the_preacher
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: The Preacher (Qoheleth)
+    managerFlavorText: Identifies himself only as 'the Preacher, son of David, king
+      in Jerusalem,' and sets out to seek and search out by wisdom all that is done
+      under heaven.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 11
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: vapor_under_the_sun
+    displayName: Vapor Under the Sun
+    flavorText: Declares 'vanity of vanities, all is vanity,' opening the book's
+      inquiry into what lasting profit, if any, exists in a man's labour under the
+      sun.
+    tierType: 1
+    purpose: States the book's governing thesis that every human pursuit, achievement,
+      and possession 'under the sun' is fleeting vapor when weighed against eternity,
+      framing everything that follows as an inquiry into lasting profit.
+    deliveredByManagerId: the_preacher
+    managerId: vanity_of_vanities
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 35.8030867271064
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.7901543363553198
+    unlockAtVerseIndex: 23
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: lamp_of_wisdom
+    displayName: Lamp of Wisdom
+    flavorText: Weighs wisdom against folly, finding wisdom excels 'as far as light
+      excelleth darkness,' yet unable to outrun death or guarantee remembrance.
+    tierType: 1
+    purpose: Weighs the value of human wisdom against folly and finds wisdom genuinely
+      superior, yet ultimately unable to outrun death or guarantee remembrance, so
+      wisdom profits within life but cannot secure lasting advantage beyond it.
+    deliveredByManagerId: the_preacher
+    managerId: wisdom_and_folly
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 128.18610191887024
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6.409305095943512
+    unlockAtVerseIndex: 47
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: seasons_wheel
+    displayName: Season's Wheel
+    flavorText: Recites fourteen paired opposites - a time to be born and to die,
+      to plant and to pluck up - declaring God has appointed a fitting season for
+      every purpose.
+    tierType: 1
+    purpose: A poetic catalogue of paired opposites asserting that God has appointed
+      a fitting season for every human activity, and that discerning God's timing,
+      not human control, governs a well-lived life.
+    deliveredByManagerId: the_preacher
+    managerId: time_for_every_purpose
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 458.9458124211011
+    costGrowthRate: 1.15
+    baseInkPerSecond: 22.947290621055053
+    unlockAtVerseIndex: 70
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: tears_of_the_oppressed
+    displayName: Tears of the Oppressed
+    flavorText: Beholds the tears of the oppressed who have no comforter, and finds
+      wickedness even in the very place of judgment.
+    tierType: 1
+    purpose: Surveys the corruption of human courts and social power - wickedness
+      in the seat of judgment, oppressors whose victims have no comforter, and the
+      leveling truth that death erases any distinction wealth or power once bought.
+    deliveredByManagerId: the_preacher
+    managerId: injustice_under_the_sun
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1643.1676725154985
+    costGrowthRate: 1.15
+    baseInkPerSecond: 82.15838362577492
+    unlockAtVerseIndex: 94
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: bread_and_wine
+    displayName: Bread and Wine
+    flavorText: Counsels that there is nothing better for a man than to eat and drink
+      and find enjoyment in his labour, for this is the gift of God.
+    tierType: 1
+    purpose: 'The book''s recurring positive counter-refrain to its vanity thesis:
+      since ultimate gain cannot be secured or fully understood, God''s gift to mortal
+      life is the simple, immediate enjoyment of food, drink, and the fruit of one''s
+      own labour.'
+    deliveredByManagerId: the_preacher
+    managerId: eat_drink_and_enjoy_labour
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5883.047468624995
+    costGrowthRate: 1.15
+    baseInkPerSecond: 294.15237343124977
+    unlockAtVerseIndex: 117
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_threefold_cord
+    displayName: The Threefold Cord
+    flavorText: Declares two are better than one, for if they fall the one will lift
+      up his fellow, and a threefold cord is not quickly broken.
+    tierType: 1
+    purpose: A short wisdom poem on companionship arguing that mutual human relationship
+      - lifting one another up, sharing warmth, defending one another - is a genuine,
+      tangible good within an otherwise vanity-filled life.
+    deliveredByManagerId: the_preacher
+    managerId: two_are_better_than_one
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 21063.12587388645
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1053.1562936943224
+    unlockAtVerseIndex: 141
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_silver_cord
+    displayName: The Silver Cord
+    flavorText: Urges the young to remember their Creator before the silver cord
+      is loosed and the golden bowl is broken, and the dust returns to earth and
+      the spirit to God.
+    tierType: 1
+    purpose: An extended poem picturing the body's decline into old age and death,
+      urging the young to remember and honor their Creator before these losses arrive
+      and the spirit returns to the God who gave it.
+    deliveredByManagerId: the_preacher
+    managerId: remember_thy_creator
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 75412.4922406715
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3770.6246120335754
+    unlockAtVerseIndex: 164
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_whole_duty
+    displayName: The Whole Duty
+    flavorText: 'Concludes the whole matter: fear God and keep his commandments,
+      for this is the whole duty of man, since God will bring every work into judgment.'
+    tierType: 1
+    purpose: The book's closing summation - after every earthly pursuit has been
+      tested and found to be vapor, the one enduring counsel offered is to fear God
+      and keep his commandments, because God will ultimately judge every deed.
+    deliveredByManagerId: the_preacher
+    managerId: fear_god_keep_commandments
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 270000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 13500.000000000004
+    unlockAtVerseIndex: 188
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: SecondJohnScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 2 John
+  tiers:
+  - id: elder_2john
+    displayName: Paper and Ink
+    flavorText: The elder writes rather than visits, longing instead to come and
+      speak face to face so that their joy may be full.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elder_2john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: The Elder
+    managerFlavorText: The elder writes rather than visits, longing instead to come
+      and speak face to face so that their joy may be full.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 11
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: elect_lady
+    displayName: Walking in Truth
+    flavorText: The elder rejoices to find some of the elect lady's children walking
+      in truth, exactly as the Father commanded.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elect_lady
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 246.62120743304698
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.331060371652349
+    unlockAtVerseIndex: 3
+    managerName: The Elect Lady and Her Children
+    managerFlavorText: The elder rejoices to find some of the elect lady's children
+      walking in truth, exactly as the Father commanded.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 3
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3699
+    submanagers: []
+  - id: old_commandment_2john
+    displayName: The Old Commandment
+    flavorText: The elder beseeches the lady to love one another, not as a new commandment
+      but as the one held from the beginning.
+    tierType: 1
+    purpose: Reaffirms mutual love as the church's original, defining commandment,
+      framing obedient love for one another as inseparable from walking in truth.
+    deliveredByManagerId: elder_2john
+    managerId: old_commandment_2john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6082.201995573398
+    costGrowthRate: 1.15
+    baseInkPerSecond: 304.1100997786699
+    unlockAtVerseIndex: 7
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: warning_against_deceivers_2john
+    displayName: The Closed Door
+    flavorText: Many deceivers who deny Christ came in the flesh have gone out into
+      the world, and the household is warned not to receive them into the house.
+    tierType: 1
+    purpose: Sets a doctrinal test - confessing Jesus Christ came in the flesh -
+      for identifying deceivers, paired with the instruction to withhold house and
+      greeting so the church does not materially support the spread of that denial.
+    deliveredByManagerId: elder_2john
+    managerId: warning_against_deceivers_2john
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 149999.99999999994
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7499.999999999997
+    unlockAtVerseIndex: 11
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

@@ -1,0 +1,885 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: SecondChroniclesScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 2 Chronicles
+  tiers:
+  - id: solomon
+    displayName: Solomon
+    flavorText: Dedicates the newly built Temple in Jerusalem, and fire falls from
+      heaven to consume the sacrifice.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: solomon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Solomon
+    managerFlavorText: Dedicates the newly built Temple in Jerusalem, and fire falls
+      from heaven to consume the sacrifice.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 130
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: queen_of_sheba
+      displayName: The Queen of Sheba
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 170
+      unlockCost: 105
+  - id: huram_king_of_tyre
+    displayName: Huram, King of Tyre
+    flavorText: Supplies Solomon with cedar, fir, and algum timber, and sends his
+      master craftsman to adorn the Temple.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: huram_king_of_tyre
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 15.011061417892108
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.7505530708946054
+    unlockAtVerseIndex: 24
+    managerName: Huram, King of Tyre
+    managerFlavorText: Supplies Solomon with cedar, fir, and algum timber, and sends
+      his master craftsman to adorn the Temple.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 27
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 225
+    submanagers:
+    - id: huram_his_father
+      displayName: Huram his father (the craftsman)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 62
+      unlockCost: 157
+  - id: rehoboam
+    displayName: Rehoboam
+    flavorText: Rejects the elders' wise counsel and answers the people harshly,
+      splitting the kingdom as ten tribes revolt under Jeroboam.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: rehoboam
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 22.533196489172905
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.1266598244586452
+    unlockAtVerseIndex: 49
+    managerName: Rehoboam
+    managerFlavorText: Rejects the elders' wise counsel and answers the people harshly,
+      splitting the kingdom as ten tribes revolt under Jeroboam.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 201
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 337
+    submanagers:
+    - id: shemaiah_the_prophet
+      displayName: Shemaiah the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 221
+      unlockCost: 235
+    - id: shishak_king_of_egypt
+      displayName: Shishak, King of Egypt
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 244
+      unlockCost: 235
+  - id: jeroboam
+    displayName: Jeroboam
+    flavorText: Returns from exile in Egypt to lead the ten northern tribes in revolt
+      against Rehoboam.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jeroboam
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 33.82471964404053
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.6912359822020264
+    unlockAtVerseIndex: 74
+    managerName: Jeroboam
+    managerFlavorText: Returns from exile in Egypt to lead the ten northern tribes
+      in revolt against Rehoboam.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 202
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 507
+    submanagers: []
+  - id: abijah
+    displayName: Abijah
+    flavorText: Defeats Jeroboam's army at Zemaraim after a covenant-themed speech
+      before the battle.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: abijah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 50.77449440196741
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.5387247200983705
+    unlockAtVerseIndex: 99
+    managerName: Abijah
+    managerFlavorText: Defeats Jeroboam's army at Zemaraim after a covenant-themed
+      speech before the battle.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 259
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 761
+    submanagers: []
+  - id: asa
+    displayName: Asa
+    flavorText: Routs the massive invading army of Zerah the Ethiopian at Mareshah,
+      trusting in the LORD.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: asa
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 76.21790539303518
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.810895269651759
+    unlockAtVerseIndex: 124
+    managerName: Asa
+    managerFlavorText: Routs the massive invading army of Zerah the Ethiopian at
+      Mareshah, trusting in the LORD.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 289
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1143
+    submanagers:
+    - id: zerah_the_ethiopian
+      displayName: Zerah the Ethiopian
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 289
+      unlockCost: 800
+    - id: azariah_son_of_oded
+      displayName: Azariah the son of Oded
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 296
+      unlockCost: 800
+    - id: hanani_the_seer
+      displayName: Hanani the Seer
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 321
+      unlockCost: 800
+  - id: jehoshaphat
+    displayName: Jehoshaphat
+    flavorText: Faces a vast Moabite and Ammonite coalition and is delivered without
+      a battle after Jahaziel's prophecy that the fight belongs to the LORD.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoshaphat
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 114.41116589979414
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5.720558294989707
+    unlockAtVerseIndex: 149
+    managerName: Jehoshaphat
+    managerFlavorText: Faces a vast Moabite and Ammonite coalition and is delivered
+      without a battle after Jahaziel's prophecy that the fight belongs to the LORD.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 393
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1716
+    submanagers:
+    - id: ahab_king_of_israel
+      displayName: Ahab, King of Israel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 365
+      unlockCost: 1201
+    - id: micaiah_the_prophet
+      displayName: Micaiah the son of Imlah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 351
+      unlockCost: 1201
+    - id: zedekiah_son_of_chenaanah
+      displayName: Zedekiah the son of Chenaanah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 357
+      unlockCost: 1201
+    - id: jahaziel
+      displayName: Jahaziel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 406
+      unlockCost: 1201
+    - id: jehu_son_of_hanani
+      displayName: Jehu the son of Hanani
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 382
+      unlockCost: 1201
+    - id: eliezer_son_of_dodavah
+      displayName: Eliezer the son of Dodavah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 429
+      unlockCost: 1201
+    - id: ahaziah_king_of_israel
+      displayName: Ahaziah, King of Israel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 427
+      unlockCost: 1201
+  - id: jehoram_king_of_judah
+    displayName: Jehoram (Joram), King of Judah
+    flavorText: Murders all his brothers upon taking the throne, then leads Judah
+      into apostasy under his wife Athaliah's influence.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoram_king_of_judah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 171.7433038214453
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.587165191072264
+    unlockAtVerseIndex: 174
+    managerName: Jehoram (Joram), King of Judah
+    managerFlavorText: Murders all his brothers upon taking the throne, then leads
+      Judah into apostasy under his wife Athaliah's influence.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 430
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2576
+    submanagers:
+    - id: elijah_the_prophet
+      displayName: Elijah the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 441
+      unlockCost: 1803
+  - id: ahaziah_king_of_judah
+    displayName: Ahaziah, King of Judah
+    flavorText: Is found hiding in Samaria and put to death by Jehu after allying
+      with Jehoram of Israel against Hazael of Syria.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ahaziah_king_of_judah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 257.80492817754197
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.890246408877099
+    unlockAtVerseIndex: 199
+    managerName: Ahaziah, King of Judah
+    managerFlavorText: Is found hiding in Samaria and put to death by Jehu after
+      allying with Jehoram of Israel against Hazael of Syria.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 457
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3867
+    submanagers:
+    - id: jehoram_king_of_israel
+      displayName: Jehoram (Joram), King of Israel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 454
+      unlockCost: 2706
+  - id: athaliah
+    displayName: Athaliah
+    flavorText: Destroys all the royal seed of Judah after her son Ahaziah's death
+      and seizes the throne herself.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: athaliah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 386.99256107083465
+    costGrowthRate: 1.15
+    baseInkPerSecond: 19.349628053541732
+    unlockAtVerseIndex: 224
+    managerName: Athaliah
+    managerFlavorText: Destroys all the royal seed of Judah after her son Ahaziah's
+      death and seizes the throne herself.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 459
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 5804
+    submanagers: []
+  - id: jehoiada
+    displayName: Jehoiada the Priest
+    flavorText: Orchestrates the covenant and coronation of the boy-king Joash, ending
+      Athaliah's reign and tearing down the house of Baal.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoiada
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 580.9169102501662
+    costGrowthRate: 1.15
+    baseInkPerSecond: 29.04584551250831
+    unlockAtVerseIndex: 249
+    managerName: Jehoiada the Priest
+    managerFlavorText: Orchestrates the covenant and coronation of the boy-king Joash,
+      ending Athaliah's reign and tearing down the house of Baal.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 462
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 8713
+    submanagers:
+    - id: jehoshabeath
+      displayName: Jehoshabeath
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 460
+      unlockCost: 6099
+  - id: joash
+    displayName: Joash
+    flavorText: Repairs the Temple through a collected offering under the guidance
+      of Jehoiada the priest.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: joash
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 872.0179418457362
+    costGrowthRate: 1.15
+    baseInkPerSecond: 43.600897092286814
+    unlockAtVerseIndex: 274
+    managerName: Joash
+    managerFlavorText: Repairs the Temple through a collected offering under the
+      guidance of Jehoiada the priest.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 486
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 13080
+    submanagers:
+    - id: hazael_king_of_syria
+      displayName: Hazael, King of Syria
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 505
+      unlockCost: 9156
+    - id: zabad_son_of_shimeath
+      displayName: Zabad the son of Shimeath
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 507
+      unlockCost: 9156
+    - id: jehozabad_son_of_shimrith
+      displayName: Jehozabad the son of Shimrith
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 507
+      unlockCost: 9156
+  - id: zechariah_son_of_jehoiada
+    displayName: Zechariah son of Jehoiada
+    flavorText: Rebukes Joash and the princes for forsaking the LORD, and is stoned
+      to death by the king's command in the Temple court.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zechariah_son_of_jehoiada
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1308.9914882550215
+    costGrowthRate: 1.15
+    baseInkPerSecond: 65.44957441275108
+    unlockAtVerseIndex: 299
+    managerName: Zechariah, son of Jehoiada
+    managerFlavorText: Rebukes Joash and the princes for forsaking the LORD, and
+      is stoned to death by the king's command in the Temple court.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 502
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 19634
+    submanagers: []
+  - id: amaziah
+    displayName: Amaziah
+    flavorText: Provokes Joash of Israel to war out of pride after defeating Edom,
+      and is defeated and captured at Bethshemesh.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: amaziah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1964.9351625694126
+    costGrowthRate: 1.15
+    baseInkPerSecond: 98.24675812847063
+    unlockAtVerseIndex: 324
+    managerName: Amaziah
+    managerFlavorText: Provokes Joash of Israel to war out of pride after defeating
+      Edom, and is defeated and captured at Bethshemesh.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 526
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 29474
+    submanagers:
+    - id: joash_king_of_israel
+      displayName: Joash (Jehoash), King of Israel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 529
+      unlockCost: 20631
+  - id: uzziah
+    displayName: Uzziah
+    flavorText: Grows proud after great success, unlawfully burns incense in the
+      Temple, and is struck with leprosy on the spot.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: uzziah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 2949.576240750527
+    costGrowthRate: 1.15
+    baseInkPerSecond: 147.47881203752635
+    unlockAtVerseIndex: 349
+    managerName: Uzziah
+    managerFlavorText: Grows proud after great success, unlawfully burns incense
+      in the Temple, and is struck with leprosy on the spot.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 553
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 44243
+    submanagers:
+    - id: zechariah_instructor_of_uzziah
+      displayName: Zechariah, who had understanding in the visions of God
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 542
+      unlockCost: 30970
+    - id: azariah_the_priest
+      displayName: Azariah the Priest
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 554
+      unlockCost: 30970
+  - id: jotham
+    displayName: Jotham
+    flavorText: Builds the high gate of the Temple and fortifies Judah's cities,
+      prospering because he prepares his ways before the LORD.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jotham
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 4427.627010666148
+    costGrowthRate: 1.15
+    baseInkPerSecond: 221.3813505333074
+    unlockAtVerseIndex: 373
+    managerName: Jotham
+    managerFlavorText: Builds the high gate of the Temple and fortifies Judah's cities,
+      prospering because he prepares his ways before the LORD.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 561
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 66414
+    submanagers: []
+  - id: ahaz
+    displayName: Ahaz
+    flavorText: Walks in the ways of Israel's kings, makes molten images, and burns
+      his own children in the fire.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ahaz
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6646.338099262758
+    costGrowthRate: 1.15
+    baseInkPerSecond: 332.3169049631379
+    unlockAtVerseIndex: 398
+    managerName: Ahaz
+    managerFlavorText: Walks in the ways of Israel's kings, makes molten images,
+      and burns his own children in the fire.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 570
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 99695
+    submanagers:
+    - id: oded_the_prophet
+      displayName: Oded the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 578
+      unlockCost: 69786
+    - id: azariah_son_of_johanan
+      displayName: Azariah the son of Johanan
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 581
+      unlockCost: 69786
+    - id: berechiah_son_of_meshillemoth
+      displayName: Berechiah the son of Meshillemoth
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 581
+      unlockCost: 69786
+    - id: jehizkiah_son_of_shallum
+      displayName: Jehizkiah the son of Shallum
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 581
+      unlockCost: 69786
+    - id: amasa_son_of_hadlai
+      displayName: Amasa the son of Hadlai
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 581
+      unlockCost: 69786
+  - id: hezekiah
+    displayName: Hezekiah
+    flavorText: Cleanses and reopens the Temple in the very first year of his reign,
+      reversing his father Ahaz's apostasy.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: hezekiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9976.858941210956
+    costGrowthRate: 1.15
+    baseInkPerSecond: 498.8429470605478
+    unlockAtVerseIndex: 423
+    managerName: Hezekiah
+    managerFlavorText: Cleanses and reopens the Temple in the very first year of
+      his reign, reversing his father Ahaz's apostasy.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 597
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 149652
+    submanagers:
+    - id: isaiah_the_prophet
+      displayName: Isaiah the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 700
+      unlockCost: 104756
+  - id: sennacherib
+    displayName: Sennacherib
+    flavorText: Besieges Jerusalem and blasphemes the LORD, until an angel destroys
+      his army and he returns home in shame.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: sennacherib
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 14976.324232416371
+    costGrowthRate: 1.15
+    baseInkPerSecond: 748.8162116208185
+    unlockAtVerseIndex: 448
+    managerName: Sennacherib
+    managerFlavorText: Besieges Jerusalem and blasphemes the LORD, until an angel
+      destroys his army and he returns home in shame.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 700
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 224644
+    submanagers: []
+  - id: manasseh
+    displayName: Manasseh
+    flavorText: Carried to Babylon in fetters for his idolatry, humbles himself greatly
+      in prayer and is restored to his kingdom.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: manasseh
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 22481.052286706803
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1124.0526143353402
+    unlockAtVerseIndex: 473
+    managerName: Manasseh
+    managerFlavorText: Carried to Babylon in fetters for his idolatry, humbles himself
+      greatly in prayer and is restored to his kingdom.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 723
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 337215
+    submanagers: []
+  - id: amon
+    displayName: Amon
+    flavorText: Reigns two years in his father's former evil, but unlike Manasseh
+      never humbles himself, and is killed by his own servants.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: amon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 33746.44566145996
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1687.322283072998
+    unlockAtVerseIndex: 498
+    managerName: Amon
+    managerFlavorText: Reigns two years in his father's former evil, but unlike Manasseh
+      never humbles himself, and is killed by his own servants.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 734
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 506196
+    submanagers: []
+  - id: josiah
+    displayName: Josiah
+    flavorText: Institutes sweeping reform after the long-lost book of the law is
+      found during Temple repairs and read aloud to him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: josiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 50656.99684597342
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2532.8498422986713
+    unlockAtVerseIndex: 523
+    managerName: Josiah
+    managerFlavorText: Institutes sweeping reform after the long-lost book of the
+      law is found during Temple repairs and read aloud to him.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 752
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 759854
+    submanagers:
+    - id: hilkiah_the_priest
+      displayName: Hilkiah the Priest
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 752
+      unlockCost: 531897
+    - id: shaphan_the_scribe
+      displayName: Shaphan the Scribe
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 753
+      unlockCost: 531897
+    - id: huldah_the_prophetess
+      displayName: Huldah the Prophetess
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 760
+      unlockCost: 531897
+    - id: jeremiah_the_prophet
+      displayName: Jeremiah the Prophet
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 796
+      unlockCost: 531897
+  - id: pharaoh_necho
+    displayName: Pharaoh Necho
+    flavorText: Warns Josiah not to meddle in his war against Assyria, then mortally
+      wounds him in battle at Megiddo.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pharaoh_necho
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 76041.5290900874
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3802.07645450437
+    unlockAtVerseIndex: 548
+    managerName: Pharaoh Necho, King of Egypt
+    managerFlavorText: Warns Josiah not to meddle in his war against Assyria, then
+      mortally wounds him in battle at Megiddo.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 791
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1140622
+    submanagers: []
+  - id: jehoahaz_king_of_judah
+    displayName: Jehoahaz
+    flavorText: Is made king by the people of the land but reigns only three months
+      before Pharaoh Necho deposes him and carries him captive to Egypt.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoahaz_king_of_judah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 114146.40634817311
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5707.320317408656
+    unlockAtVerseIndex: 573
+    managerName: Jehoahaz
+    managerFlavorText: Is made king by the people of the land but reigns only three
+      months before Pharaoh Necho deposes him and carries him captive to Egypt.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 799
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1712196
+    submanagers: []
+  - id: jehoiakim
+    displayName: Jehoiakim
+    flavorText: Reigns eleven years doing evil, until Nebuchadnezzar binds him in
+      fetters to carry him away to Babylon.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoiakim
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 171345.87163240966
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8567.293581620483
+    unlockAtVerseIndex: 598
+    managerName: Jehoiakim
+    managerFlavorText: Reigns eleven years doing evil, until Nebuchadnezzar binds
+      him in fetters to carry him away to Babylon.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 803
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2570188
+    submanagers: []
+  - id: nebuchadnezzar
+    displayName: Nebuchadnezzar
+    flavorText: Sends the Chaldean army to destroy Jerusalem and the Temple after
+      Zedekiah's rebellion, carrying the survivors captive to Babylon.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: nebuchadnezzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 257208.34027763584
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12860.417013881792
+    unlockAtVerseIndex: 623
+    managerName: Nebuchadnezzar, King of Babylon
+    managerFlavorText: Sends the Chaldean army to destroy Jerusalem and the Temple
+      after Zedekiah's rebellion, carrying the survivors captive to Babylon.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 815
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3858125
+    submanagers: []
+  - id: jehoiachin
+    displayName: Jehoiachin
+    flavorText: Reigns only three months and ten days before Nebuchadnezzar carries
+      him captive to Babylon along with the Temple vessels.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoiachin
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 386097.0193101684
+    costGrowthRate: 1.15
+    baseInkPerSecond: 19304.85096550842
+    unlockAtVerseIndex: 648
+    managerName: Jehoiachin
+    managerFlavorText: Reigns only three months and ten days before Nebuchadnezzar
+      carries him captive to Babylon along with the Temple vessels.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 807
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 5791455
+    submanagers: []
+  - id: zedekiah
+    displayName: Zedekiah
+    flavorText: Rebels against Nebuchadnezzar and stiffens his neck against the LORD,
+      bringing on the destruction of Jerusalem and the Temple.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zedekiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 579572.6070130013
+    costGrowthRate: 1.15
+    baseInkPerSecond: 28978.630350650066
+    unlockAtVerseIndex: 673
+    managerName: Zedekiah
+    managerFlavorText: Rebels against Nebuchadnezzar and stiffens his neck against
+      the LORD, bringing on the destruction of Jerusalem and the Temple.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 809
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 8693589
+    submanagers: []
+  - id: cyrus
+    displayName: Cyrus
+    flavorText: Issues a proclamation permitting the exiles to return and rebuild
+      the Temple at Jerusalem, fulfilling Jeremiah's word.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: cyrus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 870000.000000001
+    costGrowthRate: 1.15
+    baseInkPerSecond: 43500.00000000005
+    unlockAtVerseIndex: 698
+    managerName: Cyrus, King of Persia
+    managerFlavorText: Issues a proclamation permitting the exiles to return and
+      rebuild the Temple at Jerusalem, fulfilling Jeremiah's word.
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 820
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 13050000
+    submanagers: []

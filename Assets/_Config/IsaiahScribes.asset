@@ -1,0 +1,343 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: IsaiahScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Isaiah
+  tiers:
+  - id: the_seraphs_coal
+    displayName: The Seraph's Coal
+    flavorText: 'In the year King Uzziah dies, a seraph touches Isaiah''s lips with
+      a live coal from the altar, and he answers the LORD''s call: ''Here am I; send
+      me.'''
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: isaiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Isaiah
+    managerFlavorText: 'In the year King Uzziah dies, a seraph touches Isaiah''s
+      lips with a live coal from the altar, and he answers the LORD''s call: ''Here
+      am I; send me.'''
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 115
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: shearjashub
+      displayName: Shearjashub
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 130
+      unlockCost: 105
+    - id: mahershalalhashbaz
+      displayName: Mahershalalhashbaz
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 153
+      unlockCost: 105
+  - id: the_fullers_field_conduit
+    displayName: The Fuller's Field Conduit
+    flavorText: With Jerusalem trembling before the armies of Syria and Israel, Isaiah
+      meets King Ahaz at the conduit of the upper pool and tells him the invading
+      kings are mere smoking firebrands soon to fail.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ahaz
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 25.95429988110815
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.2977149940554074
+    unlockAtVerseIndex: 99
+    managerName: Ahaz
+    managerFlavorText: With Jerusalem trembling before the armies of Syria and Israel,
+      Isaiah meets King Ahaz at the conduit of the upper pool and tells him the invading
+      kings are mere smoking firebrands soon to fail.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 130
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 389
+    submanagers: []
+  - id: the_immanuel_sign
+    displayName: The Immanuel Sign
+    flavorText: 'Though Ahaz refuses to ask for any sign, the LORD gives one anyway:
+      a virgin shall conceive and bear a son, and call his name Immanuel, God with
+      us.'
+    tierType: 1
+    purpose: 'A sign given to the house of David despite Ahaz''s refusal to ask for
+      one: a child to be named Immanuel (''God with us''), assuring God''s continued
+      presence with Judah even under threat of invasion.'
+    deliveredByManagerId: isaiah
+    managerId: immanuel_sign
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 67.36256823184904
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.368128411592452
+    unlockAtVerseIndex: 199
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: wonderful_counsellor
+    displayName: Wonderful Counsellor
+    flavorText: A child is born, a son given, and his name is called Wonderful, Counsellor,
+      The mighty God, The everlasting Father, The Prince of Peace, to reign forever
+      on David's throne.
+    tierType: 1
+    purpose: Announces a coming child/son upon whose shoulder government rests, given
+      a string of throne-names, who will establish David's throne 'with judgment
+      and with justice' forever.
+    deliveredByManagerId: isaiah
+    managerId: unto_us_a_child_is_born
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 174.8348296651019
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.741741483255094
+    unlockAtVerseIndex: 299
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_burden
+    displayName: The Burden
+    flavorText: Isaiah pronounces the burden of Babylon, Moab, Damascus, Egypt, and
+      Tyre, declaring the LORD's sovereignty over every nation, not Judah alone.
+    tierType: 1
+    purpose: A sequence of judgment oracles, most opening with the formula 'The burden
+      of...', pronounced against Babylon, Moab, Damascus, Egypt, Tyre, and others.
+    deliveredByManagerId: isaiah
+    managerId: oracles_against_the_nations
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 453.77155987905167
+    costGrowthRate: 1.15
+    baseInkPerSecond: 22.688577993952585
+    unlockAtVerseIndex: 399
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_sixfold_woe
+    displayName: The Sixfold Woe
+    flavorText: Across six oracles, Isaiah cries 'Woe' against pride, hidden rebellion,
+      and Judah's trust in Egypt instead of the Holy One of Israel.
+    tierType: 1
+    purpose: Six prophetic denunciations, each opening with 'Woe,' pronounced across
+      chapters 28-33 against pride, hidden rebellion, and trust in political alliances
+      instead of the LORD.
+    deliveredByManagerId: isaiah
+    managerId: six_woes
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1177.732314261913
+    costGrowthRate: 1.15
+    baseInkPerSecond: 58.88661571309565
+    unlockAtVerseIndex: 499
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: sundial_of_ahaz
+    displayName: Sundial of Ahaz
+    flavorText: Struck with a mortal illness, Hezekiah weeps before the LORD and
+      is granted fifteen more years of life, confirmed as the shadow moves backward
+      ten degrees on the sun dial of Ahaz.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: hezekiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3056.7217664025193
+    costGrowthRate: 1.15
+    baseInkPerSecond: 152.83608832012595
+    unlockAtVerseIndex: 598
+    managerName: Hezekiah
+    managerFlavorText: Struck with a mortal illness, Hezekiah weeps before the LORD
+      and is granted fifteen more years of life, confirmed as the shadow moves backward
+      ten degrees on the sun dial of Ahaz.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 736
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 45850
+    submanagers:
+    - id: eliakim
+      displayName: Eliakim
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 417
+      unlockCost: 32094
+    - id: shebna
+      displayName: Shebna
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 412
+      unlockCost: 32094
+    - id: joah
+      displayName: Joah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 678
+      unlockCost: 32094
+  - id: sennacheribs_siege
+    displayName: Sennacherib's Siege
+    flavorText: King of Assyria, Sennacherib besieges Jerusalem and sends Rabshakeh
+      to taunt Hezekiah and the people on the wall, until the angel of the LORD strikes
+      down a hundred and eighty-five thousand men in his camp in a single night.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: sennacherib
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 7933.5073378321595
+    costGrowthRate: 1.15
+    baseInkPerSecond: 396.67536689160795
+    unlockAtVerseIndex: 698
+    managerName: Sennacherib
+    managerFlavorText: King of Assyria, Sennacherib besieges Jerusalem and sends
+      Rabshakeh to taunt Hezekiah and the people on the wall, until the angel of
+      the LORD strikes down a hundred and eighty-five thousand men in his camp in
+      a single night.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 676
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 119002
+    submanagers:
+    - id: rabshakeh
+      displayName: Rabshakeh
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 679
+      unlockCost: 83301
+  - id: voice_in_the_wilderness
+    displayName: Voice in the Wilderness
+    flavorText: The LORD commands comfort for Jerusalem, and a voice cries in the
+      wilderness to prepare His way, even as human life fades like grass but His
+      word stands forever.
+    tierType: 1
+    purpose: Opens the book's latter section with a command to comfort Jerusalem,
+      announces 'the voice of him that crieth in the wilderness' preparing the LORD's
+      way, and contrasts fading human life with the LORD's enduring word.
+    deliveredByManagerId: isaiah
+    managerId: comfort_ye_my_people
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 20590.862855506784
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1029.5431427753392
+    unlockAtVerseIndex: 798
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_silent_lamb
+    displayName: The Silent Lamb
+    flavorText: Despised and rejected, the servant is brought as a lamb to the slaughter
+      and opens not his mouth, wounded for transgressions and bearing the sin of
+      many.
+    tierType: 1
+    purpose: 'A recurring figure, ''my servant,'' described across several passages
+      culminating in Isaiah 52:13-53:12: one who suffers, is rejected, is silent
+      before his accusers, and bears the guilt of others, then is exalted.'
+    deliveredByManagerId: isaiah
+    managerId: servant_of_the_lord
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 53442.14293625939
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2672.1071468129694
+    unlockAtVerseIndex: 898
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_shepherds_anointing
+    displayName: The Shepherd's Anointing
+    flavorText: Named by Isaiah more than a century before his birth, Cyrus is called
+      the LORD's anointed, raised up to say of Jerusalem, 'Thou shalt be built,'
+      and to set the captives free without price or reward.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: cyrus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 138705.34040567215
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6935.267020283607
+    unlockAtVerseIndex: 998
+    managerName: Cyrus
+    managerFlavorText: Named by Isaiah more than a century before his birth, Cyrus
+      is called the LORD's anointed, raised up to say of Jerusalem, 'Thou shalt be
+      built,' and to set the captives free without price or reward.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 907
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2080580
+    submanagers: []
+  - id: new_heavens_new_earth
+    displayName: New Heavens, New Earth
+    flavorText: The LORD promises to create new heavens and a new earth in which
+      the former things shall not be remembered, an order that shall remain forever.
+    tierType: 1
+    purpose: A closing eschatological promise of renewed creation, in which 'the
+      former shall not be remembered, nor come into mind' and the new order shall
+      remain permanently.
+    deliveredByManagerId: isaiah
+    managerId: new_heavens_new_earth
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 360000.00000000023
+    costGrowthRate: 1.15
+    baseInkPerSecond: 18000.00000000001
+    unlockAtVerseIndex: 1098
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

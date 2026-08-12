@@ -1,0 +1,361 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: FirstChroniclesScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: 1 Chronicles
+  tiers:
+  - id: the_fallen_crown
+    displayName: The Fallen Crown
+    flavorText: Falls on his own sword on Mount Gilboa after his armourbearer refuses
+      to kill him, ending his reign in defeat.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: saul
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Saul
+    managerFlavorText: Falls on his own sword on Mount Gilboa after his armourbearer
+      refuses to kill him, ending his reign in defeat.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 407
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers: []
+  - id: the_shepherd_kings_throne
+    displayName: The Shepherd-King's Throne
+    flavorText: All Israel gathers to Hebron and anoints David king, according to
+      the word of the LORD by Samuel.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: david
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 24.131744431604677
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.2065872215802338
+    unlockAtVerseIndex: 66
+    managerName: David
+    managerFlavorText: All Israel gathers to Hebron and anoints David king, according
+      to the word of the LORD by Samuel.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 421
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 361
+    submanagers:
+    - id: jashobeam
+      displayName: Jashobeam
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 431
+      unlockCost: 252
+    - id: eleazar_son_of_dodo
+      displayName: Eleazar the son of Dodo
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 432
+      unlockCost: 252
+    - id: benaiah_son_of_jehoiada
+      displayName: Benaiah the son of Jehoiada
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 442
+      unlockCost: 252
+    - id: gad_the_seer
+      displayName: Gad the seer
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 690
+      unlockCost: 252
+    - id: amasai
+      displayName: Amasai
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 483
+      unlockCost: 252
+  - id: captains_standard
+    displayName: Captain's Standard
+    flavorText: Leads the charge against Jebusite Jerusalem and is named chief and
+      captain of David's host.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: joab
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 58.23410893122833
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.9117054465614163
+    unlockAtVerseIndex: 133
+    managerName: Joab
+    managerFlavorText: Leads the charge against Jebusite Jerusalem and is named chief
+      and captain of David's host.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 426
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 873
+    submanagers:
+    - id: abishai
+      displayName: Abishai
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 440
+      unlockCost: 611
+  - id: the_ark_bearers_charge
+    displayName: The Ark-Bearers' Charge
+    flavorText: David re-establishes that only Levites may carry the Ark by its staves,
+      correcting the fatal error that cost Uzza his life.
+    tierType: 1
+    purpose: Corrects the fatal error of moving the Ark by ox-cart, which led directly
+      to Uzza's death, by re-establishing per the Law of Moses that only Levites
+      may carry the Ark on their own shoulders by its staves, never by cart.
+    deliveredByManagerId: david
+    managerId: levites_ark_bearers_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 140.52906339306293
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7.026453169653147
+    unlockAtVerseIndex: 200
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_priestly_line
+    displayName: The Priestly Line
+    flavorText: Divides the descendants of Aaron into twenty-four priestly courses
+      by lot alongside Ahimelech, establishing the priestly line's ongoing order.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zadok
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 339.12114430141673
+    costGrowthRate: 1.15
+    baseInkPerSecond: 16.956057215070835
+    unlockAtVerseIndex: 266
+    managerName: Zadok
+    managerFlavorText: Divides the descendants of Aaron into twenty-four priestly
+      courses by lot alongside Ahimelech, establishing the priestly line's ongoing
+      order.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 763
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 5086
+    submanagers:
+    - id: ahimelech_priest
+      displayName: Ahimelech
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 765
+      unlockCost: 3560
+  - id: asaphs_psaltery
+    displayName: Asaph's Psaltery
+    flavorText: David appoints Asaph to minister before the Ark with music and thanksgiving,
+      delivering into his hand the psalm 'Give thanks unto the LORD.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: asaph
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 818.3584785635118
+    costGrowthRate: 1.15
+    baseInkPerSecond: 40.91792392817559
+    unlockAtVerseIndex: 333
+    managerName: Asaph
+    managerFlavorText: David appoints Asaph to minister before the Ark with music
+      and thanksgiving, delivering into his hand the psalm 'Give thanks unto the
+      LORD.'
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 571
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 12275
+    submanagers: []
+  - id: the_prophets_oracle
+    displayName: The Prophet's Oracle
+    flavorText: Receives the word of the LORD by night, reversing his own counsel,
+      and delivers to David the everlasting dynastic covenant.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: nathan_prophet
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1974.8417658131502
+    costGrowthRate: 1.15
+    baseInkPerSecond: 98.7420882906575
+    unlockAtVerseIndex: 400
+    managerName: Nathan the prophet
+    managerFlavorText: Receives the word of the LORD by night, reversing his own
+      counsel, and delivers to David the everlasting dynastic covenant.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 613
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 29622
+    submanagers: []
+  - id: ornans_threshingfloor
+    displayName: Ornan's Threshingfloor
+    flavorText: Offers his threshingfloor, oxen, and instruments freely to David,
+      who insists on paying full price for the future temple site.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ornan
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 4765.6376785461825
+    costGrowthRate: 1.15
+    baseInkPerSecond: 238.28188392730914
+    unlockAtVerseIndex: 466
+    managerName: Ornan the Jebusite
+    managerFlavorText: Offers his threshingfloor, oxen, and instruments freely to
+      David, who insists on paying full price for the future temple site.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 699
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 71484
+    submanagers: []
+  - id: the_temple_builders_charge
+    displayName: The Temple-Builder's Charge
+    flavorText: David charges young Solomon directly to build the house of the LORD,
+      naming him for the peace God will grant Israel in his days.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: solomon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 11500.315051230227
+    costGrowthRate: 1.15
+    baseInkPerSecond: 575.0157525615114
+    unlockAtVerseIndex: 533
+    managerName: Solomon
+    managerFlavorText: David charges young Solomon directly to build the house of
+      the LORD, naming him for the peace God will grant Israel in his days.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 717
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 172504
+    submanagers: []
+  - id: the_twenty_year_reckoning
+    displayName: The Twenty-Year Reckoning
+    flavorText: David lowers the Levites' age of service to twenty and reassigns
+      their duties now that the Ark no longer needs to be carried.
+    tierType: 1
+    purpose: Lowers the age of eligible Levitical service from thirty to twenty and
+      reassigns Levites from Ark-portage duty to assisting the priests, overseeing
+      courts and treasuries, keeping the gates, and leading praise, now that the
+      Ark rests permanently in Jerusalem.
+    deliveredByManagerId: david
+    managerId: levitical_organization_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 27752.26636992245
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1387.6133184961225
+    unlockAtVerseIndex: 600
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: hemans_horn
+    displayName: Heman's Horn
+    flavorText: Set apart with Asaph and Jeduthun for the service of song, called
+      'the king's seer... to lift up the horn' among his fourteen sons and three
+      daughters.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: heman
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 66971.05994367859
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3348.552997183929
+    unlockAtVerseIndex: 666
+    managerName: Heman
+    managerFlavorText: Set apart with Asaph and Jeduthun for the service of song,
+      called 'the king's seer... to lift up the horn' among his fourteen sons and
+      three daughters.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 794
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1004565
+    submanagers: []
+  - id: jeduthuns_harp
+    displayName: Jeduthun's Harp
+    flavorText: Set apart for the service of song, prophesying with a harp alongside
+      his six sons to give thanks and praise the LORD.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jeduthun
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 161612.85028745286
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8080.642514372643
+    unlockAtVerseIndex: 733
+    managerName: Jeduthun
+    managerFlavorText: Set apart for the service of song, prophesying with a harp
+      alongside his six sons to give thanks and praise the LORD.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 794
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2424192
+    submanagers: []
+  - id: the_monthly_courses_of_the_realm
+    displayName: The Monthly Courses of the Realm
+    flavorText: Organizes Israel into twelve monthly militia divisions of 24,000
+      men apiece, with named captains and tribal princes, ahead of the transition
+      to Solomon.
+    tierType: 1
+    purpose: Institutionalizes a twelve-division rotating monthly militia of 24,000
+      men apiece, so no single standing army or general accumulates permanent personal
+      power, alongside a roster of tribal princes and royal household stewards for
+      continuity ahead of Solomon's reign.
+    deliveredByManagerId: david
+    managerId: royal_administration_law
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 390000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 19500.000000000004
+    unlockAtVerseIndex: 800
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

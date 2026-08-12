@@ -1,0 +1,284 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: ColossiansScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Colossians
+  tiers:
+  - id: apostles_bonds
+    displayName: The Apostle's Bonds
+    flavorText: Paul, an apostle in chains, opens his letter to a church he has never
+      met face to face.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: paul_colossians
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Paul
+    managerFlavorText: Paul, an apostle in chains, opens his letter to a church he
+      has never met face to face.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: timothy_colossians
+      displayName: Timothy
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 0
+      unlockCost: 105
+    - id: aristarchus_colossians
+      displayName: Aristarchus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 86
+      unlockCost: 105
+    - id: marcus_colossians
+      displayName: Marcus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 86
+      unlockCost: 105
+    - id: justus_colossians
+      displayName: Jesus, called Justus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 87
+      unlockCost: 105
+    - id: luke_colossians
+      displayName: Luke
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 90
+      unlockCost: 105
+    - id: demas_colossians
+      displayName: Demas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 90
+      unlockCost: 105
+    - id: archippus_colossians
+      displayName: Archippus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 93
+      unlockCost: 105
+    - id: nymphas_colossians
+      displayName: Nymphas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 91
+      unlockCost: 105
+  - id: faithful_minister
+    displayName: The Faithful Minister
+    flavorText: Epaphras, the founding evangelist of Colosse, labors fervently in
+      prayer for the church he first taught.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: epaphras_colossians
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 35.8030867271064
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.7901543363553198
+    unlockAtVerseIndex: 6
+    managerName: Epaphras
+    managerFlavorText: Epaphras, the founding evangelist of Colosse, labors fervently
+      in prayer for the church he first taught.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 6
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 537
+    submanagers: []
+  - id: image_invisible_god
+    displayName: The Image of the Invisible God
+    flavorText: Christ is proclaimed as the image of the invisible God, by whom and
+      for whom all things were created.
+    tierType: 1
+    purpose: Establishes Christ's absolute supremacy over all creation, all authorities
+      and powers, and the church, directly countering the false teaching's tendency
+      to rank Christ alongside lesser spiritual powers or angelic mediators.
+    deliveredByManagerId: paul_colossians
+    managerId: christ_preeminence_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 128.18610191887024
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6.409305095943512
+    unlockAtVerseIndex: 14
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: mystery_manifest
+    displayName: The Mystery Made Manifest
+    flavorText: 'Paul rejoices in his sufferings as steward of the long-hidden mystery
+      now revealed: Christ in you, the hope of glory.'
+    tierType: 1
+    purpose: "Explains Paul's own suffering and ministry as steward of a long-hidden
+      'mystery' \u2014 Christ dwelling in the Gentiles as the hope of glory \u2014
+      grounding his authority to warn a church he has never personally visited."
+    deliveredByManagerId: paul_colossians
+    managerId: mystery_manifest_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 458.9458124211011
+    costGrowthRate: 1.15
+    baseInkPerSecond: 22.947290621055053
+    unlockAtVerseIndex: 23
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: philosophy_vain_deceit
+    displayName: Philosophy and Vain Deceit
+    flavorText: Paul warns the church against being led captive by hollow philosophy,
+      declaring them already complete in Christ.
+    tierType: 1
+    purpose: "The epistle's central corrective \u2014 warns against a syncretistic
+      false teaching combining human philosophy, Jewish ceremonial regulation, and
+      angel-worship/ascetic self-denial, insisting believers are already spiritually
+      complete in Christ alone."
+    deliveredByManagerId: paul_colossians
+    managerId: philosophy_vain_deceit_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1643.1676725154985
+    costGrowthRate: 1.15
+    baseInkPerSecond: 82.15838362577492
+    unlockAtVerseIndex: 36
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: new_man
+    displayName: The New Man
+    flavorText: Believers are called to put off the old man and put on the new, clothed
+      in compassion, kindness, and above all, love.
+    tierType: 1
+    purpose: "Applies the doctrine of union with Christ practically \u2014 putting
+      to death earthly/sinful practices, putting on Christlike virtue, dissolving
+      ethnic and social distinctions in Christ, and ordering corporate worship."
+    deliveredByManagerId: paul_colossians
+    managerId: new_man_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5883.047468624995
+    costGrowthRate: 1.15
+    baseInkPerSecond: 294.15237343124977
+    unlockAtVerseIndex: 52
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: household_order
+    displayName: The Household Order
+    flavorText: Paul orders wives, husbands, children, servants, and masters under
+      the lordship of Christ.
+    tierType: 1
+    purpose: "Reorders household relationships of authority \u2014 wives and husbands,
+      children and fathers, servants and masters \u2014 under the lordship of Christ,
+      applying the 'new man' ethic to the most immediate social unit."
+    deliveredByManagerId: paul_colossians
+    managerId: household_order_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 21063.12587388645
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1053.1562936943224
+    unlockAtVerseIndex: 69
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: salt_seasoned_speech
+    displayName: Salt-Seasoned Speech
+    flavorText: The church is urged to continue steadfastly in prayer and to season
+      their speech with grace toward outsiders.
+    tierType: 1
+    purpose: "Closes the epistle's practical instruction by calling the church to
+      persistent prayer \u2014 including for Paul's own gospel proclamation while
+      imprisoned \u2014 and to wise, gracious conduct toward outsiders."
+    deliveredByManagerId: paul_colossians
+    managerId: salt_seasoned_speech_col
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 75412.4922406715
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3770.6246120335754
+    unlockAtVerseIndex: 78
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: beloved_fellowservant
+    displayName: The Beloved Fellowservant
+    flavorText: Tychicus, sent to declare Paul's state and comfort the church's hearts,
+      carries the letter to Colosse.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: tychicus_colossians
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 270000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 13500.000000000004
+    unlockAtVerseIndex: 83
+    managerName: Tychicus
+    managerFlavorText: Tychicus, sent to declare Paul's state and comfort the church's
+      hearts, carries the letter to Colosse.
+    managerUnlockLevel: 14
+    managerUnlockAtVerseIndex: 83
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4050000
+    submanagers:
+    - id: onesimus_colossians
+      displayName: Onesimus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 85
+      unlockCost: 2835000

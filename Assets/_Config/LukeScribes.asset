@@ -1,0 +1,708 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: LukeScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Luke
+  tiers:
+  - id: jesus_luke
+    displayName: Jesus Christ
+    flavorText: Jesus hangs upon the cross at Calvary, prays for his executioners'
+      forgiveness, and dies commending his spirit to the Father.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jesus_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Jesus Christ
+    managerFlavorText: Jesus hangs upon the cross at Calvary, prays for his executioners'
+      forgiveness, and dies commending his spirit to the Father.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 1074
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: joseph_luke
+      displayName: Joseph
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 83
+      unlockCost: 105
+    - id: penitent_thief_luke
+      displayName: The Penitent Thief
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1080
+      unlockCost: 105
+    - id: cleopas_luke
+      displayName: Cleopas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1110
+      unlockCost: 105
+    - id: jairus_luke
+      displayName: Jairus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 392
+      unlockCost: 105
+    - id: woman_with_issue_of_blood_luke
+      displayName: The Woman with the Issue of Blood
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 394
+      unlockCost: 105
+    - id: centurion_luke
+      displayName: The Centurion of Capernaum
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 307
+      unlockCost: 105
+    - id: widow_of_nain_luke
+      displayName: The Widow of Nain
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 312
+      unlockCost: 105
+    - id: simon_of_cyrene_luke
+      displayName: Simon of Cyrene
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1067
+      unlockCost: 105
+    - id: simon_the_pharisee_luke
+      displayName: Simon the Pharisee
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 337
+      unlockCost: 105
+    - id: sinful_woman_luke
+      displayName: The Sinful Woman
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 338
+      unlockCost: 105
+    - id: anna_luke
+      displayName: Anna the Prophetess
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 115
+      unlockCost: 105
+  - id: zacharias
+    displayName: Zacharias
+    flavorText: Struck mute in the temple for doubting the angel's word, Zacharias
+      regains his speech the moment he writes, 'His name is John.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zacharias
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 16.262539686610022
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.8131269843305011
+    unlockAtVerseIndex: 42
+    managerName: Zacharias
+    managerFlavorText: Struck mute in the temple for doubting the angel's word, Zacharias
+      regains his speech the moment he writes, 'His name is John.'
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 58
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 243
+    submanagers: []
+  - id: elisabeth
+    displayName: Elisabeth
+    flavorText: Elisabeth gives birth to John in her old age and insists, against
+      her family's expectation, that his name is John.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: elisabeth
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 26.447019705856604
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.3223509852928301
+    unlockAtVerseIndex: 85
+    managerName: Elisabeth
+    managerFlavorText: Elisabeth gives birth to John in her old age and insists,
+      against her family's expectation, that his name is John.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 56
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 396
+    submanagers: []
+  - id: gabriel_luke
+    displayName: Gabriel
+    flavorText: Gabriel appears to the virgin Mary in Nazareth and announces that
+      she will conceive a son by the Holy Ghost.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gabriel_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 43.00957075590503
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.1504785377952516
+    unlockAtVerseIndex: 127
+    managerName: Gabriel
+    managerFlavorText: Gabriel appears to the virgin Mary in Nazareth and announces
+      that she will conceive a son by the Holy Ghost.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 25
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 645
+    submanagers: []
+  - id: mary_mother_of_jesus_luke
+    displayName: Mary the Mother of Jesus
+    flavorText: 'Mary answers Gabriel''s astonishing announcement with quiet submission:
+      ''Be it unto me according to thy word.'''
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: mary_mother_of_jesus_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 69.94448513219673
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.4972242566098366
+    unlockAtVerseIndex: 170
+    managerName: Mary the Mother of Jesus
+    managerFlavorText: 'Mary answers Gabriel''s astonishing announcement with quiet
+      submission: ''Be it unto me according to thy word.'''
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 25
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1049
+    submanagers: []
+  - id: john_the_baptist_luke
+    displayName: John the Baptist
+    flavorText: John denies before the multitudes that he is the Christ and foretells
+      one mightier who will baptize with the Holy Ghost and with fire.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: john_the_baptist_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 113.74749653218541
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5.68737482660927
+    unlockAtVerseIndex: 212
+    managerName: John the Baptist
+    managerFlavorText: John denies before the multitudes that he is the Christ and
+      foretells one mightier who will baptize with the Holy Ghost and with fire.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 146
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1706
+    submanagers: []
+  - id: shepherds_bethlehem_luke
+    displayName: The Shepherds of Bethlehem
+    flavorText: Keeping watch over their flocks by night, the shepherds are met by
+      an angel announcing the Saviour's birth, then a heavenly host praising God.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: shepherds_bethlehem_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 184.9823176607201
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9.249115883036005
+    unlockAtVerseIndex: 255
+    managerName: The Shepherds of Bethlehem
+    managerFlavorText: Keeping watch over their flocks by night, the shepherds are
+      met by an angel announcing the Saviour's birth, then a heavenly host praising
+      God.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 89
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2774
+    submanagers: []
+  - id: simeon_luke
+    displayName: Simeon
+    flavorText: Taking the infant Jesus into his arms in the temple, Simeon sings
+      that he may now depart in peace, having seen the Lord's salvation.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: simeon_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 300.8282282278563
+    costGrowthRate: 1.15
+    baseInkPerSecond: 15.041411411392815
+    unlockAtVerseIndex: 297
+    managerName: Simeon
+    managerFlavorText: Taking the infant Jesus into his arms in the temple, Simeon
+      sings that he may now depart in peace, having seen the Lord's salvation.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 107
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4512
+    submanagers: []
+  - id: simon_peter_luke
+    displayName: Simon Peter
+    flavorText: After a miraculous catch of fish, Simon falls at Jesus's feet crying,
+      'Depart from me, for I am a sinful man,' and leaves everything to follow him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: simon_peter_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 489.2231000408091
+    costGrowthRate: 1.15
+    baseInkPerSecond: 24.461155002040453
+    unlockAtVerseIndex: 340
+    managerName: Simon Peter
+    managerFlavorText: After a miraculous catch of fish, Simon falls at Jesus's feet
+      crying, 'Depart from me, for I am a sinful man,' and leaves everything to follow
+      him.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 214
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 7338
+    submanagers:
+    - id: andrew_luke
+      displayName: Andrew
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 266
+      unlockCost: 5136
+    - id: james_son_of_zebedee_luke
+      displayName: James the Son of Zebedee
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 435
+      unlockCost: 5136
+    - id: john_son_of_zebedee_luke
+      displayName: John the Son of Zebedee
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 978
+      unlockCost: 5136
+    - id: levi_matthew_luke
+      displayName: Levi (Matthew)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 240
+      unlockCost: 5136
+    - id: other_apostles_luke
+      displayName: The Other Apostles
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 267
+      unlockCost: 5136
+  - id: judas_iscariot_luke
+    displayName: Judas Iscariot
+    flavorText: 'Judas betrays Jesus in Gethsemane with a kiss, prompting Jesus''s
+      own rebuke: ''Betrayest thou the Son of man with a kiss?'''
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: judas_iscariot_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 795.6010080020042
+    costGrowthRate: 1.15
+    baseInkPerSecond: 39.78005040010021
+    unlockAtVerseIndex: 382
+    managerName: Judas Iscariot
+    managerFlavorText: 'Judas betrays Jesus in Gethsemane with a kiss, prompting
+      Jesus''s own rebuke: ''Betrayest thou the Son of man with a kiss?'''
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 1017
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 11934
+    submanagers: []
+  - id: zacchaeus
+    displayName: Zacchaeus
+    flavorText: The short, wealthy tax collector Zacchaeus climbs a sycomore tree
+      to see Jesus, who calls him down and invites himself to his house.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zacchaeus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1293.849296733953
+    costGrowthRate: 1.15
+    baseInkPerSecond: 64.69246483669765
+    unlockAtVerseIndex: 425
+    managerName: Zacchaeus
+    managerFlavorText: The short, wealthy tax collector Zacchaeus climbs a sycomore
+      tree to see Jesus, who calls him down and invites himself to his house.
+    managerUnlockLevel: 7
+    managerUnlockAtVerseIndex: 846
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 19407
+    submanagers: []
+  - id: martha_bethany
+    displayName: Martha of Bethany
+    flavorText: Cumbered with much serving, Martha complains that her sister has
+      left her to work alone, and Jesus gently corrects her priorities.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: martha_bethany
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 2104.127553662838
+    costGrowthRate: 1.15
+    baseInkPerSecond: 105.20637768314191
+    unlockAtVerseIndex: 467
+    managerName: Martha of Bethany
+    managerFlavorText: Cumbered with much serving, Martha complains that her sister
+      has left her to work alone, and Jesus gently corrects her priorities.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 509
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 31561
+    submanagers:
+    - id: mary_of_bethany_luke
+      displayName: Mary of Bethany
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 508
+      unlockCost: 22092
+  - id: mary_magdalene_luke
+    displayName: Mary Magdalene
+    flavorText: Having been healed of seven devils, Mary Magdalene comes to the tomb
+      with spices and finds it empty.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: mary_magdalene_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3421.8457847131567
+    costGrowthRate: 1.15
+    baseInkPerSecond: 171.09228923565783
+    unlockAtVerseIndex: 510
+    managerName: Mary Magdalene
+    managerFlavorText: Having been healed of seven devils, Mary Magdalene comes to
+      the tomb with spices and finds it empty.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 1098
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 51327
+    submanagers:
+    - id: joanna_luke
+      displayName: Joanna
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 354
+      unlockCost: 35928
+    - id: susanna_luke
+      displayName: Susanna
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 354
+      unlockCost: 35928
+    - id: mary_mother_of_james_luke
+      displayName: Mary the Mother of James
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1107
+      unlockCost: 35928
+  - id: herod_antipas_luke
+    displayName: Herod Antipas
+    flavorText: Pilate sends the bound Jesus to Herod, who questions him, receives
+      only silence, and mocks him before sending him back arrayed in a gorgeous robe.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: herod_antipas_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 5564.790287535692
+    costGrowthRate: 1.15
+    baseInkPerSecond: 278.2395143767846
+    unlockAtVerseIndex: 552
+    managerName: Herod Antipas
+    managerFlavorText: Pilate sends the bound Jesus to Herod, who questions him,
+      receives only silence, and mocks him before sending him back arrayed in a gorgeous
+      robe.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 1047
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 83471
+    submanagers: []
+  - id: pilate_luke
+    displayName: Pontius Pilate
+    flavorText: Finding no fault in Jesus, Pilate nonetheless yields to the crowd's
+      demand, releases Barabbas, and delivers Jesus to their will.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pilate_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 9049.76228987112
+    costGrowthRate: 1.15
+    baseInkPerSecond: 452.488114493556
+    unlockAtVerseIndex: 595
+    managerName: Pontius Pilate
+    managerFlavorText: Finding no fault in Jesus, Pilate nonetheless yields to the
+      crowd's demand, releases Barabbas, and delivers Jesus to their will.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 1061
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 135746
+    submanagers:
+    - id: barabbas_luke
+      displayName: Barabbas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1059
+      unlockCost: 95022
+  - id: council_chief_priests_scribes_luke
+    displayName: The Council of Chief Priests and Scribes
+    flavorText: The assembled elders, chief priests, and scribes question Jesus before
+      the council and lead him away to Pilate.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: council_chief_priests_scribes_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 14717.211839341588
+    costGrowthRate: 1.15
+    baseInkPerSecond: 735.8605919670794
+    unlockAtVerseIndex: 637
+    managerName: The Council of Chief Priests and Scribes
+    managerFlavorText: The assembled elders, chief priests, and scribes question
+      Jesus before the council and lead him away to Pilate.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 1036
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 220758
+    submanagers: []
+  - id: ten_lepers_luke
+    displayName: The Ten Lepers
+    flavorText: Ten leprous men cry out for mercy and are cleansed on their way to
+      the priests, but only one, a Samaritan, returns to give thanks.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ten_lepers_luke
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 23933.92416135394
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1196.6962080676972
+    unlockAtVerseIndex: 680
+    managerName: The Ten Lepers
+    managerFlavorText: Ten leprous men cry out for mercy and are cleansed on their
+      way to the priests, but only one, a Samaritan, returns to give thanks.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 772
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 359008
+    submanagers: []
+  - id: sermon_on_the_plain
+    displayName: The Sermon on the Plain
+    flavorText: Standing on level ground, Jesus pairs blessings for the poor and
+      hungry with woes for the rich and full, then teaches love of enemies and closes
+      with the parable of the two builders.
+    tierType: 1
+    purpose: Jesus's core ethical teaching to his disciples and a great multitude,
+      delivered standing 'in the plain' rather than on a mountain -- the Beatitudes
+      paired with corresponding Woes, teaching on loving enemies and not judging
+      others, and the closing parable of the two builders.
+    deliveredByManagerId: jesus_luke
+    managerId: sermon_on_the_plain
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 38922.6391530333
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1946.1319576516648
+    unlockAtVerseIndex: 722
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: commissioning_of_seventy
+    displayName: The Commissioning of the Seventy
+    flavorText: Jesus appoints seventy disciples and sends them two by two ahead
+      of him, and they return rejoicing that even the devils are subject to them.
+    tierType: 1
+    purpose: Jesus appoints and sends out a wider group of disciples beyond the twelve,
+      two by two, into every city he intended to visit -- instructing them on dependence
+      and urgency, and rejoicing when they return with reports of power over devils.
+    deliveredByManagerId: jesus_luke
+    managerId: commissioning_of_seventy
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 63298.09639338052
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3164.904819669026
+    unlockAtVerseIndex: 765
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: parable_good_samaritan
+    displayName: The Good Samaritan
+    flavorText: A despised Samaritan, not the priest or Levite who pass by, stops
+      to bind a wounded stranger's injuries and pay for his care.
+    tierType: 1
+    purpose: Told in answer to a lawyer's question, 'And who is my neighbour?' --
+      redefines neighborly love across ethnic and religious lines by making a despised
+      Samaritan the example of mercy.
+    deliveredByManagerId: jesus_luke
+    managerId: parable_good_samaritan
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 102938.78046842174
+    costGrowthRate: 1.15
+    baseInkPerSecond: 5146.939023421087
+    unlockAtVerseIndex: 807
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: parables_of_the_lost
+    displayName: Parables of the Lost
+    flavorText: A wayward son squanders his inheritance, returns home in repentance,
+      and is welcomed by his father with a robe, a ring, and a feast.
+    tierType: 1
+    purpose: Told to Pharisees and scribes who murmured that Jesus received sinners
+      and ate with them -- three linked parables of a lost sheep, a lost coin, and
+      a lost son, each ending in joy, teaching that heaven rejoices over one sinner
+      that repents.
+    deliveredByManagerId: jesus_luke
+    managerId: parables_of_the_lost
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 167404.60026589452
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8370.230013294726
+    unlockAtVerseIndex: 850
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: parable_lazarus_rich_man
+    displayName: Lazarus and the Rich Man
+    flavorText: A beggar named Lazarus, denied even crumbs from a rich man's table
+      in life, is carried into Abraham's bosom in death while the rich man suffers
+      in torment.
+    tierType: 1
+    purpose: A parable warning of a fixed reversal of fortune after death for the
+      wealthy who neglect the poor at their gate, affirming that even a resurrection
+      from the dead would not persuade those unwilling to hear Moses and the prophets.
+    deliveredByManagerId: jesus_luke
+    managerId: parable_lazarus_rich_man
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 272242.39555451967
+    costGrowthRate: 1.15
+    baseInkPerSecond: 13612.119777725984
+    unlockAtVerseIndex: 892
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: parables_prayer_humility
+    displayName: Parables of Prayer and Humility
+    flavorText: A widow's persistence wears down an unjust judge, and a publican's
+      plea for mercy, not a Pharisee's boasting, is the prayer that goes home justified.
+    tierType: 1
+    purpose: Two parables told together on how one ought to pray and regard oneself
+      before God -- persistence in prayer illustrated by an unjust judge worn down
+      by a widow's request, and true humility illustrated by a Pharisee's boasting
+      prayer contrasted with a publican's plea for mercy.
+    deliveredByManagerId: jesus_luke
+    managerId: parables_prayer_humility
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 442735.2762083159
+    costGrowthRate: 1.15
+    baseInkPerSecond: 22136.763810415796
+    unlockAtVerseIndex: 935
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: parable_of_the_pounds
+    displayName: The Parable of the Pounds
+    flavorText: A nobleman entrusts ten servants with a pound each before departing
+      to receive a kingdom, then returns to reward faithful stewardship and rebuke
+      fearful hoarding.
+    tierType: 1
+    purpose: Told because Jesus was near Jerusalem and the people supposed the kingdom
+      of God should immediately appear -- a nobleman entrusts ten servants with a
+      pound each before departing, teaching faithful stewardship and accountability
+      while awaiting the master's return.
+    deliveredByManagerId: jesus_luke
+    managerId: parable_of_the_pounds
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 719999.9999999988
+    costGrowthRate: 1.15
+    baseInkPerSecond: 35999.99999999994
+    unlockAtVerseIndex: 978
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

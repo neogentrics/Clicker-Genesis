@@ -1,0 +1,197 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: RomansScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Romans
+  tiers:
+  - id: the_apostles_pen
+    displayName: The Apostle's Pen
+    flavorText: Paul introduces himself as a servant of Jesus Christ called to be
+      an apostle, then closes the letter with personal anguish for Israel, travel
+      plans, and a long roll call of greetings to friends he has never met in person.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: paul_romans
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Paul
+    managerFlavorText: Paul introduces himself as a servant of Jesus Christ called
+      to be an apostle, then closes the letter with personal anguish for Israel,
+      travel plans, and a long roll call of greetings to friends he has never met
+      in person.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: phoebe
+      displayName: Phoebe
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 406
+      unlockCost: 105
+    - id: priscilla_and_aquila_romans
+      displayName: Priscilla and Aquila
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 408
+      unlockCost: 105
+    - id: andronicus_and_junia_romans
+      displayName: Andronicus and Junia
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 412
+      unlockCost: 105
+  - id: the_wrath_revealed
+    displayName: The Wrath Revealed
+    flavorText: God's wrath is revealed against all ungodliness as Gentile and Jew
+      alike stand exposed as guilty before God, with every mouth stopped and none
+      found righteous.
+    tierType: 1
+    purpose: Establishes that both Gentiles (who suppress the truth about God evident
+      in creation and conscience) and Jews (who possess the law but do not keep it)
+      stand equally guilty before God, so that every mouth is stopped and the whole
+      world held accountable - the necessary foundation before a righteousness apart
+      from the law can be introduced.
+    deliveredByManagerId: paul_romans
+    managerId: the_wrath_revealed
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 70.96668207625552
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.5483341038127763
+    unlockAtVerseIndex: 17
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_ledger_of_faith
+    displayName: The Ledger of Faith
+    flavorText: Righteousness is credited to Abraham's account through faith alone,
+      apart from works, establishing the pattern by which every believer is justified
+      freely by God's grace.
+    tierType: 1
+    purpose: Introduces a righteousness apart from the law, received by faith and
+      credited ("counted"/"imputed") rather than earned by works, using Abraham's
+      own justification - which occurred before his circumcision - as the scriptural
+      proof, and contrasts the one trespass of Adam that brought condemnation to
+      all with the one act of righteousness in Christ that brings justification and
+      life.
+    deliveredByManagerId: paul_romans
+    managerId: the_ledger_of_faith
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 503.6269964912326
+    costGrowthRate: 1.15
+    baseInkPerSecond: 25.18134982456163
+    unlockAtVerseIndex: 81
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_newness_of_life
+    displayName: The Newness of Life
+    flavorText: Buried with Christ through baptism into his death, believers rise
+      to walk in newness of life, no longer slaves to sin but alive in the Spirit
+      with no condemnation.
+    tierType: 1
+    purpose: Answers the objection that grace should be exploited to keep sinning,
+      by explaining the believer's union with Christ's death and resurrection through
+      baptism, describes the ongoing internal struggle against indwelling sin even
+      for one who delights in God's law, and closes with the assurance that life
+      in the Spirit brings no condemnation and that nothing in creation can separate
+      believers from the love of God in Christ Jesus.
+    deliveredByManagerId: paul_romans
+    managerId: the_newness_of_life
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3574.0736945012754
+    costGrowthRate: 1.15
+    baseInkPerSecond: 178.70368472506377
+    unlockAtVerseIndex: 138
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_wild_olive_branch
+    displayName: The Wild Olive Branch
+    flavorText: Israel's stumbling opens the door for the Gentiles to be grafted
+      in like a wild olive branch onto the cultivated tree, with a promised future
+      when all Israel shall be saved.
+    tierType: 1
+    purpose: Explains that God's word has not failed even though most of Israel has
+      not believed, because true Israel was never merely physical descent but God's
+      own sovereign election (illustrated through Isaac/Ishmael and Jacob/Esau),
+      describes Israel's present stumbling as the very means by which salvation has
+      become available to the Gentiles (pictured as a wild olive branch grafted into
+      the cultivated tree), and looks forward to a future restoration in which "all
+      Israel shall be saved."
+    deliveredByManagerId: paul_romans
+    managerId: the_wild_olive_branch
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 25364.015159478
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1268.2007579739
+    unlockAtVerseIndex: 230
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_living_sacrifice
+    displayName: The Living Sacrifice
+    flavorText: Believers are called to present their bodies as a living sacrifice,
+      exercising their differing gifts within one body and bearing with one another
+      in love rather than judgment.
+    tierType: 1
+    purpose: Turns from doctrine to practice, calling believers to present themselves
+      as a living sacrifice, exercise their differing spiritual gifts within the
+      one body of Christ, love genuinely, submit to governing authorities, fulfill
+      the law through love of neighbor, and bear with one another's differing convictions
+      on disputable matters (food, days) without judging, following the example of
+      Christ, "who pleased not himself."
+    deliveredByManagerId: paul_romans
+    managerId: the_living_sacrifice
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 180000.00000000006
+    costGrowthRate: 1.15
+    baseInkPerSecond: 9000.000000000004
+    unlockAtVerseIndex: 315
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: TitusScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Titus
+  tiers:
+  - id: paul_the_apostle
+    displayName: Paul the Apostle
+    flavorText: 'Paul explains why he left Titus in Crete: to set in order what is
+      lacking and ordain elders in every city.'
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: paul
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Paul
+    managerFlavorText: 'Paul explains why he left Titus in Crete: to set in order
+      what is lacking and ordain elders in every city.'
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 4
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: artemas
+      displayName: Artemas
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 42
+      unlockCost: 105
+    - id: tychicus_titus
+      displayName: Tychicus
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 42
+      unlockCost: 105
+    - id: zenas
+      displayName: Zenas the Lawyer
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 43
+      unlockCost: 105
+    - id: apollos_titus
+      displayName: Apollos
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 43
+      unlockCost: 105
+  - id: titus_mine_own_son
+    displayName: Titus, Mine Own Son
+    flavorText: Titus is charged to speak, exhort, and rebuke with full authority,
+      letting no one despise him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: titus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 42.24199911264493
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2.112099955632247
+    unlockAtVerseIndex: 5
+    managerName: Titus
+    managerFlavorText: Titus is charged to speak, exhort, and rebuke with full authority,
+      letting no one despise him.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 30
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 633
+    submanagers: []
+  - id: the_elders_ordained_in_every_city
+    displayName: The Elders Ordained in Every City
+    flavorText: Paul lists the qualifications an elder must meet - blameless, hospitable,
+      and able to teach sound doctrine.
+    tierType: 1
+    purpose: Establishes the moral and spiritual qualifications an elder/bishop must
+      meet, so the newly-planted Cretan churches have trustworthy leaders able to
+      teach sound doctrine and refute error rather than repeat it.
+    deliveredByManagerId: paul
+    managerId: elder_qualifications_titus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 178.43864890326955
+    costGrowthRate: 1.15
+    baseInkPerSecond: 8.921932445163478
+    unlockAtVerseIndex: 11
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_unruly_and_vain_talkers
+    displayName: The Unruly and Vain Talkers
+    flavorText: Paul warns Titus of unruly deceivers subverting whole households
+      for dishonest gain, quoting a Cretan's own words against them.
+    tierType: 1
+    purpose: Warns Titus about corrupt teachers subverting whole households in Crete
+      for dishonest gain, and instructs him to rebuke them sharply so the churches
+      stay sound in the faith.
+    deliveredByManagerId: paul
+    managerId: cretian_liars
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 753.7605248633474
+    costGrowthRate: 1.15
+    baseInkPerSecond: 37.68802624316737
+    unlockAtVerseIndex: 16
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: sound_doctrine_for_the_household
+    displayName: Sound Doctrine for the Household
+    flavorText: Paul instructs Titus to teach sound conduct to the aged, the young,
+      and servants alike so God's word is not blasphemed.
+    tierType: 1
+    purpose: Orders godly conduct across every age and station within the church
+      - aged men and women, young men and women, and servants - so that the doctrine
+      of God is adorned rather than blasphemed before outsiders.
+    deliveredByManagerId: paul
+    managerId: sound_doctrine_household_titus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3184.0351422424305
+    costGrowthRate: 1.15
+    baseInkPerSecond: 159.20175711212153
+    unlockAtVerseIndex: 22
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_grace_that_bringeth_salvation
+    displayName: The Grace That Bringeth Salvation
+    flavorText: The grace of God that brings salvation has appeared to all men, teaching
+      them to live soberly, righteously, and godly.
+    tierType: 1
+    purpose: Describes the grace of God that has appeared to all men, teaching the
+      denial of ungodliness and worldly lusts and a sober, righteous, godly life,
+      while looking for the blessed hope of Christ's appearing and recalling that
+      he gave himself to redeem and purify a people for himself.
+    deliveredByManagerId: paul
+    managerId: grace_bringeth_salvation_titus
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 13450.000965323505
+    costGrowthRate: 1.15
+    baseInkPerSecond: 672.5000482661752
+    unlockAtVerseIndex: 27
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: washing_of_regeneration
+    displayName: Washing of Regeneration
+    flavorText: Paul recalls that believers are saved not by works of righteousness
+      but by God's mercy through the washing of regeneration.
+    tierType: 1
+    purpose: States instructions to be subject to rulers and gentle toward all men;
+      recalls what believers were before - foolish, disobedient, deceived - then
+      describes salvation as coming not by works of righteousness but by God's mercy
+      through the washing of regeneration and renewing of the Holy Ghost, so that
+      being justified by grace they are made heirs of eternal life, closing with
+      the instruction to maintain good works.
+    deliveredByManagerId: paul
+    managerId: washing_of_regeneration
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 56815.4928842269
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2840.774644211345
+    unlockAtVerseIndex: 33
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: foolish_questions_and_the_heretic
+    displayName: Foolish Questions and the Heretic
+    flavorText: Paul instructs Titus to avoid foolish disputes and to reject a divisive
+      heretic after a first and second warning.
+    tierType: 1
+    purpose: Preserves unity in the young Cretan churches by warning against divisive,
+      speculative controversies and prescribing a clear discipline process for a
+      persistently false teacher.
+    deliveredByManagerId: paul
+    managerId: foolish_questions_heretic
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 239999.99999999974
+    costGrowthRate: 1.15
+    baseInkPerSecond: 11999.999999999987
+    unlockAtVerseIndex: 39
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []

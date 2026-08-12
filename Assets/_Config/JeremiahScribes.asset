@@ -1,0 +1,520 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9ddb75d756a134f944ec648d4dfc7d, type: 3}
+  m_Name: JeremiahScribes
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Economy.ScribeSetConfig
+  bookName: Jeremiah
+  tiers:
+  - id: the_almond_rod
+    displayName: The Almond Rod
+    flavorText: The LORD tells young Jeremiah he was ordained a prophet to the nations
+      before he was even formed in the womb.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jeremiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 10
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.5
+    unlockAtVerseIndex: 0
+    managerName: Jeremiah
+    managerFlavorText: The LORD tells young Jeremiah he was ordained a prophet to
+      the nations before he was even formed in the womb.
+    managerUnlockLevel: 3
+    managerUnlockAtVerseIndex: 3
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 150
+    submanagers:
+    - id: ahikam_son_of_shaphan
+      displayName: Ahikam the son of Shaphan
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 649
+      unlockCost: 105
+    - id: hanameel
+      displayName: Hanameel
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 790
+      unlockCost: 105
+  - id: the_temple_sermon
+    displayName: The Temple Sermon
+    flavorText: Standing in the gate of the LORD's house, Jeremiah warns Judah that
+      chanting 'the temple of the LORD' three times over cannot save them from judgment.
+    tierType: 1
+    purpose: "Warns Judah that the temple building itself is no guarantee of safety
+      \u2014 obedience, not the sanctuary's mere presence, is what God requires;
+      delivered twice, once in chapter 7 and again, nearly costing Jeremiah his life,
+      in chapter 26."
+    deliveredByManagerId: jeremiah
+    managerId: temple_sermon
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 18.983491996270715
+    costGrowthRate: 1.15
+    baseInkPerSecond: 0.9491745998135357
+    unlockAtVerseIndex: 68
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_potters_house
+    displayName: The Potter's House
+    flavorText: Jeremiah watches a potter rework marred clay on the wheel, then smashes
+      a bought earthen bottle before the elders as a sign of Judah's irreversible
+      breaking.
+    tierType: 1
+    purpose: Illustrates God's sovereign right, like a potter over clay, to reshape
+      or irrevocably break the nation according to its response to his word.
+    deliveredByManagerId: jeremiah
+    managerId: potters_house
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 36.037296837247425
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1.8018648418623713
+    unlockAtVerseIndex: 136
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_stocks_of_benjamins_gate
+    displayName: The Stocks of Benjamin's Gate
+    flavorText: Pashur the priest strikes Jeremiah and locks him in the stocks at
+      Benjamin's high gate, then is renamed 'Magor-missabib' and doomed to die in
+      captivity.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: pashur_son_of_immer
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 68.41137360771184
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3.4205686803855917
+    unlockAtVerseIndex: 204
+    managerName: Pashur the son of Immer
+    managerFlavorText: Pashur the priest strikes Jeremiah and locks him in the stocks
+      at Benjamin's high gate, then is renamed 'Magor-missabib' and doomed to die
+      in captivity.
+    managerUnlockLevel: 4
+    managerUnlockAtVerseIndex: 476
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1026
+    submanagers: []
+  - id: the_penknife_brazier
+    displayName: The Penknife Brazier
+    flavorText: King Jehoiakim slices Jeremiah's dictated scroll into pieces with
+      a penknife and feeds it column by column into the brazier fire.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoiakim
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 129.86867633358833
+    costGrowthRate: 1.15
+    baseInkPerSecond: 6.493433816679416
+    unlockAtVerseIndex: 272
+    managerName: Jehoiakim
+    managerFlavorText: King Jehoiakim slices Jeremiah's dictated scroll into pieces
+      with a penknife and feeds it column by column into the brazier fire.
+    managerUnlockLevel: 5
+    managerUnlockAtVerseIndex: 916
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1948
+    submanagers:
+    - id: jehoahaz_shallum
+      displayName: Jehoahaz (Shallum)
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 517
+      unlockCost: 1363
+    - id: uriah_son_of_shemaiah
+      displayName: Uriah the son of Shemaiah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 645
+      unlockCost: 1363
+    - id: elnathan_son_of_achbor
+      displayName: Elnathan the son of Achbor
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 920
+      unlockCost: 1363
+    - id: jehudi
+      displayName: Jehudi
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 916
+      unlockCost: 1363
+  - id: the_scroll_and_inkhorn
+    displayName: The Scroll and Inkhorn
+    flavorText: Baruch takes Jeremiah's dictation onto a scroll and reads it aloud
+      in the temple, then rewrites it word for word after the king burns the first
+      copy.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: baruch
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 246.53609777449458
+    costGrowthRate: 1.15
+    baseInkPerSecond: 12.326804888724729
+    unlockAtVerseIndex: 340
+    managerName: Baruch
+    managerFlavorText: Baruch takes Jeremiah's dictation onto a scroll and reads
+      it aloud in the temple, then rewrites it word for word after the king burns
+      the first copy.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 899
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 3698
+    submanagers:
+    - id: seraiah_son_of_neriah
+      displayName: Seraiah the son of Neriah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1324
+      unlockCost: 2588
+  - id: the_broken_yoke
+    displayName: The Broken Yoke
+    flavorText: Hananiah publicly breaks the wooden yoke off Jeremiah's neck and
+      prophesies Babylon's swift fall, then dies within the year exactly as Jeremiah
+      foretold.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: hananiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 468.0116038893932
+    costGrowthRate: 1.15
+    baseInkPerSecond: 23.40058019446966
+    unlockAtVerseIndex: 409
+    managerName: Hananiah
+    managerFlavorText: Hananiah publicly breaks the wooden yoke off Jeremiah's neck
+      and prophesies Babylon's swift fall, then dies within the year exactly as Jeremiah
+      foretold.
+    managerUnlockLevel: 6
+    managerUnlockAtVerseIndex: 681
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 7020
+    submanagers: []
+  - id: the_new_covenant
+    displayName: The New Covenant
+    flavorText: The LORD promises a new covenant in which his law is written not
+      on tablets of stone but on the hearts of his people.
+    tierType: 1
+    purpose: "Promises a future covenant unlike the Sinai covenant Israel broke \u2014
+      God's law written on the heart and sins remembered no more \u2014 the theological
+      high point of the book's restoration oracles."
+    deliveredByManagerId: jeremiah
+    managerId: new_covenant
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 888.4494536596115
+    costGrowthRate: 1.15
+    baseInkPerSecond: 44.422472682980576
+    unlockAtVerseIndex: 477
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_letter_to_the_exiles
+    displayName: The Letter to the Exiles
+    flavorText: Jeremiah writes to the exiles in Babylon, telling them to build houses
+      and plant gardens and trust the LORD's plan of peace after seventy years.
+    tierType: 1
+    purpose: Instructs the exiles to settle in for the long haul rather than trust
+      the false prophets promising a swift return, grounding hope instead in a specific,
+      dated promise of restoration.
+    deliveredByManagerId: jeremiah
+    managerId: letter_to_exiles
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 1686.5873092638324
+    costGrowthRate: 1.15
+    baseInkPerSecond: 84.32936546319162
+    unlockAtVerseIndex: 545
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_signet_ring
+    displayName: The Signet Ring
+    flavorText: Though Jehoiachin were the signet ring on God's own hand, the LORD
+      declares he will pluck him off and pronounces him childless upon the throne.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: jehoiachin
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 3201.7316686421727
+    costGrowthRate: 1.15
+    baseInkPerSecond: 160.08658343210863
+    unlockAtVerseIndex: 613
+    managerName: Jehoiachin (also called Coniah and Jeconiah)
+    managerFlavorText: Though Jehoiachin were the signet ring on God's own hand,
+      the LORD declares he will pluck him off and pronounces him childless upon the
+      throne.
+    managerUnlockLevel: 8
+    managerUnlockAtVerseIndex: 531
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 48025
+    submanagers: []
+  - id: the_secret_chamber
+    displayName: The Secret Chamber
+    flavorText: King Zedekiah secretly summons the imprisoned Jeremiah to ask if
+      there is any word from the LORD, and hears only that the city will fall.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: zedekiah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 6078.004750587515
+    costGrowthRate: 1.15
+    baseInkPerSecond: 303.9002375293758
+    unlockAtVerseIndex: 681
+    managerName: Zedekiah
+    managerFlavorText: King Zedekiah secretly summons the imprisoned Jeremiah to
+      ask if there is any word from the LORD, and hears only that the city will fall.
+    managerUnlockLevel: 9
+    managerUnlockAtVerseIndex: 944
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 91170
+    submanagers:
+    - id: zephaniah_the_priest
+      displayName: Zephaniah the priest
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 494
+      unlockCost: 63818
+    - id: the_four_princes
+      displayName: The Four Princes
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 949
+      unlockCost: 63818
+    - id: malchiah_son_of_hammelech
+      displayName: Malchiah the son of Hammelech
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 954
+      unlockCost: 63818
+    - id: irijah_the_captain
+      displayName: Irijah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 940
+      unlockCost: 63818
+  - id: rotten_rags_and_worn_cords
+    displayName: Rotten Rags and Worn Cords
+    flavorText: Ebedmelech the Ethiopian eunuch lowers old rotten rags on cords into
+      the dungeon to cushion Jeremiah's armpits as he is drawn up out of the mire.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ebedmelech
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 11538.175453607348
+    costGrowthRate: 1.15
+    baseInkPerSecond: 576.9087726803674
+    unlockAtVerseIndex: 749
+    managerName: Ebedmelech
+    managerFlavorText: Ebedmelech the Ethiopian eunuch lowers old rotten rags on
+      cords into the dungeon to cushion Jeremiah's armpits as he is drawn up out
+      of the mire.
+    managerUnlockLevel: 10
+    managerUnlockAtVerseIndex: 955
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 173072
+    submanagers: []
+  - id: the_oracles_against_the_nations
+    displayName: The Oracles Against the Nations
+    flavorText: Jeremiah carries the cup of the LORD's fury from nation to nation,
+      pronouncing judgment on Egypt, Moab, Edom, and finally Babylon itself.
+    tierType: 1
+    purpose: Extends Jeremiah's message beyond Judah in judgment oracles against
+      Egypt, Philistia, Moab, Ammon, Edom, Damascus, Elam, and finally Babylon, establishing
+      that the LORD's moral accountability is not limited to his own covenant people.
+    deliveredByManagerId: jeremiah
+    managerId: oracles_against_nations
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 21903.48613751223
+    costGrowthRate: 1.15
+    baseInkPerSecond: 1095.1743068756116
+    unlockAtVerseIndex: 818
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
+  - id: the_buried_pavement_stones
+    displayName: The Buried Pavement Stones
+    flavorText: Jeremiah hides great stones in the brick pavement at Tahpanhes and
+      prophesies that Nebuchadrezzar will set his throne over that very spot.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: nebuchadrezzar
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 41580.465378188994
+    costGrowthRate: 1.15
+    baseInkPerSecond: 2079.0232689094496
+    unlockAtVerseIndex: 886
+    managerName: Nebuchadrezzar
+    managerFlavorText: Jeremiah hides great stones in the brick pavement at Tahpanhes
+      and prophesies that Nebuchadrezzar will set his throne over that very spot.
+    managerUnlockLevel: 11
+    managerUnlockAtVerseIndex: 1058
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 623706
+    submanagers:
+    - id: nebuzaradan
+      displayName: Nebuzaradan
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 995
+      unlockCost: 436594
+  - id: the_governors_table_at_mizpah
+    displayName: The Governor's Table at Mizpah
+    flavorText: Nebuchadrezzar's captain appoints Gedaliah governor over the remnant
+      left in Judah, and he refuses to believe the warning that Ishmael plots to
+      kill him.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: gedaliah
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 78934.24317080624
+    costGrowthRate: 1.15
+    baseInkPerSecond: 3946.712158540312
+    unlockAtVerseIndex: 954
+    managerName: Gedaliah
+    managerFlavorText: Nebuchadrezzar's captain appoints Gedaliah governor over the
+      remnant left in Judah, and he refuses to believe the warning that Ishmael plots
+      to kill him.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 999
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 1184013
+    submanagers: []
+  - id: the_cistern_of_mizpah
+    displayName: The Cistern of Mizpah
+    flavorText: Ishmael murders Gedaliah and his household at a shared meal, then
+      slaughters seventy pilgrims and casts their bodies into an old cistern.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: ishmael
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 149844.75734646863
+    costGrowthRate: 1.15
+    baseInkPerSecond: 7492.237867323432
+    unlockAtVerseIndex: 1022
+    managerName: Ishmael the son of Nethaniah
+    managerFlavorText: Ishmael murders Gedaliah and his household at a shared meal,
+      then slaughters seventy pilgrims and casts their bodies into an old cistern.
+    managerUnlockLevel: 12
+    managerUnlockAtVerseIndex: 1014
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 2247671
+    submanagers: []
+  - id: the_road_to_egypt
+    displayName: The Road to Egypt
+    flavorText: Johanan swears to obey whatever word Jeremiah brings from the LORD,
+      then defies it and leads the surviving remnant down into Egypt anyway.
+    tierType: 0
+    purpose: 
+    deliveredByManagerId: 
+    managerId: johanan
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 284457.6751769815
+    costGrowthRate: 1.15
+    baseInkPerSecond: 14222.883758849075
+    unlockAtVerseIndex: 1090
+    managerName: Johanan the son of Kareah
+    managerFlavorText: Johanan swears to obey whatever word Jeremiah brings from
+      the LORD, then defies it and leads the surviving remnant down into Egypt anyway.
+    managerUnlockLevel: 13
+    managerUnlockAtVerseIndex: 1051
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 4266865
+    submanagers:
+    - id: azariah_son_of_hoshaiah
+      displayName: Azariah the son of Hoshaiah
+      icon: {fileID: 0}
+      perkFlavor: loyalty-boost
+      perkAmount: 0.05
+      unlockAtVerseIndex: 1052
+      unlockCost: 2986805
+  - id: the_rechabites_obedience
+    displayName: The Rechabites' Obedience
+    flavorText: The Rechabites refuse the wine Jeremiah sets before them, honoring
+      their ancestor Jonadab's generations-old command as a rebuke to Judah's disobedience.
+    tierType: 1
+    purpose: The Rechabites' unbroken obedience to a mere human ancestor's command
+      shames Judah's refusal to obey the living God, who has spoken to them repeatedly
+      through his prophets.
+    deliveredByManagerId: 
+    managerId: rechabites_obedience
+    icon: {fileID: 0}
+    managerIcon: {fileID: 0}
+    baseCost: 540000.0000000002
+    costGrowthRate: 1.15
+    baseInkPerSecond: 27000.00000000001
+    unlockAtVerseIndex: 1159
+    managerName: 
+    managerFlavorText: 
+    managerUnlockLevel: 0
+    managerUnlockAtVerseIndex: 0
+    managerBonusMultiplier: 0.25
+    managerUnlockCost: 0
+    submanagers: []
