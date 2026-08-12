@@ -18,19 +18,21 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.4.1 Beta** — pre-release, core loop implemented and playable. This is the first release under a new versioning convention: everything before 0.4.1 is retroactively **Alpha**, and 0.4.1 onward is **Beta**. Headline changes this version: a redesigned **Grace Skill Tree V2** — a fog-of-war constellation UI (nodes and their connector lines stay hidden until a prerequisite is owned, not just dimmed) wired to the real Grace economy, with all 146 nodes of real Old Testament content authored in; and a **Settings orientation toggle** (Auto/Portrait/Landscape) completing the mobile-responsiveness work from 0.4.0. 0.4.0 itself shipped a full **Achievement system** — 655 real achievements generated straight from the game's own live Scribes/Managers data, browsable in a tabbed card-grid screen with bronze/silver/gold difficulty tiers and spoiler-safe hidden achievements — plus the first real mobile-device layout fixes (list-row text overlap, wrong Canvas Scaler reference resolution) after testing on a physical Android phone.
+**Version 0.4.5 Beta** — pre-release, core loop implemented and playable. Recent headline changes: a real **Achievement screen visual overhaul** — cards now use shader-driven materials (color-coded by achievement category, with a lighter variant once unlocked) instead of flat panels, plus fixes for several real rendering bugs (cards bleeding outside their scroll viewport, broken diamond frames, hidden achievements leaking their description text into the wrong UI element); a real **Sound & Audio System** (mixer-driven Master/SFX/Music/Voice volume, music zones per screen — infrastructure is fully wired, though no audio clips exist yet, so it's currently silent-but-functional); a **desktop auto-update system** (opt-in — nothing downloads without an explicit click); and **Credits/Stats** promoted from small Pause Menu popups to their own standalone screens. 0.4.1 shipped a redesigned **Grace Skill Tree V2** (fog-of-war constellation UI, 146 nodes of real Old Testament content) and a **Settings orientation toggle**. 0.4.0 shipped the **Achievement system** itself — now at **740 real achievements** generated straight from the game's own live data (25 hand-authored milestones, 66 per-book completions, 10 section/"ultimate" achievements, 386 manager-unlock achievements, 168 manager-household achievements, and 85 gameplay-stat ladders), browsable in a tabbed card grid with bronze/silver/gold difficulty tiers and spoiler-safe hidden entries.
+
+Also built since 0.4.1, not yet its own version bump: a real **3-slot save system** — New Game walks you through a translation and starting-book choice, each of the 3 slots is independently save/load/delete/copy-able and shows its own completion summary (active book, level, % complete) from the slot picker.
 
 This is an active work-in-progress being built in public as part of a development portfolio — see [Bug Tracker](#bug-tracker--known-issues) for a transparent, running log of what's broken and what's been fixed.
 
 ## Download
 
-Three platforms — pick yours (now on v0.4.1 Beta, the first release to ship all three platforms in one pass):
-
 | Platform | Download | Minimum version |
 |---|---|---|
-| 🪟 Windows | [ClickerGenesis-Windows-v0.4.1.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Windows-v0.4.1.zip) | Windows 10 64-bit or later |
-| 🍎 macOS | [ClickerGenesis-Mac-v0.4.1.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Mac-v0.4.1.zip) | macOS 12.0 (Monterey) or later |
-| 🤖 Android | [ClickerGenesis-Android-v0.4.1.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Android-v0.4.1.apk) | Android 8.0 (Oreo, API 26) or later |
+| 🪟 Windows | [ClickerGenesis-Windows-v0.4.5.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.5/ClickerGenesis-Windows-v0.4.5.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.4.1.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Mac-v0.4.1.zip) *(v0.4.1 — see note below)* | macOS 12.0 (Monterey) or later |
+| 🤖 Android | [ClickerGenesis-Android-v0.4.1.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.1/ClickerGenesis-Android-v0.4.1.apk) *(v0.4.1 — see note below)* | Android 8.0 (Oreo, API 26) or later |
+
+> **Note:** the last two Windows releases (0.4.4, 0.4.5) shipped Windows-only while Mac/Android builds are held back pending further testing — this is deliberate, not an oversight. The macOS/Android links above are the most recent builds for those platforms (v0.4.1) and don't yet include everything described in Status above.
 
 - **Windows:** unzip and run `ClickerGenesis.exe`.
 - **macOS:** unzip, then right-click `ClickerGenesis.app` → **Open** the first time (the build is unsigned/unnotarized — no Apple Developer account in this pipeline yet — so Gatekeeper blocks a plain double-click on first launch; this is expected for an indie unsigned build, not broken packaging).
@@ -59,7 +61,6 @@ All releases (including older versions and full changelogs) are on the [Releases
 - **Books tab**: switch your active book once unlocked via the Grace tree, enforcing "finish book N before starting book N+1" — each book tracks its own independent verse/chapter progress
 - **Stats screen** (Pause Menu): lifetime Ink earned/spent, Grace earned/spent, prestige counts, skills/managers bought, verses/chapters/books completed
 - Multi-scene navigation (Main Menu → Clicker Screen ↔ Buy Verse Screen ↔ Skill Tree, Settings) with persistent cross-scene game state
-- Working sound toggle (PlayerPrefs-persisted)
 - Parchment/ink/gold "warm, legible, mobile-fast" base art direction, with a reserved stained-glass accent style for reward moments (not yet built)
 - Every screen re-themed with a shared stone-textured backdrop instead of flat color, giving the UI real depth
 - Managers auto-purchase their own scribe tier once bought, on top of their existing output bonus, and their tab row now shows only their name and actual active bonus (no flavor text)
@@ -70,8 +71,11 @@ All releases (including older versions and full changelogs) are on the [Releases
 - Managers are correctly locked until their own scribe tier is unlocked by verse progress, not just by player level — and that gating stays keyed to Genesis' progress specifically, so switching to a different active book never re-locks already-unlocked scribes/managers
 - **Full Old Testament, all 39 books playable**: every book from Genesis through Malachi has its own real scribe/manager/submanager roster (408 tiers total), computed against its real KJV verse positions, switchable via the Books tab in canonical order
 - **All 27 New Testament books' data imported** (276 more tiers — Matthew through Revelation, each Gospel's Jesus independently authored per book) but intentionally not switchable in-game yet — a "New Testament — Coming Soon" row shows in the Books tab instead, until the Old Testament experience is polished
-- **Save/load persistence**: local JSON save file (not in-memory-only), atomic temp-file-then-rename writes with a `.bak` fallback, light obfuscation, and graceful corruption recovery (falls back primary → backup → fresh save on any read failure) — verified via a real save → exit → reload round trip and both corruption-recovery paths
-- **Achievement system (new in 0.4.0)**: 655 real achievements generated from the game's own live data, not hand-typed — 25 hand-authored headline milestones, 66 per-book completion achievements (39 OT + 27 NT), 10 section-grouping/"ultimate" achievements (e.g. completing the Pentateuch, the Four Gospels, the full Bible), 386 per-manager unlock achievements, and 168 per-manager "household complete" achievements (hire every submanager under a given manager). Browsable via a Bloons-TD6-style tabbed card grid (category tabs + live search) with bronze/silver/gold difficulty-tier diamond frames and real category icon art. Spoiler-hidden achievements show "Hidden Achievement" until earned so discovering a new named character stays a surprise. Global persistence, independent of save slots, so progress is visible no matter which slot is active.
+- **Save/load persistence**: local JSON save files, atomic temp-file-then-rename writes with a `.bak` fallback, light obfuscation, and graceful corruption recovery (falls back primary → backup → fresh save on any read failure). Built out into a full **3-slot system**: New Game walks through a translation and starting-book choice, each slot is independently save/load/delete/copy-able, and the slot picker shows a real summary (active book, level, completion %) per slot without loading it.
+- **Achievement system**: 740 real achievements generated from the game's own live data, not hand-typed — 25 hand-authored headline milestones, 66 per-book completion achievements (39 OT + 27 NT), 10 section-grouping/"ultimate" achievements (e.g. completing the Pentateuch, the Four Gospels, the full Bible), 386 per-manager unlock achievements, 168 per-manager "household complete" achievements (hire every submanager under a given manager), and 85 gameplay-stat ladders (lifetime Ink earned/spent, taps, and more). Browsable via a tabbed card grid (category tabs + live search) with bronze/silver/gold difficulty-tier diamond frames, real category icon art, and shader-driven card materials that recolor by category and lighten once unlocked. Spoiler-hidden achievements show "Hidden Achievement" until earned so discovering a new named character stays a surprise. Global persistence, independent of save slots, so progress is visible no matter which slot is active.
+- **Sound & Audio System**: a real AudioMixer-driven Master/SFX/Music/Voice volume stack with independent mute, music that crossfades per screen zone (Menu/Core Gameplay/Skill Tree/Achievements), and SFX hooks already wired at verse/chapter/book/achievement-unlock call sites. No audio clips exist yet, so it's currently silent but fully functional — ready for content.
+- **Desktop auto-update**: an opt-in "Check for Updates" / "Install" control in Settings (Velopack-based) — nothing downloads or installs without an explicit click.
+- **Credits and Stats** each have their own standalone, scrollable screen (promoted from small Pause Menu popups) for real readability at scale.
 
 ## Tech stack
 
@@ -79,29 +83,41 @@ All releases (including older versions and full changelogs) are on the [Releases
 - **Language:** C#, ScriptableObject-driven config (pricing curves, XP constants, scribe rosters — nothing gameplay-numeric is hardcoded, so it can be rebalanced after playtesting without touching code)
 - **UI:** TextMeshPro, Ibarra Real Nova (openly licensed, replacing an earlier Georgia font asset that was flagged as a licensing risk for a shipped build)
 - **Tooling:** [Unity-MCP](https://github.com/IvanMurzak/Unity-MCP) for AI-assisted Editor/scene/Play-mode workflows during development
+- **Auto-update:** [Velopack](https://github.com/velopack/velopack) (opt-in, desktop only)
 - **Source control:** Git + Git LFS
 
 ## Project structure
 
 ```
 Assets/
-  Scripts/
-    Core/          GameLoopController (persistent singleton), screen UI controllers, scene nav
+  _Scripts/
+    Core/           GameLoopController (persistent singleton), screen UI controllers, scene nav
     Economy/        Ink wallet, scribe system, milestone curve
-    Progression/     XP/leveling, Prestige/Grace Skill Tree system
+    Progression/    XP/leveling, Prestige/Grace Skill Tree system
+    Achievements/   Achievement data model + runtime system
+    Save/           Save-slot storage, migration, achievement persistence
     Data/           Verse database, pricing config, per-book progress, canonical book order
-  Config/           ScriptableObject assets (XpConfig, GenesisScribes, pricing curves, Grace Skill Tree)
+    Editor/         Editor-only tooling (Skill Tree content generation, etc.)
+  _Config/          ScriptableObject assets (XpConfig, per-book scribe rosters, achievement sets, pricing curves, Grace Skill Tree)
+  _Scenes/          MainMenu, ClickerScreen, BuyVerseScreen, PrestigeScreen, SettingsScreen, AchievementScreen,
+                    StatsScreen, CreditsScreen, SaveSlotScreen, NewGameSetupScreen, CoreLoopTest (dev/smoke-test)
+  _Audio/           Audio mixer
+  _Fonts/           Ibarra Real Nova (openly licensed)
+  _Prefabs/, _UI/, _Settings/     Prefabs, generated/UI-only sprites, render-pipeline settings
+  _ThirdParty/      All imported art/UI asset packs, one subfolder per pack
   Resources/
-    Bible/           Canonical KJV outline (all 66 books, chapter/verse counts)
-    Verses/          Loaded verse text by book (all 39 Old Testament books staged)
-  Scenes/           MainMenu, ClickerScreen, BuyVerseScreen, PrestigeScreen, SettingsScreen, CoreLoopTest (dev/smoke-test)
+    Bible/          Canonical KJV outline (all 66 books, chapter/verse counts)
+    Verses/         Loaded verse text by book (all 39 Old Testament books staged)
+  Plugins/          Native/managed plugin DLLs (Velopack, etc.) — Unity-reserved folder name
 ```
+
+`Resources/`, `Plugins/`, `Editor/` (nested), `TextMesh Pro/`, and `AddressableAssetsData/` keep their exact Unity-required names; everything else lives under an underscore-prefixed category folder so the Project window sorts real project content above imported packages and package-managed folders.
 
 ## Getting started
 
 1. Clone with LFS: `git lfs install && git clone https://github.com/neogentrics/Clicker-Genesis.git`
 2. Open in Unity 6.5 (URP).
-3. Open `Assets/Scenes/MainMenu.unity` and press Play — this is the real production entry point (not `CoreLoopTest.unity`, which is a standalone dev/smoke-test scene for the core tap→buy loop only).
+3. Open `Assets/_Scenes/MainMenu.unity` and press Play — this is the real production entry point (not `CoreLoopTest.unity`, which is a standalone dev/smoke-test scene for the core tap→buy loop only).
 
 ## Bug tracker / known issues
 
@@ -120,10 +136,12 @@ Full tracker (kept in sync, includes fix descriptions and root causes): see the 
 
 - Whether Psalms should be a starter-book option or gated behind prestige (needs real per-chapter verse-count analysis — already gathered, decision deferred)
 - Real narrative-accurate scribe/manager unlock thresholds beyond the current placeholder mechanism-testing values
-- NIV/Amplified translations (on hold pending licensing review)
-- Real audio (volume slider, SFX/BGM, verse narration) — not started
-- Real mobile-device responsive layout — a physical Android device test surfaced genuine portrait-layout bugs (wrong Canvas Scaler reference resolution on several screens, list rows with real text-on-text overlap, the Skill Tree rendering as a tiny dot on a narrow screen). The worst of these are fixed and verified; still open: a true single-column phone reflow for the Clicker/Buy Verse screens (currently just the wide desktop layout scaled down), the Skill Tree's own zoom baseline (Bug #58), and a manual portrait/landscape toggle in Settings (the auto-rotate-following logic underneath it is already built)
-- Also actively in progress, not yet playable: a 3-save-slot system (replacing the earlier single implicit save), and a full Geneva Bible 1560 + Ethiopian Bible data layer (231 books' worth of scribe/manager content indexed alongside KJV's — extracted, validated, not yet wired into gameplay)
+- NIV/Amplified translations (on hold — confirmed no legally usable public-domain edition exists for either); ASV, WEB, RV1909 (Spanish), and the Webster Bible are already extracted and validated as legally clear alternatives, not yet wired into gameplay
+- Real audio content — the Sound & Audio System itself is built and wired (see Features above), but no SFX/music/voice clips exist yet
+- Real mobile-device responsive layout — a physical Android device test surfaced genuine portrait-layout bugs (wrong Canvas Scaler reference resolution on several screens, list rows with real text-on-text overlap, the Skill Tree rendering as a tiny dot on a narrow screen). The worst of these, plus a Settings orientation toggle (Auto/Portrait/Landscape), are fixed and shipped; still open: a true single-column phone reflow for the Clicker/Buy Verse screens (currently just the wide desktop layout scaled down), and the Skill Tree's own zoom baseline (Bug #58)
+- New Testament content (27 books' worth of scribe/manager data, already imported and validated) is intentionally not switchable in-game yet — a real OT→NT transition system (separate skill tree, separate currency) is designed but not built, gated behind polishing the Old Testament experience first
+- A full Geneva Bible 1560 + Ethiopian Bible data layer (231 books' worth of scribe/manager content indexed alongside KJV's — extracted, validated, not yet wired into gameplay)
+- The desktop auto-update system hasn't yet been exercised through a real packaged install/update cycle — infrastructure compiles clean and is wired, but not click-tested end to end
 
 ## Guiding principle
 
