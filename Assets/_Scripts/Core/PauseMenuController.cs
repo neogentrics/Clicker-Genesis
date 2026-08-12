@@ -58,10 +58,14 @@ namespace ClickerGenesis.Core
             if (ResumeButton != null) ResumeButton.onClick.AddListener(Hide);
             if (SettingsButton != null) SettingsButton.onClick.AddListener(OpenSettings);
             if (MainMenuButton != null) MainMenuButton.onClick.AddListener(GoToMainMenu);
+            // Real destination as of 2026-08-12 (was a permanently-disabled stub) - navigates to a
+            // standalone "Coming Soon" scene, same pattern as Stats/Credits/Achievements below.
+            // The button itself no longer says "(Coming Soon)" since the screen it opens does.
             if (StoreButton != null)
             {
-                StoreButton.interactable = false;
-                if (StoreButtonLabel != null) StoreButtonLabel.text = "Store (Coming Soon)";
+                StoreButton.interactable = true;
+                if (StoreButtonLabel != null) StoreButtonLabel.text = "Store";
+                StoreButton.onClick.AddListener(OpenStore);
             }
             // Achievements - explicitly deferred system (see CLAUDE.md "later development" note),
             // but the user wants the button present now as a placeholder for where it'll live once
@@ -351,6 +355,25 @@ namespace ClickerGenesis.Core
                 SceneTransitioner.Instance.LoadScene("SettingsScreen");
             else
                 SceneManager.LoadScene("SettingsScreen");
+        }
+
+        /// <summary>Same "remember which scene to return to" pattern as statsReturnSceneName /
+        /// creditsReturnSceneName above.</summary>
+        private string storeReturnSceneName = "ClickerScreen";
+
+        private void OpenStore()
+        {
+            storeReturnSceneName = SceneManager.GetActiveScene().name;
+            Hide();
+            SceneManager.LoadScene("StoreScreen", LoadSceneMode.Single);
+        }
+
+        /// <summary>Consumed once by StoreScreenUI's Back button.</summary>
+        public string ConsumeStoreReturnScene()
+        {
+            string s = string.IsNullOrEmpty(storeReturnSceneName) ? "ClickerScreen" : storeReturnSceneName;
+            storeReturnSceneName = "ClickerScreen";
+            return s;
         }
 
         private void GoToMainMenu()
