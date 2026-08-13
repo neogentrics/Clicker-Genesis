@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 45776236}
   - component: {fileID: 45776238}
   - component: {fileID: 45776239}
+  - component: {fileID: 45776240}
   m_Layer: 0
   m_Name: PrestigeButton
   m_TagString: Untagged
@@ -493,6 +494,19 @@ MonoBehaviour:
   Text: 'Free Prestige: grants Grace based on lifetime progress. Ink, Level/XP, upgrades,
     and scribes all stay exactly as they are - no permanent bonuses beyond the skills
     you choose to buy.'
+--- !u!114 &45776240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45776232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &69658744
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +923,7 @@ GameObject:
   - component: {fileID: 172237461}
   - component: {fileID: 172237463}
   - component: {fileID: 172237464}
+  - component: {fileID: 172237465}
   m_Layer: 0
   m_Name: PrestigeResetButton
   m_TagString: Untagged
@@ -1049,6 +1064,19 @@ MonoBehaviour:
     and buying scribes, adds +0.5 Ink/sec base income, and a growing Ink multiplier
     after your first book - all stack per reset. Unlocks the tree's biggest capstones.
     Verses/chapters/books are never lost.
+--- !u!114 &172237465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172237457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &176226311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1089,7 @@ GameObject:
   - component: {fileID: 176226314}
   - component: {fileID: 176226313}
   - component: {fileID: 176226312}
+  - component: {fileID: 176226316}
   m_Layer: 0
   m_Name: BookChoiceCancelButton
   m_TagString: Untagged
@@ -1170,6 +1199,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 30}
   m_SizeDelta: {x: 220, y: 60}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &176226316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176226311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 4e7ce19b0c9dda1458946554f940d3b8, type: 3}
 --- !u!1 &182004218
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1299,7 @@ GameObject:
   - component: {fileID: 185789838}
   - component: {fileID: 185789837}
   - component: {fileID: 185789836}
+  - component: {fileID: 185789839}
   m_Layer: 0
   m_Name: BookChoiceRowTemplate
   m_TagString: Untagged
@@ -1366,6 +1409,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185789834}
   m_CullTransparentMesh: 1
+--- !u!114 &185789839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185789834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &188153379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +1956,7 @@ GameObject:
   - component: {fileID: 309285137}
   - component: {fileID: 309285136}
   - component: {fileID: 309285140}
+  - component: {fileID: 309285141}
   m_Layer: 0
   m_Name: NodeButtonTemplate
   m_TagString: Untagged
@@ -2023,6 +2080,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &309285141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309285135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &313861573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2107,7 @@ GameObject:
   - component: {fileID: 313861576}
   - component: {fileID: 313861575}
   - component: {fileID: 313861580}
+  - component: {fileID: 313861581}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -2172,6 +2243,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &313861581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313861573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 4e7ce19b0c9dda1458946554f940d3b8, type: 3}
 --- !u!1 &342986959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2406,7 @@ GameObject:
   - component: {fileID: 390987678}
   - component: {fileID: 390987677}
   - component: {fileID: 390987676}
+  - component: {fileID: 390987680}
   m_Layer: 0
   m_Name: ZoomInButton
   m_TagString: Untagged
@@ -2444,6 +2529,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390987674}
   m_CullTransparentMesh: 1
+--- !u!114 &390987680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390987674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &525173860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3088,6 +3186,7 @@ GameObject:
   - component: {fileID: 650735344}
   - component: {fileID: 650735343}
   - component: {fileID: 650735342}
+  - component: {fileID: 650735346}
   m_Layer: 0
   m_Name: ZoomOutButton
   m_TagString: Untagged
@@ -3210,6 +3309,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650735340}
   m_CullTransparentMesh: 1
+--- !u!114 &650735346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650735340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &662944202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,6 +3416,7 @@ GameObject:
   - component: {fileID: 707787346}
   - component: {fileID: 707787348}
   - component: {fileID: 707787351}
+  - component: {fileID: 707787352}
   m_Layer: 0
   m_Name: ZoomOutButton
   m_TagString: Untagged
@@ -3440,6 +3553,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &707787352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707787345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &789011939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4554,6 +4680,7 @@ GameObject:
   - component: {fileID: 1171858222}
   - component: {fileID: 1171858221}
   - component: {fileID: 1171858220}
+  - component: {fileID: 1171858224}
   m_Layer: 0
   m_Name: ConfirmNoButton
   m_TagString: Untagged
@@ -4676,6 +4803,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171858218}
   m_CullTransparentMesh: 1
+--- !u!114 &1171858224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171858218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &1203681266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5789,6 +5929,7 @@ GameObject:
   - component: {fileID: 1432237615}
   - component: {fileID: 1432237614}
   - component: {fileID: 1432237618}
+  - component: {fileID: 1432237619}
   m_Layer: 0
   m_Name: ConfirmNoButton
   m_TagString: Untagged
@@ -5911,6 +6052,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1432237619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432237613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &1436980393
 GameObject:
   m_ObjectHideFlags: 0
@@ -6456,6 +6610,7 @@ GameObject:
   - component: {fileID: 1548929025}
   - component: {fileID: 1548929024}
   - component: {fileID: 1548929028}
+  - component: {fileID: 1548929029}
   m_Layer: 0
   m_Name: PauseButton
   m_TagString: Untagged
@@ -6591,6 +6746,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1548929029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548929022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &1611707801
 GameObject:
   m_ObjectHideFlags: 0
@@ -7941,6 +8109,7 @@ GameObject:
   - component: {fileID: 1861909363}
   - component: {fileID: 1861909362}
   - component: {fileID: 1861909361}
+  - component: {fileID: 1861909364}
   m_Layer: 0
   m_Name: BackButton
   m_TagString: Untagged
@@ -8063,6 +8232,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861909359}
   m_CullTransparentMesh: 1
+--- !u!114 &1861909364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861909359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 4e7ce19b0c9dda1458946554f940d3b8, type: 3}
 --- !u!1 &1886609308
 GameObject:
   m_ObjectHideFlags: 0
@@ -8077,6 +8259,7 @@ GameObject:
   - component: {fileID: 1886609313}
   - component: {fileID: 1886609310}
   - component: {fileID: 1886609314}
+  - component: {fileID: 1886609315}
   m_Layer: 0
   m_Name: ZoomInButton
   m_TagString: Untagged
@@ -8213,6 +8396,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1886609315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886609308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &1930271799
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,6 +8559,7 @@ GameObject:
   - component: {fileID: 1964236063}
   - component: {fileID: 1964236065}
   - component: {fileID: 1964236066}
+  - component: {fileID: 1964236067}
   m_Layer: 0
   m_Name: ConfirmYesButton
   m_TagString: Untagged
@@ -8485,6 +8682,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1964236067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964236061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &1967581561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8497,6 +8707,7 @@ GameObject:
   - component: {fileID: 1967581565}
   - component: {fileID: 1967581564}
   - component: {fileID: 1967581563}
+  - component: {fileID: 1967581566}
   m_Layer: 0
   m_Name: CloseButton
   m_TagString: Untagged
@@ -8619,6 +8830,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1967581561}
   m_CullTransparentMesh: 1
+--- !u!114 &1967581566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1967581561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 4e7ce19b0c9dda1458946554f940d3b8, type: 3}
 --- !u!1 &1989258926
 GameObject:
   m_ObjectHideFlags: 0
@@ -9394,6 +9618,7 @@ GameObject:
   - component: {fileID: 2103950864}
   - component: {fileID: 2103950863}
   - component: {fileID: 2103950862}
+  - component: {fileID: 2103950866}
   m_Layer: 0
   m_Name: ConfirmYesButton
   m_TagString: Untagged
@@ -9516,6 +9741,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103950860}
   m_CullTransparentMesh: 1
+--- !u!114 &2103950866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103950860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &2108132624
 GameObject:
   m_ObjectHideFlags: 0

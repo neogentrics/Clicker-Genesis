@@ -120,7 +120,11 @@ namespace ClickerGenesis.Core
                     // each book's ScribeSetConfig asset.
                     row.Icon.sprite = subDef.icon;
                     row.Icon.color = row.Icon.sprite != null ? Color.white : new Color(0, 0, 0, 0);
-                    row.BuyButton.onClick.AddListener(() => Controller.BuySubmanager(tierIndex, subIndex));
+                    row.BuyButton.onClick.AddListener(() =>
+                    {
+                        AudioManager.Instance?.PlayPurchaseClick();
+                        Controller.BuySubmanager(tierIndex, subIndex);
+                    });
                     rows.Add(row);
                 }
             }

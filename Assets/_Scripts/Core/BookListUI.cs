@@ -91,7 +91,11 @@ namespace ClickerGenesis.Core
                     // are already self-explanatory without one.
                     Tooltip = rowGo.gameObject.AddComponent<HoverTooltip>()
                 };
-                if (row.Button != null) row.Button.onClick.AddListener(() => Controller.SwitchActiveBook(id));
+                if (row.Button != null) row.Button.onClick.AddListener(() =>
+                {
+                    AudioManager.Instance?.PlayGenericClick();
+                    Controller.SwitchActiveBook(id);
+                });
                 rows.Add(row);
             }
 

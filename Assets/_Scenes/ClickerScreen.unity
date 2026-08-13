@@ -153,7 +153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -62, y: 0}
   m_SizeDelta: {x: 0, y: 28}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6884107
@@ -1088,6 +1088,7 @@ GameObject:
   - component: {fileID: 104724436}
   - component: {fileID: 104724437}
   - component: {fileID: 104724438}
+  - component: {fileID: 104724439}
   m_Layer: 0
   m_Name: SupportTabButton
   m_TagString: Untagged
@@ -1224,6 +1225,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &104724439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104724432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &105621565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,7 +1627,7 @@ RectTransform:
   m_GameObject: {fileID: 159741001}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7.51, y: 9.81, z: 10.41}
+  m_LocalScale: {x: 6.11, y: 9.81, z: 10.41}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1911441934}
@@ -1676,6 +1690,7 @@ GameObject:
   - component: {fileID: 174253871}
   - component: {fileID: 174253875}
   - component: {fileID: 174253876}
+  - component: {fileID: 174253877}
   m_Layer: 0
   m_Name: GoToBuyButton
   m_TagString: Untagged
@@ -1700,8 +1715,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 80.7, y: 555}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: 406, y: 734}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &174253871
 MonoBehaviour:
@@ -1825,6 +1840,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &174253877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174253869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &184901806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1976,6 +2004,7 @@ GameObject:
   - component: {fileID: 188251950}
   - component: {fileID: 188251951}
   - component: {fileID: 188251952}
+  - component: {fileID: 188251953}
   m_Layer: 0
   m_Name: PrestigeButton
   m_TagString: Untagged
@@ -2000,8 +2029,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516, y: 186}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchoredPosition: {x: -491, y: 241}
+  m_SizeDelta: {x: 350, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &188251948
 MonoBehaviour:
@@ -2112,6 +2141,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &188251953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188251946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: 80d3799791748ac42b3ec097c17a2383, type: 3}
 --- !u!1 &199447168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +2884,7 @@ GameObject:
   - component: {fileID: 306709172}
   - component: {fileID: 306709175}
   - component: {fileID: 306709176}
+  - component: {fileID: 306709177}
   m_Layer: 0
   m_Name: ScribeMultiplierButton
   m_TagString: Untagged
@@ -2978,6 +3021,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &306709177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306709170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &329862429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,6 +3139,7 @@ GameObject:
   - component: {fileID: 354451860}
   - component: {fileID: 354451862}
   - component: {fileID: 354451863}
+  - component: {fileID: 354451864}
   m_Layer: 0
   m_Name: TapButton
   m_TagString: Untagged
@@ -3107,7 +3164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.58}
   m_AnchorMax: {x: 0.5, y: 0.58}
-  m_AnchoredPosition: {x: -52, y: -57}
+  m_AnchoredPosition: {x: -95, y: -57}
   m_SizeDelta: {x: 350, y: 350}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354451860
@@ -3205,6 +3262,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &354451864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354451858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: b2d5d7e57895b2745b155d240ed5a5a5, type: 3}
 --- !u!1 &366682976
 GameObject:
   m_ObjectHideFlags: 0
@@ -4213,6 +4283,7 @@ GameObject:
   - component: {fileID: 667506476}
   - component: {fileID: 667506477}
   - component: {fileID: 667506478}
+  - component: {fileID: 667506479}
   m_Layer: 0
   m_Name: AutoBuyReserveButton
   m_TagString: Untagged
@@ -4349,6 +4420,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &667506479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667506472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &725290374
 GameObject:
   m_ObjectHideFlags: 0
@@ -4825,7 +4909,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.6042}
   m_AnchorMax: {x: 1, y: 0.6042}
-  m_AnchoredPosition: {x: -177.5, y: -342}
+  m_AnchoredPosition: {x: -27, y: -355}
   m_SizeDelta: {x: -595, y: 130}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &909353703
@@ -5335,7 +5419,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1395337276}
   m_HandleRect: {fileID: 1395337275}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -5708,7 +5792,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -40, y: 172}
+  m_AnchoredPosition: {x: -40, y: 273}
   m_SizeDelta: {x: 395, y: 530}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1097973679
@@ -5763,6 +5847,7 @@ GameObject:
   - component: {fileID: 1130066743}
   - component: {fileID: 1130066744}
   - component: {fileID: 1130066745}
+  - component: {fileID: 1130066746}
   m_Layer: 0
   m_Name: ClickPowerButton
   m_TagString: Untagged
@@ -5787,7 +5872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -395, y: 365}
+  m_AnchoredPosition: {x: -395, y: 439}
   m_SizeDelta: {x: 220, y: 100}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1130066741
@@ -5900,6 +5985,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1130066746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130066739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 8300000, guid: c0bab065919cfed46a8a238b32542c5c, type: 3}
 --- !u!1 &1150137170
 GameObject:
   m_ObjectHideFlags: 0
@@ -8057,6 +8155,7 @@ GameObject:
   - component: {fileID: 1456646797}
   - component: {fileID: 1456646802}
   - component: {fileID: 1456646803}
+  - component: {fileID: 1456646804}
   m_Layer: 0
   m_Name: PauseButton
   m_TagString: Untagged
@@ -8205,6 +8304,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1456646804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456646795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &1458255739
 GameObject:
   m_ObjectHideFlags: 0
@@ -8674,6 +8786,7 @@ GameObject:
   - component: {fileID: 1536697060}
   - component: {fileID: 1536697061}
   - component: {fileID: 1536697062}
+  - component: {fileID: 1536697063}
   m_Layer: 0
   m_Name: ScribesTabButton
   m_TagString: Untagged
@@ -8810,6 +8923,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1536697063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536697056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &1587395650
 GameObject:
   m_ObjectHideFlags: 0
@@ -9341,7 +9467,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1179813542}
   m_HandleRect: {fileID: 1179813541}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10211,6 +10337,7 @@ GameObject:
   - component: {fileID: 1891525528}
   - component: {fileID: 1891525529}
   - component: {fileID: 1891525530}
+  - component: {fileID: 1891525531}
   m_Layer: 0
   m_Name: AutoBuyToggleButton
   m_TagString: Untagged
@@ -10347,6 +10474,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ButtonHoverScale
   HoverScale: 1.06
+--- !u!114 &1891525531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891525524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &1911441933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11560,6 +11700,7 @@ GameObject:
   - component: {fileID: 2076306372}
   - component: {fileID: 2076306371}
   - component: {fileID: 2076306370}
+  - component: {fileID: 2076306375}
   m_Layer: 0
   m_Name: ManagersTabButton
   m_TagString: Untagged
@@ -11696,6 +11837,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076306368}
   m_CullTransparentMesh: 1
+--- !u!114 &2076306375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076306368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69737eae5f5c77c4f817891ae23930dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.UIButtonClickSfx
+  overrideClip: {fileID: 0}
 --- !u!1 &2082300449
 GameObject:
   m_ObjectHideFlags: 0
@@ -11969,8 +12123,8 @@ RectTransform:
   m_GameObject: {fileID: 2110709982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.39, y: 1.39, z: 1.39}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6884106}
   - {fileID: 1911441934}

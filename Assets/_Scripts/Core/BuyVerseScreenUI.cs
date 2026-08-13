@@ -125,6 +125,7 @@ namespace ClickerGenesis.Core
 
         private void HandleBuy()
         {
+            AudioManager.Instance?.PlayPurchaseClick();
             if (showingChapters) Controller?.BuyNextChapter();
             // 2026-08-05, real bug fix: this used to just show a disabled "go unlock it on the
             // Chapters tab" message - the player had no way to actually open the gate from here.

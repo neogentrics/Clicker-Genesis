@@ -41,6 +41,9 @@ namespace ClickerGenesis.Core
         [Header("Generic SFX (default sound for any button without a specific one assigned - see UIButtonClickSfx)")]
         [SerializeField] private AudioClip genericClickSfx;
 
+        [Header("Purchase SFX (2026-08-12) - Scribe/Manager/Support/Verse Buy buttons, book-switch selects")]
+        [SerializeField] private AudioClip purchaseClickSfx;
+
         [Header("Crossfade")]
         [SerializeField] private float musicCrossfadeSeconds = 1.5f;
 
@@ -166,6 +169,11 @@ namespace ClickerGenesis.Core
         /// sound for any button without a specific one assigned. See UIButtonClickSfx for the
         /// attach-and-go component that calls this from a Button's onClick.</summary>
         public void PlayGenericClick() => PlaySfx(genericClickSfx);
+
+        /// <summary>Dedicated purchase/transaction click (2026-08-12, user-curated SwishSwoosh "Free
+        /// UI Click Sound Pack") - the coin-like Plastic click, used by every Buy/spend button
+        /// across Scribes/Managers/Support/BuyVerse instead of the generic click.</summary>
+        public void PlayPurchaseClick() => PlaySfx(purchaseClickSfx);
 
         public void PlayVoice(AudioClip clip)
         {

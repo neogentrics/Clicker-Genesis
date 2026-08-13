@@ -130,7 +130,11 @@ namespace ClickerGenesis.Core
                 // manager's symbolic icon often differs from their tier's object icon.
                 row.Icon.sprite = def.managerIcon;
                 row.Icon.color = row.Icon.sprite != null ? Color.white : new Color(0, 0, 0, 0);
-                row.BuyButton.onClick.AddListener(() => Controller.BuyManager(tierIndex));
+                row.BuyButton.onClick.AddListener(() =>
+                {
+                    AudioManager.Instance?.PlayPurchaseClick();
+                    Controller.BuyManager(tierIndex);
+                });
                 rows.Add(row);
             }
         }

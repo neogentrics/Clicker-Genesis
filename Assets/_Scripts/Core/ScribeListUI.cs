@@ -175,7 +175,11 @@ namespace ClickerGenesis.Core
                     ? Color.white
                     : Color.Lerp(Hex("#7A5C2E"), Hex("#D4AF37"), tierIndex / (float)(scribes.TierCount - 1));
 
-                row.BuyButton.onClick.AddListener(() => Controller.BuyScribeBulk(tierIndex));
+                row.BuyButton.onClick.AddListener(() =>
+                {
+                    AudioManager.Instance?.PlayPurchaseClick();
+                    Controller.BuyScribeBulk(tierIndex);
+                });
 
                 rows.Add(row);
             }
