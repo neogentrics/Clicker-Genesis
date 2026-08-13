@@ -54,6 +54,10 @@ namespace ClickerGenesis.Core
         public Button NotationCycleButton;
         public TMP_Text NotationLabel;
 
+        [Header("Font Family (2026-08-13) - real accessibility feature, cycles FontApplier.Library entries")]
+        public Button FontFamilyCycleButton;
+        public TMP_Text FontFamilyLabel;
+
         [Header("Fullscreen")]
         public Button FullscreenToggleButton;
         public TMP_Text FullscreenLabel;
@@ -138,6 +142,7 @@ namespace ClickerGenesis.Core
             if (FontSizeDownButton != null) FontSizeDownButton.onClick.AddListener(() => AdjustFontScale(-0.1f));
             if (FontSizeUpButton != null) FontSizeUpButton.onClick.AddListener(() => AdjustFontScale(0.1f));
             if (NotationCycleButton != null) NotationCycleButton.onClick.AddListener(CycleNotation);
+            if (FontFamilyCycleButton != null) FontFamilyCycleButton.onClick.AddListener(CycleFontFamily);
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
             if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
@@ -286,6 +291,23 @@ namespace ClickerGenesis.Core
             if (text != null) text.text = value;
         }
 
+        private void CycleFontFamily()
+        {
+            var library = FontApplier.Instance != null ? FontApplier.Instance.Library : null;
+            if (library == null || library.Entries == null || library.Entries.Length == 0) return;
+            GameSettings.FontChoice = (GameSettings.FontChoice + 1) % library.Entries.Length;
+            RefreshFontFamily();
+        }
+
+        private void RefreshFontFamily()
+        {
+            if (FontFamilyLabel != null) FontFamilyLabel.text = "Font Family";
+            var library = FontApplier.Instance != null ? FontApplier.Instance.Library : null;
+            if (library == null || library.Entries == null || library.Entries.Length == 0) return;
+            int index = Mathf.Clamp(GameSettings.FontChoice, 0, library.Entries.Length - 1);
+            SetButtonText(FontFamilyCycleButton, library.Entries[index].DisplayName);
+        }
+
         private void ToggleFullscreen()
         {
             bool newState = !GameSettings.Fullscreen;
@@ -413,6 +435,7 @@ namespace ClickerGenesis.Core
             RefreshVoiceVolume();
             RefreshFontSize();
             RefreshNotation();
+            RefreshFontFamily();
             RefreshFullscreen();
             RefreshResolution();
             RefreshBatterySaver();

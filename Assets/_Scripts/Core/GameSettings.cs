@@ -22,6 +22,7 @@ namespace ClickerGenesis.Core
         private const string ManagerAutoBuyEnabledKey = "ClickerGenesis.ManagerAutoBuyEnabled";
         private const string ManagerAutoBuyReserveIndexKey = "ClickerGenesis.ManagerAutoBuyReserveIndex";
         private const string OrientationKey = "ClickerGenesis.Orientation";
+        private const string FontChoiceKey = "ClickerGenesis.FontChoice";
         private const string ScrollSpeedKey = "ClickerGenesis.ScrollSpeed";
         private const string MasterVolumeKey = "ClickerGenesis.MasterVolume";
         private const string SfxVolumeKey = "ClickerGenesis.SfxVolume";
@@ -106,6 +107,21 @@ namespace ClickerGenesis.Core
         /// <summary>Unity's Screen.orientation lock only does anything meaningful on mobile - on
         /// desktop the OS window manager owns rotation, so ResponsiveCanvasController skips setting
         /// it there (still recomputes the reference resolution live either way).</summary>
+        /// <summary>Index into FontLibrary.Entries (2026-08-13, real accessibility feature - "if the
+        /// player doesn't like the font, or it's hard for them to read depending on their age, they
+        /// can pick a different one"). Default 0 = Ibarra Real Nova, the existing project default.
+        /// Applied live by FontApplier on every scene load and on change.</summary>
+        public static int FontChoice
+        {
+            get => PlayerPrefs.GetInt(FontChoiceKey, 0);
+            set
+            {
+                PlayerPrefs.SetInt(FontChoiceKey, value);
+                PlayerPrefs.Save();
+                OnChanged?.Invoke();
+            }
+        }
+
         public static bool IsOrientationLockSupported =>
             Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.IPhonePlayer;
 
