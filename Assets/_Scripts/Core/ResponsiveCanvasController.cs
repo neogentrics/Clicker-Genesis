@@ -71,41 +71,30 @@ namespace ClickerGenesis.Core
 
         private void Apply()
         {
-            var pref = GameSettings.Orientation;
+            // Landscape-only (2026-08-12, user's explicit call): Unity's CanvasScaler can't serve
+            // one scene layout correctly in both orientations at once - fixing portrait invariably
+            // broke landscape and vice versa, and duplicating every scene for a portrait-specific
+            // layout was judged not worth it. The app is locked to landscape at the OS level
+            // (Project Settings > Player > Allowed Orientations for Auto Rotation - Portrait and
+            // Portrait Upside Down both unchecked), so Screen.height should never legitimately
+            // exceed Screen.width; this just makes sure the reference resolution can't drift back
+            // into a portrait layout even if that assumption is ever violated transiently.
             lastWidth = Screen.width;
             lastHeight = Screen.height;
-            lastPreference = pref;
-
-            bool isPortrait = pref switch
-            {
-                OrientationPreference.Portrait => true,
-                OrientationPreference.Landscape => false,
-                _ => Screen.height >= Screen.width
-            };
+            lastPreference = GameSettings.Orientation;
 
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
             scaler.matchWidthOrHeight = 0.5f;
-            scaler.referenceResolution = isPortrait ? PortraitReference : LandscapeReference;
+            scaler.referenceResolution = LandscapeReference;
 
             if (GameSettings.IsOrientationLockSupported)
             {
-                switch (pref)
-                {
-                    case OrientationPreference.Portrait:
-                        Screen.orientation = ScreenOrientation.Portrait;
-                        break;
-                    case OrientationPreference.Landscape:
-                        Screen.orientation = ScreenOrientation.LandscapeLeft;
-                        break;
-                    default:
-                        Screen.orientation = ScreenOrientation.AutoRotation;
-                        Screen.autorotateToPortrait = true;
-                        Screen.autorotateToPortraitUpsideDown = true;
-                        Screen.autorotateToLandscapeLeft = true;
-                        Screen.autorotateToLandscapeRight = true;
-                        break;
-                }
+                Screen.orientation = ScreenOrientation.AutoRotation;
+                Screen.autorotateToPortrait = false;
+                Screen.autorotateToPortraitUpsideDown = false;
+                Screen.autorotateToLandscapeLeft = true;
+                Screen.autorotateToLandscapeRight = true;
             }
         }
     }

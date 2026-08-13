@@ -910,8 +910,8 @@ RectTransform:
   m_GameObject: {fileID: 267635501}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.88, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1612979431}
   - {fileID: 1312485010}
@@ -1302,9 +1302,9 @@ RectTransform:
   - {fileID: 1268827318}
   m_Father: {fileID: 1433510968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.55, y: 0}
-  m_AnchoredPosition: {x: 689.9, y: 802.6}
+  m_AnchorMin: {x: 0, y: 0.37865275}
+  m_AnchorMax: {x: 0.55, y: 0.37865275}
+  m_AnchoredPosition: {x: 777, y: 375}
   m_SizeDelta: {x: -30, y: 90}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &450274331
@@ -3875,9 +3875,9 @@ RectTransform:
   - {fileID: 435368444}
   m_Father: {fileID: 1433510968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -765}
+  m_AnchorMin: {x: 0, y: 0.63908625}
+  m_AnchorMax: {x: 1, y: 0.63908625}
+  m_AnchoredPosition: {x: 0, y: -379}
   m_SizeDelta: {x: -240, y: 130}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1234478710
@@ -3946,6 +3946,7 @@ GameObject:
   - component: {fileID: 1246981768}
   - component: {fileID: 1246981767}
   - component: {fileID: 1246981773}
+  - component: {fileID: 1246981774}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -4105,6 +4106,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ResponsiveCanvasController
   PortraitReference: {x: 1080, y: 1920}
   LandscapeReference: {x: 1920, y: 1080}
+--- !u!114 &1246981774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246981766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd7ea07b81544045b2750918736ad66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.PortraitPanelStack
+  TopInPortrait: {fileID: 1433510968}
+  BottomInPortrait: {fileID: 1265398638}
+  TopHeightFraction: 0.5
+  Gap: 12
+  ShrinkInPortrait: []
+  ShrinkFactor: 0.65
 --- !u!1 &1259134447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6953,7 +6972,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5, y: -32.7}
+  m_AnchoredPosition: {x: 5, y: -32.69995}
   m_SizeDelta: {x: -80, y: 70.6}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1914887327
@@ -7348,15 +7367,15 @@ RectTransform:
   m_GameObject: {fileID: 1958495557}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.59, y: 9.81, z: 10.41}
+  m_LocalScale: {x: 12.7, y: 9.81, z: 10.41}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 267635502}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19.1}
-  m_SizeDelta: {x: 0, y: 16}
+  m_AnchoredPosition: {x: 0, y: -18}
+  m_SizeDelta: {x: 0, y: 14.000002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1958495559
 MonoBehaviour:
@@ -7671,7 +7690,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -49.69995, y: -128.29999}
+  m_AnchoredPosition: {x: -49.69995, y: -123}
   m_SizeDelta: {x: 90, y: 90}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2057982059

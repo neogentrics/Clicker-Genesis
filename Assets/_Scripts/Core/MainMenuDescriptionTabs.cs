@@ -40,6 +40,21 @@ namespace ClickerGenesis.Core
         private static string BuildChangelogText()
         {
             return
+                "<b>v0.4.6 Beta</b>\n" +
+                "Locked the app to landscape orientation (portrait couldn't be supported in the " +
+                "same scenes without breaking landscape). Settings toggles now show ON/OFF right " +
+                "on the button (green/red, glowing when on) instead of separate inert text. Fixed " +
+                "hard-to-read Settings text and redesigned the Number Format/Scroll Speed rows.\n\n" +
+                "<b>v0.4.5 Beta</b>\n" +
+                "Live playtesting fix batch: real player build pipeline fix, book-picker click " +
+                "reliability, Pause Menu/Stats/Credits redesign work.\n\n" +
+                "<b>v0.4.1-0.4.4 Beta</b>\n" +
+                "Full 655-achievement system with real UI, Sound & Audio system (mixer, volume " +
+                "controls, music zones), Grace Skill Tree V2 (real economy + Old Testament " +
+                "content), first Android build, desktop auto-update support, real mobile-device " +
+                "layout fixes.\n\n" +
+                "<b>v0.4.0</b>\n" +
+                "KJV-scoped achievement system (headline set), Settings orientation support.\n\n" +
                 "<b>v0.3.3</b>\n" +
                 "Managers/Support tab redesign, first Mac build.\n\n" +
                 "<b>v0.3.2</b>\n" +

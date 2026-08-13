@@ -141,8 +141,12 @@ namespace ClickerGenesis.Core
             if (FullscreenToggleButton != null) FullscreenToggleButton.onClick.AddListener(ToggleFullscreen);
             if (BatterySaverToggleButton != null) BatterySaverToggleButton.onClick.AddListener(ToggleBatterySaver);
             if (RunInBackgroundToggleButton != null) RunInBackgroundToggleButton.onClick.AddListener(ToggleRunInBackground);
+            // Landscape-only lock (2026-08-12) - orientation is no longer a player-facing choice
+            // (locked at the OS level via Player Settings), so this row is always hidden now,
+            // not just on desktop.
             if (OrientationCycleButton != null) OrientationCycleButton.onClick.AddListener(CycleOrientation);
-            if (!GameSettings.IsOrientationLockSupported) OrientationCycleButton?.gameObject.SetActive(false);
+            OrientationCycleButton?.gameObject.SetActive(false);
+            OrientationLabel?.gameObject.SetActive(false);
             if (ScrollSpeedCycleButton != null) ScrollSpeedCycleButton.onClick.AddListener(CycleScrollSpeed);
             if (DeleteSaveButton != null) DeleteSaveButton.onClick.AddListener(ShowDeleteConfirm);
             if (DeleteConfirmYesButton != null) DeleteConfirmYesButton.onClick.AddListener(HandleDeleteConfirmYes);
@@ -204,7 +208,37 @@ namespace ClickerGenesis.Core
 
         private void RefreshMasterMute()
         {
-            if (MasterMuteLabel != null) MasterMuteLabel.text = GameSettings.MasterMuted ? "Mute: On" : "Mute: Off";
+            if (MasterMuteLabel != null) MasterMuteLabel.text = "Mute";
+            SetToggleButtonText(MasterMuteButton, GameSettings.MasterMuted);
+        }
+
+        private static readonly Color ToggleOnColor = new Color(0.30f, 0.85f, 0.35f);
+        private static readonly Color ToggleOffColor = new Color(0.85f, 0.25f, 0.22f);
+
+        /// <summary>These toggle buttons (Mute/Fullscreen/Battery Saver/Run in Background) read as
+        /// plain unlabeled squares next to a separate "X: On/Off" text row - user's explicit
+        /// correction (2026-08-12): if clicking the button is what flips the state, the ON/OFF
+        /// state belongs ON the button (like a real checkbox), not off to the side on inert row
+        /// text. The row label now just names the setting; the button itself shows and color-codes
+        /// the current state via its own TMP_Text child - green ON / red OFF (same day, second
+        /// correction: green-vs-muted-brown wasn't a clear enough OFF signal), plus a real glow
+        /// (UI Outline component, same technique as the Skill Tree's owned-node glow) so the state
+        /// still reads even if the text color alone is hard to make out.</summary>
+        private static void SetToggleButtonText(Button button, bool on)
+        {
+            if (button == null) return;
+            var text = button.GetComponentInChildren<TMP_Text>();
+            if (text != null)
+            {
+                text.text = on ? "ON" : "OFF";
+                text.color = on ? ToggleOnColor : ToggleOffColor;
+            }
+
+            var outline = button.GetComponent<Outline>();
+            if (outline == null) outline = button.gameObject.AddComponent<Outline>();
+            outline.effectColor = on ? new Color(ToggleOnColor.r, ToggleOnColor.g, ToggleOnColor.b, 0.85f) : new Color(0f, 0f, 0f, 0f);
+            outline.effectDistance = new Vector2(3f, -3f);
+            outline.enabled = on;
         }
 
         private void RefreshMasterVolume()
@@ -239,6 +273,17 @@ namespace ClickerGenesis.Core
         {
             GameSettings.Notation = (NumberNotation)(((int)GameSettings.Notation + 1) % 3);
             RefreshNotation();
+        }
+
+        /// <summary>Plain (non-color-coded) button-text setter, for cycle buttons that select
+        /// between named options rather than toggling on/off - user's explicit correction
+        /// (2026-08-12): the button should show which option it's about to select ("Scientific",
+        /// "Normal"), not a generic "Change"/duplicate of the row's own label.</summary>
+        private static void SetButtonText(Button button, string value)
+        {
+            if (button == null) return;
+            var text = button.GetComponentInChildren<TMP_Text>();
+            if (text != null) text.text = value;
         }
 
         private void ToggleFullscreen()
@@ -352,11 +397,11 @@ namespace ClickerGenesis.Core
 
         private void RefreshScrollSpeed()
         {
-            if (ScrollSpeedLabel == null) return;
+            if (ScrollSpeedLabel != null) ScrollSpeedLabel.text = "Scroll Speed";
             string label = "Normal";
             foreach (var step in ScrollSpeedSteps)
                 if (Mathf.Approximately(step.value, GameSettings.ScrollSpeed)) { label = step.label; break; }
-            ScrollSpeedLabel.text = "Scroll Speed: " + label;
+            SetButtonText(ScrollSpeedCycleButton, label);
         }
 
         private void RefreshAll()
@@ -383,14 +428,15 @@ namespace ClickerGenesis.Core
 
         private void RefreshNotation()
         {
-            if (NotationLabel == null) return;
             double example = 1234567.0;
-            NotationLabel.text = $"Number Format: {GameSettings.Notation}  (e.g. {NumberFormatter.Format(example)})";
+            if (NotationLabel != null) NotationLabel.text = $"Number Format\n(e.g. {NumberFormatter.Format(example)})";
+            SetButtonText(NotationCycleButton, GameSettings.Notation.ToString());
         }
 
         private void RefreshFullscreen()
         {
-            if (FullscreenLabel != null) FullscreenLabel.text = GameSettings.Fullscreen ? "Fullscreen: On" : "Fullscreen: Off";
+            if (FullscreenLabel != null) FullscreenLabel.text = "Fullscreen";
+            SetToggleButtonText(FullscreenToggleButton, GameSettings.Fullscreen);
         }
 
         private void RefreshResolution()
@@ -417,13 +463,14 @@ namespace ClickerGenesis.Core
         private void RefreshBatterySaver()
         {
             if (BatterySaverLabel != null)
-                BatterySaverLabel.text = GameSettings.BatterySaver ? "Battery Saver: On (30fps)" : "Battery Saver: Off";
+                BatterySaverLabel.text = GameSettings.BatterySaver ? "Battery Saver (30fps)" : "Battery Saver";
+            SetToggleButtonText(BatterySaverToggleButton, GameSettings.BatterySaver);
         }
 
         private void RefreshRunInBackground()
         {
-            if (RunInBackgroundLabel != null)
-                RunInBackgroundLabel.text = GameSettings.RunInBackground ? "Run in Background: On" : "Run in Background: Off";
+            if (RunInBackgroundLabel != null) RunInBackgroundLabel.text = "Run in Background";
+            SetToggleButtonText(RunInBackgroundToggleButton, GameSettings.RunInBackground);
         }
 
         /// <summary>Opens the confirmation popup - the actual delete never happens on the first
