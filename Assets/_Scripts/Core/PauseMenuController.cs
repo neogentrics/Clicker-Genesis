@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -122,6 +123,9 @@ namespace ClickerGenesis.Core
             }
         }
 
+        private CanvasGroup overlayCanvasGroup;
+        private Coroutine openAnimCoroutine;
+
         public void Show()
         {
             if (OverlayRoot != null) OverlayRoot.SetActive(true);
@@ -130,6 +134,35 @@ namespace ClickerGenesis.Core
             if (StatsPanel != null) StatsPanel.SetActive(false);
             if (CreditsPanel != null) CreditsPanel.SetActive(false);
             if (MainPanel != null) MainPanel.SetActive(true);
+
+            // Bug #127 (2026-08-16): the overlay used to just pop onto screen instantly with no
+            // transition, inconsistent with the entrance animations already added elsewhere in the
+            // project. Real scale+fade-in, cheap enough to run every open (no external tween lib).
+            if (OverlayRoot != null)
+            {
+                if (overlayCanvasGroup == null) overlayCanvasGroup = OverlayRoot.GetComponent<CanvasGroup>();
+                if (overlayCanvasGroup == null) overlayCanvasGroup = OverlayRoot.AddComponent<CanvasGroup>();
+                if (openAnimCoroutine != null) StopCoroutine(openAnimCoroutine);
+                openAnimCoroutine = StartCoroutine(PlayOpenAnimation());
+            }
+        }
+
+        private IEnumerator PlayOpenAnimation()
+        {
+            var rt = OverlayRoot.transform as RectTransform;
+            const float duration = 0.18f;
+            float t = 0f;
+            while (t < duration)
+            {
+                t += Time.unscaledDeltaTime;
+                float p = Mathf.Clamp01(t / duration);
+                float eased = 1f - (1f - p) * (1f - p); // ease-out
+                overlayCanvasGroup.alpha = eased;
+                if (rt != null) rt.localScale = Vector3.one * Mathf.Lerp(0.92f, 1f, eased);
+                yield return null;
+            }
+            overlayCanvasGroup.alpha = 1f;
+            if (rt != null) rt.localScale = Vector3.one;
         }
 
         public void Hide()

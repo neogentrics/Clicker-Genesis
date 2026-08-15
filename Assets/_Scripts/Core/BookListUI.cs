@@ -23,7 +23,15 @@ namespace ClickerGenesis.Core
             public TMP_Text CostText;
             public Button Button;
             public HoverTooltip Tooltip;
+            public ColorBlock DefaultColors;
         }
+
+        // Bug #123 (2026-08-16): Active and Locked rows both set Button.interactable = false, so
+        // Unity's Selectable applies the SAME disabledColor tint to both - they were visually
+        // indistinguishable except by their text. Active rows get this lit gold tint on the
+        // button's disabledColor slot instead, while Locked rows keep the row's own default
+        // (dim gray) disabledColor, captured once per row in BuildRows.
+        private static readonly Color ActiveDisabledColor = new Color(0.85f, 0.68f, 0.25f, 1f);
 
         public Transform Content;
         public GameObject RowTemplate;
@@ -91,11 +99,15 @@ namespace ClickerGenesis.Core
                     // are already self-explanatory without one.
                     Tooltip = rowGo.gameObject.AddComponent<HoverTooltip>()
                 };
-                if (row.Button != null) row.Button.onClick.AddListener(() =>
+                if (row.Button != null)
                 {
-                    AudioManager.Instance?.PlayGenericClick();
-                    Controller.SwitchActiveBook(id);
-                });
+                    row.DefaultColors = row.Button.colors;
+                    row.Button.onClick.AddListener(() =>
+                    {
+                        AudioManager.Instance?.PlayGenericClick();
+                        Controller.SwitchActiveBook(id);
+                    });
+                }
                 rows.Add(row);
             }
 
@@ -145,12 +157,16 @@ namespace ClickerGenesis.Core
                 {
                     row.CostText.text = "Reading now";
                     row.Button.interactable = false;
+                    var lit = row.DefaultColors;
+                    lit.disabledColor = ActiveDisabledColor;
+                    row.Button.colors = lit;
                     row.Tooltip.enabled = false;
                 }
                 else if (canSwitch)
                 {
                     row.CostText.text = "Switch";
                     row.Button.interactable = true;
+                    row.Button.colors = row.DefaultColors;
                     row.Tooltip.enabled = false;
                 }
                 else
@@ -161,6 +177,7 @@ namespace ClickerGenesis.Core
                     // see GameLoopController.CanSwitchToBook's doc comment).
                     row.CostText.text = "Locked";
                     row.Button.interactable = false;
+                    row.Button.colors = row.DefaultColors;
                     row.Tooltip.enabled = true;
                     row.Tooltip.Text = "Can be unlocked in the Skill Tree after a prestige is done.";
                 }

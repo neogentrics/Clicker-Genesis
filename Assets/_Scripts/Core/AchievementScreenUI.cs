@@ -57,6 +57,7 @@ namespace ClickerGenesis.Core
             public GameObject Root;
             public Image Icon;
             public Image Frame;
+            public Outline HoverGlow;
         }
 
         [Header("Header")]
@@ -979,7 +980,17 @@ namespace ClickerGenesis.Core
                     iconRt.anchoredPosition -= (iconSize - slotSize) * (new Vector2(0.5f, 0.5f) - iconRt.pivot);
                 }
 
-                var galleryCard = new GalleryCard { Def = def, Root = tileGo, Icon = icon, Frame = frame };
+                // Bug #126 (2026-08-16): hovering a diamond correctly updated the description text
+                // above, but nothing on the diamond itself showed which one was hovered - added a
+                // real Outline glow (same technique as the Skill Tree's owned-node glow and the
+                // Settings toggle-button glow), off by default, toggled by the same hover handlers
+                // that already drive the description text.
+                var glow = (frame != null ? frame.gameObject : icon.gameObject).AddComponent<Outline>();
+                glow.effectColor = new Color(1f, 0.85f, 0.35f, 0.95f);
+                glow.effectDistance = new Vector2(4f, -4f);
+                glow.enabled = false;
+
+                var galleryCard = new GalleryCard { Def = def, Root = tileGo, Icon = icon, Frame = frame, HoverGlow = glow };
                 galleryCards.Add(galleryCard);
 
                 // Shared-panel hover (not a per-tile tooltip) via a runtime EventTrigger - avoids
@@ -987,10 +998,18 @@ namespace ClickerGenesis.Core
                 // this screen's own shared description fields.
                 var trigger = tileGo.AddComponent<UnityEngine.EventSystems.EventTrigger>();
                 var enterEntry = new UnityEngine.EventSystems.EventTrigger.Entry { eventID = UnityEngine.EventSystems.EventTriggerType.PointerEnter };
-                enterEntry.callback.AddListener(_ => ShowGalleryDescription(galleryCard.Def));
+                enterEntry.callback.AddListener(_ =>
+                {
+                    ShowGalleryDescription(galleryCard.Def);
+                    if (galleryCard.HoverGlow != null) galleryCard.HoverGlow.enabled = true;
+                });
                 trigger.triggers.Add(enterEntry);
                 var exitEntry = new UnityEngine.EventSystems.EventTrigger.Entry { eventID = UnityEngine.EventSystems.EventTriggerType.PointerExit };
-                exitEntry.callback.AddListener(_ => ClearGalleryDescription());
+                exitEntry.callback.AddListener(_ =>
+                {
+                    ClearGalleryDescription();
+                    if (galleryCard.HoverGlow != null) galleryCard.HoverGlow.enabled = false;
+                });
                 trigger.triggers.Add(exitEntry);
             }
         }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -28,7 +29,25 @@ namespace ClickerGenesis.Core
 
             if (BackButton != null) BackButton.onClick.AddListener(GoBack);
             if (Body != null) Body.text = PauseMenuController.BuildCreditsText();
-            if (ScrollView != null) ScrollView.verticalNormalizedPosition = 1f; // start at top
+
+            // Bug #124 (2026-08-16): setting verticalNormalizedPosition here landed at the BOTTOM
+            // instead of the top - Awake() runs before ScrollRect's content has a real height (the
+            // TMP body text and its layout haven't been rebuilt yet), so ScrollRect's own internal
+            // position math computes against a near-zero content size and settles at 0 (bottom) once
+            // the real layout resolves later in the frame. Force the rebuild first, THEN set the
+            // position, and re-assert one frame later since a font/TMP rebuild can still land after
+            // the first ForceRebuildLayoutImmediate call.
+            if (ScrollView != null) StartCoroutine(ResetToTop());
+        }
+
+        private IEnumerator ResetToTop()
+        {
+            Canvas.ForceUpdateCanvases();
+            if (ScrollView.content != null)
+                LayoutRebuilder.ForceRebuildLayoutImmediate(ScrollView.content);
+            ScrollView.verticalNormalizedPosition = 1f;
+            yield return null;
+            ScrollView.verticalNormalizedPosition = 1f;
         }
 
         private void Update()
