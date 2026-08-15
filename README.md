@@ -23,7 +23,7 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.4.7 Beta** — pre-release, core loop implemented and playable.
+**Version 0.4.8 Beta** — pre-release, core loop implemented and playable.
 
 **What 0.4.7 fixes is worth stating plainly, because it was a real bug with a real cause.** UI elements shifted position whenever the screen resolution changed. Every screen's `CanvasScaler` was set to `matchWidthOrHeight = 0.5`, a blend of width- and height-matching, which means that on any aspect ratio other than the 16:9 reference the canvas changes size in *both* dimensions at once. On a modern phone in landscape that made the coordinate space up to **114 units shorter** than it was authored against, dragging top- and bottom-anchored elements toward each other while left/right ones spread apart. Nothing was anchored wrongly — the coordinate space itself was moving. Switching to `matchWidthOrHeight = 1.0` (match height) makes the canvas exactly 1080 units tall on every device, so vertical layout is now invariant and a wider phone simply gets more horizontal room. Measured vertical drift across seven real device aspect ratios went from −148…+167 units to **exactly zero**.
 
@@ -37,10 +37,10 @@ This is an active work-in-progress being built in public as part of a developmen
 
 | Platform | Download | Minimum version |
 |---|---|---|
-| 🪟 Windows | [ClickerGenesis-Windows-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Windows-v0.4.7.zip) | Windows 10 64-bit or later |
-| 🍎 macOS | [ClickerGenesis-Mac-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Mac-v0.4.7.zip) | macOS 12.0 (Monterey) or later |
-| 🐧 Linux | [ClickerGenesis-Linux-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Linux-v0.4.7.zip)  | Most 64-bit distros with a modern GL/Vulkan driver |
-| 🤖 Android | [ClickerGenesis-Android-v0.4.7.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Android-v0.4.7.apk) | Android 8.0 (Oreo, API 26) or later |
+| 🪟 Windows | [ClickerGenesis-Windows-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Windows-v0.4.8.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Mac-v0.4.8.zip) | macOS 12.0 (Monterey) or later |
+| 🐧 Linux | [ClickerGenesis-Linux-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Linux-v0.4.8.zip)  | Most 64-bit distros with a modern GL/Vulkan driver |
+| 🤖 Android | [ClickerGenesis-Android-v0.4.8.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Android-v0.4.8.apk) | Android 8.0 (Oreo, API 26) or later |
 
 > All four platforms now ship together on every release, per the project's standing release-process rule — no more platform-lag between Windows and the rest.
 
