@@ -45,6 +45,11 @@ namespace ClickerGenesis.Core
         public Button VoiceVolumePlusButton;
         public TMP_Text VoiceVolumeLabel;
 
+        [Header("Audio - per-screen SFX mute (2026-08-13, real user ask on top of Master Mute)")]
+        public Button PerScreenSoundButton;
+        public GameObject PerScreenSoundPanel;
+        public Button PerScreenSoundCloseButton;
+
         [Header("Font size")]
         public Button FontSizeDownButton;
         public Button FontSizeUpButton;
@@ -138,6 +143,10 @@ namespace ClickerGenesis.Core
             if (MusicVolumePlusButton != null) MusicVolumePlusButton.onClick.AddListener(() => { GameSettings.MusicVolume += 0.1f; RefreshMusicVolume(); });
             if (VoiceVolumeMinusButton != null) VoiceVolumeMinusButton.onClick.AddListener(() => { GameSettings.VoiceVolume -= 0.1f; RefreshVoiceVolume(); });
             if (VoiceVolumePlusButton != null) VoiceVolumePlusButton.onClick.AddListener(() => { GameSettings.VoiceVolume += 0.1f; RefreshVoiceVolume(); });
+
+            if (PerScreenSoundButton != null) PerScreenSoundButton.onClick.AddListener(() => PerScreenSoundPanel?.SetActive(true));
+            if (PerScreenSoundCloseButton != null) PerScreenSoundCloseButton.onClick.AddListener(() => PerScreenSoundPanel?.SetActive(false));
+            if (PerScreenSoundPanel != null) PerScreenSoundPanel.SetActive(false);
 
             if (FontSizeDownButton != null) FontSizeDownButton.onClick.AddListener(() => AdjustFontScale(-0.1f));
             if (FontSizeUpButton != null) FontSizeUpButton.onClick.AddListener(() => AdjustFontScale(0.1f));

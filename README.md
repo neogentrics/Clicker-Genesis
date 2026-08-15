@@ -5,20 +5,29 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 > Micro-transactions exist in the eventual design but are never required for progress or content. Scripture text is never altered, paraphrased, or reinterpreted — only unedited, recognized translations are used (KJV in v1). This constraint overrides convenience in every implementation decision.
 
 <p align="center">
-  <img src="docs/screenshots/clicker-scribes.png" width="45%" alt="Clicker screen, Scribes tab — tap for Ink, passive scribe income, milestone bonuses" />
-  <img src="docs/screenshots/clicker-managers.png" width="45%" alt="Clicker screen, Managers tab — color-coded unlock requirements, real bonus display" />
+  <img src="docs/screenshots/logo.png" width="120" alt="Clicker Genesis logo — a Bible with an ink drop cut from the cover" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/01-main-menu.webp" width="45%" alt="Main menu — parchment and wood UI, version watermark" />
+  <img src="docs/screenshots/05-buy-verse.webp" width="45%" alt="Buy Verse screen — Genesis 2:14 revealed in full KJV text beside the verse list" />
 </p>
 <p align="center">
-  <img src="docs/screenshots/clicker-support.png" width="45%" alt="Clicker screen, Support tab — hire submanagers for cost discounts or output boosts" />
-  <img src="docs/screenshots/buy-verse-screen.png" width="45%" alt="Buy Verse screen — spend Ink on the next verse, real KJV text reveal" />
+  <img src="docs/screenshots/02-clicker-scribes.webp" width="45%" alt="Clicker screen, Scribes tab — tap for Ink, passive scribe income, milestone bonuses" />
+  <img src="docs/screenshots/03-clicker-managers.webp" width="45%" alt="Clicker screen, Managers tab — colour-coded unlock requirements and real bonus lines" />
 </p>
 <p align="center">
-  <img src="docs/screenshots/skill-tree.png" width="70%" alt="Grace Skill Tree — radial node layout against a nebula backdrop" />
+  <img src="docs/screenshots/04-clicker-support.webp" width="45%" alt="Clicker screen, Support tab — submanagers for cost discounts and output boosts" />
+  <img src="docs/screenshots/08-stats.webp" width="45%" alt="Stats screen — Ink, Grace, progress, current output and every active bonus" />
 </p>
 
 ## Status
 
-**Version 0.4.6 Beta** — pre-release, core loop implemented and playable. Recent headline changes: the game now **locks to landscape orientation** at the OS level (portrait/live-rotation was built and verified working, but Unity's `CanvasScaler` can't correctly serve one layout in both orientations at once — landscape-only was the better call, and it resolves the "wide desktop layout on a real phone" bug for good); a full **Settings screen readability/UX pass** (toggle buttons now show ON/OFF with a real glow directly on the button instead of separate inert text, cycle buttons show their actual selected value, all row text switched to bold for legibility against parchment); a real **Font Family selector** (accessibility — pick between Ibarra Real Nova, Jost, Roboto, or Liberation Sans, live-applies everywhere, no restart); and **real purchase-click SFX** wired into every Scribe/Manager/Support/Verse/Chapter buy button (was silent before). 0.4.5 shipped a real **Achievement screen visual overhaul** — shader-driven cards color-coded by category — plus a **Sound & Audio System** (mixer-driven Master/SFX/Music/Voice volume, music zones per screen), a **desktop auto-update system** (opt-in — nothing downloads without an explicit click), and **Credits/Stats** promoted to their own standalone screens. 0.4.1 shipped a redesigned **Grace Skill Tree V2** (fog-of-war constellation UI, 146 nodes of real Old Testament content). 0.4.0 shipped the **Achievement system** itself — now at **740 real achievements** generated straight from the game's own live data, browsable in a tabbed card grid with bronze/silver/gold difficulty tiers and spoiler-safe hidden entries.
+**Version 0.4.7 Beta** — pre-release, core loop implemented and playable.
+
+**What 0.4.7 fixes is worth stating plainly, because it was a real bug with a real cause.** UI elements shifted position whenever the screen resolution changed. Every screen's `CanvasScaler` was set to `matchWidthOrHeight = 0.5`, a blend of width- and height-matching, which means that on any aspect ratio other than the 16:9 reference the canvas changes size in *both* dimensions at once. On a modern phone in landscape that made the coordinate space up to **114 units shorter** than it was authored against, dragging top- and bottom-anchored elements toward each other while left/right ones spread apart. Nothing was anchored wrongly — the coordinate space itself was moving. Switching to `matchWidthOrHeight = 1.0` (match height) makes the canvas exactly 1080 units tall on every device, so vertical layout is now invariant and a wider phone simply gets more horizontal room. Measured vertical drift across seven real device aspect ratios went from −148…+167 units to **exactly zero**.
+
+Four screens — Skill Tree (both canvases), Save Slots and New Game Setup — had never received the responsive controller at all, and the Skill Tree was still carrying a *portrait* reference resolution on a landscape-locked game. All four are fixed. The Android `versionCode` was also still `1` after four Android releases, which would have caused Google Play to reject the first store submission outright; it now increments properly.
 
 Also built since 0.4.1, not yet its own version bump: a real **3-slot save system** — New Game walks you through a translation and starting-book choice, each of the 3 slots is independently save/load/delete/copy-able and shows its own completion summary (active book, level, % complete) from the slot picker.
 
@@ -28,10 +37,10 @@ This is an active work-in-progress being built in public as part of a developmen
 
 | Platform | Download | Minimum version |
 |---|---|---|
-| 🪟 Windows | [ClickerGenesis-Windows-v0.4.6.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.6/ClickerGenesis-Windows-v0.4.6.zip) | Windows 10 64-bit or later |
-| 🍎 macOS | [ClickerGenesis-Mac-v0.4.6.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.6/ClickerGenesis-Mac-v0.4.6.zip) | macOS 12.0 (Monterey) or later |
-| 🐧 Linux | [ClickerGenesis-Linux-v0.4.6.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.6/ClickerGenesis-Linux-v0.4.6.zip) *(first Linux build for this project)* | Most 64-bit distros with a modern GL/Vulkan driver |
-| 🤖 Android | [ClickerGenesis-Android-v0.4.6.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.6/ClickerGenesis-Android-v0.4.6.apk) | Android 8.0 (Oreo, API 26) or later |
+| 🪟 Windows | [ClickerGenesis-Windows-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Windows-v0.4.7.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Mac-v0.4.7.zip) | macOS 12.0 (Monterey) or later |
+| 🐧 Linux | [ClickerGenesis-Linux-v0.4.7.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Linux-v0.4.7.zip)  | Most 64-bit distros with a modern GL/Vulkan driver |
+| 🤖 Android | [ClickerGenesis-Android-v0.4.7.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.7/ClickerGenesis-Android-v0.4.7.apk) | Android 8.0 (Oreo, API 26) or later |
 
 > All four platforms now ship together on every release, per the project's standing release-process rule — no more platform-lag between Windows and the rest.
 

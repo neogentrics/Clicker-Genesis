@@ -761,6 +761,7 @@ GameObject:
   - component: {fileID: 355825499}
   - component: {fileID: 355825498}
   - component: {fileID: 355825497}
+  - component: {fileID: 355825501}
   m_Layer: 0
   m_Name: SkillTreeScreen
   m_TagString: Untagged
@@ -857,6 +858,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &355825501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355825496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bf2e7f90c55ea428cbd6dced0d0cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ResponsiveCanvasController
+  PortraitReference: {x: 1080, y: 1920}
+  LandscapeReference: {x: 1920, y: 1080}
 --- !u!1 &512095523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1451,8 +1466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 327e1a02dfbd6134a87f4211d3530a6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Progression.SkillTreeV2.SkillTreeUIManager
-  database: {fileID: 11400000, guid: 33d13c906cecb7a44a9cbfe74c6b9373, type: 2}
-  startingGrace: 5000
   scrollRect: {fileID: 1889762974}
   content: {fileID: 1956551979}
   lineLayer: {fileID: 220952621}
@@ -1470,6 +1483,12 @@ MonoBehaviour:
   descriptionTitleLabel: {fileID: 22271676}
   descriptionBodyLabel: {fileID: 1071835561}
   graceReadoutLabel: {fileID: 1757490658}
+  zoomInButton: {fileID: 0}
+  zoomOutButton: {fileID: 0}
+  confirmPanel: {fileID: 0}
+  confirmMessageLabel: {fileID: 0}
+  confirmYesButton: {fileID: 0}
+  confirmNoButton: {fileID: 0}
 --- !u!1 &1425103083
 GameObject:
   m_ObjectHideFlags: 0

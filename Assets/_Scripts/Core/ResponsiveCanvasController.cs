@@ -85,7 +85,28 @@ namespace ClickerGenesis.Core
 
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
             scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
-            scaler.matchWidthOrHeight = 0.5f;
+
+            // MATCH HEIGHT (1.0), not the old 0.5 blend. This is the real fix for
+            // "every time the resolution changes, the buttons get misplaced".
+            //
+            // At 0.5 the canvas scale is a blend of width-match and height-match, so
+            // on any aspect other than the reference the canvas changes size in BOTH
+            // dimensions at once - a screen wider than 16:9 ends up SHORTER in canvas
+            // units than the reference, which drags top- and bottom-anchored elements
+            // toward each other while left/right-anchored ones spread apart. Nothing
+            // is anchored wrongly; the coordinate space itself is moving.
+            //
+            // At 1.0 the canvas is ALWAYS exactly LandscapeReference.y units tall on
+            // every device. Vertical layout becomes invariant, and a wider phone simply
+            // gets more horizontal room, which anchored elements absorb correctly.
+            // Identical output at the 16:9 reference aspect, so nothing that already
+            // looked right changes.
+            //
+            // The tradeoff, stated: on a screen NARROWER than the reference (a 4:3
+            // tablet in landscape) the canvas loses horizontal units and edge-anchored
+            // elements move inward. That is the correct failure direction here - phones
+            // and tablets in landscape are overwhelmingly wider than 16:9, not narrower.
+            scaler.matchWidthOrHeight = 1.0f;
             scaler.referenceResolution = LandscapeReference;
 
             if (GameSettings.IsOrientationLockSupported)

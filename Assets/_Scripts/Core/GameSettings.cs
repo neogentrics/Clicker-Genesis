@@ -31,6 +31,7 @@ namespace ClickerGenesis.Core
         private const string MasterMutedKey = "ClickerGenesis.MasterMuted";
         private const string SoundMigratedKey = "ClickerGenesis.SoundMigrated";
         private const string LegacySoundEnabledKey = "ClickerGenesis.SoundEnabled";
+        private const string SceneSfxMutedKeyPrefix = "ClickerGenesis.SceneSfxMuted.";
 
         public static event System.Action OnChanged;
 
@@ -86,6 +87,24 @@ namespace ClickerGenesis.Core
 
             PlayerPrefs.SetInt(SoundMigratedKey, 1);
             PlayerPrefs.Save();
+        }
+
+        /// <summary>Per-scene SFX-only mute (2026-08-13, real user ask on top of the global Master
+        /// Mute - "turn off sound for certain screens", e.g. Achievements, without silencing the
+        /// whole game). Deliberately SFX-only, not Music - Music already crossfades per music-zone
+        /// automatically, so a per-scene music mute would fight that system (going silent mid-fade)
+        /// rather than complementing it, per the user's own confirmed scoping. Keyed by raw scene
+        /// name (matches AudioManager's SceneToZone convention), default false (not muted) for every
+        /// scene never explicitly touched.</summary>
+        public static bool IsSceneSfxMuted(string sceneName) =>
+            !string.IsNullOrEmpty(sceneName) && PlayerPrefs.GetInt(SceneSfxMutedKeyPrefix + sceneName, 0) == 1;
+
+        public static void SetSceneSfxMuted(string sceneName, bool muted)
+        {
+            if (string.IsNullOrEmpty(sceneName)) return;
+            PlayerPrefs.SetInt(SceneSfxMutedKeyPrefix + sceneName, muted ? 1 : 0);
+            PlayerPrefs.Save();
+            OnChanged?.Invoke();
         }
 
         /// <summary>Player's explicit portrait/landscape choice (2026-08-09, real mobile-device

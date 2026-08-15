@@ -7520,6 +7520,7 @@ GameObject:
   - component: {fileID: 1776450436}
   - component: {fileID: 1776450435}
   - component: {fileID: 1776450438}
+  - component: {fileID: 1776450439}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -7636,6 +7637,20 @@ MonoBehaviour:
   PrestigeResetButton: {fileID: 172237461}
   PrestigeResetButtonLabel: {fileID: 1234261155}
   StatusLabel: {fileID: 602231686}
+--- !u!114 &1776450439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776450433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bf2e7f90c55ea428cbd6dced0d0cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ResponsiveCanvasController
+  PortraitReference: {x: 1080, y: 1920}
+  LandscapeReference: {x: 1920, y: 1080}
 --- !u!1 &1781985225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,6 +9136,7 @@ GameObject:
   - component: {fileID: 2018611378}
   - component: {fileID: 2018611377}
   - component: {fileID: 2018611376}
+  - component: {fileID: 2018611380}
   m_Layer: 0
   m_Name: SkillTreeScreen
   m_TagString: Untagged
@@ -9220,6 +9236,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2018611380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018611375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2bf2e7f90c55ea428cbd6dced0d0cf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClickerGenesis.Core.ResponsiveCanvasController
+  PortraitReference: {x: 1080, y: 1920}
+  LandscapeReference: {x: 1920, y: 1080}
 --- !u!1 &2030256444
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,13 @@
     "ai-game-developer": {
       "type": "http",
       "url": "http://localhost:29693/p/bf4cb6ea"
+    },
+    "n8n": {
+      "type": "http",
+      "url": "https://n8n.recontowers.com/mcp-server/http",
+      "headers": {
+        "Authorization": "Bearer ${N8N_MCP_TOKEN}"
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 namespace ClickerGenesis.Core
 {
@@ -157,9 +158,15 @@ namespace ClickerGenesis.Core
 
         // ---- Public API ----
 
+        /// <summary>Single funnel every SFX call goes through (PlayGenericClick/PlayPurchaseClick/
+        /// GameLoopController's direct verse-unlock/chapter/book/achievement calls) - gated by the
+        /// per-scene SFX mute (2026-08-13, real user ask) so one check here covers all of them.
+        /// Music/Voice are untouched by this - confirmed scope, Music already crossfades per zone
+        /// and a per-scene music mute would fight that rather than complement it.</summary>
         public void PlaySfx(AudioClip clip, float volumeScale = 1f)
         {
             if (clip == null || sfxSources == null || sfxSources.Length == 0) return;
+            if (GameSettings.IsSceneSfxMuted(SceneManager.GetActiveScene().name)) return;
             var src = sfxSources[nextSfxSourceIndex];
             nextSfxSourceIndex = (nextSfxSourceIndex + 1) % sfxSources.Length;
             src.PlayOneShot(clip, volumeScale);
