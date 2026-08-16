@@ -493,6 +493,18 @@ namespace ClickerGenesis.Core
             var parentRt = panelRt.parent as RectTransform;
             if (btnRt == null || panelRt == null || parentRt == null) return;
 
+            ApplyDropdownViewportPadding(panel);
+
+            // Real bug fix (2026-08-16, second pass): SetAsLastSibling() was previously only
+            // called once at BuildBookPicker()/BuildFilterDropdown() setup time. Any UI rebuilt
+            // afterward (the achievement card grid re-populating on Refresh()) becomes a LATER
+            // sibling than the dropdown, so it renders ON TOP of the dropdown's own background and
+            // rows - reading as "list content escaping the parchment" when the real cause was
+            // draw order, not clipping (the RectMask2D/viewport padding fix above was already
+            // correct). Re-asserting last-sibling on every open is cheap and makes this immune to
+            // whatever else gets added to the canvas between opens.
+            panel.transform.SetAsLastSibling();
+
             var corners = new Vector3[4];
             btnRt.GetWorldCorners(corners); // 0=bl 1=tl 2=tr 3=br
 
@@ -517,6 +529,44 @@ namespace ClickerGenesis.Core
                 float parentTopLeftY = (1f - parentRt.pivot.y) * parentRt.rect.height;
                 panelRt.anchoredPosition = new Vector2(localPoint.x - parentTopLeftX, localPoint.y - parentTopLeftY);
             }
+        }
+
+        /// <summary>Real bug fix (2026-08-16): both dropdown panels (BookPickerPanel and
+        /// FilterDropdownPanel) share the same "UI board Small parchment" sprite, whose decorative
+        /// border art is baked in at a fixed thickness (sprite.border = 90,60,90,60) regardless of
+        /// the panel's own size. Their Viewport child's offsetMin/offsetMax was left at whatever
+        /// the scene file's serialized default was (effectively zero top/bottom padding), so rows
+        /// scrolled to the top or bottom of the list rendered flush against - or past - that border
+        /// art, reading as "content escaping the parchment." Something in this project's live-edit/
+        /// automation history (never fully root-caused - not a LayoutGroup, not the ScrollRect
+        /// component itself) intermittently reset a manually-patched Viewport offset back to its
+        /// serialized value between one frame and the next, so instead of relying on a one-time fix,
+        /// this re-applies the correct padding every time a dropdown is actually opened - cheap
+        /// (runs once per click, not per frame) and self-healing regardless of whatever the reset
+        /// mechanism turns out to be.</summary>
+        private static void ApplyDropdownViewportPadding(GameObject panel)
+        {
+            var viewport = panel.transform.Find("Viewport") as RectTransform;
+            if (viewport != null)
+            {
+                viewport.offsetMin = new Vector2(28f, 28f);
+                viewport.offsetMax = new Vector2(-28f, -36f);
+            }
+            // Same self-healing rationale as the padding above - Unrestricted let the list scroll
+            // past its real content into blank space (2026-08-16 bug report).
+            var scrollRect = panel.GetComponent<ScrollRect>();
+            if (scrollRect != null) scrollRect.movementType = ScrollRect.MovementType.Clamped;
+
+            // Real bug fix (2026-08-16, third pass): the actual cause of achievement-card text
+            // "bleeding through" the dropdown was neither clipping nor draw order (both already
+            // correct) - it was that the panel's own background Image sat at alpha=0.98 instead of
+            // a full 1.0. Confirmed empirically via raycast probe: at 0.98 the card grid underneath
+            // was faintly but legibly visible through the parchment; bumping to 1.0 eliminated it
+            // completely with no other change. Force full opacity on every open so any future scene
+            // edit that nudges this back below 1.0 can't reintroduce the bug.
+            var panelImage = panel.GetComponent<Image>();
+            if (panelImage != null && panelImage.color.a < 1f)
+                panelImage.color = new Color(panelImage.color.r, panelImage.color.g, panelImage.color.b, 1f);
         }
 
         private class BookPickerRow
