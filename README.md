@@ -4,6 +4,8 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 > Micro-transactions exist in the eventual design but are never required for progress or content. Scripture text is never altered, paraphrased, or reinterpreted — only unedited, recognized translations are used (KJV in v1). This constraint overrides convenience in every implementation decision.
 
+**Website:** [gaming.recontowers.com](https://gaming.recontowers.com)
+
 <p align="center">
   <img src="docs/screenshots/logo.png" width="120" alt="Clicker Genesis logo — a Bible with an ink drop cut from the cover" />
 </p>

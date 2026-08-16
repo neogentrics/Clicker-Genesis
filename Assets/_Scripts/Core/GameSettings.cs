@@ -51,9 +51,11 @@ namespace ClickerGenesis.Core
             set { PlayerPrefs.SetFloat(SfxVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
         }
 
+        // 0.45 (2026-08-15, user's explicit call once real music was actually playing and audible -
+        // supersedes the original 0.35 "medium-low" guess from before any track existed to test against).
         public static float MusicVolume
         {
-            get => PlayerPrefs.GetFloat(MusicVolumeKey, 0.35f);
+            get => PlayerPrefs.GetFloat(MusicVolumeKey, 0.45f);
             set { PlayerPrefs.SetFloat(MusicVolumeKey, Mathf.Clamp01(value)); PlayerPrefs.Save(); OnChanged?.Invoke(); }
         }
 

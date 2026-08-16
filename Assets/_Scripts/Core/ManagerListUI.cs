@@ -197,7 +197,15 @@ namespace ClickerGenesis.Core
                 if (def.tierType == ClickerGenesis.Economy.TierType.Law)
                 {
                     row.NameText.text = def.displayName;
-                    bool reachable = scribes.IsUnlocked(row.TierIndex, Controller.NextVerseIndex);
+                    // Deliberately NOT scribes.IsUnlocked() here (2026-08-16 bug fix) - that method
+                    // has a tier-0 "always true" bootstrap exception meant for the Scribes tab's
+                    // production row (so the player can always afford their first verse), which has
+                    // nothing to do with a Law tier's own informational content. A book whose tier 0
+                    // happens to be Law-typed (Deuteronomy's "Unworn Sandal", 2 Samuel's "The Song of
+                    // the Bow") was showing its full purpose text as already "reachable" on a brand
+                    // new save with zero verses bought, purely because it inherited the scribe
+                    // bootstrap rule. Law-tier reachability must always be a real verse-index check.
+                    bool reachable = Controller.NextVerseIndex > def.unlockAtVerseIndex;
 
                     if (reachable)
                     {
