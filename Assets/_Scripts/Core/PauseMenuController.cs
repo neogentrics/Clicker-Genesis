@@ -374,8 +374,9 @@ namespace ClickerGenesis.Core
                 "\n<b>Fonts</b>\n" +
                 "Ibarra Real Nova - Google Fonts / The Ibarra Real Nova Project Authors (SIL Open Font License 1.1)\n" +
                 "\n<b>Music</b>\n" +
-                "Piano Instrumental Loops, Medieval Vol. 2, Sci-Fi Music Pack - AlkaKrab (royalty-free, commercial use allowed, credit appreciated but not required)\n" +
-                "  Tracks used: Piano Instrumental 1 (Main Menu), Piano Instrumental 8 (Credits), Medieval Vol. 2 7 (Clicker Screen), Sci-Fi 5 Loop (Achievements)\n" +
+                "Piano Instrumental Loops, Medieval Vol. 2, Sci-Fi Music Pack, Fantasy RPG Music Pack Vol. 3 - AlkaKrab (royalty-free, commercial use allowed, credit appreciated but not required)\n" +
+                "  Tracks used: Piano Instrumental 1 (Main Menu), Piano Instrumental 8 (Credits), Medieval Vol. 2 7 (Clicker Screen), Sci-Fi 5 Loop (Achievements),\n" +
+                "  Ambient 7 (Buy Verse), Ambient 1 (Settings), Ambient 2 (Save Slots), Ambient 3 (New Game Setup), Ambient 4 (Store), Ambient 5 (Skill Tree)\n" +
                 "\n<b>Sound Effects</b>\n" +
                 "Free UI Click Sound Pack - SwishSwoosh\n" +
                 "\n<b>Tools</b>\n" +

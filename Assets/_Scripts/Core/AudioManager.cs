@@ -10,7 +10,7 @@ namespace ClickerGenesis.Core
     /// listed in AudioManager's SceneToZone map (SettingsScreen, SaveSlotScreen,
     /// NewGameSetupScreen) are pass-through - they never trigger a zone change, whatever was
     /// already playing keeps playing underneath.</summary>
-    public enum MusicZone { None, Menu, CoreGameplay, SkillTree, Achievements, Store, Credits }
+    public enum MusicZone { None, Menu, CoreGameplay, BuyVerse, SkillTree, Achievements, Store, Credits, Settings, SaveSlot, NewGameSetup }
 
     /// <summary>
     /// Persistent singleton (spawned once on GameRoot in MainMenu.unity, same
@@ -31,10 +31,14 @@ namespace ClickerGenesis.Core
         [Header("Music zone clips (empty = silence, drop clips in later)")]
         [SerializeField] private AudioClip menuMusic;
         [SerializeField] private AudioClip coreGameplayMusic;
+        [SerializeField] private AudioClip buyVerseMusic;
         [SerializeField] private AudioClip skillTreeMusic;
         [SerializeField] private AudioClip achievementsMusic;
-        [SerializeField] private AudioClip storeMusic; // Store screen doesn't exist yet - wired for when it does
+        [SerializeField] private AudioClip storeMusic;
         [SerializeField] private AudioClip creditsMusic;
+        [SerializeField] private AudioClip settingsMusic;
+        [SerializeField] private AudioClip saveSlotMusic;
+        [SerializeField] private AudioClip newGameSetupMusic;
 
         [Header("SFX pool - overlapping sounds (e.g. rapid tapping) shouldn't cut each other off")]
         [SerializeField] private int sfxPoolSize = 6;
@@ -61,26 +65,27 @@ namespace ClickerGenesis.Core
         private MusicZone currentZone = MusicZone.None;
 
         /// <summary>REVISED 2026-08-16 (real user correction): BuyVerseScreen is no longer part of
-        /// CoreGameplay - it's reserved silent for a future TTS/read-aloud system, music would
-        /// interfere. CoreGameplay is ClickerScreen only now. Every real screen gets an explicit
-        /// entry, even the ones that play nothing (MusicZone.None) - this replaces the old
-        /// "absent from the map = pass-through, don't touch whatever's playing" behavior, which was
-        /// the actual root cause of music bleeding from one screen into screens that were never
-        /// supposed to have any (confirmed live: SettingsScreen/SaveSlotScreen/NewGameSetupScreen/
-        /// StoreScreen were all missing entirely, so navigating to them never triggered a fade to
-        /// silence at all). Only MainMenu/CreditsScreen/ClickerScreen should have music right now.</summary>
+        /// CoreGameplay - it gets its own dedicated BuyVerse zone/clip instead, deliberately mixed
+        /// low enough to sit under a future TTS/read-aloud system without competing with it (user's
+        /// own call after actually listening to the track). CoreGameplay is ClickerScreen only now.
+        /// Every real screen gets an explicit entry, even the ones that play nothing (MusicZone.None)
+        /// - this replaces the old "absent from the map = pass-through, don't touch whatever's
+        /// playing" behavior, which was the actual root cause of music bleeding from one screen into
+        /// screens that were never supposed to have any (confirmed live: SettingsScreen/
+        /// SaveSlotScreen/NewGameSetupScreen/StoreScreen were all missing entirely, so navigating to
+        /// them never triggered a fade to silence at all).</summary>
         private static readonly Dictionary<string, MusicZone> SceneToZone = new Dictionary<string, MusicZone>
         {
             { "MainMenu", MusicZone.Menu },
             { "ClickerScreen", MusicZone.CoreGameplay },
-            { "BuyVerseScreen", MusicZone.None },
+            { "BuyVerseScreen", MusicZone.BuyVerse },
             { "PrestigeScreen", MusicZone.SkillTree },
             { "AchievementScreen", MusicZone.Achievements },
             { "CreditsScreen", MusicZone.Credits },
-            { "SettingsScreen", MusicZone.None },
-            { "SaveSlotScreen", MusicZone.None },
-            { "NewGameSetupScreen", MusicZone.None },
-            { "StoreScreen", MusicZone.None },
+            { "SettingsScreen", MusicZone.Settings },
+            { "SaveSlotScreen", MusicZone.SaveSlot },
+            { "NewGameSetupScreen", MusicZone.NewGameSetup },
+            { "StoreScreen", MusicZone.Store },
         };
 
         private void Awake()
@@ -208,8 +213,10 @@ namespace ClickerGenesis.Core
 
         /// <summary>Called by SceneTransitioner right before a scene load starts (it already knows
         /// the target scene name synchronously) so the crossfade begins in parallel with the load,
-        /// not after it finishes. Scenes absent from SceneToZone (SettingsScreen etc.) return
-        /// immediately without touching whatever's already playing - the pass-through rule.</summary>
+        /// not after it finishes. Every real screen now has an explicit SceneToZone entry (2026-08-16
+        /// - see the dictionary's own doc comment for why the old "absent = pass-through" behavior
+        /// was removed); a scene name genuinely missing from the map is only a real bug or a
+        /// not-yet-integrated screen, not an intentional silence case anymore.</summary>
         public void NotifySceneChanging(string sceneName)
         {
             if (!SceneToZone.TryGetValue(sceneName, out var zone)) return;
@@ -222,10 +229,14 @@ namespace ClickerGenesis.Core
         {
             MusicZone.Menu => menuMusic,
             MusicZone.CoreGameplay => coreGameplayMusic,
+            MusicZone.BuyVerse => buyVerseMusic,
             MusicZone.SkillTree => skillTreeMusic,
             MusicZone.Achievements => achievementsMusic,
             MusicZone.Store => storeMusic,
             MusicZone.Credits => creditsMusic,
+            MusicZone.Settings => settingsMusic,
+            MusicZone.SaveSlot => saveSlotMusic,
+            MusicZone.NewGameSetup => newGameSetupMusic,
             _ => null,
         };
 
