@@ -60,18 +60,27 @@ namespace ClickerGenesis.Core
 
         private MusicZone currentZone = MusicZone.None;
 
-        /// <summary>Core Gameplay is a single shared zone for ClickerScreen+BuyVerseScreen (user's
-        /// own framing: "basically the core gameplay in one scene") - switching between those two
-        /// never refades. SettingsScreen/SaveSlotScreen/NewGameSetupScreen are deliberately absent
-        /// (pass-through scenes).</summary>
+        /// <summary>REVISED 2026-08-16 (real user correction): BuyVerseScreen is no longer part of
+        /// CoreGameplay - it's reserved silent for a future TTS/read-aloud system, music would
+        /// interfere. CoreGameplay is ClickerScreen only now. Every real screen gets an explicit
+        /// entry, even the ones that play nothing (MusicZone.None) - this replaces the old
+        /// "absent from the map = pass-through, don't touch whatever's playing" behavior, which was
+        /// the actual root cause of music bleeding from one screen into screens that were never
+        /// supposed to have any (confirmed live: SettingsScreen/SaveSlotScreen/NewGameSetupScreen/
+        /// StoreScreen were all missing entirely, so navigating to them never triggered a fade to
+        /// silence at all). Only MainMenu/CreditsScreen/ClickerScreen should have music right now.</summary>
         private static readonly Dictionary<string, MusicZone> SceneToZone = new Dictionary<string, MusicZone>
         {
             { "MainMenu", MusicZone.Menu },
             { "ClickerScreen", MusicZone.CoreGameplay },
-            { "BuyVerseScreen", MusicZone.CoreGameplay },
+            { "BuyVerseScreen", MusicZone.None },
             { "PrestigeScreen", MusicZone.SkillTree },
             { "AchievementScreen", MusicZone.Achievements },
             { "CreditsScreen", MusicZone.Credits },
+            { "SettingsScreen", MusicZone.None },
+            { "SaveSlotScreen", MusicZone.None },
+            { "NewGameSetupScreen", MusicZone.None },
+            { "StoreScreen", MusicZone.None },
         };
 
         private void Awake()
