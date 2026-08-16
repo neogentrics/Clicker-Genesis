@@ -373,6 +373,11 @@ namespace ClickerGenesis.Core
                 "Retro Pixel Ribbons, Banners and Frames 2 - BDragon1727\n" +
                 "\n<b>Fonts</b>\n" +
                 "Ibarra Real Nova - Google Fonts / The Ibarra Real Nova Project Authors (SIL Open Font License 1.1)\n" +
+                "\n<b>Music</b>\n" +
+                "Piano Instrumental Loops, Medieval Vol. 2, Sci-Fi Music Pack - AlkaKrab (royalty-free, commercial use allowed, credit appreciated but not required)\n" +
+                "  Tracks used: Piano Instrumental 1 (Main Menu), Piano Instrumental 8 (Credits), Medieval Vol. 2 7 (Clicker Screen), Sci-Fi 5 Loop (Achievements)\n" +
+                "\n<b>Sound Effects</b>\n" +
+                "Free UI Click Sound Pack - SwishSwoosh\n" +
                 "\n<b>Tools</b>\n" +
                 "Built with Unity, using Unity-MCP for AI-assisted development.\n" +
                 "\n<i>A few recently-imported icon packs still need their publisher name " +
