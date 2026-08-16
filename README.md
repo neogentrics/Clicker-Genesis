@@ -25,9 +25,13 @@ A Bible-verse idle/incremental clicker built in Unity, for Windows, macOS, and A
 
 ## Status
 
-**Version 0.4.8 Beta** — pre-release, core loop implemented and playable.
+**Version 0.4.9 Beta** — pre-release, core loop implemented and playable.
 
-**0.4.8 is a hotfix for a regression 0.4.7 introduced.** The pause menu was dead in the Android build — `PauseMenuOverlay` had been left inactive in `Assets/_ScenesAndroid/MainMenu.unity`. Because `PauseMenuController` is a persistent singleton whose `Awake()` sets `Instance` and wires every button, and every pause button in the game is a `PauseButtonTrigger` calling `PauseMenuController.Instance?.Show()`, an inactive root means `Awake()` never runs, `Instance` stays null, and every pause button in the game silently does nothing. Desktop builds were unaffected. A full active-state diff across all 13 desktop/Android scene pairs confirmed this was the only divergence, and structural component counts now match the pre-regression commit exactly.
+**0.4.9 fixes two real bugs.** Law-tier manager rows (theme/teaching-content managers in law-heavy books like Leviticus) could show as unlocked on a completely fresh save, because their unlock check wasn't correctly gated the same way Person-tier managers are — now fixed.
+
+The Achievement screen's two dropdowns (the book picker and the category filter) had the achievement-card grid visibly bleeding through their parchment background whenever scrolled to either end of the list. The real cause took three passes to actually nail down: it was neither a `RectMask2D` clipping bug nor a draw-order bug (both genuine, both fixed along the way, neither was the actual culprit) — it was the dropdown panel's own background sitting at 98% opacity instead of 100%, letting the grid underneath show through as faint but legible ghost text. Both dropdowns are now rebuilt from scratch on a dedicated always-on-top overlay Canvas with the background opacity baked in as fully opaque at author time rather than patched at runtime, so it can't silently drift again.
+
+**0.4.8 was a hotfix for a regression 0.4.7 introduced.** The pause menu was dead in the Android build — `PauseMenuOverlay` had been left inactive in `Assets/_ScenesAndroid/MainMenu.unity`. Because `PauseMenuController` is a persistent singleton whose `Awake()` sets `Instance` and wires every button, and every pause button in the game is a `PauseButtonTrigger` calling `PauseMenuController.Instance?.Show()`, an inactive root means `Awake()` never runs, `Instance` stays null, and every pause button in the game silently does nothing. Desktop builds were unaffected. A full active-state diff across all 13 desktop/Android scene pairs confirmed this was the only divergence, and structural component counts now match the pre-regression commit exactly.
 
 **What 0.4.7 fixes is worth stating plainly, because it was a real bug with a real cause.** UI elements shifted position whenever the screen resolution changed. Every screen's `CanvasScaler` was set to `matchWidthOrHeight = 0.5`, a blend of width- and height-matching, which means that on any aspect ratio other than the 16:9 reference the canvas changes size in *both* dimensions at once. On a modern phone in landscape that made the coordinate space up to **114 units shorter** than it was authored against, dragging top- and bottom-anchored elements toward each other while left/right ones spread apart. Nothing was anchored wrongly — the coordinate space itself was moving. Switching to `matchWidthOrHeight = 1.0` (match height) makes the canvas exactly 1080 units tall on every device, so vertical layout is now invariant and a wider phone simply gets more horizontal room. Measured vertical drift across seven real device aspect ratios went from −148…+167 units to **exactly zero**.
 
@@ -41,10 +45,10 @@ This is an active work-in-progress being built in public as part of a developmen
 
 | Platform | Download | Minimum version |
 |---|---|---|
-| 🪟 Windows | [ClickerGenesis-Windows-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Windows-v0.4.8.zip) | Windows 10 64-bit or later |
-| 🍎 macOS | [ClickerGenesis-Mac-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Mac-v0.4.8.zip) | macOS 12.0 (Monterey) or later |
-| 🐧 Linux | [ClickerGenesis-Linux-v0.4.8.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Linux-v0.4.8.zip)  | Most 64-bit distros with a modern GL/Vulkan driver |
-| 🤖 Android | [ClickerGenesis-Android-v0.4.8.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.8/ClickerGenesis-Android-v0.4.8.apk) | Android 8.0 (Oreo, API 26) or later |
+| 🪟 Windows | [ClickerGenesis-Windows-v0.4.9.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.9/ClickerGenesis-Windows-v0.4.9.zip) | Windows 10 64-bit or later |
+| 🍎 macOS | [ClickerGenesis-Mac-v0.4.9.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.9/ClickerGenesis-Mac-v0.4.9.zip) | macOS 12.0 (Monterey) or later |
+| 🐧 Linux | [ClickerGenesis-Linux-v0.4.9.zip](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.9/ClickerGenesis-Linux-v0.4.9.zip)  | Most 64-bit distros with a modern GL/Vulkan driver |
+| 🤖 Android | [ClickerGenesis-Android-v0.4.9.apk](https://github.com/neogentrics/Clicker-Genesis/releases/download/v0.4.9/ClickerGenesis-Android-v0.4.9.apk) | Android 8.0 (Oreo, API 26) or later |
 
 > All four platforms now ship together on every release, per the project's standing release-process rule — no more platform-lag between Windows and the rest.
 
