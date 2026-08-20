@@ -1,0 +1,78 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly
+title: "[Bug] "
+labels: ["bug", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. The three fields that actually determine whether
+        a bug can be reproduced are **platform**, **version** and **a
+        screenshot** — please do not skip them.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Bottom-left of the main menu, e.g. `v0.4.8 Beta`.
+      placeholder: v0.4.8 Beta
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Android
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / OS version
+      description: On Android the exact model matters — most layout bugs here were device-specific.
+      placeholder: "Galaxy S25 Ultra, Android 15  ·  or  ·  Windows 11 23H2"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what happened, and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the Clicker screen
+        2. Switch to the Managers tab
+        3. ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image in. For anything visual this is worth more than the description.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I am on the most recent release
+          required: false
+        - label: I searched existing issues
+          required: false

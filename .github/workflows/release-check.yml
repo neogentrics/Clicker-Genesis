@@ -1,0 +1,101 @@
+name: Release check
+
+# Enforces the project's own standing rule - every release ships every
+# supported platform - which has silently broken before: v0.4.4 and v0.4.5
+# both went out Windows-only, leaving macOS, Linux and Android users on an
+# older build with nothing telling anyone it had happened.
+#
+# Runs when a release is published or edited, and can be run by hand against
+# any tag. It does not block anything; it opens an issue so the gap is visible
+# instead of being discovered weeks later.
+
+on:
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to check, e.g. v0.4.8"
+        required: true
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  assets:
+    name: Verify platform assets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the release carries every platform
+        uses: actions/github-script@v7
+        env:
+          INPUT_TAG: ${{ github.event.inputs.tag }}
+        with:
+          script: |
+            const tag = context.payload.release?.tag_name || process.env.INPUT_TAG;
+            if (!tag) { core.setFailed('No tag to check.'); return; }
+
+            const { data: release } = await github.rest.repos.getReleaseByTag({
+              owner: context.repo.owner, repo: context.repo.repo, tag,
+            });
+
+            // Matched on filename, the same way the website's download tiles
+            // resolve a platform. Keep the two in step.
+            const RULES = {
+              Windows: /windows/i,
+              macOS:   /(^|[-_])mac|osx/i,
+              Linux:   /linux/i,
+              Android: /\.(apk|aab)$/i,
+            };
+
+            const names = release.assets.map(a => a.name);
+            const missing = Object.entries(RULES)
+              .filter(([, re]) => !names.some(n => re.test(n)))
+              .map(([p]) => p);
+
+            const table = Object.entries(RULES).map(([p, re]) => {
+              const hit = names.find(n => re.test(n));
+              return `| ${p} | ${hit ? '✅ `' + hit + '`' : '❌ **missing**'} |`;
+            }).join('\n');
+
+            const summary = [
+              `### Release asset check — \`${tag}\``, '',
+              '| Platform | Asset |', '|---|---|', table, '',
+              missing.length
+                ? `**${missing.length} platform(s) missing: ${missing.join(', ')}**`
+                : 'All four platforms present.',
+            ].join('\n');
+
+            await core.summary.addRaw(summary).write();
+
+            if (!missing.length) { core.info(`${tag}: all platforms present.`); return; }
+
+            // One issue per tag, reused rather than duplicated on edit.
+            const title = `Release ${tag} is missing platform builds`;
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'release',
+            });
+            const existing = open.find(i => i.title === title);
+
+            const body = [
+              `[\`${tag}\`](${release.html_url}) was published without a build for **${missing.join(', ')}**.`,
+              '', summary, '',
+              'Every release is meant to ship every supported platform — a partial release leaves users on an older build with nothing telling them so.',
+              '', '_Opened automatically by `.github/workflows/release-check.yml`._',
+            ].join('\n');
+
+            if (existing) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: existing.number, body,
+              });
+              core.warning(`${tag}: missing ${missing.join(', ')} — updated issue #${existing.number}`);
+            } else {
+              const { data: issue } = await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['release', 'bug'],
+              });
+              core.warning(`${tag}: missing ${missing.join(', ')} — opened issue #${issue.number}`);
+            }

@@ -1,0 +1,57 @@
+name: Feature request
+description: Suggest an idea
+title: "[Feature] "
+labels: ["enhancement", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Two project constraints worth knowing before you write this, because a
+        suggestion that breaks either will be declined however good it is:
+
+        - **Scripture text is never altered, paraphrased or reinterpreted.**
+          Only unedited, recognised translations are used.
+        - **Purchases are never required for progress or content.** Anything
+          buyable must also be reachable through ordinary play.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the situation you hit, not the solution you have in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Core loop (tapping, verses, Ink)
+        - Scribes / Managers / Support
+        - Skill Tree and prestige
+        - Achievements
+        - Save system
+        - Settings and accessibility
+        - UI / layout
+        - Audio
+        - Other
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: This does not require altering scripture text
+          required: true
+        - label: This does not make a purchase required for progress
+          required: true
